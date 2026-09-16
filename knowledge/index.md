@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**2 of 233 issues** modelled, 2025-12-11 → 2025-12-12.
+**3 of 233 issues** modelled, 2025-12-11 → 2025-12-13.
 
 | | count |
 |---|---|
-| benchmarks | 7 |
-| developments | 53 |
-| facilities | 4 |
+| benchmarks | 9 |
+| developments | 75 |
+| facilities | 8 |
 | hardware | 3 |
-| issues | 2 |
-| organizations | 42 |
-| people | 1 |
-| systems | 16 |
-| themes | 14 |
+| issues | 3 |
+| organizations | 54 |
+| people | 2 |
+| systems | 22 |
+| themes | 19 |
 
 ## Themes
 
@@ -52,8 +52,14 @@ trajectory rather than a pile of days.
 * [Scaffolding, not weights](themes/scaffolding-over-weights.md) — first seen 2025-12-12
 * [The frontier is spiky](themes/spiky-frontier.md) — first seen 2025-12-12
 * [Silicon fractures into vertical empires](themes/vertical-silicon.md) — first seen 2025-12-12
+* [Autonomy has a clock speed](themes/autonomy-clock-speed.md) — first seen 2025-12-13
+* [Biology engineered past the constraints of life](themes/hardware-grade-biology.md) — first seen 2025-12-13
+* [The network beats the node](themes/network-over-node.md) — first seen 2025-12-13
+* [Science as industrial policy](themes/science-as-industrial-policy.md) — first seen 2025-12-13
+* [A silicon curtain falls](themes/silicon-curtain.md) — first seen 2025-12-13
 
 ## Issues
 
+* [Welcome to December 13, 2025](issues/2025-12-13.md) — The clock speed of autonomy is accelerating.
 * [Welcome to December 12, 2025](issues/2025-12-12.md) — The cost of reasoning has officially decoupled from the cost of human labor.
 * [Welcome to December 11, 2025](issues/2025-12-11.md) — The Singularity is hitting a coordination tax.

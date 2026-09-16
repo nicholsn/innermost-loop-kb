@@ -111,6 +111,7 @@ def emit(spec: dict) -> dict:
         ("benchmarks", "benchmarks"),
         ("facilities", "facilities"),
         ("hardware", "hardware"),
+        ("people", "people"),
         ("themes", "themes"),
     ):
         kind = rel_dir.rstrip("s")
@@ -144,7 +145,11 @@ def emit(spec: dict) -> dict:
             "type": "Development", "title": d["title"],
             "claim": d["claim"], "domain": d["domain"],
             "reported_in": [iri("issues", date)],
-            "actor": [iri("organizations", a) for a in d.get("actor", [])],
+            # an actor is usually an organization id, but a development can be
+            # attributed to a person ("people/terry-tao") - a bare id keeps the
+            # common case short, a path selects any other collection.
+            "actor": [iri(a) if "/" in a else iri("organizations", a)
+                      for a in d.get("actor", [])],
             "about": d.get("about"),
             "evidences": [iri("themes", t) for t in d.get("evidences", [])],
             "score": d.get("score"),
