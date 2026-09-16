@@ -22,18 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**1 of 233 issues** modelled, 2025-12-11 → 2025-12-11.
+**2 of 233 issues** modelled, 2025-12-11 → 2025-12-12.
 
 | | count |
 |---|---|
-| benchmarks | 2 |
-| developments | 29 |
+| benchmarks | 7 |
+| developments | 53 |
 | facilities | 4 |
-| issues | 1 |
-| organizations | 29 |
+| hardware | 3 |
+| issues | 2 |
+| organizations | 42 |
 | people | 1 |
-| systems | 8 |
-| themes | 7 |
+| systems | 16 |
+| themes | 14 |
 
 ## Themes
 
@@ -44,7 +45,15 @@ trajectory rather than a pile of days.
 * [Industrializing geology and atmosphere](themes/industrialized-nature.md) — first seen 2025-12-11
 * [The human interface becomes intimate](themes/intimate-interface.md) — first seen 2025-12-11
 * [Orbit becomes a compute layer](themes/orbit-as-compute.md) — first seen 2025-12-11
+* [Mapping and valuing cognitive architecture](themes/architecture-of-mind.md) — first seen 2025-12-12
+* [Generated worlds become inhabitable](themes/inhabitable-worlds.md) — first seen 2025-12-12
+* [Legislating the phase shift](themes/legislating-the-shift.md) — first seen 2025-12-12
+* [The price of reasoning is deflating](themes/reasoning-price-deflation.md) — first seen 2025-12-12
+* [Scaffolding, not weights](themes/scaffolding-over-weights.md) — first seen 2025-12-12
+* [The frontier is spiky](themes/spiky-frontier.md) — first seen 2025-12-12
+* [Silicon fractures into vertical empires](themes/vertical-silicon.md) — first seen 2025-12-12
 
 ## Issues
 
+* [Welcome to December 12, 2025](issues/2025-12-12.md) — The cost of reasoning has officially decoupled from the cost of human labor.
 * [Welcome to December 11, 2025](issues/2025-12-11.md) — The Singularity is hitting a coordination tax.
