@@ -63,6 +63,12 @@ def _fm(data: dict) -> str:
         if isinstance(v, list):
             out.append(f"{k}:")
             for i in v:
+                # `tags` is a list of strings, but an unquoted 2025-12-11 is a
+                # YAML *date*. lokf validate tolerated it; Astro's content schema
+                # rejected tags.1 as an object and broke the site build.
+                if k == "tags":
+                    out.append('  - "%s"' % str(i).replace('"', '\\"'))
+                    continue
                 if isinstance(i, dict):
                     # a list of mappings (sources[]) - inline, not str()-ed, which
                     # silently produced a list of quoted Python reprs
