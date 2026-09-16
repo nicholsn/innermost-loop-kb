@@ -1,0 +1,46 @@
+name: validate
+
+# Every issue lands as its own PR, so the gate has to run per-PR: the bundle
+# must validate against the domain schema AND every typed-relation target must
+# resolve. The second check is the one that matters as the corpus grows - a
+# development pointing at an organization that was never written is a valid
+# string to JSON Schema and a hole in the graph.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions: {}
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+
+      - name: Rebuild the bundle from the issue specs
+        run: uv run --with 'lokf[build]==0.8.0' python tools/emit.py tools/issues/*.py
+
+      - name: Fail if the committed bundle drifted from its specs
+        run: |
+          if ! git diff --exit-code -- knowledge/; then
+            echo "::error::knowledge/ does not match tools/issues/. Re-run tools/emit.py and commit."
+            exit 1
+          fi
+
+      # `imports: [lokf]` resolves against the working directory, not the schema
+      # file, so this has to run from schema/. See README.
+      - name: Validate the bundle and its references
+        working-directory: schema
+        run: uv run --with 'lokf[build]==0.8.0' lokf validate ../knowledge --schema innermost.yaml --check-refs

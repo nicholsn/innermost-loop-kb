@@ -1,0 +1,274 @@
+id: https://nicholsn.github.io/innermost-loop-kb/schema
+name: innermost
+title: The Innermost Loop — domain schema
+description: >-
+  A LOKF profile for modelling The Innermost Loop, Dr. Alex Wissner-Gross's
+  newsletter of daily developments in machine intelligence. LOKF supplies the
+  concept model, provenance and trust machinery; this schema adds only what the
+  newsletter's own shape demands — a dated Issue, the atomic Development it
+  reports, and the AI systems, benchmarks and facilities those developments are
+  about — plus the recurring Themes that let the corpus be read as a trajectory
+  rather than a pile of days.
+license: https://creativecommons.org/licenses/by/4.0/
+prefixes:
+  linkml: https://w3id.org/linkml/
+  lokf: https://w3id.org/lokf/
+  iml: https://nicholsn.github.io/innermost-loop-kb/schema/
+  schema: http://schema.org/
+  dcterms: http://purl.org/dc/terms/
+  prov: http://www.w3.org/ns/prov#
+  skos: http://www.w3.org/2004/02/skos/core#
+  foaf: http://xmlns.com/foaf/0.1/
+default_prefix: iml
+default_range: string
+imports:
+  - linkml:types
+  - lokf
+
+classes:
+
+  Issue:
+    is_a: Document
+    class_uri: iml:Issue
+    description: >-
+      One dated edition of the newsletter — the unit Wissner-Gross publishes and
+      the provenance anchor for everything it reports. Its `url` is the
+      canonical Substack permalink.
+    slots:
+      - issue_date
+      - thesis
+      - covers
+    slot_usage:
+      issue_date:
+        required: true
+      thesis:
+        recommended: true
+
+  Development:
+    is_a: Concept
+    class_uri: iml:Development
+    description: >-
+      One reported advance: a single, dated, attributable claim about the world
+      ("Oracle's backlog rose 438% to $523B"). The atomic unit of the corpus —
+      an Issue is a bundle of these, and a Theme is a thread running through
+      them. Kept separate from the Issue so the same development can be
+      corrected, revisited, or superseded by a later one.
+    slots:
+      - reported_in
+      - actor
+      - claim
+      - domain
+      - occurred_on
+      - evidences
+      - supersedes
+    slot_usage:
+      reported_in:
+        required: true
+      claim:
+        required: true
+      domain:
+        recommended: true
+      actor:
+        recommended: true
+
+  Theme:
+    is_a: Concept
+    class_uri: iml:Theme
+    description: >-
+      A recurring thread the newsletter returns to — "compute is the capital
+      stack", "orbit becomes a compute layer". Themes are what make 233 daily
+      issues legible as one trajectory; a Development points at the Themes it
+      is evidence for.
+    slots:
+      - first_seen
+      - domain
+
+  AISystem:
+    is_a: Concept
+    class_uri: iml:AISystem
+    description: >-
+      A named model, agent, or embodied system (Gemini, Grok, WhAM, Digit).
+      Distinct from the Organization that built it, so successive versions and
+      changes of owner stay attributable.
+    slots:
+      - developed_by
+      - modality
+      - evaluated_on
+
+  Benchmark:
+    is_a: Concept
+    class_uri: iml:Benchmark
+    description: >-
+      A named evaluation that systems are scored against (SWE-bench Verified,
+      FACTS). Modelled separately from the scores themselves: a score is a
+      Development, which is dated and sourced, while the Benchmark persists.
+    slots:
+      - published_by
+      - measures_capability
+
+  Facility:
+    is_a: Concept
+    class_uri: iml:Facility
+    description: >-
+      Physical or orbital infrastructure with a location and an operator — a
+      datacenter, fab, lab, or habitat. The newsletter tracks these as the
+      material substrate of the trajectory.
+    slots:
+      - operated_by
+      - located_in
+      - capacity
+
+slots:
+
+  issue_date:
+    description: The date this edition was published.
+    range: date
+    slot_uri: schema:datePublished
+
+  thesis:
+    description: >-
+      The edition's one-line framing, as the author states it — the
+      "The Singularity ..." line that opens each issue.
+    range: string
+    slot_uri: schema:abstract
+
+  covers:
+    description: Developments reported in this edition.
+    range: Concept
+    multivalued: true
+    slot_uri: dcterms:hasPart
+
+  reported_in:
+    description: The edition(s) that reported this development.
+    range: Concept
+    multivalued: true
+    slot_uri: dcterms:isPartOf
+
+  actor:
+    description: >-
+      The organization(s) or person(s) the development is attributed to — who
+      did the thing, not who reported it.
+    range: Concept
+    multivalued: true
+    slot_uri: prov:wasAttributedTo
+
+  claim:
+    description: >-
+      The substantive assertion, in one sentence, written so it can be checked
+      against the cited source.
+    range: string
+    slot_uri: schema:abstract
+
+  occurred_on:
+    description: >-
+      When the development happened, where that is known and differs from the
+      issue date.
+    range: date
+    slot_uri: schema:startDate
+
+  evidences:
+    description: Themes this development is evidence for.
+    range: Concept
+    multivalued: true
+    slot_uri: skos:broader
+
+  supersedes:
+    description: >-
+      An earlier development this corrects, updates, or overtakes — how the
+      corpus records that the story moved.
+    range: Concept
+    multivalued: true
+    slot_uri: dcterms:replaces
+
+  first_seen:
+    description: The issue date on which this theme first appears.
+    range: date
+    slot_uri: schema:startDate
+
+  domain:
+    description: The area of activity a development or theme belongs to.
+    range: DomainArea
+    slot_uri: dcterms:subject
+
+  developed_by:
+    description: The organization(s) that built the system.
+    range: Concept
+    multivalued: true
+    slot_uri: schema:creator
+
+  modality:
+    description: >-
+      What the system operates over — text, speech, video, robotic control,
+      biology, silicon design.
+    range: string
+    slot_uri: schema:additionalType
+
+  evaluated_on:
+    description: Benchmarks this system has been scored against.
+    range: Concept
+    multivalued: true
+    slot_uri: schema:subjectOf
+
+  published_by:
+    description: The organization that publishes or maintains the benchmark.
+    range: Concept
+    multivalued: true
+    slot_uri: schema:publisher
+
+  measures_capability:
+    description: The capability the benchmark is intended to measure.
+    range: string
+    slot_uri: schema:measurementTechnique
+
+  operated_by:
+    description: The organization operating the facility.
+    range: Concept
+    multivalued: true
+    slot_uri: schema:provider
+
+  located_in:
+    description: >-
+      Where the facility is — a place name, or an orbital regime for things not
+      on the ground.
+    range: string
+    slot_uri: schema:location
+
+  capacity:
+    description: >-
+      Headline scale figure, with its unit (e.g. "1 GW", "1,600 sq ft"), as
+      reported.
+    range: string
+    slot_uri: schema:amount
+
+enums:
+
+  DomainArea:
+    description: >-
+      Coarse areas the newsletter recurs to. Deliberately small — this is for
+      slicing the corpus, not for taxonomy; a development that resists these is
+      better served by a Theme.
+    permissible_values:
+      compute:
+        description: Chips, datacenters, interconnect, and the capital behind them.
+      models:
+        description: Frontier model capability, training, and release.
+      agents:
+        description: Autonomous and multi-agent systems, and their coordination.
+      benchmarks:
+        description: Evaluation, measurement, and the saturation of tests.
+      robotics:
+        description: Embodied systems, humanoids, and physical automation.
+      science:
+        description: Automated discovery in the physical and life sciences.
+      biotech:
+        description: Genomics, therapeutics, and biological engineering.
+      space:
+        description: Orbital and interplanetary infrastructure.
+      energy:
+        description: Generation and grid capacity, especially for compute.
+      economics:
+        description: Markets, funding, valuation, and the financialization of compute.
+      policy:
+        description: Government, regulation, standards, and defense.
+      society:
+        description: Adoption, labor, and how people actually use these systems.
