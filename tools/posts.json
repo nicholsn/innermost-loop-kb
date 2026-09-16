@@ -1,0 +1,1406 @@
+{
+  "source": "https://theinnermostloop.substack.com/sitemap.xml",
+  "total": 233,
+  "dailies": 201,
+  "features": 32,
+  "posts": [
+    {
+      "date": "2025-12-11",
+      "slug": "welcome-to-december-11-2025",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-december-11-2025",
+      "kind": "daily"
+    },
+    {
+      "date": "2025-12-12",
+      "slug": "welcome-to-december-12-2025",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-december-12-2025",
+      "kind": "daily"
+    },
+    {
+      "date": "2025-12-13",
+      "slug": "welcome-to-december-13-2025",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-december-13-2025",
+      "kind": "daily"
+    },
+    {
+      "date": "2025-12-14",
+      "slug": "welcome-to-december-14-2025",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-december-14-2025",
+      "kind": "daily"
+    },
+    {
+      "date": "2025-12-15",
+      "slug": "welcome-to-december-15-2025",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-december-15-2025",
+      "kind": "daily"
+    },
+    {
+      "date": "2025-12-16",
+      "slug": "welcome-to-december-16-2025",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-december-16-2025",
+      "kind": "daily"
+    },
+    {
+      "date": "2025-12-17",
+      "slug": "welcome-to-december-17-2025",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-december-17-2025",
+      "kind": "daily"
+    },
+    {
+      "date": "2025-12-18",
+      "slug": "welcome-to-december-18-2025",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-december-18-2025",
+      "kind": "daily"
+    },
+    {
+      "date": "2025-12-19",
+      "slug": "welcome-to-december-19-2025",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-december-19-2025",
+      "kind": "daily"
+    },
+    {
+      "date": "2025-12-20",
+      "slug": "welcome-to-december-20-2025",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-december-20-2025",
+      "kind": "daily"
+    },
+    {
+      "date": "2025-12-21",
+      "slug": "welcome-to-december-21-2025",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-december-21-2025",
+      "kind": "daily"
+    },
+    {
+      "date": "2025-12-22",
+      "slug": "welcome-to-december-22-2025",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-december-22-2025",
+      "kind": "daily"
+    },
+    {
+      "date": "2025-12-23",
+      "slug": "welcome-to-december-23-2025",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-december-23-2025",
+      "kind": "daily"
+    },
+    {
+      "date": "2025-12-24",
+      "slug": "welcome-to-december-24-2025",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-december-24-2025",
+      "kind": "daily"
+    },
+    {
+      "date": "2025-12-25",
+      "slug": "welcome-to-december-25-2025",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-december-25-2025",
+      "kind": "daily"
+    },
+    {
+      "date": "2025-12-26",
+      "slug": "welcome-to-december-26-2025",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-december-26-2025",
+      "kind": "daily"
+    },
+    {
+      "date": "2025-12-27",
+      "slug": "welcome-to-december-27-2025",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-december-27-2025",
+      "kind": "daily"
+    },
+    {
+      "date": "2025-12-28",
+      "slug": "welcome-to-december-28-2025",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-december-28-2025",
+      "kind": "daily"
+    },
+    {
+      "date": "2025-12-29",
+      "slug": "welcome-to-december-29-2025",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-december-29-2025",
+      "kind": "daily"
+    },
+    {
+      "date": "2025-12-30",
+      "slug": "welcome-to-december-30-2025",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-december-30-2025",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-01-02",
+      "slug": "welcome-to-january-2-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-january-2-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-01-03",
+      "slug": "welcome-to-january-3-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-january-3-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-01-04",
+      "slug": "welcome-to-january-4-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-january-4-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-01-05",
+      "slug": "welcome-to-january-5-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-january-5-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-01-06",
+      "slug": "welcome-to-january-6-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-january-6-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-01-07",
+      "slug": "welcome-to-january-7-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-january-7-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-01-08",
+      "slug": "welcome-to-january-8-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-january-8-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-01-09",
+      "slug": "welcome-to-january-9-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-january-9-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-01-10",
+      "slug": "welcome-to-january-10-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-january-10-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-01-11",
+      "slug": "welcome-to-january-11-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-january-11-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-01-12",
+      "slug": "welcome-to-january-12-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-january-12-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-01-13",
+      "slug": "welcome-to-january-13-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-january-13-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-01-14",
+      "slug": "welcome-to-january-14-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-january-14-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-01-15",
+      "slug": "welcome-to-january-15-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-january-15-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-01-24",
+      "slug": "welcome-to-january-24-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-january-24-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-01-25",
+      "slug": "welcome-to-january-25-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-january-25-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-01-26",
+      "slug": "welcome-to-january-26-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-january-26-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-01-27",
+      "slug": "welcome-to-january-27-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-january-27-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-01-29",
+      "slug": "welcome-to-january-29-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-january-29-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-01-30",
+      "slug": "welcome-to-january-30-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-january-30-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-01-31",
+      "slug": "welcome-to-january-31-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-january-31-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-02-02",
+      "slug": "welcome-to-february-2-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-2-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-02-03",
+      "slug": "welcome-to-february-3-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-3-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-02-05",
+      "slug": "welcome-to-february-5-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-5-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-02-06",
+      "slug": "welcome-to-february-6-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-6-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-02-07",
+      "slug": "welcome-to-february-7-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-7-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-02-08",
+      "slug": "welcome-to-february-8-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-8-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-02-09",
+      "slug": "welcome-to-february-9-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-9-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-02-10",
+      "slug": "welcome-to-february-10-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-10-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-02-11",
+      "slug": "welcome-to-february-11-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-11-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-02-12",
+      "slug": "welcome-to-february-12-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-12-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-02-13",
+      "slug": "welcome-to-february-13-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-13-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-02-16",
+      "slug": "welcome-to-february-16-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-16-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-02-17",
+      "slug": "welcome-to-february-17-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-17-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-02-18",
+      "slug": "welcome-to-february-18-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-18-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-02-19",
+      "slug": "welcome-to-february-19-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-19-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-02-20",
+      "slug": "welcome-to-february-20-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-20-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-02-23",
+      "slug": "welcome-to-february-23-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-23-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-02-24",
+      "slug": "welcome-to-february-24-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-24-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-02-25",
+      "slug": "welcome-to-february-25-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-25-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-02-26",
+      "slug": "welcome-to-february-26-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-26-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-02-27",
+      "slug": "welcome-to-february-27-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-27-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-02-28",
+      "slug": "welcome-to-february-28-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-28-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-03-02",
+      "slug": "welcome-to-march-2-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-march-2-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-03-03",
+      "slug": "welcome-to-march-3-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-march-3-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-03-04",
+      "slug": "welcome-to-march-4-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-march-4-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-03-05",
+      "slug": "welcome-to-march-5-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-march-5-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-03-06",
+      "slug": "welcome-to-march-6-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-march-6-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-03-08",
+      "slug": "welcome-to-march-8-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-march-8-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-03-09",
+      "slug": "welcome-to-march-9-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-march-9-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-03-10",
+      "slug": "welcome-to-march-10-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-march-10-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-03-12",
+      "slug": "welcome-to-march-12-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-march-12-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-03-13",
+      "slug": "welcome-to-march-13-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-march-13-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-03-16",
+      "slug": "welcome-to-march-16-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-march-16-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-03-17",
+      "slug": "welcome-to-march-17-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-march-17-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-03-18",
+      "slug": "welcome-to-march-18-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-march-18-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-03-20",
+      "slug": "welcome-to-march-20-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-march-20-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-03-22",
+      "slug": "welcome-to-march-22-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-march-22-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-03-23",
+      "slug": "welcome-to-march-23-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-march-23-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-03-24",
+      "slug": "welcome-to-march-24-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-march-24-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-03-25",
+      "slug": "welcome-to-march-25-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-march-25-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-03-27",
+      "slug": "welcome-to-march-27-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-march-27-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-03-28",
+      "slug": "welcome-to-march-28-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-march-28-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-03-29",
+      "slug": "welcome-to-march-29-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-march-29-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-03-31",
+      "slug": "welcome-to-march-31-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-march-31-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-04-01",
+      "slug": "welcome-to-april-1-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-april-1-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-04-02",
+      "slug": "welcome-to-april-2-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-april-2-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-04-03",
+      "slug": "welcome-to-april-3-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-april-3-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-04-05",
+      "slug": "welcome-to-april-5-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-april-5-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-04-07",
+      "slug": "welcome-to-april-7-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-april-7-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-04-08",
+      "slug": "welcome-to-april-8-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-april-8-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-04-09",
+      "slug": "welcome-to-april-9-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-april-9-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-04-12",
+      "slug": "welcome-to-april-12-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-april-12-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-04-13",
+      "slug": "welcome-to-april-13-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-april-13-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-04-16",
+      "slug": "welcome-to-april-16-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-april-16-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-04-17",
+      "slug": "welcome-to-april-17-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-april-17-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-04-20",
+      "slug": "welcome-to-april-20-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-april-20-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-04-23",
+      "slug": "welcome-to-april-23-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-april-23-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-04-26",
+      "slug": "welcome-to-april-26-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-april-26-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-04-27",
+      "slug": "welcome-to-april-27-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-april-27-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-04-29",
+      "slug": "welcome-to-april-29-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-april-29-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-04-30",
+      "slug": "welcome-to-april-30-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-april-30-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-05-01",
+      "slug": "welcome-to-may-1-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-may-1-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-05-03",
+      "slug": "welcome-to-may-3-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-may-3-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-05-04",
+      "slug": "welcome-to-may-4-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-may-4-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-05-05",
+      "slug": "welcome-to-may-5-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-may-5-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-05-06",
+      "slug": "welcome-to-may-6-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-may-6-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-05-08",
+      "slug": "welcome-to-may-8-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-may-8-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-05-09",
+      "slug": "welcome-to-may-9-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-may-9-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-05-11",
+      "slug": "welcome-to-may-11-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-may-11-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-05-12",
+      "slug": "welcome-to-may-12-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-may-12-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-05-13",
+      "slug": "welcome-to-may-13-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-may-13-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-05-14",
+      "slug": "welcome-to-may-14-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-may-14-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-05-15",
+      "slug": "welcome-to-may-15-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-may-15-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-05-16",
+      "slug": "welcome-to-may-16-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-may-16-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-05-17",
+      "slug": "welcome-to-may-17-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-may-17-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-05-18",
+      "slug": "welcome-to-may-18-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-may-18-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-05-20",
+      "slug": "welcome-to-may-20-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-may-20-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-05-21",
+      "slug": "welcome-to-may-21-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-may-21-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-05-22",
+      "slug": "welcome-to-may-22-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-may-22-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-05-24",
+      "slug": "welcome-to-may-24-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-may-24-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-05-25",
+      "slug": "welcome-to-may-25-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-may-25-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-05-26",
+      "slug": "welcome-to-may-26-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-may-26-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-05-28",
+      "slug": "welcome-to-may-28-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-may-28-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-05-29",
+      "slug": "welcome-to-may-29-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-may-29-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-06-01",
+      "slug": "welcome-to-june-1-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-june-1-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-06-02",
+      "slug": "welcome-to-june-2-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-june-2-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-06-03",
+      "slug": "welcome-to-june-3-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-june-3-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-06-04",
+      "slug": "welcome-to-june-4-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-june-4-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-06-05",
+      "slug": "welcome-to-june-5-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-june-5-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-06-07",
+      "slug": "welcome-to-june-7-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-june-7-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-06-08",
+      "slug": "welcome-to-june-8-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-june-8-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-06-09",
+      "slug": "welcome-to-june-9-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-june-9-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-06-10",
+      "slug": "welcome-to-june-10-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-june-10-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-06-12",
+      "slug": "welcome-to-june-12-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-june-12-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-06-13",
+      "slug": "welcome-to-june-13-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-june-13-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-06-14",
+      "slug": "welcome-to-june-14-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-june-14-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-06-15",
+      "slug": "welcome-to-june-15-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-june-15-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-06-17",
+      "slug": "welcome-to-june-17-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-june-17-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-06-19",
+      "slug": "welcome-to-june-19-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-june-19-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-06-20",
+      "slug": "welcome-to-june-20-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-june-20-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-06-21",
+      "slug": "welcome-to-june-21-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-june-21-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-06-22",
+      "slug": "welcome-to-june-22-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-june-22-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-06-24",
+      "slug": "welcome-to-june-24-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-june-24-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-06-25",
+      "slug": "welcome-to-june-25-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-june-25-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-06-26",
+      "slug": "welcome-to-june-26-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-june-26-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-06-27",
+      "slug": "welcome-to-june-27-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-june-27-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-06-28",
+      "slug": "welcome-to-june-28-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-june-28-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-06-29",
+      "slug": "welcome-to-june-29-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-june-29-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-07-01",
+      "slug": "welcome-to-july-1-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-july-1-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-07-02",
+      "slug": "welcome-to-july-2-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-july-2-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-07-03",
+      "slug": "welcome-to-july-3-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-july-3-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-07-04",
+      "slug": "welcome-to-july-4-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-july-4-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-07-05",
+      "slug": "welcome-to-july-5-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-july-5-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-07-07",
+      "slug": "welcome-to-july-7-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-july-7-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-07-08",
+      "slug": "welcome-to-july-8-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-july-8-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-07-09",
+      "slug": "welcome-to-july-9-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-july-9-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-07-10",
+      "slug": "welcome-to-july-10-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-july-10-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-07-11",
+      "slug": "welcome-to-july-11-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-july-11-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-07-12",
+      "slug": "welcome-to-july-12-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-july-12-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-07-14",
+      "slug": "welcome-to-july-14-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-july-14-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-07-15",
+      "slug": "welcome-to-july-15-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-july-15-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-07-16",
+      "slug": "welcome-to-july-16-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-july-16-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-07-17",
+      "slug": "welcome-to-july-17-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-july-17-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-07-18",
+      "slug": "welcome-to-july-18-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-july-18-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-07-19",
+      "slug": "welcome-to-july-19-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-july-19-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-07-20",
+      "slug": "welcome-to-july-20-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-july-20-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-07-21",
+      "slug": "welcome-to-july-21-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-july-21-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-07-22",
+      "slug": "welcome-to-july-22-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-july-22-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-07-23",
+      "slug": "welcome-to-july-23-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-july-23-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-07-24",
+      "slug": "welcome-to-july-24-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-july-24-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-07-26",
+      "slug": "welcome-to-july-26-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-july-26-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-07-29",
+      "slug": "welcome-to-july-29-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-july-29-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-07-30",
+      "slug": "welcome-to-july-30-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-july-30-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-07-31",
+      "slug": "welcome-to-july-31-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-july-31-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-08-01",
+      "slug": "welcome-to-august-1-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-august-1-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-08-02",
+      "slug": "welcome-to-august-2-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-august-2-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-08-03",
+      "slug": "welcome-to-august-3-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-august-3-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-08-04",
+      "slug": "welcome-to-august-4-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-august-4-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-08-05",
+      "slug": "welcome-to-august-5-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-august-5-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-08-06",
+      "slug": "welcome-to-august-6-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-august-6-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-08-08",
+      "slug": "welcome-to-august-8-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-august-8-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-08-10",
+      "slug": "welcome-to-august-10-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-august-10-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-08-12",
+      "slug": "welcome-to-august-12-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-august-12-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-08-13",
+      "slug": "welcome-to-august-13-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-august-13-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-08-15",
+      "slug": "welcome-to-august-15-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-august-15-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-08-16",
+      "slug": "welcome-to-august-16-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-august-16-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-08-17",
+      "slug": "welcome-to-august-17-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-august-17-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-08-19",
+      "slug": "welcome-to-august-19-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-august-19-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-08-21",
+      "slug": "welcome-to-august-21-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-august-21-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-08-23",
+      "slug": "welcome-to-august-23-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-august-23-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-08-25",
+      "slug": "welcome-to-august-25-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-august-25-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-08-27",
+      "slug": "welcome-to-august-27-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-august-27-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-08-29",
+      "slug": "welcome-to-august-29-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-august-29-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-08-31",
+      "slug": "welcome-to-august-31-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-august-31-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-09-04",
+      "slug": "welcome-to-september-4-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-september-4-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-09-06",
+      "slug": "welcome-to-september-6-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-september-6-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-09-07",
+      "slug": "welcome-to-september-7-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-september-7-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-09-12",
+      "slug": "welcome-to-september-12-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-september-12-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-09-13",
+      "slug": "welcome-to-september-13-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-september-13-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-09-15",
+      "slug": "welcome-to-september-15-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-september-15-2026",
+      "kind": "daily"
+    },
+    {
+      "date": null,
+      "slug": "the-first-interstellar-spacecraft",
+      "url": "https://theinnermostloop.substack.com/p/the-first-interstellar-spacecraft",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "the-first-ai-chip-designed-end-to",
+      "url": "https://theinnermostloop.substack.com/p/the-first-ai-chip-designed-end-to",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "the-first-orbital-librarian",
+      "url": "https://theinnermostloop.substack.com/p/the-first-orbital-librarian",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "the-payload-a-short-story",
+      "url": "https://theinnermostloop.substack.com/p/the-payload-a-short-story",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "the-first-orbital-sovereign-ai-model",
+      "url": "https://theinnermostloop.substack.com/p/the-first-orbital-sovereign-ai-model",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "how-to-compress-ai-timelines",
+      "url": "https://theinnermostloop.substack.com/p/how-to-compress-ai-timelines",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "the-first-commercial-orbital-data",
+      "url": "https://theinnermostloop.substack.com/p/the-first-commercial-orbital-data",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "the-first-dyson-swarm-node",
+      "url": "https://theinnermostloop.substack.com/p/the-first-dyson-swarm-node",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "the-first-early-stage-ticker-symbol",
+      "url": "https://theinnermostloop.substack.com/p/the-first-early-stage-ticker-symbol",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "the-first-frontier-ai-token-price",
+      "url": "https://theinnermostloop.substack.com/p/the-first-frontier-ai-token-price",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "the-innermost-loop-greenwich-june",
+      "url": "https://theinnermostloop.substack.com/p/the-innermost-loop-greenwich-june",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "the-first-consumer-scale-interspecies",
+      "url": "https://theinnermostloop.substack.com/p/the-first-consumer-scale-interspecies",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "the-first-major-exchange-compute",
+      "url": "https://theinnermostloop.substack.com/p/the-first-major-exchange-compute",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "the-first-one-person-ai-conglomerates",
+      "url": "https://theinnermostloop.substack.com/p/the-first-one-person-ai-conglomerates",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "the-first-tradable-compute-price",
+      "url": "https://theinnermostloop.substack.com/p/the-first-tradable-compute-price",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "the-first-ai-grown-land",
+      "url": "https://theinnermostloop.substack.com/p/the-first-ai-grown-land",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "the-first-american-professional-robotics",
+      "url": "https://theinnermostloop.substack.com/p/the-first-american-professional-robotics",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "the-first-open-source-agentic-ai",
+      "url": "https://theinnermostloop.substack.com/p/the-first-open-source-agentic-ai",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "a-conversation-with-mustafa-suleyman",
+      "url": "https://theinnermostloop.substack.com/p/a-conversation-with-mustafa-suleyman",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "the-first-multi-behavior-brain-upload",
+      "url": "https://theinnermostloop.substack.com/p/the-first-multi-behavior-brain-upload",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "a-conversation-with-frazer-anderson",
+      "url": "https://theinnermostloop.substack.com/p/a-conversation-with-frazer-anderson",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "a-conversation-with-ben-horowitz",
+      "url": "https://theinnermostloop.substack.com/p/a-conversation-with-ben-horowitz",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "you-are-invited-to-february-2027",
+      "url": "https://theinnermostloop.substack.com/p/you-are-invited-to-february-2027",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "physical-superintelligence",
+      "url": "https://theinnermostloop.substack.com/p/physical-superintelligence",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "solve-everything",
+      "url": "https://theinnermostloop.substack.com/p/solve-everything",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "a-conversation-with-john-werner",
+      "url": "https://theinnermostloop.substack.com/p/a-conversation-with-john-werner",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "a-conversation-with-cathie-wood",
+      "url": "https://theinnermostloop.substack.com/p/a-conversation-with-cathie-wood",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "a-conversation-with-peter-danenberg",
+      "url": "https://theinnermostloop.substack.com/p/a-conversation-with-peter-danenberg",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "a-conversation-with-ray-kurzweil",
+      "url": "https://theinnermostloop.substack.com/p/a-conversation-with-ray-kurzweil",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "davos-2026",
+      "url": "https://theinnermostloop.substack.com/p/davos-2026",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "welcome-to-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-2026",
+      "kind": "feature"
+    },
+    {
+      "date": null,
+      "slug": "welcome-to-new-years-eve-2025",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-new-years-eve-2025",
+      "kind": "feature"
+    }
+  ]
+}
