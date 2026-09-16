@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**8 of 233 issues** modelled, 2025-12-11 → 2025-12-18.
+**13 of 233 issues** modelled, 2025-12-11 → 2025-12-23.
 
 | | count |
 |---|---|
-| benchmarks | 17 |
-| developments | 171 |
-| facilities | 15 |
-| hardware | 7 |
-| issues | 8 |
-| organizations | 93 |
-| people | 4 |
-| systems | 38 |
-| themes | 31 |
+| benchmarks | 21 |
+| developments | 259 |
+| facilities | 20 |
+| hardware | 9 |
+| issues | 13 |
+| organizations | 121 |
+| people | 5 |
+| systems | 52 |
+| themes | 37 |
 
 ## Themes
 
@@ -69,9 +69,20 @@ trajectory rather than a pile of days.
 * [Discovery becomes industrial process](themes/discovery-as-process.md) — first seen 2025-12-17
 * [Politics becomes infrastructure](themes/politics-as-infrastructure.md) — first seen 2025-12-17
 * [Targeting root-node problems](themes/root-node-problems.md) — first seen 2025-12-18
+* [Grounding in physics, not web text](themes/data-beyond-text.md) — first seen 2025-12-19
+* [Machines building what powers machines](themes/physical-recursion.md) — first seen 2025-12-20
+* [The premium on specialization collapses](themes/generalism-beats-specialism.md) — first seen 2025-12-21
+* [Models inspecting their own internals](themes/machine-introspection.md) — first seen 2025-12-21
+* [Finance takes over the physical plant](themes/capital-takes-the-plant.md) — first seen 2025-12-22
+* [The frontier gap becomes a measured latency](themes/open-weight-latency.md) — first seen 2025-12-23
 
 ## Issues
 
+* [Welcome to December 23, 2025](issues/2025-12-23.md) — The monopoly on frontier cognition has dissolved into a mere six-month latency.
+* [Welcome to December 22, 2025](issues/2025-12-22.md) — The models are learning to learn in real-time.
+* [Welcome to December 21, 2025](issues/2025-12-21.md) — The black box has installed a mirror.
+* [Welcome to December 20, 2025](issues/2025-12-20.md) — The exponential curve has shattered into a superexponential vertical.
+* [Welcome to December 19, 2025](issues/2025-12-19.md) — The feedback loop is tightening faster than we can measure.
 * [Welcome to December 18, 2025](issues/2025-12-18.md) — We are in the midst of a hyperdeflationary Singularity.
 * [Welcome to December 17, 2025](issues/2025-12-17.md) — The miracle of discovery is being deprecated by the Singularity.
 * [Welcome to December 16, 2025](issues/2025-12-16.md) — The intelligence explosion has found a new yardstick.
