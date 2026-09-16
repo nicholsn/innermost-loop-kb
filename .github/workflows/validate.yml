@@ -44,3 +44,21 @@ jobs:
       - name: Validate the bundle and its references
         working-directory: schema
         run: uv run --with 'lokf[build]==0.8.0' lokf validate ../knowledge --schema innermost.yaml --check-refs
+
+  # The pages workflow only runs on push, so a PR never built the site and a
+  # bad frontmatter type reached main green: `tags: [development, 2025-12-11]`
+  # validated fine under LOKF but an unquoted date is a YAML *date object*, and
+  # Astro's content schema rejected it. Build the site on PRs too.
+  site:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - run: npm install
+      - run: npm run build
