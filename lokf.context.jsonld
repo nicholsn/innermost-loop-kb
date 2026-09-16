@@ -160,6 +160,10 @@
       "@type": "@id",
       "@id": "lokf:executor"
     },
+    "fabricated_by": {
+      "@type": "@id",
+      "@id": "schema:manufacturer"
+    },
     "fields": {
       "@type": "@id",
       "@id": "lokf:field"
@@ -322,6 +326,9 @@
       "@type": "@id",
       "@id": "schema:sameAs"
     },
+    "score": {
+      "@id": "schema:value"
+    },
     "source": {
       "@type": "@id",
       "@id": "dcterms:source"
@@ -445,6 +452,9 @@
     },
     "GlossaryTerm": {
       "@id": "schema:DefinedTerm"
+    },
+    "Hardware": {
+      "@id": "Hardware"
     },
     "Issue": {
       "@id": "Issue"

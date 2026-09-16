@@ -110,6 +110,7 @@ def emit(spec: dict) -> dict:
         ("systems", "systems"),
         ("benchmarks", "benchmarks"),
         ("facilities", "facilities"),
+        ("hardware", "hardware"),
         ("themes", "themes"),
     ):
         kind = rel_dir.rstrip("s")
@@ -146,6 +147,7 @@ def emit(spec: dict) -> dict:
             "actor": [iri("organizations", a) for a in d.get("actor", [])],
             "about": d.get("about"),
             "evidences": [iri("themes", t) for t in d.get("evidences", [])],
+            "score": d.get("score"),
             "occurred_on": d.get("occurred_on"),
             "supersedes": d.get("supersedes"),
             "tags": ["development", date],

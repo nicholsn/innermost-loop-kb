@@ -61,6 +61,7 @@ classes:
       - occurred_on
       - evidences
       - supersedes
+      - score
     slot_usage:
       reported_in:
         required: true
@@ -105,6 +106,18 @@ classes:
     slots:
       - published_by
       - measures_capability
+
+  Hardware:
+    is_a: Concept
+    class_uri: iml:Hardware
+    description: >-
+      A named chip, accelerator, or silicon product (B200, TPU, Autonomy
+      Processor 1). Separate from the Organization that designed it and the one
+      that fabricates it, because the corpus keeps reporting those coming apart
+      — buyers bypassing a vendor, or moving design in-house.
+    slots:
+      - developed_by
+      - fabricated_by
 
   Facility:
     is_a: Concept
@@ -179,6 +192,21 @@ slots:
     range: Concept
     multivalued: true
     slot_uri: dcterms:replaces
+
+  score:
+    description: >-
+      The reported figure, verbatim with its unit ("55.6%", "$11.64 per task",
+      "390x"). A string on purpose: the corpus mixes percentages, prices,
+      multiples and token counts, and coercing them to a number would lose the
+      unit that makes them comparable.
+    range: string
+    slot_uri: schema:value
+
+  fabricated_by:
+    description: The organization that manufactures the hardware.
+    range: Concept
+    multivalued: true
+    slot_uri: schema:manufacturer
 
   first_seen:
     description: The issue date on which this theme first appears.
