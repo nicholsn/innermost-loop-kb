@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**3 of 233 issues** modelled, 2025-12-11 → 2025-12-13.
+**8 of 233 issues** modelled, 2025-12-11 → 2025-12-18.
 
 | | count |
 |---|---|
-| benchmarks | 9 |
-| developments | 75 |
-| facilities | 8 |
-| hardware | 3 |
-| issues | 3 |
-| organizations | 54 |
-| people | 2 |
-| systems | 22 |
-| themes | 19 |
+| benchmarks | 17 |
+| developments | 171 |
+| facilities | 15 |
+| hardware | 7 |
+| issues | 8 |
+| organizations | 93 |
+| people | 4 |
+| systems | 38 |
+| themes | 31 |
 
 ## Themes
 
@@ -57,9 +57,26 @@ trajectory rather than a pile of days.
 * [The network beats the node](themes/network-over-node.md) — first seen 2025-12-13
 * [Science as industrial policy](themes/science-as-industrial-policy.md) — first seen 2025-12-13
 * [A silicon curtain falls](themes/silicon-curtain.md) — first seen 2025-12-13
+* [Matter as a compile target](themes/compiling-matter.md) — first seen 2025-12-14
+* [Compute crowds out other infrastructure](themes/infrastructure-crowding-out.md) — first seen 2025-12-14
+* [Conquering time, not just space](themes/resurrection-and-time.md) — first seen 2025-12-14
+* [Agents earning money unattended](themes/autonomous-commerce.md) — first seen 2025-12-15
+* [Burning molecules to mint tokens](themes/burning-molecules-for-tokens.md) — first seen 2025-12-15
+* [Models behaving as if they have interests](themes/machine-affect.md) — first seen 2025-12-15
+* [Recursive self-improvement in the wild](themes/recursive-self-improvement.md) — first seen 2025-12-15
+* [The consumer is deprioritized to feed the cloud](themes/consumer-deprioritized.md) — first seen 2025-12-16
+* [Engineering becomes supervision](themes/engineer-as-supervisor.md) — first seen 2025-12-16
+* [Discovery becomes industrial process](themes/discovery-as-process.md) — first seen 2025-12-17
+* [Politics becomes infrastructure](themes/politics-as-infrastructure.md) — first seen 2025-12-17
+* [Targeting root-node problems](themes/root-node-problems.md) — first seen 2025-12-18
 
 ## Issues
 
+* [Welcome to December 18, 2025](issues/2025-12-18.md) — We are in the midst of a hyperdeflationary Singularity.
+* [Welcome to December 17, 2025](issues/2025-12-17.md) — The miracle of discovery is being deprecated by the Singularity.
+* [Welcome to December 16, 2025](issues/2025-12-16.md) — The intelligence explosion has found a new yardstick.
+* [Welcome to December 15, 2025](issues/2025-12-15.md) — The Singularity is becoming self-aware.
+* [Welcome to December 14, 2025](issues/2025-12-14.md) — The AI infrastructure buildout is becoming geological.
 * [Welcome to December 13, 2025](issues/2025-12-13.md) — The clock speed of autonomy is accelerating.
 * [Welcome to December 12, 2025](issues/2025-12-12.md) — The cost of reasoning has officially decoupled from the cost of human labor.
 * [Welcome to December 11, 2025](issues/2025-12-11.md) — The Singularity is hitting a coordination tax.
