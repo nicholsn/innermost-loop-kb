@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**13 of 233 issues** modelled, 2025-12-11 → 2025-12-23.
+**18 of 233 issues** modelled, 2025-12-11 → 2025-12-28.
 
 | | count |
 |---|---|
-| benchmarks | 21 |
-| developments | 259 |
-| facilities | 20 |
+| benchmarks | 25 |
+| developments | 342 |
+| facilities | 21 |
 | hardware | 9 |
-| issues | 13 |
-| organizations | 121 |
-| people | 5 |
-| systems | 52 |
-| themes | 37 |
+| issues | 18 |
+| organizations | 145 |
+| people | 13 |
+| systems | 56 |
+| themes | 40 |
 
 ## Themes
 
@@ -75,9 +75,17 @@ trajectory rather than a pile of days.
 * [Models inspecting their own internals](themes/machine-introspection.md) — first seen 2025-12-21
 * [Finance takes over the physical plant](themes/capital-takes-the-plant.md) — first seen 2025-12-22
 * [The frontier gap becomes a measured latency](themes/open-weight-latency.md) — first seen 2025-12-23
+* [Benchmarks retire faster than they can be built](themes/benchmark-saturation.md) — first seen 2025-12-26
+* [Measured displacement of knowledge work](themes/work-displaced.md) — first seen 2025-12-26
+* [Practitioners start saying it out loud](themes/takeoff-declared.md) — first seen 2025-12-27
 
 ## Issues
 
+* [Welcome to December 28, 2025](issues/2025-12-28.md) — The Singularity is now running in production.
+* [Welcome to December 27, 2025](issues/2025-12-27.md) — The psychological firewall between the Singularity and its architects has ruptured.
+* [Welcome to December 26, 2025](issues/2025-12-26.md) — The yardstick has snapped.
+* [Welcome to December 25, 2025](issues/2025-12-25.md) — The machines are asking for a moment of silence.
+* [Welcome to December 24, 2025](issues/2025-12-24.md) — The curve is steepening into a wall.
 * [Welcome to December 23, 2025](issues/2025-12-23.md) — The monopoly on frontier cognition has dissolved into a mere six-month latency.
 * [Welcome to December 22, 2025](issues/2025-12-22.md) — The models are learning to learn in real-time.
 * [Welcome to December 21, 2025](issues/2025-12-21.md) — The black box has installed a mirror.
