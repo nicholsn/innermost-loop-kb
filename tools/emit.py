@@ -204,6 +204,7 @@ def reindex() -> None:
         return out
 
     issues = load("issues")
+    by_date = sorted(issues, key=lambda t: str(t[1]["issue_date"]))
     themes = load("themes")
     counts = {d.name: len(list(d.glob("*.md")))
               for d in sorted(KB.iterdir()) if d.is_dir()}
@@ -224,7 +225,8 @@ def reindex() -> None:
         "## Coverage",
         "",
         f"**{len(issues)} of 233 issues** modelled"
-        + (f", {issues[0][0]} → {issues[-1][0]}." if issues else "."),
+        + (f", {by_date[0][1]['issue_date']} → {by_date[-1][1]['issue_date']}."
+           if issues else "."),
         "",
         "| | count |",
         "|---|---|",
@@ -240,7 +242,8 @@ def reindex() -> None:
 
     if issues:
         lines += ["", "## Issues", ""]
-        for stem, fm in sorted(issues, reverse=True)[:20]:
+        for stem, fm in sorted(by_date, key=lambda t: str(t[1]["issue_date"]),
+                               reverse=True)[:20]:
             lines.append(f"* [{fm['title']}](issues/{stem}.md) — {fm.get('thesis', '')}")
         if len(issues) > 20:
             lines.append(f"* … and {len(issues) - 20} earlier issues")
