@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**138 of 233 issues** modelled, 2025-12-11 → 2026-06-13.
+**143 of 233 issues** modelled, 2025-12-11 → 2026-06-20.
 
 | | count |
 |---|---|
 | benchmarks | 42 |
-| developments | 2041 |
+| developments | 2102 |
 | facilities | 25 |
 | hardware | 12 |
-| issues | 138 |
-| organizations | 778 |
+| issues | 143 |
+| organizations | 805 |
 | people | 27 |
 | systems | 118 |
-| themes | 88 |
+| themes | 93 |
 
 ## Themes
 
@@ -126,9 +126,19 @@ trajectory rather than a pile of days.
 * [The makers ration the recursion](themes/rationed-recursion.md) — first seen 2026-06-10
 * [The measurements were wrong, not the models](themes/instruments-lag-the-models.md) — first seen 2026-06-13
 * [Model access as export control](themes/models-as-munitions.md) — first seen 2026-06-13
+* [Capability regresses by decree](themes/frontier-moves-backward.md) — first seen 2026-06-14
+* [Panels of models beat single models](themes/monoculture-is-the-vulnerability.md) — first seen 2026-06-14
+* [Supervision becomes the new work](themes/botsitting.md) — first seen 2026-06-15
+* [Training models to report themselves faithfully](themes/models-testify.md) — first seen 2026-06-19
+* [Frontier research goes dark](themes/dark-forest-research.md) — first seen 2026-06-20
 
 ## Issues
 
+* [Welcome to June 20, 2026](issues/2026-06-20.md) — Frontier research goes dark as the open pack takes the majority.
+* [Welcome to June 19, 2026](issues/2026-06-19.md) — The standoff over a banned model turns into co-writing the rules.
+* [Welcome to June 17, 2026](issues/2026-06-17.md) — The leading open model is Chinese, and the frontier model is unavailable.
+* [Welcome to June 15, 2026](issues/2026-06-15.md) — Adoption has gone universal and the compounding has begun.
+* [Welcome to June 14, 2026](issues/2026-06-14.md) — For the first time ever, the frontier chart moves backward.
 * [Welcome to June 13, 2026](issues/2026-06-13.md) — A government switches off a frontier model for every foreign national.
 * [Welcome to June 12, 2026](issues/2026-06-12.md) — The largest IPO ever is a fundraise for orbital compute.
 * [Welcome to June 10, 2026](issues/2026-06-10.md) — For the first time the makers ration the recursion.
@@ -144,9 +154,4 @@ trajectory rather than a pile of days.
 * [Welcome to May 28, 2026](issues/2026-05-28.md) — The agentic era is recast as a warm-up lap.
 * [Welcome to May 26, 2026](issues/2026-05-26.md) — Consolidation, self-testing and self-study become architecture.
 * [Welcome to May 25, 2026](issues/2026-05-25.md) — The Church writes a lab's vocabulary into doctrine.
-* [Welcome to May 24, 2026](issues/2026-05-24.md) — Capability forces a federal agency to withdraw public data.
-* [Welcome to May 22, 2026](issues/2026-05-22.md) — Autonomous execution stretches past a day and a half.
-* [Welcome to May 21, 2026](issues/2026-05-21.md) — A general-purpose model disproves a long-standing conjecture with ideas of its own.
-* [Welcome to May 20, 2026](issues/2026-05-20.md) — The loop acquires a named owner.
-* [Welcome to May 18, 2026](issues/2026-05-18.md) — The human wins the race and breaks his arm doing it.
-* … and 118 earlier issues
+* … and 123 earlier issues
