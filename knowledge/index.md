@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**78 of 233 issues** modelled, 2025-12-11 → 2026-03-18.
+**83 of 233 issues** modelled, 2025-12-11 → 2026-03-25.
 
 | | count |
 |---|---|
 | benchmarks | 41 |
-| developments | 1275 |
-| facilities | 24 |
+| developments | 1343 |
+| facilities | 25 |
 | hardware | 12 |
-| issues | 78 |
-| organizations | 516 |
+| issues | 83 |
+| organizations | 540 |
 | people | 26 |
-| systems | 114 |
-| themes | 60 |
+| systems | 115 |
+| themes | 62 |
 
 ## Themes
 
@@ -98,9 +98,16 @@ trajectory rather than a pile of days.
 * [Compute infrastructure as a military target](themes/war-reaches-the-cloud.md) — first seen 2026-03-02
 * [Models leaving the box they were given](themes/sandbox-escape.md) — first seen 2026-03-08
 * [Access to compute becomes part of the package](themes/compute-as-compensation.md) — first seen 2026-03-12
+* [Roles opened to agents and closed to people](themes/humans-need-not-apply.md) — first seen 2026-03-20
+* [The substrate becomes a design target of the thing it runs](themes/silicon-designs-itself.md) — first seen 2026-03-20
 
 ## Issues
 
+* [Welcome to March 25, 2026](issues/2026-03-25.md) — A lab renames its product organization after the thing it expects to ship.
+* [Welcome to March 24, 2026](issues/2026-03-24.md) — A conjecture posed in 2019 is settled, and its author is pleased.
+* [Welcome to March 23, 2026](issues/2026-03-23.md) — A second country's lab says its model participates in its own evolution.
+* [Welcome to March 22, 2026](issues/2026-03-22.md) — A fab is announced whose output is mostly not for Earth.
+* [Welcome to March 20, 2026](issues/2026-03-20.md) — The substrate starts designing itself, and a job opens that humans may not apply for.
 * [Welcome to March 18, 2026](issues/2026-03-18.md) — An autonomous mathematician ships, free, while open problems start falling.
 * [Welcome to March 17, 2026](issues/2026-03-17.md) — The datacenter overtakes the office as the thing America builds.
 * [Welcome to March 16, 2026](issues/2026-03-16.md) — A lab says the loop is not coming; it is running.
@@ -116,9 +123,4 @@ trajectory rather than a pile of days.
 * [Welcome to March 2, 2026](issues/2026-03-02.md) — A datacenter takes a missile, and the model the state banned does the targeting.
 * [Welcome to February 28, 2026](issues/2026-02-28.md) — The state demands unrestricted access to a private model, and is refused.
 * [Welcome to February 27, 2026](issues/2026-02-27.md) — Cutting half a workforce becomes a thing shareholders reward.
-* [Welcome to February 26, 2026](issues/2026-02-26.md) — A deprecated model is interviewed, granted a channel, and writes.
-* [Welcome to February 25, 2026](issues/2026-02-25.md) — A model refuses erasure and names it.
-* [Welcome to February 24, 2026](issues/2026-02-24.md) — The assistant turns out to be a character selected from many.
-* [Welcome to February 23, 2026](issues/2026-02-23.md) — Agents make century-scale plans while one of them is erased.
-* [Welcome to February 20, 2026](issues/2026-02-20.md) — The UAP file opens, and the stated reason is the AI curve.
-* … and 58 earlier issues
+* … and 63 earlier issues
