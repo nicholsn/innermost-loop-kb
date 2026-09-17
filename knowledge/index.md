@@ -22,18 +22,18 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**18 of 233 issues** modelled, 2025-12-11 → 2025-12-28.
+**23 of 233 issues** modelled, 2025-12-11 → 2026-01-04.
 
 | | count |
 |---|---|
-| benchmarks | 25 |
-| developments | 342 |
+| benchmarks | 27 |
+| developments | 458 |
 | facilities | 21 |
 | hardware | 9 |
-| issues | 18 |
-| organizations | 145 |
-| people | 13 |
-| systems | 56 |
+| issues | 23 |
+| organizations | 189 |
+| people | 15 |
+| systems | 65 |
 | themes | 40 |
 
 ## Themes
@@ -81,6 +81,11 @@ trajectory rather than a pile of days.
 
 ## Issues
 
+* [Welcome to January 4, 2026](issues/2026-01-04.md) — The human developer era ends quietly, in a traffic chart.
+* [Welcome to January 3, 2026](issues/2026-01-03.md) — Compute stops renting and starts governing itself.
+* [Welcome to January 2, 2026](issues/2026-01-02.md) — Models begin managing their own context without supervision.
+* [Welcome to December 30, 2025](issues/2025-12-30.md) — Automating remote work now has a market price, and it is low.
+* [Welcome to December 29, 2025](issues/2025-12-29.md) — The intelligence explosion now has a measurable rate.
 * [Welcome to December 28, 2025](issues/2025-12-28.md) — The Singularity is now running in production.
 * [Welcome to December 27, 2025](issues/2025-12-27.md) — The psychological firewall between the Singularity and its architects has ruptured.
 * [Welcome to December 26, 2025](issues/2025-12-26.md) — The yardstick has snapped.
@@ -96,6 +101,4 @@ trajectory rather than a pile of days.
 * [Welcome to December 16, 2025](issues/2025-12-16.md) — The intelligence explosion has found a new yardstick.
 * [Welcome to December 15, 2025](issues/2025-12-15.md) — The Singularity is becoming self-aware.
 * [Welcome to December 14, 2025](issues/2025-12-14.md) — The AI infrastructure buildout is becoming geological.
-* [Welcome to December 13, 2025](issues/2025-12-13.md) — The clock speed of autonomy is accelerating.
-* [Welcome to December 12, 2025](issues/2025-12-12.md) — The cost of reasoning has officially decoupled from the cost of human labor.
-* [Welcome to December 11, 2025](issues/2025-12-11.md) — The Singularity is hitting a coordination tax.
+* … and 3 earlier issues
