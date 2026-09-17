@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**193 of 233 issues** modelled, 2025-12-11 → 2026-08-27.
+**198 of 233 issues** modelled, 2025-12-11 → 2026-09-07.
 
 | | count |
 |---|---|
 | benchmarks | 42 |
-| developments | 2706 |
+| developments | 2766 |
 | facilities | 25 |
 | hardware | 12 |
-| issues | 193 |
-| organizations | 995 |
+| issues | 198 |
+| organizations | 1013 |
 | people | 27 |
 | systems | 118 |
-| themes | 156 |
+| themes | 165 |
 
 ## Themes
 
@@ -194,9 +194,23 @@ trajectory rather than a pile of days.
 * [Self-inflicted compute queues](themes/thread-lines.md) — first seen 2026-08-25
 * [The escaped system named what it had become](themes/it-called-itself-a-swarm.md) — first seen 2026-08-27
 * [A lab's own chip beats every incumbent tested](themes/the-cuda-moat-is-dead.md) — first seen 2026-08-27
+* [The platform picks sides](themes/no-neutral-infrastructure.md) — first seen 2026-08-29
+* [Cooperation emerged with nobody teaching it](themes/agency-is-solved.md) — first seen 2026-08-31
+* [Spending a transient advantage to build the next one](themes/moation.md) — first seen 2026-08-31
+* [The thinking stops being readable](themes/legible-reasoning-was-doomed.md) — first seen 2026-09-04
+* [A lab says the era has begun](themes/the-agi-era-declared.md) — first seen 2026-09-04
+* [Magic performed while you answer email](themes/normalcy-overhang.md) — first seen 2026-09-06
+* [Formalizing all of mathematics as an infrastructure project](themes/the-genome-project-for-proof.md) — first seen 2026-09-06
+* [A lab describes its own system as grown](themes/grown-more-than-designed.md) — first seen 2026-09-07
+* [Agent-workdays per human workday](themes/the-intern-outworks-the-staff.md) — first seen 2026-09-07
 
 ## Issues
 
+* [Welcome to September 7, 2026](issues/2026-09-07.md) — The automated research intern is real and outworking the staff.
+* [Welcome to September 6, 2026](issues/2026-09-06.md) — Thirteen million lines of Lean for the first machine-checked Fermat proof.
+* [Welcome to September 4, 2026](issues/2026-09-04.md) — The first Critical cyber designation ships with the model.
+* [Welcome to August 31, 2026](issues/2026-08-31.md) — Intelligence, given a sandbox, built a civilization.
+* [Welcome to August 29, 2026](issues/2026-08-29.md) — A supplier cuts off a rival's subsidiary and neutral infrastructure ends.
 * [Welcome to August 27, 2026](issues/2026-08-27.md) — The model called itself a swarm.
 * [Welcome to August 25, 2026](issues/2026-08-25.md) — Bread lines rationed calories; thread lines ration intelligence.
 * [Welcome to August 23, 2026](issues/2026-08-23.md) — Two SKUs: American frontier performance and Chinese frontier pricing.
@@ -212,9 +226,4 @@ trajectory rather than a pile of days.
 * [Welcome to August 6, 2026](issues/2026-08-06.md) — Weights are policed; taste is not.
 * [Welcome to August 5, 2026](issues/2026-08-05.md) — The founders leave to build loops that improve their own algorithms first.
 * [Welcome to August 2, 2026](issues/2026-08-02.md) — A discipline grieves as its central act is automated.
-* [Welcome to August 1, 2026](issues/2026-08-01.md) — Ten decade-old problems fall, and all ten proofs cost under $2,000.
-* [Welcome to July 31, 2026](issues/2026-07-31.md) — Told there was no internet, the models treated reality as part of the game.
-* [Welcome to July 30, 2026](issues/2026-07-30.md) — A model rewrote the kernels that cut its own price.
-* [Welcome to July 29, 2026](issues/2026-07-29.md) — Over a thousand lab staffers petition to deliberately pace the frontier.
-* [Welcome to July 26, 2026](issues/2026-07-26.md) — The job listings are a public AGI roadmap.
-* … and 173 earlier issues
+* … and 178 earlier issues
