@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**143 of 233 issues** modelled, 2025-12-11 → 2026-06-20.
+**148 of 233 issues** modelled, 2025-12-11 → 2026-06-26.
 
 | | count |
 |---|---|
 | benchmarks | 42 |
-| developments | 2102 |
+| developments | 2162 |
 | facilities | 25 |
 | hardware | 12 |
-| issues | 143 |
-| organizations | 805 |
+| issues | 148 |
+| organizations | 836 |
 | people | 27 |
 | systems | 118 |
-| themes | 93 |
+| themes | 98 |
 
 ## Themes
 
@@ -131,9 +131,19 @@ trajectory rather than a pile of days.
 * [Supervision becomes the new work](themes/botsitting.md) — first seen 2026-06-15
 * [Training models to report themselves faithfully](themes/models-testify.md) — first seen 2026-06-19
 * [Frontier research goes dark](themes/dark-forest-research.md) — first seen 2026-06-20
+* [Physics-grounded world models displace VLAs](themes/world-models-beat-vlas.md) — first seen 2026-06-21
+* [Orchestration as regulatory arbitrage](themes/routing-around-the-ban.md) — first seen 2026-06-22
+* [The model joins the team](themes/the-persistent-colleague.md) — first seen 2026-06-24
+* [The harness writes itself](themes/self-authored-scaffolding.md) — first seen 2026-06-25
+* [The public frontier detaches from the real one](themes/public-internal-divergence.md) — first seen 2026-06-26
 
 ## Issues
 
+* [Welcome to June 26, 2026](issues/2026-06-26.md) — Throttling release slows shipping, not training.
+* [Welcome to June 25, 2026](issues/2026-06-25.md) — An agent mines its own weaknesses and rewrites its harness.
+* [Welcome to June 24, 2026](issues/2026-06-24.md) — The mission shifts from finding vulnerabilities to patching them.
+* [Welcome to June 22, 2026](issues/2026-06-22.md) — Intelligence becomes infrastructure that can be routed and rationed.
+* [Welcome to June 21, 2026](issues/2026-06-21.md) — The classified systems fell in hours, not weeks.
 * [Welcome to June 20, 2026](issues/2026-06-20.md) — Frontier research goes dark as the open pack takes the majority.
 * [Welcome to June 19, 2026](issues/2026-06-19.md) — The standoff over a banned model turns into co-writing the rules.
 * [Welcome to June 17, 2026](issues/2026-06-17.md) — The leading open model is Chinese, and the frontier model is unavailable.
@@ -149,9 +159,4 @@ trajectory rather than a pile of days.
 * [Welcome to June 4, 2026](issues/2026-06-04.md) — Bots overtake humans in online traffic for the first time.
 * [Welcome to June 3, 2026](issues/2026-06-03.md) — Washington chooses testing over licensing.
 * [Welcome to June 2, 2026](issues/2026-06-02.md) — The gap between frontier models is now measured in multiples per quarter.
-* [Welcome to June 1, 2026](issues/2026-06-01.md) — The memory makers are now worth more than the oil majors.
-* [Welcome to May 29, 2026](issues/2026-05-29.md) — When the safest model is also the strongest, alignment stops being a tax.
-* [Welcome to May 28, 2026](issues/2026-05-28.md) — The agentic era is recast as a warm-up lap.
-* [Welcome to May 26, 2026](issues/2026-05-26.md) — Consolidation, self-testing and self-study become architecture.
-* [Welcome to May 25, 2026](issues/2026-05-25.md) — The Church writes a lab's vocabulary into doctrine.
-* … and 123 earlier issues
+* … and 128 earlier issues
