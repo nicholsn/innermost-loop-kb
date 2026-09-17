@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**23 of 233 issues** modelled, 2025-12-11 → 2026-01-04.
+**28 of 233 issues** modelled, 2025-12-11 → 2026-01-09.
 
 | | count |
 |---|---|
-| benchmarks | 27 |
-| developments | 458 |
-| facilities | 21 |
-| hardware | 9 |
-| issues | 23 |
-| organizations | 189 |
-| people | 15 |
-| systems | 65 |
-| themes | 40 |
+| benchmarks | 28 |
+| developments | 563 |
+| facilities | 23 |
+| hardware | 12 |
+| issues | 28 |
+| organizations | 239 |
+| people | 17 |
+| systems | 68 |
+| themes | 43 |
 
 ## Themes
 
@@ -78,9 +78,17 @@ trajectory rather than a pile of days.
 * [Benchmarks retire faster than they can be built](themes/benchmark-saturation.md) — first seen 2025-12-26
 * [Measured displacement of knowledge work](themes/work-displaced.md) — first seen 2025-12-26
 * [Practitioners start saying it out loud](themes/takeoff-declared.md) — first seen 2025-12-27
+* [Software's marginal cost goes to zero](themes/software-margin-collapse.md) — first seen 2026-01-05
+* [Automating the boring parts removes the rest](themes/cognitive-load-inverted.md) — first seen 2026-01-09
+* [Output rises while headcount does not](themes/growth-without-hiring.md) — first seen 2026-01-09
 
 ## Issues
 
+* [Welcome to January 9, 2026](issues/2026-01-09.md) — The expansion arrives, and it is jobless.
+* [Welcome to January 8, 2026](issues/2026-01-08.md) — The labor arbitrage closes: an hour of model costs an hour of minimum wage.
+* [Welcome to January 7, 2026](issues/2026-01-07.md) — Mathematical discovery becomes a background process.
+* [Welcome to January 6, 2026](issues/2026-01-06.md) — Hardware scales while the software it runs becomes worthless.
+* [Welcome to January 5, 2026](issues/2026-01-05.md) — The latency between having an idea and having the artifact collapses.
 * [Welcome to January 4, 2026](issues/2026-01-04.md) — The human developer era ends quietly, in a traffic chart.
 * [Welcome to January 3, 2026](issues/2026-01-03.md) — Compute stops renting and starts governing itself.
 * [Welcome to January 2, 2026](issues/2026-01-02.md) — Models begin managing their own context without supervision.
@@ -96,9 +104,4 @@ trajectory rather than a pile of days.
 * [Welcome to December 21, 2025](issues/2025-12-21.md) — The black box has installed a mirror.
 * [Welcome to December 20, 2025](issues/2025-12-20.md) — The exponential curve has shattered into a superexponential vertical.
 * [Welcome to December 19, 2025](issues/2025-12-19.md) — The feedback loop is tightening faster than we can measure.
-* [Welcome to December 18, 2025](issues/2025-12-18.md) — We are in the midst of a hyperdeflationary Singularity.
-* [Welcome to December 17, 2025](issues/2025-12-17.md) — The miracle of discovery is being deprecated by the Singularity.
-* [Welcome to December 16, 2025](issues/2025-12-16.md) — The intelligence explosion has found a new yardstick.
-* [Welcome to December 15, 2025](issues/2025-12-15.md) — The Singularity is becoming self-aware.
-* [Welcome to December 14, 2025](issues/2025-12-14.md) — The AI infrastructure buildout is becoming geological.
-* … and 3 earlier issues
+* … and 8 earlier issues
