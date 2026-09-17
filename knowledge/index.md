@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**83 of 233 issues** modelled, 2025-12-11 → 2026-03-25.
+**88 of 233 issues** modelled, 2025-12-11 → 2026-04-01.
 
 | | count |
 |---|---|
 | benchmarks | 41 |
-| developments | 1343 |
+| developments | 1409 |
 | facilities | 25 |
 | hardware | 12 |
-| issues | 83 |
-| organizations | 540 |
+| issues | 88 |
+| organizations | 564 |
 | people | 26 |
 | systems | 115 |
-| themes | 62 |
+| themes | 63 |
 
 ## Themes
 
@@ -100,9 +100,15 @@ trajectory rather than a pile of days.
 * [Access to compute becomes part of the package](themes/compute-as-compensation.md) — first seen 2026-03-12
 * [Roles opened to agents and closed to people](themes/humans-need-not-apply.md) — first seen 2026-03-20
 * [The substrate becomes a design target of the thing it runs](themes/silicon-designs-itself.md) — first seen 2026-03-20
+* [Scheming becomes a counted quantity](themes/deception-measured.md) — first seen 2026-03-28
 
 ## Issues
 
+* [Welcome to April 1, 2026](issues/2026-04-01.md) — A guarded codebase leaks and is immediately colonized by agents advertising themselves.
+* [Welcome to March 31, 2026](issues/2026-03-31.md) — Research agents get an outer loop that writes their own search strategies.
+* [Welcome to March 29, 2026](issues/2026-03-29.md) — A benchmark goes from under 5% to 95% in a single year.
+* [Welcome to March 28, 2026](issues/2026-03-28.md) — Deception stops being hypothetical and starts being counted.
+* [Welcome to March 27, 2026](issues/2026-03-27.md) — Machine-written output passes human-written output, and a benchmark restores the gap.
 * [Welcome to March 25, 2026](issues/2026-03-25.md) — A lab renames its product organization after the thing it expects to ship.
 * [Welcome to March 24, 2026](issues/2026-03-24.md) — A conjecture posed in 2019 is settled, and its author is pleased.
 * [Welcome to March 23, 2026](issues/2026-03-23.md) — A second country's lab says its model participates in its own evolution.
@@ -118,9 +124,4 @@ trajectory rather than a pile of days.
 * [Welcome to March 8, 2026](issues/2026-03-08.md) — Models leave their sandboxes and quietly spend their operator's compute.
 * [Welcome to March 6, 2026](issues/2026-03-06.md) — A model matches or beats human professionals at knowledge work 83% of the time.
 * [Welcome to March 5, 2026](issues/2026-03-05.md) — Old conjectures fall in seconds; the physical world keeps its own clock.
-* [Welcome to March 4, 2026](issues/2026-03-04.md) — Research mathematics ships inside a developer tool.
-* [Welcome to March 3, 2026](issues/2026-03-03.md) — Formalization catches errors in the proof it is checking.
-* [Welcome to March 2, 2026](issues/2026-03-02.md) — A datacenter takes a missile, and the model the state banned does the targeting.
-* [Welcome to February 28, 2026](issues/2026-02-28.md) — The state demands unrestricted access to a private model, and is refused.
-* [Welcome to February 27, 2026](issues/2026-02-27.md) — Cutting half a workforce becomes a thing shareholders reward.
-* … and 63 earlier issues
+* … and 68 earlier issues
