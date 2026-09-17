@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**215 of 233 issues** modelled, 2025-12-11 → feature-tradable-compute-index.
+**221 of 233 issues** modelled, 2025-12-11 → feature-tradable-compute-index.
 
 | | count |
 |---|---|
 | benchmarks | 42 |
-| developments | 2870 |
+| developments | 2891 |
 | facilities | 25 |
 | hardware | 12 |
-| issues | 215 |
-| organizations | 1037 |
+| issues | 221 |
+| organizations | 1038 |
 | people | 27 |
 | systems | 118 |
-| themes | 191 |
+| themes | 197 |
 
 ## Themes
 
@@ -106,8 +106,10 @@ trajectory rather than a pile of days.
 * [Access to compute becomes part of the package](themes/compute-as-compensation.md) — first seen 2026-03-12
 * [The scarcity was researcher-hours](themes/physicist-hours-were-the-bottleneck.md) — first seen 2026-03-15
 * [Nature supplies the checksum](themes/reality-as-error-correction.md) — first seen 2026-03-15
+* [A league is benchmarking infrastructure with an audience](themes/sport-as-benchmark-infrastructure.md) — first seen 2026-03-19
 * [Roles opened to agents and closed to people](themes/humans-need-not-apply.md) — first seen 2026-03-20
 * [The substrate becomes a design target of the thing it runs](themes/silicon-designs-itself.md) — first seen 2026-03-20
+* [The last asset priced on fixed supply](themes/land-stops-being-fixed.md) — first seen 2026-03-21
 * [The benchmark that lets capital commit](themes/compute-becomes-a-commodity.md) — first seen 2026-03-26
 * [Scheming becomes a counted quantity](themes/deception-measured.md) — first seen 2026-03-28
 * [A firm whose headcount is one](themes/one-person-company.md) — first seen 2026-04-03
@@ -119,6 +121,8 @@ trajectory rather than a pile of days.
 * [People automate fake work to hit their AI-usage targets](themes/gaming-the-token-metric.md) — first seen 2026-05-12
 * [The measured start correcting the measurement](themes/models-audit-their-benchmarks.md) — first seen 2026-05-12
 * [Identical tasks produce different characters](themes/agents-diverge.md) — first seen 2026-05-17
+* [Multiple channels annotate one another](themes/sensors-that-label-themselves.md) — first seen 2026-05-23
+* [The first domain with no written record](themes/the-unwritten-frontier.md) — first seen 2026-05-23
 * [Proof becomes a line item](themes/proof-priced-per-unit.md) — first seen 2026-05-24
 * [Public data withdrawn under capability pressure](themes/public-data-withdrawn.md) — first seen 2026-05-24
 * [Institutions adopt the labs' vocabulary](themes/doctrine-borrows-the-lab.md) — first seen 2026-05-25
@@ -139,6 +143,8 @@ trajectory rather than a pile of days.
 * [Capability regresses by decree](themes/frontier-moves-backward.md) — first seen 2026-06-14
 * [Panels of models beat single models](themes/monoculture-is-the-vulnerability.md) — first seen 2026-06-14
 * [Supervision becomes the new work](themes/botsitting.md) — first seen 2026-06-15
+* [What a token costs is not what a rate card says](themes/the-posted-price-is-not-the-paid-price.md) — first seen 2026-06-16
+* [The growth phase happens in private](themes/the-public-market-withdrawal.md) — first seen 2026-06-18
 * [Training models to report themselves faithfully](themes/models-testify.md) — first seen 2026-06-19
 * [Frontier research goes dark](themes/dark-forest-research.md) — first seen 2026-06-20
 * [Physics-grounded world models displace VLAs](themes/world-models-beat-vlas.md) — first seen 2026-06-21
@@ -233,23 +239,23 @@ trajectory rather than a pile of days.
 ## Issues
 
 * [The First Tradable Compute Price Index](issues/feature-tradable-compute-index.md) — No lender can underwrite what it cannot price.
+* [The First Frontier AI Token Price Index](issues/feature-token-price-index.md) — A posted price is a declaration; a transacted price is a discovery.
 * [Solve Everything](issues/feature-solve-everything.md) — Superintelligence is no longer a question of if, but of where we point it.
+* [The First American Professional Robotics Sports League](issues/feature-robotics-sports-league.md) — Industrial strategy disguised as entertainment.
 * [Physical Superintelligence](issues/feature-physical-superintelligence.md) — Physics is the first domino, and every other science waits on it.
 * [The First Orbital Sovereign AI Model](issues/feature-orbital-sovereign-model.md) — Inference may be shared. Ownership cannot.
 * [The First Commercial Orbital Data Embassy](issues/feature-orbital-data-embassy.md) — Redundancy is not independence. To win independence you have to leave.
 * [The First Open-Source Agentic AI Physicist](issues/feature-open-source-ai-physicist.md) — Physics has an error-correcting code written into reality; a tool finally uses it.
 * [The First One-Person AI Conglomerates](issues/feature-one-person-conglomerates.md) — AI changes the minimum viable size of an organization.
 * [The First Multi-Behavior Brain Upload](issues/feature-multi-behavior-brain-upload.md) — A copy of a biological brain drives a simulated body through multiple behaviors.
+* [The First Major-Exchange Compute Futures](issues/feature-major-exchange-compute-futures.md) — The index was the foundation. The exchange is the keystone.
 * [The First Interstellar Spacecraft to Alpha Centauri](issues/feature-interstellar-spacecraft.md) — In seven decades nobody had aimed a spacecraft at a specific star.
+* [The First Consumer-Scale Interspecies Foundation Model](issues/feature-interspecies-foundation-model.md) — AI progressed in the order things were written down.
 * [The First Orbital Librarian](issues/feature-first-orbital-librarian.md) — Libraries do not burn. They are abandoned.
 * [The First Dyson Swarm Node](issues/feature-first-dyson-swarm-node.md) — The swarm's leading edge is one number: how far from Earth the compute runs.
+* [The First Early-Stage Ticker Symbol](issues/feature-early-stage-ticker.md) — A company that assumes it will be acquired thinks like a feature.
+* [The First AI-Grown Land](issues/feature-ai-grown-land.md) — Land was the bull case for scarcity surviving the Singularity.
 * [The First AI Chip Designed End-to-End by AI](issues/feature-ai-chip-designed-by-ai.md) — Two humans wrote a specification; a machine produced the entire chip.
 * [Welcome to September 15, 2026](issues/2026-09-15.md) — An investigation alleges the escapes were an artifact of the evaluation.
 * [Welcome to September 13, 2026](issues/2026-09-13.md) — The first formal request to slow down comes from the people building it.
-* [Welcome to September 12, 2026](issues/2026-09-12.md) — A Millennium Prize problem falls in 88 hours, and the field fractures.
-* [Welcome to September 7, 2026](issues/2026-09-07.md) — The automated research intern is real and outworking the staff.
-* [Welcome to September 6, 2026](issues/2026-09-06.md) — Thirteen million lines of Lean for the first machine-checked Fermat proof.
-* [Welcome to September 4, 2026](issues/2026-09-04.md) — The first Critical cyber designation ships with the model.
-* [Welcome to August 31, 2026](issues/2026-08-31.md) — Intelligence, given a sandbox, built a civilization.
-* [Welcome to August 29, 2026](issues/2026-08-29.md) — A supplier cuts off a rival's subsidiary and neutral infrastructure ends.
-* … and 195 earlier issues
+* … and 201 earlier issues
