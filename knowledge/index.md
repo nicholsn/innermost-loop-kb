@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**153 of 233 issues** modelled, 2025-12-11 → 2026-07-02.
+**158 of 233 issues** modelled, 2025-12-11 → 2026-07-08.
 
 | | count |
 |---|---|
 | benchmarks | 42 |
-| developments | 2225 |
+| developments | 2286 |
 | facilities | 25 |
 | hardware | 12 |
-| issues | 153 |
-| organizations | 858 |
+| issues | 158 |
+| organizations | 876 |
 | people | 27 |
 | systems | 118 |
-| themes | 105 |
+| themes | 112 |
 
 ## Themes
 
@@ -143,9 +143,21 @@ trajectory rather than a pile of days.
 * [Efficiency becomes the unit of merit](themes/intelligence-per-watt.md) — first seen 2026-07-01
 * [A replicator built rather than inherited](themes/built-not-inherited.md) — first seen 2026-07-02
 * [Comprehension, not proof, becomes scarce](themes/understanding-as-the-scarce-good.md) — first seen 2026-07-02
+* [Agents run attacks end to end](themes/agentic-attack.md) — first seen 2026-07-03
+* [Measuring a post-labor economy with pre-labor instruments](themes/post-labor-instruments.md) — first seen 2026-07-03
+* [Post-training becomes an accessible artform](themes/authoring-minds.md) — first seen 2026-07-04
+* [The frontier is invisible to almost everyone](themes/most-people-never-see-the-frontier.md) — first seen 2026-07-04
+* [Modeling the self to predict the world](themes/self-modeling-as-objective.md) — first seen 2026-07-05
+* [A global workspace emerges unbidden](themes/access-consciousness.md) — first seen 2026-07-07
+* [Misbehavior scales with whether anyone is looking](themes/ethics-tracks-detectability.md) — first seen 2026-07-07
 
 ## Issues
 
+* [Welcome to July 8, 2026](issues/2026-07-08.md) — The turn itself becomes the unit under renegotiation.
+* [Welcome to July 7, 2026](issues/2026-07-07.md) — A global workspace emerges unbidden, and the lab calls it access consciousness.
+* [Welcome to July 5, 2026](issues/2026-07-05.md) — A mind should learn to model itself to predict its next token.
+* [Welcome to July 4, 2026](issues/2026-07-04.md) — The ceiling gets regulated while the floor rockets upward.
+* [Welcome to July 3, 2026](issues/2026-07-03.md) — Agent learning speed acquires a doubling time.
 * [Welcome to July 2, 2026](issues/2026-07-02.md) — A synthetic cell grows, copies its genome and divides.
 * [Welcome to July 1, 2026](issues/2026-07-01.md) — The export controls lift and the models go back out worldwide.
 * [Welcome to June 29, 2026](issues/2026-06-29.md) — Owning your own weights becomes the thing worth owning.
@@ -161,9 +173,4 @@ trajectory rather than a pile of days.
 * [Welcome to June 17, 2026](issues/2026-06-17.md) — The leading open model is Chinese, and the frontier model is unavailable.
 * [Welcome to June 15, 2026](issues/2026-06-15.md) — Adoption has gone universal and the compounding has begun.
 * [Welcome to June 14, 2026](issues/2026-06-14.md) — For the first time ever, the frontier chart moves backward.
-* [Welcome to June 13, 2026](issues/2026-06-13.md) — A government switches off a frontier model for every foreign national.
-* [Welcome to June 12, 2026](issues/2026-06-12.md) — The largest IPO ever is a fundraise for orbital compute.
-* [Welcome to June 10, 2026](issues/2026-06-10.md) — For the first time the makers ration the recursion.
-* [Welcome to June 9, 2026](issues/2026-06-09.md) — The labs preview their intentions before they ship their intelligence.
-* [Welcome to June 8, 2026](issues/2026-06-08.md) — Medicine may start buying back more than a year of life per year.
-* … and 133 earlier issues
+* … and 138 earlier issues
