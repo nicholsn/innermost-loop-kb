@@ -1,0 +1,172 @@
+"""Issue 030 — 2026-01-11. Compute doubles every seven months."""
+URL = "https://theinnermostloop.substack.com/p/welcome-to-january-11-2026"
+B = "https://nicholsn.github.io/innermost-loop-kb/"
+SPEC = {
+    "issue": {
+        "date": "2026-01-11", "title": "Welcome to January 11, 2026", "url": URL,
+        "thesis": "Global compute doubles every seven months, and everything downstream keeps time to it.",
+        "body": """
+# Welcome to January 11, 2026
+
+Epoch puts global AI compute on a seven-month doubling, 3.3x a year. Erdős #729
+falls the same day — the second in a week — making the bulk solution of open
+mathematics a function of that clock rather than of insight.
+
+The cheapest result in the issue is the funniest: repeating a prompt twice lets
+a model attend to its own input and improves performance at zero token cost.
+""",
+    },
+    "organizations": [
+        {"id": "duke", "type": "Organization", "title": "Duke University",
+         "resource": "https://duke.edu/"},
+        {"id": "sandia", "type": "Organization", "title": "Sandia National Laboratories",
+         "resource": "https://www.sandia.gov/"},
+        {"id": "dai-nippon", "type": "Organization", "title": "Dai Nippon Printing",
+         "resource": "https://www.global.dnp/", "body": "Nanoimprint lithography templates for 1.4-nm logic."},
+        {"id": "trendforce", "type": "Organization", "title": "TrendForce",
+         "resource": "https://www.trendforce.com/"},
+        {"id": "voltair-labs", "type": "Organization", "title": "Voltair Labs",
+         "body": "Drones that recharge from power lines."},
+        {"id": "mach-industries", "type": "Organization", "title": "Mach Industries",
+         "body": "Low-cost anti-drone interceptors."},
+        {"id": "wonder-group", "type": "Organization", "title": "Wonder Group",
+         "body": "Marc Lore's food company; robot kitchen at 500 meals an hour."},
+        {"id": "uc-irvine", "type": "Organization", "title": "UC Irvine",
+         "resource": "https://uci.edu/"},
+        {"id": "midjourney", "type": "Organization", "title": "Midjourney",
+         "resource": "https://www.midjourney.com/"},
+        {"id": "canada", "type": "Organization", "title": "Government of Canada",
+         "resource": "https://www.canada.ca/"},
+    ],
+    "systems": [
+        {"id": "wise-radio-weights", "type": "AISystem", "title": "WISE",
+         "modality": "radio",
+         "body": "Encodes model weights in radio waves so devices compute using the air."},
+        {"id": "grokipedia", "type": "AISystem", "title": "Grokipedia",
+         "developed_by": [B + "organizations/xai"], "modality": "text",
+         "body": "Model-generated encyclopedia at 86% of English Wikipedia's article count."},
+    ],
+    "developments": [
+        {"id": "2026-01-11-compute-doubles-every-7-months",
+         "title": "Global AI compute doubles every seven months",
+         "claim": "Epoch AI reported global AI compute capacity is doubling every seven months, "
+                  "a 3.3x annual compounding rate.",
+         "domain": "compute", "actor": ["epoch-ai"], "score": "3.3x/year",
+         "evidences": ["compute-capital-stack", "recursive-self-improvement"],
+         "supersedes": [B + "developments/2026-01-09-15m-h100-equivalents"]},
+        {"id": "2026-01-11-erdos-729",
+         "title": "Erdős #729 falls, the second in a week",
+         "claim": "GPT-5.2 Pro and Aristotle autonomously resolved Erdős problem #729, the "
+                  "second within a week, making bulk solution of open mathematics a function of "
+                  "available compute.",
+         "domain": "science", "actor": ["openai", "harmonic"], "about": [B + "systems/aristotle"],
+         "evidences": ["automated-science", "discovery-as-process"],
+         "supersedes": [B + "developments/2026-01-09-tao-calls-erdos-728-a-milestone"]},
+        {"id": "2026-01-11-repeat-the-prompt-twice",
+         "title": "Repeating a prompt twice improves performance for free",
+         "claim": "Google researchers found that simply repeating a prompt twice lets models "
+                  "attend to their own inputs without reasoning, improving performance at zero "
+                  "generated-token cost.",
+         "domain": "models", "actor": ["google"],
+         "evidences": ["scaffolding-over-weights", "reasoning-price-deflation"]},
+        {"id": "2026-01-11-wise-weights-in-radio-waves",
+         "title": "Model weights are encoded in radio waves",
+         "claim": "Duke and MIT researchers demonstrated WISE, encoding model weights in radio "
+                  "waves so devices compute using the air itself.",
+         "domain": "compute", "actor": ["duke", "mit"], "about": [B + "systems/wise-radio-weights"],
+         "evidences": ["network-over-node", "architecture-of-mind"]},
+        {"id": "2026-01-11-sandia-motor-cortex-on-loihi",
+         "title": "Sandia maps the motor cortex onto neuromorphic silicon",
+         "claim": "Sandia National Labs mapped the brain's motor cortex onto Intel's Loihi 2, "
+                  "solving partial differential equations at biological efficiency.",
+         "domain": "compute", "actor": ["sandia", "intel"],
+         "evidences": ["architecture-of-mind", "vertical-silicon"]},
+        {"id": "2026-01-11-nanoimprint-14nm",
+         "title": "Nanoimprint lithography reaches 1.4-nm logic",
+         "claim": "Dai Nippon Printing unveiled nanoimprint lithography templates capable of "
+                  "1.4-nm logic, potentially bypassing the EUV monopoly.",
+         "domain": "compute", "actor": ["dai-nippon"],
+         "evidences": ["silicon-curtain", "vertical-silicon"]},
+        {"id": "2026-01-11-dram-up-55pct",
+         "title": "DRAM prices jump 55% in a quarter",
+         "claim": "TrendForce predicted an unprecedented 55% jump in DRAM prices this quarter.",
+         "domain": "economics", "actor": ["trendforce"], "score": "+55%",
+         "evidences": ["consumer-deprioritized", "infrastructure-crowding-out"],
+         "supersedes": [B + "developments/2026-01-07-memory-caps-datacenter-buildout"]},
+        {"id": "2026-01-11-drones-recharge-from-power-lines",
+         "title": "Drones recharge parasitically from power lines",
+         "claim": "Voltair Labs launched drones that recharge directly from power lines, giving "
+                  "them effectively unlimited range, while Mach Industries introduced a "
+                  "low-cost anti-drone interceptor.",
+         "domain": "robotics", "actor": ["voltair-labs", "mach-industries"],
+         "evidences": ["autonomy-clock-speed", "physical-recursion"]},
+        {"id": "2026-01-11-matrix-3-and-infinite-kitchen",
+         "title": "A zero-shot humanoid ships as a robot kitchen hits 500 meals an hour",
+         "claim": "Matrix Robotics' MATRIX-3 humanoid features zero-shot learning and soft "
+                  "bionic skin, while Wonder Group deployed an Infinite Kitchen producing 500 "
+                  "meals an hour.",
+         "domain": "robotics", "actor": ["wonder-group"], "score": "500 meals/hr",
+         "evidences": ["physical-recursion", "work-displaced"]},
+        {"id": "2026-01-11-vegas-loop-130-teslas",
+         "title": "The Vegas Loop runs 130 autonomous Teslas a day",
+         "claim": "The Boring Company's Vegas Loop now runs 130 autonomous Teslas daily, while "
+                  "Canada considered a $250 million sovereign Arctic satellite network.",
+         "domain": "robotics", "actor": ["boring-company", "canada"], "score": "130 vehicles/day",
+         "evidences": ["autonomous-commerce"],
+         "supersedes": [B + "developments/2026-01-10-vegas-loop-million-cubic-yards"]},
+        {"id": "2026-01-11-apoe-92pct-of-alzheimers-risk",
+         "title": "APOE mutations account for 92% of Alzheimer's risk",
+         "claim": "British researchers identified APOE mutations as the root of 92% of "
+                  "Alzheimer's risk, effectively solving the disease's genetics.",
+         "domain": "biotech", "score": "92% of risk",
+         "evidences": ["hardware-grade-biology", "root-node-problems"],
+         "supersedes": [B + "developments/2026-01-03-evoke-failure-reframes-alzheimers"]},
+        {"id": "2026-01-11-universal-polymerase",
+         "title": "A near-universal polymerase writes unnatural nucleotides",
+         "claim": "UC Irvine engineered an almost universal polymerase capable of synthesizing "
+                  "unnatural nucleotides, unlocking read-write access to genetic chemistry.",
+         "domain": "biotech", "actor": ["uc-irvine"],
+         "evidences": ["hardware-grade-biology", "compiling-matter"]},
+        {"id": "2026-01-11-rem-sleep-up-90pct",
+         "title": "A drug raises REM sleep 90% without lengthening it",
+         "claim": "Bright Minds' BMB-101 increases REM sleep by 90% without extending total "
+                  "sleep duration, as US opioid deaths fell 43% on a fentanyl supply shock.",
+         "domain": "biotech", "score": "+90% REM / -43% deaths",
+         "evidences": ["hardware-grade-biology"]},
+        {"id": "2026-01-11-ai-music-three-hours-a-week",
+         "title": "Young adults listen to three hours of AI music a week",
+         "claim": "Morgan Stanley reported 60% of young adults listen to three hours of "
+                  "AI-generated music weekly, while Grokipedia reached 86% of English "
+                  "Wikipedia's article count.",
+         "domain": "society", "actor": ["morgan-stanley", "xai", "midjourney"],
+         "about": [B + "systems/grokipedia"], "score": "60% / 3 hrs / 86%",
+         "evidences": ["work-displaced", "intimate-interface"]},
+        {"id": "2026-01-11-x-timeline-rewrite-20pct",
+         "title": "A rewritten timeline buys 20% more attention",
+         "claim": "xAI rewrote the X timeline code and gained 20% more user time, while Amazon "
+                  "began deploying agents that buy from competitors on a user's behalf.",
+         "domain": "economics", "actor": ["xai", "amazon"], "score": "+20% time",
+         "evidences": ["autonomous-commerce", "intimate-interface"]},
+        {"id": "2026-01-11-trillion-dollars-leaves-california",
+         "title": "A trillion dollars of tech wealth leaves California",
+         "claim": "Chamath Palihapitiya estimated $1 trillion of tech billionaire wealth has "
+                  "left California to avoid retroactive taxation, as convertible bond issuance "
+                  "hit a 24-year high on AI infrastructure.",
+         "domain": "economics", "score": "$1T",
+         "evidences": ["regulatory-exit", "compute-capital-stack"],
+         "supersedes": [B + "developments/2026-01-10-california-drought-free"]},
+        {"id": "2026-01-11-anthropic-10x-three-years",
+         "title": "Anthropic's revenue grows 10x for a third straight year",
+         "claim": "Anthropic's revenue has grown tenfold annually for three consecutive years.",
+         "domain": "economics", "actor": ["anthropic"], "score": "10x for 3 years",
+         "evidences": ["compute-capital-stack"],
+         "supersedes": [B + "developments/2026-01-08-anthropic-10b-at-350b"]},
+        {"id": "2026-01-11-taiwan-exports-shift-to-us",
+         "title": "Taiwan's US exports pass its China exports",
+         "claim": "Taiwan's exports to the US surpassed those to China for the first time in 26 "
+                  "years on AI demand, while the UAE reached 64% AI workforce adoption, the "
+                  "world's highest.",
+         "domain": "policy", "actor": ["uae"], "score": "64% adoption",
+         "evidences": ["silicon-curtain", "work-displaced"]},
+    ],
+}
