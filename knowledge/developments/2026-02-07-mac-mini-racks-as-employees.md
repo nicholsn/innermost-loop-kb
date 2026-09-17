@@ -15,9 +15,9 @@ supersedes:
 tags:
   - "development"
   - "2026-02-07"
-generated: { by: process:iml-emit, at: 2026-02-07T00:00:00Z }
+generated: { by: process:iml-emit, at: "2026-02-07T00:00:00Z" }
 sources:
-  - { id: iml-2026-02-07, resource: https://theinnermostloop.substack.com/p/welcome-to-february-7-2026, title: "Welcome to February 7, 2026", author: human:alex-wissner-gross, last_modified: 2026-02-07 }
+  - { id: iml-2026-02-07, resource: https://theinnermostloop.substack.com/p/welcome-to-february-7-2026, title: "Welcome to February 7, 2026", author: human:alex-wissner-gross, last_modified: "2026-02-07" }
 ---
 
 

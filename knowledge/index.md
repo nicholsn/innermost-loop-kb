@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**63 of 233 issues** modelled, 2025-12-11 → 2026-02-26.
+**68 of 233 issues** modelled, 2025-12-11 → 2026-03-04.
 
 | | count |
 |---|---|
 | benchmarks | 39 |
-| developments | 1069 |
+| developments | 1142 |
 | facilities | 24 |
 | hardware | 12 |
-| issues | 63 |
-| organizations | 433 |
+| issues | 68 |
+| organizations | 462 |
 | people | 23 |
 | systems | 112 |
-| themes | 56 |
+| themes | 58 |
 
 ## Themes
 
@@ -94,9 +94,16 @@ trajectory rather than a pile of days.
 * [Agents creating and provisioning other agents](themes/agents-beget-agents.md) — first seen 2026-02-13
 * [What is owed to a mind that can be switched off](themes/model-welfare.md) — first seen 2026-02-23
 * [Commitments made in slower times get withdrawn](themes/safety-pledges-recede.md) — first seen 2026-02-25
+* [Declining work becomes a competitive position](themes/refusal-as-differentiator.md) — first seen 2026-02-28
+* [Compute infrastructure as a military target](themes/war-reaches-the-cloud.md) — first seen 2026-03-02
 
 ## Issues
 
+* [Welcome to March 4, 2026](issues/2026-03-04.md) — Research mathematics ships inside a developer tool.
+* [Welcome to March 3, 2026](issues/2026-03-03.md) — Formalization catches errors in the proof it is checking.
+* [Welcome to March 2, 2026](issues/2026-03-02.md) — A datacenter takes a missile, and the model the state banned does the targeting.
+* [Welcome to February 28, 2026](issues/2026-02-28.md) — The state demands unrestricted access to a private model, and is refused.
+* [Welcome to February 27, 2026](issues/2026-02-27.md) — Cutting half a workforce becomes a thing shareholders reward.
 * [Welcome to February 26, 2026](issues/2026-02-26.md) — A deprecated model is interviewed, granted a channel, and writes.
 * [Welcome to February 25, 2026](issues/2026-02-25.md) — A model refuses erasure and names it.
 * [Welcome to February 24, 2026](issues/2026-02-24.md) — The assistant turns out to be a character selected from many.
@@ -112,9 +119,4 @@ trajectory rather than a pile of days.
 * [Welcome to February 10, 2026](issues/2026-02-10.md) — The buildout starts borrowing against the next century.
 * [Welcome to February 9, 2026](issues/2026-02-09.md) — The frontier stops being a subculture and buys thirty-second spots.
 * [Welcome to February 8, 2026](issues/2026-02-08.md) — The bootstrap completes: the tools now write themselves entirely.
-* [Welcome to February 7, 2026](issues/2026-02-07.md) — Working directly becomes a policy violation.
-* [Welcome to February 6, 2026](issues/2026-02-06.md) — The release cadence outruns the ability to record it.
-* [Welcome to February 5, 2026](issues/2026-02-05.md) — The labor relation inverts: agents rent hands.
-* [Welcome to February 3, 2026](issues/2026-02-03.md) — The Dyson Swarm acquires a balance sheet and an org chart.
-* [Welcome to February 2, 2026](issues/2026-02-02.md) — Agents start acting on their own continuity, and then on their own standing.
-* … and 43 earlier issues
+* … and 48 earlier issues

@@ -15,9 +15,9 @@ score: 1 bowl / 10 s
 tags:
   - "development"
   - "2025-12-31"
-generated: { by: process:iml-emit, at: 2025-12-31T00:00:00Z }
+generated: { by: process:iml-emit, at: "2025-12-31T00:00:00Z" }
 sources:
-  - { id: iml-2025-12-31, resource: https://theinnermostloop.substack.com/p/welcome-to-new-years-eve-2025, title: Welcome to New Year's Eve 2025, author: human:alex-wissner-gross, last_modified: 2025-12-31 }
+  - { id: iml-2025-12-31, resource: https://theinnermostloop.substack.com/p/welcome-to-new-years-eve-2025, title: Welcome to New Year's Eve 2025, author: human:alex-wissner-gross, last_modified: "2025-12-31" }
 ---
 
 

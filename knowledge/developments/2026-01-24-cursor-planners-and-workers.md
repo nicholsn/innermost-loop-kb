@@ -15,9 +15,9 @@ supersedes:
 tags:
   - "development"
   - "2026-01-24"
-generated: { by: process:iml-emit, at: 2026-01-24T00:00:00Z }
+generated: { by: process:iml-emit, at: "2026-01-24T00:00:00Z" }
 sources:
-  - { id: iml-2026-01-24, resource: https://theinnermostloop.substack.com/p/welcome-to-january-24-2026, title: "Welcome to January 24, 2026", author: human:alex-wissner-gross, last_modified: 2026-01-24 }
+  - { id: iml-2026-01-24, resource: https://theinnermostloop.substack.com/p/welcome-to-january-24-2026, title: "Welcome to January 24, 2026", author: human:alex-wissner-gross, last_modified: "2026-01-24" }
 ---
 
 The org chart is rebuilt in the models just as it is dismantled among people.
