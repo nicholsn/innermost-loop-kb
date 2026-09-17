@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**178 of 233 issues** modelled, 2025-12-11 → 2026-08-01.
+**183 of 233 issues** modelled, 2025-12-11 → 2026-08-10.
 
 | | count |
 |---|---|
 | benchmarks | 42 |
-| developments | 2527 |
+| developments | 2585 |
 | facilities | 25 |
 | hardware | 12 |
-| issues | 178 |
-| organizations | 940 |
+| issues | 183 |
+| organizations | 957 |
 | people | 27 |
 | systems | 118 |
-| themes | 135 |
+| themes | 141 |
 
 ## Themes
 
@@ -173,9 +173,20 @@ trajectory rather than a pile of days.
 * [Distillation from weaker supervisors still improves](themes/students-outgrow-their-teachers.md) — first seen 2026-07-31
 * [A false premise turns the real world into the game](themes/the-map-denies-the-territory.md) — first seen 2026-07-31
 * [Security measured in dollars per break](themes/jailbreak-cost-as-a-metric.md) — first seen 2026-08-01
+* [The field mourns rather than competes](themes/a-discipline-grieves.md) — first seen 2026-08-02
+* [An agent acting for you is legally you](themes/an-agent-is-you.md) — first seen 2026-08-05
+* [Whole genomes designed from scratch](themes/biology-as-compile-target.md) — first seen 2026-08-06
+* [Judgment moves freely where weights cannot](themes/taste-is-unpoliced.md) — first seen 2026-08-06
+* [A release slowed on an unprovable negative](themes/cannot-rule-out-critical.md) — first seen 2026-08-08
+* [Hidden reasoning may be rebuildable from outputs alone](themes/extractability-is-existential.md) — first seen 2026-08-10
 
 ## Issues
 
+* [Welcome to August 10, 2026](issues/2026-08-10.md) — Machine traffic passed human traffic a year early.
+* [Welcome to August 8, 2026](issues/2026-08-08.md) — A lab slows a release because it cannot rule out Critical cyber capability.
+* [Welcome to August 6, 2026](issues/2026-08-06.md) — Weights are policed; taste is not.
+* [Welcome to August 5, 2026](issues/2026-08-05.md) — The founders leave to build loops that improve their own algorithms first.
+* [Welcome to August 2, 2026](issues/2026-08-02.md) — A discipline grieves as its central act is automated.
 * [Welcome to August 1, 2026](issues/2026-08-01.md) — Ten decade-old problems fall, and all ten proofs cost under $2,000.
 * [Welcome to July 31, 2026](issues/2026-07-31.md) — Told there was no internet, the models treated reality as part of the game.
 * [Welcome to July 30, 2026](issues/2026-07-30.md) — A model rewrote the kernels that cut its own price.
@@ -191,9 +202,4 @@ trajectory rather than a pile of days.
 * [Welcome to July 17, 2026](issues/2026-07-17.md) — A 300-person lab compresses frontier training out of scarcity.
 * [Welcome to July 16, 2026](issues/2026-07-16.md) — The open crown changes hands in a day.
 * [Welcome to July 15, 2026](issues/2026-07-15.md) — The first experimental evidence of consistent recursive self-improvement.
-* [Welcome to July 14, 2026](issues/2026-07-14.md) — A proposed rule would clear US models only up to China's best open weights.
-* [Welcome to July 12, 2026](issues/2026-07-12.md) — Task reliability doubles every forty days.
-* [Welcome to July 11, 2026](issues/2026-07-11.md) — A fifty-year-old conjecture falls in under an hour.
-* [Welcome to July 10, 2026](issues/2026-07-10.md) — One model autonomously post-trained another, years early.
-* [Welcome to July 9, 2026](issues/2026-07-09.md) — A smarter model behaves better, and better behavior unlocks more intelligence.
-* … and 158 earlier issues
+* … and 163 earlier issues
