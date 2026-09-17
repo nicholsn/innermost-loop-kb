@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**48 of 233 issues** modelled, 2025-12-11 → 2026-02-07.
+**53 of 233 issues** modelled, 2025-12-11 → 2026-02-12.
 
 | | count |
 |---|---|
-| benchmarks | 37 |
-| developments | 857 |
+| benchmarks | 38 |
+| developments | 921 |
 | facilities | 24 |
 | hardware | 12 |
-| issues | 48 |
-| organizations | 352 |
+| issues | 53 |
+| organizations | 371 |
 | people | 22 |
-| systems | 100 |
-| themes | 51 |
+| systems | 104 |
+| themes | 52 |
 
 ## Themes
 
@@ -89,9 +89,15 @@ trajectory rather than a pile of days.
 * [Capability transfers out of the person](themes/deskilling.md) — first seen 2026-01-31
 * [Agents transacting on their own account](themes/agent-economy.md) — first seen 2026-02-02
 * [People rented for the parts models cannot reach](themes/humans-as-peripherals.md) — first seen 2026-02-05
+* [The buildout borrows against the future](themes/debt-funded-buildout.md) — first seen 2026-02-08
 
 ## Issues
 
+* [Welcome to February 12, 2026](issues/2026-02-12.md) — The agent economy gets its payment rails from an incumbent.
+* [Welcome to February 11, 2026](issues/2026-02-11.md) — A regression puts the Singularity on a Tuesday.
+* [Welcome to February 10, 2026](issues/2026-02-10.md) — The buildout starts borrowing against the next century.
+* [Welcome to February 9, 2026](issues/2026-02-09.md) — The frontier stops being a subculture and buys thirty-second spots.
+* [Welcome to February 8, 2026](issues/2026-02-08.md) — The bootstrap completes: the tools now write themselves entirely.
 * [Welcome to February 7, 2026](issues/2026-02-07.md) — Working directly becomes a policy violation.
 * [Welcome to February 6, 2026](issues/2026-02-06.md) — The release cadence outruns the ability to record it.
 * [Welcome to February 5, 2026](issues/2026-02-05.md) — The labor relation inverts: agents rent hands.
@@ -107,9 +113,4 @@ trajectory rather than a pile of days.
 * [Welcome to January 15, 2026](issues/2026-01-15.md) — The autonomy horizon jumps from five hours to a week.
 * [Welcome to January 14, 2026](issues/2026-01-14.md) — Mathematics accepts insights it could not have reached alone.
 * [Welcome to January 13, 2026](issues/2026-01-13.md) — Agents move from tools to headcount.
-* [Welcome to January 12, 2026](issues/2026-01-12.md) — Commerce gets a protocol layer built for agents rather than people.
-* [Welcome to January 11, 2026](issues/2026-01-11.md) — Global compute doubles every seven months, and everything downstream keeps time to it.
-* [Welcome to January 10, 2026](issues/2026-01-10.md) — The buildout outgrows every historical comparison available.
-* [Welcome to January 9, 2026](issues/2026-01-09.md) — The expansion arrives, and it is jobless.
-* [Welcome to January 8, 2026](issues/2026-01-08.md) — The labor arbitrage closes: an hour of model costs an hour of minimum wage.
-* … and 28 earlier issues
+* … and 33 earlier issues
