@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**33 of 233 issues** modelled, 2025-12-11 → 2026-01-14.
+**38 of 233 issues** modelled, 2025-12-11 → 2026-01-25.
 
 | | count |
 |---|---|
-| benchmarks | 29 |
-| developments | 647 |
+| benchmarks | 30 |
+| developments | 724 |
 | facilities | 24 |
 | hardware | 12 |
-| issues | 33 |
-| organizations | 275 |
+| issues | 38 |
+| organizations | 309 |
 | people | 22 |
-| systems | 79 |
-| themes | 45 |
+| systems | 83 |
+| themes | 47 |
 
 ## Themes
 
@@ -83,9 +83,14 @@ trajectory rather than a pile of days.
 * [Output rises while headcount does not](themes/growth-without-hiring.md) — first seen 2026-01-09
 * [Building outside the rules rather than changing them](themes/regulatory-exit.md) — first seen 2026-01-10
 * [Agents counted as headcount](themes/agents-on-the-org-chart.md) — first seen 2026-01-13
+* [The entry rung disappears first](themes/ladder-pulled-up.md) — first seen 2026-01-15
+* [Values arrived at with the system, not imposed on it](themes/values-negotiated-with-the-model.md) — first seen 2026-01-24
 
 ## Issues
 
+* [Welcome to January 25, 2026](issues/2026-01-25.md) — Hiring criteria are rewritten around what the model already beats.
+* [Welcome to January 24, 2026](issues/2026-01-24.md) — A model's values are negotiated with it rather than imposed on it.
+* [Welcome to January 15, 2026](issues/2026-01-15.md) — The autonomy horizon jumps from five hours to a week.
 * [Welcome to January 14, 2026](issues/2026-01-14.md) — Mathematics accepts insights it could not have reached alone.
 * [Welcome to January 13, 2026](issues/2026-01-13.md) — Agents move from tools to headcount.
 * [Welcome to January 12, 2026](issues/2026-01-12.md) — Commerce gets a protocol layer built for agents rather than people.
@@ -99,11 +104,8 @@ trajectory rather than a pile of days.
 * [Welcome to January 4, 2026](issues/2026-01-04.md) — The human developer era ends quietly, in a traffic chart.
 * [Welcome to January 3, 2026](issues/2026-01-03.md) — Compute stops renting and starts governing itself.
 * [Welcome to January 2, 2026](issues/2026-01-02.md) — Models begin managing their own context without supervision.
+* [Welcome to 2026](issues/2026-01-01.md) — Agency crosses from text into the care of a living thing.
+* [Welcome to New Year's Eve 2025](issues/2025-12-31.md) — The forecasts get revised and the decentralized curve is steeper.
 * [Welcome to December 30, 2025](issues/2025-12-30.md) — Automating remote work now has a market price, and it is low.
 * [Welcome to December 29, 2025](issues/2025-12-29.md) — The intelligence explosion now has a measurable rate.
-* [Welcome to December 28, 2025](issues/2025-12-28.md) — The Singularity is now running in production.
-* [Welcome to December 27, 2025](issues/2025-12-27.md) — The psychological firewall between the Singularity and its architects has ruptured.
-* [Welcome to December 26, 2025](issues/2025-12-26.md) — The yardstick has snapped.
-* [Welcome to December 25, 2025](issues/2025-12-25.md) — The machines are asking for a moment of silence.
-* [Welcome to December 24, 2025](issues/2025-12-24.md) — The curve is steepening into a wall.
-* … and 13 earlier issues
+* … and 18 earlier issues
