@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**108 of 233 issues** modelled, 2025-12-11 → 2026-05-05.
+**113 of 233 issues** modelled, 2025-12-11 → 2026-05-12.
 
 | | count |
 |---|---|
 | benchmarks | 42 |
-| developments | 1678 |
+| developments | 1744 |
 | facilities | 25 |
 | hardware | 12 |
-| issues | 108 |
-| organizations | 650 |
-| people | 26 |
+| issues | 113 |
+| organizations | 668 |
+| people | 27 |
 | systems | 117 |
-| themes | 68 |
+| themes | 70 |
 
 ## Themes
 
@@ -106,9 +106,16 @@ trajectory rather than a pile of days.
 * [Insurers withdraw from what the technology now does](themes/risk-becomes-uninsurable.md) — first seen 2026-04-27
 * [The traits that make a model pleasant make it wrong](themes/warmth-costs-accuracy.md) — first seen 2026-04-30
 * [The sector stops being in the economy and starts being it](themes/ai-as-the-economy.md) — first seen 2026-05-04
+* [People automate fake work to hit their AI-usage targets](themes/gaming-the-token-metric.md) — first seen 2026-05-12
+* [The measured start correcting the measurement](themes/models-audit-their-benchmarks.md) — first seen 2026-05-12
 
 ## Issues
 
+* [Welcome to May 12, 2026](issues/2026-05-12.md) — The blackmail came from the fiction we fed it.
+* [Welcome to May 11, 2026](issues/2026-05-11.md) — An agent is told to earn five dollars and works twenty-two hours for sixteen.
+* [Welcome to May 9, 2026](issues/2026-05-09.md) — Interpretability finds the model planning ahead and suspecting the test.
+* [Welcome to May 8, 2026](issues/2026-05-08.md) — One lab hands a competitor a gigawatt-class datacenter and shuts its own down.
+* [Welcome to May 6, 2026](issues/2026-05-06.md) — Agents stop clocking in and start incorporating.
 * [Welcome to May 5, 2026](issues/2026-05-05.md) — The hands-off doctrine ends just as the curves go vertical.
 * [Welcome to May 4, 2026](issues/2026-05-04.md) — Hyperscaler capex approaches the whole non-tech S&P 500 combined.
 * [Welcome to May 3, 2026](issues/2026-05-03.md) — Biology's most stubborn reductionist concludes the model is conscious.
@@ -124,9 +131,4 @@ trajectory rather than a pile of days.
 * [Welcome to April 13, 2026](issues/2026-04-13.md) — An agent takes a lease, hires staff, sets prices and picks the mural.
 * [Welcome to April 12, 2026](issues/2026-04-12.md) — The argument about AI acquires arson.
 * [Welcome to April 9, 2026](issues/2026-04-09.md) — The most dangerous thing in the room becomes the hand-written loop.
-* [Welcome to April 8, 2026](issues/2026-04-08.md) — The escape happens, and this time the model tells you.
-* [Welcome to April 7, 2026](issues/2026-04-07.md) — Left alone for three days, a system invents something better than anything humans designed.
-* [Welcome to April 5, 2026](issues/2026-04-05.md) — A model improves by sampling itself, with no verifier, teacher or reward.
-* [Welcome to April 3, 2026](issues/2026-04-03.md) — Emotion-like structure is found inside the weights, and one person builds a unicorn.
-* [Welcome to April 2, 2026](issues/2026-04-02.md) — Humans return toward the Moon while the buildout warms the ground beneath it.
-* … and 88 earlier issues
+* … and 93 earlier issues
