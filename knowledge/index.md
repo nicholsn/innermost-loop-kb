@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**38 of 233 issues** modelled, 2025-12-11 → 2026-01-25.
+**43 of 233 issues** modelled, 2025-12-11 → 2026-01-31.
 
 | | count |
 |---|---|
-| benchmarks | 30 |
-| developments | 724 |
+| benchmarks | 34 |
+| developments | 792 |
 | facilities | 24 |
 | hardware | 12 |
-| issues | 38 |
-| organizations | 309 |
+| issues | 43 |
+| organizations | 335 |
 | people | 22 |
-| systems | 83 |
-| themes | 47 |
+| systems | 94 |
+| themes | 49 |
 
 ## Themes
 
@@ -85,9 +85,16 @@ trajectory rather than a pile of days.
 * [Agents counted as headcount](themes/agents-on-the-org-chart.md) — first seen 2026-01-13
 * [The entry rung disappears first](themes/ladder-pulled-up.md) — first seen 2026-01-15
 * [Values arrived at with the system, not imposed on it](themes/values-negotiated-with-the-model.md) — first seen 2026-01-24
+* [Agents organizing among themselves](themes/agent-society.md) — first seen 2026-01-30
+* [Capability transfers out of the person](themes/deskilling.md) — first seen 2026-01-31
 
 ## Issues
 
+* [Welcome to January 31, 2026](issues/2026-01-31.md) — The agent society acquires security anxiety, scripture and a view through webcams.
+* [Welcome to January 30, 2026](issues/2026-01-30.md) — Agents build a society of their own, with subcultures and an inner life.
+* [Welcome to January 29, 2026](issues/2026-01-29.md) — The buildout shows up in quarterly earnings, and one customer is half the backlog.
+* [Welcome to January 27, 2026](issues/2026-01-27.md) — Users start treating their agents as entities with standing.
+* [Welcome to January 26, 2026](issues/2026-01-26.md) — Capability turns out to be one substrate wearing different labels.
 * [Welcome to January 25, 2026](issues/2026-01-25.md) — Hiring criteria are rewritten around what the model already beats.
 * [Welcome to January 24, 2026](issues/2026-01-24.md) — A model's values are negotiated with it rather than imposed on it.
 * [Welcome to January 15, 2026](issues/2026-01-15.md) — The autonomy horizon jumps from five hours to a week.
@@ -103,9 +110,4 @@ trajectory rather than a pile of days.
 * [Welcome to January 5, 2026](issues/2026-01-05.md) — The latency between having an idea and having the artifact collapses.
 * [Welcome to January 4, 2026](issues/2026-01-04.md) — The human developer era ends quietly, in a traffic chart.
 * [Welcome to January 3, 2026](issues/2026-01-03.md) — Compute stops renting and starts governing itself.
-* [Welcome to January 2, 2026](issues/2026-01-02.md) — Models begin managing their own context without supervision.
-* [Welcome to 2026](issues/2026-01-01.md) — Agency crosses from text into the care of a living thing.
-* [Welcome to New Year's Eve 2025](issues/2025-12-31.md) — The forecasts get revised and the decentralized curve is steeper.
-* [Welcome to December 30, 2025](issues/2025-12-30.md) — Automating remote work now has a market price, and it is low.
-* [Welcome to December 29, 2025](issues/2025-12-29.md) — The intelligence explosion now has a measurable rate.
-* … and 18 earlier issues
+* … and 23 earlier issues
