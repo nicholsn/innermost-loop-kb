@@ -3,7 +3,7 @@ type: Organization
 title: Slope
 resource: https://slope.com/
 sources:
-  - { id: iml-2025-12-16, resource: https://theinnermostloop.substack.com/p/welcome-to-december-16-2025, title: "Welcome to December 16, 2025", author: human:alex-wissner-gross, last_modified: 2025-12-16 }
+  - { id: iml-2025-12-16, resource: https://theinnermostloop.substack.com/p/welcome-to-december-16-2025, title: "Welcome to December 16, 2025", author: human:alex-wissner-gross, last_modified: "2025-12-16" }
 ---
 
 Embedded lending; taking over Amazon's seller credit.

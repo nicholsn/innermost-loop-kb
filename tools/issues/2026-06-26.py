@@ -32,6 +32,22 @@ AGI already existing internally becomes literally true.
         {"id": "aleph-bio", "type": "Organization", "title": "Aleph"},
         {"id": "vesuvius-challenge", "type": "Organization", "title": "Vesuvius Challenge"},
     ],
+    "people": [
+        {"id": "brian-roemmele", "type": "Person", "title": "Brian Roemmele", "name": "Brian Roemmele",
+         "description": "Technology commentator on X whose forecast that Mythos-class and OpenAI-6-class "
+                        "weights would go free and open within eight months the newsletter sets against "
+                        "Washington's release-throttling policy.",
+         "resource": "https://x.com/brianroemmele",
+         # tags deliberately omitted: no controlled entity tag fits an independent commentator,
+         # and neither the newsletter nor his linked source states a position (verified 2026-09-17).
+         "body": "Brian Roemmele posts commentary on AI and technology on X "
+                 "([profile](https://x.com/brianroemmele)). He appears in this corpus once, in the "
+                 "June 26 item where observers call the staggered-release policy "
+                 "[self-defeating](/developments/2026-06-26-a-policy-that-does-not-touch-the-race.md): "
+                 "he called the wounds self-inflicted and predicted that Mythos-class and OpenAI-6-class "
+                 "weights go free and open within eight months, a dated forecast the corpus can check "
+                 "against the [open-weight-latency](/themes/open-weight-latency.md) strand."},
+    ],
     "developments": [
         {"id": "2026-06-26-the-public-frontier-detaches",
          "title": "A lab agrees to stagger a release, widening the public-internal gap",
@@ -52,9 +68,51 @@ AGI already existing internally becomes literally true.
                   "recursive self-improvement, raising the question of what happens when Chinese "
                   "releases outpace what the US permits its own labs to ship, with one commenter "
                   "predicting Mythos-class weights go free and open within eight months.",
-         "domain": "policy",
-         "evidences": ["public-internal-divergence", "recursive-self-improvement", "silicon-curtain"],
-         "supersedes": [B + "developments/2026-06-26-the-public-frontier-detaches"]},
+         "description": "A brake on shipping is read as no brake at all on the loop that trains the next "
+                        "model, reversing the fortnight-old reading of export control as the first "
+                        "regulation of self-improvement, and therefore as a gift to whoever is not braking.",
+         "domain": "policy", "actor": ["people/brian-roemmele"], "score": "8 months",
+         "about": [B + "systems/claude-mythos"],
+         "evidences": ["public-internal-divergence", "recursive-self-improvement", "silicon-curtain",
+                       "rationed-recursion"],
+         "supersedes": [B + "developments/2026-06-26-the-public-frontier-detaches"],
+         "relatedTo": [B + "developments/2026-06-08-mutual-conditional-pause-pilled",
+                       B + "developments/2026-06-27-a-tiered-planet-of-model-access"],
+         "relations": [{"predicate": "relatedTo",
+                        "target": B + "developments/2026-06-13-a-model-becomes-export-controlled",
+                        "relation_label": "contradicts"}],
+         "tags": ["policy", "rsi", "open-weights", "forecast"],
+         "supporting_text": "so the policy is self-defeating",
+         "sources": [{"id": "deredleritt3r-rsi-race-post",
+                      "resource": "https://x.com/deredleritt3r/status/2070260358078476723",
+                      "title": "Post on X: the staggered-release policy does not touch the race to recursive self-improvement",
+                      "author": "human:deredleritt3r", "last_modified": "2026-06-25"},
+                     {"id": "pielstick-chinese-releases-outpace-post",
+                      "resource": "https://x.com/benpielstick/status/2070280800394989706",
+                      "title": "Post on X asking what happens when Chinese releases outpace what the US lets its own labs ship",
+                      "author": "human:ben-pielstick", "last_modified": "2026-06-25"},
+                     {"id": "roemmele-weights-free-in-eight-months-post",
+                      "resource": "https://x.com/brianroemmele/status/2070338916121735315",
+                      "title": "Post on X predicting Mythos-class and OpenAI-6-class weights go free and open in eight months",
+                      "author": "human:brian-roemmele", "last_modified": "2026-06-26"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "The newsletter strings three X posts into one argument: a pseudonymous observer's point "
+                 "that [staggering releases](/developments/2026-06-26-the-public-frontier-detaches.md) "
+                 "leaves [the race to recursive self-improvement](/themes/recursive-self-improvement.md) "
+                 "untouched ([post](https://x.com/deredleritt3r/status/2070260358078476723)), Ben Pielstick's "
+                 "question of what happens when Chinese releases outpace what Washington lets US labs ship "
+                 "([post](https://x.com/benpielstick/status/2070280800394989706)), and "
+                 "[Brian Roemmele](/people/brian-roemmele.md)'s forecast that Mythos-class and OpenAI-6-class "
+                 "weights go free and open within eight months "
+                 "([post](https://x.com/brianroemmele/status/2070338916121735315)). It sits in the policy "
+                 "sub-strand of the recursion trajectory: two weeks after an analyst read the "
+                 "[Fable and Mythos export-control directive](/developments/2026-06-13-a-model-becomes-export-controlled.md) "
+                 "as accidentally the first regulation of self-improvement, this item argues the opposite, "
+                 "that throttling governs only the public frontier while the internal one keeps compounding, "
+                 "the worry behind Roon's [mutual conditional pause agreements](/developments/2026-06-08-mutual-conditional-pause-pilled.md) "
+                 "earlier in the month. The next issue's "
+                 "[tiered planet of model access](/developments/2026-06-27-a-tiered-planet-of-model-access.md) "
+                 "picks up the thread."},
         {"id": "2026-06-26-images-generated-on-coupled-oscillators",
          "title": "Images are generated on a simulated lattice of coupled oscillators",
          "claim": "Unconventional AI's Un-0 generates images on a simulated lattice of coupled "
@@ -68,9 +126,35 @@ AGI already existing internally becomes literally true.
          "title": "A coding agent generates 99.8% of its own weekly output tokens",
          "claim": "OpenAI's numbers show Codex now generating 99.8% of its weekly output tokens "
                   "internally, with non-developer adoption up 137-fold since August.",
+         "description": "The February anecdote that the coding agent builds itself acquires a "
+                        "denominator: a lab's own accounting of how much of the agent's output the "
+                        "agent now produces, and of how far beyond developers its use has spread.",
          "domain": "agents", "actor": ["openai"], "score": "99.8% / 137x adoption",
+         "about": [B + "systems/codex"],
          "evidences": ["recursive-self-improvement", "self-authored-scaffolding", "work-displaced"],
-         "supersedes": [B + "developments/2026-06-25-an-agent-rewrites-its-own-harness"]},
+         "supersedes": [B + "developments/2026-06-25-an-agent-rewrites-its-own-harness",
+                        B + "developments/2026-02-03-codex-builds-itself"],
+         "relatedTo": [B + "developments/2026-02-08-100pct-of-product-code",
+                       B + "developments/2026-03-16-rsi-is-a-present-phenomenon",
+                       B + "developments/2026-08-01-agents-write-almost-all-output-tokens"],
+         "tags": ["rsi", "ai-r-and-d", "labor"],
+         "supporting_text": "show Codex now generating 99.8% of its weekly output tokens internally",
+         "sources": [{"id": "openai-how-agents-are-transforming-work",
+                      "resource": "https://openai.com/index/how-agents-are-transforming-work/",
+                      "title": "How agents are transforming work", "author": "org:openai"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "OpenAI's own report ([How agents are transforming work](https://openai.com/index/how-agents-are-transforming-work/)) "
+                 "puts [Codex](/systems/codex.md) at 99.8% of its weekly output tokens generated internally, "
+                 "with non-developer adoption up 137-fold since August. The newsletter files it under the work "
+                 "mutating, beside a survey of Chinese labs hiring engineers with a third the experience: the "
+                 "bodies are still needed, for different work. In the trajectory it is the quantified successor "
+                 "to a Codex manager saying in February that "
+                 "[the product pretty much builds itself](/developments/2026-02-03-codex-builds-itself.md) and "
+                 "to Anthropic's [effectively 100% of product code](/developments/2026-02-08-100pct-of-product-code.md), "
+                 "and it corroborates the alignment lead's March claim that "
+                 "[recursive self-improvement is already happening](/developments/2026-03-16-rsi-is-a-present-phenomenon.md); "
+                 "the same 99.8% figure resurfaces in August in the finance chief's "
+                 "[abundant-intelligence strategy](/developments/2026-08-01-agents-write-almost-all-output-tokens.md)."},
         {"id": "2026-06-26-chinese-labs-hire-at-a-third-the-experience",
          "title": "A survey finds Chinese labs hiring engineers with a third the experience",
          "claim": "A survey of 1,604 job postings across six Chinese labs found them still "

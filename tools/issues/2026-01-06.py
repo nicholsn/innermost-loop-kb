@@ -19,7 +19,22 @@ appearing in children's toys.
 """,
     },
     "organizations": [
-        {"id": "amd", "type": "Organization", "title": "AMD", "resource": "https://www.amd.com/"},
+        {"id": "amd", "type": "Organization", "title": "AMD", "resource": "https://www.amd.com/",
+         "description": "American semiconductor company whose Instinct GPUs and ROCm software stack "
+                        "are the principal challenger to Nvidia in AI training and inference "
+                        "hardware.",
+         "sameAs": ["http://www.wikidata.org/entity/Q128896"],
+         "tags": ["chipmaker", "big-tech"],
+         "body": "AMD designs CPUs, GPUs and the ROCm software stack, and in this corpus it is the "
+                 "counterweight to Nvidia's hold on AI compute. It enters with the "
+                 "[2-nm MI500 preview and Ryzen AI 400 launch](/developments/2026-01-06-amd-mi500-and-ryzen-ai-400.md) "
+                 "at CES 2026 and its chief executive's forecast of "
+                 "[five billion daily AI users](/developments/2026-01-06-veo-on-televisions.md), then "
+                 "as the supplier in [Meta's 6 GW Instinct pact](/developments/2026-02-24-meta-amd-6gw-pact.md). "
+                 "Its software gap is where it touches the recursive loop: "
+                 "[ROCm improves 75-fold in fourteen days](/developments/2026-05-11-rocm-improves-75x-in-two-weeks.md) "
+                 "and [agents write the kernels](/developments/2026-07-04-agents-write-the-kernels-closing-a-software-gap.md) "
+                 "that let a challenger serve an open model on MI355X at half Blackwell's cost."},
         {"id": "lego", "type": "Organization", "title": "LEGO", "resource": "https://www.lego.com/",
          "body": "Shipped a programmable 2x4 brick with an on-board ASIC."},
         {"id": "qualcomm", "type": "Organization", "title": "Qualcomm",
@@ -42,8 +57,21 @@ appearing in children's toys.
     ],
     "hardware": [
         {"id": "vera-rubin", "type": "Hardware", "title": "Nvidia Vera Rubin",
+         "description": "Nvidia's next-generation GPU platform, announced in full production in January "
+                        "2026 at 50 petaflops of NVFP4 compute and a tenfold cut in inference cost.",
+         "developed_by": [B + "organizations/nvidia"],
          "fabricated_by": [B + "organizations/nvidia"],
-         "body": "50 petaflops of NVFP4 compute in full production; a tenfold reduction in inference cost."},
+         "resource": "https://nvidianews.nvidia.com/news/rubin-platform-ai-supercomputer",
+         "sameAs": ["http://www.wikidata.org/entity/Q126888620"],
+         "body": "50 petaflops of NVFP4 compute in full production; a tenfold reduction in inference cost. "
+                 "Vera Rubin is [Nvidia](/organizations/nvidia.md)'s successor GPU platform, pairing Rubin "
+                 "GPUs with Vera CPUs. It enters the corpus in the January 6, 2026 issue, when Nvidia "
+                 "announced it in [full production](/developments/2026-01-06-vera-rubin-full-production.md) "
+                 "and Musk said he would have the GPUs operating at scale within nine months "
+                 "([Nvidia newsroom](https://nvidianews.nvidia.com/news/rubin-platform-ai-supercomputer)). "
+                 "It returns in August, when SpaceX's plan to fly Vera Rubin GPUs and Vera CPUs on Starmind "
+                 "AI1 satellites is set beside a DeepMind executive's claim that "
+                 "[recursive self-improvement justifies the capex](/developments/2026-08-04-recursive-self-improvement-justifies-the-capex.md)."},
         {"id": "lego-smart-brick", "type": "Hardware", "title": "LEGO Smart Brick",
          "fabricated_by": [B + "organizations/lego"],
          "body": "A standard 2x4 block containing a 4.1-mm ASIC and BrickNet mesh networking."},

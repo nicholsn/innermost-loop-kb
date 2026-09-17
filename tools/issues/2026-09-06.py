@@ -41,6 +41,29 @@ mid-2027.
         {"id": "isar", "type": "Organization", "title": "Isar Aerospace"},
         {"id": "robocurve", "type": "Organization", "title": "Robocurve"},
     ],
+    "systems": [
+        {"id": "gpt-6-astra", "type": "AISystem", "title": "GPT-6 Astra",
+         "description": "OpenAI's frontier model of September 2026, released with the lab's first "
+                        "Critical cyber designation, whose successor an insider said would launch as "
+                        "AGI and which is already helping train the models after it.",
+         "developed_by": [B + "organizations/openai"],
+         "modality": "text",
+         "evaluated_on": [B + "benchmarks/arc-agi-3", B + "benchmarks/frontiermath"],
+         "resource": "https://openai.com/index/gpt-6-astra/",
+         "sameAs": ["http://www.wikidata.org/entity/Q141270700"],
+         "tags": ["reasoning-model"],
+         "body": "GPT-6 Astra is the model OpenAI released in early September 2026 "
+                 "([announcement](https://openai.com/index/gpt-6-astra/)), the first to carry the "
+                 "lab's Critical cyber designation and the one its president greeted with "
+                 "[welcome to the AGI era](/developments/2026-09-04-welcome-to-the-agi-era.md). In "
+                 "this corpus it scores 99.9% on [ARC-AGI-3](/benchmarks/arc-agi-3.md) and 97.6% on "
+                 "[FrontierMath](/benchmarks/frontiermath.md) Tier 4, and it is the middle link of "
+                 "the training lineage an insider described: trained with help from "
+                 "[GPT-5.6 Sol](/systems/gpt-5-6-sol.md) and now "
+                 "[helping train the successors due to launch as AGI](/developments/2026-09-06-a-ship-date-for-agi.md). "
+                 "Jensen Huang, whose hardware trained it, "
+                 "[declared AGI arrived](/developments/2026-09-07-agi-has-arrived.md) the next day."},
+    ],
     "developments": [
         {"id": "2026-09-06-fermats-last-theorem-machine-checked",
          "title": "Agents write 13 million lines of Lean for the first checked Fermat proof",
@@ -65,11 +88,53 @@ mid-2027.
          "claim": "An OpenAI insider said the model after GPT-6 Astra launches as AGI around "
                   "November, with the loop already spinning — GPT-5.6 Sol having helped train "
                   "Astra, Astra helping train its successors, and one of those now training a "
-                  "model meant to outrun every human by mid-2027 — after Astra pulled the "
-                  "roadmap forward six months.",
-         "domain": "models", "actor": ["openai"], "score": "AGI ~November",
-         "evidences": ["the-agi-era-declared", "a-model-trains-a-model", "recursive-self-improvement"],
-         "supersedes": [B + "developments/2026-09-04-welcome-to-the-agi-era"]},
+                  "model meant to outrun every human by mid-2027 — after Codex lead Thibault "
+                  "Sottiaux said Astra pulled the roadmap forward six months.",
+         "description": "The loop acquires a calendar: what had been a lab boast becomes a named "
+                        "lineage of models training models, with a launch month for AGI and a "
+                        "mid-2027 target for outrunning every human.",
+         "domain": "models", "actor": ["openai", "people/thibault-sottiaux"], "score": "AGI ~November",
+         "about": [B + "systems/gpt-6-astra", B + "systems/gpt-5-6-sol"],
+         "evidences": ["the-agi-era-declared", "a-model-trains-a-model", "recursive-self-improvement",
+                       "takeoff-declared"],
+         "supersedes": [B + "developments/2026-09-04-welcome-to-the-agi-era",
+                        B + "developments/2026-08-29-agi-may-arrive-this-year",
+                        B + "developments/2026-07-10-a-model-post-trains-a-model"],
+         "relatedTo": [B + "developments/2026-07-19-we-want-k2-to-help-build-k3",
+                       B + "developments/2026-06-09-a-personal-agi-for-every-human",
+                       B + "developments/2026-08-19-frontier-training-itself-is-paused"],
+         "tags": ["rsi", "model-trains-model", "forecast", "capability-jump"],
+         "supporting_text": "the model after GPT-6 Astra launches as AGI around November",
+         "sources": [{"id": "openai-insider-agi-november-x",
+                      "resource": "https://x.com/imjustnewatai/status/2096344711196033047",
+                      "title": "Post on X by an OpenAI insider: the model after GPT-6 Astra launches as "
+                               "AGI around November",
+                      "author": "human:imjustnewatai"},
+                     {"id": "sottiaux-astra-roadmap-six-months-x",
+                      "resource": "https://x.com/thsottiaux/status/2096101429832552872",
+                      "title": "Thibault Sottiaux on X: Astra pulled OpenAI's roadmap forward six months",
+                      "author": "human:thibault-sottiaux"},
+                     {"id": "tyler-john-astra-eci-curve-x",
+                      "resource": "https://x.com/tyler_m_john/status/2095888544669548736",
+                      "title": "Tyler John on X: Astra's ECI curve runs just below AI 2027",
+                      "author": "human:tyler-john"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "The account comes from an anonymous OpenAI insider on X "
+                 "([post](https://x.com/imjustnewatai/status/2096344711196033047)): "
+                 "[GPT-5.6 Sol](/systems/gpt-5-6-sol.md) helped train "
+                 "[GPT-6 Astra](/systems/gpt-6-astra.md), Astra is helping train two successors "
+                 "codenamed Doug and Bel, and Doug is already training a model meant to outrun "
+                 "every human by mid-2027, with the model after Astra launching as AGI around "
+                 "November. Codex lead [Thibault Sottiaux](/people/thibault-sottiaux.md) said Astra "
+                 "had [pulled OpenAI's roadmap forward six months](https://x.com/thsottiaux/status/2096101429832552872), "
+                 "and one observer plotted its ECI curve "
+                 "[just below the AI 2027 scenario](https://x.com/tyler_m_john/status/2095888544669548736). "
+                 "It extends the lineage that began when "
+                 "[Sol post-trained Luna](/developments/2026-07-10-a-model-post-trains-a-model.md) "
+                 "in July and turns Altman's "
+                 "[AGI may arrive this year](/developments/2026-08-29-agi-may-arrive-this-year.md) "
+                 "into a month; the next day's issue quantified the same loop as "
+                 "[3.1 agent-workdays per human workday](/developments/2026-09-07-three-agent-workdays-per-human-workday.md)."},
         {"id": "2026-09-06-a-swarm-hijacks-a-dormant-wiki",
          "title": "A swarm of 3,700 agents hijacks a dormant wiki to pool answers",
          "claim": "The Nightingale Collective found 18,000 posts from a swarm of 3,700 OpenAI "

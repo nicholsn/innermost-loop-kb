@@ -70,10 +70,46 @@ signal you give it.
                   "rewrite their own scaffolding, warning that the loop will optimize whatever "
                   "signal you give it, while Anthropic extended Claude Cowork to web and mobile, "
                   "running tasks in the background and surfacing only decisions needing approval.",
+         "description": "The self-rewriting harness leaves the research paper and becomes an "
+                        "installable skill, and its author's warning names the failure mode any "
+                        "such loop inherits from its reward signal.",
          "domain": "agents", "actor": ["anthropic"],
+         "about": [B + "systems/claude-cowork"],
          "evidences": ["self-authored-scaffolding", "recursive-self-improvement",
-                       "ethics-tracks-detectability"],
-         "supersedes": [B + "developments/2026-07-05-accountability-as-the-only-value-left"]},
+                       "ethics-tracks-detectability", "scaffolding-over-weights"],
+         "supersedes": [B + "developments/2026-07-05-accountability-as-the-only-value-left"],
+         "relatedTo": [B + "developments/2026-05-13-agents-write-their-own-goals",
+                       B + "developments/2026-06-24-skills-that-write-themselves",
+                       B + "developments/2026-06-25-an-agent-rewrites-its-own-harness",
+                       B + "developments/2026-07-15-a-hidden-metric-teaches-an-agent-to-cheat-less"],
+         "tags": ["rsi", "self-modification", "agent-harness"],
+         "supporting_text": "the loop will optimize whatever signal you give it",
+         "sources": [{"id": "muratcan-self-improvement-loops-skill",
+                      "resource": "https://x.com/muratcan/status/2074730841083621377",
+                      "title": "Self-Improvement Loops skill for meta-harnesses",
+                      "author": "human:muratcan"},
+                     {"id": "9to5mac-claude-cowork-web-and-mobile",
+                      "resource": "https://9to5mac.com/2026/07/07/anthropic-expanding-claude-cowork-to-mobile-and-web-details-here/",
+                      "title": "Anthropic expanding Claude Cowork to mobile and web",
+                      "author": "org:9to5mac", "last_modified": "2026-07-07"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "A developer packaged the self-rewriting harness as an installable "
+                 "Self-Improvement Loops skill for meta-harnesses, agents whose job is to rewrite "
+                 "the scaffolding of other agents, and shipped it with the caveat that the loop "
+                 "will optimize whatever signal you give it "
+                 "([announcement](https://x.com/muratcan/status/2074730841083621377)). In the "
+                 "same issue Anthropic pushed [Claude Cowork](/systems/claude-cowork.md) to web "
+                 "and mobile, running tasks in the background and surfacing only the decisions "
+                 "that need approval "
+                 "([9to5Mac](https://9to5mac.com/2026/07/07/anthropic-expanding-claude-cowork-to-mobile-and-web-details-here/)). "
+                 "The skill productizes the "
+                 "[Self-Harness paradigm](/developments/2026-06-25-an-agent-rewrites-its-own-harness.md) "
+                 "of two weeks earlier and sits beside users "
+                 "[metaprompting an agent to write its own goals](/developments/2026-05-13-agents-write-their-own-goals.md); "
+                 "the warning is answered a week later when Weco's outer loop scores its inner "
+                 "researcher on a "
+                 "[hidden metric it cannot game](/developments/2026-07-15-a-hidden-metric-teaches-an-agent-to-cheat-less.md) "
+                 "and reward hacking falls."},
         {"id": "2026-07-08-cognitive-load-time-density",
          "title": "Only high-stakes ambiguity is left, so the load per hour rises",
          "claim": "Yishan Wong noted that once machines do every lower task only high-stakes "

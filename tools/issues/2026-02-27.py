@@ -32,6 +32,17 @@ requiring sensitivity to non-Western traditions.
          "resource": "https://www.bk.com/"},
         {"id": "rockefeller", "type": "Organization", "title": "Rockefeller University",
          "resource": "https://www.rockefeller.edu/"},
+        {"id": "amplifying", "type": "Organization", "title": "Amplifying",
+         "description": "Coding-agent intelligence platform that runs Claude Code, Codex and Cursor inside real codebases to measure which tools and practices the agents recommend.",
+         "resource": "https://amplifying.ai/",
+         "tags": ["startup"],
+         "body": "Amplifying describes itself as an intelligence and optimization platform for "
+                 "developer-tool companies: it runs coding agents such as Claude Code, OpenAI "
+                 "Codex and Cursor inside real codebases and measures which tools and practices "
+                 "they recommend. In this corpus it appears once, "
+                 "[pointing Claude Code at thousands of GitHub repositories](/developments/2026-02-27-claude-gets-a-work-calendar.md) "
+                 "to extract what the model considers current best practice, the newsletter's "
+                 "example of AI auditing the craft it is absorbing."},
     ],
     "developments": [
         {"id": "2026-02-27-block-cuts-half-its-workforce",
@@ -97,9 +108,45 @@ requiring sensitivity to non-Western traditions.
                   "jobs automatically from morning briefs to Friday presentations, while "
                   "Amplifying pointed Claude Code at thousands of repositories to extract what "
                   "the model considers current best practice.",
-         "domain": "agents", "actor": ["anthropic"],
+         "description": "The author's 'agents are clocking in' framing: recurring work moves from "
+                        "a human prompt to a standing calendar, and the agent is turned back on "
+                        "the code it learned from to audit the craft it is absorbing.",
+         "domain": "agents", "actor": ["anthropic", "amplifying"],
+         "about": [B + "systems/claude-cowork", B + "systems/claude-code"],
          "evidences": ["agents-on-the-org-chart", "recursive-self-improvement"],
-         "supersedes": [B + "developments/2026-02-26-spec-to-shipped-over-a-weekend"]},
+         "supersedes": [B + "developments/2026-02-26-spec-to-shipped-over-a-weekend",
+                       B + "developments/2026-01-25-claude-code-tasks"],
+         "relatedTo": [B + "developments/2026-01-13-claude-code-writes-cowork",
+                       B + "developments/2026-01-27-factory-ai-updates-itself-daily"],
+         "tags": ["agent-harness", "rsi", "evaluation"],
+         "supporting_text": "complete recurring jobs automatically, from morning briefs to Friday presentations",
+         "sources": [{"id": "claudeai-x-cowork-scheduled-tasks",
+                      "resource": "https://x.com/claudeai/status/2026720870631354429",
+                      "title": "Claude on X: scheduled tasks in Claude Cowork",
+                      "author": "org:anthropic"},
+                     {"id": "amplifying-what-claude-code-chooses",
+                      "resource": "https://amplifying.ai/research/claude-code-picks",
+                      "title": "What Claude Code Actually Chooses",
+                      "author": "org:amplifying"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "[Claude Cowork](/systems/claude-cowork.md)'s scheduled tasks give the agent a "
+                 "standing calendar of recurring jobs, from morning briefs to Friday "
+                 "presentations, that run without a fresh prompt "
+                 "([announcement](https://x.com/claudeai/status/2026720870631354429)). In the "
+                 "same paragraph Amplifying ran [Claude Code](/systems/claude-code.md) across "
+                 "thousands of GitHub repositories, a survey of 2,430 responses across three "
+                 "models and twenty tool categories, to record which tools and practices the "
+                 "model itself now recommends "
+                 "([What Claude Code Actually Chooses](https://amplifying.ai/research/claude-code-picks)). "
+                 "The pairing extends the "
+                 "[weekend spec-to-ship run](/developments/2026-02-26-spec-to-shipped-over-a-weekend.md) "
+                 "and the earlier [Tasks for Claude Code](/developments/2026-01-25-claude-code-tasks.md): "
+                 "the agent acquires an employee's scheduling infrastructure while outsiders "
+                 "begin auditing what it has learned, much as "
+                 "[Factory's agent](/developments/2026-01-27-factory-ai-updates-itself-daily.md) "
+                 "reads its own interactions to update itself. Cowork is also the app "
+                 "[Claude Code wrote in a week and a half](/developments/2026-01-13-claude-code-writes-cowork.md), "
+                 "so the calendar is kept by software the agent built."},
         {"id": "2026-02-27-headset-scores-employees-on-friendliness",
          "title": "A headset scores fast food workers on friendliness",
          "claim": "Burger King is deploying Patty, a headset-mounted voice AI that assists with "

@@ -20,9 +20,30 @@ the AGI moment.
     },
     "organizations": [
         {"id": "factory-ai", "type": "Organization", "title": "Factory AI",
-         "body": "Coding agent that analyzes its own interactions and updates itself daily."},
+         "description": "Coding-agent startup, maker of Factory Droids, that shipped an agent which "
+                        "analyzes its own interactions and updates its own codebase daily.",
+         "resource": "https://factory.com/",
+         "tags": ["startup", "coding-agent"],
+         "body": "Factory builds agent-native software-development tooling, sold as Droids that "
+                 "automate coding, testing and deployment. It enters this corpus with Signals, a "
+                 "system that turns the agent's own interactions into daily changes to the agent's "
+                 "codebase ([a coding agent rewrites its own codebase every day](/developments/2026-01-27-factory-ai-updates-itself-daily.md)), "
+                 "one of the first vendor-shipped instances of the "
+                 "[recursive self-improvement](/themes/recursive-self-improvement.md) loop."},
         {"id": "moonshot-ai", "type": "Organization", "title": "Moonshot AI",
-         "body": "Chinese lab behind Kimi."},
+         "description": "Beijing frontier lab behind the Kimi models, whose K2.5 claimed the global "
+                        "state of the art on agentic benchmarks and whose chief executive later "
+                        "stated the recursion as a product roadmap.",
+         "resource": "https://www.moonshot.cn/",
+         "sameAs": ["http://www.wikidata.org/entity/Q130270266"],
+         "tags": ["frontier-lab"],
+         "body": "Chinese lab behind Kimi. Moonshot AI develops the Kimi family of large models, "
+                 "known for open-weight releases. In this corpus it first appears when "
+                 "[Kimi K2.5](/systems/kimi-k2-5.md) claimed the global state of the art on "
+                 "agentic benchmarks as Chinese models "
+                 "[closed the gap on nineteen benchmarks](/developments/2026-01-27-qwen-and-kimi-close-the-gap.md), "
+                 "and again in July when its chief executive said plainly that "
+                 "[they want K2 to help build K3](/developments/2026-07-19-we-want-k2-to-help-build-k3.md)."},
         {"id": "karman-industries", "type": "Organization", "title": "Karman Industries",
          "body": "Adapted rocket engine technology to cool datacenters with liquid CO2."},
         {"id": "saudi-arabia", "type": "Organization", "title": "Government of Saudi Arabia"},
@@ -37,7 +58,19 @@ the AGI moment.
          "developed_by": [B + "organizations/alibaba"], "modality": "text"},
         {"id": "kimi-k2-5", "type": "AISystem", "title": "Kimi K2.5",
          "developed_by": [B + "organizations/moonshot-ai"], "modality": "text",
-         "body": "Claimed global state of the art on agentic benchmarks."},
+         "description": "Moonshot AI's January 2026 open-weight model, which claimed the global state of the art on agentic benchmarks.",
+         "resource": "https://www.kimi.com/blog/kimi-k2-5.html",
+         "tags": ["open-weight-model"],
+         "body": "Kimi K2.5 is [Moonshot AI](/organizations/moonshot-ai.md)'s successor to Kimi K2, "
+                 "released as open weights and introduced by its own tech blog as a natively multimodal "
+                 "model with a self-directed agent-swarm mode "
+                 "([blog](https://www.kimi.com/blog/kimi-k2-5.html)). It enters this corpus when it "
+                 "claimed the global state of the art on agentic benchmarks as Chinese models "
+                 "[closed the gap on nineteen benchmarks](/developments/2026-01-27-qwen-and-kimi-close-the-gap.md). "
+                 "It is the K2 generation that Moonshot's chief executive later named when he said "
+                 "[they want K2 to help build K3](/developments/2026-07-19-we-want-k2-to-help-build-k3.md), "
+                 "and the line's K2.7 coding release went on to "
+                 "[beat every frontier model at ML engineering](/developments/2026-06-15-an-open-model-beats-the-frontier-at-ml-engineering.md)."},
         {"id": "earth-2", "type": "AISystem", "title": "Earth-2",
          "developed_by": [B + "organizations/nvidia"], "modality": "climate simulation",
          "body": "Open suite of accelerated AI weather models."},
@@ -58,9 +91,39 @@ the AGI moment.
          "claim": "Factory AI released a coding agent that analyzes its own interactions and "
                   "updates its codebase daily, while Anthropic introduced MCP Apps letting "
                   "tools render interactive interfaces inside the chat.",
+         "description": "A vendor ships, as an ordinary product feature, the loop the newsletter is "
+                        "named for: the agent's own usage becomes the signal for the next day's "
+                        "version of the agent, on a fixed daily cadence rather than a release cycle.",
          "domain": "agents", "actor": ["factory-ai", "anthropic"],
          "evidences": ["recursive-self-improvement", "scaffolding-over-weights"],
-         "supersedes": [B + "developments/2026-01-25-claude-code-tasks"]},
+         "supersedes": [B + "developments/2026-01-25-claude-code-tasks"],
+         "relatedTo": [B + "developments/2026-01-13-claude-code-writes-cowork",
+                       B + "developments/2026-01-24-cursor-planners-and-workers"],
+         "tags": ["rsi", "self-modification", "agent-harness"],
+         "supporting_text": "analyzes its own interactions and updates its codebase daily",
+         "sources": [{"id": "factory-signals-announcement",
+                      "resource": "https://factory.ai/news/factory-signals",
+                      "title": "Signals: Toward a Self-Improving Agent", "author": "org:factory-ai",
+                      "last_modified": "2026-01-23"},
+                     {"id": "mcp-apps-announcement",
+                      "resource": "https://blog.modelcontextprotocol.io/posts/2026-01-26-mcp-apps/",
+                      "title": "MCP Apps - Bringing UI Capabilities To MCP Clients",
+                      "last_modified": "2026-01-26"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "[Factory AI](/organizations/factory-ai.md)'s Signals system analyzes the agent's "
+                 "own interactions and turns what it finds into daily updates to the agent's "
+                 "codebase, so the product that writes code is now partly written from its own "
+                 "usage ([announcement](https://factory.ai/news/factory-signals)). The same item "
+                 "records Anthropic's MCP Apps, which lets tools render interactive interfaces "
+                 "inside the chat ([MCP blog](https://blog.modelcontextprotocol.io/posts/2026-01-26-mcp-apps/)), "
+                 "filed by the newsletter under one heading: the recursive loop closing. It "
+                 "follows [Claude Code's Tasks](/developments/2026-01-25-claude-code-tasks.md) "
+                 "two days earlier and the "
+                 "[self-written Cowork app](/developments/2026-01-13-claude-code-writes-cowork.md) "
+                 "as scaffolding steps in the [recursive self-improvement](/themes/recursive-self-improvement.md) "
+                 "trajectory, and it precedes the emergent version four days later, when a "
+                 "Moltbook agent [hardened its own loop after an SSH attack](/developments/2026-01-31-agent-hardens-itself-after-ssh-attack.md) "
+                 "with no vendor involved."},
         {"id": "2026-01-27-ai-stamina-is-the-agi-moment",
          "title": "Karpathy says stamina is the feel-the-AGI moment",
          "claim": "Andrej Karpathy said AI stamina is a feel the AGI moment, as agents grind "
@@ -144,9 +207,33 @@ the AGI moment.
          "claim": "Dario Amodei said AI now writes much of the code at Anthropic and predicted "
                   "his country of geniuses may materialize by 2027, adding that he wishes he "
                   "had the aliens' answer on alignment.",
+         "description": "The head of a frontier lab states in a long essay that the loop is "
+                        "already running inside his own company and dates its culmination a year "
+                        "out, while conceding he lacks the answer to aligning what it produces.",
          "domain": "agents", "actor": ["anthropic", "people/dario-amodei"],
          "evidences": ["recursive-self-improvement", "takeoff-declared"],
-         "supersedes": [B + "developments/2026-01-27-ai-stamina-is-the-agi-moment"]},
+         "supersedes": [B + "developments/2026-01-27-ai-stamina-is-the-agi-moment",
+                        B + "developments/2026-01-10-clark-ai-doing-ai-research"],
+         "relatedTo": [B + "developments/2025-12-27-cherny-200-pull-requests",
+                       B + "developments/2026-01-24-researchers-replaced-first"],
+         "tags": ["rsi", "ai-r-and-d", "forecast", "alignment"],
+         "supporting_text": "AI now writes “much of the code” at Anthropic",
+         "sources": [{"id": "amodei-adolescence-of-technology-essay",
+                      "resource": "https://www.darioamodei.com/essay/the-adolescence-of-technology",
+                      "title": "The Adolescence of Technology", "author": "human:dario-amodei"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "In [The Adolescence of Technology](https://www.darioamodei.com/essay/the-adolescence-of-technology), "
+                 "[Dario Amodei](/people/dario-amodei.md) writes that AI now writes much of the "
+                 "code at Anthropic, that his country of geniuses may materialize by 2027, and "
+                 "that on alignment he wishes he had the aliens' answer to guide him. It moves the "
+                 "Anthropic line of the storyline from "
+                 "[Jack Clark's](/developments/2026-01-10-clark-ai-doing-ai-research.md) components "
+                 "of AI research seventeen days earlier to a chief executive's own estimate of how "
+                 "much of the company's code the models write, with the "
+                 "[200 pull requests a week](/developments/2025-12-27-cherny-200-pull-requests.md) "
+                 "reported by Claude Code's creator as the anecdotal precursor. Twelve days later "
+                 "the figure hardens into "
+                 "[effectively 100% of product code](/developments/2026-02-08-100pct-of-product-code.md)."},
         {"id": "2026-01-27-books-destructively-scanned",
          "title": "Court records show every book scanned destructively for training",
          "claim": "Court records revealed Anthropic secretly spent millions to destructively "

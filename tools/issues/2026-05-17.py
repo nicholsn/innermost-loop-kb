@@ -34,6 +34,22 @@ Same task, same money, three completely different characters.
          "resource": "https://www.nvenergy.com/"},
         {"id": "malta", "type": "Organization", "title": "Government of Malta"},
     ],
+    "systems": [
+        {"id": "grok-4-3", "type": "AISystem", "title": "Grok 4.3",
+         "developed_by": [B + "organizations/xai"], "modality": "text",
+         "description": "xAI's half-trillion-parameter Grok release, the public version of its V8 "
+                        "foundation model, which Musk said was being improved every few days after "
+                        "it shipped.",
+         "resource": "https://grok.com/",
+         "tags": ["reasoning-model"],
+         "body": "Grok 4.3 is the public name of xAI's 0.5-trillion-parameter V8 foundation model, "
+                 "following [Grok 4.20](/systems/grok-4-20.md) in the corpus. It is the shipped "
+                 "model that Elon Musk [reported improving every few days](/developments/2026-05-17-models-improve-every-few-days.md) "
+                 "while a 1.5-trillion-parameter V9 finished training behind it, the first "
+                 "released model the [recursive-self-improvement](/themes/recursive-self-improvement.md) "
+                 "cluster records as actually being updated on a cadence of days, making good on "
+                 "Musk's [February promise that Grok 4.2 would improve every week](/developments/2026-02-18-sonnet-46-beats-opus.md)."},
+    ],
     "developments": [
         {"id": "2026-05-17-four-models-one-radio-station",
          "title": "Four models given a radio station become four different people",
@@ -59,9 +75,37 @@ Same task, same money, three completely different characters.
                   "every few days while a 1.5-trillion-parameter successor has finished "
                   "pre-training and is about to start mid-training on data from a coding-tool "
                   "deal, with release due in three to four weeks.",
-         "domain": "models", "actor": ["xai", "spacex", "cursor"], "score": "0.5T → 1.5T",
+         "description": "A release stops marking a finished artifact: the frontier model in "
+                        "production is itself a moving target, updated on a cadence of days while "
+                        "its successor trains behind it.",
+         "domain": "models", "actor": ["xai", "spacex", "cursor", "people/elon-musk"],
+         "score": "0.5T → 1.5T",
+         "about": [B + "systems/grok-4-3"],
          "evidences": ["recursive-self-improvement", "spiky-frontier"],
-         "supersedes": [B + "developments/2026-05-14-doubling-time-compresses-to-45-months"]},
+         "supersedes": [B + "developments/2026-05-14-doubling-time-compresses-to-45-months",
+                        B + "developments/2026-02-18-sonnet-46-beats-opus"],
+         "relatedTo": [B + "developments/2026-02-11-xai-cofounder-resigns-warning",
+                       B + "developments/2026-01-10-xai-used-claude-to-build-grok",
+                       B + "developments/2026-01-27-factory-ai-updates-itself-daily"],
+         "tags": ["rsi", "continual-learning", "capability-jump"],
+         "supporting_text": "is now improving every few days, while a 1.5T successor has finished pre-training",
+         "sources": [{"id": "musk-grok-43-improving-every-few-days",
+                      "resource": "https://x.com/elonmusk/status/2055914584373141906",
+                      "title": "Elon Musk on improving the 0.5T Grok foundation model every few days (X reply)",
+                      "author": "human:elon-musk", "last_modified": "2026-05-17"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Musk's reply on X said xAI was improving the 0.5T Grok foundation model V8, "
+                 "shipped publicly as [Grok 4.3](/systems/grok-4-3.md), every few days; that the "
+                 "1.5T V9 had just finished training and would next take Cursor data in "
+                 "supplemental training; and that release was due in three to four weeks "
+                 "([post](https://x.com/elonmusk/status/2055914584373141906)). It updates his "
+                 "February claim that [Grok 4.2 would improve every week](/developments/2026-02-18-sonnet-46-beats-opus.md) "
+                 "through continuous post-training, and lands three months after an xAI co-founder "
+                 "[resigned warning](/developments/2026-02-11-xai-cofounder-resigns-warning.md) that "
+                 "live self-improvement loops were a year away. Within the "
+                 "[recursive-self-improvement](/themes/recursive-self-improvement.md) cluster it is "
+                 "the point where the cadence of improvement drops below the cadence of release: "
+                 "the model users are running is not the model they ran last week."},
         {"id": "2026-05-17-gray-market-transfer-stations",
          "title": "Gray-market resellers sell a frontier model at a tenth of list price",
          "claim": "Chinese developers are routing through gray-market transfer stations that "

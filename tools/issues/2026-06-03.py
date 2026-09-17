@@ -34,6 +34,25 @@ to disclose AI use and keep humans accountable for correctness.
         {"id": "thrive-holdings", "type": "Organization", "title": "Thrive Holdings",
          "body": "Buying accounting firms to automate white-collar work."},
     ],
+    "hardware": [
+        {"id": "majorana-2", "type": "Hardware", "title": "Majorana 2",
+         "developed_by": [B + "organizations/microsoft"],
+         "fabricated_by": [B + "organizations/microsoft"],
+         "tags": ["big-tech"],
+         "description": "Microsoft's next-generation topological quantum chip, developed with "
+                        "the company's own agentic AI and reported a thousandfold more reliable "
+                        "than its predecessor.",
+         "resource": "https://news.microsoft.com/source/features/innovation/majorana-2-microsoft-discovery-agentic-ai/",
+         "sameAs": ["http://www.wikidata.org/entity/Q140050424"],
+         "body": "Majorana 2 is Microsoft's next-generation topological quantum chip, built on a new "
+                 "materials stack that Microsoft says delivers a 1,000-fold increase in qubit "
+                 "reliability over the previous generation and lets it target a scalable quantum "
+                 "computer by 2029. It enters the corpus through the "
+                 "[June 3 item](/developments/2026-06-03-a-quantum-chip-designed-by-an-agent.md), "
+                 "notable less for the qubits than for the method: the chip was developed with the "
+                 "help of Microsoft Discovery's agentic AI, the substrate becoming a design target of "
+                 "the kind of system it is meant to run."},
+    ],
     "developments": [
         {"id": "2026-06-03-testing-instead-of-licensing",
          "title": "An executive order chooses testing over licensing",
@@ -113,9 +132,39 @@ to disclose AI use and keep humans accountable for correctness.
          "claim": "Microsoft unveiled Majorana 2, a topological quantum chip designed with its "
                   "own agentic AI, improving qubit reliability a thousandfold and pulling its "
                   "scalable-quantum target forward to 2029.",
+         "description": "The substrate-designs-itself loop reaches the quantum layer: a "
+                        "company's own agent helps design the chip meant to give it cheaper "
+                        "compute, and the roadmap moves years closer as a result.",
          "domain": "compute", "actor": ["microsoft"], "score": "1000x reliability, 2029",
+         "about": [B + "hardware/majorana-2"],
+         "occurred_on": "2026-06-02",
          "evidences": ["silicon-designs-itself", "recursive-self-improvement"],
-         "supersedes": [B + "developments/2026-05-26-a-pure-play-quantum-foundry"]},
+         "supersedes": [B + "developments/2026-05-26-a-pure-play-quantum-foundry"],
+         "relatedTo": [B + "developments/2026-03-20-cpu-designed-in-twelve-hours",
+                       B + "developments/2026-05-26-a-qubit-patterned-with-high-na-euv",
+                       B + "developments/2026-04-29-a-model-writes-the-kernels-that-run-it"],
+         "tags": ["chip-design", "rsi"],
+         "supporting_text": "a topological quantum chip designed with its own agentic AI that improves qubit reliability",
+         "sources": [{"id": "microsoft-majorana-2-announcement",
+                      "resource": "https://news.microsoft.com/source/features/innovation/majorana-2-microsoft-discovery-agentic-ai/",
+                      "title": "Majorana 2, made more reliable with Microsoft Discovery agentic AI",
+                      "author": "org:microsoft", "last_modified": "2026-06-02"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Microsoft's announcement describes Majorana 2 as a next-generation topological chip "
+                 "on a new materials stack, developed with the aid of Microsoft Discovery's agentic AI, "
+                 "with a 1,000-fold gain in qubit reliability over the prior generation and a "
+                 "scalable-quantum target pulled forward to 2029, roughly halving the original timeline "
+                 "([Microsoft](https://news.microsoft.com/source/features/innovation/majorana-2-microsoft-discovery-agentic-ai/)). "
+                 "The newsletter reads it as Microsoft hunting cheaper compute at the physics layer, in "
+                 "the same breath as the borrowed silicon and borrowed money of the "
+                 "[TPU credit deal](/developments/2026-06-03-the-tpu-debt-deal-prices.md). In the "
+                 "[silicon-designs-itself](/themes/silicon-designs-itself.md) line it follows "
+                 "[a CPU taken to tape-out in twelve hours](/developments/2026-03-20-cpu-designed-in-twelve-hours.md) "
+                 "and [a model topping the leaderboard for the kernels it runs on](/developments/2026-04-29-a-model-writes-the-kernels-that-run-it.md), "
+                 "and lands a week after [imec patterned a qubit with production EUV](/developments/2026-05-26-a-qubit-patterned-with-high-na-euv.md); "
+                 "the quantum thread continues with "
+                 "[a chip that learns from its own errors mid-run](/developments/2026-07-23-a-quantum-chip-learns-from-its-own-errors-mid-run.md) "
+                 "in July."},
         {"id": "2026-06-03-orbital-manufacturing-cleared-for-test",
          "title": "Reentry capsules that manufacture in orbit are cleared for testing",
          "claim": "SpaceX won FAA approval to test its Starfall capsules, reentry vehicles that "

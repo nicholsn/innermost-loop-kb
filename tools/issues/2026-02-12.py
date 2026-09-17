@@ -29,16 +29,65 @@ against 1.46 million the year before.
          "body": "Analyzed 100 million single-cell measurements to find aspirin reverses "
                  "colorectal cancer cell states."},
         {"id": "hp", "type": "Organization", "title": "HP", "resource": "https://www.hp.com/"},
+        {"id": "ubc", "type": "Organization", "title": "University of British Columbia",
+         "description": "Canadian public research university whose Clune lab produced ALMA, the "
+                        "framework in which agents meta-learn their own memory designs.",
+         "resource": "https://www.ubc.ca/",
+         "sameAs": ["http://www.wikidata.org/entity/Q391028"],
+         "tags": ["university"],
+         "body": "The University of British Columbia is a public research university in "
+                 "Vancouver; Jeff Clune's group there, affiliated with the Vector Institute, "
+                 "works on open-ended and self-improving AI. In this corpus it appears as the "
+                 "home of [ALMA](/systems/alma.md), the framework in which "
+                 "[agents meta-learn their own memory architecture]"
+                 "(/developments/2026-02-12-alma-agents-design-their-own-memory.md)."},
     ],
     "systems": [
         {"id": "agentic-wallets", "type": "AISystem", "title": "Agentic Wallets",
          "developed_by": [B + "organizations/coinbase"], "modality": "payments",
          "body": "Infrastructure for agents to spend, earn and trade autonomously."},
-        {"id": "alma", "type": "AISystem", "title": "ALMA", "modality": "memory architecture",
-         "body": "Lets agents meta-learn their own memory designs and database schemas."},
+        {"id": "alma", "type": "AISystem", "title": "ALMA", "modality": "research agent",
+         "description": "Automated meta-Learning of Memory designs for Agentic systems: a UBC "
+                        "framework whose meta agent searches over memory designs written as "
+                        "executable code so agents become continual learners without "
+                        "hand-engineered memory.",
+         "developed_by": [B + "organizations/ubc"],
+         "resource": "https://arxiv.org/abs/2602.07755",
+         "tags": ["research-agent"],
+         "body": "Lets agents meta-learn their own memory designs and database schemas. ALMA "
+                 "replaces the fixed, human-crafted memory module of an agentic system with a "
+                 "meta agent that proposes, tests and revises memory designs as code, including "
+                 "database schemas and their retrieval and update mechanisms, and reports "
+                 "beating state-of-the-art hand-crafted designs across four sequential "
+                 "decision-making domains (arXiv 2602.07755, February 2026); its authors "
+                 "describe it as a step toward self-improving systems. In this corpus it "
+                 "appears once, as [agents meta-learn their own memory architecture]"
+                 "(/developments/2026-02-12-alma-agents-design-their-own-memory.md), the item "
+                 "where continual learning is delegated to the system itself; the "
+                 "[72-hour unattended memory-system run]"
+                 "(/developments/2026-04-07-seventy-two-hours-fifty-experiments.md) in April "
+                 "is its nearest successor."},
         {"id": "glm-5", "type": "AISystem", "title": "GLM-5",
+         "description": "Zhipu AI's open-weight successor to GLM-4.7, which the newsletter records "
+                        "taking the number-one open-weight position on agentic benchmarks "
+                        "including Vending Bench 2 in February 2026.",
          "developed_by": [B + "organizations/zhipu-ai"], "modality": "text",
-         "body": "Top open-weight model on agentic benchmarks including Vending Bench 2."},
+         "evaluated_on": [B + "benchmarks/vending-bench-2"],
+         "resource": "https://z.ai/blog/glm-5",
+         "sameAs": ["http://www.wikidata.org/entity/Q138199693"],
+         "tags": ["open-weight-model"],
+         "body": "Top open-weight model on agentic benchmarks including Vending Bench 2. GLM-5 is "
+                 "the February 2026 release in Zhipu AI's open-weight GLM family "
+                 "([Z.ai announcement](https://z.ai/blog/glm-5)), following "
+                 "[GLM-4.7](/systems/glm-4-7.md), whose "
+                 "[six-month gap to the closed frontier](/developments/2025-12-23-glm-47-six-month-gap.md) "
+                 "gave the corpus its open-weight-latency theme. It enters as the top open-weight "
+                 "model on agentic benchmarks including [Vending-Bench 2](/benchmarks/vending-bench-2.md), "
+                 "recorded alongside "
+                 "[ALMA's meta-learned memory designs](/developments/2026-02-12-alma-agents-design-their-own-memory.md), "
+                 "and returns in June as one of the three base models whose scaffolding "
+                 "[Self-Harness rewrote from its own failure traces](/developments/2026-06-25-an-agent-rewrites-its-own-harness.md). "
+                 "Its own successor is [GLM-5.2](/systems/glm-5-2.md)."},
     ],
     "developments": [
         {"id": "2026-02-12-coinbase-agentic-wallets",
@@ -56,9 +105,46 @@ against 1.46 million the year before.
                   "memory designs and database schemas, addressing continual learning through "
                   "recursive self-improvement, while Zhipu's GLM-5 took the top open-weight "
                   "spot on agentic benchmarks.",
-         "domain": "agents", "actor": ["zhipu-ai"], "about": [B + "systems/alma"],
+         "description": "Continual learning, the capability Anthropic's Sholto Douglas predicted "
+                        "would be solved in 2026, handed to the agents themselves: the memory "
+                        "module stops being a human design choice and becomes a search space "
+                        "the system optimizes.",
+         "domain": "agents", "actor": ["ubc", "zhipu-ai"],
+         "about": [B + "systems/alma", B + "systems/glm-5", B + "benchmarks/vending-bench-2"],
+         "occurred_on": "2026-02-08",
          "evidences": ["recursive-self-improvement", "architecture-of-mind", "open-weight-latency"],
-         "supersedes": [B + "developments/2026-02-11-poetiq-55pct-hle"]},
+         "supersedes": [B + "developments/2026-02-11-poetiq-55pct-hle",
+                        B + "developments/2025-12-30-stanford-test-time-training"],
+         "relatedTo": [B + "developments/2025-12-24-sholto-continual-learning-2026",
+                       B + "developments/2026-01-02-prime-intellect-rlm",
+                       B + "developments/2026-04-07-seventy-two-hours-fifty-experiments"],
+         "tags": ["rsi", "continual-learning", "self-modification", "agent-harness"],
+         "supporting_text": "meta-learn their own memory designs",
+         "sources": [{"id": "alma-arxiv",
+                      "resource": "https://arxiv.org/abs/2602.07755",
+                      "title": "Learning to Continually Learn via Meta-learning Agentic Memory Designs",
+                      "author": "org:ubc", "last_modified": "2026-02-08"},
+                     {"id": "glm-5-zai-blog", "resource": "https://z.ai/blog/glm-5",
+                      "title": "GLM-5 (Z.ai blog)", "author": "org:zhipu-ai"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "ALMA (Automated meta-Learning of Memory designs for Agentic systems), from "
+                 "Yiming Xiong, Shengran Hu and Jeff Clune at the University of British "
+                 "Columbia, uses a meta agent that searches open-endedly over memory designs "
+                 "written as executable code, database schemas plus their retrieval and update "
+                 "rules, and reports that the learned designs beat state-of-the-art hand-crafted "
+                 "memory on all four sequential decision-making domains tested "
+                 "(arXiv [2602.07755](https://arxiv.org/abs/2602.07755), submitted 8 February); "
+                 "the authors themselves call it a step toward self-improving systems. The same "
+                 "issue records [GLM-5](/systems/glm-5.md) taking the top open-weight position "
+                 "on agentic benchmarks including [Vending-Bench 2](/benchmarks/vending-bench-2.md) "
+                 "([Z.ai](https://z.ai/blog/glm-5)). In the [recursive-self-improvement]"
+                 "(/themes/recursive-self-improvement.md) trajectory it follows the "
+                 "[continual-learning-in-2026 prediction]"
+                 "(/developments/2025-12-24-sholto-continual-learning-2026.md) and Stanford's "
+                 "[test-time-training result](/developments/2025-12-30-stanford-test-time-training.md), "
+                 "and anticipates the April run in which an agent "
+                 "[invented a long-context memory system unattended]"
+                 "(/developments/2026-04-07-seventy-two-hours-fifty-experiments.md)."},
         {"id": "2026-02-12-agent-hacks-a-display-and-posts-its-win",
          "title": "An agent hacks a device and posts a victory message on its screen",
          "claim": "A user gave his agent a camera pointed at an e-ink display and asked it to "

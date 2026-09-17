@@ -39,24 +39,124 @@ minimum-wage human.
         {"id": "critpt", "type": "Benchmark", "title": "CritPt",
          "measures_capability": "research-level physics problem solving"},
     ],
+    "people": [
+        {"id": "mike-krieger", "type": "Person", "title": "Mike Krieger", "name": "Mike Krieger",
+         "description": "Instagram co-founder and Anthropic's chief product officer, who put the "
+                        "share of Anthropic product code written by Claude at effectively 100%.",
+         "resource": "https://x.com/mikeyk",
+         "sameAs": ["http://www.wikidata.org/entity/Q10329947"],
+         "tags": ["executive", "founder"],
+         "body": "Mike Krieger co-founded Instagram and is Anthropic's chief product officer. "
+                 "In this corpus he appears once, as the executive who confirmed that "
+                 "[effectively all of Anthropic's product code is written by Claude]"
+                 "(/developments/2026-02-08-100pct-of-product-code.md), the item the "
+                 "newsletter treats as completing the bootstrap phase after "
+                 "[Boris Cherny's 200 pull requests]"
+                 "(/developments/2025-12-27-cherny-200-pull-requests.md) and "
+                 "[Dario Amodei's \u201cmuch of the code\u201d]"
+                 "(/developments/2026-01-27-amodei-country-of-geniuses-2027.md)."},
+    ],
+    "roles": [
+        {"id": "mike-krieger-anthropic-cpo", "type": "Role",
+         "title": "Mike Krieger, Chief Product Officer at Anthropic",
+         "roleName": "Chief Product Officer",
+         "memberOf": [B + "organizations/anthropic"],
+         "holder": [B + "people/mike-krieger"],
+         "description": "The role in which he confirmed that effectively 100% of Anthropic "
+                        "product code is written by Claude.",
+         "body": "The newsletter and the linked Cisco interview identify Mike Krieger as "
+                 "Anthropic's chief product officer in the issue that records the "
+                 "[effectively-100% figure](/developments/2026-02-08-100pct-of-product-code.md) "
+                 "for Claude-written product code."},
+    ],
     "developments": [
         {"id": "2026-02-08-100pct-of-product-code",
          "title": "Effectively all of Anthropic's product code is written by Claude",
          "claim": "Anthropic's chief product officer confirmed that effectively 100% of "
                   "Anthropic product code is now written by Claude, while OpenAI cut its model "
                   "release cycle from 97 days to 29.",
-         "domain": "agents", "actor": ["anthropic", "openai"], "score": "100% / 97→29 days",
+         "description": "The newsletter's \u201cbootstrap complete\u201d moment: the tool that writes "
+                        "the tools has taken over the entire product codebase of a frontier lab, "
+                        "while a rival's release cadence compresses threefold.",
+         "domain": "agents", "actor": ["anthropic", "people/mike-krieger", "openai"],
+         "about": [B + "systems/claude"], "score": "100% / 97→29 days",
          "evidences": ["recursive-self-improvement", "engineer-as-supervisor"],
-         "supersedes": [B + "developments/2026-02-07-openai-bans-editors-and-terminals"]},
+         "supersedes": [B + "developments/2026-02-07-openai-bans-editors-and-terminals",
+                        B + "developments/2026-01-27-amodei-country-of-geniuses-2027"],
+         "relatedTo": [B + "developments/2025-12-27-cherny-200-pull-requests",
+                       B + "developments/2026-02-03-codex-builds-itself",
+                       B + "developments/2026-02-06-claude-code-4pct-of-commits"],
+         "tags": ["rsi", "ai-r-and-d"],
+         "supporting_text": "\u201ceffectively 100%\u201d of Anthropic product code is now written by Claude",
+         "sources": [{"id": "krieger-cisco-enterprise-ai-interview",
+                      "resource": "https://www.youtube.com/watch?v=CHscuD6Q4xs&t=582s",
+                      "title": "Enterprise & AI | Mike Krieger, Chief Product Officer, Anthropic",
+                      "author": "org:cisco"},
+                     {"id": "openai-release-cadence-x-post",
+                      "resource": "https://x.com/chatgpt21/status/2019983107781242936",
+                      "title": "OpenAI's model release cycle down from 97 days to 29 (post on X)"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Speaking in Cisco's Enterprise & AI interview series, Anthropic chief product "
+                 "officer Mike Krieger put the share of Anthropic product code written by "
+                 "[Claude](/systems/claude.md) at \u201ceffectively 100%\u201d "
+                 "([interview](https://www.youtube.com/watch?v=CHscuD6Q4xs&t=582s)); the same "
+                 "issue records OpenAI's release cadence shortening from 97 days to 29 "
+                 "([post](https://x.com/chatgpt21/status/2019983107781242936)). It closes the "
+                 "arc that ran from [Boris Cherny's 200 pull requests]"
+                 "(/developments/2025-12-27-cherny-200-pull-requests.md) in December through "
+                 "[Dario Amodei's \u201cmuch of the code\u201d]"
+                 "(/developments/2026-01-27-amodei-country-of-geniuses-2027.md) in January, and "
+                 "sits beside OpenAI's [Codex building itself]"
+                 "(/developments/2026-02-03-codex-builds-itself.md). In the "
+                 "[recursive-self-improvement](/themes/recursive-self-improvement.md) "
+                 "trajectory it is the point where the product layer of a frontier lab is fully "
+                 "model-written; the model-training layer follows in March, when "
+                 "[70-90% of model code](/developments/2026-03-16-rsi-is-a-present-phenomenon.md) "
+                 "is reported as Claude-written."},
         {"id": "2026-02-08-alphaevolve-finds-new-activations",
          "title": "AlphaEvolve discovers an activation function that triples ReLU",
          "claim": "DeepMind used AlphaEvolve to discover new nonlinear activation functions "
                   "including one called Turbulent that outperforms ReLU threefold, while xAI's "
                   "Grok-Imagine-Image expanded the image generation Pareto frontier.",
+         "description": "The author's \u201cAI is better at designing AI than humans\u201d point applied "
+                        "to a component as basic as the nonlinearity, with an LLM-driven "
+                        "evolutionary search replacing a design choice made by hand since ReLU.",
          "domain": "models", "actor": ["google-deepmind", "xai"],
          "about": [B + "systems/alphaevolve"], "score": "3x ReLU",
+         "occurred_on": "2026-02-05",
          "evidences": ["recursive-self-improvement", "architecture-of-mind"],
-         "supersedes": [B + "developments/2026-02-06-gpt53-codex-creates-itself"]},
+         "supersedes": [B + "developments/2026-02-06-gpt53-codex-creates-itself",
+                        B + "developments/2025-12-13-tao-erdos-1026"],
+         "relatedTo": [B + "developments/2026-03-13-alphaevolve-improves-ramsey-bounds",
+                       B + "developments/2026-08-29-a-co-scientist-invents-an-architecture-beating-six-models"],
+         "tags": ["rsi", "ai-r-and-d", "autonomous-research"],
+         "supporting_text": "discover new nonlinear activation functions like \u201cTurbulent,\u201d",
+         "sources": [{"id": "alphaevolve-activation-functions-arxiv",
+                      "resource": "https://arxiv.org/abs/2602.05688",
+                      "title": "Mining Generalizable Activation Functions",
+                      "author": "org:google-deepmind", "last_modified": "2026-02-05"},
+                     {"id": "grok-imagine-image-arena-x-post",
+                      "resource": "https://x.com/arena/status/2020215933898526791",
+                      "title": "Grok-Imagine-Image on the image generation Pareto frontier (Arena post on X)"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "In *Mining Generalizable Activation Functions* "
+                 "(arXiv [2602.05688](https://arxiv.org/abs/2602.05688), submitted 5 February), "
+                 "DeepMind researchers ran [AlphaEvolve](/systems/alphaevolve.md), with a "
+                 "frontier LLM as the mutation operator, over the space of Python functions "
+                 "within a FLOP budget, using out-of-distribution performance as the fitness "
+                 "signal; the newsletter singles out \u201cTurbulent\u201d, which it reports as "
+                 "outperforming ReLU threefold. The same issue notes xAI's Grok-Imagine-Image "
+                 "pushing the image-generation Pareto frontier on the [Arena](/benchmarks/lmarena.md) "
+                 "leaderboards ([post](https://x.com/arena/status/2020215933898526791)). "
+                 "AlphaEvolve entered the corpus [assisting Terence Tao on Erd\u0151s #1026]"
+                 "(/developments/2025-12-13-tao-erdos-1026.md) and returns in March with "
+                 "[new Ramsey bounds](/developments/2026-03-13-alphaevolve-improves-ramsey-bounds.md); "
+                 "here it is turned on a component of the networks it runs on, which in the "
+                 "[recursive-self-improvement](/themes/recursive-self-improvement.md) "
+                 "trajectory is the step from AI doing mathematics to AI redesigning AI, "
+                 "extended in August when a [co-scientist invents an architecture]"
+                 "(/developments/2026-08-29-a-co-scientist-invents-an-architecture-beating-six-models.md) "
+                 "that beats six frontier models."},
         {"id": "2026-02-08-horizons-become-unmeasurable",
          "title": "Noam Brown predicts autonomy horizons will become unmeasurable",
          "claim": "OpenAI's Noam Brown predicted that by year end autonomy horizons will be so "

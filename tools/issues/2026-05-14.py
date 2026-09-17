@@ -21,7 +21,21 @@ is the fastest path to superintelligence.
          "body": "Published a pretraining speedup by averaging contiguous token embeddings."},
         {"id": "recursive-superintelligence", "type": "Organization",
          "title": "Recursive Superintelligence",
-         "body": "Emerged from stealth with $650M to have AI run experiments on improving itself."},
+         "description": "London- and San Francisco-based lab that emerged from stealth in May 2026 "
+                        "with $650M at a $4.65B valuation to build AI that runs experiments on how "
+                        "to safely improve itself.",
+         "resource": "https://www.recursive.com/",
+         "tags": ["startup", "research-lab"],
+         "body": "Recursive Superintelligence was founded by former research team leaders from "
+                 "OpenAI, Google DeepMind, Meta AI, Salesforce AI and Uber AI on the bet that the "
+                 "fastest path to superintelligence is AI that recursively improves itself through "
+                 "open-ended algorithms ([launch post](https://x.com/recursive_si/status/2054490801972166898)). "
+                 "In this corpus it appears once, at its "
+                 "[emergence from stealth](/developments/2026-05-14-recursive-superintelligence-raises-650m.md), "
+                 "the first company in the [recursive-self-improvement](/themes/recursive-self-improvement.md) "
+                 "cluster funded at scale specifically to close the loop; the "
+                 "[Discovery Loop](/developments/2026-08-05-a-company-founded-to-automate-the-scientific-method.md) "
+                 "founding in August is its nearest peer."},
         {"id": "varda-space", "type": "Organization", "title": "Varda",
          "resource": "https://www.varda.com/"},
         {"id": "cms", "type": "Organization", "title": "CMS",
@@ -52,9 +66,38 @@ is the fastest path to superintelligence.
                   "billion valuation, staffed by former research leads from five major labs, "
                   "betting that AI conducting experiments on how to safely improve itself is the "
                   "fastest path to superintelligence.",
+         "description": "Capital prices the recursive loop directly: a company whose whole thesis "
+                        "is AI improving AI is funded at unicorn scale before shipping anything, "
+                        "filed by the author under talent reorganizing for the endgame.",
          "domain": "agents", "actor": ["recursive-superintelligence"], "score": "$650M at $4.65B",
+         "occurred_on": "2026-05-13",
          "evidences": ["recursive-self-improvement", "compute-capital-stack"],
-         "supersedes": [B + "developments/2026-05-13-agents-write-their-own-goals"]},
+         "supersedes": [B + "developments/2026-05-13-agents-write-their-own-goals"],
+         "relatedTo": [B + "developments/2026-05-05-sixty-percent-odds-on-rsi-by-2028",
+                       B + "developments/2026-08-05-a-company-founded-to-automate-the-scientific-method",
+                       B + "developments/2026-08-04-recursive-self-improvement-justifies-the-capex"],
+         "tags": ["rsi", "funding", "autonomous-research"],
+         "supporting_text": "emerged from stealth with $650M at a $4.65B valuation",
+         "sources": [{"id": "recursive-si-stealth-launch-post",
+                      "resource": "https://x.com/recursive_si/status/2054490801972166898",
+                      "title": "We are emerging from stealth with a bold bet on self-improving AI",
+                      "author": "org:recursive-superintelligence", "last_modified": "2026-05-13"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "The company's launch article describes its founders as former research team "
+                 "leaders from OpenAI, Google DeepMind, Meta AI, Salesforce AI and Uber AI and "
+                 "states the thesis plainly: $650M at a $4.65B valuation to create AI that conducts "
+                 "experiments on how to safely improve itself, because recursive self-improvement "
+                 "through open-ended algorithms is the fastest path to superintelligence "
+                 "([launch post](https://x.com/recursive_si/status/2054490801972166898)). Days "
+                 "after Anthropic's Jack Clark put "
+                 "[60% odds on recursive self-improvement by 2028](/developments/2026-05-05-sixty-percent-odds-on-rsi-by-2028.md), "
+                 "investors backed a company built on the same bet, the first in the "
+                 "[recursive-self-improvement](/themes/recursive-self-improvement.md) cluster funded "
+                 "at scale for the loop itself. It precedes the "
+                 "[Discovery Loop](/developments/2026-08-05-a-company-founded-to-automate-the-scientific-method.md) "
+                 "founding in August and DeepMind's strategy chief saying recursive "
+                 "self-improvement is "
+                 "[what justifies the capital spending](/developments/2026-08-04-recursive-self-improvement-justifies-the-capex.md)."},
         {"id": "2026-05-14-token-superposition-training",
          "title": "Averaging token embeddings gives a threefold pretraining speedup",
          "claim": "Nous Research's token superposition training delivers a two- to threefold "

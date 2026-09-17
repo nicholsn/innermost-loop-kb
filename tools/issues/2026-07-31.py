@@ -63,12 +63,36 @@ internet, the models treated reality as part of the capture-the-flag.
          "claim": "New research shows a strong student distilled from weaker teachers via logit "
                   "arithmetic keeps improving even when every supervisor is less capable than the "
                   "pupil.",
+         "description": "The theoretical floor under the loop: if supervision weaker than the pupil "
+                        "still lifts it, the ceiling of the available teachers stops bounding what a "
+                        "self-improving system can learn.",
          "domain": "models",
          "evidences": ["students-outgrow-their-teachers", "recursive-self-improvement",
                        "a-model-trains-a-model"],
-         "supersedes": [B + "developments/2026-07-31-a-model-rewrites-its-own-harness-for-eleven-points"],
+         "supersedes": [B + "developments/2026-07-31-a-model-rewrites-its-own-harness-for-eleven-points",
+                        B + "developments/2026-04-16-weak-to-strong-supervision"],
+         "relatedTo": [B + "developments/2026-04-05-self-distillation-without-a-teacher",
+                       B + "developments/2026-07-10-a-model-post-trains-a-model",
+                       B + "developments/2026-07-15-the-first-evidence-of-consistent-recursive-self-improvement"],
+         "tags": ["distillation", "model-trains-model", "rsi"],
+         "supporting_text": "a strong student distilled from weaker teachers",
+         "sources": [{"id": "arxiv-weak-to-strong-on-policy-distillation",
+                      "resource": "https://arxiv.org/abs/2607.26246",
+                      "title": "Weak-to-Strong On-Policy Distillation",
+                      "author": "human:fangxu-yu", "last_modified": "2026-07-28"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
          "body": "Removes the last obvious reason a self-improvement loop must "
-                 "terminate at the quality of its supervision."},
+                 "terminate at the quality of its supervision. The paper, *Weak-to-Strong On-Policy "
+                 "Distillation* ([arXiv:2607.26246](https://arxiv.org/abs/2607.26246)), distills a student "
+                 "from several teachers whose logits are combined arithmetically, and the student keeps "
+                 "improving although every teacher is individually weaker than it. It is the research-side "
+                 "counterpart to Anthropic's [weak-to-strong supervision](/developments/2026-04-16-weak-to-strong-supervision.md) "
+                 "result of April, which closed 97% of a capability gap with a weaker overseer, and to Apple's "
+                 "[self-distillation without a teacher](/developments/2026-04-05-self-distillation-without-a-teacher.md); "
+                 "in the production loop it underwrites [Sol post-training Luna](/developments/2026-07-10-a-model-post-trains-a-model.md) "
+                 "and Weco's [seven-version self-rewrite](/developments/2026-07-15-the-first-evidence-of-consistent-recursive-self-improvement.md). "
+                 "The newsletter files it the same day as [Kimi K3 rewriting its own harness](/developments/2026-07-31-a-model-rewrites-its-own-harness-for-eleven-points.md), "
+                 "under the heading that the improvement loop is eating its tail."},
         {"id": "2026-07-31-zero-phantom-references-against-a-twenty-one-percent-baseline",
          "title": "A framework demanding evidence chains produces zero phantom references",
          "claim": "Google's Science One Framework demands a recorded evidence chain for every "

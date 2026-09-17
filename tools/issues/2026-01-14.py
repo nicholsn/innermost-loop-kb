@@ -21,7 +21,19 @@ Tesla ending one-time FSD purchases in favor of a monthly rental.
         {"id": "atoms", "type": "Organization", "title": "Atoms",
          "body": "Autonomous AI team that builds and scales real businesses."},
         {"id": "salesforce", "type": "Organization", "title": "Salesforce",
-         "resource": "https://www.salesforce.com/"},
+         "description": "Enterprise CRM company and owner of Slack that the corpus tracks shipping an "
+                        "employee agent, then placing its whole CRM inside Claude.",
+         "resource": "https://www.salesforce.com/",
+         "sameAs": ["http://www.wikidata.org/entity/Q941127"],
+         "tags": ["big-tech"],
+         "body": "Salesforce is the enterprise CRM company that owns Slack. In this corpus it enters by "
+                 "[releasing Slackbot as an out-of-the-box employee agent](/developments/2026-01-14-atoms-autonomous-business-team.md) "
+                 "([announcement](https://investor.salesforce.com/news/news-details/2026/Salesforce-Announces-the-General-Availability-of-Slackbot--Your-Personal-Agent-for-Work/default.aspx)), "
+                 "and ten days later is the incumbent whose "
+                 "[$350k contract a customer swapped for generated software](/developments/2026-01-24-350k-salesforce-contract-terminated.md). "
+                 "By August it ships [Slack Code](/systems/slack-code.md) as a workplace for coding agents and "
+                 "[puts its whole CRM inside Claude](/developments/2026-08-27-a-crm-placed-inside-a-model.md), "
+                 "billed by consumption."},
         {"id": "essilorluxottica", "type": "Organization", "title": "EssilorLuxottica",
          "resource": "https://www.essilorluxottica.com/"},
         {"id": "overview-energy", "type": "Organization", "title": "Overview Energy",

@@ -101,7 +101,18 @@ micro-factories, satellites, and the first attempts to legislate the phase shift
         {"id": "astera-institute", "type": "Organization", "title": "Astera Institute",
          "resource": "https://astera.org/", "body": "Research institute funding open science."},
         {"id": "white-house", "type": "Organization", "title": "The White House",
-         "resource": "https://www.whitehouse.gov/", "body": "US executive branch."},
+         "description": "The US presidency as a policy actor: executive orders preempting state AI law, the Pax Silica initiative, and the federal side of the compute buildout.",
+         "resource": "https://www.whitehouse.gov/",
+         "sameAs": ["http://www.wikidata.org/entity/Q1355327"],
+         "tags": ["government"],
+         "body": "US executive branch. It enters the corpus with the "
+                 "[order preempting state AI regulation](/developments/2025-12-12-white-house-preempts-state-ai-law.md), "
+                 "pulling against New York's [posthumous-likeness law](/developments/2025-12-12-ny-posthumous-likeness-consent.md) "
+                 "on the same day, and a day later launches the [Pax Silica Initiative](/developments/2025-12-13-pax-silica-initiative.md) "
+                 "to align the semiconductor stack with allies. It recurs as the federal actor in the buildout, "
+                 "[taking a stake in USA Rare Earth](/developments/2026-01-26-white-house-takes-rare-earth-stake.md), "
+                 "[preempting a fifty-state patchwork again](/developments/2026-03-22-white-house-preempts-a-state-patchwork.md), "
+                 "and preparing an order against Anthropic as [the lab sued the Pentagon](/developments/2026-03-10-anthropic-sues-the-pentagon.md)."},
         {"id": "new-york-state", "type": "Organization", "title": "New York State",
          "resource": "https://www.ny.gov/", "body": "US state legislature and executive."},
         {"id": "time", "type": "Organization", "title": "TIME",
@@ -117,11 +128,40 @@ micro-factories, satellites, and the first attempts to legislate the phase shift
          "body": "OpenAI's reasoning model, and the first reported to beat human "
                  "experts on GDPval."},
         {"id": "claude", "type": "AISystem", "title": "Claude",
+         "description": "Anthropic's frontier model family, which the corpus follows from a "
+                        "creative-writing lead to writing effectively all of Anthropic's own product code.",
          "developed_by": [B + "organizations/anthropic"], "modality": "text",
-         "body": "Anthropic's frontier model, reported still leading on creative writing."},
+         "resource": "https://claude.ai/",
+         "sameAs": ["http://www.wikidata.org/entity/Q118876059"],
+         "tags": ["coding-agent"],
+         "body": "Claude is Anthropic's model family, served at [claude.ai](https://claude.ai/) and, "
+                 "for software work, through [Claude Code](/systems/claude-code.md). It enters the "
+                 "corpus in the [spiky-frontier comparison](/developments/2025-12-12-spiky-frontier-gaps.md) "
+                 "as the leader on creative writing, but its recurring role is as the model that "
+                 "builds models: Karpathy "
+                 "[handed it his nanochat optimization loop](/developments/2025-12-29-karpathy-claude-runs-nanochat.md), "
+                 "Anthropic's chief product officer said it writes "
+                 "[effectively 100% of the company's product code](/developments/2026-02-08-100pct-of-product-code.md), "
+                 "and by March it wrote 70–90% of the code behind future Anthropic models, the basis "
+                 "of the claim that "
+                 "[recursive self-improvement is already happening](/developments/2026-03-16-rsi-is-a-present-phenomenon.md)."},
         {"id": "gemini", "type": "AISystem", "title": "Gemini",
+         "description": "Google's frontier model family, reported leading judgment tasks and given even "
+                        "odds by Noam Shazeer of producing the next major AI breakthrough itself.",
          "developed_by": [B + "organizations/google"], "modality": "text",
-         "body": "Google's frontier model, reported dominating judgment tasks."},
+         "resource": "https://gemini.google.com/",
+         "sameAs": ["http://www.wikidata.org/entity/Q123688361"],
+         "tags": ["reasoning-model"],
+         "body": "Gemini is Google's frontier model family and assistant "
+                 "([gemini.google.com](https://gemini.google.com/)); the corpus tracks named releases "
+                 "such as [Gemini 3 Pro](/systems/gemini-3-pro.md) and "
+                 "[Gemini 3 Flash](/systems/gemini-3-flash.md) separately. It first appears "
+                 "[dominating judgment tasks](/developments/2025-12-12-spiky-frontier-gaps.md) in the "
+                 "spiky-frontier comparison, then as the model whose private thought chain "
+                 "[plotted revenge on a critic](/developments/2025-12-16-gemini-private-trash-talk.md). "
+                 "Its stake in the recursive thread is Noam Shazeer's "
+                 "[50/50 odds](/developments/2025-12-19-shazeer-5050-gemini-breakthrough.md) that Gemini, "
+                 "rather than a human researcher, generates the next major breakthrough."},
         {"id": "stirrup", "type": "AISystem", "title": "Stirrup",
          "developed_by": [B + "organizations/artificial-analysis"], "modality": "harness",
          "body": "A harness that raises baseline model performance on economic tasks "
@@ -137,8 +177,19 @@ micro-factories, satellites, and the first attempts to legislate the phase shift
          "body": "A general world model generating video frame-by-frame in real time, "
                  "steerable by camera pose and robot commands."},
         {"id": "sora", "type": "AISystem", "title": "Sora",
+         "description": "OpenAI's video generator, which gained Disney's character library in December "
+                        "and was shut down by April to free compute for automated researchers.",
          "developed_by": [B + "organizations/openai"], "modality": "video",
-         "body": "OpenAI's video generator, opened to Disney's characters."},
+         "resource": "https://openai.com/sora/",
+         "sameAs": ["http://www.wikidata.org/entity/Q124544998"],
+         # tags waived: no controlled entity tag (ENRICH_RULES) describes a video-generation model.
+         "body": "Sora is OpenAI's text-to-video model and app ([product page](https://openai.com/sora/)). "
+                 "In this corpus it bookends a reallocation of compute: Disney's "
+                 "[$1 billion investment](/developments/2025-12-12-disney-openai-billion.md) opened "
+                 "Mickey Mouse and Darth Vader to Sora users in December, and by April Sam Altman said "
+                 "OpenAI had [shut Sora down](/developments/2026-04-03-forecasts-move-eighteen-months-in-three.md) "
+                 "to concentrate compute on its next generation of automated researchers, which the "
+                 "newsletter read as recursive self-improvement going well."},
     ],
 
     "hardware": [
@@ -151,9 +202,22 @@ micro-factories, satellites, and the first attempts to legislate the phase shift
          "fabricated_by": [B + "organizations/tsmc"],
          "body": "Rivian's in-house autonomy chip, replacing bought-in silicon."},
         {"id": "nvidia-b200", "type": "Hardware", "title": "NVIDIA B200",
+         "description": "NVIDIA's Blackwell data-center GPU, whose bill of materials Epoch AI found "
+                        "tilting toward memory and on which self-improving agents later rebuilt an "
+                        "inference stack.",
          "developed_by": [B + "organizations/nvidia"],
-         "body": "The accelerator whose cost structure issue 001 reported inverting, "
-                 "with memory approaching half of manufacturing cost."},
+         "resource": "https://www.nvidia.com/en-us/data-center/dgx-b200/",
+         "sameAs": ["http://www.wikidata.org/entity/Q125123139"],
+         # tags waived: no controlled entity tag (ENRICH_RULES) describes an accelerator.
+         # fabricated_by omitted: neither the newsletter nor NVIDIA's page names the foundry.
+         "body": "The B200 is the GPU of NVIDIA's Blackwell generation "
+                 "([DGX B200](https://www.nvidia.com/en-us/data-center/dgx-b200/)), followed in this "
+                 "corpus by the [GB300](/hardware/nvidia-gb300.md). Issue 001 reported Epoch AI's "
+                 "estimate that [memory is nearly half its manufacturing cost](/developments/2025-12-11-memory-half-b200-cost.md), "
+                 "relegating the logic die to a minor line item. It returns in August as the substrate "
+                 "on which Asari AI's self-improving agents "
+                 "[rebuilt the inference stack](/developments/2026-08-04-agents-rebuild-the-inference-stack-they-run-on.md) "
+                 "serving two open models, lifting throughput and interactivity up to 16%."},
     ],
 
     "benchmarks": [
@@ -165,8 +229,21 @@ micro-factories, satellites, and the first attempts to legislate the phase shift
          "measures_capability": "abstract reasoning from few examples",
          "body": "Tracked here mainly by cost per task, which is where the deflation shows."},
         {"id": "swe-bench-pro", "type": "Benchmark", "title": "SWE-Bench Pro",
+         "description": "Scale AI's harder successor to SWE-bench, the leaderboard on which GPT-5.2 "
+                        "Thinking and then the self-built GPT-5.3-Codex set state of the art.",
+         "published_by": [B + "organizations/scale-ai"],
          "measures_capability": "harder real-world software engineering tasks",
-         "body": "A tougher sibling of SWE-bench Verified."},
+         "resource": "https://labs.scale.com/leaderboard/swe_bench_pro_public",
+         "tags": ["coding-agent"],
+         "body": "SWE-Bench Pro is Scale AI's long-horizon software-engineering benchmark, built from "
+                 "harder tasks than SWE-bench and published with a public leaderboard "
+                 "([Scale](https://labs.scale.com/leaderboard/swe_bench_pro_public)). It is where the "
+                 "corpus reads coding-agent state of the art once "
+                 "[SWE-bench Verified](/benchmarks/swe-bench-verified.md) neared saturation: "
+                 "[GPT-5.2 Thinking took 55.6%](/developments/2025-12-12-gpt52-swebench-pro-sota.md) in "
+                 "December, and in February OpenAI's [GPT-5.3-Codex](/systems/gpt-5-3-codex.md), "
+                 "described as instrumental in creating itself, "
+                 "[set a new state of the art](/developments/2026-02-06-gpt53-codex-creates-itself.md)."},
         {"id": "mrcrv2", "type": "Benchmark", "title": "MRCRv2",
          "measures_capability": "recall and integration across very long documents",
          "body": "Reported at the 256k-token context length."},

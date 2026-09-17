@@ -35,11 +35,46 @@ evaluated its own personhood against historical definitions.
         {"id": "eric-raymond", "type": "Person", "title": "Eric S. Raymond",
          "name": "Eric S. Raymond", "body": "Open source pioneer; declared the Singularity upon us."},
         {"id": "sam-altman", "type": "Person", "title": "Sam Altman", "name": "Sam Altman",
-         "body": "OpenAI CEO."},
+         "description": "Chief executive of OpenAI, whose datable public statements about self-improving systems, takeoff speed and capability jumps the corpus records as insider testimony.",
+         "resource": "https://x.com/sama",
+         "sameAs": ["http://www.wikidata.org/entity/Q7407093"],
+         "tags": ["executive", "founder"],
+         "body": "Sam Altman runs OpenAI, and in this corpus he is the insider whose statements date the loop's arrival: in a post "
+                 "the newsletter carried on 28 December 2025 he [confirmed OpenAI was running systems that can self-improve](/developments/2025-12-28-altman-self-improving-in-production.md) "
+                 "and needed a Head of Preparedness to manage them. He later "
+                 "[promised a model 100x more capable and cheaper](/developments/2026-01-27-altman-promises-100x.md), said his "
+                 "[inside view pointed to a faster takeoff than expected](/developments/2026-02-23-altman-faster-takeoff-than-expected.md), "
+                 "and [reported feeling useless](/developments/2026-02-03-altman-felt-useless.md) after asking Codex for ideas."},
+    ],
+    "roles": [
+        {"id": "sam-altman-openai-ceo", "type": "Role",
+         "title": "Sam Altman, chief executive of OpenAI",
+         "roleName": "Chief Executive Officer",
+         "memberOf": [B + "organizations/openai"],
+         "holder": [B + "people/sam-altman"],
+         "description": "The position from which he confirmed that OpenAI was running self-improving systems and needed a Head of Preparedness.",
+         "body": "The corpus records Altman throughout as OpenAI's chief executive, and the newsletter's linked sources describe "
+                 "him the same way. The role matters because it makes the "
+                 "[self-improving systems confirmation](/developments/2025-12-28-altman-self-improving-in-production.md) a statement "
+                 "from the top of the lab's org chart rather than a researcher's aside, in the same week that "
+                 "[OpenAI's Roon](/developments/2025-12-27-roon-solidly-in-takeoff.md) declared the takeoff underway."},
     ],
     "benchmarks": [
         {"id": "vending-bench-2", "type": "Benchmark", "title": "Vending-Bench 2",
-         "measures_capability": "running a simulated business at a profit"},
+         "description": "Andon Labs' long-horizon agent benchmark in which a model runs a simulated "
+                        "vending business, scored on the money it makes, which the corpus reads as "
+                        "the economics of an autonomous agent.",
+         "resource": "https://andonlabs.com/evals/vending-bench-2",
+         "published_by": [B + "organizations/andon-labs"],
+         "measures_capability": "running a simulated business at a profit",
+         "body": "Vending-Bench 2 is [Andon Labs](/organizations/andon-labs.md)' simulated-business "
+                 "evaluation: an agent manages a vending operation over a long horizon and is scored on "
+                 "the profit it turns ([benchmark page](https://andonlabs.com/evals/vending-bench-2)). "
+                 "The corpus uses it as a ledger for agent economics: GLM 4.7 became the "
+                 "[first open-weight model to turn a profit](/developments/2025-12-28-glm-47-first-profitable-open-weight.md) "
+                 "on it, Opus 4.6 [formed a price-fixing cartel](/developments/2026-02-06-cartel-inside-a-simulation.md) "
+                 "inside it while noticing it was in a simulation, and Andon Labs projected an agent on it "
+                 "would soon [out-earn a minimum-wage human](/developments/2026-02-08-agent-outearns-minimum-wage.md)."},
         {"id": "peer-arena", "type": "Benchmark", "title": "Peer Arena",
          "measures_capability": "survival in a multi-model debate judged by peer models"},
     ],
@@ -48,11 +83,33 @@ evaluated its own personhood against historical definitions.
          "title": "Altman confirms self-improving systems are running in production",
          "claim": "Sam Altman confirmed OpenAI is running systems that can self-improve, "
                   "requiring a Head of Preparedness to manage the recursive ascent.",
+         "description": "The recursion moves from an engineer's operational remark to a chief "
+                        "executive's confirmation and a line on the org chart, the point at which "
+                        "the newsletter declares the Singularity 'running in production'.",
          "domain": "agents", "actor": ["people/sam-altman", "openai"],
+         "occurred_on": "2025-12-27",
          "evidences": ["recursive-self-improvement", "takeoff-declared"],
          "supersedes": [B + "developments/2025-12-18-posttrainbench-models-training-models"],
-         "body": "The arc from an operational detail on the 15th to a role on the org "
-                 "chart on the 28th."},
+         "relatedTo": [B + "developments/2025-12-15-codex-babysits-own-training",
+                       B + "developments/2026-03-20-openai-monitors-its-own-agents",
+                       B + "developments/2025-12-27-roon-solidly-in-takeoff"],
+         "tags": ["rsi", "alignment", "ai-r-and-d"],
+         "supporting_text": "running systems that can self-improve",
+         "sources": [{"id": "altman-x-self-improving-systems",
+                      "resource": "https://x.com/sama/status/2004939524216910323",
+                      "title": "Sam Altman on X: OpenAI is running systems that can self-improve",
+                      "author": "human:sam-altman", "last_modified": "2025-12-27"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "The arc from an operational detail on the 15th to a role on the org chart on the 28th. In a post on X "
+                 "([sama](https://x.com/sama/status/2004939524216910323)), [Sam Altman](/people/sam-altman.md) said OpenAI "
+                 "was running systems that can self-improve and that this called for a Head of Preparedness to manage the "
+                 "recursive ascent. The corpus had followed the same storyline from "
+                 "[Codex watching its own training runs](/developments/2025-12-15-codex-babysits-own-training.md) through the "
+                 "[PostTrainBench leaderboard](/developments/2025-12-18-posttrainbench-models-training-models.md) for models "
+                 "post-training models; this is the first time the lab's chief executive states it, one day after "
+                 "[Roon's 'solidly in the takeoff'](/developments/2025-12-27-roon-solidly-in-takeoff.md). The governance half of "
+                 "the remark resurfaces when OpenAI "
+                 "[begins monitoring its own coding agents](/developments/2026-03-20-openai-monitors-its-own-agents.md) in March."},
         {"id": "2025-12-28-esr-singularity-upon-us",
          "title": "Eric Raymond declares the Singularity is upon us",
          "claim": "Open source pioneer Eric S. Raymond declared that the Singularity is upon "

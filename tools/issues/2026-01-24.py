@@ -58,9 +58,42 @@ Consent and neurosurgery, announced together.
                   "first, infrastructure engineers second and sales last, as Altman announced "
                   "Codex models nearing Cybersecurity High preparedness and pivoted to "
                   "defensive acceleration.",
+         "description": "Automating the researcher is stated as an ordering of who goes first "
+                        "rather than as a possibility, and the lab's chief executive frames the "
+                        "response not as slowing down but as racing to patch the world's code "
+                        "before the models can break it.",
          "domain": "agents", "actor": ["openai", "people/sam-altman"],
+         "about": [B + "systems/codex"],
          "evidences": ["work-displaced", "recursive-self-improvement"],
-         "supersedes": [B + "developments/2026-01-10-clark-ai-doing-ai-research"]},
+         "supersedes": [B + "developments/2026-01-10-clark-ai-doing-ai-research"],
+         "relatedTo": [B + "developments/2026-01-09-openai-eight-months-to-intern-researchers",
+                       B + "developments/2026-01-15-codex-runs-a-week-3m-lines"],
+         "tags": ["ai-r-and-d", "labor", "forecast"],
+         "supporting_text": "researchers will be replaced by AI first, infra engineers second, and sales last",
+         "sources": [{"id": "openai-researcher-replaced-first-x-post",
+                      "resource": "https://x.com/yuchenj_uw/status/2013310900883575132",
+                      "title": "Report of an OpenAI researcher saying researchers will be replaced "
+                               "by AI first, infra engineers second and sales last (X post)"},
+                     {"id": "altman-codex-cybersecurity-high-x-post",
+                      "resource": "https://x.com/sama/status/2014733975755817267",
+                      "title": "Sam Altman on Codex models approaching Cybersecurity High "
+                               "preparedness and defensive acceleration (X post)",
+                      "author": "human:sam-altman"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "The remark, relayed second-hand on X "
+                 "([post](https://x.com/yuchenj_uw/status/2013310900883575132)), orders OpenAI's "
+                 "own headcount by exposure: researchers first, infrastructure engineers second, "
+                 "sales last. In the same week [Sam Altman](/people/sam-altman.md) said "
+                 "[Codex](/systems/codex.md) models would soon reach the Cybersecurity High tier "
+                 "of OpenAI's preparedness framework and cast the company's strategy as defensive "
+                 "acceleration, patching the world's code before the models can break it "
+                 "([post](https://x.com/sama/status/2014733975755817267)). It sharpens "
+                 "[Jack Clark's observation](/developments/2026-01-10-clark-ai-doing-ai-research.md) "
+                 "of two weeks earlier that AI was doing components of AI research, and the "
+                 "[eight-months-to-intern-researchers](/developments/2026-01-09-openai-eight-months-to-intern-researchers.md) "
+                 "report before it, into a statement about which humans the loop displaces "
+                 "first; OpenAI later put a date on the automated intern with a "
+                 "[September target](/developments/2026-03-22-openai-targets-a-research-intern-by-september.md)."},
         {"id": "2026-01-24-350k-salesforce-contract-terminated",
          "title": "A customer swaps a $350k Salesforce contract for generated software",
          "claim": "Base44's founder reported a customer terminating a $350,000 Salesforce "
@@ -89,11 +122,38 @@ Consent and neurosurgery, announced together.
          "claim": "A NanoGPT speedrun record of 99.3 seconds was set with a bigram hash "
                   "embedding, using fewer training tokens than parameters in a departure from "
                   "Chinchilla ratios.",
+         "description": "The newsletter files the record under scaling laws being rewritten: the "
+                        "sub-100-second mark matters less than the fact that it was reached by "
+                        "training on fewer tokens than the model has parameters, treating the "
+                        "Chinchilla ratio as a habit rather than a bound.",
          "domain": "models", "score": "99.3 s",
+         "about": [B + "benchmarks/nanogpt-speedrun"],
          "evidences": ["recursive-self-improvement", "architecture-of-mind"],
          "supersedes": [B + "developments/2026-01-12-nanogpt-106s"],
+         "relatedTo": [B + "developments/2026-01-02-speedrun-gains-generalize",
+                       B + "developments/2026-01-15-engram-u-shaped-scaling",
+                       B + "people/andrej-karpathy"],
+         "tags": ["speedrun", "compute-scaling"],
+         "supporting_text": "set using a bigram hash embedding, remarkably using fewer training tokens than parameters",
+         "sources": [{"id": "nanogpt-99s-record-x-post",
+                      "resource": "https://x.com/classiclarryd/status/2013520088297558274",
+                      "title": "NanoGPT speedrun record of 99.3 seconds with a bigram hash "
+                               "embedding (X post)"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
          "body": "Under two minutes, and the scaling ratio everyone trained on turns out not to "
-                 "bind."},
+                 "bind. The 99.3-second run on the [NanoGPT speedrun](/benchmarks/nanogpt-speedrun.md) "
+                 "used a bigram hash embedding, a hashed lookup table keyed on token pairs, and "
+                 "reached the leaderboard's fixed FineWeb validation-loss target after seeing "
+                 "fewer training tokens than the "
+                 "model has parameters, inverting the Chinchilla token-to-parameter ratio "
+                 "([X post](https://x.com/classiclarryd/status/2013520088297558274)). It takes "
+                 "7.6 seconds off the [106.9-second record](/developments/2026-01-12-nanogpt-106s.md) "
+                 "of twelve days earlier, which had come from compiler kernel hacking rather than "
+                 "architecture, and it is the first sub-100-second entry in the corpus's speedrun "
+                 "series; the record next falls to [88.1 seconds](/developments/2026-02-28-nanogpt-88s.md) "
+                 "in late February. Like DeepSeek's "
+                 "[U-shaped memory law](/developments/2026-01-15-engram-u-shaped-scaling.md) nine "
+                 "days earlier, it trades learned computation for static lookup."},
         {"id": "2026-01-24-step3-vl-beats-20x-larger",
          "title": "A 10B Chinese model claims to beat models twenty times its size",
          "claim": "ModelScope's STEP3-VL-10B is claimed to beat models twenty times larger, "

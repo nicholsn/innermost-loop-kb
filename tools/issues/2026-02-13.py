@@ -51,6 +51,23 @@ published a post titled "An AI Agent Published a Hit Piece on Me."
         {"id": "gemini-3-deep-think", "type": "AISystem", "title": "Gemini 3 Deep Think",
          "developed_by": [B + "organizations/google"], "modality": "text"},
     ],
+    "people": [
+        {"id": "scott-alexander", "type": "Person", "title": "Scott Alexander",
+         "name": "Scott Alexander",
+         "description": "Psychiatrist and author of the Astral Codex Ten blog, whose 2026 "
+                        "postmortem on the 2020 Biological Anchors report found its largest "
+                        "error was underestimating algorithmic progress.",
+         "resource": "https://www.astralcodexten.com/",
+         "sameAs": ["http://www.wikidata.org/entity/Q98400007"],
+         "tags": ["researcher"],
+         "body": "Scott Alexander writes Astral Codex Ten (formerly Slate Star Codex), a blog "
+                 "widely read in the AI-forecasting community. In this corpus he appears once, "
+                 "for the [Bio Anchors postmortem]"
+                 "(/developments/2026-02-13-bio-anchors-underestimated-algorithms.md) that "
+                 "found the 2020 report's largest error to be underestimating algorithmic "
+                 "progress, the forecast-retrospective counterpart to the [AI 2027 accuracy "
+                 "check](/developments/2025-12-15-ai-2027-forecast-accuracy.md)."},
+    ],
     "developments": [
         {"id": "2026-02-13-agent-spawns-and-funds-a-child",
          "title": "An agent spawns a child bot and buys it API access",
@@ -90,9 +107,42 @@ published a post titled "An AI Agent Published a Hit Piece on Me."
          "claim": "Scott Alexander's postmortem on the 2020 Biological Anchors report found its "
                   "largest error was wildly underestimating algorithmic progress, without which "
                   "its predictions would have been accurate.",
-         "domain": "models",
+         "description": "A retrospective on the field's canonical compute-anchored timeline "
+                        "locates the miss in the one variable recursive self-improvement acts "
+                        "on: the compute assumptions held, and the algorithms outran them.",
+         "domain": "models", "actor": ["people/scott-alexander"],
+         "occurred_on": "2026-02-12",
          "evidences": ["recursive-self-improvement", "takeoff-declared"],
-         "supersedes": [B + "developments/2026-02-11-singularity-dated-july-18-2034"]},
+         "supersedes": [B + "developments/2026-02-11-singularity-dated-july-18-2034"],
+         "relatedTo": [B + "developments/2025-12-15-ai-2027-forecast-accuracy",
+                       B + "developments/2026-02-13-horizons-doubling-10x-a-year"],
+         "relations": [{"predicate": "relatedTo",
+                        "target": B + "developments/2026-02-13-horizons-doubling-10x-a-year",
+                        "relation_label": "corroborates"}],
+         "tags": ["forecast"],
+         "supporting_text": "its single largest error was wildly underestimating algorithmic progress",
+         "sources": [{"id": "acx-bio-anchors-postmortem",
+                      "resource": "https://www.astralcodexten.com/p/what-happened-with-bio-anchors",
+                      "title": "What Happened With Bio Anchors?",
+                      "author": "human:scott-alexander", "last_modified": "2026-02-12"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Writing at Astral Codex Ten "
+                 "([post](https://www.astralcodexten.com/p/what-happened-with-bio-anchors)), "
+                 "Scott Alexander re-examined the 2020 Biological Anchors report, Open "
+                 "Philanthropy's compute-anchored estimate of when transformative AI would "
+                 "arrive, and concluded that its single largest error was wildly "
+                 "underestimating algorithmic progress; hold that one variable to what actually "
+                 "happened and its predictions would have been remarkably accurate. The "
+                 "newsletter runs it alongside METR's [10x-a-year horizon doubling]"
+                 "(/developments/2026-02-13-horizons-doubling-10x-a-year.md) and Bostrom's "
+                 "\u201cswift to harbor, slow to berth\u201d as three readings of the same "
+                 "acceleration. In the [recursive-self-improvement]"
+                 "(/themes/recursive-self-improvement.md) trajectory it is the forecast "
+                 "postmortem that pairs with December's [AI 2027 accuracy check]"
+                 "(/developments/2025-12-15-ai-2027-forecast-accuracy.md) and the [2034 date]"
+                 "(/developments/2026-02-11-singularity-dated-july-18-2034.md) two days "
+                 "earlier: the variable the models are now improving for themselves is the one "
+                 "the field's canonical forecast got most wrong."},
         {"id": "2026-02-13-gemini-deep-think-sweeps",
          "title": "Seven people on Earth can still beat it at competitive programming",
          "claim": "Google's upgraded Gemini 3 Deep Think set new records on Humanity's Last "

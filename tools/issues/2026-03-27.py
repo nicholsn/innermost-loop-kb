@@ -24,7 +24,26 @@ reach a quarter of a percent.
         {"id": "symbolica", "type": "Organization", "title": "Symbolica",
          "body": "Agentica SDK claimed 36% on ARC-AGI-3 at a fraction of frontier cost."},
         {"id": "mirendil", "type": "Organization", "title": "Mirendil",
-         "body": "Former Anthropic researchers building self-accelerating AI R&D."},
+         "description": "Frontier-lab startup announced in March 2026 by former Anthropic "
+                        "researchers, with a stated singular focus on building systems that "
+                        "excel at AI R&D and redesigning the lab around them.",
+         "resource": "https://mirendil.com/",
+         "tags": ["startup", "frontier-lab"],
+         "body": "Former Anthropic researchers building self-accelerating AI R&D. Mirendil "
+                 "describes itself as a frontier lab with a singular focus on AI R&D: it trains "
+                 "models that are exceptional at research and redesigns the entire lab around "
+                 "them so the full loop runs faster, more capably and more autonomously, with the "
+                 "stated aim of making self-accelerating AI R&D widely accessible rather than "
+                 "confined to a few labs ([site](https://mirendil.com/), "
+                 "[launch thread](https://x.com/bneyshabur/status/2036866893282500871)). In this "
+                 "corpus it appears at launch in the [Claude Mythos leak](/developments/2026-03-27-claude-mythos-leaked.md) "
+                 "issue, where the author reads it as a bet that the next leap comes from "
+                 "rethinking the loop rather than scaling weights, alongside the "
+                 "[Agentica scaffolding result](/developments/2026-03-27-scaffolding-beats-weights-at-a-ninth-the-cost.md). "
+                 "Within the [recursive self-improvement](/themes/recursive-self-improvement.md) "
+                 "theme it is an early company founded on the loop itself as the product, months "
+                 "before [Recursive Superintelligence's $650M raise](/developments/2026-05-14-recursive-superintelligence-raises-650m.md) "
+                 "and [the company founded to automate the scientific method](/developments/2026-08-05-a-company-founded-to-automate-the-scientific-method.md)."},
         {"id": "fannie-mae", "type": "Organization", "title": "Fannie Mae",
          "resource": "https://www.fanniemae.com/"},
         {"id": "canada-immigration", "type": "Organization", "title": "Immigration, Refugees and Citizenship Canada",
@@ -63,8 +82,51 @@ reach a quarter of a percent.
          "claim": "Anthropic leaked and then deleted an announcement of Claude Mythos, a tier "
                   "above Opus with substantially higher scores in coding, reasoning and "
                   "cybersecurity, while Mirendil launched to build self-accelerating AI R&D.",
+         "description": "A capability jump arrives as a leak rather than a launch, set by the "
+                        "author against ARC-AGI-3's near-zero scores as proof that raw power is "
+                        "not general intelligence, while the research loop itself becomes a "
+                        "startup's founding thesis.",
          "domain": "models", "actor": ["anthropic", "mirendil"],
-         "evidences": ["recursive-self-improvement", "spiky-frontier"]},
+         "about": [B + "systems/claude-mythos"],
+         "evidences": ["recursive-self-improvement", "spiky-frontier"],
+         "relatedTo": [B + "developments/2026-03-27-arc-agi-3-humbles-the-frontier",
+                       B + "developments/2026-04-08-research-sped-up-400x",
+                       B + "developments/2026-03-22-openai-targets-a-research-intern-by-september",
+                       B + "developments/2026-03-16-rsi-is-a-present-phenomenon"],
+         "relations": [{"predicate": "relatedTo",
+                        "target": B + "developments/2026-03-27-scaffolding-beats-weights-at-a-ninth-the-cost",
+                        "relation_label": "extends"}],
+         "tags": ["capability-jump", "rsi", "ai-r-and-d"],
+         "supporting_text": "an announcement of “Claude Mythos,” a new tier above Opus",
+         "sources": [{"id": "m1astra-mythos-archive-tweet",
+                      "resource": "https://x.com/m1astra/status/2037377109472018444",
+                      "title": "Claude Mythos Blog Post — saved before it was taken down",
+                      "author": "human:m1astra", "last_modified": "2026-03-27"},
+                     {"id": "claude-mythos-archived-announcement",
+                      "resource": "https://m1astra-mythos.pages.dev/",
+                      "title": "Claude Mythos (archived announcement draft)",
+                      "author": "org:anthropic"},
+                     {"id": "mirendil-launch-thread",
+                      "resource": "https://x.com/bneyshabur/status/2036866893282500871",
+                      "title": "Mirendil launch thread: a frontier lab focused on AI R&D",
+                      "author": "human:behnam-neyshabur", "last_modified": "2026-03-25"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "The archived draft introduces Mythos as \"a new tier of model: larger and more "
+                 "intelligent than our Opus models\", reports dramatically higher scores than "
+                 "[Claude Opus 4.6](/systems/claude-opus-4-6.md) on software coding, academic "
+                 "reasoning and cybersecurity, and lays out a slow, cyber-defender-first "
+                 "early-access release because the model is large and expensive to serve "
+                 "([archived post](https://m1astra-mythos.pages.dev/), "
+                 "[saved by M1Astra](https://x.com/m1astra/status/2037377109472018444)). The same "
+                 "paragraph introduces [Mirendil](/organizations/mirendil.md), which announced "
+                 "itself as a frontier lab focused solely on systems that excel at AI R&D "
+                 "([launch thread](https://x.com/bneyshabur/status/2036866893282500871)), and the "
+                 "author frames it as betting on the scaffolding-over-weights lesson of the "
+                 "[Agentica result](/developments/2026-03-27-scaffolding-beats-weights-at-a-ninth-the-cost.md) "
+                 "in the same issue. It follows Anthropic's own statement eleven days earlier that "
+                 "[recursive self-improvement is a present phenomenon](/developments/2026-03-16-rsi-is-a-present-phenomenon.md); "
+                 "the leaked tier resurfaces in April with the report that "
+                 "[Mythos sped internal research by up to 400x](/developments/2026-04-08-research-sped-up-400x.md)."},
         {"id": "2026-03-27-apple-opens-siri-to-rivals",
          "title": "Apple negotiates model weights and opens Siri to outside assistants",
          "claim": "Apple reportedly negotiated complete access to Gemini's weights in its own "

@@ -35,9 +35,42 @@ all in-person exams from this summer.
          "claim": "Users are now metaprompting Codex to draft its own goal specification, with "
                   "one calling the resulting stack the highest-leverage agent configuration "
                   "available today.",
-         "domain": "agents", "actor": ["openai"],
-         "evidences": ["scaffolding-over-weights", "recursive-self-improvement"],
-         "supersedes": [B + "developments/2026-05-11-the-harness-eats-the-model"]},
+         "description": "After agents writing their own skills and harnesses, the corpus records them "
+                        "writing the brief itself: the objective, the last human-authored layer, "
+                        "moves inside the loop.",
+         "domain": "agents", "actor": ["openai"], "occurred_on": "2026-05-11",
+         "about": [B + "systems/codex"],
+         "evidences": ["scaffolding-over-weights", "recursive-self-improvement",
+                       "self-authored-scaffolding"],
+         "supersedes": [B + "developments/2026-05-11-the-harness-eats-the-model"],
+         "relatedTo": [B + "developments/2026-03-31-bilevel-autoresearch",
+                       B + "developments/2026-02-03-codex-builds-itself",
+                       B + "developments/2026-06-25-an-agent-rewrites-its-own-harness"],
+         "relations": [{"predicate": "relatedTo",
+                        "target": B + "developments/2026-05-11-the-harness-eats-the-model",
+                        "relation_label": "extends"}],
+         "tags": ["rsi", "agent-harness"],
+         "supporting_text": "the highest leverage AI agent configuration available today",
+         "sources": [{"id": "daniel-mac8-codex-goal-x",
+                      "resource": "https://x.com/daniel_mac8/status/2053896200005271594",
+                      "title": "@daniel_mac8 on X: metaprompting Codex to draft its own /goal",
+                      "author": "human:daniel-mac8"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "The pattern the newsletter picked up is a user asking [Codex](/systems/codex.md) to "
+                 "draft its own \u201c/goal\u201d, the objective file that steers its subsequent work, "
+                 "rather than writing the brief by hand; the poster the issue quotes called the result "
+                 "\u201cthe highest leverage AI agent configuration available today\u201d "
+                 "([X](https://x.com/daniel_mac8/status/2053896200005271594)). It comes two days after "
+                 "[Hermes Agent took the token rankings by generating its own skills](/developments/2026-05-11-the-harness-eats-the-model.md) "
+                 "and six weeks after a research loop "
+                 "[wrote the strategies for its own outer loop](/developments/2026-03-31-bilevel-autoresearch.md): "
+                 "skills, harness and now the objective are being authored by the agent, the thread the "
+                 "[self-authored-scaffolding](/themes/self-authored-scaffolding.md) theme names in June. "
+                 "The next day "
+                 "[Recursive Superintelligence emerged from stealth with $650 million](/developments/2026-05-14-recursive-superintelligence-raises-650m.md) "
+                 "to have AI experiment on improving itself, and in June the "
+                 "[Self-Harness paradigm](/developments/2026-06-25-an-agent-rewrites-its-own-harness.md) "
+                 "closed the loop without a human engineer."},
         {"id": "2026-05-13-a-model-scores-136-on-an-iq-meta-eval",
          "title": "A meta-eval maps twelve benchmarks onto an implied IQ of 136",
          "claim": "A new meta-evaluation mapping a calibrated mix of twelve existing benchmarks "

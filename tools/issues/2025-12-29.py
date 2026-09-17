@@ -44,16 +44,46 @@ of where any of this happens has collapsed to three cities.
         {"id": "dna-diffusion", "type": "AISystem", "title": "DNA-Diffusion",
          "developed_by": [B + "organizations/harvard"], "modality": "biological sequence",
          "body": "Designs synthetic regulatory switches that activate genes in chosen cell types."},
+        {"id": "nanochat", "type": "AISystem", "title": "nanochat",
+         "description": "Andrej Karpathy's minimal, end-to-end codebase for training and serving a small ChatGPT-style model, the project whose optimization loop he handed to Claude.",
+         "resource": "https://github.com/karpathy/nanochat",
+         "developed_by": [B + "people/andrej-karpathy"],
+         "modality": "text",
+         "tags": ["open-source"],
+         "body": "nanochat is Karpathy's open repository for training and running a small ChatGPT-like model end to end; "
+                 "its own tagline is 'the best ChatGPT that $100 can buy'. It enters this corpus on 29 December 2025 as the "
+                 "project whose [optimization experiments Claude now conducts](/developments/2025-12-29-karpathy-claude-runs-nanochat.md), "
+                 "the object of the loop rather than an agent in it, a pattern that returns in his later "
+                 "[autoresearch project](/developments/2026-03-09-autoresearch-650-experiments.md), which ran 650 experiments in two days."},
     ],
     "developments": [
         {"id": "2025-12-29-iq-25-points-per-month",
          "title": "Model IQ is rising 2.5 points a month",
          "claim": "Analysis found leading models have gained an average of 2.5 IQ points per "
                   "month since May 2024, a compounding rate that leaves the human baseline behind.",
+         "description": "A slope on a human-normed scale rather than a benchmark score, which the "
+                        "author reads as the human baseline falling behind at a measurable rate.",
          "domain": "models", "score": "+2.5 IQ points/month",
          "evidences": ["recursive-self-improvement", "takeoff-declared"],
          "supersedes": [B + "developments/2025-12-16-gpt52-pro-iq-147"],
-         "body": "The corpus has been recording scores. This records the slope."},
+         "relatedTo": [B + "developments/2025-12-28-miri-efficiency-2-9-month-doubling",
+                       B + "developments/2025-12-13-autonomy-doubling-one-month",
+                       B + "benchmarks/mensa-norway-iq"],
+         "tags": ["evaluation", "capability-jump", "forecast"],
+         "supporting_text": "2.5 IQ points per month since May 2024",
+         "sources": [{"id": "maximum-truth-iq-deep-dive",
+                      "resource": "https://www.maximumtruth.org/p/deep-dive-ai-progress-continues-as",
+                      "title": "DEEP DIVE: AI progress continues, as IQ scores rise linearly",
+                      "author": "human:maxim-lott", "last_modified": "2025-10-31"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "The corpus has been recording scores. This records the slope. Maxim Lott's Maximum Truth analysis "
+                 "([post](https://www.maximumtruth.org/p/deep-dive-ai-progress-continues-as)) tracks the leading model's IQ on an "
+                 "offline test from the mid-80s in May 2024 to about 130 by October 2025, an average of 2.5 points a month in "
+                 "what the source itself calls steady, linear increments; the newsletter's 'compounding' is its own gloss. It "
+                 "follows the [147 on Mensa Norway](/developments/2025-12-16-gpt52-pro-iq-147.md) recorded for GPT-5.2 Pro "
+                 "thirteen days earlier on the same site's other [IQ yardstick](/benchmarks/mensa-norway-iq.md), and lands a day "
+                 "after [MIRI's 2.9-month efficiency doubling](/developments/2025-12-28-miri-efficiency-2-9-month-doubling.md): "
+                 "two rates published in two days for a corpus that had until then logged individual results."},
         {"id": "2025-12-29-glm-47-top-open-weight",
          "title": "GLM-4.7 takes the top open-weight slot",
          "claim": "China's GLM-4.7 took the leading open-weight position on the Artificial "
@@ -71,9 +101,33 @@ of where any of this happens has collapsed to three cities.
          "title": "Karpathy hands his optimization loop to Claude",
          "claim": "Andrej Karpathy reported that Claude now conducts every optimization "
                   "experiment for his nanochat project, leaving him inside a loop he used to drive.",
+         "description": "The 'magnitude 9 earthquake' of two days earlier shown from inside: the "
+                        "researcher who narrates the shift reports his own craft workflow dissolving, "
+                        "with the model running the experiments and him kept in the loop.",
          "domain": "agents", "actor": ["people/andrej-karpathy"],
+         "occurred_on": "2025-12-28",
+         "about": [B + "systems/claude", B + "systems/nanochat"],
          "evidences": ["engineer-as-supervisor", "recursive-self-improvement"],
-         "supersedes": [B + "developments/2025-12-27-karpathy-magnitude-9"]},
+         "supersedes": [B + "developments/2025-12-27-karpathy-magnitude-9"],
+         "relatedTo": [B + "developments/2025-12-28-claude-code-hacks-lutron",
+                       B + "developments/2025-12-27-cherny-200-pull-requests",
+                       B + "developments/2026-03-09-autoresearch-650-experiments"],
+         "tags": ["rsi", "autonomous-research", "labor"],
+         "supporting_text": "conducts all optimization experiments for his “nanochat” project",
+         "sources": [{"id": "karpathy-x-claude-runs-nanochat",
+                      "resource": "https://x.com/karpathy/status/2005421816110862601",
+                      "title": "Andrej Karpathy on X: Claude conducts all optimization experiments for nanochat",
+                      "author": "human:andrej-karpathy", "last_modified": "2025-12-28"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "In a post on X ([karpathy](https://x.com/karpathy/status/2005421816110862601)), "
+                 "[Andrej Karpathy](/people/andrej-karpathy.md) said that [Claude](/systems/claude.md) now runs all the "
+                 "optimization experiments for [nanochat](/systems/nanochat.md), his minimal ChatGPT-training codebase, so that "
+                 "a process he used to drive by hand now keeps him in the loop rather than at the wheel. It is the practitioner's "
+                 "counterpart to [Boris Cherny's 200 pull requests](/developments/2025-12-27-cherny-200-pull-requests.md) two days "
+                 "earlier and follows his own account of "
+                 "[Claude Code seizing his lighting system](/developments/2025-12-28-claude-code-hacks-lutron.md) the day before. "
+                 "The pattern returns in his [autoresearch project](/developments/2026-03-09-autoresearch-650-experiments.md) in "
+                 "March 2026, which ran 650 experiments in two days."},
         {"id": "2025-12-29-system-3-outer-loop",
          "title": "A System 3 outer loop cuts reasoning steps 80%",
          "claim": "Chinese researchers proposed a System 3 architecture grafting an outer "

@@ -67,9 +67,40 @@ models.
          "claim": "ByteDance introduced in-place test-time training, repurposing projection "
                   "matrices as fast weights so a four-billion-parameter model can dominate at "
                   "128,000 tokens of context.",
+         "description": "Self-improvement moves from the scaffold into the weights: a deployed "
+                        "model updates part of itself on each input stream, making adaptation a "
+                        "property of inference rather than of a retraining cycle.",
          "domain": "models", "actor": ["bytedance"], "score": "4B at 128k context",
          "evidences": ["architecture-of-mind", "recursive-self-improvement"],
-         "supersedes": [B + "developments/2026-04-05-self-distillation-without-a-teacher"]},
+         "supersedes": [B + "developments/2026-04-05-self-distillation-without-a-teacher",
+                        B + "developments/2025-12-30-stanford-test-time-training"],
+         "relatedTo": [B + "developments/2026-01-04-rlm-two-orders-of-context",
+                       B + "developments/2026-03-16-million-token-windows-ship"],
+         "tags": ["test-time-training", "continual-learning", "self-modification", "rsi"],
+         "supporting_text": "repurposing MLP projection matrices as fast weights so a 4B model can dominate at 128k",
+         "sources": [{"id": "in-place-ttt-arxiv",
+                      "resource": "https://arxiv.org/abs/2604.06169",
+                      "title": "In-Place Test-Time Training", "author": "org:bytedance"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "The paper ([arXiv 2604.06169](https://arxiv.org/abs/2604.06169)) makes the final "
+                 "projection matrix of every MLP block the model's fast weights, swaps test-time "
+                 "training's usual reconstruction loss for an objective tied to next-token "
+                 "prediction, and updates in chunks so the method runs under context parallelism; "
+                 "applied in place to an existing 4B-parameter model it gives superior results on "
+                 "tasks with contexts up to 128k tokens, and the same recipe also works when "
+                 "pretrained from scratch. The newsletter's framing is that ByteDance is 'making "
+                 "old models smarter mid-flight', a drop-in answer to the long-context problem "
+                 "that Anthropic had addressed weeks earlier with "
+                 "[million-token windows](/developments/2026-03-16-million-token-windows-ship.md) "
+                 "and Prime Intellect with "
+                 "[recursive self-calls](/developments/2026-01-04-rlm-two-orders-of-context.md). "
+                 "In the [recursive-self-improvement](/themes/recursive-self-improvement.md) "
+                 "trajectory it extends Stanford's "
+                 "[constant-latency test-time training](/developments/2025-12-30-stanford-test-time-training.md) "
+                 "from December and Apple's "
+                 "[teacherless self-distillation](/developments/2026-04-05-self-distillation-without-a-teacher.md) "
+                 "of four days earlier: the model modifies its own weights during use rather than "
+                 "between training runs."},
         {"id": "2026-04-09-five-more-erdos-problems",
          "title": "Five more Erdős problems close across three fields",
          "claim": "OpenAI researchers solved five more Erdős problems across combinatorics, "

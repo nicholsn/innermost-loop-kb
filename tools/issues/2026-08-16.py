@@ -39,6 +39,36 @@ and the two richest US counties also being the top two data center counties.
         {"id": "fudan", "type": "Organization", "title": "Fudan University"},
         {"id": "san-mateo", "type": "Organization", "title": "San Mateo County"},
     ],
+    "people": [
+        {"id": "timothy-gowers", "type": "Person", "title": "Timothy Gowers", "name": "Timothy Gowers",
+         "description": "British mathematician whose blog essays track which kinds of mathematics language models do well, and who has reported machine-made results in his own field.",
+         "resource": "https://gowers.wordpress.com/",
+         "sameAs": ["http://www.wikidata.org/entity/Q220402"],
+         "tags": ["researcher"],
+         "body": "Timothy Gowers writes Gowers's Weblog, where he has been recording how language "
+                 "models change mathematical practice. He appears three times in this corpus: reporting "
+                 "that [ChatGPT 5.5 Pro produced PhD-level research in about an hour](/developments/2026-05-09-phd-research-in-about-an-hour.md), "
+                 "reporting that [a major additive-combinatorics problem fell](/developments/2026-05-29-humans-lift-methods-from-a-machine-proof.md) "
+                 "and that humans then lifted methods from the machine proof, and arguing in August that "
+                 "[LLMs shine at search-heavy proof discovery](/developments/2026-08-16-a-two-hundred-thirty-two-fold-kernel-speedup.md) "
+                 "while humans still prune deep trees best."},
+    ],
+    "roles": [
+        {"id": "timothy-gowers-cambridge-mathematician", "type": "Role",
+         "title": "Timothy Gowers, mathematician at the University of Cambridge",
+         "roleName": "Member of the Department of Pure Mathematics and Mathematical Statistics; Fellow of Trinity College",
+         "memberOf": [B + "organizations/cambridge"],
+         "holder": [B + "people/timothy-gowers"],
+         "description": "The position from which he writes Gowers's Weblog, the source of his three appearances in the corpus.",
+         "body": "Gowers states on his own site that he is a member of the Department of Pure "
+                 "Mathematics and Mathematical Statistics at Cambridge University and a fellow of "
+                 "Trinity College ([about](https://gowers.wordpress.com/about/)). It is from this "
+                 "position at the [University of Cambridge](/organizations/cambridge.md) that he writes "
+                 "Gowers's Weblog, the source of his three appearances in the corpus: the "
+                 "[hour-long PhD-level result](/developments/2026-05-09-phd-research-in-about-an-hour.md), "
+                 "the [additive-combinatorics proof humans then mined](/developments/2026-05-29-humans-lift-methods-from-a-machine-proof.md), "
+                 "and the August essay on [where LLMs shine in proof discovery](/developments/2026-08-16-a-two-hundred-thirty-two-fold-kernel-speedup.md)."},
+    ],
     "developments": [
         {"id": "2026-08-16-a-financial-definition-of-the-singularity",
          "title": "An observer defines the Singularity as instant bottleneck arbitrage",
@@ -111,9 +141,51 @@ and the two richest US counties also being the top two data center counties.
                   "problem, while Timothy Gowers argued models shine at search-heavy proof "
                   "discovery where breadth and cheap exploration rule, and humans still prune "
                   "deep trees best.",
-         "domain": "science", "score": "232x speedup",
-         "evidences": ["recursive-self-improvement", "humans-mine-the-machine", "discovery-as-process"],
-         "supersedes": [B + "developments/2026-08-16-an-ai-scientist-beats-far-larger-models"]},
+         "description": "The newsletter's “sometimes one does”: a single practitioner's loop "
+                        "produces the invention-scale result the 153-run speedrun study said never "
+                        "came, while a leading mathematician maps the division of labour that leaves "
+                        "deep pruning to humans.",
+         "domain": "science", "actor": ["people/timothy-gowers"], "score": "232x speedup",
+         "about": [B + "systems/codex"],
+         "evidences": ["recursive-self-improvement", "humans-mine-the-machine", "discovery-as-process",
+                       "garage-scale-discovery"],
+         "supersedes": [B + "developments/2026-06-05-fifty-two-x-where-a-human-reaches-four"],
+         "relatedTo": [B + "developments/2026-03-09-autoresearch-650-experiments",
+                       B + "developments/2026-02-06-opus-34x-speedup",
+                       B + "developments/2026-05-29-humans-lift-methods-from-a-machine-proof"],
+         "relations": [{"predicate": "relatedTo",
+                        "target": B + "developments/2026-08-16-an-ai-scientist-beats-far-larger-models",
+                        "relation_label": "contradicts"}],
+         "tags": ["autonomous-research", "kernels", "rsi"],
+         "supporting_text": "An auto-research loop found a 232x kernel speedup",
+         "sources": [{"id": "sankalp-autoresearch-232x-kernel",
+                      "resource": "https://sankalp.bearblog.dev/autoresearch/",
+                      "title": "Auto-research with codex: How I achieved a 232x Faster Kernel over baseline with Codex in GPU Mode's qr_v2 problem",
+                      "author": "human:sankalp", "last_modified": "2026-07-08"},
+                     {"id": "gowers-what-sort-of-maths-are-llms-good-at",
+                      "resource": "https://gowers.wordpress.com/2026/08/12/what-sort-of-maths-are-llms-good-at/",
+                      "title": "What sort of maths are LLMs good at?", "author": "human:timothy-gowers",
+                      "last_modified": "2026-08-12"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "A practitioner writing as sankalp pointed an auto-research loop built on "
+                 "[OpenAI Codex](/systems/codex.md) at GPU Mode's qr_v2 problem, a QR-decomposition "
+                 "kernel, with an AGENTS.md and a problem statement standing in for Karpathy's "
+                 "program.md and the contest's submission logs as the record of what worked, and "
+                 "reports a kernel 232x faster than the baseline "
+                 "([blog](https://sankalp.bearblog.dev/autoresearch/)). The contest ran from June 15 "
+                 "to June 30, 2026 and the write-up is dated July 8, five weeks before the issue that "
+                 "carries it and older than the August 12 speedrun report the newsletter sets it against: "
+                 "the same issue's finding that [153 autonomous speedrun runs](/developments/2026-08-16-an-ai-scientist-beats-far-larger-models.md) "
+                 "closed 81.7% of the gap to the human record without inventing a new method. In an "
+                 "essay dated August 12, Timothy Gowers argued that LLMs excel at search-heavy proof "
+                 "discovery, where breadth and cheap exploration pay, while humans still prune deep "
+                 "trees best ([essay](https://gowers.wordpress.com/2026/08/12/what-sort-of-maths-are-llms-good-at/)). "
+                 "In the trajectory the result extends the speedup line from Opus 4.6's "
+                 "[34x](/developments/2026-02-06-opus-34x-speedup.md) and Mythos Preview's "
+                 "[52x](/developments/2026-06-05-fifty-two-x-where-a-human-reaches-four.md) to a single "
+                 "practitioner's loop, and stands beside Karpathy's "
+                 "[650-experiment autoresearch](/developments/2026-03-09-autoresearch-650-experiments.md) "
+                 "as the harness pattern leaves the labs."},
         {"id": "2026-08-16-prompts-that-read-as-female-get-worse-answers",
          "title": "Prompts with features more common among women elicit measurably worse responses",
          "claim": "Prompts with linguistic features more common among women elicit measurably "

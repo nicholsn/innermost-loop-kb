@@ -34,11 +34,69 @@ sit their entrance exam again.
                  "outclassed — and has no replacement ready."},
     ],
     "organizations": [
-        {"id": "asari-ai", "type": "Organization", "title": "Asari AI"},
-        {"id": "intology", "type": "Organization", "title": "Intology"},
+        {"id": "asari-ai", "type": "Organization", "title": "Asari AI",
+         "description": "Startup building self-improving co-inventor agents that design and optimize high-performance infrastructure, whose rebuild of the inference stack serving two open models is the corpus's first agent-driven result at the serving layer.",
+         "resource": "https://asari.ai/",
+         "tags": ["startup", "research-agent"],
+         "body": "Asari AI builds what it calls [co-inventors](/systems/asari-co-inventor.md): self-improving agents that "
+                 "design and optimize high-performance infrastructure ([site](https://asari.ai/)). In this corpus it "
+                 "appears once, when those agents "
+                 "[rebuilt the inference stack](/developments/2026-08-04-agents-rebuild-the-inference-stack-they-run-on.md) "
+                 "serving [DeepSeek v4 Pro](/systems/deepseek-v4-pro.md) and [GLM 5.2](/systems/glm-5-2.md) on "
+                 "[B200s](/hardware/nvidia-b200.md), lifting throughput and interactivity by up to 16%: the loop "
+                 "applied to the serving layer rather than to training or to individual kernels."},
+        {"id": "intology", "type": "Organization", "title": "Intology",
+         "description": "Startup whose Locus agent post-trains models unsupervised and leads PostTrainBench, the corpus's benchmark for a model's skill at training other models.",
+         "resource": "https://intology.ai/",
+         "tags": ["startup", "research-agent"],
+         "body": "Intology builds autonomous research agents; its [Locus](/systems/locus.md) agent post-trains language "
+                 "models without human supervision. In this corpus it appears when Locus "
+                 "[took the lead on PostTrainBench](/developments/2026-08-04-agents-rebuild-the-inference-stack-they-run-on.md) "
+                 "in ten H100-hours and beat human tuners on the harder variant, overtaking the "
+                 "[Sol post-trains Luna](/developments/2026-07-10-a-model-post-trains-a-model.md) result that had made "
+                 "[PostTrainBench](/benchmarks/posttrainbench.md) the yardstick for a model training a model."},
         {"id": "volta", "type": "Organization", "title": "Volta"},
         {"id": "unam", "type": "Organization", "title": "UNAM"},
         {"id": "mariana-minerals", "type": "Organization", "title": "Mariana Minerals"},
+    ],
+    "systems": [
+        {"id": "asari-co-inventor", "type": "AISystem", "title": "Asari co-inventor agents",
+         "developed_by": [B + "organizations/asari-ai"], "modality": "research agent",
+         "description": "Asari AI's self-improving agents for designing and optimizing high-performance infrastructure, which rebuilt the vLLM inference stack serving two open models on B200s.",
+         "resource": "https://asari.ai/blog/inference-optimization",
+         "tags": ["research-agent"],
+         "body": "Asari AI calls its agents co-inventors: self-improving systems that design and optimize "
+                 "high-performance infrastructure through a rigorous improvement process. In this corpus they appear "
+                 "once, [rebuilding the inference stack](/developments/2026-08-04-agents-rebuild-the-inference-stack-they-run-on.md) "
+                 "for [DeepSeek v4 Pro](/systems/deepseek-v4-pro.md) and [GLM 5.2](/systems/glm-5-2.md) on "
+                 "[NVIDIA B200s](/hardware/nvidia-b200.md) running vLLM, lifting throughput and interactivity by up to "
+                 "16% while preserving model behaviour through distribution-level correctness checks "
+                 "([Asari blog](https://asari.ai/blog/inference-optimization))."},
+        {"id": "deepseek-v4-pro", "type": "AISystem", "title": "DeepSeek v4 Pro",
+         "developed_by": [B + "organizations/deepseek"], "modality": "text",
+         "description": "DeepSeek's open-weight flagship of mid-2026, one of the two large open-source LLMs whose B200 serving stack Asari's agents rebuilt.",
+         "resource": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+         "tags": ["open-weight-model"],
+         "body": "DeepSeek v4 Pro is the larger variant of [DeepSeek](/organizations/deepseek.md)'s fourth-generation "
+                 "open-weight model family. In this corpus it appears as one of the two open models whose full "
+                 "inference stack Asari AI's co-inventor agents "
+                 "[rebuilt on B200s](/developments/2026-08-04-agents-rebuild-the-inference-stack-they-run-on.md) for up "
+                 "to 16% more throughput and interactivity, the serving layer entering the loop after kernels and "
+                 "harnesses."},
+        {"id": "locus", "type": "AISystem", "title": "Locus",
+         "developed_by": [B + "organizations/intology"], "modality": "research agent",
+         "evaluated_on": [B + "benchmarks/posttrainbench"],
+         "description": "Intology's autonomous research agent, which post-trains language models unsupervised and leads PostTrainBench.",
+         "resource": "https://intology.ai/blog/scaling-automated-post-training",
+         "tags": ["research-agent"],
+         "body": "Locus is [Intology](/organizations/intology.md)'s autonomous research agent for post-training. In this "
+                 "corpus it [leads PostTrainBench](/developments/2026-08-04-agents-rebuild-the-inference-stack-they-run-on.md) "
+                 "after post-training models unsupervised in ten H100-hours and beating human tuners on the harder "
+                 "variant ([Intology blog](https://intology.ai/blog/scaling-automated-post-training)), overtaking the "
+                 "[Sol post-trains Luna](/developments/2026-07-10-a-model-post-trains-a-model.md) result on "
+                 "[PostTrainBench](/benchmarks/posttrainbench.md) and continuing the "
+                 "[model-trains-a-model](/themes/a-model-trains-a-model.md) line that began when the benchmark "
+                 "[first ranked models at post-training](/developments/2025-12-18-posttrainbench-models-training-models.md)."},
     ],
     "developments": [
         {"id": "2026-08-04-agents-rebuild-the-inference-stack-they-run-on",
@@ -46,10 +104,50 @@ sit their entrance exam again.
          "claim": "Asari AI's self-improving co-inventor agents rebuilt the inference stack for "
                   "two open models on B200s, lifting throughput and interactivity up to 16%, "
                   "while Intology's Locus agent led PostTrainBench by post-training models "
-                  "unsupervised in ten GPU-hours and beating human tuners on the harder variant.",
-         "domain": "agents", "actor": ["asari-ai", "intology", "deepseek", "zai"], "score": "+16%",
+                  "unsupervised in ten H100-hours and beating human tuners on the harder variant.",
+         "description": "The Singularity filing its own optimization tickets: the loop reaches the serving layer, "
+                        "the last piece of infrastructure between a model and its users, and the post-training "
+                        "pipeline in the same week.",
+         "domain": "agents", "actor": ["asari-ai", "intology"], "score": "up to 16%",
          "evidences": ["recursive-self-improvement", "a-model-trains-a-model", "optimizing-its-own-invoice"],
-         "supersedes": [B + "developments/2026-08-03-sixteen-days-alone-and-265-commits"]},
+         "about": [B + "systems/asari-co-inventor", B + "systems/deepseek-v4-pro", B + "systems/glm-5-2",
+                   B + "hardware/nvidia-b200", B + "systems/locus", B + "benchmarks/posttrainbench"],
+         "supersedes": [B + "developments/2026-08-03-sixteen-days-alone-and-265-commits",
+                        B + "developments/2026-07-10-a-model-post-trains-a-model",
+                        B + "developments/2026-07-30-a-model-rewrites-the-kernels-that-cut-its-price"],
+         "relatedTo": [B + "developments/2026-04-29-a-model-writes-the-kernels-that-run-it",
+                       B + "developments/2026-07-04-agents-write-the-kernels-closing-a-software-gap",
+                       B + "developments/2026-03-12-posttrainbench-v1"],
+         "relations": [{"predicate": "relatedTo",
+                        "target": B + "developments/2026-07-10-a-model-post-trains-a-model",
+                        "relation_label": "extends"}],
+         "tags": ["rsi", "kernels", "model-trains-model", "autonomous-research"],
+         "supporting_text": "DeepSeek v4 Pro and GLM 5.2 on B200s, lifting throughput and interactivity up to 16%",
+         "sources": [{"id": "asari-inference-optimization-blog",
+                      "resource": "https://asari.ai/blog/inference-optimization",
+                      "title": "Speeding up end-to-end inference with self-improving agents",
+                      "author": "org:asari-ai", "last_modified": "2026-07-28"},
+                     {"id": "intology-scaling-automated-post-training",
+                      "resource": "https://intology.ai/blog/scaling-automated-post-training",
+                      "title": "Scaling Automated Post-Training", "author": "org:intology",
+                      "last_modified": "2026-08-03"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Asari AI's [co-inventor agents](/systems/asari-co-inventor.md) optimized the full vLLM serving stack "
+                 "for [DeepSeek v4 Pro](/systems/deepseek-v4-pro.md) and [GLM 5.2](/systems/glm-5-2.md) on "
+                 "[NVIDIA B200s](/hardware/nvidia-b200.md), improving throughput and interactivity by up to 16% across "
+                 "concurrency levels while preserving model behaviour through distribution-level correctness checks "
+                 "([Asari blog](https://asari.ai/blog/inference-optimization)). In the same issue Intology's "
+                 "[Locus](/systems/locus.md) took the top of [PostTrainBench](/benchmarks/posttrainbench.md) by "
+                 "post-training models unsupervised in ten H100-hours and beating human tuners on the harder variant "
+                 "([Intology blog](https://intology.ai/blog/scaling-automated-post-training)), overtaking the "
+                 "[Sol post-trains Luna](/developments/2026-07-10-a-model-post-trains-a-model.md) result of July. "
+                 "Together they extend the loop from "
+                 "[production kernels](/developments/2026-07-30-a-model-rewrites-the-kernels-that-cut-its-price.md) and "
+                 "[self-evolving harnesses](/developments/2026-08-03-sixteen-days-alone-and-265-commits.md) to the "
+                 "serving stack and the post-training pipeline, two more of the layers between a model and its own "
+                 "next version; four days later Poetiq's "
+                 "[self-optimizing optimizer](/developments/2026-08-08-a-self-optimizing-optimizer.md) makes the same "
+                 "claim for the harness layer."},
         {"id": "2026-08-04-rebuilding-whole-projects-from-scratch",
          "title": "A benchmark tests rebuilding whole projects from scratch and passing every test",
          "claim": "On MirrorCode, which tests whether agents can rebuild whole software projects "
@@ -115,9 +213,43 @@ sit their entrance exam again.
                   "recursive self-improvement, AI building better AI, as SpaceX partnered with "
                   "Nvidia to fly datacenter-class compute on satellites and prepaid a Texas county "
                   "$10 million on a fab deal that could reach $119 billion.",
+         "description": "An insider gives the newsletter's own thesis as the financial rationale for the buildout: "
+                        "the chips, the satellites and the fab are a bet that AI building better AI will pay for "
+                        "them.",
          "domain": "compute", "actor": ["google-deepmind", "spacex", "nvidia"], "score": "$119B",
          "evidences": ["recursive-self-improvement", "orbit-as-compute", "compute-capital-stack"],
-         "supersedes": [B + "developments/2026-08-04-a-hundred-fifty-billion-of-chips-routed-to-one-lab"]},
+         "about": [B + "hardware/vera-rubin", B + "facilities/terafab"],
+         "supersedes": [B + "developments/2026-07-19-we-want-k2-to-help-build-k3"],
+         "relatedTo": [B + "developments/2026-08-04-a-hundred-fifty-billion-of-chips-routed-to-one-lab",
+                       B + "developments/2026-06-12-recursion-could-delay-an-ipo",
+                       B + "developments/2026-08-01-almost-all-compute-in-space",
+                       B + "developments/2026-08-05-a-buyer-inverts-the-diversification-playbook"],
+         "tags": ["rsi", "compute-scaling", "funding"],
+         "supporting_text": "what justifies this capex is recursive self-improvement, AI building better AI",
+         "sources": [{"id": "the-information-deepmind-capex-rsi",
+                      "resource": "https://www.theinformation.com/newsletters/ai-agenda/google-deepmind-exec-says-unprecedented-capex-actually-bet-rsi",
+                      "title": "Google DeepMind Exec Says Unprecedented Capex Is Actually a Bet On 'RSI'",
+                      "author": "org:the-information"},
+                     {"id": "spacex-nvidia-starmind-post",
+                      "resource": "https://x.com/SpaceX/status/2084723854534951218",
+                      "title": "SpaceX on flying Nvidia Rubin GPUs and Vera CPUs on Starmind AI1 satellites",
+                      "author": "org:spacex"},
+                     {"id": "terafab-grimes-county-prepayment-post",
+                      "resource": "https://x.com/cb_doge/status/2084628645721616722",
+                      "title": "SpaceX prepays Grimes County $10 million on the Terafab deal"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Speaking to The Information, DeepMind's chief strategy officer said what justifies the unprecedented "
+                 "capital spending is recursive self-improvement, AI building better AI "
+                 "([The Information](https://www.theinformation.com/newsletters/ai-agenda/google-deepmind-exec-says-unprecedented-capex-actually-bet-rsi)). "
+                 "The newsletter sets the remark beside the hardware it is meant to pay for: SpaceX partnering with "
+                 "Nvidia to fly [Vera Rubin](/hardware/vera-rubin.md) GPUs and Vera CPUs on Starmind AI1 satellites as "
+                 "datacenter-class space compute, and prepaying Grimes County $10 million on a "
+                 "[Terafab](/facilities/terafab.md) deal that could reach $119 billion. It is the first time in the "
+                 "corpus that a frontier-lab insider gives the loop as the financial rationale for the buildout, after "
+                 "[Altman warned it could delay an IPO](/developments/2026-06-12-recursion-could-delay-an-ipo.md) and "
+                 "[Moonshot stated it as a roadmap](/developments/2026-07-19-we-want-k2-to-help-build-k3.md); nine "
+                 "days later Sergey Brin is reported "
+                 "[steering Google's own resources the same way](/developments/2026-08-13-a-cofounder-steers-toward-recursive-self-improvement.md)."},
         {"id": "2026-08-04-competitiveness-chosen-over-containment",
          "title": "Officials reverse on sanctions against open-source rivals after lobbying",
          "claim": "Officials weighed sanctions and blacklists against open-source Chinese labs "

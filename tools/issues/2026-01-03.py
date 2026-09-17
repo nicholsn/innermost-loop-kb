@@ -43,7 +43,19 @@ sweeps are scale-invariant, so settings found on toys transfer to real models.
          "body": "Treats logical reasoning as image-to-image diffusion, beating GPT-5 on "
                  "logic tasks."},
         {"id": "optimus", "type": "AISystem", "title": "Tesla Optimus",
-         "developed_by": [B + "organizations/tesla"], "modality": "robotic control"},
+         "description": "Tesla's humanoid robot, reported in the corpus walking office perimeters "
+                        "and sorting Legos as robotics enters its mundane-utility phase.",
+         "developed_by": [B + "organizations/tesla"], "modality": "robotic control",
+         "resource": "https://www.tesla.com/AI",
+         "sameAs": ["http://www.wikidata.org/entity/Q108167797"],
+         "body": "Optimus is [Tesla](/organizations/tesla.md)'s humanoid robot. It enters this corpus in "
+                 "the January 3, 2026 issue, [walking the perimeter of Palo Alto offices and sorting "
+                 "Legos](/developments/2026-01-03-optimus-patrols-and-sorts.md), the newsletter's example "
+                 "of robotics reaching the mundane-utility phase that precedes ubiquity and its proof that "
+                 "dexterity is a data problem. It is also a lateral reference for "
+                 "[CATL's humanoid deployment on battery lines](/developments/2025-12-20-catl-humanoid-battery-lines.md), "
+                 "the corpus's physical-recursion entry, and a comparator for XPENG's "
+                 "[IRON](/systems/xpeng-iron.md) in the September 15 issue."},
     ],
     "developments": [
         {"id": "2026-01-03-apple-scale-invariant-sweeps",

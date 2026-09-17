@@ -82,11 +82,35 @@ And Anthropic confidentially filed for an IPO.
          "claim": "Sam Altman announced OpenAI Robotics is hiring engineers to build robots "
                   "that will first help skilled workers raise AI infrastructure and eventually "
                   "serve everyone.",
-         "domain": "robotics", "actor": ["openai"],
+         "description": "The physical leg of the recursion gets a payroll: a frontier lab's "
+                        "first robots are aimed at raising the compute infrastructure its own "
+                        "models train on, before they are aimed at anyone else.",
+         "domain": "robotics", "actor": ["openai", "people/sam-altman"],
+         "occurred_on": "2026-05-31",
          "evidences": ["physical-recursion", "recursive-self-improvement"],
          "supersedes": [B + "developments/2026-05-29-free-cleaning-in-exchange-for-training-data"],
+         "relatedTo": [B + "developments/2026-05-01-robots-to-build-the-datacenters",
+                       B + "developments/2026-05-20-karpathy-joins-to-lead-pretraining",
+                       B + "developments/2026-05-22-a-ten-thousand-unit-humanoid-line"],
+         "tags": ["robotics", "rsi"],
+         "supporting_text": "engineers to build robots that first help skilled workers raise AI infrastructure",
+         "sources": [{"id": "sama-x-openai-robotics-hiring",
+                      "resource": "https://x.com/sama/status/2061115572683940350",
+                      "title": "Sam Altman on X: OpenAI Robotics is hiring",
+                      "author": "human:sam-altman"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
          "body": "Robots built to build the infrastructure that trains the models that "
-                 "design the robots."},
+                 "design the robots. Sam Altman's post "
+                 "([X](https://x.com/sama/status/2061115572683940350)) says OpenAI Robotics is hiring "
+                 "engineers, with a stated sequence: robots that first help skilled workers raise AI "
+                 "infrastructure, then eventually serve everyone; the newsletter's framing is that the "
+                 "intelligence is also growing limbs. It arrives a month after "
+                 "[SoftBank's Roze AI](/developments/2026-05-01-robots-to-build-the-datacenters.md) "
+                 "proposed robots that build data centers, twelve days after "
+                 "[Karpathy joined Anthropic to lead pre-training](/developments/2026-05-20-karpathy-joins-to-lead-pretraining.md), "
+                 "the recursion acquiring job titles at both the software and the hardware end, and ten "
+                 "days after [EngineAI activated a 10,000-unit humanoid line](/developments/2026-05-22-a-ten-thousand-unit-humanoid-line.md), "
+                 "the production side of the same loop."},
         {"id": "2026-06-01-humanoids-headed-for-a-battlefield",
          "title": "Humanoid logistics robots are trialled toward battlefield deployment",
          "claim": "Foundation Future Industries is testing whether humanoid robots can handle "

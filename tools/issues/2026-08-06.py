@@ -84,7 +84,7 @@ taste is not.
          "claim": "OpenAI published Agent Plugins, a vendor-neutral spec packing Skills and MCP "
                   "servers into bundles any client can load, steered by Amazon, Cursor, Microsoft "
                   "and Vercel.",
-         "domain": "agents", "actor": ["openai", "amazon", "anysphere", "microsoft", "vercel-inc"],
+         "domain": "agents", "actor": ["openai", "amazon", "anysphere", "microsoft", "vercel"],
          "evidences": ["agent-society", "network-over-node", "scaffolding-over-weights"],
          "supersedes": [B + "developments/2026-07-15-payments-embedded-into-http-for-agents"]},
         {"id": "2026-08-06-twenty-five-billion-of-bonds-into-a-hundred-fifteen-billion-of-demand",

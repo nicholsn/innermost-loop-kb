@@ -34,9 +34,31 @@ will have to broaden.
          "title": "The forecast puts a 2x superhuman gap at July 2034",
          "claim": "The updated AI Futures Model now forecasts a twofold gap between artificial "
                   "superintelligence and peak human capability by July 2034.",
-         "domain": "models", "score": "July 2034",
+         "description": "The AI 2027 authors' scenario becomes a dated quantitative model, and the "
+                        "newsletter reads its mid-2030s convergence with decentralized and orbital "
+                        "compute as a single vector pointing at a Dyson swarm.",
+         "domain": "models", "actor": ["ai-futures-project"], "score": "2x gap by July 2034",
          "evidences": ["takeoff-declared", "recursive-self-improvement"],
-         "supersedes": [B + "developments/2025-12-15-ai-2027-forecast-accuracy"]},
+         "supersedes": [B + "developments/2025-12-15-ai-2027-forecast-accuracy"],
+         "relatedTo": [B + "developments/2025-12-31-decentralized-training-20x",
+                       B + "developments/2026-04-03-forecasts-move-eighteen-months-in-three",
+                       B + "developments/2026-08-17-automated-coders-around-late-2027"],
+         "tags": ["forecast", "rsi"],
+         "supporting_text": "2x gap between ASI and peak human capability by July 2034",
+         "sources": [{"id": "ai-futures-model-site", "resource": "https://www.aifuturesmodel.com/",
+                      "title": "AI Futures Model", "author": "org:ai-futures-project"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "The AI Futures Model is the [AI Futures Project](/organizations/ai-futures-project.md)'s "
+                 "interactive timelines-and-takeoff model, published by the authors of the AI 2027 "
+                 "scenario; its updated run places the point at which artificial superintelligence is twice "
+                 "peak human capability in July 2034 ([model](https://www.aifuturesmodel.com/)). It lands two "
+                 "weeks after [91% of AI 2027's verifiable predictions were found to hold](/developments/2025-12-15-ai-2027-forecast-accuracy.md), "
+                 "turning a scenario into a dated forecast, and the same issue pairs it with "
+                 "[decentralized training compute growing 20x a year](/developments/2025-12-31-decentralized-training-20x.md) "
+                 "to converge on centralized labs around mid-2031. Later entries move the date: a "
+                 "[hyperbolic regression puts the singularity on 18 July 2034](/developments/2026-02-11-singularity-dated-july-18-2034.md), "
+                 "[forecasters pull their timelines forward eighteen months in three](/developments/2026-04-03-forecasts-move-eighteen-months-in-three.md), "
+                 "and [three methods converge on automated coders around late 2027](/developments/2026-08-17-automated-coders-around-late-2027.md)."},
         {"id": "2025-12-31-decentralized-training-20x",
          "title": "Decentralized training compute grows four times faster than frontier runs",
          "claim": "Epoch AI found decentralized training compute growing 20x annually against "

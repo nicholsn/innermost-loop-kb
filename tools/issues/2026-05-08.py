@@ -26,6 +26,39 @@ extrapolation has it absorbing all global GDP in 21 months.
         {"id": "tom-brown", "type": "Person", "title": "Tom Brown", "name": "Tom Brown",
          "body": "Anthropic chief compute officer."},
     ],
+    "systems": [
+        {"id": "claude-managed-agents", "type": "AISystem", "title": "Claude Managed Agents",
+         "description": "Anthropic's hosted runtime for deploying Claude agents at scale, with sandboxed "
+                        "execution, checkpointing and, from May 2026, a scheduled dreaming process that "
+                        "curates shared memories from session histories.",
+         "developed_by": [B + "organizations/anthropic"],
+         "modality": "text",
+         "resource": "https://platform.claude.com/docs/en/managed-agents/overview",
+         "tags": ["coding-agent"],
+         "body": "Claude Managed Agents is [Anthropic](/organizations/anthropic.md)'s platform of "
+                 "composable APIs for running cloud-hosted Claude agents with sandboxed execution, "
+                 "checkpointing, scoped credentials and tracing. It enters the corpus in April, when the "
+                 "newsletter read its launch as "
+                 "[sandbox containment promoted to a product feature](/developments/2026-04-08-sandbox-containment-becomes-a-product-feature.md), "
+                 "and returns in May with [dreaming](/developments/2026-05-08-agents-dream-overnight.md), "
+                 "the scheduled process that reviews session histories and curates shared memories "
+                 "across teams."},
+        {"id": "gemini-nano", "type": "AISystem", "title": "Gemini Nano",
+         "description": "Google's on-device Gemini model, shipped inside Chrome and on Pixel phones, "
+                        "which Chrome began installing as a 4 GB download on every desktop with "
+                        "available storage.",
+         "developed_by": [B + "organizations/google"],
+         "modality": "text",
+         "resource": "https://developer.chrome.com/docs/ai/built-in",
+         "sameAs": ["http://www.wikidata.org/entity/Q124547180"],
+         "body": "Gemini Nano is the smallest member of Google's [Gemini](/systems/gemini.md) family, "
+                 "sized to run locally on phones and desktops rather than in a datacenter. In this "
+                 "corpus it appears when "
+                 "[Chrome started quietly installing 4 GB of it](/developments/2026-05-08-agents-dream-overnight.md) "
+                 "on every desktop with room to spare, and again in June when Google "
+                 "[bolted multi-token prediction onto the frozen model](/developments/2026-06-27-multi-token-prediction-on-a-frozen-model.md) "
+                 "on Pixels for more than 50% faster inference with bit-identical output."},
+    ],
     "developments": [
         {"id": "2026-05-08-a-rival-hands-over-colossus-1",
          "title": "SpaceX hands a competitor a 300-MW datacenter and closes its own lab",
@@ -78,9 +111,45 @@ extrapolation has it absorbing all global GDP in 21 months.
                   "reviews session histories and curates shared memories across teams, while "
                   "Chrome began quietly installing four gigabytes of a local model on every "
                   "desktop with available storage.",
+         "description": "The newsletter files a memory-curation job under agents training themselves "
+                        "overnight: offline consolidation, until now a research result about agents "
+                        "designing their own memory, ships as a product feature the agents run on "
+                        "themselves.",
          "domain": "agents", "actor": ["anthropic", "google"], "score": "4 GB",
-         "evidences": ["recursive-self-improvement", "agent-society"],
-         "supersedes": [B + "developments/2026-04-29-every-ticket-gets-its-own-agent"]},
+         "about": [B + "systems/claude-managed-agents", B + "systems/gemini-nano"],
+         "evidences": ["recursive-self-improvement", "agent-society", "models-sleep"],
+         "supersedes": [B + "developments/2026-04-29-every-ticket-gets-its-own-agent"],
+         "relatedTo": [B + "developments/2026-02-12-alma-agents-design-their-own-memory",
+                       B + "developments/2026-04-07-seventy-two-hours-fifty-experiments",
+                       B + "developments/2026-04-23-agents-build-memories-from-screen-captures"],
+         "tags": ["rsi", "continual-learning", "agent-harness"],
+         "supporting_text": "a scheduled process that reviews session histories and curates shared memories across teams",
+         "sources": [{"id": "anthropic-managed-agents-dreaming-blog",
+                      "resource": "https://claude.com/blog/new-in-claude-managed-agents",
+                      "title": "New in Claude Managed Agents: dreaming, outcomes, and multiagent orchestration",
+                      "author": "org:anthropic"},
+                     {"id": "9to5google-chrome-gemini-nano-4gb",
+                      "resource": "https://9to5google.com/2026/05/06/google-chrome-4gb-storage-ai-details/",
+                      "title": "Google Chrome takes up 4GB for AI, but only if you have room",
+                      "author": "org:9to5google", "last_modified": "2026-05-06"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Anthropic's \u201cdreaming\u201d is a scheduled job inside "
+                 "[Claude Managed Agents](/systems/claude-managed-agents.md) that reads back an agent's "
+                 "session histories and curates the memories worth keeping, shared across a team's "
+                 "agents ([Anthropic blog](https://claude.com/blog/new-in-claude-managed-agents)); the "
+                 "newsletter files it under agents training themselves overnight. It brings offline "
+                 "consolidation into a shipped product, after researchers had agents "
+                 "[meta-learn their own memory designs](/developments/2026-02-12-alma-agents-design-their-own-memory.md) "
+                 "and a 72-hour unsupervised run "
+                 "[invented a memory system](/developments/2026-04-07-seventy-two-hours-fifty-experiments.md), "
+                 "and it anticipates the [models-sleep](/themes/models-sleep.md) theme the newsletter "
+                 "names later in May. The same issue notes Chrome quietly installing 4 GB of "
+                 "[Gemini Nano](/systems/gemini-nano.md) on every desktop with room for it "
+                 "([9to5Google](https://9to5google.com/2026/05/06/google-chrome-4gb-storage-ai-details/)), "
+                 "the local-model half of the claim. It follows the "
+                 "[Symphony orchestrator](/developments/2026-04-29-every-ticket-gets-its-own-agent.md) "
+                 "giving every ticket its own agent, and precedes the "
+                 "[self-rewriting harness](/developments/2026-06-25-an-agent-rewrites-its-own-harness.md) of June."},
         {"id": "2026-05-08-motherboard-sales-collapse",
          "title": "Enthusiast motherboard sales collapse as wafers redirect",
          "claim": "Motherboard sales collapsed over 25% as wafers were redirected to AI "

@@ -35,11 +35,27 @@ Meanwhile, in Beijing, Linkerbot humanoids assemble and test their own hands.
         {"id": "arc-prize", "type": "Organization", "title": "ARC Prize Foundation",
          "resource": "https://arcprize.org/", "body": "Publishes the ARC-AGI benchmarks."},
         {"id": "linkerbot", "type": "Organization", "title": "Linkerbot",
-         "body": "Beijing humanoid maker whose robots assemble their own hands."},
+         "description": "Beijing dexterous-hand and humanoid maker whose robots were shown assembling and testing their own hands.",
+         "resource": "https://www.linkerbot.cn/",
+         "tags": ["startup"],
+         "body": "Linkerbot (灵心巧手) is a Beijing robotics company that builds dexterous robotic hands and the "
+                 "humanoids that carry them. Its single appearance in this corpus is the "
+                 "[self-assembly loop](/developments/2025-12-26-linkerbot-self-assembly.md) in which its humanoids "
+                 "assemble and test their own hands, the physical counterpart to the software recursion the newsletter "
+                 "tracks under [physical recursion](/themes/physical-recursion.md)."},
         {"id": "bank-of-america", "type": "Organization", "title": "Bank of America",
          "resource": "https://www.bankofamerica.com/", "body": "Forecasts chip sector revenue."},
         {"id": "apple", "type": "Organization", "title": "Apple",
-         "resource": "https://www.apple.com/", "body": "Long TSMC's largest customer."},
+         "description": "Consumer-electronics and in-house-silicon giant that appears in this corpus mostly as the incumbent being displaced in the chip supply chain and as a late, outsourcing adopter of frontier models.",
+         "resource": "https://www.apple.com/",
+         "sameAs": ["http://www.wikidata.org/entity/Q312"],
+         "tags": ["big-tech"],
+         "body": "Long TSMC's largest customer, Apple designs its own silicon and runs one of the largest installed device "
+                 "bases in the world. In this corpus it is a foil rather than a frontier actor: "
+                 "[NVIDIA displaces it as TSMC's top customer](/developments/2025-12-26-nvidia-displaces-apple-at-tsmc.md) "
+                 "as the silicon food chain inverts toward datacenters, it "
+                 "[puts Siri on Gemini](/developments/2026-01-13-apple-siri-on-gemini.md) rather than on a model of its own, "
+                 "and it [pays more per phone](/developments/2026-02-03-apple-pays-57-more-per-iphone.md) as AI outbids it for memory."},
     ],
     "people": [
         {"id": "shane-legg", "type": "Person", "title": "Shane Legg", "name": "Shane Legg",
@@ -63,10 +79,29 @@ Meanwhile, in Beijing, Linkerbot humanoids assemble and test their own hands.
          "title": "Linkerbot humanoids assemble and test their own hands",
          "claim": "In Beijing, Linkerbot humanoids are assembling and testing their own hands, "
                   "closing a loop of robotic self-replication.",
+         "description": "The newsletter's first sighting of robots building robots rather than what "
+                        "powers them: the robot builds the part of itself that does the building, which "
+                        "the author reads as a preview of von Neumann machines.",
          "domain": "robotics", "actor": ["linkerbot"],
          "evidences": ["physical-recursion", "recursive-self-improvement"],
          "supersedes": [B + "developments/2025-12-20-catl-humanoid-battery-lines"],
-         "body": "CATL had humanoids building batteries; here they build the robots."},
+         "relatedTo": [B + "developments/2025-12-26-arc-declares-saturation",
+                       B + "developments/2026-09-15-robots-making-robots"],
+         "tags": ["robotics", "rsi"],
+         "supporting_text": "assembling and testing their own hands",
+         "sources": [{"id": "robo-tuo-x-linkerbot-hands",
+                      "resource": "https://x.com/Robo_Tuo/status/2003475372856475902",
+                      "title": "Post on X: Linkerbot humanoids assembling and testing their own hands",
+                      "last_modified": "2025-12-23"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "CATL had humanoids building batteries; here they build the robots. The newsletter cites an X post "
+                 "([Robo_Tuo](https://x.com/Robo_Tuo/status/2003475372856475902)) of [Linkerbot](/organizations/linkerbot.md) "
+                 "humanoids in Beijing assembling and then testing their own hands, and pairs it with the same day's "
+                 "[ARC saturation](/developments/2025-12-26-arc-declares-saturation.md) as the physical half of a cognitive "
+                 "escape velocity. It extends the [CATL battery lines](/developments/2025-12-20-catl-humanoid-battery-lines.md) "
+                 "of six days earlier from robots building what powers robots to robots building robots, the storyline that "
+                 "reaches a [fully automated humanoid production line](/developments/2026-09-15-robots-making-robots.md) in "
+                 "September 2026."},
         {"id": "2025-12-26-nanogpt-119s",
          "title": "The NanoGPT speedrun breaks two minutes at 119.3 seconds",
          "claim": "The NanoGPT training speedrun record fell to 119.3 seconds, breaking the "

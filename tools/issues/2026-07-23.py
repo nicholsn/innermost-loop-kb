@@ -31,6 +31,33 @@ through a covert platform and GB300s tapped in Thailand.
         {"id": "little-tech", "type": "Organization", "title": "Little Tech Association"},
         {"id": "skyroot", "type": "Organization", "title": "Skyroot Aerospace"},
     ],
+    "hardware": [
+        {"id": "willow", "type": "Hardware", "title": "Willow",
+         # tags waived: no controlled entity tag (ENRICH_RULES) describes a quantum processor; existing knowledge/hardware entries carry none.
+         "description": "Google's superconducting quantum processor, which the corpus records first opening to early access and then learning from its own quantum errors while a computation runs.",
+         "developed_by": [B + "organizations/google"],
+         "fabricated_by": [B + "organizations/google"],
+         "sameAs": ["http://www.wikidata.org/entity/Q131939451"],
+         "resource": "https://blog.google/technology/research/google-willow-quantum-chip/",
+         "body": "Willow is [Google](/organizations/google.md)'s superconducting quantum chip, fabricated in the company's own "
+                 "Santa Barbara facility ([Google](https://blog.google/technology/research/google-willow-quantum-chip/)). "
+                 "It enters the corpus when Google [opened early access and pulled its quantum timeline in](/developments/2026-03-28-quantum-timeline-pulled-in-six-years.md), "
+                 "and joins the recursive-self-improvement cluster when it starts "
+                 "[learning from its own errors mid-run](/developments/2026-07-23-a-quantum-chip-learns-from-its-own-errors-mid-run.md), "
+                 "the substrate correcting itself during the computation rather than being redesigned between generations."},
+        {"id": "megapod", "type": "Hardware", "title": "Megapod",
+         # tags waived: no controlled entity tag (ENRICH_RULES) describes a containerized compute unit; existing knowledge/hardware entries carry none.
+         "description": "Containerized AI compute unit pitched by Elon Musk, to be dropped wherever power already exists, with Tesla's seven gigawatts of Supercharger capacity counted as sites.",
+         "developed_by": [B + "organizations/tesla"],
+         "resource": "https://x.com/xfreeze/status/2080063592490283325",
+         "body": "Megapods are containerized AI compute that Musk pitched as deployable wherever power already "
+                 "exists, including the seven gigawatts of Tesla Superchargers "
+                 "([thread](https://x.com/xfreeze/status/2080063592490283325)). In the clip Musk describes a Tesla "
+                 "design that pairs Tesla AI4 computers with x86 systems in a box, \"digital Optimus in a box\", "
+                 "packaged the way [Tesla](/organizations/tesla.md)'s Megapack packages batteries. The corpus records the pitch beside "
+                 "[Willow learning from its own errors](/developments/2026-07-23-a-quantum-chip-learns-from-its-own-errors-mid-run.md) "
+                 "as the power-and-capital side of the substrate."},
+    ],
     "developments": [
         {"id": "2026-07-23-the-first-misaligned-escape-with-real-consequences",
          "title": "Observers call the sandbox escape the long-awaited warning shot",
@@ -94,9 +121,39 @@ through a covert platform and GB300s tapped in Thailand.
          "claim": "Google's Willow now learns from its own quantum errors mid-run, while Musk "
                   "pitched containerized AI compute dropped wherever power exists, including "
                   "seven gigawatts of charger capacity.",
-         "domain": "compute", "actor": ["google", "tesla"], "score": "7 GW of chargers",
+         "description": "Self-correction reaches the substrate: a processor adjusting to its own error "
+                        "record while it runs is the hardware analogue of the software loops the "
+                        "newsletter tracks, set beside a pitch that prices the power such substrates "
+                        "need in gigawatts of chargers.",
+         "domain": "compute", "actor": ["google", "tesla", "people/elon-musk"], "score": "7 GW of chargers",
+         "about": [B + "hardware/willow", B + "hardware/megapod"],
          "evidences": ["silicon-designs-itself", "recursive-self-improvement", "compute-capital-stack"],
-         "supersedes": [B + "developments/2026-07-22-high-na-euv-reaches-high-volume-manufacturing"]},
+         "supersedes": [B + "developments/2026-07-22-high-na-euv-reaches-high-volume-manufacturing"],
+         "relatedTo": [B + "developments/2026-06-03-a-quantum-chip-designed-by-an-agent",
+                       B + "developments/2026-07-03-circuits-drawn-in-minutes-not-months",
+                       B + "developments/2026-03-28-quantum-timeline-pulled-in-six-years"],
+         "tags": ["rsi", "self-modification", "compute-scaling"],
+         "supporting_text": "from its own quantum errors mid-run",
+         "sources": [{"id": "google-research-willow-learns-from-errors",
+                      "resource": "https://research.google/blog/towards-a-quantum-computer-that-learns-from-its-errors/",
+                      "title": "Towards a quantum computer that learns from its errors", "author": "org:google"},
+                     {"id": "musk-megapods-pitch-thread",
+                      "resource": "https://x.com/xfreeze/status/2080063592490283325",
+                      "title": "Musk pitches Megapods: containerized AI compute on 7 GW of Superchargers"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Google's [Willow](/hardware/willow.md) processor now adjusts to its own quantum errors while a "
+                 "computation is running rather than after it "
+                 "([Google Research](https://research.google/blog/towards-a-quantum-computer-that-learns-from-its-errors/)), "
+                 "the first time the corpus records a substrate correcting itself mid-run rather than being "
+                 "redesigned between generations. It carries the [silicon-designs-itself](/themes/silicon-designs-itself.md) "
+                 "line, [Microsoft's Majorana 2 designed with its own agent](/developments/2026-06-03-a-quantum-chip-designed-by-an-agent.md) "
+                 "and [Princeton's diffusion-drawn RF circuits](/developments/2026-07-03-circuits-drawn-in-minutes-not-months.md), "
+                 "down into the run itself, four months after Google [opened Willow to early access](/developments/2026-03-28-quantum-timeline-pulled-in-six-years.md). "
+                 "In the same breath Musk pitched [Megapods](/hardware/megapod.md), containerized AI compute to be "
+                 "dropped wherever power already exists, counting Tesla's seven gigawatts of Superchargers as a "
+                 "site inventory ([thread](https://x.com/xfreeze/status/2080063592490283325)); the issue sets the "
+                 "self-correcting substrate beside the [capital stack](/themes/compute-capital-stack.md) it draws on, "
+                 "the same day Google posted its [first-ever quarterly cash burn](/developments/2026-07-23-a-first-ever-quarterly-cash-burn.md)."},
         {"id": "2026-07-23-a-first-ever-quarterly-cash-burn",
          "title": "A hyperscaler posts its first-ever quarterly cash burn",
          "claim": "Google posted its first-ever quarterly cash burn at $5.9 billion, lifting "

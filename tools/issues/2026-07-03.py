@@ -38,6 +38,45 @@ through instruments built for the old one.
         {"id": "qts", "type": "Organization", "title": "QTS Data Centers"},
         {"id": "japan-supreme-court", "type": "Organization", "title": "Supreme Court of Japan"},
     ],
+    "benchmarks": [
+        {"id": "kernelbench-mega", "type": "Benchmark", "title": "KernelBench-Mega",
+         "description": "The megakernel track of Elliot Arledge's independent kernelbench.com agentic "
+                        "GPU-kernel benchmark (not affiliated with Stanford's KernelBench), on which "
+                        "Claude Fable 5 wrote the first genuine single-launch decode megakernel.",
+         "resource": "https://kernelbench.com/mega",
+         "published_by": [B + "people/elliot-arledge"],
+         "measures_capability": "writing fused GPU megakernels that run an entire decode step in one cooperative launch",
+         "tags": ["open-source"],
+         "body": "KernelBench-Mega is the Mega track of [kernelbench.com/mega](https://kernelbench.com/mega), "
+                 "an independent agentic GPU-kernel benchmark built by "
+                 "[Elliot Arledge](https://x.com/elliotarledge); the site states it is not affiliated with "
+                 "Stanford's KernelBench and publishes its source "
+                 "([Infatoshi/kernelbench.com](https://github.com/Infatoshi/kernelbench.com)). The track "
+                 "asks a model to fuse a whole decode step (its listed task is a Kimi-Linear decode) into "
+                 "one launch, and entries can be flagged and rejected on audit rather than counted. In "
+                 "this corpus it appears once: "
+                 "[Claude Fable 5's 18.7x megakernel](/developments/2026-07-03-seventeen-leaders-in-two-years.md) "
+                 "of July 2026, which the corpus files in the same kernel-writing strand as "
+                 "[GPT-5.5 topping Stanford's KernelBench](/developments/2026-04-29-a-model-writes-the-kernels-that-run-it.md) "
+                 "at 6.57% in April, though the two benchmarks are unrelated, under "
+                 "[silicon-designs-itself](/themes/silicon-designs-itself.md)."},
+    ],
+    "people": [
+        {"id": "elliot-arledge", "type": "Person", "title": "Elliot Arledge", "name": "Elliot Arledge",
+         "description": "Independent developer who built and runs kernelbench.com, the agentic GPU-kernel "
+                        "benchmark whose Mega track Claude Fable 5 topped with the first genuine decode "
+                        "megakernel.",
+         "resource": "https://x.com/elliotarledge",
+         "tags": ["open-source"],
+         "body": "Elliot Arledge builds and maintains [kernelbench.com](https://kernelbench.com/mega), an "
+                 "independent agentic GPU-kernel benchmark whose site names him as its builder, states it "
+                 "is not affiliated with Stanford's KernelBench and publishes its source "
+                 "([Infatoshi/kernelbench.com](https://github.com/Infatoshi/kernelbench.com)); his X profile "
+                 "describes him as the maker of a twelve-hour CUDA course. In this corpus he is the publisher "
+                 "of [KernelBench-Mega](/benchmarks/kernelbench-mega.md) and the source of the July 2026 "
+                 "report that [Claude Fable 5 wrote the track's first genuine megakernel](/developments/2026-07-03-seventeen-leaders-in-two-years.md) "
+                 "at 18.7x over reference."},
+    ],
     "developments": [
         {"id": "2026-07-03-learning-speed-doubles-every-three-months",
          "title": "Agent learning speed is found to double every three months",
@@ -64,11 +103,40 @@ through instruments built for the old one.
                   "reigning a median seven weeks, while Claude Fable 5 wrote KernelBench-Mega's "
                   "first genuine megakernel, fusing an entire decode step into one cooperative "
                   "launch for 18.7x over reference.",
-         "domain": "models", "actor": ["anthropic", "openai"], "score": "17 leaders / 7-week reigns",
-         "evidences": ["spiky-frontier", "recursive-self-improvement"],
-         "supersedes": [B + "developments/2026-07-02-capability-converges-as-price-fans-out"],
-         "body": "The model spent most of its session silently timing baselines before "
-                 "writing the kernel once."},
+         "description": "Two readings of one acceleration: leadership at the frontier now turns over "
+                        "faster than a product cycle, and the current leader's showpiece is rewriting "
+                        "the GPU code that serves it.",
+         "domain": "models", "actor": ["anthropic", "openai", "epoch-ai"], "score": "17 leaders / 7-week reigns",
+         "about": [B + "systems/claude-fable-5", B + "benchmarks/kernelbench-mega"],
+         "evidences": ["spiky-frontier", "recursive-self-improvement", "silicon-designs-itself"],
+         "supersedes": [B + "developments/2026-07-02-capability-converges-as-price-fans-out",
+                        B + "developments/2026-04-29-a-model-writes-the-kernels-that-run-it"],
+         "relatedTo": [B + "developments/2026-06-05-fifty-two-x-where-a-human-reaches-four",
+                       B + "developments/2026-05-17-models-improve-every-few-days",
+                       B + "developments/2026-07-04-agents-write-the-kernels-closing-a-software-gap"],
+         "tags": ["kernels", "capability-jump", "rsi", "evaluation"],
+         "supporting_text": "taking the lead since Claude 3 Opus dethroned GPT-4, each reigning a median seven weeks",
+         "sources": [{"id": "epoch-ai-seventeen-leaders-post",
+                      "resource": "https://x.com/epochairesearch/status/2072750497988223253",
+                      "title": "Post on X: 17 models have taken the lead since Claude 3 Opus dethroned GPT-4, each reigning a median seven weeks",
+                      "author": "org:epoch-ai", "last_modified": "2026-07-02"},
+                     {"id": "arledge-fable-5-megakernel-post",
+                      "resource": "https://x.com/elliotarledge/status/2072814573753975266",
+                      "title": "Post on X: Claude Fable 5 writes KernelBench-Mega's first genuine megakernel at 18.7x over reference",
+                      "author": "human:elliot-arledge", "last_modified": "2026-07-02"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Epoch AI's tally ([post](https://x.com/epochairesearch/status/2072750497988223253)) counts "
+                 "17 models taking the lead since Claude 3 Opus dethroned GPT-4, a median reign of seven "
+                 "weeks. In the same breath [Claude Fable 5](/systems/claude-fable-5.md) wrote the first "
+                 "genuine megakernel on [KernelBench-Mega](/benchmarks/kernelbench-mega.md), fusing an entire "
+                 "decode step into one cooperative launch for 18.7x over reference "
+                 "([post](https://x.com/elliotarledge/status/2072814573753975266)); the model spent most of "
+                 "its session silently timing baselines before writing the kernel once. It extends the kernel "
+                 "strand that opened when [GPT-5.5 topped KernelBench](/developments/2026-04-29-a-model-writes-the-kernels-that-run-it.md) "
+                 "at 6.57% in April, from a leaderboard score to a whole decode step fused into one launch, "
+                 "and the next day [Wafer's agents write the AMD kernels](/developments/2026-07-04-agents-write-the-kernels-closing-a-software-gap.md) "
+                 "that close a software gap. The seven-week reign is the frontier-turnover counterpart of "
+                 "[a shipped model improving every few days](/developments/2026-05-17-models-improve-every-few-days.md)."},
         {"id": "2026-07-03-an-agent-founds-and-runs-a-company",
          "title": "A founder-agent runs 2,000 interviews and ships a product",
          "claim": "An intern's founder-agent ran 2,000 interviews and 100 concepts to ship a "

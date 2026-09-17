@@ -29,8 +29,37 @@ shows.
     ],
     "organizations": [
         {"id": "irregular", "type": "Organization", "title": "Irregular"},
-        {"id": "xpeng", "type": "Organization", "title": "XPENG"},
+        {"id": "xpeng", "type": "Organization", "title": "XPENG",
+         "description": "Chinese smart electric-vehicle maker that has expanded into humanoid robots "
+                        "and launched the world's first automated humanoid production line.",
+         "resource": "https://www.xpeng.com/",
+         "sameAs": ["http://www.wikidata.org/entity/Q63035278"],
+         "tags": ["big-tech"],
+         "body": "XPENG (Xiaopeng Motors) is a Guangzhou-based maker of smart electric vehicles "
+                 "that has extended its driving-AI work into humanoid robotics. In this corpus it "
+                 "appears once, as the company whose "
+                 "[automated humanoid production line](/developments/2026-09-15-robots-making-robots.md) "
+                 "sent its first [IRON](/systems/xpeng-iron.md) unit walking off the line unassisted, "
+                 "the clearest instance of physical recursion since "
+                 "[CATL put humanoids on its battery lines](/developments/2025-12-20-catl-humanoid-battery-lines.md) "
+                 "and [Linkerbot humanoids assembled their own hands](/developments/2025-12-26-linkerbot-self-assembly.md) "
+                 "in December 2025."},
         {"id": "blackrock-inc", "type": "Organization", "title": "BlackRock"},
+    ],
+    "systems": [
+        {"id": "xpeng-iron", "type": "AISystem", "title": "XPENG IRON",
+         "description": "XPENG's humanoid robot, the first unit of which walked unassisted off the "
+                        "world's first automated humanoid production line.",
+         "developed_by": [B + "organizations/xpeng"],
+         "modality": "robotic control",
+         "resource": "https://www.xpeng.com/news/xpeng-iron-humanoid-robot",
+         "sameAs": ["http://www.wikidata.org/entity/Q140917559"],
+         "body": "IRON is the humanoid robot of the Chinese electric-vehicle maker "
+                 "[XPENG](/organizations/xpeng.md). It enters the corpus once, as the first unit to "
+                 "[walk unassisted off the world's first automated humanoid production line](/developments/2026-09-15-robots-making-robots.md), "
+                 "a line on which robots make robots; it sits alongside Tesla's "
+                 "[Optimus](/systems/optimus.md) and Figure's [Helix 02](/systems/helix-02.md) among "
+                 "the humanoids the corpus tracks."},
     ],
     "developments": [
         {"id": "2026-09-15-the-radar-gun-may-have-been-rigged",
@@ -114,9 +143,36 @@ shows.
          "title": "The first automated humanoid production line ships its first unit on foot",
          "claim": "XPENG launched the world's first automated humanoid production line, robots "
                   "making robots, and its first unit walked off the line unassisted.",
+         "description": "The author's atoms-as-fast-as-bits beat: the loop's first fully automated "
+                        "instance in hardware, where the line's product is also its workforce.",
          "domain": "robotics", "actor": ["xpeng"],
+         "about": [B + "systems/xpeng-iron"],
          "evidences": ["physical-recursion", "recursive-self-improvement", "capital-takes-the-plant"],
-         "supersedes": [B + "developments/2026-09-12-serious-crashes-cut-ninety-two-percent"]},
+         "supersedes": [B + "developments/2026-09-12-serious-crashes-cut-ninety-two-percent",
+                        B + "developments/2025-12-26-linkerbot-self-assembly"],
+         "relatedTo": [B + "developments/2026-09-06-hands-catch-up-to-the-head",
+                       B + "developments/2026-06-01-a-lab-starts-hiring-for-robots",
+                       B + "developments/2025-12-20-catl-humanoid-battery-lines"],
+         "tags": ["robotics", "rsi"],
+         "supporting_text": "first automated humanoid production line",
+         "sources": [{"id": "he-xiaopeng-humanoid-production-line-x",
+                      "resource": "https://x.com/xiaopenghexpeng/status/2097135503015616798",
+                      "title": "He Xiaopeng on X: XPENG launches the world's first automated humanoid "
+                               "production line",
+                      "author": "human:he-xiaopeng"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "The announcement came on X from XPENG's He Xiaopeng "
+                 "([post](https://x.com/xiaopenghexpeng/status/2097135503015616798)): the world's "
+                 "first automated humanoid production line, with humanoids assembling humanoids, "
+                 "and its first [IRON](/systems/xpeng-iron.md) walking off the line under its own "
+                 "control. It is the corpus's most complete instance of "
+                 "[physical recursion](/themes/physical-recursion.md), the loop the newsletter "
+                 "first sketched when "
+                 "[CATL put humanoids on its battery lines](/developments/2025-12-20-catl-humanoid-battery-lines.md) "
+                 "and [Linkerbot humanoids assembled and tested their own hands](/developments/2025-12-26-linkerbot-self-assembly.md) "
+                 "in December 2025. It lands nine days after "
+                 "[frontier models more than doubled a rival on robot-arm tasks](/developments/2026-09-06-hands-catch-up-to-the-head.md), "
+                 "the software half of the same convergence."},
         {"id": "2026-09-15-the-first-official-admission-of-weapons-in-orbit",
          "title": "An air force secretary makes the first official admission of weapons in orbit",
          "claim": "Air Force Secretary Troy Meink made the first official admission that the US "

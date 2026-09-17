@@ -69,15 +69,64 @@ this issue reports, and the [themes](/themes/compute-capital-stack.md) they feed
 
     "organizations": [
         {"id": "google-deepmind", "type": "Organization", "title": "Google DeepMind",
-         "resource": "https://deepmind.google/", "body": "Google's AI research organization."},
+         "description": "Google's AI research arm, source of the corpus's opening coordination-tax result and builder of the AlphaEvolve discovery loop.",
+         "resource": "https://deepmind.google/",
+         "sameAs": ["http://www.wikidata.org/entity/Q15733006"],
+         "tags": ["frontier-lab", "research-lab"],
+         "body": "Google's AI research organization. It opens the corpus with the "
+                 "[coordination-tax measurement](/developments/2025-12-11-deepmind-coordination-tax.md) "
+                 "that gives issue 001 its thesis. In the recursive-self-improvement strand it is the "
+                 "builder of [AlphaEvolve](/systems/alphaevolve.md), the evolutionary coding agent that "
+                 "[found an activation function tripling ReLU](/developments/2026-02-08-alphaevolve-finds-new-activations.md), "
+                 "and the lab whose chief strategy officer said "
+                 "[recursive self-improvement is what justifies the capex](/developments/2026-08-04-recursive-self-improvement-justifies-the-capex.md)."},
         {"id": "anthropic", "type": "Organization", "title": "Anthropic",
-         "resource": "https://www.anthropic.com/", "body": "Frontier model developer."},
+         "description": "Frontier lab behind Claude and Claude Code, the corpus's most frequent actor and the source of its most explicit first-person accounts of a model writing the lab's own code.",
+         "resource": "https://www.anthropic.com/",
+         "sameAs": ["http://www.wikidata.org/entity/Q116758847"],
+         "tags": ["frontier-lab"],
+         "body": "Frontier model developer behind [Claude](/systems/claude.md) and Claude Code. It enters "
+                 "the corpus with a [2%-per-month slope on SWE-bench Verified](/developments/2025-12-11-anthropic-swebench-trajectory.md). "
+                 "In the recursive-self-improvement strand it supplies the report that Claude Code's creator "
+                 "[had not opened an IDE in a month](/developments/2025-12-27-cherny-200-pull-requests.md), "
+                 "the confirmation that [effectively all of its product code is written by Claude](/developments/2026-02-08-100pct-of-product-code.md), "
+                 "and its alignment lead's statement that "
+                 "[recursive self-improvement is a present phenomenon](/developments/2026-03-16-rsi-is-a-present-phenomenon.md)."},
         {"id": "google", "type": "Organization", "title": "Google",
-         "resource": "https://about.google/", "body": "Parent of DeepMind; ships Gemini."},
+         "description": "Alphabet's operating company: parent of DeepMind, developer of Gemini, Gemma and the TPU, and the actor whose researchers and co-founder the corpus reports steering toward the loop.",
+         "resource": "https://about.google/",
+         "sameAs": ["http://www.wikidata.org/entity/Q95"],
+         "tags": ["big-tech"],
+         "body": "Parent of [Google DeepMind](/organizations/google-deepmind.md); ships [Gemini](/systems/gemini.md), "
+                 "the open-weight [Gemma](/systems/gemma.md) family and the [TPU](/hardware/google-tpu.md). "
+                 "It enters the corpus with the [Gemini text-to-speech upgrade](/developments/2025-12-11-gemini-tts-upgrade.md). "
+                 "In the recursive-self-improvement strand it appears for Noam Shazeer's "
+                 "[even odds that Gemini makes the next breakthrough](/developments/2025-12-19-shazeer-5050-gemini-breakthrough.md), "
+                 "the [internal-RL inner-optimizer result](/developments/2025-12-27-internal-rl-inner-optimizers.md), and the report that "
+                 "[Sergey Brin is steering resources toward recursive self-improvement](/developments/2026-08-13-a-cofounder-steers-toward-recursive-self-improvement.md)."},
         {"id": "microsoft", "type": "Organization", "title": "Microsoft",
-         "resource": "https://www.microsoft.com/", "body": "Ships Copilot."},
+         "description": "Hyperscaler that ships Copilot, hosts OpenAI on Azure, and in this corpus designs a quantum chip with its own agent.",
+         "resource": "https://www.microsoft.com/",
+         "sameAs": ["http://www.wikidata.org/entity/Q2283"],
+         "tags": ["big-tech"],
+         "body": "Ships [Copilot](/systems/copilot.md) and is OpenAI's principal cloud and capital partner. It enters "
+                 "the corpus with the finding that [health was Copilot's dominant mobile topic](/developments/2025-12-11-copilot-health-dominant-topic.md). "
+                 "In the recursive-self-improvement strand it appears for "
+                 "[Majorana 2, a topological quantum chip designed with its own agentic AI](/developments/2026-06-03-a-quantum-chip-designed-by-an-agent.md), "
+                 "and as the platform through which "
+                 "[Meta burns trillions of tokens a week writing its own software](/developments/2026-08-21-trillions-of-tokens-a-week-to-write-its-own-software.md)."},
         {"id": "openai", "type": "Organization", "title": "OpenAI",
-         "resource": "https://openai.com/", "body": "Ships ChatGPT."},
+         "description": "Frontier lab behind ChatGPT, the GPT-5 line and Codex; the source of the corpus's first recursive-self-improvement report and of its most explicit statements that self-improving systems are in production.",
+         "resource": "https://openai.com/",
+         "sameAs": ["http://www.wikidata.org/entity/Q21708200"],
+         "tags": ["frontier-lab"],
+         "body": "Ships [ChatGPT](/systems/chatgpt.md), the GPT-5 line and [Codex](/systems/codex.md). It enters the "
+                 "corpus with [ChatGPT as the most downloaded iOS app](/developments/2025-12-11-chatgpt-most-downloaded-ios.md). "
+                 "The recursive-self-improvement strand opens with its "
+                 "[Codex babysitting its own training runs](/developments/2025-12-15-codex-babysits-own-training.md), "
+                 "followed by [Altman confirming self-improving systems in production](/developments/2025-12-28-altman-self-improving-in-production.md) "
+                 "and by [GPT-5.3-Codex](/systems/gpt-5-3-codex.md), the model it described as "
+                 "[instrumental in creating itself](/developments/2026-02-06-gpt53-codex-creates-itself.md)."},
         {"id": "polymathic-ai", "type": "Organization", "title": "Polymathic AI",
          "resource": "https://polymathic-ai.org/",
          "body": "Collaboration training foundation models on scientific rather than text data."},
@@ -92,13 +141,51 @@ this issue reports, and the [themes](/themes/compute-capital-stack.md) they feed
         {"id": "supermicro", "type": "Organization", "title": "Supermicro",
          "resource": "https://www.supermicro.com/", "body": "Server and datacenter systems builder."},
         {"id": "xai", "type": "Organization", "title": "xAI",
-         "resource": "https://x.ai/", "body": "Frontier model developer; builds Grok."},
+         "description": "Elon Musk's frontier lab, builder of Grok and co-builder of the Memphis gigawatt datacenter; acquired by SpaceX in February 2026.",
+         "resource": "https://x.ai/",
+         "sameAs": ["http://www.wikidata.org/entity/Q120599684"],
+         "tags": ["frontier-lab"],
+         "body": "Frontier model developer; builds [Grok](/systems/grok.md) and, with Supermicro, the "
+                 "[Memphis gigawatt datacenter](/facilities/memphis-gigawatt-datacenter.md). It enters the corpus with "
+                 "[Tesla using Grok to design its chips](/developments/2025-12-11-tesla-grok-chip-design.md). In the "
+                 "recursive-self-improvement strand it appears for the report that it "
+                 "[used Claude to build Grok until cut off](/developments/2026-01-10-xai-used-claude-to-build-grok.md), for "
+                 "[a co-founder's resignation warning of live loops within a year](/developments/2026-02-11-xai-cofounder-resigns-warning.md), "
+                 "and for Grok 4.3 [improving every few days](/developments/2026-05-17-models-improve-every-few-days.md). "
+                 "It was [acquired by SpaceX](/developments/2026-02-03-spacex-acquires-xai.md) in February 2026."},
         {"id": "epoch-ai", "type": "Organization", "title": "Epoch AI",
-         "resource": "https://epoch.ai/", "body": "Research group measuring AI compute and economics."},
+         "description": "Research institute that measures AI compute, cost and capability trends; the corpus's most-cited source of rates and doubling times.",
+         "resource": "https://epoch.ai/",
+         "tags": ["research-lab", "nonprofit"],
+         "body": "Research group measuring AI compute and economics. It enters the corpus with the estimate that "
+                 "[memory is nearly half the manufacturing cost of a B200](/developments/2025-12-11-memory-half-b200-cost.md), "
+                 "then publishes the [autonomous time horizon](/benchmarks/autonomous-time-horizon.md) behind issue 003's "
+                 "[4.9-hour state of the art](/developments/2025-12-13-autonomy-time-horizon-sota.md) and the finding that "
+                 "[global AI compute doubles every seven months](/developments/2026-01-11-compute-doubles-every-7-months.md). "
+                 "In the recursive-self-improvement strand it is the measurer rather than an actor: the rates against "
+                 "which the loop's claims are checked."},
         {"id": "nvidia", "type": "Organization", "title": "NVIDIA",
-         "resource": "https://www.nvidia.com/", "body": "Designs the accelerators the buildout runs on."},
+         "description": "Dominant accelerator designer whose GPUs the buildout runs on; in this corpus its cost structure, its software moat and its post-training stack are all reported being reworked.",
+         "resource": "https://www.nvidia.com/",
+         "sameAs": ["http://www.wikidata.org/entity/Q182477"],
+         "tags": ["chipmaker", "big-tech"],
+         "body": "Designs the accelerators the buildout runs on. Issue 001 carries Epoch AI's estimate that "
+                 "[memory is nearly half the manufacturing cost of a B200](/developments/2025-12-11-memory-half-b200-cost.md). "
+                 "In the recursive-self-improvement strand it "
+                 "[sees no wall in post-training and opens Nemotron 3 Super](/developments/2026-03-12-nemotron-3-super-no-wall.md), "
+                 "and it is the incumbent whose software advantage narrows when "
+                 "[agents write the kernels for a challenger GPU](/developments/2026-07-04-agents-write-the-kernels-closing-a-software-gap.md)."},
         {"id": "tesla", "type": "Organization", "title": "Tesla",
-         "resource": "https://www.tesla.com/", "body": "Uses Grok in its own silicon design."},
+         "description": "Elon Musk's vehicle, robotics and energy company; in this corpus a chip designer using Grok, and an early deployer of unsupervised robotaxis and Optimus.",
+         "resource": "https://www.tesla.com/",
+         "sameAs": ["http://www.wikidata.org/entity/Q478214"],
+         "tags": ["big-tech"],
+         "body": "Uses Grok in its own silicon design. It enters the corpus with Musk confirming that "
+                 "[Grok is used to design its chips](/developments/2025-12-11-tesla-grok-chip-design.md), the corpus's first "
+                 "instance of a model designing the silicon that will run models. Later items include "
+                 "[unsupervised robotaxis in Austin](/developments/2025-12-15-unsupervised-robotaxis-austin.md), "
+                 "[Fremont converting to Optimus production](/developments/2026-01-31-fremont-converts-to-optimus.md) and the "
+                 "[terafab plan](/developments/2026-01-29-tesla-terafab.md) that names chip production as its bottleneck."},
         {"id": "unsloth-ai", "type": "Organization", "title": "Unsloth AI",
          "resource": "https://unsloth.ai/", "body": "Ships training kernels for open-weight models."},
         {"id": "fervo-energy", "type": "Organization", "title": "Fervo Energy",
@@ -106,7 +193,17 @@ this issue reports, and the [themes](/themes/compute-capital-stack.md) they feed
         {"id": "rainmaker", "type": "Organization", "title": "Rainmaker Technology",
          "resource": "https://makerain.com/", "body": "Cloud seeding and weather modification."},
         {"id": "spacex", "type": "Organization", "title": "SpaceX",
-         "resource": "https://www.spacex.com/", "body": "Operates Starlink."},
+         "description": "Elon Musk's launch and satellite company, operator of Starlink; in this corpus the vehicle for orbit becoming a compute layer, and xAI's acquirer.",
+         "resource": "https://www.spacex.com/",
+         "sameAs": ["http://www.wikidata.org/entity/Q193701"],
+         "tags": ["big-tech"],
+         "body": "Operates Starlink. It enters the corpus with Musk's plan to "
+                 "[scale Starlink satellites past 100 kW for AI compute](/developments/2025-12-11-starlink-100kw-compute.md), "
+                 "followed two days later by [10,000 satellites by February](/developments/2025-12-13-starlink-10000-satellites.md); "
+                 "it later [files for a million satellites](/developments/2026-02-02-spacex-files-for-a-million-satellites.md) "
+                 "and [acquires xAI](/developments/2026-02-03-spacex-acquires-xai.md), which is how it enters the "
+                 "recursive-self-improvement strand: as parent of the lab whose Grok is reported "
+                 "[improving every few days](/developments/2026-05-17-models-improve-every-few-days.md)."},
         {"id": "blue-origin", "type": "Organization", "title": "Blue Origin",
          "resource": "https://www.blueorigin.com/", "body": "Launch and orbital infrastructure."},
         {"id": "starcloud", "type": "Organization", "title": "Starcloud",
@@ -135,14 +232,49 @@ this issue reports, and the [themes](/themes/compute-capital-stack.md) they feed
          "body": "Gemini's speech synthesis, upgraded for context-aware pacing and "
                  "consistency across multiple speakers."},
         {"id": "grok", "type": "AISystem", "title": "Grok",
+         "description": "xAI's frontier model and chatbot, which the corpus tracks from chip-design "
+                        "work at Tesla to Musk's claim that it could exceed human intelligence in 2026.",
          "developed_by": ["https://nicholsn.github.io/innermost-loop-kb/organizations/xai"], "modality": "text",
-         "body": "xAI's frontier model, reported in use inside Tesla's chip design."},
+         "resource": "https://grok.com/",
+         "sameAs": ["http://www.wikidata.org/entity/Q123361035"],
+         # tags waived: no controlled entity tag (ENRICH_RULES) describes a general-purpose chatbot.
+         "body": "Grok is xAI's frontier model and the assistant served at [grok.com](https://grok.com/). "
+                 "In this corpus it first appears as a tool Tesla uses to "
+                 "[design its own chips](/developments/2025-12-11-tesla-grok-chip-design.md), an early "
+                 "case of a model shaping the silicon models run on; a week later Musk told xAI staff it "
+                 "[could exceed human intelligence in 2026](/developments/2025-12-18-musk-grok-exceeds-human-2026.md). "
+                 "The recursive thread folds back on itself in January, when xAI was reported to have "
+                 "[used Claude to build Grok](/developments/2026-01-10-xai-used-claude-to-build-grok.md) "
+                 "until Anthropic revoked access."},
         {"id": "chatgpt", "type": "AISystem", "title": "ChatGPT",
+         "description": "OpenAI's consumer assistant, the corpus's proxy for how fast chat has displaced "
+                        "the GUI as the mass-market interface.",
          "developed_by": ["https://nicholsn.github.io/innermost-loop-kb/organizations/openai"], "modality": "text",
-         "body": "The consumer assistant that ends 2025 as the most downloaded iOS app."},
+         "resource": "https://chatgpt.com/",
+         "sameAs": ["http://www.wikidata.org/entity/Q115564437"],
+         # tags waived: no controlled entity tag (ENRICH_RULES) describes a general-purpose chatbot.
+         "body": "ChatGPT is OpenAI's chat assistant, served at [chatgpt.com](https://chatgpt.com/). "
+                 "The corpus reads it as a distribution fact more than a model: it closed 2025 as the "
+                 "[most downloaded iOS app](/developments/2025-12-11-chatgpt-most-downloaded-ios.md), "
+                 "its release was linked to a "
+                 "[6% rise in new business formation](/developments/2025-12-14-chatgpt-business-formation.md), "
+                 "and OpenAI opened it to "
+                 "[developer-submitted inline apps](/developments/2025-12-18-chatgpt-inline-apps.md), "
+                 "turning the chat window into the platform."},
         {"id": "copilot", "type": "AISystem", "title": "Microsoft Copilot",
+         "description": "Microsoft's AI assistant, whose own 2025 usage report made health the leading "
+                        "mobile topic.",
          "developed_by": ["https://nicholsn.github.io/innermost-loop-kb/organizations/microsoft"], "modality": "text",
-         "body": "Microsoft's assistant, whose dominant mobile topic in 2025 was health."},
+         "resource": "https://copilot.microsoft.com/",
+         "sameAs": ["http://www.wikidata.org/entity/Q116793893"],
+         # tags waived: no controlled entity tag (ENRICH_RULES) describes a general-purpose chatbot.
+         "body": "Microsoft Copilot is Microsoft's consumer AI assistant "
+                 "([copilot.microsoft.com](https://copilot.microsoft.com/)). Its place in this corpus "
+                 "is the human-interface thread: Microsoft's usage report found that "
+                 "[health questions were the dominant mobile topic in 2025](/developments/2025-12-11-copilot-health-dominant-topic.md), "
+                 "which the newsletter read as a chatbot becoming primary care for the masses. It "
+                 "reappears in August among the agent products "
+                 "[given their own channels in Slack Code](/developments/2026-08-21-trillions-of-tokens-a-week-to-write-its-own-software.md)."},
         {"id": "wham", "type": "AISystem", "title": "WhAM",
          "developed_by": ["https://nicholsn.github.io/innermost-loop-kb/organizations/project-ceti"], "modality": "bioacoustics",
          "body": "A model that generates synthetic sperm whale codas."},
@@ -159,9 +291,23 @@ this issue reports, and the [themes](/themes/compute-capital-stack.md) they feed
 
     "benchmarks": [
         {"id": "swe-bench-verified", "type": "Benchmark", "title": "SWE-bench Verified",
+         "description": "OpenAI's human-validated 500-task subset of SWE-bench, the corpus's reference "
+                        "yardstick for agentic software engineering and the saturation clock the "
+                        "newsletter watches.",
+         "published_by": ["https://nicholsn.github.io/innermost-loop-kb/organizations/openai"],
          "measures_capability": "resolving real GitHub issues in software repositories",
-         "body": "A human-validated subset of SWE-bench, the reference test for "
-                 "agentic software engineering."},
+         "resource": "https://openai.com/index/introducing-swe-bench-verified/",
+         "tags": ["coding-agent"],
+         "body": "SWE-bench Verified is the human-validated subset of SWE-bench that OpenAI released "
+                 "in 2024 so that scores reflect solvable, unambiguous GitHub issues "
+                 "([announcement](https://openai.com/index/introducing-swe-bench-verified/)). "
+                 "The corpus uses it as a clock: the first issue reported Anthropic's models "
+                 "[improving about 2% a month](/developments/2025-12-11-anthropic-swebench-trajectory.md) "
+                 "toward saturation by late 2026, and Epoch AI later found "
+                 "[15% of the score available from prompt restructuring alone](/developments/2025-12-28-epoch-15pct-from-prompting.md). "
+                 "Its harder sibling is [SWE-Bench Pro](/benchmarks/swe-bench-pro.md), where "
+                 "[a self-play bug-repair agent](/developments/2025-12-25-meta-self-play-bug-repair.md) "
+                 "and later frontier models are scored."},
         {"id": "facts-benchmark", "type": "Benchmark", "title": "FACTS Benchmark",
          "published_by": ["https://nicholsn.github.io/innermost-loop-kb/organizations/google-deepmind"],
          "measures_capability": "factual grounding and verifiability of model outputs",

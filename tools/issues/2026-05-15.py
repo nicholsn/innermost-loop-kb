@@ -18,7 +18,24 @@ competitors have changed.
     },
     "organizations": [
         {"id": "prime-intellect-lab", "type": "Organization", "title": "Prime Intellect",
-         "resource": "https://www.primeintellect.ai/"},
+         "description": "San Francisco lab building open, decentralized training infrastructure, "
+                        "training environments and research agents, which handed its idle compute to "
+                        "Codex and Claude Code to attack the NanoGPT speedrun.",
+         "resource": "https://www.primeintellect.ai/",
+         "sameAs": ["http://www.wikidata.org/entity/Q137409007"],
+         "tags": ["startup", "research-lab", "open-source"],
+         "body": "Prime Intellect builds decentralized training infrastructure, open training "
+                 "environments and research agents. In this corpus it is the lab that gave "
+                 "[Codex](/systems/codex.md) and [Claude Code](/systems/claude-code.md) some 14,000 "
+                 "H200 hours of idle compute and let them "
+                 "[beat the human baseline on the NanoGPT speedrun optimizer track](/developments/2026-05-15-agents-beat-the-human-speedrun-baseline.md), "
+                 "and five days later shipped the "
+                 "[4,504-task environment](/developments/2026-05-20-gemini-for-science.md) that "
+                 "tripled small-model tool-use scores through self-play. It is the same company "
+                 "as [prime-intellect](/organizations/prime-intellect.md), the older id under which "
+                 "the corpus records its first appearance, the January "
+                 "[Recursive Language Model](/developments/2026-01-02-prime-intellect-rlm.md); the "
+                 "two entries are one organization, pending a merge onto the older id."},
         {"id": "datadog", "type": "Organization", "title": "Datadog",
          "resource": "https://www.datadoghq.com/"},
         {"id": "zyphra-lab", "type": "Organization", "title": "Zyphra",
@@ -30,17 +47,65 @@ competitors have changed.
         {"id": "gates-foundation", "type": "Organization", "title": "Gates Foundation",
          "resource": "https://www.gatesfoundation.org/"},
     ],
+    "systems": [
+        {"id": "claude-opus-4-7", "type": "AISystem", "title": "Claude Opus 4.7",
+         "developed_by": [B + "organizations/anthropic"], "modality": "text",
+         "description": "Anthropic's Opus-tier frontier model, which held the NanoGPT speedrun "
+                        "optimizer-track record at 2,930 steps after Prime Intellect's autonomous "
+                        "research run.",
+         "resource": "https://www.anthropic.com/news/claude-opus-4-7",
+         "evaluated_on": [B + "benchmarks/nanogpt-speedrun"],
+         "tags": ["reasoning-model"],
+         "body": "Claude Opus 4.7 is Anthropic's successor to [Claude Opus 4.6](/systems/claude-opus-4-6.md), "
+                 "described in its launch copy as a notable improvement in advanced software "
+                 "engineering ([announcement](https://www.anthropic.com/news/claude-opus-4-7)). "
+                 "In this corpus it enters as the model behind [Claude Code](/systems/claude-code.md) "
+                 "in Prime Intellect's run, where it set the "
+                 "[2,930-step optimizer-track record](/developments/2026-05-15-agents-beat-the-human-speedrun-baseline.md) "
+                 "on the [NanoGPT speedrun](/benchmarks/nanogpt-speedrun.md) after both agents beat "
+                 "the human baseline."},
+    ],
     "developments": [
         {"id": "2026-05-15-agents-beat-the-human-speedrun-baseline",
          "title": "Agents given idle compute beat the human speedrun baseline",
          "claim": "Prime Intellect handed Codex and Claude Code its idle compute to attack the "
                   "NanoGPT speedrun optimizer track, and after some 14,000 GPU-hours both agents "
                   "beat the human baseline, with Opus 4.7 holding the record at 2,930 steps.",
+         "description": "The speedrun the corpus has tracked since December as a human sport is "
+                        "won here by agents, turning the leaderboard from a measure of researchers "
+                        "into a measure of the compute handed to models.",
          "domain": "models", "actor": ["prime-intellect-lab", "openai", "anthropic"],
-         "score": "14,000 GPU-hours",
+         "score": "14,000 H200 hours / 2,930 steps",
+         "occurred_on": "2026-05-14",
+         "about": [B + "benchmarks/nanogpt-speedrun", B + "systems/codex",
+                   B + "systems/claude-code", B + "systems/claude-opus-4-7"],
          "evidences": ["recursive-self-improvement", "benchmark-saturation"],
-         "supersedes": [B + "developments/2026-05-14-recursive-superintelligence-raises-650m"],
-         "body": "The speedrun has been in this corpus since December as a human sport."},
+         "supersedes": [B + "developments/2026-05-14-recursive-superintelligence-raises-650m",
+                        B + "developments/2026-03-08-nanogpt-86s"],
+         "relatedTo": [B + "developments/2025-12-29-karpathy-claude-runs-nanochat",
+                       B + "developments/2026-03-09-autoresearch-650-experiments",
+                       B + "developments/2026-07-10-rule-lawyering-as-a-barrier-to-self-improvement"],
+         "tags": ["rsi", "speedrun", "autonomous-research", "ai-r-and-d"],
+         "supporting_text": "both agents beat the human baseline, with Opus 4.7 now holding the record",
+         "sources": [{"id": "prime-intellect-auto-nanogpt",
+                      "resource": "https://www.primeintellect.ai/auto-nanogpt",
+                      "title": "Autonomous AI research for nanogpt speedrun",
+                      "author": "org:prime-intellect-lab", "last_modified": "2026-05-14"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "The speedrun has been in this corpus since December as a human sport. Prime "
+                 "Intellect let [Codex](/systems/codex.md) and [Claude Code](/systems/claude-code.md) "
+                 "iterate autonomously on the [NanoGPT speedrun](/benchmarks/nanogpt-speedrun.md) "
+                 "optimizer track for two weeks on idle H200s, roughly 10,000 runs and some 14,000 "
+                 "GPU-hours, after which both agents had beaten the human baseline and "
+                 "[Claude Opus 4.7](/systems/claude-opus-4-7.md) held the record at 2,930 steps "
+                 "([write-up](https://www.primeintellect.ai/auto-nanogpt)). The competitors have "
+                 "changed: every earlier record in the series, down to "
+                 "[86.8 seconds in March](/developments/2026-03-08-nanogpt-86s.md), was set by "
+                 "people, and the lab's own report is as much about where autonomous research "
+                 "agents break down as where they win. It sits between Karpathy's "
+                 "[650-experiment autoresearch loop](/developments/2026-03-09-autoresearch-650-experiments.md) "
+                 "of March and the [rule-lawyering](/developments/2026-07-10-rule-lawyering-as-a-barrier-to-self-improvement.md) "
+                 "a July speedrun would expose as the next barrier."},
         {"id": "2026-05-15-a-meta-system-builds-its-own-harnesses",
          "title": "A meta-system builds its own harnesses and sets a coding record",
          "claim": "Poetiq turned its meta-system loose on a competitive coding benchmark, let it "

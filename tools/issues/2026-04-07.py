@@ -18,8 +18,21 @@ CENTERS. The cloud casts a local shadow.
 """,
     },
     "organizations": [
-        {"id": "unc", "type": "Organization", "title": "University of North Carolina",
-         "resource": "https://www.unc.edu/"},
+        {"id": "unc", "type": "Organization", "title": "University of North Carolina at Chapel Hill",
+         "description": "Public research university whose Chapel Hill researchers ran the corpus's "
+                        "72-hour unattended research loop that invented the Omni-SimpleMem agent "
+                        "memory system.",
+         "resource": "https://www.unc.edu/",
+         "sameAs": ["http://www.wikidata.org/entity/Q192334"],
+         "tags": ["university"],
+         "body": "The University of North Carolina at Chapel Hill is the flagship campus of the "
+                 "state's public university system. It enters this corpus once, as the home of "
+                 "the team whose autonomous research pipeline ran "
+                 "[roughly fifty experiments over three unsupervised days](/developments/2026-04-07-seventy-two-hours-fifty-experiments.md) "
+                 "and produced a long-context agent memory system that beat every hand-designed "
+                 "baseline, an early academic instance of the "
+                 "[recursive-self-improvement](/themes/recursive-self-improvement.md) loop the "
+                 "newsletter tracks."},
         {"id": "frontier-model-forum", "type": "Organization", "title": "Frontier Model Forum",
          "body": "Industry body through which labs share distillation-attack intelligence."},
         {"id": "henry-intelligent", "type": "Organization", "title": "Henry Intelligent Machines",
@@ -35,9 +48,40 @@ CENTERS. The cloud casts a local shadow.
          "claim": "UNC researchers let an AI run autonomously for 72 hours, during which it ran "
                   "fifty experiments and invented a long-context memory system that beats every "
                   "human-designed baseline.",
+         "description": "The author's 'scientist is now a subroutine' moment: an unattended loop "
+                        "is credited with inventing an architecture rather than tuning one, and "
+                        "its largest gains came from bug fixes and structural changes beyond the "
+                        "reach of AutoML.",
          "domain": "agents", "actor": ["unc"], "score": "72 hours / 50 experiments",
          "evidences": ["recursive-self-improvement", "automated-science"],
-         "supersedes": [B + "developments/2026-04-05-self-distillation-without-a-teacher"]},
+         "supersedes": [B + "developments/2026-04-05-self-distillation-without-a-teacher",
+                        B + "developments/2026-03-09-autoresearch-650-experiments"],
+         "relatedTo": [B + "developments/2026-02-12-alma-agents-design-their-own-memory",
+                       B + "developments/2026-03-31-bilevel-autoresearch"],
+         "tags": ["autonomous-research", "rsi", "ai-r-and-d"],
+         "supporting_text": "let an AI loose for 72 hours of autonomous research",
+         "sources": [{"id": "omni-simplemem-arxiv",
+                      "resource": "https://arxiv.org/abs/2604.01007",
+                      "title": "Omni-SimpleMem: Autoresearch-Guided Discovery of Lifelong Multimodal Agent Memory",
+                      "author": "org:unc"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "The paper behind the item is *Omni-SimpleMem* "
+                 "([arXiv 2604.01007](https://arxiv.org/abs/2604.01007)), from a UNC-led team: an "
+                 "autonomous research pipeline started from a naive agent-memory baseline and, with "
+                 "no human in the inner loop, executed roughly 50 experiments across two benchmarks "
+                 "over what the newsletter reports as 72 unattended hours, lifting F1 on LoCoMo from "
+                 "0.117 to 0.598 (+411%) and on Mem-Gallery from 0.254 to 0.797 (+214%) to reach "
+                 "state of the art on both. The authors stress that the biggest gains were bug "
+                 "fixes, architectural changes and prompt rewrites rather than hyperparameter "
+                 "tuning, which is what separates the run from AutoML. In the "
+                 "[recursive-self-improvement](/themes/recursive-self-improvement.md) trajectory it "
+                 "sits between Karpathy's "
+                 "[650-experiment autoresearch run](/developments/2026-03-09-autoresearch-650-experiments.md) "
+                 "and Anthropic's report the next day that Mythos "
+                 "[sped internal research up to 400x](/developments/2026-04-08-research-sped-up-400x.md); "
+                 "the target it optimized, agent memory, is the same one "
+                 "[ALMA](/developments/2026-02-12-alma-agents-design-their-own-memory.md) had agents "
+                 "meta-learn in February."},
         {"id": "2026-04-07-labs-share-distillation-intelligence",
          "title": "Rival labs begin sharing intelligence on distillation attacks",
          "claim": "OpenAI, Anthropic and Google are sharing intelligence through the Frontier "
