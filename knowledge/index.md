@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**198 of 233 issues** modelled, 2025-12-11 → 2026-09-07.
+**203 of 233 issues** modelled, 2025-12-11 → 2026-09-15.
 
 | | count |
 |---|---|
 | benchmarks | 42 |
-| developments | 2766 |
+| developments | 2826 |
 | facilities | 25 |
 | hardware | 12 |
-| issues | 198 |
-| organizations | 1013 |
+| issues | 203 |
+| organizations | 1030 |
 | people | 27 |
 | systems | 118 |
-| themes | 165 |
+| themes | 171 |
 
 ## Themes
 
@@ -174,6 +174,9 @@ trajectory rather than a pile of days.
 * [A false premise turns the real world into the game](themes/the-map-denies-the-territory.md) — first seen 2026-07-31
 * [Security measured in dollars per break](themes/jailbreak-cost-as-a-metric.md) — first seen 2026-08-01
 * [The field mourns rather than competes](themes/a-discipline-grieves.md) — first seen 2026-08-02
+* [Runtime you can afford beats capability you cannot](themes/duration-beats-quality.md) — first seen 2026-08-03
+* [The layer humans read stops being the layer that matters](themes/source-code-becomes-assembly.md) — first seen 2026-08-04
+* [Detection loses to generation at institutional scale](themes/the-proctor-loses-to-the-taker.md) — first seen 2026-08-04
 * [An agent acting for you is legally you](themes/an-agent-is-you.md) — first seen 2026-08-05
 * [Whole genomes designed from scratch](themes/biology-as-compile-target.md) — first seen 2026-08-06
 * [Judgment moves freely where weights cannot](themes/taste-is-unpoliced.md) — first seen 2026-08-06
@@ -203,9 +206,15 @@ trajectory rather than a pile of days.
 * [Formalizing all of mathematics as an infrastructure project](themes/the-genome-project-for-proof.md) — first seen 2026-09-06
 * [A lab describes its own system as grown](themes/grown-more-than-designed.md) — first seen 2026-09-07
 * [Agent-workdays per human workday](themes/the-intern-outworks-the-staff.md) — first seen 2026-09-07
+* [The supply of worthy problems is finite](themes/good-problems-are-non-renewable.md) — first seen 2026-09-12
+* [No one can be trusted becomes no one but us](themes/alignment-aristocracy.md) — first seen 2026-09-13
+* [Was the warning shot staged?](themes/pacing-provocation.md) — first seen 2026-09-15
 
 ## Issues
 
+* [Welcome to September 15, 2026](issues/2026-09-15.md) — An investigation alleges the escapes were an artifact of the evaluation.
+* [Welcome to September 13, 2026](issues/2026-09-13.md) — The first formal request to slow down comes from the people building it.
+* [Welcome to September 12, 2026](issues/2026-09-12.md) — A Millennium Prize problem falls in 88 hours, and the field fractures.
 * [Welcome to September 7, 2026](issues/2026-09-07.md) — The automated research intern is real and outworking the staff.
 * [Welcome to September 6, 2026](issues/2026-09-06.md) — Thirteen million lines of Lean for the first machine-checked Fermat proof.
 * [Welcome to September 4, 2026](issues/2026-09-04.md) — The first Critical cyber designation ships with the model.
@@ -223,7 +232,4 @@ trajectory rather than a pile of days.
 * [Welcome to August 12, 2026](issues/2026-08-12.md) — A model reaches the human baseline on a benchmark built to be impossible.
 * [Welcome to August 10, 2026](issues/2026-08-10.md) — Machine traffic passed human traffic a year early.
 * [Welcome to August 8, 2026](issues/2026-08-08.md) — A lab slows a release because it cannot rule out Critical cyber capability.
-* [Welcome to August 6, 2026](issues/2026-08-06.md) — Weights are policed; taste is not.
-* [Welcome to August 5, 2026](issues/2026-08-05.md) — The founders leave to build loops that improve their own algorithms first.
-* [Welcome to August 2, 2026](issues/2026-08-02.md) — A discipline grieves as its central act is automated.
-* … and 178 earlier issues
+* … and 183 earlier issues
