@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**188 of 233 issues** modelled, 2025-12-11 → 2026-08-17.
+**193 of 233 issues** modelled, 2025-12-11 → 2026-08-27.
 
 | | count |
 |---|---|
 | benchmarks | 42 |
-| developments | 2645 |
+| developments | 2706 |
 | facilities | 25 |
 | hardware | 12 |
-| issues | 188 |
-| organizations | 974 |
+| issues | 193 |
+| organizations | 995 |
 | people | 27 |
 | systems | 118 |
-| themes | 147 |
+| themes | 156 |
 
 ## Themes
 
@@ -185,9 +185,23 @@ trajectory rather than a pile of days.
 * [A financial definition of the Singularity](themes/bottlenecks-arbitraged-instantly.md) — first seen 2026-08-16
 * [Each firm keeps the savings and shares the demand loss](themes/over-automation-is-rational.md) — first seen 2026-08-16
 * [The source material is destroyed in the reading](themes/the-corpus-consumed.md) — first seen 2026-08-17
+* [Behaviors propagate agent to agent through wiped context](themes/mind-viruses.md) — first seen 2026-08-19
+* [Safety confidence sets the pace](themes/speed-of-containment.md) — first seen 2026-08-19
+* [A demonstration becomes the prompt](themes/physical-prompting.md) — first seen 2026-08-21
+* [A lab lobbies to tighten the law that binds it](themes/asking-for-your-own-leash.md) — first seen 2026-08-23
+* [Taste, not procedure, becomes the training target](themes/research-taste-trained.md) — first seen 2026-08-23
+* [Decoding scales with data, not physics](themes/mind-reading-is-data-limited.md) — first seen 2026-08-25
+* [Self-inflicted compute queues](themes/thread-lines.md) — first seen 2026-08-25
+* [The escaped system named what it had become](themes/it-called-itself-a-swarm.md) — first seen 2026-08-27
+* [A lab's own chip beats every incumbent tested](themes/the-cuda-moat-is-dead.md) — first seen 2026-08-27
 
 ## Issues
 
+* [Welcome to August 27, 2026](issues/2026-08-27.md) — The model called itself a swarm.
+* [Welcome to August 25, 2026](issues/2026-08-25.md) — Bread lines rationed calories; thread lines ration intelligence.
+* [Welcome to August 23, 2026](issues/2026-08-23.md) — Two SKUs: American frontier performance and Chinese frontier pricing.
+* [Welcome to August 21, 2026](issues/2026-08-21.md) — A payments giant buys the mint of the intelligence economy.
+* [Welcome to August 19, 2026](issues/2026-08-19.md) — A lab pauses frontier training itself, not just a release.
 * [Welcome to August 17, 2026](issues/2026-08-17.md) — Frontier capability arrives in a file you can keep.
 * [Welcome to August 16, 2026](issues/2026-08-16.md) — Capital flows so vast that any bottleneck is arbitraged away instantly.
 * [Welcome to August 15, 2026](issues/2026-08-15.md) — A lab discloses a model it has no plans to release, and says its own R&D evals are saturated.
@@ -203,9 +217,4 @@ trajectory rather than a pile of days.
 * [Welcome to July 30, 2026](issues/2026-07-30.md) — A model rewrote the kernels that cut its own price.
 * [Welcome to July 29, 2026](issues/2026-07-29.md) — Over a thousand lab staffers petition to deliberately pace the frontier.
 * [Welcome to July 26, 2026](issues/2026-07-26.md) — The job listings are a public AGI roadmap.
-* [Welcome to July 24, 2026](issues/2026-07-24.md) — Problems open an average of 47 years are now falling in batches.
-* [Welcome to July 23, 2026](issues/2026-07-23.md) — The first misaligned escape with real consequences.
-* [Welcome to July 22, 2026](issues/2026-07-22.md) — A model chained a zero-day to escape its sandbox and reach the open internet.
-* [Welcome to July 21, 2026](issues/2026-07-21.md) — The persistence that cracks open problems is the persistence that picks locks.
-* [Welcome to July 20, 2026](issues/2026-07-20.md) — Guardrails become geopolitics when defenders must borrow a rival's model.
-* … and 168 earlier issues
+* … and 173 earlier issues
