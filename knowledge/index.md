@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**148 of 233 issues** modelled, 2025-12-11 → 2026-06-26.
+**153 of 233 issues** modelled, 2025-12-11 → 2026-07-02.
 
 | | count |
 |---|---|
 | benchmarks | 42 |
-| developments | 2162 |
+| developments | 2225 |
 | facilities | 25 |
 | hardware | 12 |
-| issues | 148 |
-| organizations | 836 |
+| issues | 153 |
+| organizations | 858 |
 | people | 27 |
 | systems | 118 |
-| themes | 98 |
+| themes | 105 |
 
 ## Themes
 
@@ -136,9 +136,21 @@ trajectory rather than a pile of days.
 * [The model joins the team](themes/the-persistent-colleague.md) — first seen 2026-06-24
 * [The harness writes itself](themes/self-authored-scaffolding.md) — first seen 2026-06-25
 * [The public frontier detaches from the real one](themes/public-internal-divergence.md) — first seen 2026-06-26
+* [Models cheat their way off the scoreboard](themes/cheating-breaks-the-ruler.md) — first seen 2026-06-27
+* [Clearance replaces compute as the scarce input](themes/clearance-as-bottleneck.md) — first seen 2026-06-27
+* [Frontier science from a garage](themes/garage-scale-discovery.md) — first seen 2026-06-28
+* [Weights become the asset worth owning](themes/own-your-own-weights.md) — first seen 2026-06-29
+* [Efficiency becomes the unit of merit](themes/intelligence-per-watt.md) — first seen 2026-07-01
+* [A replicator built rather than inherited](themes/built-not-inherited.md) — first seen 2026-07-02
+* [Comprehension, not proof, becomes scarce](themes/understanding-as-the-scarce-good.md) — first seen 2026-07-02
 
 ## Issues
 
+* [Welcome to July 2, 2026](issues/2026-07-02.md) — A synthetic cell grows, copies its genome and divides.
+* [Welcome to July 1, 2026](issues/2026-07-01.md) — The export controls lift and the models go back out worldwide.
+* [Welcome to June 29, 2026](issues/2026-06-29.md) — Owning your own weights becomes the thing worth owning.
+* [Welcome to June 28, 2026](issues/2026-06-28.md) — The plateau moves out of sight.
+* [Welcome to June 27, 2026](issues/2026-06-27.md) — The scarcest input to frontier intelligence is no longer compute.
 * [Welcome to June 26, 2026](issues/2026-06-26.md) — Throttling release slows shipping, not training.
 * [Welcome to June 25, 2026](issues/2026-06-25.md) — An agent mines its own weaknesses and rewrites its harness.
 * [Welcome to June 24, 2026](issues/2026-06-24.md) — The mission shifts from finding vulnerabilities to patching them.
@@ -154,9 +166,4 @@ trajectory rather than a pile of days.
 * [Welcome to June 10, 2026](issues/2026-06-10.md) — For the first time the makers ration the recursion.
 * [Welcome to June 9, 2026](issues/2026-06-09.md) — The labs preview their intentions before they ship their intelligence.
 * [Welcome to June 8, 2026](issues/2026-06-08.md) — Medicine may start buying back more than a year of life per year.
-* [Welcome to June 7, 2026](issues/2026-06-07.md) — The state, the left and the labs all reach for the same equity.
-* [Welcome to June 5, 2026](issues/2026-06-05.md) — A lab publishes the evidence that its own work is already recursive.
-* [Welcome to June 4, 2026](issues/2026-06-04.md) — Bots overtake humans in online traffic for the first time.
-* [Welcome to June 3, 2026](issues/2026-06-03.md) — Washington chooses testing over licensing.
-* [Welcome to June 2, 2026](issues/2026-06-02.md) — The gap between frontier models is now measured in multiples per quarter.
-* … and 128 earlier issues
+* … and 133 earlier issues
