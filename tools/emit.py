@@ -118,7 +118,11 @@ def emit(spec: dict) -> dict:
 
     issue = spec["issue"]
     date = issue["date"]
-    src = {"id": f"iml-{date}", "resource": issue["url"], "title": issue["title"],
+    # Feature essays share a publication date with that day's regular issue, so
+    # the file is keyed by an explicit slug when one is given, and by the date
+    # otherwise - which keeps every daily issue at issues/<date>.md as before.
+    slug = issue.get("slug", date)
+    src = {"id": f"iml-{slug}", "resource": issue["url"], "title": issue["title"],
            "author": "human:alex-wissner-gross", "last_modified": date}
 
     # -- entities: written once, reused by every later issue ----------------
@@ -144,7 +148,7 @@ def emit(spec: dict) -> dict:
     # -- the issue itself ---------------------------------------------------
     dev_ids = [d["id"] for d in spec.get("developments", [])]
     bump("issue", write(
-        f"issues/{date}.md",
+        f"issues/{slug}.md",
         {
             "type": "Issue", "title": issue["title"], "issue_date": date,
             "resource": issue["url"], "thesis": issue["thesis"],
@@ -163,7 +167,7 @@ def emit(spec: dict) -> dict:
         front = {
             "type": "Development", "title": d["title"],
             "claim": d["claim"], "domain": d["domain"],
-            "reported_in": [iri("issues", date)],
+            "reported_in": [iri("issues", slug)],
             # an actor is usually an organization id, but a development can be
             # attributed to a person ("people/terry-tao") - a bare id keeps the
             # common case short, a path selects any other collection.
