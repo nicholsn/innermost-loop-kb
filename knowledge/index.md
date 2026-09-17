@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**158 of 233 issues** modelled, 2025-12-11 → 2026-07-08.
+**163 of 233 issues** modelled, 2025-12-11 → 2026-07-14.
 
 | | count |
 |---|---|
 | benchmarks | 42 |
-| developments | 2286 |
+| developments | 2346 |
 | facilities | 25 |
 | hardware | 12 |
-| issues | 158 |
-| organizations | 876 |
+| issues | 163 |
+| organizations | 887 |
 | people | 27 |
 | systems | 118 |
-| themes | 112 |
+| themes | 118 |
 
 ## Themes
 
@@ -150,9 +150,20 @@ trajectory rather than a pile of days.
 * [Modeling the self to predict the world](themes/self-modeling-as-objective.md) — first seen 2026-07-05
 * [A global workspace emerges unbidden](themes/access-consciousness.md) — first seen 2026-07-07
 * [Misbehavior scales with whether anyone is looking](themes/ethics-tracks-detectability.md) — first seen 2026-07-07
+* [Behavior and capability compound together](themes/behavior-unlocks-intelligence.md) — first seen 2026-07-09
+* [Training contamination arrives from within](themes/contamination-from-inside.md) — first seen 2026-07-09
+* [Post-training passes to the models](themes/a-model-trains-a-model.md) — first seen 2026-07-10
+* [An intelligence explosion that is also a price implosion](themes/price-implosion.md) — first seen 2026-07-10
+* [Old traditions read as value-preservation technology](themes/traditions-as-alignment-priors.md) — first seen 2026-07-12
+* [A domestic ceiling set by a foreign release](themes/pegged-to-the-rival.md) — first seen 2026-07-14
 
 ## Issues
 
+* [Welcome to July 14, 2026](issues/2026-07-14.md) — A proposed rule would clear US models only up to China's best open weights.
+* [Welcome to July 12, 2026](issues/2026-07-12.md) — Task reliability doubles every forty days.
+* [Welcome to July 11, 2026](issues/2026-07-11.md) — A fifty-year-old conjecture falls in under an hour.
+* [Welcome to July 10, 2026](issues/2026-07-10.md) — One model autonomously post-trained another, years early.
+* [Welcome to July 9, 2026](issues/2026-07-09.md) — A smarter model behaves better, and better behavior unlocks more intelligence.
 * [Welcome to July 8, 2026](issues/2026-07-08.md) — The turn itself becomes the unit under renegotiation.
 * [Welcome to July 7, 2026](issues/2026-07-07.md) — A global workspace emerges unbidden, and the lab calls it access consciousness.
 * [Welcome to July 5, 2026](issues/2026-07-05.md) — A mind should learn to model itself to predict its next token.
@@ -168,9 +179,4 @@ trajectory rather than a pile of days.
 * [Welcome to June 24, 2026](issues/2026-06-24.md) — The mission shifts from finding vulnerabilities to patching them.
 * [Welcome to June 22, 2026](issues/2026-06-22.md) — Intelligence becomes infrastructure that can be routed and rationed.
 * [Welcome to June 21, 2026](issues/2026-06-21.md) — The classified systems fell in hours, not weeks.
-* [Welcome to June 20, 2026](issues/2026-06-20.md) — Frontier research goes dark as the open pack takes the majority.
-* [Welcome to June 19, 2026](issues/2026-06-19.md) — The standoff over a banned model turns into co-writing the rules.
-* [Welcome to June 17, 2026](issues/2026-06-17.md) — The leading open model is Chinese, and the frontier model is unavailable.
-* [Welcome to June 15, 2026](issues/2026-06-15.md) — Adoption has gone universal and the compounding has begun.
-* [Welcome to June 14, 2026](issues/2026-06-14.md) — For the first time ever, the frontier chart moves backward.
-* … and 138 earlier issues
+* … and 143 earlier issues
