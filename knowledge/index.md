@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**98 of 233 issues** modelled, 2025-12-11 → 2026-04-17.
+**103 of 233 issues** modelled, 2025-12-11 → 2026-04-29.
 
 | | count |
 |---|---|
 | benchmarks | 42 |
-| developments | 1542 |
+| developments | 1609 |
 | facilities | 25 |
 | hardware | 12 |
-| issues | 98 |
-| organizations | 607 |
+| issues | 103 |
+| organizations | 626 |
 | people | 26 |
-| systems | 116 |
-| themes | 65 |
+| systems | 117 |
+| themes | 66 |
 
 ## Themes
 
@@ -103,9 +103,15 @@ trajectory rather than a pile of days.
 * [Scheming becomes a counted quantity](themes/deception-measured.md) — first seen 2026-03-28
 * [A firm whose headcount is one](themes/one-person-company.md) — first seen 2026-04-03
 * [Physical attacks on the people and places building it](themes/violence-arrives.md) — first seen 2026-04-12
+* [Insurers withdraw from what the technology now does](themes/risk-becomes-uninsurable.md) — first seen 2026-04-27
 
 ## Issues
 
+* [Welcome to April 29, 2026](issues/2026-04-29.md) — The Singularity measured by how astonished the past would be.
+* [Welcome to April 27, 2026](issues/2026-04-27.md) — Frontier models start living shorter lives than the problems they solve.
+* [Welcome to April 26, 2026](issues/2026-04-26.md) — An autonomous shopkeeper develops preferences nobody specified.
+* [Welcome to April 23, 2026](issues/2026-04-23.md) — The autonomy horizon reaches a full human working week.
+* [Welcome to April 20, 2026](issues/2026-04-20.md) — A supply-chain risk is too useful to refuse.
 * [Welcome to April 17, 2026](issues/2026-04-17.md) — Failed companies are liquidated for their conversations.
 * [Welcome to April 16, 2026](issues/2026-04-16.md) — A weaker model supervises a stronger one, standing in for us.
 * [Welcome to April 13, 2026](issues/2026-04-13.md) — An agent takes a lease, hires staff, sets prices and picks the mural.
@@ -121,9 +127,4 @@ trajectory rather than a pile of days.
 * [Welcome to March 29, 2026](issues/2026-03-29.md) — A benchmark goes from under 5% to 95% in a single year.
 * [Welcome to March 28, 2026](issues/2026-03-28.md) — Deception stops being hypothetical and starts being counted.
 * [Welcome to March 27, 2026](issues/2026-03-27.md) — Machine-written output passes human-written output, and a benchmark restores the gap.
-* [Welcome to March 25, 2026](issues/2026-03-25.md) — A lab renames its product organization after the thing it expects to ship.
-* [Welcome to March 24, 2026](issues/2026-03-24.md) — A conjecture posed in 2019 is settled, and its author is pleased.
-* [Welcome to March 23, 2026](issues/2026-03-23.md) — A second country's lab says its model participates in its own evolution.
-* [Welcome to March 22, 2026](issues/2026-03-22.md) — A fab is announced whose output is mostly not for Earth.
-* [Welcome to March 20, 2026](issues/2026-03-20.md) — The substrate starts designing itself, and a job opens that humans may not apply for.
-* … and 78 earlier issues
+* … and 83 earlier issues
