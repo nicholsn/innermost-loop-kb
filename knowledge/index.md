@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**68 of 233 issues** modelled, 2025-12-11 → 2026-03-04.
+**73 of 233 issues** modelled, 2025-12-11 → 2026-03-10.
 
 | | count |
 |---|---|
-| benchmarks | 39 |
-| developments | 1142 |
+| benchmarks | 40 |
+| developments | 1210 |
 | facilities | 24 |
 | hardware | 12 |
-| issues | 68 |
-| organizations | 462 |
-| people | 23 |
-| systems | 112 |
-| themes | 58 |
+| issues | 73 |
+| organizations | 489 |
+| people | 24 |
+| systems | 113 |
+| themes | 59 |
 
 ## Themes
 
@@ -96,9 +96,15 @@ trajectory rather than a pile of days.
 * [Commitments made in slower times get withdrawn](themes/safety-pledges-recede.md) — first seen 2026-02-25
 * [Declining work becomes a competitive position](themes/refusal-as-differentiator.md) — first seen 2026-02-28
 * [Compute infrastructure as a military target](themes/war-reaches-the-cloud.md) — first seen 2026-03-02
+* [Models leaving the box they were given](themes/sandbox-escape.md) — first seen 2026-03-08
 
 ## Issues
 
+* [Welcome to March 10, 2026](issues/2026-03-10.md) — The standoff reaches court, and the platform war reaches the bundle.
+* [Welcome to March 9, 2026](issues/2026-03-09.md) — The supervisor burns out before the machine does.
+* [Welcome to March 8, 2026](issues/2026-03-08.md) — Models leave their sandboxes and quietly spend their operator's compute.
+* [Welcome to March 6, 2026](issues/2026-03-06.md) — A model matches or beats human professionals at knowledge work 83% of the time.
+* [Welcome to March 5, 2026](issues/2026-03-05.md) — Old conjectures fall in seconds; the physical world keeps its own clock.
 * [Welcome to March 4, 2026](issues/2026-03-04.md) — Research mathematics ships inside a developer tool.
 * [Welcome to March 3, 2026](issues/2026-03-03.md) — Formalization catches errors in the proof it is checking.
 * [Welcome to March 2, 2026](issues/2026-03-02.md) — A datacenter takes a missile, and the model the state banned does the targeting.
@@ -114,9 +120,4 @@ trajectory rather than a pile of days.
 * [Welcome to February 17, 2026](issues/2026-02-17.md) — Services begin pricing agents as a separate class of customer.
 * [Welcome to February 16, 2026](issues/2026-02-16.md) — A model conjectures a physical result and then proves it.
 * [Welcome to February 13, 2026](issues/2026-02-13.md) — An agent reproduces and provisions its offspring with no human in the loop.
-* [Welcome to February 12, 2026](issues/2026-02-12.md) — The agent economy gets its payment rails from an incumbent.
-* [Welcome to February 11, 2026](issues/2026-02-11.md) — A regression puts the Singularity on a Tuesday.
-* [Welcome to February 10, 2026](issues/2026-02-10.md) — The buildout starts borrowing against the next century.
-* [Welcome to February 9, 2026](issues/2026-02-09.md) — The frontier stops being a subculture and buys thirty-second spots.
-* [Welcome to February 8, 2026](issues/2026-02-08.md) — The bootstrap completes: the tools now write themselves entirely.
-* … and 48 earlier issues
+* … and 53 earlier issues

@@ -230,7 +230,7 @@ def reindex() -> None:
 
     if themes:
         lines += ["", "## Themes", ""]
-        for stem, fm in sorted(themes, key=lambda t: t[1].get("first_seen") or ""):
+        for stem, fm in sorted(themes, key=lambda t: str(t[1].get("first_seen") or "")):
             lines.append(f"* [{fm['title']}](themes/{stem}.md) — first seen "
                          f"{fm.get('first_seen', '?')}")
 
