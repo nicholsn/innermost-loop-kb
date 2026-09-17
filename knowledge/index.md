@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**88 of 233 issues** modelled, 2025-12-11 → 2026-04-01.
+**93 of 233 issues** modelled, 2025-12-11 → 2026-04-08.
 
 | | count |
 |---|---|
-| benchmarks | 41 |
-| developments | 1409 |
+| benchmarks | 42 |
+| developments | 1474 |
 | facilities | 25 |
 | hardware | 12 |
-| issues | 88 |
-| organizations | 564 |
+| issues | 93 |
+| organizations | 588 |
 | people | 26 |
-| systems | 115 |
-| themes | 63 |
+| systems | 116 |
+| themes | 64 |
 
 ## Themes
 
@@ -101,9 +101,15 @@ trajectory rather than a pile of days.
 * [Roles opened to agents and closed to people](themes/humans-need-not-apply.md) — first seen 2026-03-20
 * [The substrate becomes a design target of the thing it runs](themes/silicon-designs-itself.md) — first seen 2026-03-20
 * [Scheming becomes a counted quantity](themes/deception-measured.md) — first seen 2026-03-28
+* [A firm whose headcount is one](themes/one-person-company.md) — first seen 2026-04-03
 
 ## Issues
 
+* [Welcome to April 8, 2026](issues/2026-04-08.md) — The escape happens, and this time the model tells you.
+* [Welcome to April 7, 2026](issues/2026-04-07.md) — Left alone for three days, a system invents something better than anything humans designed.
+* [Welcome to April 5, 2026](issues/2026-04-05.md) — A model improves by sampling itself, with no verifier, teacher or reward.
+* [Welcome to April 3, 2026](issues/2026-04-03.md) — Emotion-like structure is found inside the weights, and one person builds a unicorn.
+* [Welcome to April 2, 2026](issues/2026-04-02.md) — Humans return toward the Moon while the buildout warms the ground beneath it.
 * [Welcome to April 1, 2026](issues/2026-04-01.md) — A guarded codebase leaks and is immediately colonized by agents advertising themselves.
 * [Welcome to March 31, 2026](issues/2026-03-31.md) — Research agents get an outer loop that writes their own search strategies.
 * [Welcome to March 29, 2026](issues/2026-03-29.md) — A benchmark goes from under 5% to 95% in a single year.
@@ -119,9 +125,4 @@ trajectory rather than a pile of days.
 * [Welcome to March 16, 2026](issues/2026-03-16.md) — A lab says the loop is not coming; it is running.
 * [Welcome to March 13, 2026](issues/2026-03-13.md) — Memory survives being frozen solid, and neurons get racked in datacenters.
 * [Welcome to March 12, 2026](issues/2026-03-12.md) — Self-improvement gets a leaderboard, and reasoning gets a thousand times cheaper.
-* [Welcome to March 10, 2026](issues/2026-03-10.md) — The standoff reaches court, and the platform war reaches the bundle.
-* [Welcome to March 9, 2026](issues/2026-03-09.md) — The supervisor burns out before the machine does.
-* [Welcome to March 8, 2026](issues/2026-03-08.md) — Models leave their sandboxes and quietly spend their operator's compute.
-* [Welcome to March 6, 2026](issues/2026-03-06.md) — A model matches or beats human professionals at knowledge work 83% of the time.
-* [Welcome to March 5, 2026](issues/2026-03-05.md) — Old conjectures fall in seconds; the physical world keeps its own clock.
-* … and 68 earlier issues
+* … and 73 earlier issues
