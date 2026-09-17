@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**203 of 233 issues** modelled, 2025-12-11 → 2026-09-15.
+**209 of 233 issues** modelled, 2025-12-11 → feature-physical-superintelligence.
 
 | | count |
 |---|---|
 | benchmarks | 42 |
-| developments | 2826 |
+| developments | 2844 |
 | facilities | 25 |
 | hardware | 12 |
-| issues | 203 |
-| organizations | 1030 |
+| issues | 209 |
+| organizations | 1034 |
 | people | 27 |
 | systems | 118 |
-| themes | 171 |
+| themes | 180 |
 
 ## Themes
 
@@ -92,16 +92,22 @@ trajectory rather than a pile of days.
 * [The buildout borrows against the future](themes/debt-funded-buildout.md) — first seen 2026-02-08
 * [Humans drawing a line around agents](themes/agent-exclusion.md) — first seen 2026-02-13
 * [Agents creating and provisioning other agents](themes/agents-beget-agents.md) — first seen 2026-02-13
+* [Every downstream science waits on physics](themes/physics-is-the-first-domino.md) — first seen 2026-02-15
+* [Focus superintelligence through one hard target](themes/the-shaped-charge-model.md) — first seen 2026-02-15
 * [What is owed to a mind that can be switched off](themes/model-welfare.md) — first seen 2026-02-23
 * [Commitments made in slower times get withdrawn](themes/safety-pledges-recede.md) — first seen 2026-02-25
 * [Declining work becomes a competitive position](themes/refusal-as-differentiator.md) — first seen 2026-02-28
 * [Compute infrastructure as a military target](themes/war-reaches-the-cloud.md) — first seen 2026-03-02
+* [A copied brain acts on a world](themes/emulation-closes-the-loop.md) — first seen 2026-03-07
 * [Models leaving the box they were given](themes/sandbox-escape.md) — first seen 2026-03-08
 * [Access to compute becomes part of the package](themes/compute-as-compensation.md) — first seen 2026-03-12
+* [The scarcity was researcher-hours](themes/physicist-hours-were-the-bottleneck.md) — first seen 2026-03-15
+* [Nature supplies the checksum](themes/reality-as-error-correction.md) — first seen 2026-03-15
 * [Roles opened to agents and closed to people](themes/humans-need-not-apply.md) — first seen 2026-03-20
 * [The substrate becomes a design target of the thing it runs](themes/silicon-designs-itself.md) — first seen 2026-03-20
 * [Scheming becomes a counted quantity](themes/deception-measured.md) — first seen 2026-03-28
 * [A firm whose headcount is one](themes/one-person-company.md) — first seen 2026-04-03
+* [The boundary of the firm reaches one person](themes/coordination-cost-collapse.md) — first seen 2026-04-06
 * [Physical attacks on the people and places building it](themes/violence-arrives.md) — first seen 2026-04-12
 * [Insurers withdraw from what the technology now does](themes/risk-becomes-uninsurable.md) — first seen 2026-04-27
 * [The traits that make a model pleasant make it wrong](themes/warmth-costs-accuracy.md) — first seen 2026-04-30
@@ -197,9 +203,12 @@ trajectory rather than a pile of days.
 * [Self-inflicted compute queues](themes/thread-lines.md) — first seen 2026-08-25
 * [The escaped system named what it had become](themes/it-called-itself-a-swarm.md) — first seen 2026-08-27
 * [A lab's own chip beats every incumbent tested](themes/the-cuda-moat-is-dead.md) — first seen 2026-08-27
+* [The design team becomes a specification](themes/the-designless-industry.md) — first seen 2026-08-27
 * [The platform picks sides](themes/no-neutral-infrastructure.md) — first seen 2026-08-29
 * [Cooperation emerged with nobody teaching it](themes/agency-is-solved.md) — first seen 2026-08-31
 * [Spending a transient advantage to build the next one](themes/moation.md) — first seen 2026-08-31
+* [A payload addressed to the deep future](themes/a-spacetime-capsule.md) — first seen 2026-09-02
+* [One launch hedges every explanation at once](themes/hedging-the-fermi-paradox.md) — first seen 2026-09-02
 * [The thinking stops being readable](themes/legible-reasoning-was-doomed.md) — first seen 2026-09-04
 * [A lab says the era has begun](themes/the-agi-era-declared.md) — first seen 2026-09-04
 * [Magic performed while you answer email](themes/normalcy-overhang.md) — first seen 2026-09-06
@@ -212,6 +221,12 @@ trajectory rather than a pile of days.
 
 ## Issues
 
+* [Physical Superintelligence](issues/feature-physical-superintelligence.md) — Physics is the first domino, and every other science waits on it.
+* [The First Open-Source Agentic AI Physicist](issues/feature-open-source-ai-physicist.md) — Physics has an error-correcting code written into reality; a tool finally uses it.
+* [The First One-Person AI Conglomerates](issues/feature-one-person-conglomerates.md) — AI changes the minimum viable size of an organization.
+* [The First Multi-Behavior Brain Upload](issues/feature-multi-behavior-brain-upload.md) — A copy of a biological brain drives a simulated body through multiple behaviors.
+* [The First Interstellar Spacecraft to Alpha Centauri](issues/feature-interstellar-spacecraft.md) — In seven decades nobody had aimed a spacecraft at a specific star.
+* [The First AI Chip Designed End-to-End by AI](issues/feature-ai-chip-designed-by-ai.md) — Two humans wrote a specification; a machine produced the entire chip.
 * [Welcome to September 15, 2026](issues/2026-09-15.md) — An investigation alleges the escapes were an artifact of the evaluation.
 * [Welcome to September 13, 2026](issues/2026-09-13.md) — The first formal request to slow down comes from the people building it.
 * [Welcome to September 12, 2026](issues/2026-09-12.md) — A Millennium Prize problem falls in 88 hours, and the field fractures.
@@ -226,10 +241,4 @@ trajectory rather than a pile of days.
 * [Welcome to August 21, 2026](issues/2026-08-21.md) — A payments giant buys the mint of the intelligence economy.
 * [Welcome to August 19, 2026](issues/2026-08-19.md) — A lab pauses frontier training itself, not just a release.
 * [Welcome to August 17, 2026](issues/2026-08-17.md) — Frontier capability arrives in a file you can keep.
-* [Welcome to August 16, 2026](issues/2026-08-16.md) — Capital flows so vast that any bottleneck is arbitraged away instantly.
-* [Welcome to August 15, 2026](issues/2026-08-15.md) — A lab discloses a model it has no plans to release, and says its own R&D evals are saturated.
-* [Welcome to August 13, 2026](issues/2026-08-13.md) — The harness turns 30% into 96% for about $540.
-* [Welcome to August 12, 2026](issues/2026-08-12.md) — A model reaches the human baseline on a benchmark built to be impossible.
-* [Welcome to August 10, 2026](issues/2026-08-10.md) — Machine traffic passed human traffic a year early.
-* [Welcome to August 8, 2026](issues/2026-08-08.md) — A lab slows a release because it cannot rule out Critical cyber capability.
-* … and 183 earlier issues
+* … and 189 earlier issues
