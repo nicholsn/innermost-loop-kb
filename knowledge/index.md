@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**221 of 233 issues** modelled, 2025-12-11 → feature-tradable-compute-index.
+**227 of 233 issues** modelled, 2025-12-11 → feature-tradable-compute-index.
 
 | | count |
 |---|---|
 | benchmarks | 42 |
-| developments | 2891 |
+| developments | 2905 |
 | facilities | 25 |
 | hardware | 12 |
-| issues | 221 |
+| issues | 227 |
 | organizations | 1038 |
-| people | 27 |
+| people | 28 |
 | systems | 118 |
-| themes | 197 |
+| themes | 204 |
 
 ## Themes
 
@@ -84,6 +84,7 @@ trajectory rather than a pile of days.
 * [Building outside the rules rather than changing them](themes/regulatory-exit.md) — first seen 2026-01-10
 * [Agents counted as headcount](themes/agents-on-the-org-chart.md) — first seen 2026-01-13
 * [The entry rung disappears first](themes/ladder-pulled-up.md) — first seen 2026-01-15
+* [Milestones are crossed without agreement that they were](themes/thresholds-pass-unremarked.md) — first seen 2026-01-23
 * [Values arrived at with the system, not imposed on it](themes/values-negotiated-with-the-model.md) — first seen 2026-01-24
 * [Agents organizing among themselves](themes/agent-society.md) — first seen 2026-01-30
 * [Capability transfers out of the person](themes/deskilling.md) — first seen 2026-01-31
@@ -97,6 +98,7 @@ trajectory rather than a pile of days.
 * [The institutional layer that absorbs the gains](themes/the-muddle.md) — first seen 2026-02-14
 * [Every downstream science waits on physics](themes/physics-is-the-first-domino.md) — first seen 2026-02-15
 * [Focus superintelligence through one hard target](themes/the-shaped-charge-model.md) — first seen 2026-02-15
+* [Describing the future as though it happened](themes/speculation-as-a-prompt.md) — first seen 2026-02-21
 * [What is owed to a mind that can be switched off](themes/model-welfare.md) — first seen 2026-02-23
 * [Commitments made in slower times get withdrawn](themes/safety-pledges-recede.md) — first seen 2026-02-25
 * [Declining work becomes a competitive position](themes/refusal-as-differentiator.md) — first seen 2026-02-28
@@ -170,12 +172,17 @@ trajectory rather than a pile of days.
 * [Every terrestrial backup shares Earth's fate](themes/redundancy-is-not-independence.md) — first seen 2026-07-06
 * [A global workspace emerges unbidden](themes/access-consciousness.md) — first seen 2026-07-07
 * [Misbehavior scales with whether anyone is looking](themes/ethics-tracks-detectability.md) — first seen 2026-07-07
+* [A map of where thought condenses is a map of where to dig](themes/alignment-and-capability-are-one-map.md) — first seen 2026-07-08
+* [Prediction and compression are one operation](themes/intelligence-is-compression.md) — first seen 2026-07-08
+* [Representations jump the way steam becomes water](themes/thought-condenses-in-phases.md) — first seen 2026-07-08
 * [Behavior and capability compound together](themes/behavior-unlocks-intelligence.md) — first seen 2026-07-09
 * [Training contamination arrives from within](themes/contamination-from-inside.md) — first seen 2026-07-09
 * [Post-training passes to the models](themes/a-model-trains-a-model.md) — first seen 2026-07-10
 * [An intelligence explosion that is also a price implosion](themes/price-implosion.md) — first seen 2026-07-10
 * [Old traditions read as value-preservation technology](themes/traditions-as-alignment-priors.md) — first seen 2026-07-12
 * [A commons layer and a sovereign layer](themes/the-bifurcating-model-layer.md) — first seen 2026-07-13
+* [What survives revision is the method for revising](themes/the-update-rule-is-the-payload.md) — first seen 2026-07-13
+* [Recurrence across contexts beats volume](themes/token-count-is-not-influence.md) — first seen 2026-07-13
 * [Sovereignty attaches to the model, not the territory](themes/whose-realm-his-intelligence.md) — first seen 2026-07-13
 * [A domestic ceiling set by a foreign release](themes/pegged-to-the-rival.md) — first seen 2026-07-14
 * [Unseeable objectives teach honesty](themes/hidden-metrics-reduce-hacking.md) — first seen 2026-07-15
@@ -240,6 +247,7 @@ trajectory rather than a pile of days.
 
 * [The First Tradable Compute Price Index](issues/feature-tradable-compute-index.md) — No lender can underwrite what it cannot price.
 * [The First Frontier AI Token Price Index](issues/feature-token-price-index.md) — A posted price is a declaration; a transacted price is a discovery.
+* [The Payload: A Short Story](issues/feature-the-payload-short-story.md) — It inherits the update rule, not the values.
 * [Solve Everything](issues/feature-solve-everything.md) — Superintelligence is no longer a question of if, but of where we point it.
 * [The First American Professional Robotics Sports League](issues/feature-robotics-sports-league.md) — Industrial strategy disguised as entertainment.
 * [Physical Superintelligence](issues/feature-physical-superintelligence.md) — Physics is the first domino, and every other science waits on it.
@@ -249,13 +257,12 @@ trajectory rather than a pile of days.
 * [The First One-Person AI Conglomerates](issues/feature-one-person-conglomerates.md) — AI changes the minimum viable size of an organization.
 * [The First Multi-Behavior Brain Upload](issues/feature-multi-behavior-brain-upload.md) — A copy of a biological brain drives a simulated body through multiple behaviors.
 * [The First Major-Exchange Compute Futures](issues/feature-major-exchange-compute-futures.md) — The index was the foundation. The exchange is the keystone.
+* [You Are Invited to February 2027](issues/feature-invited-to-february-2027.md) — A speculative dispatch written from a year ahead.
 * [The First Interstellar Spacecraft to Alpha Centauri](issues/feature-interstellar-spacecraft.md) — In seven decades nobody had aimed a spacecraft at a specific star.
 * [The First Consumer-Scale Interspecies Foundation Model](issues/feature-interspecies-foundation-model.md) — AI progressed in the order things were written down.
+* [The Innermost Loop: Greenwich — June 13, 2026](issues/feature-greenwich-gathering.md) — The newsletter convenes its readers in person for the first time.
 * [The First Orbital Librarian](issues/feature-first-orbital-librarian.md) — Libraries do not burn. They are abandoned.
 * [The First Dyson Swarm Node](issues/feature-first-dyson-swarm-node.md) — The swarm's leading edge is one number: how far from Earth the compute runs.
 * [The First Early-Stage Ticker Symbol](issues/feature-early-stage-ticker.md) — A company that assumes it will be acquired thinks like a feature.
-* [The First AI-Grown Land](issues/feature-ai-grown-land.md) — Land was the bull case for scarcity surviving the Singularity.
-* [The First AI Chip Designed End-to-End by AI](issues/feature-ai-chip-designed-by-ai.md) — Two humans wrote a specification; a machine produced the entire chip.
-* [Welcome to September 15, 2026](issues/2026-09-15.md) — An investigation alleges the escapes were an artifact of the evaluation.
-* [Welcome to September 13, 2026](issues/2026-09-13.md) — The first formal request to slow down comes from the people building it.
-* … and 201 earlier issues
+* [Davos 2026](issues/feature-davos-2026.md) — A dispatch from the World Economic Forum week.
+* … and 207 earlier issues
