@@ -27,19 +27,62 @@ replacing them with AI.
     ],
     "systems": [
         {"id": "minimax-m2-7", "type": "AISystem", "title": "MiniMax M2.7",
+         "description": "MiniMax's M2-series coding and agent model, presented by its lab as the "
+                        "first of its models to take part in its own evolution by building and "
+                        "refining its own training harness.",
          "developed_by": [B + "organizations/minimax"], "modality": "text",
-         "body": "Described by its lab as the first model deeply participating in its own evolution."},
+         "resource": "https://www.minimax.io/news/minimax-m27-en",
+         "sameAs": ["http://www.wikidata.org/entity/Q140570527"],
+         "tags": ["open-weight-model", "coding-agent"],
+         "body": "M2.7 is a mixture-of-experts model tuned for software engineering, agent "
+                 "harnesses and long-horizon office work; MiniMax reports a GDPval-AA Elo of "
+                 "1495, which it calls the highest among open-source models "
+                 "([announcement](https://www.minimax.io/news/minimax-m27-en)). Its place in "
+                 "this corpus is the lab's claim that it is the "
+                 "[first model deeply participating in its own evolution](/developments/2026-03-23-minimax-model-participates-in-its-own-evolution.md): "
+                 "M2.7 wrote and repaired the harness used in its own reinforcement-learning "
+                 "experiments, then improved the learning process from the results. It succeeds "
+                 "[M2.1](/systems/minimax-m2-1.md) in the M2 line."},
     ],
     "developments": [
         {"id": "2026-03-23-minimax-model-participates-in-its-own-evolution",
          "title": "A Chinese lab says its model participates in its own evolution",
          "claim": "MiniMax announced that M2.7 is its first model deeply participating in its "
                   "own evolution, confirming recursive self-improvement has gone global.",
+         "description": "The loop stops being a single-lab or single-country phenomenon: a "
+                        "Chinese lab's release note adopts the same self-evolution language as "
+                        "the American frontier, making recursion the shared idiom of the field.",
          "domain": "models", "actor": ["minimax"], "about": [B + "systems/minimax-m2-7"],
+         "occurred_on": "2026-03-18",
          "evidences": ["recursive-self-improvement", "silicon-curtain", "takeoff-declared"],
          "supersedes": [B + "developments/2026-03-22-openai-targets-a-research-intern-by-september"],
+         "relatedTo": [B + "developments/2026-06-25-an-agent-rewrites-its-own-harness",
+                       B + "developments/2026-03-24-hyperagents-edit-their-own-mechanism",
+                       B + "systems/minimax-m2-1"],
+         "relations": [{"predicate": "relatedTo",
+                        "target": B + "developments/2026-03-16-rsi-is-a-present-phenomenon",
+                        "relation_label": "corroborates"}],
+         "tags": ["rsi", "self-modification", "open-weights"],
+         "supporting_text": "first model deeply participating in its own evolution",
+         "sources": [{"id": "minimax-m2-7-announcement",
+                      "resource": "https://www.minimax.io/news/minimax-m27-en",
+                      "title": "MiniMax M2.7: Early Echoes of Self-Evolution",
+                      "author": "org:minimax", "last_modified": "2026-03-18"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
          "body": "A week after one lab called it a present phenomenon, a lab on the other side "
-                 "of the Pacific says the same of its own system."},
+                 "of the Pacific says the same of its own system. MiniMax's release note, titled "
+                 "\"Early Echoes of Self-Evolution\", describes [M2.7](/systems/minimax-m2-7.md) "
+                 "building and repairing the agent harness used in its own reinforcement-learning "
+                 "experiments and then improving its learning process from the results; in a "
+                 "separate run MiniMax had M2.7 iterate on an internal coding scaffold for over "
+                 "100 analyse-modify-evaluate rounds, which it says produced a 30% improvement on "
+                 "internal evaluation sets "
+                 "([MiniMax](https://www.minimax.io/news/minimax-m27-en)). It corroborates "
+                 "[Hubinger's statement](/developments/2026-03-16-rsi-is-a-present-phenomenon.md) "
+                 "from outside the American labs, and the harness-editing mechanism anticipates "
+                 "June's [agent that rewrites its own scaffolding](/developments/2026-06-25-an-agent-rewrites-its-own-harness.md); "
+                 "the next day Meta's [hyperagents](/developments/2026-03-24-hyperagents-edit-their-own-mechanism.md) "
+                 "gave the same pattern a formal treatment."},
         {"id": "2026-03-23-deleted-post-about-a-robotics-breakthrough",
          "title": "A posted-then-deleted claim hints at an unannounced robotics result",
          "claim": "Google's Logan Kilpatrick posted and then hastily deleted a claim that all "

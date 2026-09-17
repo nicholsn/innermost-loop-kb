@@ -36,6 +36,32 @@ document as trainable state. Sleep, self-test, study, repeat.
         {"id": "aalo-atomics", "type": "Organization", "title": "Aalo Atomics"},
         {"id": "westlake", "type": "Organization", "title": "Westlake University"},
         {"id": "tether", "type": "Organization", "title": "Tether"},
+        {"id": "strange-loop-canon", "type": "Organization", "title": "Strange Loop Canon",
+         "description": "Rohit's Strange Loop Canon newsletter and GitHub account, publisher of the "
+                        "BenchBench benchmark.",
+         "resource": "https://www.strangeloopcanon.com/",
+         "tags": ["open-source"],
+         "body": "Strange Loop Canon is the newsletter and GitHub identity of the writer Rohit; its "
+                 "strangeloopcanon account publishes [BenchBench](/benchmarks/benchbench.md), the benchmark "
+                 "that scores a model on authoring benchmarks other frontier models cannot clear. Its one "
+                 "corpus appearance is the [May 26 item](/developments/2026-05-26-a-benchmark-for-writing-benchmarks.md), "
+                 "where GPT-5.2 led as top benchmark creator."},
+    ],
+    "benchmarks": [
+        {"id": "benchbench", "type": "Benchmark", "title": "BenchBench",
+         "published_by": [B + "organizations/strange-loop-canon"],
+         "description": "A benchmark that scores a model on whether it can author a benchmark "
+                        "package that strong solver models cannot simply clear.",
+         "resource": "https://github.com/strangeloopcanon/benchbench",
+         "measures_capability": "a model's ability to write benchmarks that other frontier models cannot clear",
+         "tags": ["open-source"],
+         "body": "BenchBench inverts the usual arrangement: the model under test is the benchmark's "
+                 "author, supplying public solver evidence, private gold answers, a generator, a "
+                 "verifier, a scorer and an account of likely failures, and it wins only if a panel of "
+                 "strong solvers cannot clear the package. It enters this corpus through the "
+                 "[May 26 item](/developments/2026-05-26-a-benchmark-for-writing-benchmarks.md), where "
+                 "GPT-5.2 led as top creator, and sits beside [PostTrainBench](/benchmarks/posttrainbench.md) "
+                 "as a benchmark built around models doing the measurement work themselves."},
     ],
     "developments": [
         {"id": "2026-05-26-language-models-need-sleep",
@@ -52,9 +78,35 @@ document as trainable state. Sleep, self-test, study, repeat.
          "claim": "BenchBench asks whether a model can write a benchmark that other strong "
                   "models cannot simply clear, with GPT-5.2 currently leading as the top "
                   "benchmark creator.",
+         "description": "Measurement itself joins the recursion: two weeks after models began "
+                        "grading the graders, a benchmark asks them to author the tests, closing "
+                        "the loop between the measured and the measurement.",
          "domain": "benchmarks", "actor": ["openai"],
-         "evidences": ["models-audit-their-benchmarks", "recursive-self-improvement"],
-         "supersedes": [B + "developments/2026-05-12-the-model-grades-the-graders"]},
+         "about": [B + "benchmarks/benchbench", B + "systems/gpt-5-2"],
+         "evidences": ["models-audit-their-benchmarks", "recursive-self-improvement",
+                       "benchmark-saturation"],
+         "supersedes": [B + "developments/2026-05-12-the-model-grades-the-graders"],
+         "relatedTo": [B + "developments/2026-03-12-posttrainbench-v1",
+                       B + "developments/2026-05-13-a-model-scores-136-on-an-iq-meta-eval"],
+         "tags": ["evaluation", "rsi"],
+         "supporting_text": "asks whether a model can write a benchmark that other strong models cannot simply clear",
+         "sources": [{"id": "benchbench-github",
+                      "resource": "https://github.com/strangeloopcanon/benchbench",
+                      "title": "BenchBench (GitHub repository)"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "BenchBench, published on GitHub under the strangeloopcanon account, makes the model "
+                 "the benchmark's author: a creator must supply public solver evidence, private gold, a "
+                 "generator, a verifier, a scorer and an explanation of where solvers will fail, and it "
+                 "wins only if strong solver models cannot clear the package "
+                 "([repository](https://github.com/strangeloopcanon/benchbench)). At the time of the issue "
+                 "GPT-5.2 led as top benchmark creator; by September 2026 the repository's canonical record "
+                 "listed no validated incumbent, later candidates having been solved nearly outright (25/30 or "
+                 "better), invalidated, or left incomplete. The newsletter files it with [Language Models Need Sleep](/developments/2026-05-26-language-models-need-sleep.md) "
+                 "and [SkillOpt](/developments/2026-05-26-a-skill-document-as-trainable-state.md) as "
+                 "waking hours doing recursive work: sleep, self-test, study, repeat. It follows "
+                 "[GPT-5.5 flagging fatal errors in a third of FrontierMath](/developments/2026-05-12-the-model-grades-the-graders.md) "
+                 "two weeks earlier and sits beside [PostTrainBench v1](/developments/2026-03-12-posttrainbench-v1.md), "
+                 "which measures whether agents can post-train themselves."},
         {"id": "2026-05-26-a-skill-document-as-trainable-state",
          "title": "A skill document becomes the trainable state of a frozen agent",
          "claim": "Microsoft's SkillOpt treats a compact natural-language skill document as the "

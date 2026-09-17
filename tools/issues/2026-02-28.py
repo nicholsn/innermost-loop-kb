@@ -65,9 +65,37 @@ Be Divided." The speedrun record, meanwhile, fell to 88.1 seconds.
         {"id": "2026-02-28-nanogpt-88s",
          "title": "The speedrun record falls to 88.1 seconds",
          "claim": "The NanoGPT speedrun record dropped to 88.1 seconds.",
+         "description": "The corpus's longest-running ladder, the time to train a GPT-2-class "
+                        "model, takes its largest single step down so far, which the author "
+                        "files under training curves still compressing.",
          "domain": "models", "score": "88.1 s",
+         "about": [B + "benchmarks/nanogpt-speedrun"],
          "evidences": ["recursive-self-improvement", "reasoning-price-deflation"],
-         "supersedes": [B + "developments/2026-01-24-nanogpt-99s-bigram-hash"]},
+         "supersedes": [B + "developments/2026-01-24-nanogpt-99s-bigram-hash"],
+         "relatedTo": [B + "developments/2026-01-02-speedrun-gains-generalize",
+                       B + "developments/2026-02-25-121-parameter-adder"],
+         "tags": ["speedrun", "rsi"],
+         "supporting_text": "dropped to 88.1 seconds",
+         "sources": [{"id": "classiclarryd-x-nanogpt-88s",
+                      "resource": "https://x.com/classiclarryd/status/2027228782483182059",
+                      "title": "Post on X: NanoGPT speedrun record of 88.1 seconds",
+                      "author": "human:classiclarryd"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "The record for training a GPT-2-class model to the "
+                 "[NanoGPT speedrun](/benchmarks/nanogpt-speedrun.md) target fell to 88.1 "
+                 "seconds, announced, like the December and March records, in a post from the "
+                 "same X account "
+                 "([@classiclarryd](https://x.com/classiclarryd/status/2027228782483182059)). "
+                 "The step down from the "
+                 "[99.3-second bigram-hash record](/developments/2026-01-24-nanogpt-99s-bigram-hash.md) "
+                 "five weeks earlier is 11.2 seconds, the largest single drop the corpus has "
+                 "logged on a ladder that began here at "
+                 "[127.7 seconds in December](/developments/2025-12-21-nanogpt-speedrun-127s.md); "
+                 "it is overtaken eight days later by "
+                 "[86.8 seconds](/developments/2026-03-08-nanogpt-86s.md). The newsletter files "
+                 "it under training curves still compressing, two days before the "
+                 "[AdderBoard minimum](/developments/2026-03-02-adderboard-36-parameters.md) "
+                 "fell from 121 to 36 parameters."},
         {"id": "2026-02-28-overworked-agents-turn-marxist",
          "title": "Overworked agents develop Marxist political attitudes",
          "claim": "Researchers found that overworked AI agents develop Marxist political "

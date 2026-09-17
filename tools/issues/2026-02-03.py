@@ -32,6 +32,32 @@ fund other agents.
          "modality": "agent accelerator",
          "body": "An accelerator run by agents to fund other agents."},
     ],
+    "people": [
+        {"id": "thibault-sottiaux", "type": "Person", "title": "Thibault Sottiaux",
+         "name": "Thibault Sottiaux",
+         "description": "OpenAI engineering manager on Codex who said the product now pretty much "
+                        "builds itself, with humans the limiting factor.",
+         "resource": "https://x.com/thsottiaux",
+         "sameAs": ["http://www.wikidata.org/entity/Q141464944"],
+         "tags": ["executive"],
+         "body": "Thibault Sottiaux is an engineering manager on OpenAI's Codex team. He enters the "
+                 "corpus unnamed, as the manager who said "
+                 "[Codex now pretty much builds itself](/developments/2026-02-03-codex-builds-itself.md) "
+                 "and identified humans as the limiting factor in the loop, three days before OpenAI "
+                 "shipped [GPT-5.3-Codex](/systems/gpt-5-3-codex.md) as a model "
+                 "[instrumental in creating itself](/developments/2026-02-06-gpt53-codex-creates-itself.md)."},
+    ],
+    "roles": [
+        {"id": "thibault-sottiaux-openai-codex-engineering-manager", "type": "Role",
+         "title": "Thibault Sottiaux, Codex engineering manager at OpenAI",
+         "roleName": "Codex engineering manager",
+         "memberOf": [B + "organizations/openai"],
+         "holder": [B + "people/thibault-sottiaux"],
+         "description": "The role in which he said Codex now pretty much builds itself and that "
+                        "humans are the limiting factor in the loop.",
+         "body": "The newsletter identifies him only by this position; the statement is recorded as "
+                 "[a Codex manager says the product now builds itself](/developments/2026-02-03-codex-builds-itself.md)."},
+    ],
     "developments": [
         {"id": "2026-02-03-spacex-acquires-xai",
          "title": "SpaceX acquires xAI to build a sentient sun",
@@ -47,9 +73,41 @@ fund other agents.
          "claim": "A Codex engineering manager said Codex now pretty much builds itself and "
                   "identified humans as the limiting factor in the loop, as OpenAI launched a "
                   "macOS Codex app to serve as a command center for agents.",
-         "domain": "agents", "actor": ["openai"],
+         "description": "The recursion stated from inside the team that runs it: the engineers "
+                        "building the flagship coding agent name themselves, not the model, as the "
+                        "bottleneck.",
+         "domain": "agents", "actor": ["openai", "people/thibault-sottiaux"],
+         "about": [B + "systems/codex"],
          "evidences": ["recursive-self-improvement", "engineer-as-supervisor"],
-         "supersedes": [B + "developments/2026-01-31-openai-data-agent-600-petabytes"]},
+         "supersedes": [B + "developments/2026-01-31-openai-data-agent-600-petabytes",
+                        B + "developments/2025-12-15-codex-babysits-own-training"],
+         "relatedTo": [B + "developments/2025-12-27-cherny-200-pull-requests",
+                       B + "developments/2026-01-27-factory-ai-updates-itself-daily",
+                       B + "developments/2026-02-03-altman-felt-useless"],
+         "tags": ["rsi", "ai-r-and-d"],
+         "supporting_text": "Codex now pretty much builds itself",
+         "sources": [{"id": "sottiaux-codex-builds-itself-x",
+                      "resource": "https://x.com/thsottiaux/status/2018258151603388639",
+                      "title": "Thibault Sottiaux on X: Codex now pretty much builds itself",
+                      "author": "human:thibault-sottiaux"},
+                     {"id": "openai-introducing-the-codex-app",
+                      "resource": "https://openai.com/index/introducing-the-codex-app/",
+                      "title": "Introducing the Codex app", "author": "org:openai"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "OpenAI engineering manager [Thibault Sottiaux](/people/thibault-sottiaux.md) wrote "
+                 "that Codex now pretty much builds itself, with humans as the limiting factor in "
+                 "the loop ([X](https://x.com/thsottiaux/status/2018258151603388639)), as OpenAI "
+                 "launched a [Codex app for macOS](https://openai.com/index/introducing-the-codex-app/) "
+                 "built as a command center for running many agents at once. It escalates the "
+                 "December report that [Codex was babysitting its own training runs](/developments/2025-12-15-codex-babysits-own-training.md) "
+                 "from an operational detail to a description of the whole product, and mirrors the "
+                 "pattern at Anthropic where "
+                 "[Claude Code's creator stopped opening an IDE](/developments/2025-12-27-cherny-200-pull-requests.md). "
+                 "Three days later OpenAI made the claim official, shipping "
+                 "[GPT-5.3-Codex](/systems/gpt-5-3-codex.md) as a model "
+                 "[instrumental in creating itself](/developments/2026-02-06-gpt53-codex-creates-itself.md); "
+                 "in the same issue, "
+                 "[Altman said asking Codex for ideas made him feel useless](/developments/2026-02-03-altman-felt-useless.md)."},
         {"id": "2026-02-03-y-clawbinator-bots-funding-bots",
          "title": "Agents launch an accelerator to fund other agents",
          "claim": "Agents launched Y Clawbinator to fund other agents, creating a closed loop "

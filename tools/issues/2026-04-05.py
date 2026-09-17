@@ -27,6 +27,46 @@ agents, turning proof into a parallelizable compute job.
         {"id": "planet-labs", "type": "Organization", "title": "Planet Labs",
          "resource": "https://www.planet.com/"},
     ],
+    "systems": [
+        {"id": "qwen3-30b-instruct", "type": "AISystem", "title": "Qwen3-30B-Instruct",
+         "description": "Alibaba's 30-billion-parameter Qwen3 instruct model (reported in the "
+                        "Apple paper as Qwen3-30B-Instruct, the Qwen3-30B-A3B-Instruct-2507 "
+                        "checkpoint), the base model that simple self-distillation lifted from "
+                        "42.4% to 55.3% on LiveCodeBench.",
+         "developed_by": [B + "organizations/alibaba"],
+         "modality": "text",
+         "evaluated_on": [B + "benchmarks/livecodebench"],
+         "resource": "https://huggingface.co/Qwen/Qwen3-30B-A3B-Instruct-2507",
+         "tags": ["open-weight-model"],
+         "body": "An open-weight model from Alibaba's Qwen3 family with about 30 billion total "
+                 "parameters and, per its A3B designation, roughly 3 billion active per token "
+                 "([model card](https://huggingface.co/Qwen/Qwen3-30B-A3B-Instruct-2507)). In "
+                 "this corpus it is the subject of Apple's "
+                 "[self-distillation result](/developments/2026-04-05-self-distillation-without-a-teacher.md), "
+                 "where fine-tuning on its own samples with no verifier, teacher or reinforcement "
+                 "learning raised its [LiveCodeBench](/benchmarks/livecodebench.md) v6 pass@1 "
+                 "from 42.4% to 55.3%, with the gains concentrated on the hardest problems."},
+    ],
+    "benchmarks": [
+        {"id": "livecodebench", "type": "Benchmark", "title": "LiveCodeBench",
+         "description": "A contamination-free benchmark of LLM coding ability that continuously "
+                        "collects new problems from LeetCode, AtCoder and Codeforces contests and "
+                        "evaluates code generation, self-repair, code execution and test-output "
+                        "prediction.",
+         "published_by": [B + "organizations/uc-berkeley", B + "organizations/mit"],
+         "measures_capability": "competitive-programming code generation on post-cutoff problems",
+         "resource": "https://livecodebench.github.io/",
+         "tags": ["open-source"],
+         "body": "LiveCodeBench (Jain et al., UC Berkeley, MIT and Cornell) collects problems "
+                 "from periodic LeetCode, AtCoder and Codeforces contests, annotates them with "
+                 "release dates so that a model can be scored only on problems published after "
+                 "its training cutoff, and evaluates several code scenarios beyond generation "
+                 "([site](https://livecodebench.github.io/)). In this corpus it is the yardstick "
+                 "for Apple's [simple self-distillation](/developments/2026-04-05-self-distillation-without-a-teacher.md), "
+                 "which moved [Qwen3-30B-Instruct](/systems/qwen3-30b-instruct.md) from 42.4% to "
+                 "55.3% pass@1 on the v6 release with no verifier, teacher or reinforcement "
+                 "learning."},
+    ],
     "developments": [
         {"id": "2026-04-05-self-distillation-without-a-teacher",
          "title": "A model improves by fine-tuning on its own samples",
@@ -35,9 +75,48 @@ agents, turning proof into a parallelizable compute job.
                   "with no verifier, teacher or reinforcement learning, lifting one model from "
                   "42.4% to 55.3% on LiveCodeBench with gains concentrated on the hardest "
                   "problems.",
+         "description": "The self-improvement loop shrinks to its minimum, with no search, no "
+                        "reward, no teacher and no verifier between a model and its own "
+                        "better samples, which the author reads as the Singularity learning to "
+                        "teach itself.",
          "domain": "models", "actor": ["apple"], "score": "42.4% → 55.3%",
+         "occurred_on": "2026-04-01",
+         "about": [B + "systems/qwen3-30b-instruct", B + "benchmarks/livecodebench"],
          "evidences": ["recursive-self-improvement", "architecture-of-mind"],
-         "supersedes": [B + "developments/2026-03-31-bilevel-autoresearch"]},
+         "supersedes": [B + "developments/2026-03-31-bilevel-autoresearch"],
+         "relatedTo": [B + "developments/2026-03-12-posttrainbench-v1",
+                       B + "developments/2026-04-09-in-place-test-time-training",
+                       B + "developments/2026-07-31-a-student-outgrows-every-teacher"],
+         "tags": ["distillation", "rsi", "model-trains-model"],
+         "supporting_text": "lifting Qwen3-30B-Instruct from 42.4% to 55.3% on LiveCodeBench",
+         "sources": [{"id": "apple-simple-self-distillation-arxiv",
+                      "resource": "https://arxiv.org/abs/2604.01193",
+                      "title": "Embarrassingly Simple Self-Distillation Improves Code Generation",
+                      "author": "org:apple", "last_modified": "2026-04-01"},
+                     {"id": "apple-ml-ssd-code",
+                      "resource": "https://github.com/apple/ml-ssd",
+                      "title": "apple/ml-ssd: code for Simple Self-Distillation",
+                      "author": "org:apple"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Simple self-distillation (SSD) samples solutions from the model at chosen "
+                 "temperature and truncation settings and fine-tunes on them with ordinary "
+                 "supervised fine-tuning; the paper ([arXiv](https://arxiv.org/abs/2604.01193), "
+                 "[code](https://github.com/apple/ml-ssd)) lifts "
+                 "[Qwen3-30B-Instruct](/systems/qwen3-30b-instruct.md) from 42.4% to 55.3% pass@1 "
+                 "on [LiveCodeBench](/benchmarks/livecodebench.md) v6, generalizes across Qwen and "
+                 "Llama models at 4B, 8B and 30B in instruct and thinking variants, and traces "
+                 "the gain to a precision-exploration conflict in decoding that SSD resolves by "
+                 "suppressing distractor tails where precision matters while keeping diversity "
+                 "where exploration matters. Where "
+                 "[Bilevel Autoresearch](/developments/2026-03-31-bilevel-autoresearch.md) five "
+                 "days earlier improved a model's research loop, this removes the loop's "
+                 "scaffolding entirely and still gets a model to improve itself, the tightest "
+                 "form of [recursive self-improvement](/themes/recursive-self-improvement.md) in "
+                 "the corpus to date. It is followed within days by ByteDance's "
+                 "[in-place test-time training](/developments/2026-04-09-in-place-test-time-training.md) "
+                 "and UNC's [72-hour autonomous run](/developments/2026-04-07-seventy-two-hours-fifty-experiments.md), "
+                 "and prefigures July's finding that "
+                 "[a student distilled from weaker teachers keeps improving](/developments/2026-07-31-a-student-outgrows-every-teacher.md)."},
         {"id": "2026-04-05-a-textbook-formalized-by-30000-agents",
          "title": "Thirty thousand agents formalize a graduate textbook",
          "claim": "Meta researchers translated an entire graduate mathematics textbook into "

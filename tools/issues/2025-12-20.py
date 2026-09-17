@@ -33,13 +33,57 @@ build the batteries that power them.
         {"id": "metr", "type": "Organization", "title": "METR",
          "resource": "https://metr.org/", "body": "Evaluates autonomous capability and time horizons."},
         {"id": "bytedance", "type": "Organization", "title": "ByteDance",
-         "resource": "https://www.bytedance.com/", "body": "Released the Seed-Prover math models."},
+         "description": "TikTok's parent, whose Seed research group ships math provers, video "
+                        "models and test-time-training work.",
+         "resource": "https://www.bytedance.com/",
+         "sameAs": ["http://www.wikidata.org/entity/Q55606242"],
+         "tags": ["big-tech", "frontier-lab"],
+         "body": "ByteDance is the Beijing-based owner of TikTok and Douyin; its Seed team is the "
+                 "research arm this corpus tracks. It enters with "
+                 "[Seed-Prover 1.5 solving 11 of 12 Putnam problems](/developments/2025-12-20-seed-prover-putnam.md) "
+                 "via agentic reinforcement learning, and returns with "
+                 "[in-place test-time training](/developments/2026-04-09-in-place-test-time-training.md), "
+                 "a model rewriting its own fast weights in flight, and the "
+                 "[Seedance video models](/developments/2026-08-02-a-speedrun-record-falls-to-a-faster-kernel.md)."},
         {"id": "alibaba", "type": "Organization", "title": "Alibaba",
-         "resource": "https://www.alibabagroup.com/", "body": "Ships the Qwen model family."},
+         "description": "Chinese e-commerce and cloud group that ships the Qwen model family, the "
+                        "corpus's recurring open-weight frontier entrant.",
+         "resource": "https://www.alibabagroup.com/",
+         "sameAs": ["http://www.wikidata.org/entity/Q1359568"],
+         "tags": ["big-tech", "frontier-lab"],
+         "body": "Alibaba Group runs China's largest e-commerce and cloud businesses and ships the "
+                 "Qwen models. It enters this corpus with "
+                 "[Qwen-Image-Layered](/developments/2025-12-20-qwen-image-layered.md), and its "
+                 "later releases carry the recursive thread: "
+                 "[Qwen3.7-Max ran thirty-five hours unattended](/developments/2026-05-22-thirty-five-hours-of-autonomous-execution.md) "
+                 "on a kernel task, and Qwen3.8-Max, "
+                 "[left alone for sixteen days](/developments/2026-08-03-sixteen-days-alone-and-265-commits.md), "
+                 "shipped 265 commits and its own self-evolving harness."},
         {"id": "cerebras", "type": "Organization", "title": "Cerebras",
-         "resource": "https://www.cerebras.ai/", "body": "Wafer-scale inference hardware."},
+         "description": "Wafer-scale AI chipmaker whose low-latency inference capacity and OpenAI "
+                        "deals track the corpus's hunger for inference.",
+         "resource": "https://www.cerebras.ai/",
+         "sameAs": ["http://www.wikidata.org/entity/Q66604886"],
+         "tags": ["chipmaker", "startup"],
+         "body": "Cerebras builds wafer-scale engines, single dinner-plate-sized chips aimed at "
+                 "fast inference. It enters the corpus "
+                 "[prepping a Q2 2026 IPO](/developments/2025-12-20-cerebras-ipo-q2-2026.md) on "
+                 "inference demand, then supplies OpenAI with "
+                 "[750 MW of low-latency compute](/developments/2026-01-15-openai-cerebras-750mw.md) "
+                 "and [files to list above $35 billion](/developments/2026-04-17-cerebras-files-at-35b-with-warrants.md) "
+                 "with warrants that scale with that customer's spend."},
         {"id": "catl", "type": "Organization", "title": "CATL",
-         "resource": "https://www.catl.com/en/", "body": "The largest battery manufacturer."},
+         "description": "The world's largest battery manufacturer, whose humanoid-staffed "
+                        "production lines open the corpus's physical-recursion thread.",
+         "resource": "https://www.catl.com/en/",
+         "sameAs": ["http://www.wikidata.org/entity/Q18653563"],
+         # tags deliberately omitted: no controlled entity tag fits a battery manufacturer
+         # (not big-tech / chipmaker / frontier-lab); the field is optional in check_spec.
+         "body": "Contemporary Amperex Technology (CATL) is the Chinese battery maker that supplies "
+                 "more EV and grid-storage cells than any other company. In this corpus it "
+                 "[put humanoids to work at scale on its battery lines](/developments/2025-12-20-catl-humanoid-battery-lines.md), "
+                 "machines building what powers machines, and later "
+                 "[began commercial-scale sodium-ion deployment](/developments/2026-01-06-five-minute-solid-state-battery.md)."},
         {"id": "magna-petra", "type": "Organization", "title": "Magna Petra",
          "body": "Lunar Helium-3 mining venture."},
         {"id": "ispace", "type": "Organization", "title": "ispace",
@@ -49,10 +93,53 @@ build the batteries that power them.
         {"id": "cftc", "type": "Organization", "title": "CFTC",
          "resource": "https://www.cftc.gov/", "body": "US derivatives regulator."},
     ],
+    "people": [
+        {"id": "stephen-mcaleer", "type": "Person", "title": "Stephen McAleer",
+         "name": "Stephen McAleer",
+         "description": "Anthropic alignment researcher who announced a full pivot to automated "
+                        "alignment research in December 2025.",
+         "resource": "https://x.com/mcaleerstephen",
+         "tags": ["researcher"],
+         "body": "Stephen McAleer works on alignment at Anthropic. In this corpus he appears once, "
+                 "[pivoting entirely to automated alignment research](/developments/2025-12-20-mcaleer-automated-alignment.md) "
+                 "on the day METR reported the "
+                 "[Opus 4.5 autonomy horizon](/developments/2025-12-20-metr-opus-45-autonomy.md), "
+                 "arguing that human oversight is obsolete against the coming intelligence "
+                 "explosion; the position he stakes out is the one Anthropic's later "
+                 "[weak-to-strong supervision](/developments/2026-04-16-weak-to-strong-supervision.md) "
+                 "result puts into practice."},
+    ],
+    "roles": [
+        {"id": "stephen-mcaleer-anthropic-alignment-researcher", "type": "Role",
+         "title": "Stephen McAleer, alignment researcher at Anthropic",
+         "roleName": "Alignment researcher",
+         "memberOf": [B + "organizations/anthropic"],
+         "holder": [B + "people/stephen-mcaleer"],
+         "description": "The role in which he announced a full pivot to automated alignment "
+                        "research.",
+         "body": "The newsletter identifies McAleer as Anthropic's and describes his work as "
+                 "alignment research; it is from this position that he "
+                 "[declared human oversight obsolete](/developments/2025-12-20-mcaleer-automated-alignment.md) "
+                 "and turned entirely to automating the work."},
+    ],
     "systems": [
         {"id": "claude-opus-4-5", "type": "AISystem", "title": "Claude Opus 4.5",
          "developed_by": [B + "organizations/anthropic"], "modality": "text",
-         "evaluated_on": [B + "benchmarks/autonomous-time-horizon"]},
+         "evaluated_on": [B + "benchmarks/autonomous-time-horizon"],
+         "description": "Anthropic's late-2025 frontier model whose 4h49m METR autonomy horizon "
+                        "and unsupervised pull-request output mark the corpus's first "
+                        "takeoff-grade coding agent.",
+         "resource": "https://www.anthropic.com/news/claude-opus-4-5",
+         "tags": ["coding-agent", "reasoning-model"],
+         "body": "Claude Opus 4.5 is the Anthropic model released in November 2025 "
+                 "([announcement](https://www.anthropic.com/news/claude-opus-4-5)). In this corpus "
+                 "it is the system METR measured at a "
+                 "[state-of-the-art 50% autonomy horizon of 4 hours 49 minutes](/developments/2025-12-20-metr-opus-45-autonomy.md), "
+                 "a leap the newsletter reads as matching the fast-timeline AI 2027 variant. A week "
+                 "later it is the model that, running inside [Claude Code](/systems/claude-code.md), "
+                 "[wrote 200 pull requests](/developments/2025-12-27-cherny-200-pull-requests.md) "
+                 "while its creator went a month without opening an IDE, the point at which the "
+                 "corpus treats the coding loop as closed."},
         {"id": "seed-prover-1-5", "type": "AISystem", "title": "Seed-Prover 1.5",
          "developed_by": [B + "organizations/bytedance"], "modality": "mathematics",
          "evaluated_on": [B + "benchmarks/putnam"]},
@@ -95,8 +182,37 @@ build the batteries that power them.
          "title": "Anthropic researcher pivots fully to automated alignment",
          "claim": "Anthropic's Stephen McAleer pivoted entirely to automated alignment research, "
                   "arguing human oversight is obsolete against the coming intelligence explosion.",
-         "domain": "agents", "actor": ["anthropic"],
-         "evidences": ["recursive-self-improvement"]},
+         "description": "The first point in the corpus where automating alignment, not just "
+                        "capability, is treated as the necessary response to the autonomy curve, "
+                        "the immediate implication of the METR horizon result in the author's framing.",
+         "domain": "agents", "actor": ["anthropic", "people/stephen-mcaleer"],
+         "evidences": ["recursive-self-improvement"],
+         "relatedTo": [B + "developments/2025-12-21-anthropic-activation-oracles",
+                       B + "developments/2026-03-20-openai-monitors-its-own-agents",
+                       B + "developments/2026-04-16-weak-to-strong-supervision"],
+         "relations": [{"predicate": "relatedTo",
+                        "target": B + "developments/2025-12-20-metr-opus-45-autonomy",
+                        "relation_label": "responds to"}],
+         "tags": ["alignment", "rsi"],
+         "supporting_text": "declaring that human oversight is obsolete in the face of the coming intelligence explosion",
+         "sources": [{"id": "mcaleer-automated-alignment-post",
+                      "resource": "https://x.com/mcaleerstephen/status/2002205061737591128",
+                      "title": "Stephen McAleer on X: pivoting entirely to automated alignment research",
+                      "author": "human:stephen-mcaleer"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "[Stephen McAleer](/people/stephen-mcaleer.md), an alignment researcher at "
+                 "Anthropic, announced that he was pivoting entirely to automated alignment "
+                 "research on the grounds that human oversight cannot keep pace with the coming "
+                 "intelligence explosion "
+                 "([post](https://x.com/mcaleerstephen/status/2002205061737591128)). The "
+                 "newsletter places it as the immediate implication of METR's "
+                 "[4h49m autonomy horizon for Opus 4.5](/developments/2025-12-20-metr-opus-45-autonomy.md), "
+                 "reported the same day: if capability compounds on the fast AI 2027 track, "
+                 "alignment work has to be handed to the models too. The thread continues with "
+                 "Anthropic's [Activation Oracles](/developments/2025-12-21-anthropic-activation-oracles.md) "
+                 "a day later, OpenAI [monitoring its own coding agents](/developments/2026-03-20-openai-monitors-its-own-agents.md) "
+                 "in March 2026, and [weak-to-strong supervision](/developments/2026-04-16-weak-to-strong-supervision.md) "
+                 "closing 97% of the capability gap that April."},
         {"id": "2025-12-20-markets-missed-opus-breakout",
          "title": "Prediction markets underestimated the Opus autonomy jump",
          "claim": "Manifold prediction markets significantly underestimated the Opus 4.5 "
@@ -188,10 +304,34 @@ build the batteries that power them.
          "title": "CATL puts humanoids on the lines that build batteries",
          "claim": "CATL operationalized the first large-scale humanoid robot deployment in its "
                   "battery production lines.",
+         "description": "The author's physical recursion: the loop the corpus had tracked in code "
+                        "crosses the air gap into matter, with humanoids working the lines that "
+                        "make the cells that will power humanoids.",
          "domain": "robotics", "actor": ["catl"],
+         "occurred_on": "2025-12-18",
          "evidences": ["physical-recursion", "recursive-self-improvement"],
+         "relatedTo": [B + "developments/2026-09-15-robots-making-robots",
+                       B + "systems/optimus"],
+         "tags": ["robotics", "rsi"],
+         "supporting_text": "CATL has operationalized the world’s first large-scale humanoid robot deployment",
+         "sources": [{"id": "carnewschina-catl-humanoids",
+                      "resource": "https://carnewschina.com/2025/12/18/catl-achieves-worlds-first-scale-deployment-of-embodied-ai-humanoid-robots-on-battery-production-lines/",
+                      "title": "CATL achieves world's first scale deployment of embodied AI humanoid "
+                               "robots on battery production lines",
+                      "author": "org:carnewschina", "last_modified": "2025-12-18"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
          "body": "Machines building the batteries that power machines — the recursion the "
-                 "corpus has been tracking in software, now in matter."},
+                 "corpus has been tracking in software, now in matter. "
+                 "[CATL](/organizations/catl.md), the world's largest battery maker, put "
+                 "embodied-AI humanoids to work at scale on its battery production lines "
+                 "([CarNewsChina](https://carnewschina.com/2025/12/18/catl-achieves-worlds-first-scale-deployment-of-embodied-ai-humanoid-robots-on-battery-production-lines/)), "
+                 "which the newsletter reads as the loop crossing the air gap into kinetic "
+                 "reality and the first entry under "
+                 "[physical recursion](/themes/physical-recursion.md). Eight days later "
+                 "[Linkerbot humanoids were assembling their own hands](/developments/2025-12-26-linkerbot-self-assembly.md) "
+                 "in Beijing, and by September 2026 XPENG's "
+                 "[automated humanoid line](/developments/2026-09-15-robots-making-robots.md) "
+                 "ships a robot that walks off unassisted."},
         {"id": "2025-12-20-cftc-energy-swaps-pilot",
          "title": "The CFTC pilots energy commodity swaps for AI",
          "claim": "The CFTC launched a pilot programme for energy commodity swaps aimed at AI "

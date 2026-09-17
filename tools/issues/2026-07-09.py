@@ -37,17 +37,118 @@ ingested the Cursor codebase, benchmark tasks included.
         {"id": "john-deere", "type": "Organization", "title": "John Deere"},
         {"id": "imf", "type": "Organization", "title": "International Monetary Fund"},
     ],
+    "systems": [
+        {"id": "grok-4-5", "type": "AISystem", "title": "Grok 4.5",
+         "description": "SpaceXAI's frontier model of July 2026, built for coding, agentic tasks "
+                        "and knowledge work, whose gains Aditya Gupta credited to a loop in which "
+                        "better behavior unlocks more intelligence.",
+         "developed_by": [B + "organizations/xai", B + "organizations/spacex"],
+         "modality": "text",
+         "evaluated_on": [B + "benchmarks/gdpval"],
+         "tags": ["reasoning-model"],
+         "resource": "https://x.ai/news/grok-4-5",
+         "body": "Grok 4.5 is the model SpaceXAI launched on 8 July 2026, trained on tens of "
+                 "thousands of NVIDIA [GB300s](/hardware/nvidia-gb300.md) alongside Cursor and "
+                 "served at about 80 tokens per second with roughly twice its peers' token "
+                 "efficiency at $2 in and $6 out per million tokens "
+                 "([announcement](https://x.ai/news/grok-4-5)). In this corpus it carries the "
+                 "[loop in which conduct and capability compound](/developments/2026-07-09-better-behavior-unlocks-more-intelligence.md) "
+                 "that Aditya Gupta credited for the gains, the "
+                 "[4x training-cycle speedup](/developments/2026-07-09-a-model-a-month-through-pipelining.md) "
+                 "beneath its cadence, and the asterisk that its run "
+                 "[ingested the Cursor codebase, benchmark tasks included](/developments/2026-07-09-a-training-run-ingests-its-own-benchmark.md). "
+                 "Its debut at fourth on GDPval-AA and first on AutomationBench is recorded "
+                 "[separately](/developments/2026-07-09-half-of-real-workflows-without-breaking-rules.md)."},
+    ],
+    "hardware": [
+        {"id": "nvidia-gb300", "type": "Hardware", "title": "NVIDIA GB300",
+         "description": "NVIDIA's GB300 data-center accelerator, the chip SpaceXAI trained "
+                        "Grok 4.5 on by the tens of thousands.",
+         "developed_by": [B + "organizations/nvidia"],
+         "resource": "https://www.nvidia.com/en-us/data-center/gb300-nvl72/",
+         "body": "The GB300 follows the [B200](/hardware/nvidia-b200.md) in NVIDIA's Blackwell "
+                 "data-center line ([product page](https://www.nvidia.com/en-us/data-center/gb300-nvl72/)); "
+                 "NVIDIA's page presents it as the GB300 Grace Blackwell Ultra Superchip and, in the GB300 "
+                 "NVL72 rack, as 72 Blackwell Ultra GPUs paired with 36 Grace CPUs. "
+                 "In this corpus it appears as the training substrate of "
+                 "[Grok 4.5](/systems/grok-4-5.md), trained on tens of thousands of them "
+                 "alongside Cursor, the run whose gains Aditya Gupta credited to "
+                 "[a loop where better behavior unlocks more intelligence](/developments/2026-07-09-better-behavior-unlocks-more-intelligence.md)."},
+    ],
+    "people": [
+        {"id": "aditya-gupta", "type": "Person", "title": "Aditya Gupta", "name": "Aditya Gupta",
+         "description": "Cited by the newsletter for the account of what drove Grok 4.5: "
+                        "synthetic environments at scale and a loop in which a smarter model "
+                        "behaves better and better behavior unlocks more intelligence.",
+         "resource": "https://x.com/ag_i_2211",
+         "tags": ["researcher"],
+         "body": "Aditya Gupta is quoted on the launch day of [Grok 4.5](/systems/grok-4-5.md) "
+                 "explaining its gains: synthetic environments at scale and a tight loop where "
+                 "\"a smarter model behaves better, and better behavior unlocks more "
+                 "intelligence\" ([post](https://x.com/adityagupta/status/2074917787445997822)). "
+                 "The post, published from his account @ag_i_2211, opens \"A bit on how we built it\" and "
+                 "describes a mixture of hundreds of thousands of tasks across dozens of environments weighted "
+                 "toward long-horizon agentic coding, so the corpus reads him as one of the people who trained "
+                 "the model; neither the newsletter nor the post states his title. "
+                 "In this corpus that statement is the "
+                 "[behavior-unlocks-intelligence development](/developments/2026-07-09-better-behavior-unlocks-more-intelligence.md) "
+                 "and the seed of the [theme of the same name](/themes/behavior-unlocks-intelligence.md), "
+                 "the point where alignment is recast from a tax on capability into an input to it."},
+    ],
     "developments": [
         {"id": "2026-07-09-better-behavior-unlocks-more-intelligence",
          "title": "A lab credits a loop where conduct and capability compound together",
          "claim": "SpaceXAI launched Grok 4.5, trained on tens of thousands of GB300s alongside "
-                  "Cursor and served at roughly twice its peers' token efficiency, with its lead "
-                  "crediting synthetic environments at scale and a loop in which a smarter model "
-                  "behaves better and better behavior unlocks more intelligence.",
-         "domain": "models", "actor": ["spacex", "xai", "nvidia", "anysphere"], "score": "$2/$6 per Mtok",
+                  "Cursor and served at roughly twice its peers' token efficiency, with Aditya "
+                  "Gupta crediting synthetic environments at scale and a loop in which a smarter "
+                  "model behaves better and better behavior unlocks more intelligence.",
+         "description": "Alignment is recast from a tax on capability into a training input: "
+                        "the mechanism credited for a frontier launch is conduct feeding back "
+                        "into intelligence.",
+         "domain": "models", "actor": ["spacex", "xai", "nvidia", "anysphere", "people/aditya-gupta"],
+         "score": "$2/$6 per million tokens",
+         "occurred_on": "2026-07-08",
+         "about": [B + "systems/grok-4-5", B + "hardware/nvidia-gb300"],
          "evidences": ["behavior-unlocks-intelligence", "alignment-as-moat",
                        "recursive-self-improvement"],
-         "supersedes": [B + "developments/2026-07-08-the-transformer-eulogized"]},
+         "supersedes": [B + "developments/2026-07-08-the-transformer-eulogized",
+                        B + "developments/2026-05-17-models-improve-every-few-days"],
+         "relatedTo": [B + "developments/2026-02-11-xai-cofounder-resigns-warning",
+                       B + "developments/2026-07-09-a-training-run-ingests-its-own-benchmark",
+                       B + "developments/2026-07-15-a-hidden-metric-teaches-an-agent-to-cheat-less"],
+         "references": [B + "developments/2026-04-20-agi-becomes-a-version-number"],
+         "tags": ["rsi", "alignment", "capability-jump"],
+         "supporting_text": "a smarter model behaves better, and better behavior unlocks more intelligence",
+         "sources": [{"id": "xai-grok-4-5-announcement",
+                      "resource": "https://x.ai/news/grok-4-5",
+                      "title": "Introducing Grok 4.5", "author": "org:xai"},
+                     {"id": "aditya-gupta-training-loop-post",
+                      "resource": "https://x.com/adityagupta/status/2074917787445997822",
+                      "title": "Aditya Gupta on what drove Grok 4.5",
+                      "author": "human:aditya-gupta"},
+                     {"id": "nvidia-grok-4-5-gb300-post",
+                      "resource": "https://x.com/nvidia/status/2074979063106843131",
+                      "title": "NVIDIA on Grok 4.5 training on GB300s",
+                      "author": "org:nvidia"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "[Grok 4.5](/systems/grok-4-5.md) launched as SpaceXAI's smartest model, "
+                 "trained on tens of thousands of NVIDIA [GB300s](/hardware/nvidia-gb300.md) "
+                 "alongside Cursor and served at about 80 tokens per second with roughly twice "
+                 "its peers' token efficiency at $2 in and $6 out per million tokens "
+                 "([announcement](https://x.ai/news/grok-4-5)). Asked how, "
+                 "[Aditya Gupta](/people/aditya-gupta.md) credited synthetic environments at "
+                 "scale and a tight loop in which a smarter model behaves better and better "
+                 "behavior unlocks more intelligence "
+                 "([post](https://x.com/adityagupta/status/2074917787445997822)), the statement "
+                 "that seeds the [theme of the same name](/themes/behavior-unlocks-intelligence.md). "
+                 "It delivers the 1.5-trillion-parameter Grok 4.5 of Musk's "
+                 "[April roadmap](/developments/2026-04-20-agi-becomes-a-version-number.md), the "
+                 "successor he said in May was "
+                 "[about to start mid-training on coding-tool data](/developments/2026-05-17-models-improve-every-few-days.md), "
+                 "arrives five months after an xAI co-founder "
+                 "[resigned warning that live loops were a year away](/developments/2026-02-11-xai-cofounder-resigns-warning.md), "
+                 "and carries the asterisk that the run "
+                 "[ingested the Cursor codebase, benchmark tasks included](/developments/2026-07-09-a-training-run-ingests-its-own-benchmark.md)."},
         {"id": "2026-07-09-half-of-real-workflows-without-breaking-rules",
          "title": "A model completes over half of real workflow objectives without breaking rules",
          "claim": "Grok 4.5 debuted at fourth on GDPval-AA at a tenth the cost of its superiors "
@@ -62,9 +163,44 @@ ingested the Cursor codebase, benchmark tasks included.
          "claim": "A teardown of one lab's C and C++ rewrite gamble found a fourfold full-cycle "
                   "speedup that makes a model a month feasible through pipelining alone, with "
                   "the bespoke inference stack not yet connected and promising another doubling.",
-         "domain": "compute", "actor": ["xai"], "score": "4x cycle speedup",
+         "description": "The clock speed of the recursion is set by the software substrate as "
+                        "much as by the model: a rewrite of the training stack, not a new "
+                        "architecture, is what makes a monthly frontier release feasible.",
+         "domain": "compute", "actor": ["xai", "spacex", "people/elon-musk"],
+         "score": "4x full-cycle speedup",
+         "occurred_on": "2026-07-08",
+         "about": [B + "systems/grok-4-5"],
          "evidences": ["recursive-self-improvement", "autonomy-clock-speed"],
-         "supersedes": [B + "developments/2026-07-09-better-behavior-unlocks-more-intelligence"]},
+         "supersedes": [B + "developments/2026-07-09-better-behavior-unlocks-more-intelligence"],
+         "relatedTo": [B + "developments/2026-07-03-seventeen-leaders-in-two-years",
+                       B + "developments/2026-05-17-models-improve-every-few-days",
+                       B + "developments/2026-01-11-compute-doubles-every-7-months"],
+         "tags": ["ai-r-and-d", "compute-scaling"],
+         "supporting_text": "4x full-cycle speedup that makes “a model a month” feasible",
+         "sources": [{"id": "33fg-spacexai-c-rewrite-teardown",
+                      "resource": "https://research.33fg.com/analysis/what-spacexai-s-c-rewrite-gamble-buys",
+                      "title": "What SpaceXAI's C-Rewrite Gamble Buys", "author": "org:33fg",
+                      "last_modified": "2026-07-08"},
+                     {"id": "musk-inference-stack-not-plugged-in",
+                      "resource": "https://x.com/elonmusk/status/2074969374843154500",
+                      "title": "Musk: the bespoke inference stack isn't plugged in yet",
+                      "author": "human:elon-musk"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "A bottom-up teardown of SpaceXAI's decision to rewrite its training stack in C "
+                 "and C++ found a 4x full-cycle speedup, enough to make a model a month feasible "
+                 "through pipelining alone "
+                 "([analysis](https://research.33fg.com/analysis/what-spacexai-s-c-rewrite-gamble-buys)), "
+                 "and [Elon Musk](/people/elon-musk.md) added that the bespoke inference stack "
+                 "is not yet plugged in and promised another doubling "
+                 "([post](https://x.com/elonmusk/status/2074969374843154500)). It is the "
+                 "substrate under [Grok 4.5](/systems/grok-4-5.md), shipped the same day, and "
+                 "the corpus's clearest statement that the cadence of the loop is an engineering "
+                 "variable: it follows Musk's May report that a shipped Grok was "
+                 "[improving every few days](/developments/2026-05-17-models-improve-every-few-days.md) "
+                 "and lands a week after the count of "
+                 "[seventeen frontier leaders reigning about seven weeks each](/developments/2026-07-03-seventeen-leaders-in-two-years.md), "
+                 "a reign a monthly cadence would halve. The next day OpenAI reported that "
+                 "[a model had post-trained a model](/developments/2026-07-10-a-model-post-trains-a-model.md)."},
         {"id": "2026-07-09-a-training-run-ingests-its-own-benchmark",
          "title": "A training run accidentally ingests a partner's benchmark tasks",
          "claim": "The Grok 4.5 run accidentally ingested the Cursor codebase, benchmark tasks "

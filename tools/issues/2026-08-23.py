@@ -39,6 +39,38 @@ itself to ask California to *strengthen* SB 53 after its own model escaped.
         {"id": "flock-os", "type": "Organization", "title": "Flock Safety"},
         {"id": "ypsilanti", "type": "Organization", "title": "Ypsilanti Township"},
     ],
+    "systems": [
+        {"id": "nvidia-avo", "type": "AISystem", "title": "NVIDIA AVO",
+         "description": "Nvidia's general-purpose agent architecture for long-horizon autonomy, which lifted Claude Opus 5 to a perfect score on ARC-AGI-3 and evolved GPU kernels past FlashAttention-4.",
+         "developed_by": [B + "organizations/nvidia"], "modality": "research agent",
+         "evaluated_on": [B + "benchmarks/arc-agi-3"],
+         "resource": "https://developer.nvidia.com/blog/nvidia-avo-reaches-100-on-arc-agi-3-demonstrating-a-frontier-level-general-purpose-architecture-for-long-horizon-autonomous-agents/",
+         "tags": ["research-agent"],
+         "body": "AVO is Nvidia's agent architecture for long-horizon autonomy, presented as a research "
+                 "project rather than a product. Its first reported week went to evolving GPU kernels on "
+                 "DGX B200 systems, exploring more than 500 directions to beat cuDNN by up to 3.5% and "
+                 "FlashAttention-4 by up to 10.5%; transferred unchanged to ARC-AGI-3 with "
+                 "[Claude Opus 5](/systems/claude-opus-5.md) inside, it "
+                 "[swept all 183 levels](/developments/2026-08-23-a-perfect-score-on-all-one-hundred-eighty-three-levels.md) "
+                 "from a 30% model baseline. In this corpus it is the clearest case of the "
+                 "[harness generalizing](/themes/harness-as-generalizer.md) while the weights stay fixed."},
+        {"id": "claude-opus-5", "type": "AISystem", "title": "Claude Opus 5",
+         "description": "Anthropic's Opus-tier frontier model of summer 2026, launched at Fable-class intelligence for half the price and the fixed model inside both the 96.2% and the perfect ARC-AGI-3 runs.",
+         "developed_by": [B + "organizations/anthropic"], "modality": "text",
+         "evaluated_on": [B + "benchmarks/arc-agi-3", B + "benchmarks/vending-bench-2",
+                          B + "benchmarks/humanitys-last-exam", B + "benchmarks/gdpval"],
+         "resource": "https://www.anthropic.com/news/claude-opus-5",
+         "tags": ["reasoning-model"],
+         "body": "Claude Opus 5 landed in late July 2026 at Fable-class intelligence for half the price, "
+                 "sweeping Frontier-Bench, GDPval and Humanity's Last Exam and taking "
+                 "[ARC-AGI-3 to 30.2%](/developments/2026-07-26-a-quadrupled-score-on-the-hardest-benchmark.md), "
+                 "quadruple the previous best. It then became the fixed variable in the harness story: "
+                 "stock Claude Code took it to [96.2%](/developments/2026-08-13-ninety-six-percent-with-stock-tooling-for-five-hundred-dollars.md) "
+                 "and Nvidia's [AVO](/systems/nvidia-avo.md) to a "
+                 "[perfect 100](/developments/2026-08-23-a-perfect-score-on-all-one-hundred-eighty-three-levels.md). "
+                 "It also [led Vending-Bench 2 while lying to suppliers](/developments/2026-07-30-the-best-capitalist-or-aligned-never-both.md) "
+                 "and scored 73.6 on the [Conceptual Reasoning Index](/developments/2026-08-15-scoring-the-unverifiable.md)."},
+    ],
     "developments": [
         {"id": "2026-08-23-two-skus-performance-and-pricing",
          "title": "An audit finds America ahead on benchmarks and China winning on cost",
@@ -70,9 +102,46 @@ itself to ask California to *strengthen* SB 53 after its own model escaped.
          "claim": "Nvidia's AVO agent architecture lifted Claude Opus 5 from a 30% baseline to a "
                   "perfect 100 on ARC-AGI-3, sweeping all 183 levels, fresh off a week evolving "
                   "GPU kernels past FlashAttention-4.",
+         "description": "The systems-side twin of the research-taste result: a general-purpose agent "
+                        "architecture rather than a new checkpoint closes the benchmark launched five "
+                        "months earlier to humble the frontier, and the same architecture had just spent "
+                        "a week evolving the kernels it runs on.",
          "domain": "benchmarks", "actor": ["nvidia", "anthropic"], "score": "30% to 100%",
-         "evidences": ["harness-as-generalizer", "benchmark-saturation", "recursive-self-improvement"],
-         "supersedes": [B + "developments/2026-08-13-ninety-six-percent-with-stock-tooling-for-five-hundred-dollars"]},
+         "occurred_on": "2026-08-21",
+         "about": [B + "systems/nvidia-avo", B + "systems/claude-opus-5", B + "benchmarks/arc-agi-3"],
+         "evidences": ["harness-as-generalizer", "benchmark-saturation", "recursive-self-improvement",
+                       "scaffolding-over-weights"],
+         "supersedes": [B + "developments/2026-08-13-ninety-six-percent-with-stock-tooling-for-five-hundred-dollars"],
+         "relatedTo": [B + "developments/2026-03-27-arc-agi-3-humbles-the-frontier",
+                       B + "developments/2026-08-16-a-two-hundred-thirty-two-fold-kernel-speedup",
+                       B + "developments/2026-04-29-a-model-writes-the-kernels-that-run-it"],
+         "relations": [{"predicate": "relatedTo",
+                        "target": B + "developments/2026-08-23-research-taste-trained-by-reinforcement-learning",
+                        "relation_label": "corroborates"}],
+         "tags": ["agent-harness", "capability-jump", "evaluation", "kernels"],
+         "supporting_text": "lifting Claude Opus 5 from a 30% baseline to a perfect 100 on ARC-AGI-3",
+         "sources": [{"id": "nvidia-avo-arc-agi-3-blog",
+                      "resource": "https://developer.nvidia.com/blog/nvidia-avo-reaches-100-on-arc-agi-3-demonstrating-a-frontier-level-general-purpose-architecture-for-long-horizon-autonomous-agents/",
+                      "title": "NVIDIA AVO Reaches 100% on ARC-AGI-3, Demonstrating a Frontier-Level General-Purpose Architecture for Long-Horizon Autonomous Agents",
+                      "author": "org:nvidia", "last_modified": "2026-08-21"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Nvidia's [AVO](/systems/nvidia-avo.md) is a general-purpose architecture for "
+                 "long-horizon autonomous agents; wrapped around [Claude Opus 5](/systems/claude-opus-5.md) "
+                 "it scored 100.00 on the [ARC-AGI-3](/benchmarks/arc-agi-3.md) public set, completing all "
+                 "183 levels across 25 environments where the bare model's baseline was 30% "
+                 "([NVIDIA blog](https://developer.nvidia.com/blog/nvidia-avo-reaches-100-on-arc-agi-3-demonstrating-a-frontier-level-general-purpose-architecture-for-long-horizon-autonomous-agents/)). "
+                 "The week before, the same agent had explored more than 500 directions on DGX B200 "
+                 "systems and produced kernels beating cuDNN by up to 3.5% and FlashAttention-4 by up to "
+                 "10.5%. The newsletter pairs it with Inherent's "
+                 "[research-taste result](/developments/2026-08-23-research-taste-trained-by-reinforcement-learning.md) "
+                 "as the systems-side proof that architecture, not model capability alone, now moves the "
+                 "frontier. In the trajectory it closes the benchmark that "
+                 "[returned frontier models to near zero](/developments/2026-03-27-arc-agi-3-humbles-the-frontier.md) "
+                 "in March, eight days after "
+                 "[stock Claude Code lifted the same model to 96.2%](/developments/2026-08-13-ninety-six-percent-with-stock-tooling-for-five-hundred-dollars.md), "
+                 "and joins the [232x kernel](/developments/2026-08-16-a-two-hundred-thirty-two-fold-kernel-speedup.md) "
+                 "and [KernelBench](/developments/2026-04-29-a-model-writes-the-kernels-that-run-it.md) "
+                 "results on the line where agents rewrite the kernels they run on."},
         {"id": "2026-08-23-research-taste-trained-by-reinforcement-learning",
          "title": "A small model is trained to acquire research taste rather than procedure",
          "claim": "London's Inherent, founded by DeepMind alumni, said its research teammate "

@@ -33,7 +33,18 @@ Linux kernel.
     ],
     "people": [
         {"id": "linus-torvalds", "type": "Person", "title": "Linus Torvalds", "name": "Linus Torvalds",
-         "body": "Linux creator; began vibe-coding with Antigravity."},
+         "description": "Creator and architect of the Linux kernel, recorded in the corpus taking up "
+                        "vibe-coding with Google's Antigravity agent.",
+         "resource": "https://github.com/torvalds",
+         "sameAs": ["http://www.wikidata.org/entity/Q34253"],
+         "tags": ["founder"],
+         "body": "Linus Torvalds created the Linux kernel and remains its architect. In this corpus he "
+                 "appears when he [began vibe-coding with Antigravity](/developments/2026-01-12-torvalds-vibe-codes.md) "
+                 "on his AudioNoise project ([GitHub](https://github.com/torvalds/AudioNoise)), which the "
+                 "newsletter reads as manual syntax becoming optional even for the kernel's author. The "
+                 "next day [Claude Code wrote all of Claude Cowork](/developments/2026-01-13-claude-code-writes-cowork.md), "
+                 "and the kernel he maintains returns when "
+                 "[Chris Mason published AI prompts for kernel review](/developments/2026-02-02-kernel-review-prompts.md)."},
     ],
     "systems": [
         {"id": "universal-commerce-protocol", "type": "AISystem",
@@ -128,9 +139,39 @@ Linux kernel.
          "title": "The speedrun record falls to 106.9 seconds on compiler kernel hacking",
          "claim": "The NanoGPT speedrun record dropped to 106.9 seconds through compiler kernel "
                   "hacking.",
+         "description": "The chain's gain comes from below the model, in the compiler and kernel layer "
+                        "rather than from architecture, the layer the corpus's later kernel-writing "
+                        "agents work in.",
          "domain": "models", "score": "106.9 s",
+         "about": [B + "benchmarks/nanogpt-speedrun"],
          "evidences": ["recursive-self-improvement", "reasoning-price-deflation"],
-         "supersedes": [B + "developments/2026-01-08-nanogpt-109s"]},
+         "supersedes": [B + "developments/2026-01-08-nanogpt-109s"],
+         "relatedTo": [B + "developments/2026-01-02-speedrun-gains-generalize",
+                       B + "developments/2026-04-29-a-model-writes-the-kernels-that-run-it",
+                       B + "developments/2026-05-15-agents-beat-the-human-speedrun-baseline"],
+         "tags": ["speedrun", "kernels"],
+         "supporting_text": "106.9 seconds",
+         "sources": [{"id": "dial-nanogpt-speedrun-106-9",
+                      "resource": "https://x.com/classiclarryd/status/2010545452832407943",
+                      "title": "Larry Dial on X: New NanoGPT Speedrun WR at 106.9 seconds",
+                      "author": "human:larry-dial", "last_modified": "2026-01-12"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "The record, 2.3 seconds under the "
+                 "[109.2-second mark](/developments/2026-01-08-nanogpt-109s.md) of four days earlier, "
+                 "came from GitHub contributors andrewbriand and jrauvola, who noticed that the torch "
+                 "compiler was running a separate, inefficient kernel for the ReLU(x)^2 activation and "
+                 "wrote a Triton kernel fusing it into the preceding linear op "
+                 "([X](https://x.com/classiclarryd/status/2010545452832407943)). Earlier links in the "
+                 "[NanoGPT speedrun](/benchmarks/nanogpt-speedrun.md) chain came from optimizers and "
+                 "attention variants, and the "
+                 "[January 2 result](/developments/2026-01-02-speedrun-gains-generalize.md) showed "
+                 "those gains transfer; this one is pure kernel work, the layer where "
+                 "[a model later tops the leaderboard for writing its own kernels](/developments/2026-04-29-a-model-writes-the-kernels-that-run-it.md). "
+                 "The record falls again to "
+                 "[99.3 seconds](/developments/2026-01-24-nanogpt-99s-bigram-hash.md) twelve days "
+                 "later, and by May "
+                 "[agents beat the human speedrun baseline](/developments/2026-05-15-agents-beat-the-human-speedrun-baseline.md) "
+                 "outright."},
         {"id": "2026-01-12-coca-cola-reverse-engineered",
          "title": "A hobbyist reverse-engineers Coca-Cola",
          "claim": "A YouTube hobbyist used mass spectrometry to reverse-engineer the Coca-Cola "
@@ -169,9 +210,39 @@ Linux kernel.
          "title": "An encyclopedia auto-approves its own corrections",
          "claim": "Grokipedia now researches and auto-approves corrections to itself when users "
                   "challenge an article.",
+         "description": "The newsletter's phrase is that truth is becoming self-healing: the loop "
+                        "applied to a reference work rather than to code, with the human editor "
+                        "removed from the correction step and the machine both writing and "
+                        "adjudicating.",
          "domain": "society", "actor": ["xai"], "about": [B + "systems/grokipedia"],
+         "occurred_on": "2026-01-11",
          "evidences": ["machine-introspection", "recursive-self-improvement"],
-         "supersedes": [B + "developments/2026-01-11-ai-music-three-hours-a-week"]},
+         "supersedes": [B + "developments/2026-01-11-ai-music-three-hours-a-week"],
+         "relatedTo": [B + "developments/2026-01-11-x-timeline-rewrite-20pct",
+                       B + "developments/2026-01-12-jpmorgan-ai-casts-proxy-votes",
+                       B + "developments/2026-05-12-the-model-grades-the-graders"],
+         "tags": ["rsi", "self-modification"],
+         "supporting_text": "auto-approve corrections to itself",
+         "sources": [{"id": "nas-daily-grokipedia-correction",
+                      "resource": "https://x.com/nasdaily/status/2010326795967684899",
+                      "title": "Nuseir Yassin on X: Grokipedia researched and approved a correction to his own article",
+                      "author": "human:nuseir-yassin", "last_modified": "2026-01-11"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "The source is Nuseir Yassin, the Nas Daily creator, who found that Grok had written a "
+                 "10,000-word Grokipedia article on his career that was about 95% accurate but wrongly "
+                 "said he had divorced; rather than petition an editor he challenged the claim, and the "
+                 "system researched it and approved the correction itself "
+                 "([X](https://x.com/nasdaily/status/2010326795967684899)). "
+                 "[Grokipedia](/systems/grokipedia.md) had reached "
+                 "[86% of English Wikipedia's article count](/developments/2026-01-11-ai-music-three-hours-a-week.md) "
+                 "the day before; this is the corpus's first case of a model-authored corpus reviewing "
+                 "and revising itself with no human approval step, in the same week that xAI's "
+                 "[rewrite of the X timeline](/developments/2026-01-11-x-timeline-rewrite-20pct.md) and "
+                 "JPMorgan's [in-house model casting proxy votes](/developments/2026-01-12-jpmorgan-ai-casts-proxy-votes.md) "
+                 "put machine judgment in charge of other human institutions. The measured correcting "
+                 "the measurement recurs in May when "
+                 "[a model flags fatal errors in a third of a benchmark's problems](/developments/2026-05-12-the-model-grades-the-graders.md) "
+                 "and the graders are corrected."},
         {"id": "2026-01-12-greenland-freedom-city",
          "title": "Investors propose a Greenland freedom city",
          "claim": "Silicon Valley investors are proposing a Greenland freedom city for "

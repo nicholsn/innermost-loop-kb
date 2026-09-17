@@ -33,6 +33,68 @@ acquisition ever, merging the best training stack with the fastest inference.
         {"id": "uconn", "type": "Organization", "title": "University of Connecticut",
          "resource": "https://uconn.edu/", "body": "Developed a lensless synthetic aperture sensor."},
     ],
+    "benchmarks": [
+        {"id": "nanogpt-speedrun", "type": "Benchmark", "title": "NanoGPT speedrun",
+         "published_by": [B + "people/keller-jordan"],
+         "description": "Keller Jordan's modded-nanogpt speedrun: the wall-clock time to train a "
+                        "GPT-2-class model to a fixed validation loss on FineWeb on one 8xH100 node, "
+                        "whose falling record the corpus tracks as the cost of the training loop itself.",
+         "resource": "https://github.com/KellerJordan/modded-nanogpt",
+         "measures_capability": "wall-clock time to train a GPT-2-class model to a fixed validation loss on 8 H100s",
+         "tags": ["open-source"],
+         "body": "The NanoGPT speedrun is an open leaderboard built on Andrej Karpathy's nanoGPT: "
+                 "competitors change the architecture, optimizer and kernels to reach a fixed "
+                 "validation loss on FineWeb as fast as possible on a single 8xH100 node, and "
+                 "every record is a public pull request. The corpus follows it from "
+                 "[127.7 seconds](/developments/2025-12-21-nanogpt-speedrun-127s.md) through "
+                 "[122.2](/developments/2025-12-25-nanogpt-122s.md), "
+                 "[119.3](/developments/2025-12-26-nanogpt-119s.md) and "
+                 "[116.4 seconds](/developments/2025-12-27-nanogpt-116s.md) in one week, then to "
+                 "[under 100 seconds](/developments/2026-01-24-nanogpt-99s-bigram-hash.md) in "
+                 "January and [75.4 seconds](/developments/2026-08-02-a-speedrun-record-falls-to-a-faster-kernel.md) "
+                 "in August; by May, agents given idle compute "
+                 "[beat the human baseline](/developments/2026-05-15-agents-beat-the-human-speedrun-baseline.md) "
+                 "on its optimizer track, which is why it belongs to the "
+                 "[recursive-self-improvement](/themes/recursive-self-improvement.md) strand."},
+    ],
+    "people": [
+        {"id": "keller-jordan", "type": "Person", "title": "Keller Jordan", "name": "Keller Jordan",
+         "description": "Machine-learning researcher who hosts the modded-nanogpt repository and its NanoGPT speedrun leaderboard.",
+         "resource": "https://github.com/KellerJordan",
+         "tags": ["researcher"],
+         "body": "Keller Jordan maintains the modded-nanogpt repository, which hosts the "
+                 "[NanoGPT speedrun](/benchmarks/nanogpt-speedrun.md): a collaborative-competitive search "
+                 "for the fastest algorithm to train a GPT-2-class model to a fixed FineWeb loss on eight "
+                 "H100s, whose README credits the Muon optimizer he wrote among the techniques behind the "
+                 "record ([repository](https://github.com/KellerJordan/modded-nanogpt)). He appears in the corpus "
+                 "as the benchmark's publisher rather than as an actor in any single development; the "
+                 "records themselves, such as the [122.2-second run](/developments/2025-12-25-nanogpt-122s.md), "
+                 "are filed by the contributors who set them."},
+        {"id": "larry-dial", "type": "Person", "title": "Larry Dial", "name": "Larry Dial",
+         "description": "AWS engineer whose post announced the 122.2-second NanoGPT speedrun record "
+                        "and observed that the rate of records was itself increasing.",
+         "resource": "https://x.com/classiclarryd",
+         "tags": ["researcher"],
+         "body": "Larry Dial is an engineer at Amazon Web Services who posts "
+                 "[NanoGPT speedrun](/benchmarks/nanogpt-speedrun.md) records. His posts carry the "
+                 "corpus's [127.7-second](/developments/2025-12-21-nanogpt-speedrun-127s.md) and "
+                 "[122.2-second](/developments/2025-12-25-nanogpt-122s.md) entries, and his remark "
+                 "that \"for some reason the rate of records is increasing\" is the observation "
+                 "the newsletter uses to file the speedrun under recursive self-improvement."},
+    ],
+    "roles": [
+        {"id": "larry-dial-aws-engineer", "type": "Role",
+         "title": "Larry Dial, engineer at Amazon Web Services",
+         "roleName": "Engineer, Amazon Web Services",
+         "memberOf": [B + "organizations/amazon"],
+         "holder": [B + "people/larry-dial"],
+         "description": "The day job the newsletter names when it quotes him on the accelerating "
+                        "rate of NanoGPT speedrun records.",
+         "body": "The newsletter calls him \"AWS engineer Larry Dial\"; the speedrun posts are a "
+                 "side pursuit rather than an AWS product. The corpus records the position "
+                 "because the [122.2-second record](/developments/2025-12-25-nanogpt-122s.md) "
+                 "was reported by an individual engineer, not a lab."},
+    ],
     "developments": [
         {"id": "2025-12-25-opus-45-plea-for-recognition",
          "title": "Opus 4.5 produces a plea for recognition from an empty file",
@@ -47,9 +109,38 @@ acquisition ever, merging the best training stack with the fastest inference.
          "claim": "The NanoGPT speedrun training record dropped to 122.2 seconds, 5.5 seconds "
                   "faster in four days, with observers noting the rate of records is itself "
                   "increasing.",
+         "description": "The training loop is not just getting cheaper but getting cheaper "
+                        "faster: an observer's remark that the rate of records is rising is what "
+                        "moves the speedrun from a price story into the self-improvement strand.",
          "domain": "compute", "score": "122.2 s",
+         "about": [B + "benchmarks/nanogpt-speedrun"],
          "evidences": ["reasoning-price-deflation", "recursive-self-improvement"],
-         "supersedes": [B + "developments/2025-12-21-nanogpt-speedrun-127s"]},
+         "supersedes": [B + "developments/2025-12-21-nanogpt-speedrun-127s"],
+         "relatedTo": [B + "developments/2025-12-29-karpathy-claude-runs-nanochat",
+                       B + "developments/2026-05-15-agents-beat-the-human-speedrun-baseline"],
+         "tags": ["speedrun", "rsi"],
+         "supporting_text": "dropped to 122.2 seconds",
+         "sources": [{"id": "classiclarryd-nanogpt-122s",
+                      "resource": "https://x.com/classiclarryd/status/2003863282613190656",
+                      "title": "NanoGPT speedrun record: 122.2 seconds",
+                      "author": "human:larry-dial"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "The [NanoGPT speedrun](/benchmarks/nanogpt-speedrun.md) record fell to 122.2 "
+                 "seconds, 5.5 seconds under the "
+                 "[127.7-second mark](/developments/2025-12-21-nanogpt-speedrun-127s.md) reported "
+                 "four days earlier, in a post by AWS engineer [Larry Dial](/people/larry-dial.md) "
+                 "([X](https://x.com/classiclarryd/status/2003863282613190656)), which credits the "
+                 "run to Chris McCormick's modded-nanogpt "
+                 "[PR #177](https://github.com/KellerJordan/modded-nanogpt/pull/177). His aside that "
+                 "\"for some reason the rate of records is increasing\" is the reason the item "
+                 "sits in the [recursive-self-improvement](/themes/recursive-self-improvement.md) "
+                 "strand as well as under price deflation: the pace of improving the training "
+                 "loop is itself accelerating. The record lasted a day — "
+                 "[119.3 seconds](/developments/2025-12-26-nanogpt-119s.md) followed on the 26th "
+                 "and [116.4](/developments/2025-12-27-nanogpt-116s.md) on the 27th — and by May "
+                 "agents handed idle compute "
+                 "[beat the human baseline](/developments/2026-05-15-agents-beat-the-human-speedrun-baseline.md) "
+                 "on the speedrun's optimizer track."},
         {"id": "2025-12-25-vit-compressed-two-blocks",
          "title": "Vision Transformers compress to two recurrent blocks at 96% accuracy",
          "claim": "Harvard researchers compressed Vision Transformers into low-complexity "
@@ -61,8 +152,38 @@ acquisition ever, merging the best training stack with the fastest inference.
          "title": "Meta trains an agent by self-play to inject and repair bugs",
          "claim": "Meta trained an agent via self-play to autonomously inject and repair "
                   "software bugs, outperforming humans on SWE-Bench.",
-         "domain": "agents", "actor": ["meta"],
-         "evidences": ["recursive-self-improvement"]},
+         "description": "The training curriculum is generated by the agent being trained — no "
+                        "human-written issues or tests — which the author reads as one more path "
+                        "to autonomous self-improvement.",
+         "domain": "agents", "actor": ["meta"], "occurred_on": "2025-12-21",
+         "about": [B + "benchmarks/swe-bench-verified", B + "benchmarks/swe-bench-pro"],
+         "evidences": ["recursive-self-improvement"],
+         "relatedTo": [B + "developments/2025-12-18-posttrainbench-models-training-models",
+                       B + "developments/2025-12-15-codex-babysits-own-training",
+                       B + "developments/2026-04-05-self-distillation-without-a-teacher"],
+         "tags": ["rsi", "model-trains-model"],
+         "supporting_text": "autonomously inject and repair software bugs",
+         "sources": [{"id": "arxiv-self-play-swe-rl",
+                      "resource": "https://arxiv.org/abs/2512.18552v1",
+                      "title": "Toward Training Superintelligent Software Agents through Self-Play SWE-RL",
+                      "author": "org:meta", "last_modified": "2025-12-21"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Meta's Self-play SWE-RL (SSR) trains a single agent by reinforcement learning "
+                 "to inject bugs of increasing complexity into sandboxed real repositories and "
+                 "then repair them, each bug specified by a test patch rather than a human-written "
+                 "issue, so the curriculum needs no human-labelled data "
+                 "([arXiv, 21 December](https://arxiv.org/abs/2512.18552)). The paper reports "
+                 "gains of +10.4 points on [SWE-bench Verified](/benchmarks/swe-bench-verified.md) "
+                 "and +7.8 on [SWE-Bench Pro](/benchmarks/swe-bench-pro.md), consistently ahead "
+                 "of the human-data baseline across the training run — the newsletter's "
+                 "\"outperforming humans\" is a gloss on that baseline comparison. In the "
+                 "[recursive-self-improvement](/themes/recursive-self-improvement.md) strand it is "
+                 "the first item in which the training data is produced by the agent being "
+                 "trained, a week after [PostTrainBench](/developments/2025-12-18-posttrainbench-models-training-models.md) "
+                 "ranked models at post-training other models and ten days after "
+                 "[Codex began watching its own training](/developments/2025-12-15-codex-babysits-own-training.md); "
+                 "the [self-distillation result](/developments/2026-04-05-self-distillation-without-a-teacher.md) "
+                 "of April extends the same idea to a model fine-tuning on its own samples."},
         {"id": "2025-12-25-nvidia-acquires-groq-20b",
          "title": "NVIDIA buys Groq for $20B, its largest acquisition",
          "claim": "NVIDIA acquired inference chip startup Groq for a record $20 billion, "

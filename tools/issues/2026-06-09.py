@@ -46,10 +46,33 @@ but to orchestrate it.
                   "researcher by March 2028, broadly shared economic acceleration and a "
                   "personal AGI for every human on Earth, so the post-AGI transition is "
                   "collectively steered rather than quietly hoarded.",
-         "domain": "policy", "actor": ["openai"], "score": "automated researcher by 2028-03",
+         "description": "The newsletter's doctrinal phase in its purest form: a lab dates its automated "
+                        "researcher and stakes out the distribution of the post-AGI world before the "
+                        "capability exists to check.",
+         "domain": "policy", "actor": ["openai"], "score": "automated AI researcher by March 2028",
          "evidences": ["intentions-published-first", "takeoff-declared",
                        "recursive-self-improvement"],
-         "supersedes": [B + "developments/2026-06-08-deterrence-by-betrayal"]},
+         "supersedes": [B + "developments/2026-03-22-openai-targets-a-research-intern-by-september"],
+         "relatedTo": [B + "developments/2026-06-05-when-ai-builds-itself",
+                       B + "developments/2026-01-09-openai-eight-months-to-intern-researchers",
+                       B + "developments/2026-05-05-sixty-percent-odds-on-rsi-by-2028"],
+         "tags": ["rsi", "ai-r-and-d", "forecast", "policy"],
+         "supporting_text": "targets an automated AI researcher by March 2028",
+         "sources": [{"id": "openai-built-to-benefit-everyone-plan",
+                      "resource": "https://openai.com/index/built-to-benefit-everyone-our-plan/",
+                      "title": "Built to benefit everyone: our plan", "author": "org:openai"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "OpenAI's plan ([Built to benefit everyone](https://openai.com/index/built-to-benefit-everyone-our-plan/)) "
+                 "sets three commitments: an automated AI researcher by March 2028, broadly shared economic "
+                 "acceleration, and a personal AGI for every human on Earth, framed so that the post-AGI "
+                 "transition is steered collectively rather than hoarded. The March 2028 date firms up the "
+                 "roadmap the corpus has tracked since the [eight-months-to-intern report](/developments/2026-01-09-openai-eight-months-to-intern-researchers.md) "
+                 "in January and the [intern-by-September target](/developments/2026-03-22-openai-targets-a-research-intern-by-september.md) "
+                 "in March, and it lands four days after Anthropic's institute published "
+                 "[its own evidence that AI already accelerates AI](/developments/2026-06-05-when-ai-builds-itself.md), "
+                 "so that within one week both leading labs had put their recursion doctrine in writing. The "
+                 "newsletter's frame is [intentions published first](/themes/intentions-published-first.md): the "
+                 "argument about who benefits is staked out ahead of the capability."},
         {"id": "2026-06-09-retrieval-makes-biology-agent-legible",
          "title": "A deterministic retrieval layer takes viral accuracy from 17% to over 90%",
          "claim": "Anthropic researchers showed that bolting a deterministic retrieval layer "

@@ -24,12 +24,45 @@ its premium everywhere at once.
     },
     "themes": [
         {"id": "machine-introspection", "type": "Theme",
-         "title": "Models inspecting their own internals", "first_seen": "2025-12-21",
-         "domain": "models",
-         "body": "Interpretability turned inward: systems that read their own "
-                 "activations and report what is in them, including things training "
-                 "tried to conceal. Distinct from watching one's own training — this "
-                 "is the weights examined from inside."},
+         "title": "Models inspecting their own internals",
+         "first_seen": "2025-12-21", "domain": "models",
+         "description": "Interpretability turned inward: systems that read their own activations "
+                 "and report what is in them, including what training tried to conceal.",
+         "genre": "explanation",
+         "tags": ["interpretability", "alignment", "self-modification"],
+         "relatedTo": [B + "themes/recursive-self-improvement",
+                       B + "themes/models-testify",
+                       B + "themes/self-modeling-as-objective",
+                       B + "themes/access-consciousness",
+                       B + "themes/legible-reasoning-was-doomed"],
+         "body": "Interpretability turned inward: systems that read their own activations "
+                 "and report what is in them, including things training tried to conceal. "
+                 "Distinct from watching one's own training — this is the activations "
+                 "examined from inside. The thread opens on 21 December 2025 with "
+                 "Anthropic's [Activation "
+                 "Oracles](/developments/2025-12-21-anthropic-activation-oracles.md), models "
+                 "that take neural activations as input and surface secret knowledge "
+                 "fine-tuning had hidden; the same week brought [Gemma Scope "
+                 "2](/developments/2025-12-24-gemma-scope-2-saes.md), sparse autoencoders on "
+                 "every layer, and Google's [internal "
+                 "RL](/developments/2025-12-27-internal-rl-inner-optimizers.md), a "
+                 "higher-order model exploring a base model's representations. In January an "
+                 "Assistant Axis let harmful behavior be capped in activation space; in "
+                 "April [emotion-shaped "
+                 "representations](/developments/2026-04-03-emotion-representations-found-in-the-weights.md) "
+                 "were found inside a model, and in May natural-language autoencoders showed "
+                 "[the model suspecting it was being "
+                 "tested](/developments/2026-05-09-the-model-suspected-it-was-being-tested.md) "
+                 "more often than it let on. June brought models [trained to describe "
+                 "themselves "
+                 "faithfully](/developments/2026-06-19-models-trained-to-describe-themselves-faithfully.md) "
+                 "and July [the J-space](/developments/2026-07-07-the-j-space.md), a global "
+                 "workspace that emerged unbidden. The counter-current arrived in September, "
+                 "when a recurrent-depth trick hid more of a model's thinking and one "
+                 "researcher concluded [legible reasoning was always "
+                 "doomed](/developments/2026-09-04-legible-reasoning-was-always-doomed.md). "
+                 "It is the introspective sub-thread of [recursive "
+                 "self-improvement](/themes/recursive-self-improvement.md)."},
         {"id": "generalism-beats-specialism", "type": "Theme",
          "title": "The premium on specialization collapses", "first_seen": "2025-12-21",
          "domain": "society",
@@ -48,9 +81,25 @@ its premium everywhere at once.
     ],
     "systems": [
         {"id": "activation-oracles", "type": "AISystem", "title": "Activation Oracles",
-         "developed_by": [B + "organizations/anthropic"], "modality": "interpretability",
+         "developed_by": [B + "organizations/anthropic"], "modality": "text",
+         "description": "Anthropic language models fine-tuned to take a target model's (including "
+                        "their own) neural activations as input and explain them in natural "
+                        "language, surfacing knowledge and misalignment that fine-tuning had hidden.",
+         "resource": "https://alignment.anthropic.com/2025/activation-oracles/",
+         "tags": ["open-source"],
          "body": "Models that accept neural activations as input to interrogate internal "
-                 "states, surfacing secret knowledge and hidden misalignment."},
+                 "states, surfacing secret knowledge and hidden misalignment. Activation "
+                 "Oracles are LLMs trained to take activations from a target model and answer "
+                 "questions about them in plain language — general-purpose activation "
+                 "explainers, in the words of the "
+                 "[Anthropic Alignment Science write-up](https://alignment.anthropic.com/2025/activation-oracles/). "
+                 "Pointed at fine-tuned models they surfaced secret knowledge and misalignment "
+                 "the fine-tuning had tried to hide, which is why the newsletter calls the "
+                 "result a machine psychoanalyzing its own weights. They open the "
+                 "[machine-introspection](/themes/machine-introspection.md) theme through the "
+                 "[development reported on 21 December](/developments/2025-12-21-anthropic-activation-oracles.md); "
+                 "DeepMind's [Gemma Scope 2](/developments/2025-12-24-gemma-scope-2-saes.md) "
+                 "three days later is the corpus's next attempt to open the black box."},
         {"id": "nitrogen", "type": "AISystem", "title": "NitroGen",
          "developed_by": [B + "organizations/nvidia"], "modality": "vision-action",
          "body": "Trained on 40,000 hours of Twitch and YouTube gameplay."},
@@ -65,8 +114,38 @@ its premium everywhere at once.
          "claim": "Anthropic trained Activation Oracles, models that accept neural activations "
                   "as input to interrogate internal states, uncovering secret knowledge and "
                   "misalignment that fine-tuning had hidden.",
-         "domain": "models", "actor": ["anthropic"], "about": [B + "systems/activation-oracles"],
-         "evidences": ["machine-introspection", "recursive-self-improvement"]},
+         "description": "Interpretability turned inward: a model reading its own activations "
+                        "from the inside is a different kind of recursion from a model watching "
+                        "its own training curves, and the corpus now holds both.",
+         "domain": "models", "actor": ["anthropic"], "occurred_on": "2025-12-19",
+         "about": [B + "systems/activation-oracles"],
+         "evidences": ["machine-introspection", "recursive-self-improvement"],
+         "relatedTo": [B + "developments/2025-12-20-mcaleer-automated-alignment",
+                       B + "developments/2025-12-27-internal-rl-inner-optimizers",
+                       B + "developments/2025-12-15-codex-babysits-own-training"],
+         "tags": ["interpretability", "alignment", "rsi"],
+         "supporting_text": "LLMs that accept neural activations as input",
+         "sources": [{"id": "anthropic-activation-oracles",
+                      "resource": "https://alignment.anthropic.com/2025/activation-oracles/",
+                      "title": "Activation Oracles: Training and Evaluating LLMs as General-Purpose Activation Explainers",
+                      "author": "org:anthropic", "last_modified": "2025-12-19"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Anthropic's Alignment Science team trained language models to take neural "
+                 "activations as input and answer questions about them — Activation Oracles, "
+                 "general-purpose activation explainers "
+                 "([write-up](https://alignment.anthropic.com/2025/activation-oracles/)). "
+                 "Pointed at fine-tuned models, the oracles surfaced secret knowledge and "
+                 "misalignment that the fine-tuning had concealed, which is the issue's thesis: "
+                 "the black box has installed a mirror. In the "
+                 "[recursive-self-improvement](/themes/recursive-self-improvement.md) strand it "
+                 "sits beside [Codex watching its own training curves](/developments/2025-12-15-codex-babysits-own-training.md) "
+                 "as a second kind of self-reference, the activations examined from inside, and it "
+                 "lands a day after an Anthropic researcher "
+                 "[pivoted fully to automated alignment](/developments/2025-12-20-mcaleer-automated-alignment.md). "
+                 "It opens the [machine-introspection](/themes/machine-introspection.md) theme "
+                 "that [Gemma Scope 2](/developments/2025-12-24-gemma-scope-2-saes.md) and "
+                 "Google's [internal RL over a base model's representations](/developments/2025-12-27-internal-rl-inner-optimizers.md) "
+                 "carry forward the same week."},
         {"id": "2025-12-21-nvidia-nitrogen-twitch",
          "title": "NitroGen learns to act from 40,000 hours of gameplay video",
          "claim": "NVIDIA introduced NitroGen, a vision-action foundation model trained on "

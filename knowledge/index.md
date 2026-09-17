@@ -26,14 +26,15 @@ trajectory rather than a pile of days.
 
 | | count |
 |---|---|
-| benchmarks | 42 |
+| benchmarks | 54 |
 | developments | 2919 |
 | facilities | 25 |
-| hardware | 12 |
+| hardware | 18 |
 | issues | 233 |
-| organizations | 1038 |
-| people | 34 |
-| systems | 118 |
+| organizations | 1046 |
+| people | 62 |
+| roles | 30 |
+| systems | 164 |
 | themes | 213 |
 
 ## Themes

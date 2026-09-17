@@ -32,6 +32,57 @@ whose 85% threshold marks researcher replacement. 2027 is the takeoff.
         {"id": "heart-aerospace", "type": "Organization", "title": "Heart Aerospace"},
         {"id": "pony-ai-inc", "type": "Organization", "title": "Pony.ai"},
     ],
+    "systems": [
+        {"id": "anthropic-model-2", "type": "AISystem", "title": "Model 2",
+         "description": "Anthropic's unreleased internal model, disclosed in August 2026 as more powerful than Mythos 5 and with no plans for release.",
+         "developed_by": [B + "organizations/anthropic"], "modality": "text",
+         "evaluated_on": [B + "benchmarks/cobench-v2"],
+         "resource": "https://www-cdn.anthropic.com/f61d49fa5596956a5dec75fea0e973bf6a6a8378/Redacted%20Risk%20Report%20August%202026%20.pdf",
+         "tags": ["reasoning-model"],
+         "body": "Model 2 is the name under which Anthropic's August 2026 Risk Report discloses a "
+                 "model it does not intend to release, more powerful than the shipped "
+                 "[Claude Mythos 5](/systems/claude-mythos-5.md) and carrying a misalignment-risk "
+                 "rating nudged from very low to low. In this corpus it exists only through that "
+                 "report and the arithmetic done on it: it beat Mythos 5 by 12.5 points on "
+                 "[CoBench v2](/benchmarks/cobench-v2.md) in the item where the lab says its "
+                 "[AI R&D evaluations have saturated](/developments/2026-08-15-the-r-and-d-evals-have-saturated.md), "
+                 "the clearest instance of the [public frontier detaching from the real one](/themes/public-internal-divergence.md)."},
+        {"id": "claude-mythos-5", "type": "AISystem", "title": "Claude Mythos 5",
+         "description": "Anthropic's released Mythos-tier frontier model of mid-2026, the yardstick that the unreleased Model 2 beat by 12.5 points on CoBench v2.",
+         "developed_by": [B + "organizations/anthropic"], "modality": "text",
+         "evaluated_on": [B + "benchmarks/cobench-v2"],
+         "resource": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+         "tags": ["reasoning-model"],
+         "body": "Claude Mythos 5 is the Mythos-tier model Anthropic shipped after the spring "
+                 "[Claude Mythos](/systems/claude-mythos.md) preview, and through the summer of 2026 "
+                 "the strongest model it sells. In this corpus it is more often the yardstick than the "
+                 "subject: [Model 2](/systems/anthropic-model-2.md) beat it by 12.5 points on "
+                 "[CoBench v2](/benchmarks/cobench-v2.md) in the [saturated-evals disclosure](/developments/2026-08-15-the-r-and-d-evals-have-saturated.md), "
+                 "and Z.ai's GLM-5.3 [nearly matched it](/developments/2026-08-15-a-cyber-model-matches-the-frontier-at-finding-flaws.md) "
+                 "on vulnerability discovery in the same issue."},
+    ],
+    "benchmarks": [
+        {"id": "cobench-v2", "type": "Benchmark", "title": "CoBench v2",
+         "description": "Anthropic's internal AI R&D evaluation, defined in its August 2026 Risk Report, whose 85% threshold the lab itself estimates would mark full researcher substitution and on which Model 2 beat Mythos 5 by 12.5 points.",
+         "measures_capability": "AI research and development capability against a researcher-replacement threshold",
+         "published_by": [B + "organizations/anthropic"],
+         "resource": "https://www-cdn.anthropic.com/f61d49fa5596956a5dec75fea0e973bf6a6a8378/Redacted%20Risk%20Report%20August%202026%20.pdf",
+         "tags": ["research-agent"],
+         "body": "CoBench is [Anthropic](/organizations/anthropic.md)'s internal evaluation, defined in section 3.4.3 of its redacted "
+                 "August 2026 Risk Report: a model is placed at a historical point in Anthropic's "
+                 "infrastructure, given a snapshot of the codebase, logs, messaging and docs, and asked to "
+                 "diagnose the root causes of issues its engineers actually solved, across 449 problems "
+                 "drawn from February to April 2026 "
+                 "([risk report](https://www-cdn.anthropic.com/f61d49fa5596956a5dec75fea0e973bf6a6a8378/Redacted%20Risk%20Report%20August%202026%20.pdf)). "
+                 "The 85% threshold is the lab's own estimate of the score a model truly capable of fully "
+                 "substituting for its research staff would reach; watchers applied it to the redacted "
+                 "gap between [Model 2](/systems/anthropic-model-2.md) and "
+                 "[Mythos 5](/systems/claude-mythos-5.md), 12.5 points, to conclude that "
+                 "“2027 is the takeoff” ([X](https://x.com/daniel_mac8/status/2088344245178716175)). "
+                 "It stands beside [PostTrainBench](/benchmarks/posttrainbench.md) as one of the few named "
+                 "instruments for AI doing AI research, introduced at the moment the lab says its "
+                 "task-based AI R&D evaluations have [saturated](/developments/2026-08-15-the-r-and-d-evals-have-saturated.md)."},
+    ],
     "developments": [
         {"id": "2026-08-15-the-r-and-d-evals-have-saturated",
          "title": "A lab reports its AI R&D evaluations have saturated",
@@ -40,13 +91,55 @@ whose 85% threshold marks researcher replacement. 2027 is the takeoff.
                   "low, and its August Risk Report admitted the lab's AI R&D evaluations have "
                   "saturated with Claude now authoring most code merged into its own production "
                   "repositories.",
-         "domain": "models", "actor": ["anthropic"],
+         "description": "The lab's own yardstick for AI accelerating AI research stops "
+                        "discriminating just as its model writes most of the code merged into its "
+                        "production systems: the measurement gives out before the phenomenon does.",
+         "domain": "models", "actor": ["anthropic"], "score": "12.5 points on CoBench v2",
+         "occurred_on": "2026-08-14",
+         "about": [B + "systems/anthropic-model-2", B + "systems/claude-mythos-5",
+                   B + "systems/claude", B + "benchmarks/cobench-v2"],
          "evidences": ["r-and-d-evals-saturated", "recursive-self-improvement",
-                       "public-internal-divergence", "a-model-trains-a-model"],
-         "supersedes": [B + "developments/2026-08-08-a-release-slowed-on-an-unprovable-negative"],
-         "body": "Watchers noted Model 2 beat Mythos 5 by 12.5 points on a benchmark "
-                 "whose 85% threshold marks researcher replacement, concluding that "
-                 "2027 is the takeoff."},
+                       "public-internal-divergence", "a-model-trains-a-model",
+                       "benchmark-saturation", "takeoff-declared"],
+         "supersedes": [B + "developments/2026-08-08-a-release-slowed-on-an-unprovable-negative",
+                        B + "developments/2026-06-05-when-ai-builds-itself"],
+         "relatedTo": [B + "developments/2026-03-16-rsi-is-a-present-phenomenon",
+                       B + "developments/2026-02-08-100pct-of-product-code",
+                       B + "developments/2026-01-24-researchers-replaced-first"],
+         "tags": ["rsi", "ai-r-and-d", "evaluation", "alignment"],
+         "supporting_text": "admits its AI R&D evals have “saturated,” with Claude now authoring most code",
+         "sources": [{"id": "axios-anthropic-model-2-risk",
+                      "resource": "https://www.axios.com/2026/08/14/anthropic-model-2-ai-risk",
+                      "title": "Anthropic Model 2 AI risk (Axios)", "author": "org:axios",
+                      "last_modified": "2026-08-14"},
+                     {"id": "anthropic-risk-report-august-2026",
+                      "resource": "https://www-cdn.anthropic.com/f61d49fa5596956a5dec75fea0e973bf6a6a8378/Redacted%20Risk%20Report%20August%202026%20.pdf",
+                      "title": "Risk Report, August 2026 (redacted)", "author": "org:anthropic",
+                      "last_modified": "2026-08-14"},
+                     {"id": "daniel-mac8-cobench-v2-takeoff-math",
+                      "resource": "https://x.com/daniel_mac8/status/2088344245178716175",
+                      "title": "Model 2 beat Mythos 5 by 12.5 points on CoBench v2 (X post)",
+                      "author": "human:daniel_mac8"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Anthropic's redacted August 2026 Risk Report, published alongside the disclosure "
+                 "of an unreleased [Model 2](/systems/anthropic-model-2.md) stronger than "
+                 "[Mythos 5](/systems/claude-mythos-5.md), states that the lab's AI R&D evaluations "
+                 "have saturated, with [Claude](/systems/claude.md) now authoring most of the code "
+                 "merged into Anthropic's own production repositories, while the lab moves its "
+                 "misalignment-risk rating from “very low” to “low” "
+                 "([risk report](https://www-cdn.anthropic.com/f61d49fa5596956a5dec75fea0e973bf6a6a8378/Redacted%20Risk%20Report%20August%202026%20.pdf); "
+                 "[Axios](https://www.axios.com/2026/08/14/anthropic-model-2-ai-risk)). "
+                 "Watchers did the arithmetic on the redacted numbers: Model 2 beat Mythos 5 by "
+                 "12.5 points on [CoBench v2](/benchmarks/cobench-v2.md), whose 85% threshold "
+                 "marks researcher replacement, so “2027 is the takeoff” "
+                 "([X](https://x.com/daniel_mac8/status/2088344245178716175)). "
+                 "In the trajectory this is the point where the measuring instrument gives out: "
+                 "it follows the lab's own [When AI builds itself](/developments/2026-06-05-when-ai-builds-itself.md) "
+                 "evidence and the March figure of [70–90% of model code](/developments/2026-03-16-rsi-is-a-present-phenomenon.md), "
+                 "extends the [effectively all product code](/developments/2026-02-08-100pct-of-product-code.md) "
+                 "claim to the repositories behind the models, and is answered in the same issue by the "
+                 "[Conceptual Reasoning Index](/developments/2026-08-15-scoring-the-unverifiable.md), "
+                 "a new instrument for what the old ones can no longer score."},
         {"id": "2026-08-15-scoring-the-unverifiable",
          "title": "A new index scores the unverifiable argumentation safety work requires",
          "claim": "Redwood and Anthropic launched the Conceptual Reasoning Index to score the "

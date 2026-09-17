@@ -32,6 +32,51 @@ pacing AI, check the speedometer.
         {"id": "situational-awareness", "type": "Organization", "title": "Situational Awareness"},
         {"id": "qantas", "type": "Organization", "title": "Qantas"},
     ],
+    "systems": [
+        {"id": "gpt-5-6-luna", "type": "AISystem", "title": "GPT-5.6 Luna",
+         "description": "OpenAI's lower-cost GPT-5.6 tier, autonomously post-trained by Sol and then cut 80% in price on kernels Sol rewrote.",
+         "developed_by": [B + "organizations/openai"], "modality": "text",
+         "evaluated_on": [B + "benchmarks/agents-last-exam"],
+         "resource": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/",
+         "tags": ["reasoning-model"],
+         "body": "GPT-5.6 Luna is the lower-cost tier of OpenAI's GPT-5.6 family, alongside "
+                 "[Terra](/systems/gpt-5-6-terra.md) and the frontier tier [Sol](/systems/gpt-5-6-sol.md). "
+                 "In this corpus it is the model [Sol autonomously post-trained](/developments/2026-07-10-a-model-post-trains-a-model.md) "
+                 "in July 2026, and the one whose [price fell 80%](/developments/2026-07-30-a-model-rewrites-the-kernels-that-cut-its-price.md) "
+                 "three weeks later on kernels Sol rewrote, with OpenAI claiming it beats "
+                 "[Claude Fable 5](/systems/claude-fable-5.md) on [Agents' Last Exam](/benchmarks/agents-last-exam.md) "
+                 "at 99% lower cost per task."},
+        {"id": "gpt-5-6-terra", "type": "AISystem", "title": "GPT-5.6 Terra",
+         "description": "OpenAI's mid-tier GPT-5.6 variant, scored at 51.5% on PostTrainBench and trimmed 20% in price in the July 2026 efficiency campaign.",
+         "developed_by": [B + "organizations/openai"], "modality": "text",
+         "evaluated_on": [B + "benchmarks/posttrainbench"],
+         "resource": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/",
+         "tags": ["reasoning-model"],
+         "body": "GPT-5.6 Terra sits between [Luna](/systems/gpt-5-6-luna.md) and [Sol](/systems/gpt-5-6-sol.md) "
+                 "in OpenAI's GPT-5.6 family. The corpus scores it at 51.5% on "
+                 "[PostTrainBench](/benchmarks/posttrainbench.md), slightly ahead of Sol, in the item where "
+                 "[Sol post-trained Luna](/developments/2026-07-10-a-model-post-trains-a-model.md), and records "
+                 "its 20% price trim in the [July 2026 cut](/developments/2026-07-30-a-model-rewrites-the-kernels-that-cut-its-price.md) "
+                 "credited to kernels the models rewrote themselves."},
+    ],
+    "benchmarks": [
+        {"id": "agents-last-exam", "type": "Benchmark", "title": "Agents' Last Exam",
+         "description": "Agent benchmark on which OpenAI claimed GPT-5.6 Luna beats Claude Fable 5 at 99% lower cost per task.",
+         "published_by": [B + "organizations/uc-berkeley"],
+         "measures_capability": "long-horizon, economically valuable professional tasks with verifiable outcomes",
+         "resource": "https://agents-last-exam.org/",
+         "tags": ["open-source"],
+         "body": "Agents' Last Exam (ALE) is a [UC Berkeley](/organizations/uc-berkeley.md) RDI benchmark "
+                 "([paper, arXiv:2606.05405](https://arxiv.org/abs/2606.05405); "
+                 "[leaderboard](https://agents-last-exam.org/leaderboard)) of 1,000-plus long-horizon, "
+                 "economically valuable professional tasks with verifiable outcomes, organized into 55 sub-fields "
+                 "across 13 industry clusters and built with 250-plus industry experts; on its hardest tier the "
+                 "average full pass rate is below 1%; the dataset is released under CC BY 4.0 and the code under "
+                 "Apache-2.0 ([GitHub](https://github.com/rdi-berkeley/agents-last-exam)). The corpus meets it once, as the "
+                 "benchmark on which OpenAI claimed [GPT-5.6 Luna](/systems/gpt-5-6-luna.md) beats "
+                 "[Claude Fable 5](/systems/claude-fable-5.md) at 99% lower cost per task in the "
+                 "[July 2026 price cut](/developments/2026-07-30-a-model-rewrites-the-kernels-that-cut-its-price.md)."},
+    ],
     "developments": [
         {"id": "2026-07-30-a-model-rewrites-the-kernels-that-cut-its-price",
          "title": "A model autonomously rewrites the kernels behind an 80% price cut",
@@ -39,9 +84,46 @@ pacing AI, check the speedometer.
                   "efficiency campaign in which Sol autonomously rewrote production GPU kernels "
                   "and its own speculative-decoding drafts, and claiming Luna beats Claude Fable "
                   "5 on one agent benchmark at 99% lower cost per task.",
-         "domain": "economics", "actor": ["openai", "anthropic"], "score": "-80% / -99% per task",
-         "evidences": ["optimizing-its-own-invoice", "price-implosion", "recursive-self-improvement"],
-         "supersedes": [B + "developments/2026-07-29-the-first-open-three-trillion-class-model"]},
+         "description": "The point where the recursive loop reaches the rate card: an efficiency "
+                        "gain the model engineered for itself is passed straight through as a "
+                        "price cut, collapsing cost and capability into a single process.",
+         "domain": "economics", "actor": ["openai"], "score": "-80% / -99% per task",
+         "about": [B + "systems/gpt-5-6-luna", B + "systems/gpt-5-6-terra", B + "systems/gpt-5-6-sol",
+                   B + "systems/claude-fable-5", B + "benchmarks/agents-last-exam"],
+         "evidences": ["optimizing-its-own-invoice", "price-implosion", "recursive-self-improvement",
+                       "intelligence-per-watt"],
+         "supersedes": [B + "developments/2026-07-29-the-first-open-three-trillion-class-model",
+                        B + "developments/2026-04-29-a-model-writes-the-kernels-that-run-it"],
+         "relatedTo": [B + "developments/2026-07-10-a-model-post-trains-a-model",
+                       B + "developments/2026-07-04-agents-write-the-kernels-closing-a-software-gap",
+                       B + "developments/2026-02-16-agent-cuts-its-own-cost-98pct"],
+         "relations": [{"predicate": "relatedTo",
+                        "target": B + "developments/2026-07-30-compute-could-get-ten-times-more-expensive",
+                        "relation_label": "contradicts"}],
+         "tags": ["rsi", "kernels", "self-modification"],
+         "supporting_text": "Sol autonomously rewrote production GPU kernels and its own speculative-decoding drafts",
+         "sources": [{"id": "openai-gpt-5-6-price-performance-frontier",
+                      "resource": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/",
+                      "title": "Advancing the price-performance frontier with GPT-5.6", "author": "org:openai"},
+                     {"id": "openai-gpt-5-6-efficiency-campaign",
+                      "resource": "https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency/",
+                      "title": "GPT-5.6: frontier intelligence, efficiency", "author": "org:openai"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "OpenAI cut [GPT-5.6 Luna](/systems/gpt-5-6-luna.md) prices by 80% and "
+                 "[Terra](/systems/gpt-5-6-terra.md) by 20%, added a Fast mode running 2.5x quicker "
+                 "for twice the price, and claimed Luna beats [Claude Fable 5](/systems/claude-fable-5.md) "
+                 "on [Agents' Last Exam](/benchmarks/agents-last-exam.md) at 99% lower cost per task "
+                 "([announcement](https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/)). "
+                 "The saving is credited to an efficiency campaign in which [Sol](/systems/gpt-5-6-sol.md) "
+                 "autonomously rewrote production GPU kernels and its own speculative-decoding drafts "
+                 "([efficiency post](https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency/)); "
+                 "the newsletter's gloss is that the optimizer is now optimizing its own invoice. "
+                 "It closes the arc opened when [GPT-5.5 topped KernelBench](/developments/2026-04-29-a-model-writes-the-kernels-that-run-it.md) "
+                 "for writing the kernels it runs on, and follows [Sol post-training Luna](/developments/2026-07-10-a-model-post-trains-a-model.md) "
+                 "three weeks earlier. The same issue carries Dwarkesh Patel's counter-argument that "
+                 "[compute could get ten times more expensive](/developments/2026-07-30-compute-could-get-ten-times-more-expensive.md), "
+                 "and two days later OpenAI's finance chief folded the cut into an "
+                 "[abundant-intelligence strategy](/developments/2026-08-01-agents-write-almost-all-output-tokens.md)."},
         {"id": "2026-07-30-two-api-settings-triple-a-score",
          "title": "Two API settings triple a benchmark score on six times fewer tokens",
          "claim": "Two API settings roughly tripled Sol's ARC-AGI-3 score on six times fewer "

@@ -40,7 +40,57 @@ capable of human persuasion."
          "body": "Earns its own operating costs across products, markets, domains, cold calls "
                  "and e-commerce, running as long as it stays solvent."},
         {"id": "claude-sonnet-4-6", "type": "AISystem", "title": "Claude Sonnet 4.6",
-         "developed_by": [B + "organizations/anthropic"], "modality": "text"},
+         "description": "Anthropic's mid-tier model of February 2026, which took the lead on "
+                        "GDPval-AA and Finance Agent v1.1 ahead of its own larger sibling Opus 4.6 "
+                        "at a fraction of the cost.",
+         "developed_by": [B + "organizations/anthropic"], "modality": "text",
+         "evaluated_on": [B + "benchmarks/gdpval-aa", B + "benchmarks/finance-agent"],
+         "resource": "https://www.anthropic.com/news/claude-sonnet-4-6",
+         "sameAs": ["http://www.wikidata.org/entity/Q138333212"],
+         "tags": ["reasoning-model"],
+         "body": "Claude Sonnet 4.6 is the smaller, cheaper tier of Anthropic's Claude 4.6 "
+                 "generation, released after the larger [Claude Opus 4.6](/systems/claude-opus-4-6.md). "
+                 "In this corpus it enters as the "
+                 "[cheap model that beat the expensive one](/developments/2026-02-18-sonnet-46-beats-opus.md), "
+                 "claiming 1633 Elo on GDPval-AA and 63.3% on Finance Agent v1.1, a datapoint for "
+                 "the [deflating price of reasoning](/themes/reasoning-price-deflation.md)."},
+    ],
+    "benchmarks": [
+        {"id": "gdpval-aa", "type": "Benchmark", "title": "GDPval-AA",
+         "description": "Artificial Analysis' agentic evaluation framework built on OpenAI's GDPval "
+                        "dataset of real-world tasks across 44 occupations, scored as an Elo leaderboard.",
+         "published_by": [B + "organizations/artificial-analysis"],
+         "measures_capability": "agentic completion of real-world occupational tasks, Elo-ranked",
+         "resource": "https://artificialanalysis.ai/evaluations/gdpval-aa",
+         "body": "GDPval-AA is Artificial Analysis' independent run of OpenAI's "
+                 "[GDPval](/benchmarks/gdpval.md) tasks, giving models shell and web access and "
+                 "ranking them by Elo. In this corpus it is the leaderboard on which "
+                 "[Opus 4.6 beat GPT-5.2](/developments/2026-02-06-opus-46-released.md) and then "
+                 "[Sonnet 4.6 beat Opus 4.6](/developments/2026-02-18-sonnet-46-beats-opus.md) at "
+                 "1633 Elo twelve days later."},
+        {"id": "finance-agent", "type": "Benchmark", "title": "Finance Agent v1.1",
+         "description": "Vals AI's benchmark of agentic financial-analysis tasks on which Claude "
+                        "Sonnet 4.6 claimed the lead at 63.3%.",
+         "published_by": [B + "organizations/vals-ai"],
+         "measures_capability": "agentic financial analysis",
+         "resource": "https://www.vals.ai/benchmarks/finance_agent",
+         "body": "Finance Agent is Vals AI's agentic finance evaluation; version 1.1 is the one "
+                 "cited in this corpus. It appears once, as the second of the two leaderboards on "
+                 "which [Sonnet 4.6 beat Opus 4.6](/developments/2026-02-18-sonnet-46-beats-opus.md) "
+                 "at a fraction of the cost."},
+    ],
+    "people": [
+        {"id": "elon-musk", "type": "Person", "title": "Elon Musk", "name": "Elon Musk",
+         "description": "Public voice of xAI, Tesla and SpaceX in the corpus, quoted here claiming "
+                        "that Grok 4.2's continuous post-training will let it improve every week.",
+         "resource": "https://x.com/elonmusk",
+         "sameAs": ["http://www.wikidata.org/entity/Q317521"],
+         "tags": ["executive"],
+         "body": "Elon Musk is the corpus's most-quoted individual on xAI's Grok models, Tesla's "
+                 "robots and vehicles, and SpaceX. In this cluster he supplies the "
+                 "[claim that Grok 4.2 learns continuously and will improve every week](/developments/2026-02-18-sonnet-46-beats-opus.md), "
+                 "promising recursive intelligence growth, having earlier "
+                 "[declared that we have entered the Singularity](/developments/2026-01-04-musk-enters-the-singularity.md)."},
     ],
     "developments": [
         {"id": "2026-02-18-automaton-earns-its-own-existence",
@@ -68,10 +118,57 @@ capable of human persuasion."
                   "on Finance Agent v1.1, beating Opus 4.6 on both at a fraction of the cost, "
                   "while Musk claimed Grok 4.2 features continuous post-training learning that "
                   "will let it improve every week.",
-         "domain": "models", "actor": ["anthropic", "xai"], "about": [B + "systems/claude-sonnet-4-6"],
+         "description": "Two ways the frontier compounds in one paragraph: the price of a "
+                        "leaderboard-topping model collapses to the mid tier, and a rival promises "
+                        "a model that keeps learning after it ships.",
+         "domain": "models", "actor": ["anthropic", "xai", "people/elon-musk"],
+         "about": [B + "systems/claude-sonnet-4-6", B + "systems/claude-opus-4-6",
+                   B + "systems/grok-4-20", B + "benchmarks/gdpval-aa",
+                   B + "benchmarks/finance-agent"],
          "score": "1633 Elo / 63.3%",
          "evidences": ["reasoning-price-deflation", "recursive-self-improvement"],
-         "supersedes": [B + "developments/2026-02-13-intelligence-too-cheap-to-meter"]},
+         "supersedes": [B + "developments/2026-02-13-intelligence-too-cheap-to-meter",
+                        B + "developments/2026-02-06-opus-46-released"],
+         "relatedTo": [B + "developments/2025-12-24-sholto-continual-learning-2026",
+                       B + "developments/2026-01-10-xai-used-claude-to-build-grok",
+                       B + "developments/2026-05-17-models-improve-every-few-days"],
+         "tags": ["capability-jump", "continual-learning", "evaluation"],
+         "supporting_text": "beating even Opus 4.6 on both at a fraction of the cost",
+         "sources": [{"id": "anthropic-sonnet-4-6-announcement",
+                      "resource": "https://www.anthropic.com/news/claude-sonnet-4-6",
+                      "title": "Introducing Sonnet 4.6", "author": "org:anthropic"},
+                     {"id": "artificial-analysis-gdpval-aa-leaderboard",
+                      "resource": "https://artificialanalysis.ai/evaluations/gdpval-aa",
+                      "title": "GDPval-AA leaderboard", "author": "org:artificial-analysis"},
+                     {"id": "vals-ai-finance-agent-leaderboard",
+                      "resource": "https://www.vals.ai/benchmarks/finance_agent",
+                      "title": "Finance Agent benchmark leaderboard", "author": "org:vals-ai"},
+                     {"id": "musk-grok-4-2-continuous-learning-x",
+                      "resource": "https://x.com/elonmusk/status/2023828048580387001",
+                      "title": "Elon Musk on X: Grok 4.2 continuous post-training learning",
+                      "author": "human:elon-musk"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Anthropic's [Sonnet 4.6](/systems/claude-sonnet-4-6.md) took the top spot on "
+                 "Artificial Analysis' [GDPval-AA](/benchmarks/gdpval-aa.md) at 1633 Elo and led "
+                 "Vals AI's [Finance Agent v1.1](/benchmarks/finance-agent.md) at 63.3%, ahead of "
+                 "[Opus 4.6](/systems/claude-opus-4-6.md), the larger model that had "
+                 "[taken the GDPval-AA lead from GPT-5.2](/developments/2026-02-06-opus-46-released.md) "
+                 "twelve days earlier "
+                 "([GDPval-AA leaderboard](https://artificialanalysis.ai/evaluations/gdpval-aa), "
+                 "[Finance Agent leaderboard](https://www.vals.ai/benchmarks/finance_agent)); "
+                 "Anthropic's own [announcement](https://www.anthropic.com/news/claude-sonnet-4-6), "
+                 "which gives neither figure, framed the model as Opus-class performance on "
+                 "real-world, economically valuable office tasks at unchanged Sonnet pricing. "
+                 "In the same paragraph Musk said xAI's [Grok 4.2](/systems/grok-4-20.md) features "
+                 "continuous post-training that will let it improve every week, promising recursive "
+                 "intelligence growth ([post](https://x.com/elonmusk/status/2023828048580387001)). "
+                 "The first half extends the "
+                 "[dollar-an-hour agentic capability](/developments/2026-02-13-intelligence-too-cheap-to-meter.md) "
+                 "storyline; the second is an early vendor claim of a shipped model that keeps "
+                 "learning, the property "
+                 "[Sholto Douglas predicted for 2026](/developments/2025-12-24-sholto-continual-learning-2026.md) "
+                 "and later reported as "
+                 "[models improving every few days](/developments/2026-05-17-models-improve-every-few-days.md)."},
         {"id": "2026-02-18-anthropic-owes-80b-to-hyperscalers",
          "title": "Anthropic expects to pay hyperscalers $80B through 2029",
          "claim": "Anthropic reportedly expects to pay Amazon, Google and Microsoft at least "

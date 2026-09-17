@@ -24,7 +24,18 @@ it is still worth two billion dollars.
         {"id": "scale-ai", "type": "Organization", "title": "Scale AI",
          "resource": "https://scale.com/", "body": "Publisher of the Remote Labor Index."},
         {"id": "stanford", "type": "Organization", "title": "Stanford University",
-         "resource": "https://www.stanford.edu/"},
+         "description": "Private research university whose labs supply the corpus with the end-to-end "
+                        "test-time-training result and a steady stream of AI-in-science and labor-market items.",
+         "resource": "https://www.stanford.edu/",
+         "sameAs": ["http://www.wikidata.org/entity/Q41506"],
+         "tags": ["university"],
+         "body": "Stanford University is a private research university in Stanford, California. In this "
+                 "corpus it appears mostly as the affiliation behind research results: the "
+                 "[end-to-end test-time-training paper](/developments/2025-12-30-stanford-test-time-training.md) "
+                 "that gives continual learning constant latency, and later the "
+                 "[AI-generated proof adapted to crack a 60-year-old conjecture](/developments/2026-05-03-the-first-ai-proof-with-downstream-impact.md). "
+                 "It also stands on the labor side of the trajectory as the school whose "
+                 "[computer-science degrees stopped guaranteeing employment](/developments/2025-12-31-stanford-cs-degrees-stop-guaranteeing-work.md)."},
         {"id": "sk-telecom", "type": "Organization", "title": "SK Telecom",
          "resource": "https://www.sktelecom.com/", "body": "Built South Korea's first 500B sovereign model."},
         {"id": "notion", "type": "Organization", "title": "Notion",
@@ -73,16 +84,70 @@ it is still worth two billion dollars.
          "claim": "Stanford researchers achieved continual learning via test-time training, "
                   "letting models learn from next-token prediction at constant latency "
                   "regardless of context length.",
+         "description": "Long context is reframed as a continual-learning problem the model solves by "
+                        "compressing what it reads into its own weights, six days after an Anthropic "
+                        "researcher predicted continual learning would be solved in 2026.",
          "domain": "models", "actor": ["stanford"],
          "evidences": ["architecture-of-mind", "recursive-self-improvement"],
-         "supersedes": [B + "developments/2025-12-24-sholto-continual-learning-2026"]},
+         "supersedes": [B + "developments/2025-12-24-sholto-continual-learning-2026"],
+         "relatedTo": [B + "developments/2026-04-09-in-place-test-time-training",
+                       B + "developments/2026-01-02-prime-intellect-rlm",
+                       B + "developments/2026-03-16-million-token-windows-ship"],
+         "tags": ["test-time-training", "continual-learning"],
+         "supporting_text": "continual learning via test-time training",
+         "sources": [{"id": "ttt-e2e-paper-pdf",
+                      "resource": "https://test-time-training.github.io/e2e.pdf",
+                      "title": "End-to-End Test-Time Training for Long Context", "author": "org:stanford"},
+                     {"id": "ttt-e2e-arxiv",
+                      "resource": "https://arxiv.org/abs/2512.23675v1",
+                      "title": "End-to-End Test-Time Training for Long Context", "author": "org:stanford",
+                      "last_modified": "2025-12-29"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "The paper (Tandon, Dalal and twelve co-authors including Hashimoto, Guestrin, Choi and "
+                 "Yu Sun; arXiv 2512.23675, posted 29 December 2025) formulates long-context modeling as "
+                 "continual learning: a standard sliding-window Transformer keeps training at test time by "
+                 "next-token prediction on the context it is reading, compressing that context into its "
+                 "weights, with meta-learning at training time to initialize the learner. TTT-E2E scales "
+                 "with context length the way full attention does while Mamba 2 and Gated DeltaNet do not, "
+                 "yet keeps RNN-like constant latency, 2.7 times faster than full attention at 128K context "
+                 "([arXiv](https://arxiv.org/abs/2512.23675)). In the trajectory it turns the "
+                 "[prediction that continual learning is solved in 2026](/developments/2025-12-24-sholto-continual-learning-2026.md) "
+                 "into a published mechanism within a week, opens the weight-level route to long context that "
+                 "[ByteDance's in-place test-time training](/developments/2026-04-09-in-place-test-time-training.md) "
+                 "extends in April, and sits beside the scaffold-level route of the "
+                 "[Recursive Language Model](/developments/2026-01-02-prime-intellect-rlm.md) three days later."},
         {"id": "2025-12-30-nanogpt-115s",
          "title": "The NanoGPT speedrun record falls to 115.1 seconds",
          "claim": "The NanoGPT speedrun record dropped again, to 115.1 seconds.",
+         "description": "The newsletter's 'optimization is fractal' beat: a public training record that "
+                        "moves a few seconds at a time, five times in nine days, is the corpus's steadiest "
+                        "gauge of how quickly training itself is being optimized.",
          "domain": "models", "score": "115.1 s",
+         "about": [B + "benchmarks/nanogpt-speedrun"],
          "evidences": ["recursive-self-improvement", "reasoning-price-deflation"],
          "supersedes": [B + "developments/2025-12-27-nanogpt-116s"],
-         "body": "Fifth link in the chain: 127.7 → 122.2 → 119.3 → 116.4 → 115.1."},
+         "relatedTo": [B + "developments/2025-12-29-karpathy-claude-runs-nanochat",
+                       B + "developments/2026-05-15-agents-beat-the-human-speedrun-baseline"],
+         "tags": ["speedrun", "ai-r-and-d"],
+         "supporting_text": "The NanoGPT speedrun record dropped, yet again, to",
+         "sources": [{"id": "classiclarryd-x-speedrun-115-1",
+                      "resource": "https://x.com/classiclarryd/status/2005659526960492638",
+                      "title": "New NanoGPT Speedrun WR at 115.1 (-1.3s)", "author": "human:classiclarryd",
+                      "last_modified": "2025-12-29"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Fifth link in the chain: 127.7 → 122.2 → 119.3 → 116.4 → 115.1. The record-holder's post "
+                 "of 29 December credits the 1.3-second gain to light-weight gates that let the attention "
+                 "values modulate the value-embedding contribution from the first 12 dimensions of the "
+                 "input, and notes that 3.28 validation loss on FineWeb is now reached with well under "
+                 "500M training tokens ([X](https://x.com/classiclarryd/status/2005659526960492638)). "
+                 "It follows [116.4 seconds](/developments/2025-12-27-nanogpt-116s.md) by three days and is "
+                 "overtaken within a week, first when "
+                 "[the same six months of optimizations transfer to the harder 2.92 track](/developments/2026-01-02-speedrun-gains-generalize.md) "
+                 "and then by [113.7 seconds](/developments/2026-01-05-nanogpt-113s.md). The "
+                 "[NanoGPT speedrun](/benchmarks/nanogpt-speedrun.md) matters to "
+                 "[recursive self-improvement](/themes/recursive-self-improvement.md) because it is the one "
+                 "place where training optimization is measured daily in public, the same week "
+                 "[Karpathy handed his own optimization loop to Claude](/developments/2025-12-29-karpathy-claude-runs-nanochat.md)."},
         {"id": "2025-12-30-sk-telecom-sovereign-500b",
          "title": "South Korea launches a 500B sovereign model",
          "claim": "SK Telecom launched A.X K1, South Korea's first 500-billion-parameter model, "

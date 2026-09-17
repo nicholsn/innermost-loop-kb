@@ -28,10 +28,115 @@ control of DeepMind.
     ],
     "organizations": [
         {"id": "discovery-loop", "type": "Organization", "title": "Discovery Loop",
-         "body": "Public benefit corporation founded to automate the scientific method."},
+         "description": "Public benefit corporation founded in 2026 by Jeff Dean, Sanjay Ghemawat, Oriol Vinyals and Quoc Le to automate the scientific method with autonomous experiment loops that improve their own algorithms first.",
+         "resource": "https://www.discoveryloop.com/",
+         "sameAs": ["http://www.wikidata.org/entity/Q140907035"],
+         "tags": ["startup", "research-lab"],
+         "body": "Public benefit corporation founded to automate the scientific method. Four of Google's most senior "
+                 "researchers, [Jeff Dean](/people/jeff-dean.md), [Sanjay Ghemawat](/people/sanjay-ghemawat.md), "
+                 "[Oriol Vinyals](/people/oriol-vinyals.md) and [Quoc Le](/people/quoc-le.md), left to found it in "
+                 "August 2026, with [Google](/organizations/google.md) investing and contributing a year of compute "
+                 "([Wired](https://www.wired.com/story/jeff-dean-google-discovery-loop-startup/)). Its plan is to run "
+                 "thousands of autonomous experiment loops that begin by improving their own algorithms before moving "
+                 "to chips, biology and materials, which is why its "
+                 "[founding](/developments/2026-08-05-a-company-founded-to-automate-the-scientific-method.md) sits in "
+                 "the [recursive-self-improvement](/themes/recursive-self-improvement.md) cluster and not only under "
+                 "automated science."},
         {"id": "hark", "type": "Organization", "title": "Hark"},
         {"id": "sandisk", "type": "Organization", "title": "SanDisk"},
         {"id": "naacp", "type": "Organization", "title": "NAACP"},
+    ],
+    "people": [
+        {"id": "jeff-dean", "type": "Person", "title": "Jeff Dean", "name": "Jeff Dean",
+         "description": "Senior Google AI researcher who, after 27 years at the company, left with three colleagues to found Discovery Loop and automate the scientific method itself.",
+         "resource": "https://x.com/jeffdean",
+         "sameAs": ["http://www.wikidata.org/entity/Q6173703"],
+         "tags": ["researcher", "founder"],
+         "body": "Jeff Dean is an American computer scientist who spent 27 years at Google, where he led much of its AI "
+                 "research. In this corpus he appears at the moment he "
+                 "[leaves to found Discovery Loop](/developments/2026-08-05-a-company-founded-to-automate-the-scientific-method.md) "
+                 "with [Sanjay Ghemawat](/people/sanjay-ghemawat.md), [Oriol Vinyals](/people/oriol-vinyals.md) and "
+                 "[Quoc Le](/people/quoc-le.md): a public benefit corporation whose experiment loops are to begin by "
+                 "improving their own algorithms, the newsletter's clearest case of senior researchers leaving a "
+                 "frontier lab to build the loop directly."},
+        {"id": "sanjay-ghemawat", "type": "Person", "title": "Sanjay Ghemawat", "name": "Sanjay Ghemawat",
+         "description": "Google systems engineer and Jeff Dean's long-time collaborator, one of the four founders of Discovery Loop.",
+         "resource": "https://en.wikipedia.org/wiki/Sanjay_Ghemawat",
+         "sameAs": ["http://www.wikidata.org/entity/Q32751373"],
+         "tags": ["researcher", "founder"],
+         "body": "Sanjay Ghemawat is an American computer scientist and software engineer, for decades Jeff Dean's "
+                 "closest collaborator at Google. In this corpus he appears once, as one of the four who "
+                 "[left Google to found Discovery Loop](/developments/2026-08-05-a-company-founded-to-automate-the-scientific-method.md), "
+                 "the public benefit corporation built to automate the scientific method."},
+        {"id": "oriol-vinyals", "type": "Person", "title": "Oriol Vinyals", "name": "Oriol Vinyals",
+         "description": "DeepMind VP of research and a Gemini technical lead who left Google with Jeff Dean to co-found Discovery Loop.",
+         "resource": "https://x.com/oriolvinyalsml",
+         "sameAs": ["http://www.wikidata.org/entity/Q47030267"],
+         "tags": ["researcher", "founder"],
+         "body": "Oriol Vinyals is a machine-learning researcher who worked on Google's frontier models. In this corpus "
+                 "he appears once, as a co-founder of "
+                 "[Discovery Loop](/organizations/discovery-loop.md) when its "
+                 "[founding](/developments/2026-08-05-a-company-founded-to-automate-the-scientific-method.md) is "
+                 "recorded alongside the [DeepMind leadership handover](/developments/2026-08-05-a-lab-chief-steps-back-as-agi-feels-close-at-hand.md) "
+                 "of the same day."},
+        {"id": "quoc-le", "type": "Person", "title": "Quoc Le", "name": "Quoc Le",
+         "description": "Google Brain co-founder and the key scientist behind AutoML-Zero who left Google with Jeff Dean to co-found Discovery Loop.",
+         "resource": "https://x.com/quocleix",
+         "sameAs": ["http://www.wikidata.org/entity/Q29043123"],
+         "tags": ["researcher", "founder"],
+         "body": "Quoc Le is a machine-learning researcher who spent his career at Google. In this corpus he appears once, "
+                 "as a co-founder of [Discovery Loop](/organizations/discovery-loop.md), the public benefit corporation "
+                 "whose [founding](/developments/2026-08-05-a-company-founded-to-automate-the-scientific-method.md) "
+                 "puts self-improving experiment loops ahead of chips, biology and materials."},
+    ],
+    "roles": [
+        {"id": "jeff-dean-discovery-loop-co-founder", "type": "Role",
+         "title": "Jeff Dean, co-founder and CEO of Discovery Loop",
+         "roleName": "Co-founder and CEO",
+         "startDate": "2026",
+         "memberOf": [B + "organizations/discovery-loop"],
+         "holder": [B + "people/jeff-dean"],
+         "description": "The position he took on leaving Google after 27 years to automate the scientific method; Wired reports he is also the company's CEO.",
+         "body": "The newsletter records Jeff Dean leaving Google with three colleagues to found "
+                 "[Discovery Loop](/organizations/discovery-loop.md), a public benefit corporation whose autonomous "
+                 "experiment loops begin by improving their own algorithms "
+                 "([development](/developments/2026-08-05-a-company-founded-to-automate-the-scientific-method.md)). "
+                 "Asked who the CEO is, Dean told Wired \"I think I'm the CEO\" "
+                 "([Wired](https://www.wired.com/story/jeff-dean-google-discovery-loop-startup/)); "
+                 "Wikidata likewise lists him among the company's founders."},
+        {"id": "sanjay-ghemawat-discovery-loop-co-founder", "type": "Role",
+         "title": "Sanjay Ghemawat, co-founder of Discovery Loop",
+         "roleName": "Co-founder",
+         "startDate": "2026",
+         "memberOf": [B + "organizations/discovery-loop"],
+         "holder": [B + "people/sanjay-ghemawat"],
+         "description": "The position he took on leaving Google with Jeff Dean, Oriol Vinyals and Quoc Le.",
+         "body": "The newsletter names Sanjay Ghemawat among the four who left Google to found "
+                 "[Discovery Loop](/organizations/discovery-loop.md) "
+                 "([development](/developments/2026-08-05-a-company-founded-to-automate-the-scientific-method.md)); "
+                 "Wikidata lists him among its founders."},
+        {"id": "oriol-vinyals-discovery-loop-co-founder", "type": "Role",
+         "title": "Oriol Vinyals, co-founder of Discovery Loop",
+         "roleName": "Co-founder",
+         "startDate": "2026",
+         "memberOf": [B + "organizations/discovery-loop"],
+         "holder": [B + "people/oriol-vinyals"],
+         "description": "The position he took on leaving Google with Jeff Dean, Sanjay Ghemawat and Quoc Le.",
+         "body": "The newsletter names Oriol Vinyals among the four who left Google to found "
+                 "[Discovery Loop](/organizations/discovery-loop.md) "
+                 "([development](/developments/2026-08-05-a-company-founded-to-automate-the-scientific-method.md)); "
+                 "Wikidata lists him among its founders."},
+        {"id": "quoc-le-discovery-loop-co-founder", "type": "Role",
+         "title": "Quoc Le, co-founder of Discovery Loop",
+         "roleName": "Co-founder",
+         "startDate": "2026",
+         "memberOf": [B + "organizations/discovery-loop"],
+         "holder": [B + "people/quoc-le"],
+         "description": "The position he took on leaving Google with Jeff Dean, Sanjay Ghemawat and Oriol Vinyals.",
+         "body": "The newsletter names Quoc Le among the four who left Google to found "
+                 "[Discovery Loop](/organizations/discovery-loop.md) "
+                 "([development](/developments/2026-08-05-a-company-founded-to-automate-the-scientific-method.md)); "
+                 "Wikidata lists him among its founders."},
     ],
     "developments": [
         {"id": "2026-08-05-a-company-founded-to-automate-the-scientific-method",
@@ -42,9 +147,39 @@ control of DeepMind.
                   "experiment loops that begin by improving their own algorithms before "
                   "graduating to chips, biology and materials, with Google investing and "
                   "contributing a year of compute.",
-         "domain": "science", "actor": ["discovery-loop", "google"],
+         "description": "Senior researchers leave a frontier lab to build the loop directly, under a charter that "
+                        "puts self-improving algorithms ahead of every other science it means to automate.",
+         "domain": "science",
+         "actor": ["discovery-loop", "google", "people/jeff-dean", "people/sanjay-ghemawat",
+                   "people/oriol-vinyals", "people/quoc-le"],
          "evidences": ["recursive-self-improvement", "automated-science", "a-model-trains-a-model"],
-         "supersedes": [B + "developments/2026-08-02-labs-will-compete-with-their-own-customers"]},
+         "supersedes": [B + "developments/2026-08-02-labs-will-compete-with-their-own-customers",
+                        B + "developments/2026-05-14-recursive-superintelligence-raises-650m",
+                        B + "developments/2026-05-20-karpathy-joins-to-lead-pretraining"],
+         "relatedTo": [B + "developments/2026-08-05-a-lab-chief-steps-back-as-agi-feels-close-at-hand",
+                       B + "developments/2026-06-27-agents-optimize-the-scientist-not-the-experiment",
+                       B + "people/demis-hassabis"],
+         "relations": [{"predicate": "relatedTo",
+                        "target": B + "developments/2026-05-14-recursive-superintelligence-raises-650m",
+                        "relation_label": "corroborates"}],
+         "tags": ["rsi", "autonomous-research", "ai-r-and-d", "funding"],
+         "supporting_text": "a public benefit corporation aiming to automate the scientific method itself",
+         "sources": [{"id": "wired-jeff-dean-discovery-loop",
+                      "resource": "https://www.wired.com/story/jeff-dean-google-discovery-loop-startup/",
+                      "title": "Google's Top AI Brains Are Leaving to Launch Discovery Loop",
+                      "author": "org:wired", "last_modified": "2026-08-05"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Jeff Dean, after 27 years at Google, is leaving with Sanjay Ghemawat, Oriol Vinyals and Quoc Le "
+                 "to found [Discovery Loop](/organizations/discovery-loop.md), a public benefit corporation that "
+                 "plans to run thousands of autonomous experiment loops, with Google investing and contributing a "
+                 "year of compute ([Wired](https://www.wired.com/story/jeff-dean-google-discovery-loop-startup/)). "
+                 "The charter puts the recursion first: the loops are to begin by improving their own algorithms "
+                 "before graduating to chips, biology and materials. It lands the same day "
+                 "[Demis Hassabis hands over day-to-day control of DeepMind](/developments/2026-08-05-a-lab-chief-steps-back-as-agi-feels-close-at-hand.md), "
+                 "and follows [Recursive Superintelligence's $650 million raise](/developments/2026-05-14-recursive-superintelligence-raises-650m.md) "
+                 "and [Karpathy's move to lead pre-training](/developments/2026-05-20-karpathy-joins-to-lead-pretraining.md) "
+                 "as the corpus's third case of the loop being organized as a company or a job rather than run as an "
+                 "experiment."},
         {"id": "2026-08-05-a-lab-chief-steps-back-as-agi-feels-close-at-hand",
          "title": "A lab chief hands over daily control while saying AGI feels close at hand",
          "claim": "Demis Hassabis, telling staff that AGI feels close at hand, handed day-to-day "

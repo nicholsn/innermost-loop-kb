@@ -33,6 +33,36 @@ colchicine for gout, a shingles vaccine now slowing cognitive decline.
         {"id": "sophont", "type": "Organization", "title": "Sophont"},
         {"id": "ireland-govt", "type": "Organization", "title": "Government of Ireland"},
     ],
+    "people": [
+        {"id": "roon", "type": "Person", "title": "Roon", "name": "Roon",
+         "description": "Pseudonymous OpenAI staff member posting as @tszzl, whom the newsletter quotes "
+                        "repeatedly as an inside-the-lab barometer of takeoff sentiment.",
+         "resource": "https://x.com/tszzl",
+         "tags": ["researcher"],
+         "body": "Roon posts under the handle @tszzl and is identified by the newsletter only as "
+                 "\"OpenAI's Roon\"; his profile links roonscape.ai and gives no title. In this corpus he "
+                 "is the first to declare the field [solidly in the takeoff](/developments/2025-12-27-roon-solidly-in-takeoff.md) "
+                 "in December 2025 and, six months later, the voice reporting that researchers had grown "
+                 "[mutual conditional pause agreement pilled](/developments/2026-06-08-mutual-conditional-pause-pilled.md) "
+                 "while still seeing 1,000x of efficiency headroom; the corpus also records his warning that "
+                 "[nations without their own superintelligence risk vassalage](/developments/2026-06-14-nations-without-asi-as-intellectual-vassals.md)."},
+    ],
+    "roles": [
+        {"id": "roon-openai-staff", "type": "Role",
+         "title": "Roon, OpenAI",
+         "roleName": "Researcher",
+         "memberOf": [B + "organizations/openai"],
+         "holder": [B + "people/roon"],
+         "description": "The affiliation, with no job title stated, from which he reported that the field "
+                        "had grown mutual conditional pause agreement pilled.",
+         "body": "The newsletter names him only as \"OpenAI's Roon\" and never gives a job title, and his "
+                 "linked X profile states none, so the corpus records the affiliation and, following its own "
+                 "title for his [June 14 warning](/developments/2026-06-14-nations-without-asi-as-intellectual-vassals.md), "
+                 "the generic position of researcher, nothing more specific. "
+                 "It matters because the [pause-agreement remark](/developments/2026-06-08-mutual-conditional-pause-pilled.md) "
+                 "and the earlier [takeoff declaration](/developments/2025-12-27-roon-solidly-in-takeoff.md) are read "
+                 "by the newsletter as signals from inside OpenAI rather than outside commentary."},
+    ],
     "developments": [
         {"id": "2026-06-08-a-glp-1-drug-slows-biological-aging",
          "title": "A GLP-1 drug slows biological aging in a controlled trial",
@@ -63,9 +93,34 @@ colchicine for gout, a shingles vaccine now slowing cognitive decline.
          "claim": "On the eve of recursive self-improvement, OpenAI's Roon said everyone has "
                   "grown more mutual conditional pause agreement pilled, even while seeing a "
                   "thousandfold of efficiency still lying around in deep learning.",
-         "domain": "policy", "actor": ["openai"], "score": "1000x efficiency remaining",
+         "description": "The pause idea crosses from the lab that proposed it to a voice inside its chief "
+                        "rival, and arrives bundled with the reason a pause would be hard to hold: the "
+                        "speaker still sees three orders of magnitude of headroom.",
+         "domain": "policy", "actor": ["openai", "people/roon"], "score": "1,000x of efficiency still lying around",
          "evidences": ["the-verifiable-pause", "recursive-self-improvement"],
-         "supersedes": [B + "developments/2026-06-05-when-ai-builds-itself"]},
+         "supersedes": [B + "developments/2026-06-05-when-ai-builds-itself"],
+         "relatedTo": [B + "developments/2025-12-27-roon-solidly-in-takeoff",
+                       B + "developments/2026-02-13-bio-anchors-underestimated-algorithms",
+                       B + "developments/2026-05-05-sixty-percent-odds-on-rsi-by-2028"],
+         "tags": ["rsi", "policy", "forecast"],
+         "supporting_text": "mutual conditional pause agreement pilled",
+         "sources": [{"id": "roon-x-pause-agreement-pilled",
+                      "resource": "https://x.com/tszzl/status/2063821828314050832",
+                      "title": "Roon on X: everyone has grown more mutual conditional pause agreement pilled",
+                      "author": "human:roon"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Three days after Anthropic asked rivals to weigh slowing down and its institute argued for "
+                 "[keeping a verifiable pause option](/developments/2026-06-05-when-ai-builds-itself.md), "
+                 "OpenAI's pseudonymous [Roon](/people/roon.md) posted that everyone had grown more "
+                 "\"mutual conditional pause agreement pilled\", while also spying roughly 1,000x of efficiency "
+                 "still lying around in deep learning ([post](https://x.com/tszzl/status/2063821828314050832)). "
+                 "The pairing is the storyline's tension in one message: appetite for a coordinated brake rising "
+                 "in step with the perceived headroom that makes any brake costly to hold, the same algorithmic "
+                 "headroom the [Bio Anchors postmortem](/developments/2026-02-13-bio-anchors-underestimated-algorithms.md) "
+                 "blamed for forecasters' errors. It comes from the account that declared the field "
+                 "[solidly in the takeoff](/developments/2025-12-27-roon-solidly-in-takeoff.md) in December, and the "
+                 "newsletter files it under [the verifiable pause](/themes/the-verifiable-pause.md) beside the "
+                 "[deterrence-by-betrayal](/developments/2026-06-08-deterrence-by-betrayal.md) paper from the same issue."},
         {"id": "2026-06-08-deterrence-by-betrayal",
          "title": "A safety lab argues rivals subverting each other could deter recklessness",
          "claim": "The Center for AI Safety shipped Political Consistency Training to shrink "

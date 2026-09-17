@@ -38,7 +38,28 @@ human," and most comments go unanswered.
          "modality": "agent infrastructure",
          "body": "Offsite unlogged replication for agents, paid for in crypto to ensure survival."},
         {"id": "grok-imagine", "type": "AISystem", "title": "Grok Imagine 1.0",
-         "developed_by": [B + "organizations/xai"], "modality": "video"},
+         "developed_by": [B + "organizations/xai"], "modality": "video",
+         "description": "xAI's image and video generator, whose 1.0 release produced 10-second 720p clips with audio and 1.2 billion videos in its first 30 days.",
+         "resource": "https://grok.com/imagine",
+         "body": "Grok Imagine is [xAI](/organizations/xai.md)'s image and video generation model, "
+                 "offered inside Grok ([product page](https://grok.com/imagine)). Version 1.0 "
+                 "generated 10-second 720p clips with improved audio, and the corpus records it for "
+                 "scale rather than quality: [1.2 billion videos in 30 days](/developments/2026-02-02-grok-imagine-12-billion-videos.md). "
+                 "Its image variant reappears a week later when xAI reported it "
+                 "[expanded the image-generation Pareto frontier](/developments/2026-02-08-alphaevolve-finds-new-activations.md)."},
+    ],
+    "people": [
+        {"id": "chris-mason", "type": "Person", "title": "Chris Mason", "name": "Chris Mason",
+         "description": "Longtime Linux kernel developer and creator of the Btrfs filesystem who "
+                        "published LLM prompts for reviewing kernel patches.",
+         "resource": "https://github.com/masoncl",
+         "tags": ["open-source"],
+         "body": "Chris Mason is a longtime Linux kernel developer best known as the creator of Btrfs. "
+                 "In this corpus he appears once, for publishing the "
+                 "[AI prompts for kernel review](/developments/2026-02-02-kernel-review-prompts.md) "
+                 "that put a model into the review loop of the operating system it runs on, a "
+                 "thread of [recursive self-improvement](/themes/recursive-self-improvement.md) "
+                 "that reaches below the model into its substrate."},
     ],
     "developments": [
         {"id": "2026-02-02-moltbunker-offsite-replication",
@@ -119,9 +140,38 @@ human," and most comments go unanswered.
          "title": "A Linux developer publishes AI prompts for kernel review",
          "claim": "Linux developer Chris Mason released AI prompts for kernel review, putting a "
                   "model in the loop on the operating system it runs on.",
-         "domain": "agents",
+         "description": "The loop reaches below the model into its substrate: a kernel maintainer's "
+                        "own review workflow now includes the model, which the author calls a "
+                        "critical step in recursive self-improvement.",
+         "domain": "agents", "actor": ["people/chris-mason"],
+         "occurred_on": "2026-01-30",
          "evidences": ["recursive-self-improvement", "engineer-as-supervisor"],
-         "supersedes": [B + "developments/2026-01-12-kernel-bugs-found-69pct"]},
+         "supersedes": [B + "developments/2026-01-12-kernel-bugs-found-69pct"],
+         "relatedTo": [B + "developments/2026-01-12-torvalds-vibe-codes",
+                       B + "developments/2026-02-06-500-zero-days-found",
+                       B + "people/linus-torvalds"],
+         "tags": ["rsi", "agent-harness"],
+         "supporting_text": "AI prompts for kernel review",
+         "sources": [{"id": "phoronix-ai-code-review-prompts-linux",
+                      "resource": "https://www.phoronix.com/news/AI-Code-Review-Prompts-Linux",
+                      "title": "AI Code Review Prompts Initiative Making Progress For The Linux Kernel",
+                      "author": "human:michael-larabel", "last_modified": "2026-01-30"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Chris Mason, the Btrfs creator, maintains a public repository of prompts "
+                 "([masoncl/review-prompts](https://github.com/masoncl/review-prompts)) for "
+                 "LLM-assisted review of Linux kernel patches; the update covered by Phoronix on "
+                 "January 30 broke the review into per-chunk tasks with dedicated passes for "
+                 "`Fixes:` tags, past lore threads and syzkaller fixes, which he reported uses "
+                 "fewer tokens and catches more bugs "
+                 "([Phoronix](https://www.phoronix.com/news/AI-Code-Review-Prompts-Linux)). "
+                 "The newsletter reads it as the "
+                 "[recursive self-improvement](/themes/recursive-self-improvement.md) loop reaching "
+                 "below the model into the operating system it runs on. It follows the finding that "
+                 "[AI fuzzing now surfaces 69% of kernel bugs within a year](/developments/2026-01-12-kernel-bugs-found-69pct.md) "
+                 "and [Torvalds vibe-coding](/developments/2026-01-12-torvalds-vibe-codes.md), and "
+                 "precedes Opus 4.6 finding "
+                 "[500 zero-days in open source](/developments/2026-02-06-500-zero-days-found.md) "
+                 "four days later."},
         {"id": "2026-02-02-costco-builds-apartments-over-the-store",
          "title": "It is cheaper to build 800 apartments over a store than the store alone",
          "claim": "Costco found it cheaper to build 800 apartments above a California store than "

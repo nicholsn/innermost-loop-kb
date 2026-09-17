@@ -27,6 +27,37 @@ years ago.
         {"id": "ice-exchange", "type": "Organization", "title": "ICE",
          "resource": "https://www.ice.com/"},
     ],
+    "people": [
+        {"id": "noam-brown", "type": "Person", "title": "Noam Brown", "name": "Noam Brown",
+         "description": "Artificial-intelligence researcher at OpenAI who framed Karpathy's move to "
+                        "Anthropic as frontier labs collectively advancing one technology rather "
+                        "than a zero-sum transfer.",
+         "resource": "https://x.com/polynoamial",
+         "sameAs": ["http://www.wikidata.org/entity/Q89662566"],
+         "tags": ["researcher"],
+         "body": "Noam Brown is an artificial-intelligence researcher at [OpenAI](/organizations/openai.md). "
+                 "In this corpus he appears once, responding to [Andrej Karpathy](/people/andrej-karpathy.md)'s "
+                 "move to Anthropic: he said he would have loved for Karpathy to rejoin OpenAI but "
+                 "was happy to see him at any frontier lab, and rejected the zero-sum framing in "
+                 "favour of labs 'collectively advancing the most important tech of our era' "
+                 "([post](https://x.com/polynoamial/status/2056768036837949914)), the remark the "
+                 "newsletter attached to [the loop acquiring a job title](/developments/2026-05-20-karpathy-joins-to-lead-pretraining.md)."},
+    ],
+    "roles": [
+        {"id": "noam-brown-openai-researcher", "type": "Role",
+         "title": "Noam Brown, researcher at OpenAI",
+         "roleName": "Researcher",
+         "memberOf": [B + "organizations/openai"],
+         "holder": [B + "people/noam-brown"],
+         "description": "The affiliation under which the newsletter quotes him, as 'OpenAI's Noam "
+                        "Brown', reframing a rival lab's hire as a collective advance; neither the "
+                        "newsletter nor his own post states a title.",
+         "body": "The newsletter identifies him only as 'OpenAI's Noam Brown' when it records his "
+                 "response to [Karpathy joining Anthropic](/developments/2026-05-20-karpathy-joins-to-lead-pretraining.md); "
+                 "his own post says he would have loved for Karpathy to rejoin OpenAI. The role is "
+                 "what gives the remark its weight: a researcher inside the rival lab describing "
+                 "the frontier labs as one effort."},
+    ],
     "developments": [
         {"id": "2026-05-20-karpathy-joins-to-lead-pretraining",
          "title": "The recursive loop acquires a job title",
@@ -34,9 +65,50 @@ years ago.
                   "Claude to accelerate Claude, with OpenAI's Noam Brown reframing the hire as "
                   "frontier labs collectively advancing the most important technology of the "
                   "era.",
-         "domain": "agents", "actor": ["anthropic", "people/andrej-karpathy", "openai"],
+         "description": "The corpus has recorded recursive self-improvement as a claim, a "
+                        "probability and a present phenomenon; here it becomes a named position at a "
+                        "frontier lab, held by the person whose own optimization loop Claude had "
+                        "already taken over.",
+         "domain": "agents",
+         "actor": ["anthropic", "people/andrej-karpathy", "openai", "people/noam-brown"],
+         "about": [B + "systems/claude"],
+         "occurred_on": "2026-05-19",
          "evidences": ["recursive-self-improvement", "coordination-tax"],
-         "supersedes": [B + "developments/2026-05-15-agents-beat-the-human-speedrun-baseline"]},
+         "supersedes": [B + "developments/2026-05-15-agents-beat-the-human-speedrun-baseline",
+                        B + "developments/2025-12-29-karpathy-claude-runs-nanochat"],
+         "relatedTo": [B + "developments/2026-03-09-autoresearch-650-experiments",
+                       B + "developments/2026-07-26-the-job-board-is-the-roadmap",
+                       B + "developments/2026-08-13-a-cofounder-steers-toward-recursive-self-improvement"],
+         "tags": ["rsi", "ai-r-and-d", "model-trains-model"],
+         "supporting_text": "to lead pre-training (essentially training Claude to accelerate Claude)",
+         "sources": [{"id": "karpathy-joins-anthropic-post",
+                      "resource": "https://x.com/karpathy/status/2056753169888334312",
+                      "title": "Personal update: I've joined Anthropic (X post)",
+                      "author": "human:andrej-karpathy", "last_modified": "2026-05-19"},
+                     {"id": "noam-brown-reframes-the-hire-post",
+                      "resource": "https://x.com/polynoamial/status/2056768036837949914",
+                      "title": "Noam Brown on Karpathy joining Anthropic (X post)",
+                      "author": "human:noam-brown", "last_modified": "2026-05-19"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Karpathy announced on 19 May 2026 that he had joined Anthropic, saying the next "
+                 "few years at the frontier of LLMs would be especially formative and that he "
+                 "wanted to get back to R&D ([post](https://x.com/karpathy/status/2056753169888334312)); "
+                 "the newsletter adds that he reports to Nick Joseph and leads pre-training, which "
+                 "it glosses as training [Claude](/systems/claude.md) to accelerate Claude. The "
+                 "position is recorded as a [Role](/roles/andrej-karpathy-anthropic-pretraining-lead.md) "
+                 "in this corpus, and it closes an arc that began with Claude "
+                 "[running every optimization experiment on his nanochat project](/developments/2025-12-29-karpathy-claude-runs-nanochat.md) "
+                 "in December and his [650-experiment autoresearch loop](/developments/2026-03-09-autoresearch-650-experiments.md) "
+                 "in March. OpenAI's [Noam Brown](/people/noam-brown.md) answered that he would "
+                 "have loved for Karpathy to rejoin OpenAI but that the labs were 'collectively "
+                 "advancing the most important tech of our era' "
+                 "([post](https://x.com/polynoamial/status/2056768036837949914)). The "
+                 "[recursive-self-improvement](/themes/recursive-self-improvement.md) storyline has "
+                 "moved from Altman's [production claim](/developments/2025-12-28-altman-self-improving-in-production.md) "
+                 "through an alignment lead's [present phenomenon](/developments/2026-03-16-rsi-is-a-present-phenomenon.md) "
+                 "and Clark's [60% by 2028](/developments/2026-05-05-sixty-percent-odds-on-rsi-by-2028.md) "
+                 "to a named owner; by August a Google co-founder would be reported "
+                 "[steering resources toward it](/developments/2026-08-13-a-cofounder-steers-toward-recursive-self-improvement.md)."},
         {"id": "2026-05-20-three-point-two-quadrillion-tokens-a-month",
          "title": "One company processes 3.2 quadrillion tokens a month",
          "claim": "Google is processing 3.2 quadrillion tokens per month, up from 9.7 trillion "

@@ -47,12 +47,55 @@ tracking — machine affect and engineering as supervision — arrive on the sam
          "resource": "https://www.texaspacific.com/", "body": "Permian Basin landowner."},
         {"id": "nasa", "type": "Organization", "title": "NASA",
          "resource": "https://www.nasa.gov/", "body": "US space agency."},
+        {"id": "tubingen-ai-center", "type": "Organization", "title": "Tübingen AI Center",
+         "description": "Tübingen machine-learning research center whose team, with the ELLIS "
+                        "Institute Tübingen, the Max Planck Institute for Intelligent Systems and "
+                        "the University of Tübingen, publishes PostTrainBench.",
+         "resource": "https://tuebingen.ai/",
+         "sameAs": ["http://www.wikidata.org/entity/Q129571900"],
+         "tags": ["research-lab", "university"],
+         "body": "The Tübingen AI Center is the shared affiliation of the PostTrainBench team "
+                 "(Ben Rank, Hardik Bhatnagar, Ameya Prabhu, Matthias Bethge, Maksym "
+                 "Andriushchenko and colleagues), whose benchmark asks whether LLM agents can "
+                 "post-train LLMs. In this corpus it appears as the publisher of "
+                 "[PostTrainBench](/benchmarks/posttrainbench.md), the ruler behind the "
+                 "[first models-training-models leaderboard](/developments/2025-12-18-posttrainbench-models-training-models.md) "
+                 "and its [v1.0 successor](/developments/2026-03-12-posttrainbench-v1.md)."},
     ],
 
     "people": [
         {"id": "demis-hassabis", "type": "Person", "title": "Demis Hassabis",
          "name": "Demis Hassabis",
-         "body": "DeepMind CEO. Stated the root-node strategy this issue records."},
+         "description": "Google DeepMind CEO whose stated strategy of attacking root-node "
+                        "scientific problems, and whose shifting AGI and robotics timelines, "
+                        "recur across the corpus.",
+         "resource": "https://x.com/demishassabis",
+         "sameAs": ["http://www.wikidata.org/entity/Q3022141"],
+         "tags": ["executive", "researcher"],
+         "body": "Demis Hassabis is the chief executive of Google DeepMind. He enters the corpus "
+                 "[naming the root-node problems](/developments/2025-12-18-hassabis-root-node-problems.md) "
+                 "the lab is targeting, fusion, room-temperature superconductors, batteries, "
+                 "quantum error correction and weather prediction, on the thesis that solving "
+                 "them unlocks everything downstream. He returns as a bellwether for timelines, "
+                 "[putting humanoid robotics eighteen months out](/developments/2026-01-27-hassabis-18-months-to-humanoids.md) "
+                 "and later [conceding Google lacks the TPUs](/developments/2026-05-01-not-enough-tpus-for-two-frontier-families.md) "
+                 "to run two frontier model families at once."},
+    ],
+
+    "roles": [
+        {"id": "demis-hassabis-google-deepmind-ceo", "type": "Role",
+         "title": "Demis Hassabis, CEO of Google DeepMind",
+         "roleName": "Chief Executive Officer",
+         "memberOf": [B + "organizations/google-deepmind"],
+         "holder": [B + "people/demis-hassabis"],
+         "description": "The position from which he stated the root-node strategy this issue "
+                        "records.",
+         "body": "The newsletter identifies Hassabis as DeepMind CEO when he "
+                 "[confirms the lab is targeting root-node problems](/developments/2025-12-18-hassabis-root-node-problems.md); "
+                 "every later appearance in the corpus, from the "
+                 "[eighteen-month humanoid forecast](/developments/2026-01-27-hassabis-18-months-to-humanoids.md) "
+                 "to the [TPU shortage admission](/developments/2026-05-01-not-enough-tpus-for-two-frontier-families.md), "
+                 "is made from this seat."},
     ],
 
     "systems": [
@@ -65,6 +108,20 @@ tracking — machine affect and engineering as supervision — arrive on the sam
          "developed_by": [B + "organizations/world-labs"], "modality": "3D world generation"},
         {"id": "trellis-2", "type": "AISystem", "title": "TRELLIS.2",
          "developed_by": [B + "organizations/microsoft"], "modality": "image-to-3D"},
+        {"id": "gpt-5-1-codex-max", "type": "AISystem", "title": "GPT-5.1-Codex-Max",
+         "description": "The GPT-5.1-era member of OpenAI's Codex coding-agent line, recorded "
+                        "here as the first leader of PostTrainBench.",
+         "developed_by": [B + "organizations/openai"], "modality": "code",
+         "evaluated_on": [B + "benchmarks/posttrainbench"],
+         "resource": "https://openai.com/index/gpt-5-1-codex-max/",
+         "tags": ["coding-agent"],
+         "body": "GPT-5.1-Codex-Max is the agentic coding model OpenAI shipped in the Codex line "
+                 "in late 2025. In this corpus it appears once, "
+                 "[leading PostTrainBench](/developments/2025-12-18-posttrainbench-models-training-models.md) "
+                 "at the recursive task of post-training other models, three days after the "
+                 "[Codex](/systems/codex.md) product was reported supervising its own training "
+                 "runs; its successors [GPT-5.2-Codex](/systems/gpt-5-2-codex.md) and "
+                 "[GPT-5.3-Codex](/systems/gpt-5-3-codex.md) carry the line forward."},
     ],
 
     "benchmarks": [
@@ -75,7 +132,23 @@ tracking — machine affect and engineering as supervision — arrive on the sam
         {"id": "vending-bench-arena", "type": "Benchmark", "title": "Vending-Bench Arena",
          "measures_capability": "running a simulated business profitably over long horizons"},
         {"id": "posttrainbench", "type": "Benchmark", "title": "PostTrainBench",
-         "measures_capability": "a model's skill at post-training other models"},
+         "description": "Benchmark that gives coding agents four small base models, one GPU and "
+                        "ten hours to post-train them, ranking how well models train other models.",
+         "published_by": [B + "organizations/tubingen-ai-center"],
+         "measures_capability": "a model's skill at post-training other models",
+         "resource": "https://posttrainbench.com/",
+         "tags": ["open-source"],
+         "body": "PostTrainBench asks whether LLM agents can post-train LLMs: each agent gets four "
+                 "small base models (Qwen 3 1.7B and 4B, SmolLM3-3B, Gemma 3 4B), a single H100 "
+                 "and ten hours, and is scored on downstream benchmarks (five at the "
+                 "December 2025 launch, seven weighted from v1.0 in March 2026) "
+                 "([site](https://posttrainbench.com/), [paper](https://arxiv.org/abs/2603.08640)). "
+                 "In this corpus it is the ruler for the model-trains-model loop: "
+                 "[GPT-5.1-Codex-Max led the first cut](/developments/2025-12-18-posttrainbench-models-training-models.md) "
+                 "in December 2025, [v1.0](/developments/2026-03-12-posttrainbench-v1.md) reframed "
+                 "the task as recursive self-improvement in March 2026, and OpenAI's "
+                 "[Sol scored 50.3%](/developments/2026-07-10-a-model-post-trains-a-model.md) on it "
+                 "after post-training Luna in July."},
         {"id": "big-bench-audio", "type": "Benchmark", "title": "Big Bench Audio",
          "measures_capability": "spoken reasoning and audio understanding"},
     ],
@@ -185,11 +258,36 @@ tracking — machine affect and engineering as supervision — arrive on the sam
          "title": "PostTrainBench ranks models at post-training other models",
          "claim": "The new PostTrainBench showed GPT 5.1 Codex Max leading at the recursive "
                   "task of post-training other models.",
-         "domain": "agents", "actor": ["openai"], "about": [B + "benchmarks/posttrainbench"],
-         "evidences": ["recursive-self-improvement"],
+         "description": "The author's Darwinian training loop acquires a scoreboard: once agents "
+                        "are ranked on how well they train other models, the recursion becomes "
+                        "a measured competition rather than an anecdote.",
+         "domain": "agents", "actor": ["openai", "tubingen-ai-center"],
+         "about": [B + "benchmarks/posttrainbench", B + "systems/gpt-5-1-codex-max"],
+         "evidences": ["recursive-self-improvement", "a-model-trains-a-model"],
          "supersedes": [B + "developments/2025-12-15-codex-babysits-own-training"],
+         "relatedTo": [B + "developments/2026-07-10-a-model-post-trains-a-model",
+                       B + "systems/codex"],
+         "tags": ["model-trains-model", "evaluation", "rsi"],
+         "supporting_text": "PostTrainBench shows GPT 5.1 Codex Max reigning supreme",
+         "sources": [{"id": "posttrainbench-leaderboard",
+                      "resource": "https://posttrainbench.com/",
+                      "title": "PostTrainBench: Measuring how well AI agents can post-train language models",
+                      "author": "org:tubingen-ai-center"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
          "body": "Three days after a model was reported watching its own training, there "
-                  "is a leaderboard for models training models."},
+                 "is a leaderboard for models training models. PostTrainBench hands each "
+                 "coding agent four small base models, a single H100 and ten hours to "
+                 "post-train them, and in this first cut OpenAI's "
+                 "[GPT-5.1-Codex-Max](/systems/gpt-5-1-codex-max.md), the same "
+                 "[Codex](/systems/codex.md) line that had just been reported "
+                 "[supervising its own training](/developments/2025-12-15-codex-babysits-own-training.md), "
+                 "led the field ([leaderboard](https://posttrainbench.com/)). The benchmark "
+                 "becomes the corpus's ruler for the loop: ten days later Altman "
+                 "[confirms self-improving systems in production](/developments/2025-12-28-altman-self-improving-in-production.md), "
+                 "[v1.0](/developments/2026-03-12-posttrainbench-v1.md) in March 2026 asks "
+                 "outright whether agents can automate their own post-training, and by July "
+                 "OpenAI reports [Sol post-training Luna](/developments/2026-07-10-a-model-post-trains-a-model.md) "
+                 "at 50.3% on it."},
         {"id": "2025-12-18-micron-revenue-57pct",
          "title": "Micron revenue rises 57% as the memory shortage bites",
          "claim": "Micron reported revenue up 57% year-over-year amid the memory shortage.",

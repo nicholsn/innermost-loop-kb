@@ -34,9 +34,59 @@ general-purpose computers, not metaphorically.
     ],
     "people": [
         {"id": "evan-hubinger", "type": "Person", "title": "Evan Hubinger", "name": "Evan Hubinger",
-         "body": "Anthropic alignment lead."},
+         "description": "Anthropic alignment lead who in March 2026 called recursive "
+                        "self-improvement a present phenomenon rather than a future one.",
+         "resource": "https://x.com/EvanHub",
+         "sameAs": ["http://www.wikidata.org/entity/Q126287406"],
+         "tags": ["researcher"],
+         "body": "Anthropic alignment lead. In this corpus he appears once, quoted in TIME's "
+                 "March 2026 profile of Anthropic saying that "
+                 "[recursive self-improvement is not a future phenomenon but a present one](/developments/2026-03-16-rsi-is-a-present-phenomenon.md) "
+                 "— the bluntest first-party statement of the newsletter's central claim, made "
+                 "in the [alignment-lead role](/roles/evan-hubinger-anthropic-alignment-lead.md) "
+                 "at the lab whose models write most of the code behind their successors."},
         {"id": "jared-kaplan", "type": "Person", "title": "Jared Kaplan", "name": "Jared Kaplan",
-         "body": "Anthropic chief science officer."},
+         "description": "Anthropic's chief science officer, who in March 2026 put fully automated "
+                        "AI research less than a year away.",
+         "resource": "https://scholar.google.com/citations?user=KNr3vb4AAAAJ",
+         "sameAs": ["http://www.wikidata.org/entity/Q102649624"],
+         "tags": ["researcher", "executive"],
+         "body": "Anthropic chief science officer. In this corpus he appears once, in the same "
+                 "TIME profile as Evan Hubinger, holding that "
+                 "[fully automated AI research is less than a year away](/developments/2026-03-16-rsi-is-a-present-phenomenon.md) "
+                 "— a timeline that sharpens "
+                 "[Jack Clark's January observation](/developments/2026-01-10-clark-ai-doing-ai-research.md) "
+                 "that AI was doing components of AI research, and sits beside "
+                 "[OpenAI's own intern-level target](/developments/2026-01-09-openai-eight-months-to-intern-researchers.md). "
+                 "The position is recorded as a "
+                 "[role](/roles/jared-kaplan-anthropic-chief-science-officer.md)."},
+    ],
+    "roles": [
+        {"id": "evan-hubinger-anthropic-alignment-lead", "type": "Role",
+         "title": "Evan Hubinger, alignment lead at Anthropic",
+         "roleName": "Alignment lead",
+         "memberOf": [B + "organizations/anthropic"],
+         "holder": [B + "people/evan-hubinger"],
+         "description": "The position from which he told TIME that recursive self-improvement "
+                        "is a present phenomenon.",
+         "body": "The newsletter identifies [Evan Hubinger](/people/evan-hubinger.md) as "
+                 "Anthropic's alignment lead when relaying TIME's March 2026 profile. The role "
+                 "matters because the statement that "
+                 "[recursive self-improvement is a present phenomenon](/developments/2026-03-16-rsi-is-a-present-phenomenon.md) "
+                 "comes from the person responsible for alignment at the lab, not from an outside "
+                 "forecaster."},
+        {"id": "jared-kaplan-anthropic-chief-science-officer", "type": "Role",
+         "title": "Jared Kaplan, chief science officer at Anthropic",
+         "roleName": "Chief science officer",
+         "memberOf": [B + "organizations/anthropic"],
+         "holder": [B + "people/jared-kaplan"],
+         "description": "The position from which he put fully automated AI research less than "
+                        "a year away.",
+         "body": "TIME's March 2026 profile, as relayed by the newsletter, names "
+                 "[Jared Kaplan](/people/jared-kaplan.md) as Anthropic's chief science officer. "
+                 "In that capacity he gave the timeline recorded in "
+                 "[the present-phenomenon item](/developments/2026-03-16-rsi-is-a-present-phenomenon.md): "
+                 "fully automated AI research in under a year."},
     ],
     "developments": [
         {"id": "2026-03-16-rsi-is-a-present-phenomenon",
@@ -46,10 +96,43 @@ general-purpose computers, not metaphorically.
                   "automated AI research is less than a year away, and alignment lead Evan "
                   "Hubinger said recursive self-improvement is not a future phenomenon but a "
                   "present one.",
+         "description": "The frontier lab's own alignment lead moves the newsletter's central "
+                        "claim from forecast to observation, backed by a code-share figure for "
+                        "the models themselves rather than the product surface.",
          "domain": "agents", "actor": ["anthropic", "people/evan-hubinger", "people/jared-kaplan"],
+         "about": [B + "systems/claude"],
          "score": "70-90% of code",
+         "occurred_on": "2026-03-11",
          "evidences": ["recursive-self-improvement", "takeoff-declared"],
-         "supersedes": [B + "developments/2026-03-12-posttrainbench-v1"]},
+         "supersedes": [B + "developments/2026-03-12-posttrainbench-v1",
+                        B + "developments/2026-02-08-100pct-of-product-code",
+                        B + "developments/2026-01-10-clark-ai-doing-ai-research"],
+         "relatedTo": [B + "developments/2026-01-09-openai-eight-months-to-intern-researchers",
+                       B + "developments/2025-12-28-altman-self-improving-in-production",
+                       B + "developments/2026-02-11-xai-cofounder-resigns-warning"],
+         "tags": ["rsi", "ai-r-and-d", "forecast"],
+         "supporting_text": "Recursive self-improvement is not a future phenomenon. It is a present phenomenon.",
+         "sources": [{"id": "time-anthropic-most-disruptive-company",
+                      "resource": "https://time.com/article/2026/03/11/anthropic-claude-disruptive-company-pentagon/",
+                      "title": "How Anthropic Became the Most Disruptive Company in the World",
+                      "author": "org:time", "last_modified": "2026-03-11"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "TIME's March 11 profile reports that 70 to 90 percent of the code behind "
+                 "Anthropic's future models is now written by [Claude](/systems/claude.md), that "
+                 "[chief science officer Jared Kaplan](/roles/jared-kaplan-anthropic-chief-science-officer.md) "
+                 "expects fully automated AI research in under a year, and quotes "
+                 "[alignment lead Evan Hubinger](/roles/evan-hubinger-anthropic-alignment-lead.md) "
+                 "calling recursive self-improvement a present rather than future phenomenon "
+                 "([article](https://time.com/article/2026/03/11/anthropic-claude-disruptive-company-pentagon/)). "
+                 "The figure moves the code-share story from the product surface — "
+                 "[effectively 100% of product code](/developments/2026-02-08-100pct-of-product-code.md) "
+                 "in February — to the models themselves, and Kaplan's timeline sharpens "
+                 "[Clark's January observation](/developments/2026-01-10-clark-ai-doing-ai-research.md) "
+                 "that AI was doing components of AI research. It is the corpus's central claim "
+                 "stated as observation rather than forecast; four days later "
+                 "[OpenAI began monitoring its own coding agents](/developments/2026-03-20-openai-monitors-its-own-agents.md), "
+                 "and in June a lab [published the evidence](/developments/2026-06-05-when-ai-builds-itself.md) "
+                 "that AI already accelerates AI."},
         {"id": "2026-03-16-transformers-run-arbitrary-c-code",
          "title": "A WebAssembly interpreter is hard-coded into transformer weights",
          "claim": "Percepta hard-coded a WebAssembly interpreter into transformer weights, "
@@ -63,8 +146,38 @@ general-purpose computers, not metaphorically.
          "claim": "Anthropic is shipping million-token context windows for Opus 4.6 and Sonnet "
                   "4.6, while Sam Altman bet that today's frontier models can discover the "
                   "architecture that follows the transformer.",
-         "domain": "models", "actor": ["anthropic", "openai"], "score": "1M tokens",
-         "evidences": ["recursive-self-improvement", "architecture-of-mind"]},
+         "description": "Book-length context becomes a default across a model family rather "
+                        "than a flagship premium, recorded in the same breath as a lab chief "
+                        "betting those models will find their own successors' architecture.",
+         "domain": "models", "actor": ["anthropic", "openai", "people/sam-altman"], "score": "1M tokens",
+         "about": [B + "systems/claude-opus-4-6", B + "systems/claude-sonnet-4-6"],
+         "evidences": ["recursive-self-improvement", "architecture-of-mind"],
+         "supersedes": [B + "developments/2026-02-06-opus-46-released"],
+         "relatedTo": [B + "developments/2026-01-04-rlm-two-orders-of-context",
+                       B + "developments/2026-03-16-transformers-run-arbitrary-c-code"],
+         "tags": ["capability-jump", "forecast"],
+         "supporting_text": "windows for Opus 4.6 and Sonnet 4.6",
+         "sources": [{"id": "anthropic-1m-context-ga",
+                      "resource": "https://claude.com/blog/1m-context-ga",
+                      "title": "1M context is now generally available for Opus 4.6 and Sonnet 4.6",
+                      "author": "org:anthropic"},
+                     {"id": "altman-bets-models-find-next-architecture",
+                      "resource": "https://x.com/rohanpaul_ai/status/2033117083127644536",
+                      "title": "Sam Altman bets frontier models can discover the architecture "
+                               "after transformers"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Anthropic made the million-token window generally available for both "
+                 "[Opus 4.6](/systems/claude-opus-4-6.md) and [Sonnet 4.6](/systems/claude-sonnet-4-6.md) "
+                 "([blog](https://claude.com/blog/1m-context-ga)), extending what "
+                 "[Opus 4.6 launched with](/developments/2026-02-06-opus-46-released.md) in "
+                 "February to the cheaper tier. The newsletter pairs it with Sam Altman's bet that "
+                 "today's frontier models can discover the architecture that follows the "
+                 "transformer ([post](https://x.com/rohanpaul_ai/status/2033117083127644536)), "
+                 "which reads against the same issue's "
+                 "[WebAssembly interpreter hard-coded into transformer weights](/developments/2026-03-16-transformers-run-arbitrary-c-code.md). "
+                 "Book-length native context is the alternative to the recursive-call approach "
+                 "that let [models handle contexts 100x their window](/developments/2026-01-04-rlm-two-orders-of-context.md) "
+                 "in January."},
         {"id": "2026-03-16-agentic-ai-physicist",
          "title": "The first open-source agentic AI physicist launches",
          "claim": "Physical Superintelligence launched Get Physics Done, an open-source system "

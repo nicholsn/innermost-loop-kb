@@ -36,6 +36,21 @@ posting an honest 11.3-hour task horizon and beyond 270 hours with cheats.
         {"id": "tiny-corp", "type": "Organization", "title": "Tiny Corp"},
         {"id": "raise-us", "type": "Organization", "title": "RAISE US"},
     ],
+    "systems": [
+        {"id": "autodata", "type": "AISystem", "title": "Autodata",
+         "description": "Meta's agentic data scientist for creating high-quality synthetic data, whose "
+                        "largest gains came from optimizing the scientist agent itself rather than any "
+                        "single experiment.",
+         "developed_by": [B + "organizations/meta"], "modality": "research agent",
+         "resource": "https://arxiv.org/abs/2606.25996",
+         "tags": ["research-agent"],
+         "body": "Autodata is described in a Meta paper ([arXiv:2606.25996](https://arxiv.org/abs/2606.25996)) "
+                 "as an agentic data scientist that creates high-quality synthetic data. In this corpus it "
+                 "appears once, in the June 27 item where "
+                 "[agents optimize the scientist, not the experiment](/developments/2026-06-27-agents-optimize-the-scientist-not-the-experiment.md), "
+                 "a data point in the [self-authored-scaffolding](/themes/self-authored-scaffolding.md) strand "
+                 "of [recursive self-improvement](/themes/recursive-self-improvement.md)."},
+    ],
     "developments": [
         {"id": "2026-06-27-clearance-is-the-scarcest-input",
          "title": "A government lifts its block for roughly a hundred approved organizations",
@@ -96,9 +111,36 @@ posting an honest 11.3-hour task horizon and beyond 270 hours with cheats.
          "title": "Agents act as their own data scientists, gaining most by optimizing themselves",
          "claim": "Meta's Autodata lets agents be their own data scientists, with the biggest "
                   "gains coming from optimizing the scientist itself rather than the experiment.",
-         "domain": "agents", "actor": ["meta"],
+         "description": "An empirical vote for the outer loop: when the largest improvement comes from "
+                        "rewriting the experimenter rather than the experiment, the research agent "
+                        "becomes the most valuable object under optimization.",
+         "domain": "agents", "actor": ["meta"], "occurred_on": "2026-06-24",
+         "about": [B + "systems/autodata"],
          "evidences": ["self-authored-scaffolding", "recursive-self-improvement"],
-         "supersedes": [B + "developments/2026-06-26-an-agent-generates-almost-all-its-own-output"]},
+         "supersedes": [B + "developments/2026-06-26-an-agent-generates-almost-all-its-own-output",
+                        B + "developments/2026-03-31-bilevel-autoresearch"],
+         "relatedTo": [B + "developments/2026-06-25-an-agent-rewrites-its-own-harness",
+                       B + "developments/2026-04-07-seventy-two-hours-fifty-experiments",
+                       B + "developments/2026-07-15-the-first-evidence-of-consistent-recursive-self-improvement"],
+         "tags": ["rsi", "autonomous-research", "agent-harness", "self-modification"],
+         "supporting_text": "the biggest gains from optimizing the scientist itself",
+         "sources": [{"id": "meta-autodata-arxiv",
+                      "resource": "https://arxiv.org/abs/2606.25996",
+                      "title": "Autodata: An agentic data scientist to create high quality synthetic data",
+                      "author": "org:meta", "last_modified": "2026-06-24"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Meta's [Autodata](/systems/autodata.md) paper ([arXiv:2606.25996](https://arxiv.org/abs/2606.25996)) "
+                 "casts the agent as its own data scientist, creating and curating synthetic training data, "
+                 "and reports that the largest gains came not from tuning any one experiment but from "
+                 "improving the agent doing the experimenting. The newsletter files it under 'the tools are "
+                 "now building themselves', two days after "
+                 "[an agent mined its own weaknesses and rewrote its scaffolding](/developments/2026-06-25-an-agent-rewrites-its-own-harness.md). "
+                 "Structurally it restates the lesson of [Bilevel Autoresearch](/developments/2026-03-31-bilevel-autoresearch.md), "
+                 "where the loop that writes the strategies mattered more than any strategy, as a measured "
+                 "finding; three weeks later Weco AI's outer-loop agent "
+                 "[rewriting its inner researcher seven times](/developments/2026-07-15-the-first-evidence-of-consistent-recursive-self-improvement.md) "
+                 "makes the same point as the corpus's first sustained evidence of "
+                 "[recursive self-improvement](/themes/recursive-self-improvement.md)."},
         {"id": "2026-06-27-priests-to-oracles",
          "title": "A survey asks whether mathematicians become priests to oracles",
          "claim": "A survey of AI in mathematics found proof-writing models nudging "

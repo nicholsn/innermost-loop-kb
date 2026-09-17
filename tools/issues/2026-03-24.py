@@ -25,6 +25,25 @@ with it.
         {"id": "bureau-1440", "type": "Organization", "title": "Bureau 1440",
          "body": "Russian sovereign broadband constellation project."},
     ],
+    "systems": [
+        {"id": "hyperagents", "type": "AISystem", "title": "Hyperagents",
+         "description": "Meta's self-referential agent framework in which a task agent and a "
+                        "self-modifying meta agent form one editable program, instantiated as "
+                        "DGM-Hyperagents.",
+         "developed_by": [B + "organizations/meta"], "modality": "code",
+         "resource": "https://arxiv.org/abs/2603.19461",
+         "tags": ["open-source", "evolutionary-search"],
+         "body": "A hyperagent bundles the agent that solves the task and the meta agent that "
+                 "edits both itself and the task agent into a single program, so the procedure "
+                 "that generates improvements is itself open to modification. The reference "
+                 "implementation, DGM-Hyperagents, extends the Darwin Godel Machine's "
+                 "generate-and-evaluate loop beyond coding to any computable task, and its "
+                 "meta-level gains transfer across domains and accumulate across runs "
+                 "([arXiv](https://arxiv.org/abs/2603.19461); code on GitHub). In this corpus it "
+                 "is the system behind "
+                 "[hyperagents edit their own mechanism](/developments/2026-03-24-hyperagents-edit-their-own-mechanism.md), "
+                 "the formal counterpart to [ALMA](/systems/alma.md)'s meta-learned memory."},
+    ],
     "developments": [
         {"id": "2026-03-24-first-frontiermath-open-problem-solved",
          "title": "A conjecture from 2019 is settled and its author approves",
@@ -57,9 +76,41 @@ with it.
                   "task-solving and self-modification into a single editable program, enabling "
                   "recursion that improves not just performance but the mechanism of future "
                   "improvement.",
-         "domain": "agents", "actor": ["meta"],
+         "description": "The structural step from self-improvement to self-improving "
+                        "self-improvement: with the meta-level modification procedure itself "
+                        "editable, the rate of improvement becomes something the system can act "
+                        "on rather than a fixed human design choice.",
+         "domain": "agents", "actor": ["meta"], "about": [B + "systems/hyperagents"],
+         "occurred_on": "2026-03-19",
          "evidences": ["recursive-self-improvement", "machine-introspection"],
-         "supersedes": [B + "developments/2026-03-24-huang-says-we-have-achieved-agi"]},
+         "supersedes": [B + "developments/2026-02-12-alma-agents-design-their-own-memory"],
+         "relatedTo": [B + "developments/2026-03-23-minimax-model-participates-in-its-own-evolution",
+                       B + "developments/2026-06-25-an-agent-rewrites-its-own-harness",
+                       B + "systems/alma"],
+         "tags": ["self-modification", "rsi", "agent-harness"],
+         "supporting_text": "self-referential agents that fuse task-solving and self-modification into one editable program",
+         "sources": [{"id": "hyperagents-arxiv",
+                      "resource": "https://arxiv.org/abs/2603.19461",
+                      "title": "Hyperagents", "author": "org:meta", "last_modified": "2026-03-19"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "A hyperagent integrates a task agent and a meta agent that modifies both itself "
+                 "and the task agent into one editable program, so the procedure that generates "
+                 "improvements is itself open to improvement. Meta researchers (Jenny Zhang, Jeff "
+                 "Clune and colleagues) instantiate it as DGM-Hyperagents, extending the Darwin "
+                 "Godel Machine beyond coding, where task skill and self-modification skill happen "
+                 "to coincide, to any computable task; across domains it beats non-self-improving "
+                 "baselines and prior self-improving systems, and meta-level gains such as "
+                 "persistent memory and performance tracking transfer across domains and "
+                 "accumulate across runs ([arXiv](https://arxiv.org/abs/2603.19461)). It "
+                 "generalises [ALMA](/developments/2026-02-12-alma-agents-design-their-own-memory.md)'s "
+                 "meta-learning of memory design to the whole improvement mechanism, arrives a day "
+                 "after [MiniMax's self-evolving M2.7](/developments/2026-03-23-minimax-model-participates-in-its-own-evolution.md), "
+                 "and is the theoretical form of what June's "
+                 "[self-rewriting harness](/developments/2026-06-25-an-agent-rewrites-its-own-harness.md) "
+                 "later showed in the wild; the "
+                 "[recursive-self-improvement](/themes/recursive-self-improvement.md) theme "
+                 "picks the mechanism up again in "
+                 "[a research loop that writes the strategies for its own outer loop](/developments/2026-03-31-bilevel-autoresearch.md)."},
         {"id": "2026-03-24-400b-model-on-a-phone",
          "title": "A 400-billion-parameter model runs on a phone",
          "claim": "The ANEMLL open source project ran a 400-billion-parameter model on an "

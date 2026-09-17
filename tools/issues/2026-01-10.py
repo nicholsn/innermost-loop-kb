@@ -39,8 +39,38 @@ itself to be incestuous.
     ],
     "people": [
         {"id": "jack-clark", "type": "Person", "title": "Jack Clark", "name": "Jack Clark",
-         "body": "Anthropic co-founder; confirmed early signs of AI improving AI research."},
+         "description": "Anthropic co-founder and author of the Import AI newsletter whose January 2026 "
+                        "remark put the lab on record seeing early signs of AI doing components of AI "
+                        "research.",
+         "resource": "https://jack-clark.net/",
+         "sameAs": ["http://www.wikidata.org/entity/Q135111322"],
+         "tags": ["founder"],
+         "body": "Anthropic co-founder; confirmed early signs of AI improving AI research. Jack Clark "
+                 "is a co-founder of [Anthropic](/organizations/anthropic.md) and writes the Import AI "
+                 "newsletter. In this corpus he is the Anthropic voice in the "
+                 "[early-signs statement](/developments/2026-01-10-clark-ai-doing-ai-research.md) of "
+                 "January 10, 2026, reporting AI getting better at kernel development and autonomous "
+                 "fine-tuning while assigning essentially zero likelihood to fully recursively "
+                 "self-improving systems existing that month. The statement sits between OpenAI's "
+                 "[eight-months-to-intern-researchers](/developments/2026-01-09-openai-eight-months-to-intern-researchers.md) "
+                 "report and the [researchers-replaced-first](/developments/2026-01-24-researchers-replaced-first.md) "
+                 "claim that superseded it."},
         {"id": "paul-graham", "type": "Person", "title": "Paul Graham", "name": "Paul Graham"},
+    ],
+    "roles": [
+        {"id": "jack-clark-anthropic-co-founder", "type": "Role",
+         "title": "Jack Clark, co-founder of Anthropic",
+         "roleName": "Co-founder",
+         "startDate": "2021",
+         "memberOf": [B + "organizations/anthropic"],
+         "holder": [B + "people/jack-clark"],
+         "description": "The position in which he reported early signs of AI getting better at "
+                        "components of AI research.",
+         "body": "The newsletter identifies Jack Clark as an Anthropic co-founder when quoting his "
+                 "January 2026 assessment "
+                 "([development](/developments/2026-01-10-clark-ai-doing-ai-research.md)). Anthropic "
+                 "was founded in 2021; the role is recorded from the newsletter's own attribution "
+                 "rather than from a fuller biography."},
     ],
     "systems": [
         {"id": "axiomprover", "type": "AISystem", "title": "AxiomProver",
@@ -69,17 +99,83 @@ itself to be incestuous.
          "title": "Anthropic sees AI doing components of AI research",
          "claim": "Anthropic co-founder Jack Clark confirmed early signs of AI getting better at "
                   "components of AI research, from kernel development to autonomous fine-tuning.",
+         "description": "A frontier-lab co-founder putting the loop on the record as an observed, "
+                        "componentwise phenomenon inside a lab, naming the two layers, kernels and "
+                        "fine-tuning, where the corpus's later items land.",
          "domain": "agents", "actor": ["anthropic", "people/jack-clark"],
+         "occurred_on": "2026-01-09",
          "evidences": ["recursive-self-improvement"],
-         "supersedes": [B + "developments/2026-01-09-openai-eight-months-to-intern-researchers"]},
+         "supersedes": [B + "developments/2026-01-09-openai-eight-months-to-intern-researchers"],
+         "relatedTo": [B + "developments/2025-12-28-altman-self-improving-in-production",
+                       B + "developments/2025-12-15-codex-babysits-own-training",
+                       B + "developments/2026-01-27-amodei-country-of-geniuses-2027"],
+         "tags": ["rsi", "ai-r-and-d", "kernels"],
+         "supporting_text": "getting better at doing components of AI research",
+         "sources": [{"id": "burry-ai-revolution-economy",
+                      "resource": "https://post.substack.com/p/the-ai-revolution-is-here-will-the",
+                      "title": "The AI revolution is here. Will the economy survive the transition?",
+                      "author": "org:the-substack-post", "last_modified": "2026-01-09"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Writing in The Substack Post's January 9 exchange with Michael Burry "
+                 "([source](https://post.substack.com/p/the-ai-revolution-is-here-will-the)), Clark "
+                 "said Anthropic sees extremely early signs of AI getting better at components of AI "
+                 "research, ranging from kernel development to autonomously fine-tuning open-weight "
+                 "models, while assigning essentially zero likelihood to recursively self-improving "
+                 "systems existing anywhere in January 2026. The newsletter reads the remark as "
+                 "confirmation that the capex buildout is fueling a transition to "
+                 "[recursive self-improvement](/themes/recursive-self-improvement.md); the caveat "
+                 "belongs beside it. It runs in the issue after OpenAI's "
+                 "[eight-months-to-intern-researchers](/developments/2026-01-09-openai-eight-months-to-intern-researchers.md) "
+                 "report and two weeks after "
+                 "[Altman's confirmation](/developments/2025-12-28-altman-self-improving-in-production.md) "
+                 "of self-improving systems in production, and the two components Clark named are the "
+                 "ones the storyline had already recorded in "
+                 "[Codex babysitting its own training](/developments/2025-12-15-codex-babysits-own-training.md) "
+                 "and later measures in "
+                 "[a model writing the kernels it runs on](/developments/2026-04-29-a-model-writes-the-kernels-that-run-it.md). "
+                 "Anthropic's next entries in the storyline are "
+                 "[Claude Code writing all of Claude Cowork](/developments/2026-01-13-claude-code-writes-cowork.md) "
+                 "three days later and "
+                 "[Amodei's remark](/developments/2026-01-27-amodei-country-of-geniuses-2027.md) on "
+                 "January 27 that AI writes much of the lab's code."},
         {"id": "2026-01-10-xai-used-claude-to-build-grok",
          "title": "xAI reportedly used Claude to build Grok until cut off",
          "claim": "xAI was reportedly using Claude through Cursor to build Grok until Anthropic "
                   "revoked access.",
+         "description": "The loop's messy side, in the newsletter's phrase the incestuous velocity of "
+                        "the frontier: one lab's model inside a rival's development stack, and the "
+                        "maker's answer being to cut the supply rather than compete on it.",
          "domain": "agents", "actor": ["xai", "anthropic"],
-         "evidences": ["recursive-self-improvement", "coordination-tax"],
+         "about": [B + "systems/claude", B + "systems/grok"],
+         "occurred_on": "2026-01-07",
+         "evidences": ["recursive-self-improvement", "coordination-tax", "no-neutral-infrastructure"],
+         "relatedTo": [B + "developments/2026-01-10-grok-5-seven-trillion",
+                       B + "developments/2026-01-11-x-timeline-rewrite-20pct",
+                       B + "developments/2026-02-11-xai-cofounder-resigns-warning"],
+         "tags": ["rsi", "ai-r-and-d"],
+         "supporting_text": "using Claude via Cursor to build Grok",
+         "sources": [{"id": "robison-xai-anthropic-cursor-cutoff",
+                      "resource": "https://x.com/kyliebytes/status/2009686466746822731",
+                      "title": "Kylie Robison on X: xAI staff used Anthropic's models through Cursor until Anthropic cut off access",
+                      "author": "human:kylie-robison", "last_modified": "2026-01-09"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
          "body": "The frontier is now close enough to itself that labs build rivals with each "
-                 "other's models."},
+                 "other's models. Kylie Robison's scoop of January 9 "
+                 "([X](https://x.com/kyliebytes/status/2009686466746822731)) reported that xAI staff "
+                 "had been using Anthropic's models internally through [Cursor](/organizations/cursor.md) "
+                 "until Anthropic cut off the startup's access that week, a change xAI co-founder Tony "
+                 "Wu relayed to staff by internal message on Wednesday, January 7. It is the corpus's "
+                 "first instance of the "
+                 "recursion crossing a lab boundary, [Claude](/systems/claude.md) in the loop that "
+                 "builds [Grok](/systems/grok.md), and the first of a supplier withdrawing model access "
+                 "from a competitor, the pattern the "
+                 "[no-neutral-infrastructure](/themes/no-neutral-infrastructure.md) theme later names. "
+                 "It lands in the same issue as "
+                 "[Grok 5's seven trillion parameters](/developments/2026-01-10-grok-5-seven-trillion.md) "
+                 "and a day before xAI's "
+                 "[rewrite of the X timeline](/developments/2026-01-11-x-timeline-rewrite-20pct.md); an "
+                 "[xAI co-founder's resignation warning](/developments/2026-02-11-xai-cofounder-resigns-warning.md) "
+                 "of live loops within a year follows a month later."},
         {"id": "2026-01-10-grok-5-seven-trillion",
          "title": "Grok 5 is a seven-trillion-parameter model",
          "claim": "Jensen Huang revealed Grok 5 will have seven trillion parameters, while "

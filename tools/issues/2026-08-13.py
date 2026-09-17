@@ -32,6 +32,44 @@ by Crouzeix himself.
         {"id": "ymtc-inc", "type": "Organization", "title": "YMTC"},
         {"id": "twitch", "type": "Organization", "title": "Twitch"},
     ],
+    "systems": [
+        {"id": "grok-4-6", "type": "AISystem", "title": "Grok 4.6",
+         "developed_by": [B + "organizations/xai"], "modality": "text",
+         "description": "xAI's August 2026 model, reported to rejoin the frontier at a fraction of the cost and on par with GPT-5.6 Sol Max.",
+         "resource": "https://x.ai/news/grok-4-6",
+         "tags": ["reasoning-model"],
+         "body": "Grok 4.6 is xAI's August 2026 release ([xAI](https://x.ai/news/grok-4-6)). The newsletter records it "
+                 "[rejoining the frontier](/developments/2026-08-13-a-cofounder-steers-toward-recursive-self-improvement.md) "
+                 "at a fraction of the cost and on par with [GPT-5.6 Sol](/systems/gpt-5-6-sol.md) Max, with Elon Musk "
+                 "promising a SpaceX-data-marinated 4.7 within a month. It follows [Grok 4.20](/systems/grok-4-20.md) "
+                 "in the corpus's Grok lineage."},
+    ],
+    "people": [
+        {"id": "sergey-brin", "type": "Person", "title": "Sergey Brin", "name": "Sergey Brin",
+         "description": "Google co-founder who, per Reuters, is using his founder's standing inside the company to steer resources toward recursive self-improvement.",
+         "resource": "https://x.com/sergeybrinn",
+         "sameAs": ["http://www.wikidata.org/entity/Q92764"],
+         "tags": ["founder", "executive"],
+         "body": "Sergey Brin co-founded Google in 1998 and, in the newsletter's account of the 2026 reshuffle, "
+                 "retakes the bridge of its AI effort as [DeepMind is declared no longer a frontier lab](/developments/2026-08-08-a-lab-declared-no-longer-frontier.md). "
+                 "In this corpus he appears when Reuters reports him "
+                 "[steering resources toward recursive self-improvement](/developments/2026-08-13-a-cofounder-steers-toward-recursive-self-improvement.md), "
+                 "which the newsletter glosses as the point where the technology stops needing him; the same reshuffle "
+                 "saw [Demis Hassabis](/people/demis-hassabis.md) [step back from DeepMind's day-to-day](/developments/2026-08-05-a-lab-chief-steps-back-as-agi-feels-close-at-hand.md)."},
+    ],
+    "roles": [
+        {"id": "sergey-brin-google-co-founder", "type": "Role",
+         "title": "Sergey Brin, co-founder of Google",
+         "roleName": "Co-founder",
+         "startDate": "1998",
+         "memberOf": [B + "organizations/google"],
+         "holder": [B + "people/sergey-brin"],
+         "description": "The founder's standing, co-founder gravity in the newsletter's phrase, from which he is reported to be steering Google's resources toward recursive self-improvement.",
+         "body": "The newsletter identifies him by this role when it reports him using co-founder gravity to "
+                 "[steer resources toward recursive self-improvement](/developments/2026-08-13-a-cofounder-steers-toward-recursive-self-improvement.md) "
+                 "inside [Google](/organizations/google.md). It is the role that makes the report matter: not a lab "
+                 "head or a strategy officer but the company's founder directing money at the loop."},
+    ],
     "developments": [
         {"id": "2026-08-13-ninety-six-percent-with-stock-tooling-for-five-hundred-dollars",
          "title": "Stock tooling turns 30% into 96.2% for about $540",
@@ -74,9 +112,46 @@ by Crouzeix himself.
                   "resources toward recursive self-improvement, the point where the technology "
                   "stops needing him, while Grok 4.6 rejoined the frontier at a fraction of the "
                   "cost and OpenAI previewed a tier running 14 times faster.",
-         "domain": "models", "actor": ["google", "xai", "openai", "cerebras"], "score": "14x faster",
+         "description": "A founder's personal authority is reportedly spent on the loop itself, the newsletter "
+                        "noting that the destination is the point where the technology stops needing him.",
+         "domain": "models", "occurred_on": "2026-08-12",
+         "actor": ["google", "xai", "openai", "cerebras", "people/sergey-brin"], "score": "14x faster",
          "evidences": ["recursive-self-improvement", "price-implosion", "hiring-as-roadmap"],
-         "supersedes": [B + "developments/2026-08-10-a-westinghouse-style-bet-on-diffusion"]},
+         "about": [B + "systems/grok-4-6", B + "systems/gpt-5-6-sol"],
+         "supersedes": [B + "developments/2026-08-10-a-westinghouse-style-bet-on-diffusion",
+                        B + "developments/2026-08-04-recursive-self-improvement-justifies-the-capex",
+                        B + "developments/2026-08-05-a-lab-chief-steps-back-as-agi-feels-close-at-hand"],
+         "relatedTo": [B + "people/demis-hassabis",
+                       B + "developments/2026-08-08-a-lab-declared-no-longer-frontier",
+                       B + "developments/2026-07-19-we-want-k2-to-help-build-k3"],
+         "relations": [{"predicate": "relatedTo",
+                        "target": B + "developments/2026-08-04-recursive-self-improvement-justifies-the-capex",
+                        "relation_label": "corroborates"}],
+         "tags": ["rsi", "ai-r-and-d", "capability-jump"],
+         "supporting_text": "steer resources toward recursive self-improvement, the point where the technology stops needing him",
+         "sources": [{"id": "reuters-google-ai-reshuffle-executive-moves",
+                      "resource": "https://www.reuters.com/world/inside-google-executive-moves-that-led-its-big-ai-reshuffle-2026-08-12/",
+                      "title": "Inside Google, the executive moves that led to its big AI reshuffle",
+                      "author": "org:reuters", "last_modified": "2026-08-12"},
+                     {"id": "openai-previewing-ultrafast",
+                      "resource": "https://openai.com/index/previewing-ultrafast/",
+                      "title": "Previewing Ultrafast", "author": "org:openai"},
+                     {"id": "xai-introducing-grok-4-6",
+                      "resource": "https://x.ai/news/grok-4-6",
+                      "title": "Introducing Grok 4.6", "author": "org:xai", "last_modified": "2026-08-12"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Reuters' account of the executive moves behind Google's AI reshuffle reports that "
+                 "[Sergey Brin](/people/sergey-brin.md) is steering resources toward recursive self-improvement "
+                 "([Reuters](https://www.reuters.com/world/inside-google-executive-moves-that-led-its-big-ai-reshuffle-2026-08-12/)), "
+                 "what the newsletter calls co-founder gravity and reads as the point where the technology stops "
+                 "needing him. It closes a loop "
+                 "that opened nine days earlier when "
+                 "[DeepMind's strategy chief said the capex is a bet on RSI](/developments/2026-08-04-recursive-self-improvement-justifies-the-capex.md) "
+                 "and [Hassabis stepped back from the day-to-day](/developments/2026-08-05-a-lab-chief-steps-back-as-agi-feels-close-at-hand.md): "
+                 "the company's founder now personally directs money at the recursion. The same issue notes the "
+                 "frontier sprinting around it, with [Grok 4.6](/systems/grok-4-6.md) rejoining the frontier at a "
+                 "fraction of the cost and OpenAI previewing Ultrafast, a Cerebras-powered tier running "
+                 "[GPT-5.6 Sol](/systems/gpt-5-6-sol.md) 14 times faster."},
         {"id": "2026-08-13-seven-hundred-twenty-billion-for-the-largest-memory-buildout",
          "title": "A memory maker commits $720 billion and calls demand a war",
          "claim": "SK Hynix is pouring $720 billion into the world's largest memory buildout with "

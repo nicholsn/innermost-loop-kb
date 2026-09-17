@@ -20,7 +20,17 @@ cannot finish in two hours.
     "organizations": [
         {"id": "harmonic", "type": "Organization", "title": "Harmonic",
          "resource": "https://harmonic.fun/", "body": "Mathematical superintelligence lab; built Aristotle."},
-        {"id": "vercel", "type": "Organization", "title": "Vercel", "resource": "https://vercel.com/"},
+        {"id": "vercel", "type": "Organization", "title": "Vercel", "resource": "https://vercel.com/",
+         "description": "San Francisco cloud-computing company for deploying web applications that hosted "
+                        "live chess matches between frontier models.",
+         "sameAs": ["http://www.wikidata.org/entity/Q56069184"],
+         "tags": ["startup"],
+         "body": "Vercel is a San Francisco cloud-computing company whose platform deploys web applications. "
+                 "In this corpus it appears in the January 7, 2026 issue hosting "
+                 "[live chess matches between frontier models](/developments/2026-01-07-vercel-model-chess.md), "
+                 "which the newsletter reads as reinforcement learning coming full circle. It reappears in "
+                 "August among the companies steering OpenAI's "
+                 "[vendor-neutral Agent Plugins spec](/developments/2026-08-06-a-vendor-neutral-spec-for-agent-plugins.md)."},
         {"id": "macquarie", "type": "Organization", "title": "Macquarie",
          "resource": "https://www.macquarie.com/"},
         {"id": "pjm", "type": "Organization", "title": "PJM Interconnection",

@@ -30,6 +30,47 @@ the hardware that runs it.
          "modality": "text",
          "body": "A 13B model trained only on pre-1931 text, used as a measure of how "
                  "astonishing the present is."},
+        {"id": "gpt-5-5", "type": "AISystem", "title": "GPT-5.5",
+         "description": "OpenAI's frontier model of spring 2026, whose xhigh reasoning setting topped "
+                        "KernelBench for GPU-kernel writing and which more than doubled its "
+                        "predecessor on fresh olympiad problems.",
+         "developed_by": [B + "organizations/openai"],
+         "modality": "text",
+         "resource": "https://openai.com/index/introducing-gpt-5-5/",
+         "evaluated_on": [B + "benchmarks/kernelbench", B + "benchmarks/frontiermath",
+                          B + "benchmarks/gdpval", B + "benchmarks/terminal-bench-2"],
+         "sameAs": ["http://www.wikidata.org/entity/Q139594271"],
+         "tags": ["reasoning-model"],
+         "body": "GPT-5.5 is the OpenAI model "
+                 "[released on April 26, 2026](/developments/2026-04-26-gpt-55-sweeps-four-domains.md) "
+                 "with selectable reasoning effort, of which xhigh is the highest setting, posting "
+                 "39.6% on [FrontierMath](/benchmarks/frontiermath.md) Tier 4, 84.9% on "
+                 "[GDPval](/benchmarks/gdpval.md) and 82.7% on "
+                 "[Terminal-Bench 2.0](/benchmarks/terminal-bench-2.md) at launch. In this corpus it is the model that "
+                 "[topped KernelBench at 6.57%](/developments/2026-04-29-a-model-writes-the-kernels-that-run-it.md) "
+                 "for writing the GPU kernels it runs on and that "
+                 "[more than doubled GPT-5.4 on fresh olympiad problems](/developments/2026-04-29-matharena-doubles-in-one-release.md) "
+                 "in the same issue; a week after it shipped, "
+                 "[Codex overtook Claude Code in downloads](/developments/2026-05-05-codex-overtakes-claude-code.md), "
+                 "and in May a meta-evaluation "
+                 "[mapped it to an implied IQ of 136](/developments/2026-05-13-a-model-scores-136-on-an-iq-meta-eval.md)."},
+    ],
+    "benchmarks": [
+        {"id": "kernelbench", "type": "Benchmark", "title": "KernelBench",
+         "description": "A benchmark from Stanford's Scaling Intelligence Lab that asks models to write "
+                        "correct, faster-than-baseline GPU kernels for PyTorch reference workloads.",
+         "published_by": [B + "organizations/stanford"],
+         "measures_capability": "writing correct, faster-than-baseline GPU kernels from PyTorch reference code",
+         "resource": "https://scalingintelligence.stanford.edu/KernelBenchLeaderboard/",
+         "tags": ["open-source"],
+         "body": "KernelBench ([arXiv 2502.10517](https://arxiv.org/abs/2502.10517)) scores a model on "
+                 "replacing PyTorch operators with GPU kernels that are both correct and faster than the "
+                 "reference, with a public leaderboard maintained by Stanford's Scaling Intelligence Lab. "
+                 "In this corpus it is the leaderboard that [GPT-5.5](/systems/gpt-5-5.md) xhigh "
+                 "[topped at 6.57%](/developments/2026-04-29-a-model-writes-the-kernels-that-run-it.md), "
+                 "the item the newsletter reads as a model optimizing the hardware it runs on; a "
+                 "megakernel variant, KernelBench-Mega, appears in the "
+                 "[seventeen-leaders item](/developments/2026-07-03-seventeen-leaders-in-two-years.md) of July."},
     ],
     "developments": [
         {"id": "2026-04-29-a-model-trained-only-on-the-past",
@@ -48,9 +89,51 @@ the hardware that runs it.
                   "model is now optimizing the hardware that runs it, while OpenAI's Codex lead "
                   "declared the product has achieved escape velocity and will keep improving "
                   "rapidly.",
-         "domain": "models", "actor": ["openai"], "score": "6.57%",
-         "evidences": ["recursive-self-improvement", "silicon-designs-itself"],
-         "supersedes": [B + "developments/2026-04-27-openai-designs-phone-silicon"]},
+         "description": "The newsletter reads a kernel-writing leaderboard and a lead engineer's "
+                        "'escape velocity' remark in one breath, as the self-improvement loop baked "
+                        "into the dev cycle and now reaching down into the hardware layer.",
+         "domain": "models", "actor": ["openai", "people/thibault-sottiaux"], "score": "6.57%",
+         "about": [B + "systems/gpt-5-5", B + "benchmarks/kernelbench", B + "systems/codex"],
+         "evidences": ["recursive-self-improvement", "silicon-designs-itself", "takeoff-declared"],
+         "supersedes": [B + "developments/2026-04-27-openai-designs-phone-silicon",
+                        B + "developments/2026-02-06-gpt53-codex-creates-itself",
+                        B + "developments/2026-02-03-codex-builds-itself"],
+         "relatedTo": [B + "developments/2026-02-06-opus-34x-speedup",
+                       B + "developments/2026-03-20-cpu-designed-in-twelve-hours",
+                       B + "developments/2026-01-10-clark-ai-doing-ai-research"],
+         "relations": [{"predicate": "relatedTo",
+                        "target": B + "developments/2026-02-03-codex-builds-itself",
+                        "relation_label": "extends"},
+                       {"predicate": "relatedTo",
+                        "target": B + "developments/2026-01-10-clark-ai-doing-ai-research",
+                        "relation_label": "corroborates"}],
+         "tags": ["rsi", "kernels", "evaluation"],
+         "supporting_text": "at 6.57% for writing GPU kernels",
+         "sources": [{"id": "brockman-gpt-5-5-kernelbench-x",
+                      "resource": "https://x.com/gdb/status/2048777802586149331",
+                      "title": "Greg Brockman on X: GPT-5.5 xhigh tops KernelBench",
+                      "author": "human:greg-brockman"},
+                     {"id": "sottiaux-codex-escape-velocity-x",
+                      "resource": "https://x.com/thsottiaux/status/2048958572562710550",
+                      "title": "Thibault Sottiaux on X: Codex has achieved escape velocity",
+                      "author": "human:thibault-sottiaux"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "[GPT-5.5](/systems/gpt-5-5.md) at its xhigh reasoning setting took the top of "
+                 "[KernelBench](/benchmarks/kernelbench.md) at 6.57%, per "
+                 "[Greg Brockman](https://x.com/gdb/status/2048777802586149331), while OpenAI's Codex "
+                 "engineering lead [Thibault Sottiaux](/people/thibault-sottiaux.md) wrote that "
+                 "[Codex](/systems/codex.md) had achieved escape velocity and would keep improving rapidly "
+                 "([X](https://x.com/thsottiaux/status/2048958572562710550)). The kernel result is the "
+                 "first kernel-writing leaderboard in the corpus, making concrete the early sign "
+                 "[Jack Clark named in January](/developments/2026-01-10-clark-ai-doing-ai-research.md) and "
+                 "following Opus 4.6's [34x training speedup](/developments/2026-02-06-opus-34x-speedup.md) "
+                 "and the [twelve-hour CPU](/developments/2026-03-20-cpu-designed-in-twelve-hours.md) in the "
+                 "[silicon-designs-itself](/themes/silicon-designs-itself.md) thread. Sottiaux's remark "
+                 "updates his own February line that "
+                 "[Codex builds itself](/developments/2026-02-03-codex-builds-itself.md). The storyline "
+                 "continues with agents [writing AMD kernels](/developments/2026-07-04-agents-write-the-kernels-closing-a-software-gap.md), "
+                 "a model [rewriting the kernels behind an 80% price cut](/developments/2026-07-30-a-model-rewrites-the-kernels-that-cut-its-price.md) "
+                 "and, in August, [the loop reaching silicon](/developments/2026-08-27-the-loop-reaches-silicon.md)."},
         {"id": "2026-04-29-matharena-doubles-in-one-release",
          "title": "A fresh olympiad benchmark more than doubles in a single release",
          "claim": "GPT-5.5 scored a record 73.66% on fresh olympiad problems, more than "

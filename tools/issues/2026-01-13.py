@@ -41,12 +41,58 @@ Zuckerberg is reportedly cutting a tenth of Reality Labs to buy GPUs.
     ],
     "people": [
         {"id": "dario-amodei", "type": "Person", "title": "Dario Amodei", "name": "Dario Amodei",
-         "body": "Anthropic CEO; predicts AI central to CRISPR-scale discoveries."},
+         "description": "Anthropic's chief executive, whose public statements on AI-driven discovery, on "
+                        "AI writing the lab's code and on a 2027 country of geniuses recur through the "
+                        "corpus as datable claims from the person running a frontier lab.",
+         "resource": "https://darioamodei.com/",
+         "sameAs": ["http://www.wikidata.org/entity/Q103335665"],
+         "tags": ["executive", "founder"],
+         "body": "Anthropic CEO; predicts AI central to CRISPR-scale discoveries. Dario Amodei runs "
+                 "[Anthropic](/organizations/anthropic.md), the lab behind [Claude](/systems/claude.md) "
+                 "and [Claude Code](/systems/claude-code.md). In this corpus he first appears on "
+                 "January 13, 2026 predicting that AI will soon play a "
+                 "[central role in CRISPR-scale discoveries](/developments/2026-01-13-tao-learned-from-aristotle.md), "
+                 "and returns two weeks later saying that "
+                 "[AI now writes much of Anthropic's code](/developments/2026-01-27-amodei-country-of-geniuses-2027.md) "
+                 "and that his country of geniuses may arrive by 2027, statements the "
+                 "[recursive-self-improvement](/themes/recursive-self-improvement.md) storyline records "
+                 "alongside his lab's own [Claude Code writing Claude Cowork](/developments/2026-01-13-claude-code-writes-cowork.md)."},
+    ],
+    "roles": [
+        {"id": "dario-amodei-anthropic-ceo", "type": "Role",
+         "title": "Dario Amodei, CEO of Anthropic",
+         "roleName": "Chief Executive Officer",
+         "memberOf": [B + "organizations/anthropic"],
+         "holder": [B + "people/dario-amodei"],
+         "description": "The position from which he predicts AI will soon be central to CRISPR-scale "
+                        "discoveries and later reports how much of Anthropic's code AI writes.",
+         "body": "The newsletter identifies Dario Amodei as Anthropic's CEO when quoting his January "
+                 "2026 prediction of "
+                 "[CRISPR-scale discoveries](/developments/2026-01-13-tao-learned-from-aristotle.md) "
+                 "and his [statement two weeks later](/developments/2026-01-27-amodei-country-of-geniuses-2027.md) "
+                 "that AI writes much of the lab's code. The role is recorded from the newsletter's "
+                 "attribution."},
     ],
     "systems": [
         {"id": "claude-cowork", "type": "AISystem", "title": "Claude Cowork",
-         "developed_by": [B + "organizations/anthropic"], "modality": "desktop agent",
-         "body": "Desktop app with direct file system access, written by Claude Code in 1.5 weeks."},
+         "description": "Anthropic's desktop agent for knowledge work, released as a research preview in "
+                        "January 2026 with direct file-system access, and the first whole product the "
+                        "lab confirmed was written entirely by Claude Code.",
+         "developed_by": [B + "organizations/anthropic"], "modality": "text",
+         "resource": "https://claude.com/product/cowork",
+         "tags": ["research-agent"],
+         "body": "Desktop app with direct file system access, written by Claude Code in 1.5 weeks. "
+                 "Claude Cowork gives [Claude](/systems/claude.md) direct access to a user's file "
+                 "system so it can sort downloads, reorganize folders and generate reports from local "
+                 "files ([announcement](https://claude.com/blog/cowork-research-preview)). Its place in "
+                 "this corpus is less what it does than how it was made: Boris Cherny confirmed that "
+                 "[Claude Code wrote all of it in a week and a half](/developments/2026-01-13-claude-code-writes-cowork.md), "
+                 "the step between the "
+                 "[200 pull requests the model wrote for him](/developments/2025-12-27-cherny-200-pull-requests.md) "
+                 "in December and the "
+                 "[100% of product code](/developments/2026-02-08-100pct-of-product-code.md) figure of "
+                 "February in the [recursive-self-improvement](/themes/recursive-self-improvement.md) "
+                 "storyline."},
         {"id": "1xwm", "type": "AISystem", "title": "1XWM",
          "developed_by": [B + "organizations/1x"], "modality": "world model",
          "body": "Robot world model trained on actions derived from text-conditioned video."},
@@ -65,10 +111,45 @@ Zuckerberg is reportedly cutting a tenth of Reality Labs to buy GPUs.
          "claim": "Anthropic confirmed Claude Code wrote the whole Claude Cowork desktop app in "
                   "a week and a half, an app that then gets direct file system access to "
                   "reorganize a user's local files.",
-         "domain": "agents", "actor": ["anthropic"], "about": [B + "systems/claude-cowork"],
+         "description": "In the newsletter's framing, recursive self-improvement graduating from a "
+                        "safety paper to a shipping manifest: a lab's coding agent producing an entire "
+                        "shipped product of the same lab, not a feature or a pull request.",
+         "domain": "agents", "actor": ["anthropic"],
+         "about": [B + "systems/claude-cowork", B + "systems/claude-code"],
          "score": "1.5 weeks",
+         "occurred_on": "2026-01-12",
          "evidences": ["recursive-self-improvement", "engineer-as-supervisor"],
-         "supersedes": [B + "developments/2026-01-12-torvalds-vibe-codes"]},
+         "supersedes": [B + "developments/2026-01-12-torvalds-vibe-codes",
+                        B + "developments/2025-12-27-cherny-200-pull-requests"],
+         "relatedTo": [B + "people/boris-cherny",
+                       B + "developments/2026-02-08-100pct-of-product-code",
+                       B + "developments/2026-01-27-amodei-country-of-geniuses-2027"],
+         "tags": ["rsi", "ai-r-and-d"],
+         "supporting_text": "Claude Code wrote the entire new Claude Cowork desktop app",
+         "sources": [{"id": "cherny-cowork-all-of-it",
+                      "resource": "https://x.com/bcherny/status/2010813886052581538",
+                      "title": "Boris Cherny on X: All of it, asked how much of Claude Cowork Claude Code wrote",
+                      "author": "human:boris-cherny", "last_modified": "2026-01-12"},
+                     {"id": "anthropic-cowork-research-preview",
+                      "resource": "https://claude.com/blog/cowork-research-preview",
+                      "title": "Claude Cowork research preview",
+                      "author": "org:anthropic"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Asked on X by Alex Volkov how much of the new Cowork app "
+                 "[Claude Code](/systems/claude-code.md) had written, its creator Boris Cherny answered "
+                 "that it wrote all of it, and the newsletter puts the build at a week and a half "
+                 "([X](https://x.com/bcherny/status/2010813886052581538)); Anthropic's own "
+                 "[announcement](https://claude.com/blog/cowork-research-preview) describes "
+                 "[Claude Cowork](/systems/claude-cowork.md) as a research-preview desktop app with "
+                 "direct access to the file system for sorting downloads and generating reports. It is "
+                 "the corpus's first whole product, rather than a pull request or a feature, reported "
+                 "as written end to end by a lab's own coding agent, following "
+                 "[Cherny's 200 pull requests](/developments/2025-12-27-cherny-200-pull-requests.md) in "
+                 "December and [Torvalds vibe-coding](/developments/2026-01-12-torvalds-vibe-codes.md) "
+                 "the day before. Anthropic's CEO says two weeks later that "
+                 "[AI writes much of the lab's code](/developments/2026-01-27-amodei-country-of-geniuses-2027.md), "
+                 "and by February its product chief puts the figure at "
+                 "[effectively 100%](/developments/2026-02-08-100pct-of-product-code.md)."},
         {"id": "2026-01-13-mckinsey-employs-20000-agents",
          "title": "McKinsey employs 20,000 agents alongside 40,000 people",
          "claim": "McKinsey's CEO said the firm counts AI agents as people it employs, with "

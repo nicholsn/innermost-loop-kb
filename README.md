@@ -55,11 +55,42 @@ emitter to confirm `knowledge/` still matches its specs.
 > the schema file, so validation has to run from `schema/`. `schema/lokf.yaml`
 > is a pinned copy of the LOKF schema the corpus was built against.
 
+Entity files are owned by the issue that first wrote them: re-running that
+issue's spec rewrites the entity, every other issue leaves it alone. So an
+entity is enriched in the spec where it was first declared, and the emitter
+carries the change through.
+
+### Enriched regions
+
+The lean profile above (claim, actor, themes, trajectory edge) covers the whole
+corpus. Regions of the graph are then enriched with the rest of what LOKF and
+the domain schema can say — the first is the
+[recursive-self-improvement](knowledge/themes/recursive-self-improvement.md)
+cluster, the newsletter's namesake thread. An enriched development carries:
+
+| slot | what it holds |
+|---|---|
+| `description` | one sentence of significance — the author's framing, not a restatement of the claim |
+| `score`, `occurred_on` | the headline figure verbatim with its unit; the event date when it differs from the issue date and is evidenced |
+| `about`, `relatedTo`, `references`, `relations[]` | the systems and benchmarks it concerns; lateral links; labelled edges (`contradicts`, `corroborates`, `extends`) |
+| `tags` | a small controlled vocabulary for slicing (`rsi`, `speedrun`, `kernels`, `chip-design`, `forecast`, …) |
+| `sources[]` | the issue first, with a `supporting_text` excerpt of at most fifteen words that anchors the claim; then the primary sources the newsletter links |
+| `verified[]` | a machine-confirmed check of the claim against the issue text, with the model version as the actor (`claude-fable-5-1/2026-09-17`) |
+
+Enriched entities gain `description`, `resource`, `tags`, a Wikidata `sameAs`
+where one was verified, and type-specific slots (`developed_by`, `evaluated_on`,
+`published_by`, `measures_capability`). A `roles/` collection reifies the
+positions the newsletter states for people (LOKF `Role`: `roleName`, `memberOf`,
+`holder`). Themes in an enriched region carry a `genre: explanation` essay of
+the trajectory with dated links into it.
+
 ## Provenance
 
 Every concept carries a `sources[]` entry pointing at the Substack permalink it
 came from. Claims are written as original one-sentence summaries rather than
-quotations; the source link is the thing to check them against.
+quotations; the source link is the thing to check them against. Where a
+`supporting_text` excerpt is present it is a short anchor for that check, never
+a reproduction of the prose.
 
 Licensed CC BY 4.0. Not affiliated with or endorsed by Dr. Alex Wissner-Gross;
 this is a reader's index of a public newsletter.

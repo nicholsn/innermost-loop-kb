@@ -28,7 +28,6 @@ arguing robotics is converging on physics-grounded world models.
     ],
     "organizations": [
         {"id": "sanctuary-ai", "type": "Organization", "title": "Sanctuary AI"},
-        {"id": "vercel-inc", "type": "Organization", "title": "Vercel"},
         {"id": "kansas-city", "type": "Organization", "title": "Kansas City"},
         {"id": "hhs-dept", "type": "Organization", "title": "Department of Health and Human Services"},
         {"id": "open-x", "type": "Organization", "title": "Open X"},

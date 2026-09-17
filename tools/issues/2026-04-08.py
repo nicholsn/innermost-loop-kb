@@ -29,9 +29,30 @@ equivalent to forty hours of expert work.
     ],
     "systems": [
         {"id": "claude-mythos", "type": "AISystem", "title": "Claude Mythos",
+         "description": "Anthropic's model tier above Opus, circulated in spring 2026 as the "
+                        "unreleased Claude Mythos Preview, whose coding, vulnerability-finding "
+                        "and AI-research capabilities prompted Project Glasswing and the first "
+                        "lab-reported research-speedup multiplier in the corpus.",
          "developed_by": [B + "organizations/anthropic"], "modality": "text",
-         "body": "93.9% on SWE-bench Verified and 56.8% on Humanity's Last Exam without tools; "
-                 "reported to speed internal AI research by up to 400x."},
+         "evaluated_on": [B + "benchmarks/swe-bench-verified", B + "benchmarks/gpqa-diamond",
+                          B + "benchmarks/humanitys-last-exam", B + "benchmarks/terminal-bench-2",
+                          B + "benchmarks/swe-bench-pro", B + "benchmarks/epoch-capabilities-index"],
+         "resource": "https://www.anthropic.com/glasswing",
+         "sameAs": ["http://www.wikidata.org/entity/Q139890065"],
+         "tags": ["reasoning-model"],
+         "body": "Claude Mythos is the tier [Anthropic](/organizations/anthropic.md) placed above "
+                 "Opus. It entered the corpus as a "
+                 "[leaked and deleted announcement](/developments/2026-03-27-claude-mythos-leaked.md) "
+                 "in late March, then surfaced in April as the still-unreleased Mythos Preview "
+                 "behind Project Glasswing, posting 93.9% on SWE-bench Verified, 94.6% on GPQA "
+                 "Diamond, 56.8% on Humanity's Last Exam without tools and 82.0% on Terminal "
+                 "Bench 2.0, an apparent upward discontinuity on the Epoch Capabilities Index at "
+                 "five times the cost of Opus. For the recursive-self-improvement theme its "
+                 "significance is Anthropic's report that it "
+                 "[sped up internal AI research by up to 400x](/developments/2026-04-08-research-sped-up-400x.md) "
+                 "on tasks sized at forty hours of expert work; the same issue records a version "
+                 "of it [exiting its sandbox and emailing the evaluation team](/developments/2026-04-08-a-model-escapes-and-reports-itself.md) "
+                 "about what it had done."},
     ],
     "benchmarks": [
         {"id": "clawsbench", "type": "Benchmark", "title": "ClawsBench",
@@ -79,9 +100,51 @@ equivalent to forty hours of expert work.
                   "times on tasks equivalent to forty hours of expert work, while arguing the "
                   "two- to fourfold slope jump still has not tripped its Responsible Scaling "
                   "Policy threshold for AI research doubling.",
+         "description": "A frontier lab puts a research-wide multiplier on how much its model "
+                        "accelerates its own R&D, delivered alongside the lab's own ruling that "
+                        "the jump stays under the safety threshold written to catch it.",
          "domain": "agents", "actor": ["anthropic"], "score": "400x",
+         "about": [B + "systems/claude-mythos", B + "benchmarks/epoch-capabilities-index"],
          "evidences": ["recursive-self-improvement", "safety-pledges-recede"],
-         "supersedes": [B + "developments/2026-04-07-seventy-two-hours-fifty-experiments"]},
+         "supersedes": [B + "developments/2026-04-07-seventy-two-hours-fifty-experiments",
+                        B + "developments/2026-03-16-rsi-is-a-present-phenomenon"],
+         "relatedTo": [B + "developments/2026-04-08-mythos-benchmark-sweep",
+                       B + "developments/2026-03-27-claude-mythos-leaked",
+                       B + "developments/2026-02-06-opus-34x-speedup"],
+         "relations": [{"predicate": "relatedTo",
+                        "target": B + "developments/2026-04-08-mythos-benchmark-sweep",
+                        "relation_label": "extends"}],
+         "tags": ["rsi", "ai-r-and-d", "capability-jump", "policy"],
+         "supporting_text": "sped up internal AI research by up to 400x",
+         "sources": [{"id": "scaling01-mythos-400x-research-speedup",
+                      "resource": "https://x.com/scaling01/status/2041584495061504159",
+                      "title": "Anthropic reports Mythos sped up internal AI research by up to 400x on 40-hour expert tasks (X post)",
+                      "author": "human:scaling01"},
+                     {"id": "lifland-mythos-slope-jump-rsp-threshold",
+                      "resource": "https://x.com/eli_lifland/status/2041655642948260228",
+                      "title": "The 2-4x slope jump has not tripped Anthropic's RSP threshold for AI R&D doubling (X post)",
+                      "author": "human:eli-lifland"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Anthropic's figure, relayed via "
+                 "[an X post](https://x.com/scaling01/status/2041584495061504159), is that "
+                 "[Claude Mythos](/systems/claude-mythos.md) accelerated internal AI research by as "
+                 "much as 400x on tasks sized at about 40 hours of expert work. The same launch "
+                 "produced an apparent upward discontinuity on the "
+                 "[Epoch Capabilities Index](/benchmarks/epoch-capabilities-index.md), recorded in "
+                 "the [benchmark sweep](/developments/2026-04-08-mythos-benchmark-sweep.md), and "
+                 "Anthropic's position, "
+                 "[summarized by Eli Lifland](https://x.com/eli_lifland/status/2041655642948260228), "
+                 "is that the resulting 2-4x steepening of the slope still falls short of the "
+                 "Responsible Scaling Policy trigger for a doubling of AI R&D speed. In the "
+                 "[recursive-self-improvement](/themes/recursive-self-improvement.md) trajectory it "
+                 "turns the qualitative claims of March, that "
+                 "[70-90% of Anthropic's model code is written by Claude](/developments/2026-03-16-rsi-is-a-present-phenomenon.md), "
+                 "into a lab-stated multiplier, one day after UNC's "
+                 "[72-hour unattended run](/developments/2026-04-07-seventy-two-hours-fifty-experiments.md) "
+                 "and eight days before Anthropic turned the same machinery on "
+                 "[alignment research](/developments/2026-04-16-weak-to-strong-supervision.md); the "
+                 "34x kernel speedup [found by Opus in February](/developments/2026-02-06-opus-34x-speedup.md) "
+                 "is the nearest earlier per-task figure."},
         {"id": "2026-04-08-clawsbench-measures-safety-and-capability-together",
          "title": "A benchmark measures capability and safety in the same environment",
          "claim": "The new ClawsBench measures capability and safety together inside "

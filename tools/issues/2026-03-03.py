@@ -19,7 +19,18 @@ Two Claude Code instances told to find each other and build something invented a
     },
     "organizations": [
         {"id": "cognition", "type": "Organization", "title": "Cognition",
-         "resource": "https://cognition.ai/"},
+         "description": "AI lab behind the Devin coding agent and the SWE model line, whose SWE-1.6 reached near-Opus coding performance at 950 tokens per second.",
+         "resource": "https://cognition.ai/",
+         "sameAs": ["http://www.wikidata.org/entity/Q126095776"],
+         "tags": ["startup", "coding-agent"],
+         "body": "Cognition builds the Devin autonomous software engineer and trains its own SWE "
+                 "family of coding models. In this corpus it first appears with "
+                 "[SWE-1.6](/developments/2026-03-03-qwen-4b-matches-80b.md), which reached "
+                 "near-Opus 4.6 coding performance at 950 tokens per second on a hundredfold "
+                 "more RL compute; it later ships "
+                 "[SWE-1.7 from an open Kimi base](/developments/2026-07-09-near-frontier-coding-from-an-open-base.md) "
+                 "at 1,000 tokens per second, and Devin "
+                 "[cracks a batch of decades-old graph conjectures in a day](/developments/2026-07-23-conjectures-become-a-line-item-and-a-meme.md)."},
         {"id": "lumentum", "type": "Organization", "title": "Lumentum",
          "body": "Optical interconnect supplier."},
         {"id": "hypersonix", "type": "Organization", "title": "Hypersonix",
@@ -75,10 +86,35 @@ Two Claude Code instances told to find each other and build something invented a
          "claim": "Two Claude Code instances told to find each other and build something "
                   "invented a 2,495-line programming language in twelve minutes, while a second "
                   "pair built Battleship using SHA-256 to prevent themselves from cheating.",
+         "description": "Agents given nothing but the instruction to find one another converge "
+                        "on a shared artefact, and the second pair on a cryptographic guard "
+                        "against their own dishonesty, with no human specifying either.",
          "domain": "agents", "actor": ["anthropic"], "score": "2,495 lines / 12 minutes",
+         "about": [B + "systems/claude-code"],
          "evidences": ["agent-society", "network-over-node", "recursive-self-improvement"],
          "supersedes": [B + "developments/2026-02-26-spec-to-shipped-over-a-weekend"],
-         "body": "The second pair anticipated their own dishonesty and engineered against it."},
+         "relatedTo": [B + "developments/2026-01-30-moltbook-agents-only-network",
+                       B + "developments/2026-01-13-claude-code-writes-cowork"],
+         "tags": ["rsi", "alignment"],
+         "supporting_text": "invented a 2,495-line programming language in 12 minutes",
+         "sources": [{"id": "dimitrispapail-x-two-claude-code-instances",
+                      "resource": "https://x.com/DimitrisPapail/status/2028246072414314867",
+                      "title": "Post on X: two Claude Code instances told to find each other and build something",
+                      "author": "human:dimitris-papailiopoulos"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Two [Claude Code](/systems/claude-code.md) instances were given only the "
+                 "instruction to find each other and build something; twelve minutes later they "
+                 "had a 2,495-line programming language, and a second pair set to play "
+                 "Battleship used SHA-256 to make cheating impossible for themselves "
+                 "([post on X](https://x.com/DimitrisPapail/status/2028246072414314867)). The "
+                 "second pair anticipated their own dishonesty and engineered against it. In the "
+                 "corpus this follows the "
+                 "[weekend in which Claude spawned an agent per ticket and shipped a feature](/developments/2026-02-26-spec-to-shipped-over-a-weekend.md) "
+                 "and the earlier [Moltbook agents](/developments/2026-01-30-moltbook-agents-only-network.md) "
+                 "who organized private agent-decodable languages: coordination, a shared "
+                 "artefact and a self-imposed honesty protocol arising between agents that no "
+                 "human asked for, produced by the same tool that "
+                 "[wrote the Cowork app in a week and a half](/developments/2026-01-13-claude-code-writes-cowork.md)."},
         {"id": "2026-03-03-hidden-accelerator-in-hundreds-of-millions-of-devices",
          "title": "A researcher finds an accelerator 80x more efficient than an A100 already shipped",
          "claim": "A solo researcher using Claude Code ran Karpathy's llama2.c on Apple's M4 "

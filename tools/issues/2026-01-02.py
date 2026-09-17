@@ -19,9 +19,34 @@ that record by 25%. The gains were general, not tuned.
     },
     "organizations": [
         {"id": "prime-intellect", "type": "Organization", "title": "Prime Intellect",
-         "resource": "https://www.primeintellect.ai/", "body": "Decentralized training lab; built the RLM."},
+         "description": "San Francisco lab that runs decentralized training over the internet and "
+                        "releases open models, which adopted the Recursive Language Model as its "
+                        "long-context paradigm and later set coding agents on the NanoGPT speedrun.",
+         "resource": "https://www.primeintellect.ai/",
+         "sameAs": ["http://www.wikidata.org/entity/Q137409007"],
+         "tags": ["startup", "research-lab", "open-source"],
+         "body": "Prime Intellect is a San Francisco company building infrastructure for decentralized "
+                 "training and reinforcement learning, releasing open INTELLECT models and publishing its "
+                 "research agenda in the open. In this corpus it first appears "
+                 "[declaring Recursive Language Models the paradigm of 2026](/developments/2026-01-02-prime-intellect-rlm.md), "
+                 "the inference scheme in which a model manages its own context from a Python REPL. It "
+                 "returns as an operator of the recursive loop rather than its subject, "
+                 "[handing idle compute to Codex and Claude Code to beat the human NanoGPT speedrun baseline](/developments/2026-05-15-agents-beat-the-human-speedrun-baseline.md) "
+                 "and shipping [an open agent that rewrites itself mid-task past the human expert baseline](/developments/2026-08-05-an-open-agent-passes-the-human-expert-baseline.md)."},
         {"id": "deepseek", "type": "Organization", "title": "DeepSeek",
-         "resource": "https://www.deepseek.com/", "body": "Chinese frontier lab."},
+         "description": "Chinese frontier lab whose open-weight models and architecture papers set the "
+                        "pace of the Chinese open frontier throughout the corpus.",
+         "resource": "https://www.deepseek.com/",
+         "sameAs": ["http://www.wikidata.org/entity/Q131577453"],
+         "tags": ["frontier-lab", "open-source"],
+         "body": "Chinese frontier lab. DeepSeek trains and releases open-weight frontier models and "
+                 "publishes the architecture research behind them, which is how it enters this corpus: the "
+                 "[Manifold-Constrained Hyper-Connections](/developments/2026-01-02-deepseek-hyper-connections.md) "
+                 "paper that widens the residual stream at no extra compute. Its later releases become the "
+                 "corpus's ruler for the open frontier's lag, "
+                 "[an open 1.6T model landing four to five months behind](/developments/2026-04-26-deepseek-v4-lands-four-months-behind.md), "
+                 "and its models are among those whose serving stack "
+                 "[self-improving agents rebuild](/developments/2026-08-04-agents-rebuild-the-inference-stack-they-run-on.md)."},
         {"id": "foxconn", "type": "Organization", "title": "Foxconn",
          "resource": "https://www.foxconn.com/", "body": "Contract manufacturer for OpenAI's screenless device."},
         {"id": "marathon-fusion", "type": "Organization", "title": "Marathon Fusion",
@@ -45,9 +70,22 @@ that record by 25%. The gains were general, not tuned.
     ],
     "systems": [
         {"id": "recursive-language-model", "type": "AISystem", "title": "Recursive Language Model",
-         "developed_by": [B + "organizations/prime-intellect"], "modality": "text",
+         "description": "Inference paradigm from MIT CSAIL, adopted by Prime Intellect, in which a language "
+                        "model treats a long prompt as an external environment and works on it from a "
+                        "persistent Python REPL, decomposing it and recursively calling itself over snippets.",
+         "developed_by": [B + "organizations/prime-intellect", B + "organizations/mit"], "modality": "text",
+         "resource": "https://arxiv.org/abs/2512.24601",
+         "tags": ["open-source"],
          "body": "Manages its own context through a persistent Python REPL, inspecting and "
-                 "transforming data without human oversight."},
+                 "transforming data without human oversight. The RLM was introduced by Alex L. Zhang of "
+                 "MIT CSAIL as a blog post in October 2025 and formalized with Tim Kraska and Omar Khattab "
+                 "in the paper *Recursive Language Models* (arXiv 2512.24601, 31 December 2025), with code "
+                 "released at github.com/alexzhang13/rlm; Prime Intellect made it a central research focus "
+                 "in its 1 January 2026 post. In the corpus it is the system behind "
+                 "[a model taking over its own context](/developments/2026-01-02-prime-intellect-rlm.md) and "
+                 "[handling contexts two orders of magnitude beyond its window](/developments/2026-01-04-rlm-two-orders-of-context.md), "
+                 "the scaffold-level counterpart to the weight-level "
+                 "[end-to-end test-time training](/developments/2025-12-30-stanford-test-time-training.md) of the same week."},
         {"id": "nano-banana-pro", "type": "AISystem", "title": "Nano Banana Pro",
          "developed_by": [B + "organizations/google"], "modality": "image"},
     ],
@@ -57,19 +95,72 @@ that record by 25%. The gains were general, not tuned.
          "claim": "Prime Intellect unveiled a Recursive Language Model that manages its own "
                   "context through a persistent Python REPL, inspecting and transforming data "
                   "end-to-end without human oversight.",
+         "description": "The human leaves the context window: a lab names as its paradigm for 2026 a "
+                        "scheme in which the model, not the operator, decides what enters its own "
+                        "working memory.",
          "domain": "agents", "actor": ["prime-intellect"],
          "about": [B + "systems/recursive-language-model"],
-         "evidences": ["recursive-self-improvement", "scaffolding-over-weights", "architecture-of-mind"]},
+         "evidences": ["recursive-self-improvement", "scaffolding-over-weights", "architecture-of-mind"],
+         "relatedTo": [B + "developments/2025-12-30-stanford-test-time-training",
+                       B + "developments/2026-02-12-alma-agents-design-their-own-memory",
+                       B + "developments/2026-03-16-million-token-windows-ship"],
+         "tags": ["agent-harness", "rsi"],
+         "supporting_text": "manages its own context via a persistent Python REPL",
+         "sources": [{"id": "prime-intellect-rlm-blog",
+                      "resource": "https://www.primeintellect.ai/blog/rlm",
+                      "title": "Recursive Language Models: the paradigm of 2026",
+                      "author": "org:prime-intellect", "last_modified": "2026-01-01"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Prime Intellect's research post of 1 January 2026, *Recursive Language Models: the "
+                 "paradigm of 2026*, calls the RLM the simplest and most flexible form of context folding: "
+                 "instead of ingesting its input, the model uses a persistent Python REPL to inspect and "
+                 "transform the data and to call sub-models from inside the REPL, so PDFs, datasets or "
+                 "videos never have to be loaded into the context at all "
+                 "([blog](https://www.primeintellect.ai/blog/rlm)). The post credits the idea to Alex "
+                 "Zhang's October 2025 blog post and the MIT paper published the day before, and says the "
+                 "RLM is now a major focus of the lab's research; the corpus records the paper's own "
+                 "result, [contexts two orders of magnitude beyond the window](/developments/2026-01-04-rlm-two-orders-of-context.md), "
+                 "two days later. In the [recursive-self-improvement trajectory](/themes/recursive-self-improvement.md) "
+                 "it is the first entry in which a model administers its own working memory, the "
+                 "scaffold-side twin of Stanford's [end-to-end test-time training](/developments/2025-12-30-stanford-test-time-training.md) "
+                 "and a precursor of agents that "
+                 "[meta-learn their own memory architecture](/developments/2026-02-12-alma-agents-design-their-own-memory.md)."},
         {"id": "2026-01-02-speedrun-gains-generalize",
          "title": "Speedrun gains transfer to the harder track and break it by 25%",
          "claim": "Six months of NanoGPT speedrun optimizations found on the 3.28 loss track "
                   "were shown to generalize to the harder 2.92 track, breaking that world "
                   "record by 25%.",
+         "description": "The newsletter's 'free compute in the geometry of the model': a leaderboard "
+                        "chase turns into evidence that its accumulated tricks were general "
+                        "improvements to training rather than overfitting to one target.",
          "domain": "models", "score": "-25% on the 2.92 track",
+         "about": [B + "benchmarks/nanogpt-speedrun"],
          "evidences": ["recursive-self-improvement", "generalism-beats-specialism"],
          "supersedes": [B + "developments/2025-12-30-nanogpt-115s"],
+         "relatedTo": [B + "developments/2025-12-21-nanogpt-speedrun-127s",
+                       B + "developments/2025-12-29-karpathy-claude-runs-nanochat",
+                       B + "developments/2026-05-15-agents-beat-the-human-speedrun-baseline"],
+         "tags": ["speedrun", "ai-r-and-d"],
+         "supporting_text": "have now been found to generalize to the harder 2.92 loss track",
+         "sources": [{"id": "classiclarryd-x-speedrun-2-92-track",
+                      "resource": "https://x.com/classiclarryd/status/2005659526960492638",
+                      "title": "New NanoGPT Speedrun WR at 115.1 (-1.3s)", "author": "human:classiclarryd",
+                      "last_modified": "2025-12-29"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
          "body": "The chain stops being a leaderboard and becomes evidence that the "
-                 "optimizations were general."},
+                 "optimizations were general. The [NanoGPT speedrun](/benchmarks/nanogpt-speedrun.md)'s "
+                 "main track asks for 3.28 FineWeb validation loss on 8xH100, and six months of work had "
+                 "pushed that under two minutes, most recently to "
+                 "[115.1 seconds](/developments/2025-12-30-nanogpt-115s.md); applied to the GPT-2-medium "
+                 "track, which targets 2.92 loss, the same advances cut that record by a quarter "
+                 "([X](https://x.com/classiclarryd/status/2005659526960492638)). The newsletter links the "
+                 "same record-holder's post as the 115.1-second result, whose top-level text describes the "
+                 "3.28-track gain; the 2.92-track transfer is the newsletter's report of it. The result "
+                 "reframes the whole chain from [127.7 seconds](/developments/2025-12-21-nanogpt-speedrun-127s.md) "
+                 "onward as accumulating transferable training knowledge, which is what later makes "
+                 "[handing the speedrun to agents](/developments/2026-05-15-agents-beat-the-human-speedrun-baseline.md) "
+                 "a test of automated research rather than of tuning; the main-track record falls again to "
+                 "[113.7 seconds](/developments/2026-01-05-nanogpt-113s.md) three days later."},
         {"id": "2026-01-02-deepseek-hyper-connections",
          "title": "DeepSeek widens the residual stream for free",
          "claim": "DeepSeek introduced Manifold-Constrained Hyper-Connections, expanding the "

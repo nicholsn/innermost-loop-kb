@@ -36,10 +36,63 @@ artform.
                  "different artifacts."},
     ],
     "organizations": [
-        {"id": "wafer-inc", "type": "Organization", "title": "Wafer"},
+        {"id": "wafer-inc", "type": "Organization", "title": "Wafer",
+         "description": "Inference startup serving open models on AMD accelerators, which argued that AI "
+                        "agents writing GPU kernels are closing AMD's software gap with Nvidia.",
+         "resource": "https://www.wafer.ai/",
+         "tags": ["startup"],
+         "body": "Wafer sells what it calls continual inference: a serving stack it keeps re-tuning per "
+                 "workload across kernels, engine and batching, on AMD as well as Nvidia accelerators "
+                 "([site](https://www.wafer.ai/)); it raised a $40M Series A on September 1, 2026 "
+                 "([announcement](https://www.wafer.ai/blog/series-a)). "
+                 "In this corpus it appears once: the July 4 item in which it "
+                 "[served GLM-5.2 on AMD's MI355X](/developments/2026-07-04-agents-write-the-kernels-closing-a-software-gap.md) "
+                 "at 2,626 tokens per second per node for less than half Blackwell's cost, arguing that the "
+                 "kernels agents now write are erasing the software moat around Nvidia, a market-structure "
+                 "reading of the [recursive-self-improvement](/themes/recursive-self-improvement.md) loop that "
+                 "began with [a model topping KernelBench](/developments/2026-04-29-a-model-writes-the-kernels-that-run-it.md)."},
         {"id": "ampera", "type": "Organization", "title": "AMPERA"},
         {"id": "deployable-energy", "type": "Organization", "title": "Deployable Energy"},
         {"id": "america250", "type": "Organization", "title": "America250"},
+    ],
+    "systems": [
+        {"id": "glm-5-2", "type": "AISystem", "title": "GLM-5.2",
+         "description": "Z.ai's 744-billion-parameter, MIT-licensed open-weight model, open-sourced within "
+                        "hours of the June 2026 Fable and Mythos shutdown and hailed as the open-source "
+                        "Claude moment.",
+         "developed_by": [B + "organizations/zai"], "modality": "text",
+         "evaluated_on": [B + "benchmarks/posttrainbench"],
+         "resource": "https://huggingface.co/zai-org/GLM-5.2",
+         "sameAs": ["http://www.wikidata.org/entity/Q140317184"],
+         "tags": ["open-weight-model"],
+         "body": "GLM-5.2 is Z.ai's open-weight flagship ([weights on Hugging Face](https://huggingface.co/zai-org/GLM-5.2)), "
+                 "744 billion parameters under an MIT license. The corpus records it "
+                 "[open-sourced within hours](/developments/2026-06-14-radical-openness-answers-within-hours.md) "
+                 "of Washington's shutdown of Fable 5 and Mythos 5, crowned "
+                 "[the leading open model](/developments/2026-06-17-the-leading-open-model-is-chinese.md) "
+                 "and first on Design Arena, hailed as "
+                 "[the open-source Claude moment](/developments/2026-06-29-the-open-source-claude-moment.md), "
+                 "then [topping PostTrainBench](/developments/2026-07-04-authoring-minds-becomes-an-artform.md) "
+                 "at five to eleven times cheaper than the closed frontier and "
+                 "[served on AMD's MI355X](/developments/2026-07-04-agents-write-the-kernels-closing-a-software-gap.md) "
+                 "at less than half Blackwell's cost."},
+    ],
+    "hardware": [
+        {"id": "amd-mi355x", "type": "Hardware", "title": "AMD Instinct MI355X",
+         "description": "AMD's Instinct accelerator positioned against Nvidia's Blackwell, on which Wafer "
+                        "served GLM-5.2 at 2,626 tokens per second per node for less than half Blackwell's "
+                        "cost.",
+         "developed_by": [B + "organizations/amd"],
+         "fabricated_by": [B + "organizations/tsmc"],
+         "resource": "https://www.amd.com/en/products/accelerators/instinct/mi350/mi355x.html",
+         "body": "The MI355X is AMD's Instinct accelerator positioned against Nvidia's Blackwell "
+                 "([product page](https://www.amd.com/en/products/accelerators/instinct/mi350/mi355x.html)); "
+                 "AMD's page lists a CDNA4 architecture on [TSMC](/organizations/tsmc.md) 3nm and 6nm FinFET "
+                 "lithography. In this corpus it appears once: "
+                 "[Wafer served GLM-5.2 on it](/developments/2026-07-04-agents-write-the-kernels-closing-a-software-gap.md) "
+                 "at less than half the cost of the [B200](/hardware/nvidia-b200.md) generation, with the "
+                 "software gap that long kept AMD out of frontier serving said to be closing because AI "
+                 "agents now write the kernels."},
     ],
     "developments": [
         {"id": "2026-07-04-there-will-not-be-an-fda-for-ai",
@@ -90,9 +143,39 @@ artform.
          "claim": "Wafer served GLM-5.2 on AMD's MI355X at 2,626 tokens per second per node at "
                   "less than half Blackwell's cost, arguing AMD's software gap is closing because "
                   "AI agents now write the kernels.",
+         "description": "The kernel-writing loop leaves the leaderboard and lands on market structure: "
+                        "if agents write the kernels, the software moat that kept a challenger GPU out "
+                        "of frontier serving stops being a moat.",
          "domain": "compute", "actor": ["wafer-inc", "amd", "nvidia"], "score": "2,626 tok/s/node",
+         "occurred_on": "2026-07-03",
+         "about": [B + "systems/glm-5-2", B + "hardware/amd-mi355x"],
          "evidences": ["recursive-self-improvement", "intelligence-per-watt", "vertical-silicon"],
-         "supersedes": [B + "developments/2026-07-03-circuits-drawn-in-minutes-not-months"]},
+         "supersedes": [B + "developments/2026-07-03-circuits-drawn-in-minutes-not-months",
+                        B + "developments/2026-07-03-seventeen-leaders-in-two-years"],
+         "relatedTo": [B + "developments/2026-08-04-agents-rebuild-the-inference-stack-they-run-on",
+                       B + "developments/2026-04-29-a-model-writes-the-kernels-that-run-it"],
+         "relations": [{"predicate": "relatedTo",
+                        "target": B + "developments/2026-07-04-authoring-minds-becomes-an-artform",
+                        "relation_label": "extends"}],
+         "tags": ["kernels", "rsi", "compute-scaling", "open-weights"],
+         "supporting_text": "arguing AMD’s software gap is closing because AI agents now write the kernels",
+         "sources": [{"id": "wafer-glm52-amd-blog",
+                      "resource": "https://www.wafer.ai/blog/glm52-amd",
+                      "title": "Performance per dollar is getting faster and cheaper",
+                      "author": "org:wafer-inc", "last_modified": "2026-07-03"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Wafer's write-up ([blog](https://www.wafer.ai/blog/glm52-amd)) reports [GLM-5.2](/systems/glm-5-2.md) "
+                 "served on AMD's [Instinct MI355X](/hardware/amd-mi355x.md) at 2,626 tokens per second per "
+                 "node for less than half the cost of Nvidia's Blackwell, and credits AI agents writing the "
+                 "kernels for closing the software gap that has protected the incumbent. The newsletter reads "
+                 "it as 'the silicon is cooperating' with the "
+                 "[cheap post-training economics](/developments/2026-07-04-authoring-minds-becomes-an-artform.md) "
+                 "of the same open model. In the recursion trajectory it carries the kernel strand, "
+                 "[GPT-5.5 topping KernelBench](/developments/2026-04-29-a-model-writes-the-kernels-that-run-it.md) "
+                 "in April and [Fable 5's megakernel](/developments/2026-07-03-seventeen-leaders-in-two-years.md) "
+                 "the day before, from benchmark scores to production serving on a rival vendor's chips, a "
+                 "month before [self-improving agents rebuild an inference stack](/developments/2026-08-04-agents-rebuild-the-inference-stack-they-run-on.md) "
+                 "on B200s."},
         {"id": "2026-07-04-models-become-entities-not-genies",
          "title": "The argument shifts from genies summoned per task to entities that persist",
          "claim": "Commentators argued AGI will feel real when models stop being genies summoned "

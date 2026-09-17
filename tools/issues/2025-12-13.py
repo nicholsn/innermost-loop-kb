@@ -92,8 +92,17 @@ It closes on **the Solar System finally has a business model**.
         {"id": "commonwealth-fusion", "type": "Organization", "title": "Commonwealth Fusion Systems",
          "resource": "https://cfs.energy/", "body": "Tokamak developer building a commercial demo plant."},
         {"id": "china", "type": "Organization", "title": "Government of China",
+         "description": "The People's Republic of China's government as a policy actor: subsidising a decoupled chip industry and standing behind the corpus's Chinese hardware, robotics and energy items.",
          "resource": "https://english.www.gov.cn/",
-         "body": "Countering export controls with domestic semiconductor subsidy."},
+         "sameAs": ["http://www.wikidata.org/entity/Q936190"],
+         "tags": ["government", "state"],
+         "body": "Countering export controls with domestic semiconductor subsidy. It enters the corpus with the "
+                 "[$70 billion chip subsidy package](/developments/2025-12-13-china-70b-chip-subsidy.md), the same-day "
+                 "counter to the US [Pax Silica Initiative](/developments/2025-12-13-pax-silica-initiative.md), followed by "
+                 "a [Manhattan Project-style effort in Shenzhen to reverse-engineer EUV lithography](/developments/2025-12-18-shenzhen-euv-manhattan-project.md) "
+                 "and a policy of [restricting domestic purchases to force reliance on local silicon](/developments/2026-01-14-h200-allowed-china-restricts.md). "
+                 "In the recursive-self-improvement strand it is context rather than actor: the "
+                 "[silicon curtain](/themes/silicon-curtain.md) that decides where the loop's compute can be built."},
         {"id": "japan", "type": "Organization", "title": "Government of Japan",
          "resource": "https://www.japan.go.jp/", "body": "Pax Silica partner."},
         {"id": "uae", "type": "Organization", "title": "Government of the UAE",
@@ -115,9 +124,19 @@ It closes on **the Solar System finally has a business model**.
          "developed_by": [B + "organizations/google"], "modality": "speech",
          "body": "Updated with native audio for voice workflows."},
         {"id": "alphaevolve", "type": "AISystem", "title": "AlphaEvolve",
-         "developed_by": [B + "organizations/google-deepmind"], "modality": "mathematics",
-         "body": "Evolutionary search over algorithms and proofs, used on an open "
-                 "Erdős problem."},
+         "description": "DeepMind's Gemini-powered evolutionary coding agent, which pairs model-proposed program changes with automated evaluators to discover algorithms, bounds and training components.",
+         "developed_by": [B + "organizations/google-deepmind"], "modality": "code",
+         "resource": "https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/",
+         "sameAs": ["http://www.wikidata.org/entity/Q134463401"],
+         "tags": ["evolutionary-search", "research-agent"],
+         "body": "Evolutionary search over algorithms and proofs: Gemini models propose changes to a program, "
+                 "automated evaluators score them, and the strongest candidates seed the next generation "
+                 "([DeepMind](https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/)). "
+                 "In this corpus it first appears as Terence Tao's collaborator on an open "
+                 "[Erdős problem](/developments/2025-12-13-tao-erdos-1026.md); it then "
+                 "[discovers an activation function that triples ReLU](/developments/2026-02-08-alphaevolve-finds-new-activations.md), "
+                 "the point at which the search loop turns on the components of the models that drive it, and "
+                 "[establishes new lower bounds for five Ramsey numbers](/developments/2026-03-13-alphaevolve-improves-ramsey-bounds.md)."},
         {"id": "veo", "type": "AISystem", "title": "Veo",
          "developed_by": [B + "organizations/google-deepmind"], "modality": "video",
          "body": "Video generator repurposed as a simulator for evaluating robot policies."},

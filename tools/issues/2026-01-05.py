@@ -78,9 +78,37 @@ president argues AGI is already an outdated target.
         {"id": "2026-01-05-nanogpt-113s",
          "title": "The speedrun record falls to 113.7 seconds",
          "claim": "The NanoGPT speedrun record collapsed again to 113.7 seconds.",
-         "domain": "models", "score": "113.7 s",
+         "description": "The record chain turns into a running joke about reaching zero, which is "
+                        "the newsletter's way of saying the floor on training cost is no longer "
+                        "in view.",
+         "domain": "models", "score": "113.7 s", "occurred_on": "2026-01-04",
+         "about": [B + "benchmarks/nanogpt-speedrun"],
          "evidences": ["recursive-self-improvement", "reasoning-price-deflation"],
-         "supersedes": [B + "developments/2026-01-02-speedrun-gains-generalize"]},
+         "supersedes": [B + "developments/2026-01-02-speedrun-gains-generalize",
+                        B + "developments/2025-12-30-nanogpt-115s"],
+         "relatedTo": [B + "developments/2025-12-29-karpathy-claude-runs-nanochat",
+                       B + "developments/2026-05-15-agents-beat-the-human-speedrun-baseline"],
+         "tags": ["speedrun", "rsi"],
+         "supporting_text": "record has collapsed once again to [113.7 seconds]",
+         "sources": [{"id": "classiclarryd-x-nanogpt-113-7s",
+                      "resource": "https://x.com/classiclarryd/status/2007882371576873445",
+                      "title": "New NanoGPT Speedrun WR at 113.7 (-1.4s)",
+                      "author": "human:larry-dial", "last_modified": "2026-01-04"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "[Larry Dial's](/people/larry-dial.md) record log credits the 113.7-second run, 1.4 seconds under the "
+                 "previous mark, to Chris McCormick's "
+                 "[pull request #187](https://github.com/KellerJordan/modded-nanogpt/pull/187) on "
+                 "modded-nanogpt, which centralizes per-layer parameters in a parameter bank, tunes "
+                 "Adam, raises EMA-buffer precision and moves the gate matrices from Muon to Adam "
+                 "([X post](https://x.com/classiclarryd/status/2007882371576873445)). It is the "
+                 "sixth record time in the corpus's [NanoGPT speedrun](/benchmarks/nanogpt-speedrun.md) "
+                 "chain (127.7 → 122.2 → 119.3 → 116.4 → 115.1 → 113.7) and the first set after the "
+                 "[generalization result](/developments/2026-01-02-speedrun-gains-generalize.md) "
+                 "showed the track's tricks transfer to a harder target. The mark stood three days "
+                 "before falling to [109.2 seconds](/developments/2026-01-08-nanogpt-109s.md) on a "
+                 "new attention scheme, and in May agents given idle compute "
+                 "[beat the human baseline on the speedrun's optimizer track](/developments/2026-05-15-agents-beat-the-human-speedrun-baseline.md) "
+                 "under [recursive self-improvement](/themes/recursive-self-improvement.md)."},
         {"id": "2026-01-05-agents-as-windows-apps",
          "title": "Windows makes agents first-class apps",
          "claim": "Microsoft introduced Agent Launchers, letting developers register autonomous "

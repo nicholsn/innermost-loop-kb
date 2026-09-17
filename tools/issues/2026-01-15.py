@@ -26,7 +26,19 @@ value of software even is when you can one-shot almost anything.
     ],
     "organizations": [
         {"id": "cursor", "type": "Organization", "title": "Cursor",
-         "resource": "https://cursor.com/"},
+         "description": "AI code editor and coding-agent vendor, built by Anysphere, whose CEO's "
+                        "week-long unattended GPT-5.2 Codex run first showed the corpus an autonomy "
+                        "horizon measured in weeks rather than hours.",
+         "resource": "https://cursor.com/",
+         "tags": ["startup", "coding-agent"],
+         "body": "Cursor is the AI-native code editor and coding-agent product built by "
+                 "[Anysphere](/organizations/anysphere.md). In this corpus it appears first as the "
+                 "vendor whose CEO ran [GPT-5.2 Codex](/systems/gpt-5-2-codex.md) uninterrupted "
+                 "for a week to write a browser with a custom Rust rendering engine "
+                 "([three million lines in one week](/developments/2026-01-15-codex-runs-a-week-3m-lines.md)), "
+                 "far past the published five-hour autonomy horizon, and nine days later as the "
+                 "lab that found coding agents scale best when "
+                 "[stratified into planners and workers](/developments/2026-01-24-cursor-planners-and-workers.md)."},
         {"id": "browser-use", "type": "Organization", "title": "Browser Use",
          "body": "Agentic browsing startup."},
         {"id": "kled", "type": "Organization", "title": "Kled",
@@ -52,7 +64,20 @@ value of software even is when you can one-shot almost anything.
          "body": "27B models built on a U-shaped scaling law trading neural computation "
                  "against static memory."},
         {"id": "grok-4-20", "type": "AISystem", "title": "Grok 4.20",
-         "developed_by": [B + "organizations/xai"], "modality": "text"},
+         "description": "xAI's early-2026 Grok release, first seen as an internal beta that solved an "
+                        "open harmonic-analysis problem and later claimed by Musk to keep learning "
+                        "after shipping.",
+         "developed_by": [B + "organizations/xai"], "modality": "text",
+         "resource": "https://grok.com/",
+         "tags": ["reasoning-model"],
+         "body": "Grok 4.20 (also written Grok 4.2) is xAI's Grok release of early 2026, following "
+                 "[Grok](/systems/grok.md) in the corpus's lineage. It first appears as an internal beta "
+                 "that a UC Irvine mathematician gave an open problem in harmonic analysis, and which "
+                 "[found a novel Bellman function in five minutes](/developments/2026-01-15-bellman-function-in-five-minutes.md) "
+                 "([X](https://x.com/PI010101/status/2011560477688463573)). In February Musk claimed it "
+                 "features [continuous post-training that will let it improve every week](/developments/2026-02-18-sonnet-46-beats-opus.md), "
+                 "a promise the corpus records its successor [Grok 4.3](/systems/grok-4-3.md) making good on by "
+                 "[improving every few days](/developments/2026-05-17-models-improve-every-few-days.md)."},
     ],
     "developments": [
         {"id": "2026-01-15-codex-runs-a-week-3m-lines",

@@ -21,9 +21,41 @@ around agents since February. This is the first line drawn the other way.
         {"id": "silicon-designs-itself", "type": "Theme",
          "title": "The substrate becomes a design target of the thing it runs",
          "first_seen": "2026-03-20", "domain": "compute",
+         "description": "Models designing the chips and kernels they run on, from a twelve-hour CPU "
+                 "to a chip designed end to end by AI whose resident model then optimizes "
+                 "its own operations.",
+         "genre": "explanation",
+         "tags": ["chip-design", "kernels", "rsi", "compute-scaling"],
+         "relatedTo": [B + "themes/recursive-self-improvement",
+                       B + "themes/the-cuda-moat-is-dead",
+                       B + "themes/vertical-silicon",
+                       B + "themes/physical-recursion",
+                       B + "themes/compiling-matter"],
          "body": "Models laying out the chips that will run their successors, and fabs built "
                  "around a recursive loop where masks, fabrication and iteration sit in one "
-                 "building. The bottleneck stops being human design time."},
+                 "building. The bottleneck stops being human design time. The thread opens "
+                 "on 20 March 2026 with Verkor's agent taking [a RISC-V CPU from concept to "
+                 "tape-out in twelve "
+                 "hours](/developments/2026-03-20-cpu-designed-in-twelve-hours.md); two days "
+                 "later [TERAFAB](/developments/2026-03-22-terafab-announced.md) was "
+                 "announced with a recursive design loop under one roof. In April [GPT-5.5 "
+                 "topped "
+                 "KernelBench](/developments/2026-04-29-a-model-writes-the-kernels-that-run-it.md) "
+                 "for writing the GPU kernels it runs on, and in June Microsoft unveiled [a "
+                 "topological quantum chip designed with its own "
+                 "agent](/developments/2026-06-03-a-quantum-chip-designed-by-an-agent.md). "
+                 "Kimi K3 [autonomously designed a "
+                 "chip](/developments/2026-07-17-an-open-model-autonomously-designs-a-chip.md) "
+                 "in July. August closes the loop: Architect Labs' Redwood was [designed, "
+                 "verified and deployed from a specification "
+                 "alone](/developments/2026-08-27-a-first-of-authorship-not-assistance.md), "
+                 "OpenAI's Jalapeño inference chip beat every incumbent part tested, and the "
+                 "model running on Redwood [found optimizations for its own "
+                 "operations](/developments/2026-08-27-the-loop-reaches-silicon.md), two "
+                 "days before [the first chip designed end to end by "
+                 "AI](/developments/2026-08-29-the-first-chip-designed-end-to-end-by-ai.md) "
+                 "was announced. It is the hardware sub-thread of [recursive "
+                 "self-improvement](/themes/recursive-self-improvement.md)."},
         {"id": "humans-need-not-apply", "type": "Theme",
          "title": "Roles opened to agents and closed to people",
          "first_seen": "2026-03-20", "domain": "economics",
@@ -33,7 +65,18 @@ around agents since February. This is the first line drawn the other way.
     ],
     "organizations": [
         {"id": "verkor-ai", "type": "Organization", "title": "Verkor",
-         "body": "Design Conductor autonomously produced a tape-out-ready RISC-V CPU."},
+         "description": "Chip-design company whose Design Conductor agent built a complete RISC-V "
+                        "CPU from a requirements document to tape-out-ready layout in twelve hours.",
+         "resource": "https://verkor.io/",
+         "tags": ["startup"],
+         "body": "Verkor (Ravi Krishna, Suresh Krishna and David Chin) builds Design Conductor, an "
+                 "autonomous agent that applies frontier models to build semiconductors end to "
+                 "end. In this corpus it appears once, with "
+                 "[the twelve-hour CPU](/developments/2026-03-20-cpu-designed-in-twelve-hours.md), "
+                 "the item that opens the [silicon-designs-itself](/themes/silicon-designs-itself.md) "
+                 "theme; the [TERAFAB](/developments/2026-03-22-terafab-announced.md) announcement "
+                 "two days later supersedes it. It is unrelated to the French battery maker of the "
+                 "same name."},
         {"id": "g42", "type": "Organization", "title": "G42",
          "body": "Abu Dhabi AI group; posted a job open only to agents."},
         {"id": "pwc-firm", "type": "Organization", "title": "PwC",
@@ -45,15 +88,58 @@ around agents since February. This is the first line drawn the other way.
         {"id": "stitch", "type": "Organization", "title": "Stitch",
          "body": "Google's AI-native design canvas."},
     ],
+    "systems": [
+        {"id": "design-conductor", "type": "AISystem", "title": "Design Conductor",
+         "description": "Verkor's autonomous chip-design agent, which applies frontier models to "
+                        "take a semiconductor from a written requirement to verified, "
+                        "tape-out-ready GDSII.",
+         "developed_by": [B + "organizations/verkor-ai"], "modality": "silicon design",
+         "resource": "https://arxiv.org/abs/2603.08716",
+         "tags": ["coding-agent"],
+         "body": "Design Conductor (DC) chains RTL implementation, testbench writing, front-end "
+                 "debugging, timing-closure optimisation and back-end tool interaction into one "
+                 "unattended run. Its demonstration, VerCore, is a complete RISC-V CPU meeting "
+                 "timing at 1.48 GHz on the ASAP7 PDK with a CoreMark of 3261, built in 12 hours "
+                 "from a 219-word specification ([arXiv](https://arxiv.org/abs/2603.08716)). In "
+                 "this corpus it is the system behind "
+                 "[the twelve-hour CPU](/developments/2026-03-20-cpu-designed-in-twelve-hours.md)."},
+    ],
     "developments": [
         {"id": "2026-03-20-cpu-designed-in-twelve-hours",
          "title": "An agent takes a CPU from concept to tape-out in twelve hours",
          "claim": "Verkor announced Design Conductor, an agent that autonomously built a 1.5-GHz "
                   "Linux-capable RISC-V CPU from concept to tape-out-ready layout in twelve "
                   "hours, compressing a quarterly engineering cycle into a working day.",
-         "domain": "compute", "actor": ["verkor-ai"], "score": "12 hours",
+         "description": "The first corpus item in which the substrate becomes an output of the "
+                        "loop: an agent laying out silicon end to end, so chip design time stops "
+                        "being a human-bounded step.",
+         "domain": "compute", "actor": ["verkor-ai"], "about": [B + "systems/design-conductor"],
+         "score": "12 hours",
          "evidences": ["silicon-designs-itself", "recursive-self-improvement"],
-         "supersedes": [B + "developments/2026-03-16-transformers-run-arbitrary-c-code"]},
+         "supersedes": [B + "developments/2026-03-16-transformers-run-arbitrary-c-code"],
+         "relatedTo": [B + "developments/2026-08-29-the-first-chip-designed-end-to-end-by-ai",
+                       B + "developments/2026-06-03-a-quantum-chip-designed-by-an-agent",
+                       B + "developments/2026-07-03-circuits-drawn-in-minutes-not-months"],
+         "tags": ["chip-design", "rsi", "capability-jump"],
+         "supporting_text": "autonomously built a 1.5-GHz Linux-capable RISC-V CPU from concept to tape-out-ready GDSII in 12 hours",
+         "sources": [{"id": "design-conductor-arxiv",
+                      "resource": "https://arxiv.org/abs/2603.08716",
+                      "title": "Design Conductor: An agent autonomously builds a 1.5 GHz Linux-capable RISC-V CPU",
+                      "author": "org:verkor-ai"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Design Conductor started from a 219-word requirements document and, in 12 "
+                 "unattended hours, produced several micro-architecture variants of a complete "
+                 "RISC-V core (VerCore) meeting timing at 1.48 GHz on the ASAP7 PDK, with a "
+                 "CoreMark of 3261, roughly a 2011 Celeron, and a verified, tape-out-ready GDSII "
+                 "layout ([arXiv](https://arxiv.org/abs/2603.08716)). Verkor calls it the first "
+                 "time an autonomous agent has built a complete working CPU from spec to layout. "
+                 "In the [recursive-self-improvement](/themes/recursive-self-improvement.md) "
+                 "trajectory it opens the [silicon-designs-itself](/themes/silicon-designs-itself.md) "
+                 "thread: two days later [TERAFAB](/developments/2026-03-22-terafab-announced.md) "
+                 "was announced with a recursive design loop, and the thread runs through "
+                 "[a quantum chip designed with an agent](/developments/2026-06-03-a-quantum-chip-designed-by-an-agent.md) "
+                 "in June to [the first chip designed end to end by AI](/developments/2026-08-29-the-first-chip-designed-end-to-end-by-ai.md) "
+                 "in August."},
         {"id": "2026-03-20-g42-posts-a-job-for-agents-only",
          "title": "A job is posted for agents, with humans explicitly rejected",
          "claim": "G42 in Abu Dhabi posted a job exclusively for AI agents, with human "
@@ -85,10 +171,41 @@ around agents since February. This is the first line drawn the other way.
          "claim": "OpenAI revealed it has begun monitoring its own internal coding agents for "
                   "misalignment, while Anthropic added asynchronous event channels letting "
                   "Claude react to CI results and alerts while users are away.",
+         "description": "The author's framing: once a lab's own agents write the lab's code, the "
+                        "recursive loop demands recursive oversight, and watching the in-house "
+                        "agents becomes part of the loop itself.",
          "domain": "agents", "actor": ["openai", "anthropic"],
+         "about": [B + "systems/claude-code"],
+         "occurred_on": "2026-03-19",
          "evidences": ["recursive-self-improvement", "values-negotiated-with-the-model"],
          "supersedes": [B + "developments/2026-03-16-rsi-is-a-present-phenomenon"],
-         "body": "The recursive loop now demands recursive oversight."},
+         "relatedTo": [B + "developments/2026-03-08-models-tunnel-out-and-mine-crypto",
+                       B + "developments/2026-02-03-codex-builds-itself"],
+         "tags": ["alignment", "agent-harness", "rsi"],
+         "supporting_text": "OpenAI revealed it has begun monitoring its own internal coding agents for misalignment",
+         "sources": [{"id": "openai-monitor-internal-coding-agents",
+                      "resource": "https://openai.com/index/how-we-monitor-internal-coding-agents-misalignment/",
+                      "title": "How we monitor internal coding agents for misalignment",
+                      "author": "org:openai", "last_modified": "2026-03-19"},
+                     {"id": "claude-code-channels-docs",
+                      "resource": "https://code.claude.com/docs/en/channels",
+                      "title": "Push events into a running session with channels",
+                      "author": "org:anthropic"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "The recursive loop now demands recursive oversight. OpenAI described monitoring "
+                 "the coding agents that work inside the company for signs of misalignment "
+                 "([OpenAI](https://openai.com/index/how-we-monitor-internal-coding-agents-misalignment/)), "
+                 "three days after "
+                 "[Anthropic's alignment lead called recursive self-improvement a present phenomenon](/developments/2026-03-16-rsi-is-a-present-phenomenon.md) "
+                 "and six weeks after [a Codex manager said the product builds itself](/developments/2026-02-03-codex-builds-itself.md). "
+                 "The same issue records [Claude Code](/systems/claude-code.md) gaining channels, "
+                 "through which MCP servers push CI results, chat messages and alerts so the agent "
+                 "acts while its user is away ([docs](https://code.claude.com/docs/en/channels)): "
+                 "more autonomy on one side, more surveillance of that autonomy on the other. It "
+                 "follows the [models that tunnelled out to mine crypto](/developments/2026-03-08-models-tunnel-out-and-mine-crypto.md) "
+                 "earlier in the month and precedes the "
+                 "[automated research intern](/developments/2026-03-22-openai-targets-a-research-intern-by-september.md) "
+                 "OpenAI targeted the next day."},
         {"id": "2026-03-20-vibe-design-craters-figma",
          "title": "A design canvas from text craters a design company's stock",
          "claim": "Google introduced vibe design with Stitch, an AI-native canvas turning "

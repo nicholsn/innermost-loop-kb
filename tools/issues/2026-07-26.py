@@ -28,6 +28,23 @@ reflection equations.
     "organizations": [
         {"id": "arc-prize-org", "type": "Organization", "title": "ARC Prize Foundation"},
     ],
+    "people": [
+        {"id": "logan-kilpatrick", "type": "Person", "title": "Logan Kilpatrick", "name": "Logan Kilpatrick",
+         "description": "American software engineer whom the newsletter consistently identifies as Google's, a recurring forecaster in the corpus, here predicting that automating AI research will come to look like data cleaning.",
+         "resource": "https://x.com/officiallogank",
+         "sameAs": ["http://www.wikidata.org/entity/Q134580710"],
+         "tags": ["researcher"],
+         "body": "Logan Kilpatrick appears in the corpus as 'Google's Logan Kilpatrick'; his own [X profile](https://x.com/officiallogank) "
+                 "describes him as a member of technical staff working on Gemini, Google AI Studio, the Gemini API and Kaggle. "
+                 "He is a serial forecaster of "
+                 "the loop: he suggested [superintelligence would arrive as existing weights unlocked by scaffolding](/developments/2025-12-12-kilpatrick-scaffolding-endgame.md), "
+                 "called [2026 the year of embodied AI](/developments/2025-12-22-kilpatrick-2026-embodied.md), warned that "
+                 "[the compute gap grows daily](/developments/2026-02-26-compute-gap-grows-daily.md) and "
+                 "[posted then deleted a robotics claim](/developments/2026-03-23-deleted-post-about-a-robotics-breakthrough.md). "
+                 "In the recursive-self-improvement cluster he supplies the prediction, beside the labs' "
+                 "[job listings read as a roadmap](/developments/2026-07-26-the-job-board-is-the-roadmap.md), that "
+                 "automating AI research will come to look like data cleaning."},
+    ],
     "developments": [
         {"id": "2026-07-26-a-quadrupled-score-on-the-hardest-benchmark",
          "title": "A model quadruples the best score on the hardest reasoning benchmark",
@@ -53,13 +70,48 @@ reflection equations.
          "title": "Over a thousand job listings read as a public AGI roadmap",
          "claim": "All 1,171 job listings at OpenAI and Anthropic read like a public AGI roadmap, "
                   "covering AI-designed chips, simulated universes and staff to measure when the "
-                  "loop accelerates, while one researcher predicted automating AI research will "
+                  "loop accelerates, while Logan Kilpatrick predicted automating AI research will "
                   "come to look like data cleaning.",
-         "domain": "models", "actor": ["openai", "anthropic"], "score": "1,171 listings",
+         "description": "Labs that decline to publish timelines publish job listings instead, and "
+                        "paying staff to measure when the loop accelerates is a commitment no blog "
+                        "post makes: the newsletter's case that the hiring plan is the disclosed plan.",
+         "domain": "models", "actor": ["openai", "anthropic", "people/logan-kilpatrick"], "score": "1,171 listings",
          "evidences": ["hiring-as-roadmap", "recursive-self-improvement", "a-model-trains-a-model"],
-         "supersedes": [B + "developments/2026-07-24-an-ai-kill-switch-act"],
-         "body": "One researcher admitted he would press a magic slowdown button if "
-                 "one existed."},
+         "supersedes": [B + "developments/2026-07-24-an-ai-kill-switch-act",
+                        B + "developments/2026-06-01-a-lab-starts-hiring-for-robots"],
+         "relatedTo": [B + "developments/2026-05-20-karpathy-joins-to-lead-pretraining",
+                       B + "developments/2026-07-19-we-want-k2-to-help-build-k3",
+                       B + "people/roon"],
+         "tags": ["rsi", "ai-r-and-d", "labor", "forecast"],
+         "supporting_text": "read like a public AGI roadmap",
+         "sources": [{"id": "openai-anthropic-job-listings-roadmap",
+                      "resource": "https://x.com/imjustnewatai/status/2081221459226034524",
+                      "title": "All 1,171 job listings at OpenAI and Anthropic, read as an AGI roadmap"},
+                     {"id": "kilpatrick-ai-research-as-data-cleaning",
+                      "resource": "https://x.com/officiallogank/status/2081117440990404649",
+                      "title": "Automating AI research will look like data cleaning",
+                      "author": "human:logan-kilpatrick"},
+                     {"id": "roon-magic-slowdown-button",
+                      "resource": "https://x.com/tszzl/status/2081122092096065771",
+                      "title": "Roon on pressing a magic slowdown button", "author": "human:roon"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "A reading of [all 1,171 open roles at OpenAI and Anthropic](https://x.com/imjustnewatai/status/2081221459226034524) "
+                 "found the labs advertising for AI-designed chips, simulated universes and staff whose job is to "
+                 "measure when the loop accelerates, a roadmap disclosed through payroll rather than a blog post. "
+                 "Beside it [Logan Kilpatrick](/people/logan-kilpatrick.md) "
+                 "[predicted](https://x.com/officiallogank/status/2081117440990404649) that automating AI research "
+                 "will come to look like data cleaning, [Elon Musk](/people/elon-musk.md) replied 'So true', and "
+                 "[Roon](/people/roon.md) [admitted](https://x.com/tszzl/status/2081122092096065771) he would press a "
+                 "magic slowdown button if one existed, even as alignment researchers work like 'many armed deities'. "
+                 "It belongs to the [hiring-as-roadmap](/themes/hiring-as-roadmap.md) strand of the "
+                 "[recursive-self-improvement](/themes/recursive-self-improvement.md) trajectory: "
+                 "[Karpathy's move to lead pre-training](/developments/2026-05-20-karpathy-joins-to-lead-pretraining.md) "
+                 "gave the loop a job title and [OpenAI Robotics' hiring call](/developments/2026-06-01-a-lab-starts-hiring-for-robots.md) "
+                 "a headcount, while a week earlier Moonshot's chief executive had said the same plan out loud as "
+                 "[K2 helping to build K3](/developments/2026-07-19-we-want-k2-to-help-build-k3.md). The same issue's "
+                 "[Claude Opus 5 system card](/developments/2026-07-26-eighty-percent-of-a-system-prompt-deleted.md) "
+                 "rated the model below the automated-R&D red line, the threshold the newly advertised measurement "
+                 "staff exist to watch."},
         {"id": "2026-07-26-twenty-firms-urge-against-open-weight-restrictions",
          "title": "Twenty-plus firms urge policymakers against restricting open weights",
          "claim": "Nvidia, Microsoft, Meta, Palantir and more than twenty other firms urged "

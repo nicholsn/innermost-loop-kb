@@ -10,7 +10,7 @@ actor:
   - https://nicholsn.github.io/innermost-loop-kb/organizations/amazon
   - https://nicholsn.github.io/innermost-loop-kb/organizations/anysphere
   - https://nicholsn.github.io/innermost-loop-kb/organizations/microsoft
-  - https://nicholsn.github.io/innermost-loop-kb/organizations/vercel-inc
+  - https://nicholsn.github.io/innermost-loop-kb/organizations/vercel
 evidences:
   - https://nicholsn.github.io/innermost-loop-kb/themes/agent-society
   - https://nicholsn.github.io/innermost-loop-kb/themes/network-over-node

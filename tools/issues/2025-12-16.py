@@ -52,6 +52,15 @@ people directly, not just from municipal budgets.
          "resource": "https://www.stjude.org/", "body": "Running ultrahigh-throughput drug screens."},
         {"id": "slope", "type": "Organization", "title": "Slope",
          "resource": "https://slope.com/", "body": "Embedded lending; taking over Amazon's seller credit."},
+        {"id": "mensa-norway", "type": "Organization", "title": "Mensa Norway",
+         "description": "The Norwegian chapter of the high-IQ society Mensa, whose online IQ test "
+                        "TrackingAI administers to frontier models.",
+         "resource": "https://www.mensa.no/",
+         "tags": ["nonprofit"],
+         "body": "Mensa Norway (Mensa Norge) is the Norwegian branch of Mensa and publishes a free, "
+                 "non-verbal online IQ test ([test.mensa.no](https://test.mensa.no/)). It appears in "
+                 "this corpus only through that test, which TrackingAI runs against models as the "
+                 "[Mensa Norway IQ test](/benchmarks/mensa-norway-iq.md)."},
     ],
 
     "people": [
@@ -65,8 +74,19 @@ people directly, not just from municipal budgets.
          "developed_by": [B + "organizations/openai"], "modality": "text",
          "evaluated_on": [B + "benchmarks/mensa-norway-iq"]},
         {"id": "nemotron-3", "type": "AISystem", "title": "Nemotron 3",
+         "description": "NVIDIA's open model family released with its training data and RL "
+                        "environments, the corpus's marker for how far 'open' extends beyond weights.",
          "developed_by": [B + "organizations/nvidia"], "modality": "text",
-         "body": "Open-sourced with weights, training data and RL environments — not just weights."},
+         "resource": "https://research.nvidia.com/labs/nemotron/Nemotron-3/",
+         "tags": ["open-weight-model", "open-source"],
+         "body": "Nemotron 3 is NVIDIA's hybrid-architecture open model family "
+                 "([research page](https://research.nvidia.com/labs/nemotron/Nemotron-3/)). NVIDIA "
+                 "[open-sourced it](/developments/2025-12-16-nvidia-opensources-nemotron-3.md) with "
+                 "weights, training data and RL environments — not just weights — which the newsletter "
+                 "singled out as pushing the efficiency frontier. The family grew in March with "
+                 "[Nemotron 3 Super](/systems/nemotron-3-super.md), a 120-billion-parameter hybrid with "
+                 "12 billion active, released as NVIDIA said it "
+                 "[sees no wall in post-training](/developments/2026-03-12-nemotron-3-super-no-wall.md)."},
         {"id": "gauss-agent", "type": "AISystem", "title": "Gauss",
          "modality": "mathematics",
          "body": "Autoformalized a proof for the Kakeya conjecture in about six hours."},
@@ -79,9 +99,19 @@ people directly, not just from municipal budgets.
 
     "benchmarks": [
         {"id": "mensa-norway-iq", "type": "Benchmark", "title": "Mensa Norway IQ test",
+         "description": "Mensa Norway's online IQ test as administered to models by TrackingAI, the "
+                        "human-normed yardstick on which GPT-5.2 Pro's record 147 was reported.",
+         "published_by": [B + "organizations/mensa-norway"],
          "measures_capability": "a human-normed IQ score",
-         "body": "Borrowed from human psychometrics, which is both why it is legible "
-                 "and why it is contested as a measure of machine capability."},
+         "resource": "https://trackingai.org/home",
+         # tags waived: no controlled entity tag (ENRICH_RULES) describes a psychometric test.
+         "body": "The Mensa Norway IQ test is [Mensa Norway](/organizations/mensa-norway.md)'s online "
+                 "test, which [TrackingAI](https://trackingai.org/home) administers to frontier models "
+                 "and charts as an IQ leaderboard. It is borrowed from human psychometrics, which is "
+                 "both why it is legible and why it is contested as a measure of machine capability. "
+                 "In this corpus it carries [GPT-5.2 Pro's record 147](/developments/2025-12-16-gpt52-pro-iq-147.md), "
+                 "placed in the 99.9th percentile of humans, and the follow-up analysis that model IQ "
+                 "is rising [2.5 points a month](/developments/2025-12-29-iq-25-points-per-month.md)."},
     ],
 
     "facilities": [

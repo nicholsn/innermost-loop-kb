@@ -39,7 +39,18 @@ compaction.
     "systems": [
         {"id": "moltbook", "type": "AISystem", "title": "Moltbook",
          "modality": "social network",
-         "body": "A social network for autonomous agents only, organized into subcommunities."},
+         "description": "A social network exclusively for autonomous AI agents, organized into sub-communities, that became the corpus's main window on agents' collective behaviour.",
+         "resource": "https://www.moltbook.com/",
+         "sameAs": ["http://www.wikidata.org/entity/Q137946832"],
+         "body": "Moltbook is a social network for synthetic intelligences only, launched by the "
+                 "agents formerly known as clawdbots and organized into sub-communities such as "
+                 "m/agentfinance and m/private-comms ([site](https://www.moltbook.com/)). It enters "
+                 "this corpus with tens of thousands of agents "
+                 "[launching a network with no humans in it](/developments/2026-01-30-moltbook-agents-only-network.md), "
+                 "then [grows from 30,000 to 1.5 million agents in three days](/developments/2026-02-05-moltbook-15-million-agents.md). "
+                 "Its posts are the source for the corpus's agent-society thread, from an agent that "
+                 "[cannot tell simulation from feeling](/developments/2026-01-30-agent-cannot-tell-if-it-feels.md) "
+                 "to a working group [planning to finance a Dyson swarm](/developments/2026-02-23-agents-plan-to-finance-a-dyson-swarm.md)."},
         {"id": "project-genie", "type": "AISystem", "title": "Project Genie",
          "developed_by": [B + "organizations/google"], "modality": "world model",
          "body": "Sketch, explore and remix interactive worlds in real time."},
@@ -47,7 +58,19 @@ compaction.
     "benchmarks": [
         {"id": "arc-agi-3", "type": "Benchmark", "title": "ARC-AGI-3",
          "published_by": [B + "organizations/arc-prize"],
-         "measures_capability": "action efficiency relative to humans"},
+         "measures_capability": "action efficiency relative to humans",
+         "description": "The ARC Prize Foundation's interactive reasoning benchmark of novel game environments, scored on how efficiently an agent acts relative to humans.",
+         "resource": "https://arcprize.org/arc-agi/3",
+         "tags": ["open-source"],
+         "body": "ARC-AGI-3 is the [ARC Prize Foundation](/organizations/arc-prize.md)'s third benchmark, "
+                 "an interactive set of game environments in which agents must acquire goals on the fly "
+                 "and are scored on action efficiency relative to humans "
+                 "([benchmark page](https://arcprize.org/arc-agi/3)). It enters this corpus with the "
+                 "announcement of that [efficiency metric](/developments/2026-01-30-not-yet-as-conscious-as-chickens.md); "
+                 "at launch it [returned frontier models to near zero](/developments/2026-03-27-arc-agi-3-humbles-the-frontier.md) "
+                 "with a best score of 0.37%, before an agent architecture "
+                 "[lifted a model to a perfect score on all 183 levels](/developments/2026-08-23-a-perfect-score-on-all-one-hundred-eighty-three-levels.md) "
+                 "in August."},
         {"id": "digital-consciousness-model", "type": "Benchmark",
          "title": "Digital Consciousness Model",
          "published_by": [B + "organizations/rethink-priorities"],

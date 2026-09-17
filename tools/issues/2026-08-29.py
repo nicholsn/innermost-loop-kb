@@ -26,9 +26,40 @@ space is now the whole game.
                  "else's weights recalculates."},
     ],
     "organizations": [
-        {"id": "architect-labs", "type": "Organization", "title": "Architect Labs"},
+        {"id": "architect-labs", "type": "Organization", "title": "Architect Labs",
+         "description": "Startup building AI systems that design and provably verify silicon, which "
+                        "announced the first AI chip designed end-to-end by AI.",
+         "resource": "https://architectlabs.com/",
+         "tags": ["startup", "chipmaker"],
+         "body": "Architect Labs builds AI systems that design and formally verify chips for modern "
+                 "workloads, with the human contribution ending at a high-level specification. In "
+                 "this corpus it is the company behind the [Redwood](/hardware/redwood.md) accelerator recorded as "
+                 "[a first of authorship rather than assistance](/developments/2026-08-27-a-first-of-authorship-not-assistance.md), "
+                 "whose resident model then [found optimizations for its own operations](/developments/2026-08-27-the-loop-reaches-silicon.md), "
+                 "and the daily issue's report of "
+                 "[the first AI chip designed end-to-end by AI](/developments/2026-08-29-the-first-chip-designed-end-to-end-by-ai.md)."},
         {"id": "earth-species", "type": "Organization", "title": "Earth Species Project"},
         {"id": "mach33-inc", "type": "Organization", "title": "Mach33"},
+    ],
+    "systems": [
+        {"id": "ai-co-scientist", "type": "AISystem", "title": "AI Co-Scientist",
+         "description": "Google's Gemini-based multi-agent research system that generates and tests "
+                        "scientific hypotheses, and in this corpus designed a reactor route, predicted "
+                        "bacterial swarming and invented a model architecture.",
+         "developed_by": [B + "organizations/google"],
+         "modality": "research agent",
+         "resource": "https://research.google/blog/accelerating-scientific-breakthroughs-with-an-ai-co-scientist/",
+         "tags": ["research-agent"],
+         "body": "Google's AI co-scientist is a multi-agent system built on Gemini that generates, "
+                 "debates and ranks scientific hypotheses and proposes the experiments to test them "
+                 "([Google Research](https://research.google/blog/accelerating-scientific-breakthroughs-with-an-ai-co-scientist/)). "
+                 "The corpus first records it in May, when Google "
+                 "[tied it into a single science stack](/developments/2026-05-20-gemini-for-science.md) "
+                 "with evolutionary search and notebooks; in August it "
+                 "[designed a reactor route, predicted bacterial swarming and invented an architecture beating six frontier models](/developments/2026-08-29-a-co-scientist-invents-an-architecture-beating-six-models.md), "
+                 "in the same issue in which Anthropic's "
+                 "[Model Hardware Standard](/developments/2026-08-29-a-standard-that-lets-agents-drive-instruments.md) "
+                 "gave such agents control of laboratory instruments."},
     ],
     "developments": [
         {"id": "2026-08-29-neutral-infrastructure-ends",
@@ -70,9 +101,42 @@ space is now the whole game.
          "claim": "Google's Co-Scientist designed a safe precursor route for MXene nanomaterials "
                   "on a real deposition reactor, predicted bacterial swarming matching unpublished "
                   "wet-lab data, and invented an architecture beating six frontier models.",
+         "description": "Science becomes an agentic loop in the author's framing: one research agent "
+                        "spans materials, microbiology and machine-learning design, and the last of "
+                        "the three feeds back into the models that run it.",
          "domain": "science", "actor": ["google"],
+         "about": [B + "systems/ai-co-scientist"],
+         "score": "beats six frontier models",
+         "occurred_on": "2026-08-27",
          "evidences": ["automated-science", "research-taste-trained", "recursive-self-improvement"],
-         "supersedes": [B + "developments/2026-08-23-research-taste-trained-by-reinforcement-learning"]},
+         "supersedes": [B + "developments/2026-08-23-research-taste-trained-by-reinforcement-learning",
+                        B + "developments/2026-05-20-gemini-for-science"],
+         "relatedTo": [B + "developments/2026-08-16-an-ai-scientist-beats-far-larger-models",
+                       B + "developments/2026-02-08-alphaevolve-finds-new-activations",
+                       B + "developments/2026-08-05-a-company-founded-to-automate-the-scientific-method"],
+         "tags": ["autonomous-research", "ai-r-and-d", "rsi"],
+         "supporting_text": "invented an architecture beating six frontier models",
+         "sources": [{"id": "google-co-scientist-real-world-arxiv",
+                      "resource": "https://arxiv.org/abs/2608.26701",
+                      "title": "Accelerating Scientific Research with Gemini in the Real-World",
+                      "author": "org:google", "last_modified": "2026-08-27"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Google's paper *Accelerating Scientific Research with Gemini in the Real-World* "
+                 "([arXiv:2608.26701](https://arxiv.org/abs/2608.26701), submitted 27 August 2026) "
+                 "reports the [AI Co-Scientist](/systems/ai-co-scientist.md) working across three "
+                 "domains: it designed a safe precursor route for MXene nanomaterials that was run "
+                 "on a real deposition reactor, predicted E. coli swarming that matched wet-lab data "
+                 "not yet published, and proposed a machine-learning architecture that outperformed "
+                 "six frontier models. The third result is the one that closes the loop, since a "
+                 "research agent inventing a better architecture is "
+                 "[recursive self-improvement](/themes/recursive-self-improvement.md) applied to "
+                 "the field that builds it. It follows the May report that Google "
+                 "[tied the co-scientist into one science stack](/developments/2026-05-20-gemini-for-science.md) "
+                 "and Inherent's Faraday, "
+                 "[trained for research taste](/developments/2026-08-23-research-taste-trained-by-reinforcement-learning.md); "
+                 "the same issue records Anthropic's "
+                 "[Model Hardware Standard](/developments/2026-08-29-a-standard-that-lets-agents-drive-instruments.md) "
+                 "giving such agents hands on microscopes and robot arms."},
         {"id": "2026-08-29-a-standard-that-lets-agents-drive-instruments",
          "title": "A hardware standard lets agents drive microscopes and robot arms",
          "claim": "Anthropic previewed the Model Hardware Standard, letting agents drive "
@@ -94,9 +158,51 @@ space is now the whole game.
          "claim": "Architect Labs announced the first AI chip designed end-to-end by AI, just as "
                   "Washington weighed new semiconductor tariffs and a rule curbing China's remote "
                   "chip access.",
+         "description": "Silicon enters the loop as the state tightens its grip on it: the author "
+                        "pairs a startup's autonomously designed chip with Washington's tariffs and "
+                        "remote-access rule as the two forces now shaping compute.",
          "domain": "compute", "actor": ["architect-labs", "white-house", "china"],
+         "about": [B + "hardware/redwood"],
          "evidences": ["silicon-designs-itself", "recursive-self-improvement", "the-cuda-moat-is-dead"],
-         "supersedes": [B + "developments/2026-08-27-an-inference-chip-beats-every-incumbent-tested"]},
+         "supersedes": [B + "developments/2026-08-27-an-inference-chip-beats-every-incumbent-tested",
+                        B + "developments/2026-08-27-a-first-of-authorship-not-assistance"],
+         "relatedTo": [B + "developments/2026-08-27-the-loop-reaches-silicon",
+                       B + "developments/2026-03-20-cpu-designed-in-twelve-hours",
+                       B + "developments/2026-07-17-an-open-model-autonomously-designs-a-chip"],
+         "tags": ["chip-design", "rsi", "policy"],
+         "supporting_text": "the first AI chip designed end-to-end by AI",
+         "sources": [{"id": "wissner-gross-architect-labs-chip-x",
+                      "resource": "https://x.com/alexwg/status/2093039869887119567",
+                      "title": "Alex Wissner-Gross on X: Architect Labs announces the first AI chip "
+                               "designed end-to-end by AI",
+                      "author": "human:alex-wissner-gross"},
+                     {"id": "cnbc-trump-semiconductor-tariffs",
+                      "resource": "https://www.cnbc.com/2026/08/27/trump-semiconductor-tech-tariffs.html",
+                      "title": "CNBC: Trump weighs new semiconductor and tech tariffs",
+                      "author": "org:cnbc", "last_modified": "2026-08-27"},
+                     {"id": "information-china-remote-chip-access-rule",
+                      "resource": "https://www.theinformation.com/articles/trump-administration-working-ai-rule-curb-chinas-remote-access-chips",
+                      "title": "The Information: Trump administration working on AI rule to curb "
+                               "China's remote access to chips",
+                      "author": "org:the-information"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "The announcement, relayed by the newsletter's author on X "
+                 "([post](https://x.com/alexwg/status/2093039869887119567)), is the public version "
+                 "of the [Redwood](/hardware/redwood.md) accelerator that the corpus's feature recorded two days earlier as "
+                 "[a first of authorship rather than assistance](/developments/2026-08-27-a-first-of-authorship-not-assistance.md): "
+                 "designed, verified and deployed by an AI system from a human-written "
+                 "specification, after which the model running on it "
+                 "[found optimizations for its own operations](/developments/2026-08-27-the-loop-reaches-silicon.md). "
+                 "[Architect Labs](/organizations/architect-labs.md) describes itself as building "
+                 "AI systems that design and provably verify silicon. The issue sets the milestone "
+                 "against Washington's "
+                 "[proposed semiconductor tariffs](https://www.cnbc.com/2026/08/27/trump-semiconductor-tech-tariffs.html) "
+                 "and a [rule curbing China's remote access to chips](https://www.theinformation.com/articles/trump-administration-working-ai-rule-curb-chinas-remote-access-chips), "
+                 "the state tightening its hold on compute as its design leaves human hands. In the "
+                 "[silicon-designs-itself](/themes/silicon-designs-itself.md) storyline it follows "
+                 "Verkor's [twelve-hour CPU](/developments/2026-03-20-cpu-designed-in-twelve-hours.md), "
+                 "Kimi K3's [autonomous chip design](/developments/2026-07-17-an-open-model-autonomously-designs-a-chip.md) "
+                 "and OpenAI's [Jalapeño inference chip](/developments/2026-08-27-an-inference-chip-beats-every-incumbent-tested.md)."},
         {"id": "2026-08-29-fifteen-gigawatts-that-cannot-be-switched-on",
          "title": "A founder warns 15 gigawatts of 2027 compute cannot be switched on in 2027",
          "claim": "Musk warned roughly 15 gigawatts of 2027 compute cannot be switched on in 2027 "

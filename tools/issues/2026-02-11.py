@@ -33,6 +33,35 @@ consequential year for the species.
          "body": "Doubles AlphaFold 3's accuracy on protein-ligand prediction, finding binding "
                  "pockets from sequence alone."},
     ],
+    "people": [
+        {"id": "jimmy-ba", "type": "Person", "title": "Jimmy Ba", "name": "Jimmy Ba",
+         "description": "Machine-learning researcher, co-author of the Adam optimizer and xAI "
+                        "co-founder, who resigned in February 2026 warning that recursive "
+                        "self-improvement loops would likely go live within twelve months.",
+         "resource": "https://x.com/jimmybajimmyba",
+         "sameAs": ["http://www.wikidata.org/entity/Q50380592"],
+         "tags": ["researcher", "founder"],
+         "body": "Jimmy Ba is a Canadian machine-learning researcher, known for co-authoring the "
+                 "Adam optimizer, and one of the founding team of [xAI](/organizations/xai.md). "
+                 "In this corpus he appears once, at the moment of his departure: [an xAI "
+                 "co-founder resigns warning of live loops within a year]"
+                 "(/developments/2026-02-11-xai-cofounder-resigns-warning.md), a twelve-month "
+                 "horizon on recursive self-improvement delivered from inside a frontier lab."},
+    ],
+    "roles": [
+        {"id": "jimmy-ba-xai-cofounder", "type": "Role",
+         "title": "Jimmy Ba, co-founder of xAI",
+         "roleName": "Co-founder",
+         "memberOf": [B + "organizations/xai"],
+         "holder": [B + "people/jimmy-ba"],
+         "description": "The position he resigned from in February 2026 with the warning that "
+                        "recursive self-improvement loops likely go live within twelve months.",
+         "body": "The newsletter identifies Jimmy Ba as an xAI co-founder in the issue that "
+                 "records [his resignation](/developments/2026-02-11-xai-cofounder-resigns-warning.md); "
+                 "the following issue notes Musk [restructuring xAI's teams]"
+                 "(/developments/2026-02-12-compute-shifts-to-realtime-video.md) after the "
+                 "co-founders' exit."},
+    ],
     "developments": [
         {"id": "2026-02-11-singularity-dated-july-18-2034",
          "title": "A regression puts the Singularity on a Tuesday in 2034",
@@ -48,9 +77,38 @@ consequential year for the species.
          "claim": "xAI co-founder Jimmy Ba resigned warning that recursive self-improvement "
                   "loops likely go live within twelve months and that 2026 will be the most "
                   "consequential year for the species.",
-         "domain": "agents", "actor": ["xai"],
+         "description": "A frontier-lab co-founder puts a twelve-month horizon on live loops "
+                        "as he leaves, a forecast delivered on the way out rather than in a "
+                        "fundraising pitch or a product launch.",
+         "domain": "agents", "actor": ["xai", "people/jimmy-ba"], "score": "12 months",
          "evidences": ["recursive-self-improvement", "takeoff-declared"],
-         "supersedes": [B + "developments/2026-02-08-100pct-of-product-code"]},
+         "supersedes": [B + "developments/2026-02-08-100pct-of-product-code"],
+         "relatedTo": [B + "developments/2026-01-04-musk-enters-the-singularity",
+                       B + "developments/2026-01-10-xai-used-claude-to-build-grok",
+                       B + "developments/2026-02-12-compute-shifts-to-realtime-video"],
+         "tags": ["rsi", "forecast"],
+         "supporting_text": "\u201crecursive self-improvement loops likely go live in the next 12 months\u201d",
+         "sources": [{"id": "jimmy-ba-resignation-x-post",
+                      "resource": "https://x.com/jimmybajimmyba/status/2021374875793801447",
+                      "title": "Jimmy Ba's resignation note from xAI (post on X)",
+                      "author": "human:jimmy-ba"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Jimmy Ba, a co-founder of [xAI](/organizations/xai.md), announced his "
+                 "resignation on X with the warning that recursive self-improvement loops "
+                 "\u201clikely go live in the next 12 months\u201d and that 2026 would be the most "
+                 "consequential year for the species "
+                 "([post](https://x.com/jimmybajimmyba/status/2021374875793801447)). It lands "
+                 "three days after Anthropic's [effectively-100% product code]"
+                 "(/developments/2026-02-08-100pct-of-product-code.md) and five weeks after his "
+                 "company's owner [declared the Singularity entered]"
+                 "(/developments/2026-01-04-musk-enters-the-singularity.md); the next issue "
+                 "records Musk [restructuring xAI's teams]"
+                 "(/developments/2026-02-12-compute-shifts-to-realtime-video.md) after the "
+                 "co-founders' exit. In the [takeoff-declared](/themes/takeoff-declared.md) "
+                 "series it is a dated horizon for live loops from a frontier-lab co-founder, to "
+                 "be set against the [eight-months-to-intern-researchers report]"
+                 "(/developments/2026-01-09-openai-eight-months-to-intern-researchers.md) from "
+                 "OpenAI a month earlier."},
         {"id": "2026-02-11-poetiq-55pct-hle",
          "title": "Orchestrating three labs' models takes 55% on Humanity's Last Exam",
          "claim": "Poetiq reached a state-of-the-art 55% on Humanity's Last Exam by "

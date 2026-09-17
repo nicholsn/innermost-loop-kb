@@ -19,9 +19,34 @@ nearly doubled after April 2024, on the shift to reasoning.
     },
     "organizations": [
         {"id": "poetiq", "type": "Organization", "title": "Poetiq",
-         "body": "Builds harnesses that raise base-model performance without retraining."},
+         "description": "AI startup that builds inference-time harnesses which lift frontier-model "
+                        "scores without retraining, from 75% on ARC-AGI-2 to a self-optimizing Metasystem.",
+         "resource": "https://poetiq.ai/",
+         "sameAs": ["http://www.wikidata.org/entity/Q137132799"],
+         "tags": ["startup"],
+         "body": "Builds harnesses that raise base-model performance without retraining — "
+                 "scaffolding around other labs' models rather than models of its own. In this "
+                 "corpus its harness on GPT-5.2-xhigh "
+                 "[took ARC-AGI-2 to 75% at under $8 a problem](/developments/2025-12-24-poetiq-harness-arc-agi-2.md) "
+                 "without touching the base weights, it later "
+                 "[orchestrated Gemini, GPT and Claude to 55% on Humanity's Last Exam](/developments/2026-02-11-poetiq-55pct-hle.md), "
+                 "and in August it unveiled a "
+                 "[self-optimizing Metasystem](/developments/2026-08-08-a-self-optimizing-optimizer.md) "
+                 "that upgrades its own harnesses, prompts and code, arguing recursive "
+                 "self-improvement is the fastest path to superintelligence."},
         {"id": "minimax", "type": "Organization", "title": "MiniMax",
-         "resource": "https://www.minimax.io/", "body": "Chinese lab shipping open-weight models."},
+         "description": "Chinese AI lab shipping the open-weight MiniMax M2 model line, from the "
+                        "systems-language-tuned M2.1 to M2.7, which it said participates in its own evolution.",
+         "resource": "https://www.minimax.io/",
+         "sameAs": ["http://www.wikidata.org/entity/Q130263208"],
+         "tags": ["startup", "open-source"],
+         "body": "Chinese lab shipping open-weight models. In this corpus MiniMax releases "
+                 "[M2.1](/systems/minimax-m2-1.md), "
+                 "[tuned for Rust, Java and C++](/developments/2025-12-24-minimax-m2-1-systems-languages.md) "
+                 "rather than Python alone, and three months later [M2.7](/systems/minimax-m2-7.md), "
+                 "which it described as its first model "
+                 "[deeply participating in its own evolution](/developments/2026-03-23-minimax-model-participates-in-its-own-evolution.md) "
+                 "— the recursive-self-improvement claim arriving from the other side of the Pacific."},
         {"id": "boston-dynamics", "type": "Organization", "title": "Boston Dynamics",
          "resource": "https://bostondynamics.com/", "body": "Builds the Atlas humanoid."},
         {"id": "intel", "type": "Organization", "title": "Intel",
@@ -39,17 +64,88 @@ nearly doubled after April 2024, on the shift to reasoning.
          "developed_by": [B + "organizations/google-deepmind"], "modality": "interpretability",
          "body": "Sparse autoencoders on every layer, mapping the geography of machine thought."},
         {"id": "minimax-m2-1", "type": "AISystem", "title": "MiniMax M2.1",
+         "description": "MiniMax's open-weight coding and agentic model of December 2025, tuned for "
+                        "multi-language programming in Rust, Java and C++ rather than Python alone.",
+         "resource": "https://www.minimax.io/news/minimax-m21",
          "developed_by": [B + "organizations/minimax"], "modality": "code",
-         "body": "Open-weight and tuned for Rust, Java and C++ rather than Python alone."},
+         "tags": ["open-weight-model", "coding-agent"],
+         "body": "MiniMax M2.1 is the December 2025 update to [MiniMax](/organizations/minimax.md)'s "
+                 "open-weight M2 line, which the lab's release note pitches as built for real-world "
+                 "complex tasks across many programming languages rather than Python alone "
+                 "([release note](https://www.minimax.io/news/minimax-m21)). It enters the corpus "
+                 "through its [systems-language release](/developments/2025-12-24-minimax-m2-1-systems-languages.md), "
+                 "and four days later MiniMax [wired the same agentic model to a Vita Dynamics robot dog](/developments/2025-12-28-minimax-robot-dog-zero-shot.md) "
+                 "with no prior physical-world training. Its successor "
+                 "[M2.7](/systems/minimax-m2-7.md) is the model MiniMax later described as "
+                 "[participating in its own evolution](/developments/2026-03-23-minimax-model-participates-in-its-own-evolution.md)."},
         {"id": "tesla-fsd", "type": "AISystem", "title": "Tesla FSD",
          "developed_by": [B + "organizations/tesla"], "modality": "driving"},
     ],
     "benchmarks": [
         {"id": "arc-agi-2", "type": "Benchmark", "title": "ARC-AGI-2",
-         "measures_capability": "fluid reasoning resistant to memorization"},
+         "description": "The ARC Prize Foundation's second abstraction-and-reasoning benchmark, whose "
+                        "climb from harness-driven 75% to declared saturation the corpus uses to date "
+                        "the end of fluid-intelligence tests as a ceiling.",
+         "resource": "https://arcprize.org/arc-agi/2",
+         "published_by": [B + "organizations/arc-prize"],
+         "measures_capability": "fluid reasoning resistant to memorization",
+         "tags": ["open-source"],
+         "body": "ARC-AGI-2 is the second generation of the Abstraction and Reasoning Corpus published "
+                 "by the [ARC Prize Foundation](/organizations/arc-prize.md): grid puzzles meant to "
+                 "resist memorization and measure fluid reasoning, with public training and evaluation "
+                 "sets on GitHub ([benchmark page](https://arcprize.org/arc-agi/2)). In this corpus it "
+                 "is the benchmark that a harness, not a new model, first took to "
+                 "[75% at under $8 a problem](/developments/2025-12-24-poetiq-harness-arc-agi-2.md); "
+                 "two days later the foundation "
+                 "[declared it saturated](/developments/2025-12-26-arc-declares-saturation.md), and by "
+                 "February program synthesis had "
+                 "[pushed it to 97.92%](/developments/2026-02-24-two-hours-of-video-in-a-million-tokens.md). "
+                 "The successor is [ARC-AGI-3](/benchmarks/arc-agi-3.md)."},
         {"id": "epoch-capabilities-index", "type": "Benchmark", "title": "Epoch Capabilities Index",
+         "description": "Epoch AI's composite index that places frontier models on a single capability "
+                        "scale across benchmarks, the yardstick the corpus uses for the post-April-2024 "
+                        "acceleration and later discontinuities.",
+         "resource": "https://epoch.ai/eci",
          "published_by": [B + "organizations/epoch-ai"],
-         "measures_capability": "aggregate rate of frontier capability improvement"},
+         "measures_capability": "aggregate rate of frontier capability improvement",
+         "tags": ["open-source"],
+         "body": "The Epoch Capabilities Index (ECI) is [Epoch AI](/organizations/epoch-ai.md)'s "
+                 "composite measure that combines frontier models' scores across many benchmarks into "
+                 "one capability scale, published with CC-BY data and a public repository "
+                 "([index page](https://epoch.ai/eci)). The corpus first cites it for the finding that "
+                 "[frontier improvement rates nearly doubled after April 2024](/developments/2025-12-24-epoch-capabilities-index-doubling.md) "
+                 "on the shift to reasoning, and returns to it in April 2026 when Claude Mythos's "
+                 "[benchmark sweep](/developments/2026-04-08-mythos-benchmark-sweep.md) registered as an "
+                 "apparent upward discontinuity on the index."},
+    ],
+    "people": [
+        {"id": "sholto-douglas", "type": "Person", "title": "Sholto Douglas", "name": "Sholto Douglas",
+         "description": "Anthropic AI researcher whose forecast that continual learning would be "
+                        "solved in 2026 the corpus tracks against later test-time-training results.",
+         "resource": "https://x.com/_sholtodouglas",
+         "sameAs": ["http://www.wikidata.org/entity/Q126287446"],
+         "tags": ["researcher"],
+         "body": "Sholto Douglas is an AI researcher at Anthropic. He enters the corpus through "
+                 "No Priors' 2026 prediction episode, in which he "
+                 "[predicts continual learning will be solved in 2026](/developments/2025-12-24-sholto-continual-learning-2026.md), "
+                 "triggering the total automation of knowledge work — a forecast that Stanford's "
+                 "[test-time-training result](/developments/2025-12-30-stanford-test-time-training.md) "
+                 "began to cash out six days later."},
+    ],
+    "roles": [
+        {"id": "sholto-douglas-anthropic-researcher", "type": "Role",
+         "title": "Sholto Douglas, AI researcher at Anthropic",
+         "roleName": "Researcher, RL scaling",
+         "memberOf": [B + "organizations/anthropic"],
+         "holder": [B + "people/sholto-douglas"],
+         "description": "The position from which he predicted, on the No Priors podcast, that "
+                        "continual learning would be solved in 2026.",
+         "body": "The newsletter identifies him only as \"Anthropic's Sholto Douglas\"; his X "
+                 "profile describes him as working on scaling RL at Anthropic, formerly DeepMind. "
+                 "The role matters to the "
+                 "corpus because the forecast comes from inside a frontier lab, four days after "
+                 "another Anthropic researcher "
+                 "[pivoted fully to automated alignment](/developments/2025-12-20-mcaleer-automated-alignment.md)."},
     ],
     "developments": [
         {"id": "2025-12-24-poetiq-harness-arc-agi-2",
@@ -84,9 +180,42 @@ nearly doubled after April 2024, on the shift to reasoning.
         {"id": "2025-12-24-sholto-continual-learning-2026",
          "title": "Anthropic's Sholto Douglas predicts continual learning solved in 2026",
          "claim": "Anthropic's Sholto Douglas predicted continual learning will be solved in "
-                  "2026, triggering broad automation of knowledge work.",
-         "domain": "agents", "actor": ["anthropic"],
-         "evidences": ["recursive-self-improvement"]},
+                  "2026, triggering the total automation of knowledge work.",
+         "description": "A frontier-lab insider puts a date on the missing ingredient and ties it "
+                        "directly to the end of knowledge work, giving the corpus a forecast to "
+                        "read later test-time-training results against.",
+         "domain": "agents", "actor": ["people/sholto-douglas", "anthropic"],
+         "score": "solved in 2026",
+         "evidences": ["recursive-self-improvement"],
+         "relatedTo": [B + "developments/2025-12-19-shazeer-5050-gemini-breakthrough",
+                       B + "developments/2025-12-15-ai-2027-forecast-accuracy",
+                       B + "developments/2025-12-20-mcaleer-automated-alignment"],
+         "relations": [{"predicate": "relatedTo",
+                        "target": B + "developments/2025-12-24-marlinspike-last-days-of-software",
+                        "relation_label": "corroborates"}],
+         "tags": ["forecast", "continual-learning", "labor", "rsi"],
+         "supporting_text": "continual learning will be solved in 2026",
+         "sources": [{"id": "no-priors-sholto-douglas-continual-learning",
+                      "resource": "https://x.com/nopriorspod/status/2002120381709365257",
+                      "title": "No Priors 2026 prediction episode",
+                      "author": "org:no-priors"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "In No Priors' 2026 prediction episode "
+                 "([announced on X](https://x.com/nopriorspod/status/2002120381709365257)), Anthropic's "
+                 "[Sholto Douglas](/people/sholto-douglas.md) predicts that continual learning — "
+                 "models that keep learning after deployment — will be solved in 2026, and that "
+                 "solving it triggers the total automation of knowledge work. The newsletter "
+                 "pairs it with Moxie Marlinspike's "
+                 "[\"last days of software development\"](/developments/2025-12-24-marlinspike-last-days-of-software.md) "
+                 "as the same sentiment from a builder and a researcher. In the "
+                 "[recursive-self-improvement](/themes/recursive-self-improvement.md) strand it "
+                 "follows Stephen McAleer's "
+                 "[pivot to automated alignment](/developments/2025-12-20-mcaleer-automated-alignment.md) "
+                 "and Noam Shazeer's "
+                 "[even odds on Gemini making the next breakthrough](/developments/2025-12-19-shazeer-5050-gemini-breakthrough.md) "
+                 "as the third lab-insider forecast in five days; six days later Stanford's "
+                 "[test-time training](/developments/2025-12-30-stanford-test-time-training.md) "
+                 "is the first result the corpus reads against it."},
         {"id": "2025-12-24-minimax-m2-1-systems-languages",
          "title": "MiniMax M2.1 targets Rust, Java and C++",
          "claim": "MiniMax released M2.1, an open-weight model optimized for Rust, Java and "

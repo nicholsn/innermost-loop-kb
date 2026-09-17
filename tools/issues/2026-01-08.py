@@ -46,10 +46,37 @@ $14B of land.
          "title": "The speedrun record falls to 109.2 seconds on a new attention mechanism",
          "claim": "The NanoGPT speedrun record fell to 109.2 seconds using an attention "
                   "mechanism that retrieves two values per target position instead of one.",
-         "domain": "models", "score": "109.2 s",
+         "description": "An issue that opens on the marginal cost of intelligence trending to "
+                        "zero leads with this record, and the gain comes from the attention "
+                        "architecture itself rather than from systems tuning.",
+         "domain": "models", "score": "109.2 s", "occurred_on": "2026-01-07",
+         "about": [B + "benchmarks/nanogpt-speedrun"],
          "evidences": ["recursive-self-improvement", "architecture-of-mind"],
          "supersedes": [B + "developments/2026-01-05-nanogpt-113s"],
-         "body": "The eighth link. Engineers joke the series has to stop at zero."},
+         "relatedTo": [B + "developments/2026-01-24-nanogpt-99s-bigram-hash",
+                       B + "developments/2026-08-02-a-speedrun-record-falls-to-a-faster-kernel"],
+         "tags": ["speedrun", "rsi"],
+         "supporting_text": "a new world record of [109.2 seconds]",
+         "sources": [{"id": "classiclarryd-x-nanogpt-109-2s",
+                      "resource": "https://x.com/classiclarryd/status/2008963501688324228",
+                      "title": "New NanoGPT Speedrun WR at 109.2 (-3.5s)",
+                      "author": "human:larry-dial", "last_modified": "2026-01-07"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "The eighth link. Engineers joke the series has to stop at zero. [Larry Dial's](/people/larry-dial.md) "
+                 "record log attributes the 3.5-second gain to Paired Head Attention "
+                 "([pull request #191](https://github.com/KellerJordan/modded-nanogpt/pull/191)), "
+                 "which lets queries attend to keys in the neighbouring head so each query "
+                 "retrieves two values per target position, worth about 3% for zero added "
+                 "parameters ([X post](https://x.com/classiclarryd/status/2008963501688324228)). "
+                 "Where the [113.7-second mark](/developments/2026-01-05-nanogpt-113s.md) came from "
+                 "optimizer and parameter-layout tuning, this record on the "
+                 "[NanoGPT speedrun](/benchmarks/nanogpt-speedrun.md) comes from the attention "
+                 "architecture, which is why it also sits under "
+                 "[architecture-of-mind](/themes/architecture-of-mind.md). The next two records "
+                 "take different routes again: "
+                 "[compiler kernel hacking](/developments/2026-01-12-nanogpt-106s.md) four days "
+                 "later and a [bigram hash embedding](/developments/2026-01-24-nanogpt-99s-bigram-hash.md) "
+                 "that breaks 100 seconds."},
         {"id": "2026-01-08-math-inc-autoformalizes-tao",
          "title": "Math, Inc. autoformalizes a web of Tao's estimates",
          "claim": "Math, Inc. partnered with Terry Tao to autoformalize an entire web of "

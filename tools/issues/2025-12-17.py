@@ -43,7 +43,19 @@ becoming industrial process.
         {"id": "quilter", "type": "Organization", "title": "Quilter",
          "resource": "https://www.quilter.ai/", "body": "AI-driven circuit board design."},
         {"id": "meta", "type": "Organization", "title": "Meta",
-         "resource": "https://about.meta.com/", "body": "Released the SAM Audio separation model."},
+         "description": "Social-media giant turned AI and compute buyer whose research arm ships "
+                        "open models and self-modifying agent work.",
+         "resource": "https://about.meta.com/",
+         "sameAs": ["http://www.wikidata.org/entity/Q380"],
+         "tags": ["big-tech", "frontier-lab"],
+         "body": "Meta operates Facebook, Instagram and WhatsApp and has redirected its capital "
+                 "from the metaverse toward gigawatts of AI compute. In this corpus its research "
+                 "shows up in the recursive thread — an agent [trained by self-play to inject and "
+                 "repair bugs](/developments/2025-12-25-meta-self-play-bug-repair.md) and "
+                 "[hyperagents](/developments/2026-03-24-hyperagents-edit-their-own-mechanism.md) "
+                 "that edit their own improvement mechanism — alongside releases such as "
+                 "[SAM Audio](/developments/2025-12-17-meta-sam-audio.md), which isolates any "
+                 "sound from any source."},
         {"id": "resemble-ai", "type": "Organization", "title": "Resemble AI",
          "resource": "https://www.resemble.ai/", "body": "Open voice models."},
         {"id": "sk-hynix", "type": "Organization", "title": "SK Hynix",
@@ -57,6 +69,14 @@ becoming industrial process.
          "body": "Fiber-thin neural interfaces delivered through blood vessels."},
         {"id": "nasdaq", "type": "Organization", "title": "Nasdaq",
          "resource": "https://www.nasdaq.com/", "body": "Exchange; filed for round-the-clock trading."},
+        {"id": "lmarena", "type": "Organization", "title": "LMArena",
+         "description": "The team behind the crowdsourced head-to-head model leaderboard of the same "
+                        "name, which began as the LMSYS Chatbot Arena in 2023.",
+         "resource": "https://lmarena.ai/",
+         "body": "LMArena runs the [LMArena](/benchmarks/lmarena.md) leaderboard, where anonymous "
+                 "pairwise votes between models are aggregated into rankings; it started in April 2023 "
+                 "as the LMSYS Chatbot Arena ([site](https://lmarena.ai/)). In this corpus it appears "
+                 "only as the publisher of that leaderboard."},
     ],
 
     "systems": [
@@ -88,7 +108,21 @@ becoming industrial process.
          "published_by": [B + "organizations/openai"],
          "measures_capability": "expert-level scientific reasoning"},
         {"id": "lmarena", "type": "Benchmark", "title": "LMArena",
-         "measures_capability": "head-to-head human preference between models"},
+         "description": "The crowdsourced pairwise-preference leaderboard, the corpus's read on which "
+                        "model humans prefer in the open rather than on a fixed test set.",
+         "published_by": [B + "organizations/lmarena"],
+         "measures_capability": "head-to-head human preference between models",
+         "resource": "https://lmarena.ai/",
+         "sameAs": ["http://www.wikidata.org/entity/Q130370820"],
+         # tags waived: no controlled entity tag (ENRICH_RULES) describes a preference leaderboard.
+         "body": "LMArena (formerly the LMSYS Chatbot Arena) ranks models from anonymous, blind "
+                 "head-to-head votes cast by the public ([leaderboard](https://lmarena.ai/)). In this "
+                 "corpus it registers releases rather than research: OpenAI's "
+                 "[GPT Image 1.5](/systems/gpt-image-1-5.md) "
+                 "[took the top spot on release](/developments/2025-12-17-gpt-image-1-5-lmarena.md), and "
+                 "in February xAI's [Grok Imagine](/systems/grok-imagine.md) "
+                 "[pushed the image-generation Pareto frontier](/developments/2026-02-08-alphaevolve-finds-new-activations.md) "
+                 "on the same arena."},
     ],
 
     "facilities": [

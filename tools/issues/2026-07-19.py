@@ -33,6 +33,51 @@ in it, and states the endgame plainly: we want K2 to help build K3.
         {"id": "medicare", "type": "Organization", "title": "Medicare"},
         {"id": "g42", "type": "Organization", "title": "G42"},
     ],
+    "systems": [
+        {"id": "kimi-k3", "type": "AISystem", "title": "Kimi K3",
+         "description": "Moonshot AI's 2.8-trillion-parameter Mixture-of-Experts model with native vision, the largest open-weight model out of China and the successor its chief executive says K2 should help build.",
+         "developed_by": [B + "organizations/moonshot-ai"], "modality": "multimodal",
+         "evaluated_on": [B + "benchmarks/lmarena"],
+         "resource": "https://platform.kimi.ai/docs/guide/kimi-k3-quickstart",
+         "tags": ["open-weight-model"],
+         "body": "Kimi K3 carries 2.8 trillion Mixture-of-Experts parameters on Delta Attention with native "
+                 "vision ([quickstart](https://platform.kimi.ai/docs/guide/kimi-k3-quickstart)); on arrival it "
+                 "took first in the Frontend Code Arena and dethroned Fable 5 in six of seven domains, "
+                 "[the open crown changing hands in a day](/developments/2026-07-16-the-open-crown-changes-hands-in-a-day.md), "
+                 "then [beat every closed rival on SpreadsheetBench 2](/developments/2026-07-18-an-open-model-beats-every-closed-rival.md). "
+                 "In this cluster it is the object of the roadmap its chief executive stated as "
+                 "[we want K2 to help build K3](/developments/2026-07-19-we-want-k2-to-help-build-k3.md), and the "
+                 "workhorse of the [cybersecurity benchmark](/developments/2026-07-19-a-hundred-percent-refusal-rate.md) "
+                 "on which Fable 5 refused every task. Days later the White House alleged it had been "
+                 "[distilled from Fable through a covert platform](/developments/2026-07-23-distillation-via-a-covert-platform-and-third-country-chips.md), "
+                 "and the full weights followed as the "
+                 "[first open 3-trillion-class model](/developments/2026-07-29-the-first-open-three-trillion-class-model.md)."},
+    ],
+    "people": [
+        {"id": "zhilin-yang", "type": "Person", "title": "Zhilin Yang", "name": "Zhilin Yang",
+         "description": "Chief executive of Moonshot AI, the lab behind Kimi, quoted stating the company's endgame as having K2 help build K3.",
+         "resource": "https://kimiyoung.github.io/",
+         "sameAs": ["http://www.wikidata.org/entity/Q130865273"],
+         "tags": ["executive", "founder"],
+         "body": "Zhilin Yang runs Moonshot AI, the Chinese lab behind the Kimi models. The newsletter quotes "
+                 "him arguing that the hard part of the Singularity was never the agent but the model beneath "
+                 "it, calling a pure reasoning model a fish tank with a brain in it, and stating the endgame "
+                 "plainly: [we want K2 to help build K3](/developments/2026-07-19-we-want-k2-to-help-build-k3.md). "
+                 "He is the first lab chief executive in the corpus to describe [Kimi K3](/systems/kimi-k3.md) "
+                 "as the product of its predecessor rather than of its staff."},
+    ],
+    "roles": [
+        {"id": "zhilin-yang-moonshot-ai-ceo", "type": "Role",
+         "title": "Zhilin Yang, chief executive of Moonshot AI",
+         "roleName": "Chief Executive Officer",
+         "memberOf": [B + "organizations/moonshot-ai"],
+         "holder": [B + "people/zhilin-yang"],
+         "description": "The position from which he stated the lab's endgame as K2 helping to build K3.",
+         "body": "The newsletter identifies him as 'Moonshot AI CEO Zhilin Yang' when it records his fish-tank "
+                 "argument and his [stated roadmap](/developments/2026-07-19-we-want-k2-to-help-build-k3.md). "
+                 "The role is what turns the remark into a commitment: the chief executive of the lab behind "
+                 "[Kimi K3](/systems/kimi-k3.md) describing recursion as the product plan."},
+    ],
     "developments": [
         {"id": "2026-07-19-a-hundred-percent-refusal-rate",
          "title": "A frontier model refuses every task on a cybersecurity benchmark",
@@ -50,9 +95,38 @@ in it, and states the endgame plainly: we want K2 to help build K3.
          "claim": "Moonshot AI's Zhilin Yang argued the hard part was never the agent but the "
                   "model underneath it, calling a pure reasoning model a fish tank with a brain "
                   "in it and stating the endgame plainly: we want K2 to help build K3.",
-         "domain": "models", "actor": ["moonshot-ai"],
+         "description": "The first time in the corpus a frontier lab's chief executive states "
+                        "model-builds-model as the explicit product roadmap rather than as a research "
+                        "result or a forecast, turning the recursion into a business plan.",
+         "domain": "models", "actor": ["moonshot-ai", "people/zhilin-yang"],
+         "about": [B + "systems/kimi-k3"],
          "evidences": ["recursive-self-improvement", "a-model-trains-a-model", "agent-economy"],
-         "supersedes": [B + "developments/2026-07-15-the-first-evidence-of-consistent-recursive-self-improvement"]},
+         "supersedes": [B + "developments/2026-07-15-the-first-evidence-of-consistent-recursive-self-improvement"],
+         "relatedTo": [B + "developments/2026-05-20-karpathy-joins-to-lead-pretraining",
+                       B + "developments/2026-07-10-a-model-post-trains-a-model",
+                       B + "systems/kimi-k2-5"],
+         "relations": [{"predicate": "relatedTo",
+                        "target": B + "developments/2026-07-19-a-hundred-percent-refusal-rate"}],
+         "tags": ["rsi", "model-trains-model", "forecast"],
+         "supporting_text": "we want K2 to help build K3",
+         "sources": [{"id": "zhilin-yang-fish-tank-thread",
+                      "resource": "https://x.com/0xf1ction/status/2078628963492974748",
+                      "title": "Moonshot AI CEO Zhilin Yang on reasoning models, agents and K2 building K3"}],
+         "verified": [{"by": "claude-fable-5-1/2026-09-17", "at": "2026-09-17T08:00:00Z"}],
+         "body": "Yang's argument, relayed in a [thread](https://x.com/0xf1ction/status/2078628963492974748), is "
+                 "that everyone raced on reasoning while Claude quietly bet on agents; a pure reasoning model is "
+                 "'a fish tank with a brain in it', thinking beautifully while touching nothing, and an agent is "
+                 "the same brain wired into the world, so the endgame is for Kimi K2 to "
+                 "help build [Kimi K3](/systems/kimi-k3.md). The newsletter offers the same issue's "
+                 "[cybersecurity benchmark](/developments/2026-07-19-a-hundred-percent-refusal-rate.md), where K3 "
+                 "was the workhorse, as the recursion already cashing checks. In the "
+                 "[recursive-self-improvement](/themes/recursive-self-improvement.md) trajectory it follows "
+                 "[Weco's measured loop](/developments/2026-07-15-the-first-evidence-of-consistent-recursive-self-improvement.md) "
+                 "and the [model that post-trained a model](/developments/2026-07-10-a-model-post-trains-a-model.md) "
+                 "by turning the result into a roadmap, much as [Karpathy's hire](/developments/2026-05-20-karpathy-joins-to-lead-pretraining.md) "
+                 "had given the loop a job title; a week later [OpenAI and Anthropic's job listings](/developments/2026-07-26-the-job-board-is-the-roadmap.md) "
+                 "read the same way, and by August a strategy chief was saying the recursion "
+                 "[justifies the capex](/developments/2026-08-04-recursive-self-improvement-justifies-the-capex.md)."},
         {"id": "2026-07-19-a-fifty-to-one-token-price-gap",
          "title": "An investor calls a fifty-to-one token price gap a Cold War in reverse",
          "claim": "Chamath Palihapitiya warned that forcing American firms to pay $26 to $56 per "
