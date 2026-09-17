@@ -10,11 +10,18 @@ export const BASE_IRI = 'https://nicholsn.github.io/innermost-loop-kb/';
 
 export type Concept = CollectionEntry<'knowledge'>;
 
-/** LOKF's typed-relation slots — each becomes an edge in the graph. */
+/**
+ * Typed-relation slots — each becomes an edge in the graph. LOKF's core
+ * relations first, then the domain schema's (schema/innermost.yaml): the
+ * trajectory edges (`supersedes`, `evidences`) are what make this corpus a
+ * graph rather than a list, so they have to be drawn too.
+ */
 export const RELATION_SLOTS = [
   'isPartOf', 'hasPart', 'references', 'dependsOn', 'derivedFrom',
   'about', 'sameAs', 'relatedTo', 'definedBy', 'source',
   'measures', 'memberOf', 'holder',
+  'reported_in', 'covers', 'actor', 'evidences', 'supersedes',
+  'developed_by', 'fabricated_by', 'evaluated_on', 'published_by', 'operated_by',
 ] as const;
 
 export const REL_LABEL: Record<string, string> = {
@@ -23,6 +30,11 @@ export const REL_LABEL: Record<string, string> = {
   sameAs: 'Same as', relatedTo: 'Related to', definedBy: 'Defined by',
   source: 'Source', measures: 'Measures', memberOf: 'Member of',
   holder: 'Held by',
+  reported_in: 'Reported in', covers: 'Covers', actor: 'Actor',
+  evidences: 'Evidence for', supersedes: 'Supersedes',
+  developed_by: 'Developed by', fabricated_by: 'Fabricated by',
+  evaluated_on: 'Evaluated on', published_by: 'Published by',
+  operated_by: 'Operated by',
 };
 
 /** Join a site-internal path onto Astro's base (works at "/" or "/<repo>"). */

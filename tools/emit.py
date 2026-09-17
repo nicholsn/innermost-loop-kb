@@ -98,13 +98,34 @@ def _fm(data: dict) -> str:
     return "\n".join(out)
 
 
+def owner_of(rel: str) -> str | None:
+    """The source id of the issue that first wrote a concept file, or None.
+
+    Entities are written once and then shared by every later issue, so the
+    spec that first declared one is the only place its definition can be
+    edited - and re-running that spec has to be able to carry the edit through
+    to disk, or entity enrichment in a spec would never reach the bundle.
+    """
+    path = KB / rel
+    if not path.exists():
+        return None
+    try:
+        fm = yaml.safe_load(path.read_text(encoding="utf-8").split("---", 2)[1])
+        return (fm.get("sources") or [{}])[0].get("id")
+    except Exception:
+        return None
+
+
 def write(rel: str, front: dict, body: str, *, overwrite: bool = False) -> bool:
     """Write one concept file. Returns True if it was created or updated."""
     path = KB / rel
     if path.exists() and not overwrite:
         return False
+    text = _fm(front) + "\n\n" + body.strip() + "\n"
+    if path.exists() and path.read_text(encoding="utf-8") == text:
+        return False
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(_fm(front) + "\n\n" + body.strip() + "\n", encoding="utf-8")
+    path.write_text(text, encoding="utf-8")
     return True
 
 
@@ -135,15 +156,22 @@ def emit(spec: dict) -> dict:
         ("facilities", "facilities"),
         ("hardware", "hardware"),
         ("people", "people"),
+        ("roles", "roles"),
         ("themes", "themes"),
     ):
         kind = rel_dir.rstrip("s")
         for e in spec.get(key, []):
             front = {"type": e["type"], "title": e["title"]}
-            front.update({k: v for k, v in e.items() if k not in ("type", "title", "body", "id")})
+            front.update({k: v for k, v in e.items()
+                          if k not in ("type", "title", "body", "id", "sources")})
             front = {k: v for k, v in front.items() if v is not None}
-            front["sources"] = [src]
-            bump(kind, write(f"{rel_dir}/{e['id']}.md", front, e.get("body", "")))
+            # the issue is always the first source; a spec may add the primary
+            # sources (a paper, an announcement) the newsletter itself cites
+            front["sources"] = [src] + list(e.get("sources") or [])
+            rel = f"{rel_dir}/{e['id']}.md"
+            # only the issue that first wrote an entity may rewrite it
+            bump(kind, write(rel, front, e.get("body", ""),
+                             overwrite=owner_of(rel) == src["id"]))
 
     # -- the issue itself ---------------------------------------------------
     dev_ids = [d["id"] for d in spec.get("developments", [])]
@@ -163,7 +191,15 @@ def emit(spec: dict) -> dict:
     ))
 
     # -- developments -------------------------------------------------------
+    handled = {"id", "title", "claim", "domain", "actor", "about", "evidences", "score",
+               "occurred_on", "supersedes", "body", "tags", "sources", "supporting_text"}
     for d in spec.get("developments", []):
+        # the newsletter is the first source; `supporting_text` is the short
+        # excerpt of it that carries the claim, and `sources` adds the primary
+        # sources the newsletter links to
+        issue_src = dict(src)
+        if d.get("supporting_text"):
+            issue_src["supporting_text"] = d["supporting_text"]
         front = {
             "type": "Development", "title": d["title"],
             "claim": d["claim"], "domain": d["domain"],
@@ -178,10 +214,15 @@ def emit(spec: dict) -> dict:
             "score": d.get("score"),
             "occurred_on": d.get("occurred_on"),
             "supersedes": d.get("supersedes"),
-            "tags": ["development", date],
-            "generated": {"by": "process:iml-emit", "at": f"{date}T00:00:00Z"},
-            "sources": [src],
         }
+        # every other LOKF or domain slot passes through as written
+        # (description, references, relatedTo, relations, verified, status, ...)
+        front.update({k: v for k, v in d.items() if k not in handled})
+        front.update({
+            "tags": ["development", date] + list(d.get("tags") or []),
+            "generated": {"by": "process:iml-emit", "at": f"{date}T00:00:00Z"},
+            "sources": [issue_src] + list(d.get("sources") or []),
+        })
         front = {k: v for k, v in front.items() if v}
         bump("development", write(f"developments/{d['id']}.md", front, d.get("body", ""),
                                   overwrite=True))
