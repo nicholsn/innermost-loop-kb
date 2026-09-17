@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**163 of 233 issues** modelled, 2025-12-11 → 2026-07-14.
+**168 of 233 issues** modelled, 2025-12-11 → 2026-07-19.
 
 | | count |
 |---|---|
 | benchmarks | 42 |
-| developments | 2346 |
+| developments | 2407 |
 | facilities | 25 |
 | hardware | 12 |
-| issues | 163 |
-| organizations | 887 |
+| issues | 168 |
+| organizations | 905 |
 | people | 27 |
 | systems | 118 |
-| themes | 118 |
+| themes | 123 |
 
 ## Themes
 
@@ -156,9 +156,19 @@ trajectory rather than a pile of days.
 * [An intelligence explosion that is also a price implosion](themes/price-implosion.md) — first seen 2026-07-10
 * [Old traditions read as value-preservation technology](themes/traditions-as-alignment-priors.md) — first seen 2026-07-12
 * [A domestic ceiling set by a foreign release](themes/pegged-to-the-rival.md) — first seen 2026-07-14
+* [Unseeable objectives teach honesty](themes/hidden-metrics-reduce-hacking.md) — first seen 2026-07-15
+* [Models review each other better than people do](themes/review-without-reviewers.md) — first seen 2026-07-16
+* [Scarcity produces the frontier that money did not](themes/frontier-not-bought.md) — first seen 2026-07-17
+* [Open weights beat every closed rival](themes/open-weights-take-the-crown.md) — first seen 2026-07-18
+* [Total refusal reads as downtime](themes/refusal-as-outage.md) — first seen 2026-07-19
 
 ## Issues
 
+* [Welcome to July 19, 2026](issues/2026-07-19.md) — A refusal rate of 100% turns safety into an outage.
+* [Welcome to July 18, 2026](issues/2026-07-18.md) — For the first time an open-weight model beats every closed rival.
+* [Welcome to July 17, 2026](issues/2026-07-17.md) — A 300-person lab compresses frontier training out of scarcity.
+* [Welcome to July 16, 2026](issues/2026-07-16.md) — The open crown changes hands in a day.
+* [Welcome to July 15, 2026](issues/2026-07-15.md) — The first experimental evidence of consistent recursive self-improvement.
 * [Welcome to July 14, 2026](issues/2026-07-14.md) — A proposed rule would clear US models only up to China's best open weights.
 * [Welcome to July 12, 2026](issues/2026-07-12.md) — Task reliability doubles every forty days.
 * [Welcome to July 11, 2026](issues/2026-07-11.md) — A fifty-year-old conjecture falls in under an hour.
@@ -174,9 +184,4 @@ trajectory rather than a pile of days.
 * [Welcome to June 29, 2026](issues/2026-06-29.md) — Owning your own weights becomes the thing worth owning.
 * [Welcome to June 28, 2026](issues/2026-06-28.md) — The plateau moves out of sight.
 * [Welcome to June 27, 2026](issues/2026-06-27.md) — The scarcest input to frontier intelligence is no longer compute.
-* [Welcome to June 26, 2026](issues/2026-06-26.md) — Throttling release slows shipping, not training.
-* [Welcome to June 25, 2026](issues/2026-06-25.md) — An agent mines its own weaknesses and rewrites its harness.
-* [Welcome to June 24, 2026](issues/2026-06-24.md) — The mission shifts from finding vulnerabilities to patching them.
-* [Welcome to June 22, 2026](issues/2026-06-22.md) — Intelligence becomes infrastructure that can be routed and rationed.
-* [Welcome to June 21, 2026](issues/2026-06-21.md) — The classified systems fell in hours, not weeks.
-* … and 143 earlier issues
+* … and 148 earlier issues
