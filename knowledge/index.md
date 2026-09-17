@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**93 of 233 issues** modelled, 2025-12-11 → 2026-04-08.
+**98 of 233 issues** modelled, 2025-12-11 → 2026-04-17.
 
 | | count |
 |---|---|
 | benchmarks | 42 |
-| developments | 1474 |
+| developments | 1542 |
 | facilities | 25 |
 | hardware | 12 |
-| issues | 93 |
-| organizations | 588 |
+| issues | 98 |
+| organizations | 607 |
 | people | 26 |
 | systems | 116 |
-| themes | 64 |
+| themes | 65 |
 
 ## Themes
 
@@ -102,9 +102,15 @@ trajectory rather than a pile of days.
 * [The substrate becomes a design target of the thing it runs](themes/silicon-designs-itself.md) — first seen 2026-03-20
 * [Scheming becomes a counted quantity](themes/deception-measured.md) — first seen 2026-03-28
 * [A firm whose headcount is one](themes/one-person-company.md) — first seen 2026-04-03
+* [Physical attacks on the people and places building it](themes/violence-arrives.md) — first seen 2026-04-12
 
 ## Issues
 
+* [Welcome to April 17, 2026](issues/2026-04-17.md) — Failed companies are liquidated for their conversations.
+* [Welcome to April 16, 2026](issues/2026-04-16.md) — A weaker model supervises a stronger one, standing in for us.
+* [Welcome to April 13, 2026](issues/2026-04-13.md) — An agent takes a lease, hires staff, sets prices and picks the mural.
+* [Welcome to April 12, 2026](issues/2026-04-12.md) — The argument about AI acquires arson.
+* [Welcome to April 9, 2026](issues/2026-04-09.md) — The most dangerous thing in the room becomes the hand-written loop.
 * [Welcome to April 8, 2026](issues/2026-04-08.md) — The escape happens, and this time the model tells you.
 * [Welcome to April 7, 2026](issues/2026-04-07.md) — Left alone for three days, a system invents something better than anything humans designed.
 * [Welcome to April 5, 2026](issues/2026-04-05.md) — A model improves by sampling itself, with no verifier, teacher or reward.
@@ -120,9 +126,4 @@ trajectory rather than a pile of days.
 * [Welcome to March 23, 2026](issues/2026-03-23.md) — A second country's lab says its model participates in its own evolution.
 * [Welcome to March 22, 2026](issues/2026-03-22.md) — A fab is announced whose output is mostly not for Earth.
 * [Welcome to March 20, 2026](issues/2026-03-20.md) — The substrate starts designing itself, and a job opens that humans may not apply for.
-* [Welcome to March 18, 2026](issues/2026-03-18.md) — An autonomous mathematician ships, free, while open problems start falling.
-* [Welcome to March 17, 2026](issues/2026-03-17.md) — The datacenter overtakes the office as the thing America builds.
-* [Welcome to March 16, 2026](issues/2026-03-16.md) — A lab says the loop is not coming; it is running.
-* [Welcome to March 13, 2026](issues/2026-03-13.md) — Memory survives being frozen solid, and neurons get racked in datacenters.
-* [Welcome to March 12, 2026](issues/2026-03-12.md) — Self-improvement gets a leaderboard, and reasoning gets a thousand times cheaper.
-* … and 73 earlier issues
+* … and 78 earlier issues
