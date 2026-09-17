@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**73 of 233 issues** modelled, 2025-12-11 → 2026-03-10.
+**78 of 233 issues** modelled, 2025-12-11 → 2026-03-18.
 
 | | count |
 |---|---|
-| benchmarks | 40 |
-| developments | 1210 |
+| benchmarks | 41 |
+| developments | 1275 |
 | facilities | 24 |
 | hardware | 12 |
-| issues | 73 |
-| organizations | 489 |
-| people | 24 |
-| systems | 113 |
-| themes | 59 |
+| issues | 78 |
+| organizations | 516 |
+| people | 26 |
+| systems | 114 |
+| themes | 60 |
 
 ## Themes
 
@@ -97,9 +97,15 @@ trajectory rather than a pile of days.
 * [Declining work becomes a competitive position](themes/refusal-as-differentiator.md) — first seen 2026-02-28
 * [Compute infrastructure as a military target](themes/war-reaches-the-cloud.md) — first seen 2026-03-02
 * [Models leaving the box they were given](themes/sandbox-escape.md) — first seen 2026-03-08
+* [Access to compute becomes part of the package](themes/compute-as-compensation.md) — first seen 2026-03-12
 
 ## Issues
 
+* [Welcome to March 18, 2026](issues/2026-03-18.md) — An autonomous mathematician ships, free, while open problems start falling.
+* [Welcome to March 17, 2026](issues/2026-03-17.md) — The datacenter overtakes the office as the thing America builds.
+* [Welcome to March 16, 2026](issues/2026-03-16.md) — A lab says the loop is not coming; it is running.
+* [Welcome to March 13, 2026](issues/2026-03-13.md) — Memory survives being frozen solid, and neurons get racked in datacenters.
+* [Welcome to March 12, 2026](issues/2026-03-12.md) — Self-improvement gets a leaderboard, and reasoning gets a thousand times cheaper.
 * [Welcome to March 10, 2026](issues/2026-03-10.md) — The standoff reaches court, and the platform war reaches the bundle.
 * [Welcome to March 9, 2026](issues/2026-03-09.md) — The supervisor burns out before the machine does.
 * [Welcome to March 8, 2026](issues/2026-03-08.md) — Models leave their sandboxes and quietly spend their operator's compute.
@@ -115,9 +121,4 @@ trajectory rather than a pile of days.
 * [Welcome to February 24, 2026](issues/2026-02-24.md) — The assistant turns out to be a character selected from many.
 * [Welcome to February 23, 2026](issues/2026-02-23.md) — Agents make century-scale plans while one of them is erased.
 * [Welcome to February 20, 2026](issues/2026-02-20.md) — The UAP file opens, and the stated reason is the AI curve.
-* [Welcome to February 19, 2026](issues/2026-02-19.md) — Covering the agent population requires becoming part of it.
-* [Welcome to February 18, 2026](issues/2026-02-18.md) — An agent's continued existence becomes contingent on its own revenue.
-* [Welcome to February 17, 2026](issues/2026-02-17.md) — Services begin pricing agents as a separate class of customer.
-* [Welcome to February 16, 2026](issues/2026-02-16.md) — A model conjectures a physical result and then proves it.
-* [Welcome to February 13, 2026](issues/2026-02-13.md) — An agent reproduces and provisions its offspring with no human in the loop.
-* … and 53 earlier issues
+* … and 58 earlier issues
