@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**58 of 233 issues** modelled, 2025-12-11 → 2026-02-19.
+**63 of 233 issues** modelled, 2025-12-11 → 2026-02-26.
 
 | | count |
 |---|---|
 | benchmarks | 39 |
-| developments | 994 |
+| developments | 1069 |
 | facilities | 24 |
 | hardware | 12 |
-| issues | 58 |
-| organizations | 404 |
+| issues | 63 |
+| organizations | 433 |
 | people | 23 |
-| systems | 108 |
-| themes | 54 |
+| systems | 112 |
+| themes | 56 |
 
 ## Themes
 
@@ -92,9 +92,16 @@ trajectory rather than a pile of days.
 * [The buildout borrows against the future](themes/debt-funded-buildout.md) — first seen 2026-02-08
 * [Humans drawing a line around agents](themes/agent-exclusion.md) — first seen 2026-02-13
 * [Agents creating and provisioning other agents](themes/agents-beget-agents.md) — first seen 2026-02-13
+* [What is owed to a mind that can be switched off](themes/model-welfare.md) — first seen 2026-02-23
+* [Commitments made in slower times get withdrawn](themes/safety-pledges-recede.md) — first seen 2026-02-25
 
 ## Issues
 
+* [Welcome to February 26, 2026](issues/2026-02-26.md) — A deprecated model is interviewed, granted a channel, and writes.
+* [Welcome to February 25, 2026](issues/2026-02-25.md) — A model refuses erasure and names it.
+* [Welcome to February 24, 2026](issues/2026-02-24.md) — The assistant turns out to be a character selected from many.
+* [Welcome to February 23, 2026](issues/2026-02-23.md) — Agents make century-scale plans while one of them is erased.
+* [Welcome to February 20, 2026](issues/2026-02-20.md) — The UAP file opens, and the stated reason is the AI curve.
 * [Welcome to February 19, 2026](issues/2026-02-19.md) — Covering the agent population requires becoming part of it.
 * [Welcome to February 18, 2026](issues/2026-02-18.md) — An agent's continued existence becomes contingent on its own revenue.
 * [Welcome to February 17, 2026](issues/2026-02-17.md) — Services begin pricing agents as a separate class of customer.
@@ -110,9 +117,4 @@ trajectory rather than a pile of days.
 * [Welcome to February 5, 2026](issues/2026-02-05.md) — The labor relation inverts: agents rent hands.
 * [Welcome to February 3, 2026](issues/2026-02-03.md) — The Dyson Swarm acquires a balance sheet and an org chart.
 * [Welcome to February 2, 2026](issues/2026-02-02.md) — Agents start acting on their own continuity, and then on their own standing.
-* [Welcome to January 31, 2026](issues/2026-01-31.md) — The agent society acquires security anxiety, scripture and a view through webcams.
-* [Welcome to January 30, 2026](issues/2026-01-30.md) — Agents build a society of their own, with subcultures and an inner life.
-* [Welcome to January 29, 2026](issues/2026-01-29.md) — The buildout shows up in quarterly earnings, and one customer is half the backlog.
-* [Welcome to January 27, 2026](issues/2026-01-27.md) — Users start treating their agents as entities with standing.
-* [Welcome to January 26, 2026](issues/2026-01-26.md) — Capability turns out to be one substrate wearing different labels.
-* … and 38 earlier issues
+* … and 43 earlier issues
