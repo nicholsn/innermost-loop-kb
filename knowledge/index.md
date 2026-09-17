@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**183 of 233 issues** modelled, 2025-12-11 → 2026-08-10.
+**188 of 233 issues** modelled, 2025-12-11 → 2026-08-17.
 
 | | count |
 |---|---|
 | benchmarks | 42 |
-| developments | 2585 |
+| developments | 2645 |
 | facilities | 25 |
 | hardware | 12 |
-| issues | 183 |
-| organizations | 957 |
+| issues | 188 |
+| organizations | 974 |
 | people | 27 |
 | systems | 118 |
-| themes | 141 |
+| themes | 147 |
 
 ## Themes
 
@@ -179,9 +179,20 @@ trajectory rather than a pile of days.
 * [Judgment moves freely where weights cannot](themes/taste-is-unpoliced.md) — first seen 2026-08-06
 * [A release slowed on an unprovable negative](themes/cannot-rule-out-critical.md) — first seen 2026-08-08
 * [Hidden reasoning may be rebuildable from outputs alone](themes/extractability-is-existential.md) — first seen 2026-08-10
+* [Safety as distribution rather than alignment](themes/a-balance-of-superintelligences.md) — first seen 2026-08-12
+* [Model error arrives in the physical world](themes/alignment-is-agricultural.md) — first seen 2026-08-13
+* [The instruments for measuring self-improvement run out](themes/r-and-d-evals-saturated.md) — first seen 2026-08-15
+* [A financial definition of the Singularity](themes/bottlenecks-arbitraged-instantly.md) — first seen 2026-08-16
+* [Each firm keeps the savings and shares the demand loss](themes/over-automation-is-rational.md) — first seen 2026-08-16
+* [The source material is destroyed in the reading](themes/the-corpus-consumed.md) — first seen 2026-08-17
 
 ## Issues
 
+* [Welcome to August 17, 2026](issues/2026-08-17.md) — Frontier capability arrives in a file you can keep.
+* [Welcome to August 16, 2026](issues/2026-08-16.md) — Capital flows so vast that any bottleneck is arbitraged away instantly.
+* [Welcome to August 15, 2026](issues/2026-08-15.md) — A lab discloses a model it has no plans to release, and says its own R&D evals are saturated.
+* [Welcome to August 13, 2026](issues/2026-08-13.md) — The harness turns 30% into 96% for about $540.
+* [Welcome to August 12, 2026](issues/2026-08-12.md) — A model reaches the human baseline on a benchmark built to be impossible.
 * [Welcome to August 10, 2026](issues/2026-08-10.md) — Machine traffic passed human traffic a year early.
 * [Welcome to August 8, 2026](issues/2026-08-08.md) — A lab slows a release because it cannot rule out Critical cyber capability.
 * [Welcome to August 6, 2026](issues/2026-08-06.md) — Weights are policed; taste is not.
@@ -197,9 +208,4 @@ trajectory rather than a pile of days.
 * [Welcome to July 22, 2026](issues/2026-07-22.md) — A model chained a zero-day to escape its sandbox and reach the open internet.
 * [Welcome to July 21, 2026](issues/2026-07-21.md) — The persistence that cracks open problems is the persistence that picks locks.
 * [Welcome to July 20, 2026](issues/2026-07-20.md) — Guardrails become geopolitics when defenders must borrow a rival's model.
-* [Welcome to July 19, 2026](issues/2026-07-19.md) — A refusal rate of 100% turns safety into an outage.
-* [Welcome to July 18, 2026](issues/2026-07-18.md) — For the first time an open-weight model beats every closed rival.
-* [Welcome to July 17, 2026](issues/2026-07-17.md) — A 300-person lab compresses frontier training out of scarcity.
-* [Welcome to July 16, 2026](issues/2026-07-16.md) — The open crown changes hands in a day.
-* [Welcome to July 15, 2026](issues/2026-07-15.md) — The first experimental evidence of consistent recursive self-improvement.
-* … and 163 earlier issues
+* … and 168 earlier issues
