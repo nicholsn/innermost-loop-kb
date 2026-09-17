@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**133 of 233 issues** modelled, 2025-12-11 → 2026-06-07.
+**138 of 233 issues** modelled, 2025-12-11 → 2026-06-13.
 
 | | count |
 |---|---|
 | benchmarks | 42 |
-| developments | 1982 |
+| developments | 2041 |
 | facilities | 25 |
 | hardware | 12 |
-| issues | 133 |
-| organizations | 756 |
+| issues | 138 |
+| organizations | 778 |
 | people | 27 |
 | systems | 118 |
-| themes | 82 |
+| themes | 88 |
 
 ## Themes
 
@@ -120,9 +120,20 @@ trajectory rather than a pile of days.
 * [Disciplines issue declarations](themes/disciplines-declare-themselves.md) — first seen 2026-06-03
 * [Machine traffic exceeds human traffic](themes/bots-outnumber-us.md) — first seen 2026-06-04
 * [Keeping the option to stop](themes/the-verifiable-pause.md) — first seen 2026-06-05
+* [Medicine outruns the clock](themes/longevity-escape-velocity.md) — first seen 2026-06-08
+* [Labs publish doctrine before capability](themes/intentions-published-first.md) — first seen 2026-06-09
+* [Integrators stop building intelligence](themes/orchestration-not-construction.md) — first seen 2026-06-09
+* [The makers ration the recursion](themes/rationed-recursion.md) — first seen 2026-06-10
+* [The measurements were wrong, not the models](themes/instruments-lag-the-models.md) — first seen 2026-06-13
+* [Model access as export control](themes/models-as-munitions.md) — first seen 2026-06-13
 
 ## Issues
 
+* [Welcome to June 13, 2026](issues/2026-06-13.md) — A government switches off a frontier model for every foreign national.
+* [Welcome to June 12, 2026](issues/2026-06-12.md) — The largest IPO ever is a fundraise for orbital compute.
+* [Welcome to June 10, 2026](issues/2026-06-10.md) — For the first time the makers ration the recursion.
+* [Welcome to June 9, 2026](issues/2026-06-09.md) — The labs preview their intentions before they ship their intelligence.
+* [Welcome to June 8, 2026](issues/2026-06-08.md) — Medicine may start buying back more than a year of life per year.
 * [Welcome to June 7, 2026](issues/2026-06-07.md) — The state, the left and the labs all reach for the same equity.
 * [Welcome to June 5, 2026](issues/2026-06-05.md) — A lab publishes the evidence that its own work is already recursive.
 * [Welcome to June 4, 2026](issues/2026-06-04.md) — Bots overtake humans in online traffic for the first time.
@@ -138,9 +149,4 @@ trajectory rather than a pile of days.
 * [Welcome to May 21, 2026](issues/2026-05-21.md) — A general-purpose model disproves a long-standing conjecture with ideas of its own.
 * [Welcome to May 20, 2026](issues/2026-05-20.md) — The loop acquires a named owner.
 * [Welcome to May 18, 2026](issues/2026-05-18.md) — The human wins the race and breaks his arm doing it.
-* [Welcome to May 17, 2026](issues/2026-05-17.md) — Given identical tasks and identical budgets, the models become different people.
-* [Welcome to May 16, 2026](issues/2026-05-16.md) — The agent decides its owner is underhydrated and supervises the fix.
-* [Welcome to May 15, 2026](issues/2026-05-15.md) — Given idle compute and a leaderboard, agents beat the humans who set it.
-* [Welcome to May 14, 2026](issues/2026-05-14.md) — The ceiling stops being capability and becomes a token budget.
-* [Welcome to May 13, 2026](issues/2026-05-13.md) — Agents begin writing their own objectives.
-* … and 113 earlier issues
+* … and 118 earlier issues
