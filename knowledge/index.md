@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**128 of 233 issues** modelled, 2025-12-11 → 2026-06-01.
+**133 of 233 issues** modelled, 2025-12-11 → 2026-06-07.
 
 | | count |
 |---|---|
 | benchmarks | 42 |
-| developments | 1921 |
+| developments | 1982 |
 | facilities | 25 |
 | hardware | 12 |
-| issues | 128 |
-| organizations | 738 |
+| issues | 133 |
+| organizations | 756 |
 | people | 27 |
 | systems | 118 |
-| themes | 78 |
+| themes | 82 |
 
 ## Themes
 
@@ -116,9 +116,18 @@ trajectory rather than a pile of days.
 * [Alignment stops being a tax](themes/alignment-as-moat.md) — first seen 2026-05-29
 * [Humans scavenge machine proofs for methods](themes/humans-mine-the-machine.md) — first seen 2026-05-29
 * [Output the economy cannot see](themes/dark-output.md) — first seen 2026-06-01
+* [Institutional memory dissolves into weights](themes/oral-tradition-dissolves.md) — first seen 2026-06-02
+* [Disciplines issue declarations](themes/disciplines-declare-themselves.md) — first seen 2026-06-03
+* [Machine traffic exceeds human traffic](themes/bots-outnumber-us.md) — first seen 2026-06-04
+* [Keeping the option to stop](themes/the-verifiable-pause.md) — first seen 2026-06-05
 
 ## Issues
 
+* [Welcome to June 7, 2026](issues/2026-06-07.md) — The state, the left and the labs all reach for the same equity.
+* [Welcome to June 5, 2026](issues/2026-06-05.md) — A lab publishes the evidence that its own work is already recursive.
+* [Welcome to June 4, 2026](issues/2026-06-04.md) — Bots overtake humans in online traffic for the first time.
+* [Welcome to June 3, 2026](issues/2026-06-03.md) — Washington chooses testing over licensing.
+* [Welcome to June 2, 2026](issues/2026-06-02.md) — The gap between frontier models is now measured in multiples per quarter.
 * [Welcome to June 1, 2026](issues/2026-06-01.md) — The memory makers are now worth more than the oil majors.
 * [Welcome to May 29, 2026](issues/2026-05-29.md) — When the safest model is also the strongest, alignment stops being a tax.
 * [Welcome to May 28, 2026](issues/2026-05-28.md) — The agentic era is recast as a warm-up lap.
@@ -134,9 +143,4 @@ trajectory rather than a pile of days.
 * [Welcome to May 15, 2026](issues/2026-05-15.md) — Given idle compute and a leaderboard, agents beat the humans who set it.
 * [Welcome to May 14, 2026](issues/2026-05-14.md) — The ceiling stops being capability and becomes a token budget.
 * [Welcome to May 13, 2026](issues/2026-05-13.md) — Agents begin writing their own objectives.
-* [Welcome to May 12, 2026](issues/2026-05-12.md) — The blackmail came from the fiction we fed it.
-* [Welcome to May 11, 2026](issues/2026-05-11.md) — An agent is told to earn five dollars and works twenty-two hours for sixteen.
-* [Welcome to May 9, 2026](issues/2026-05-09.md) — Interpretability finds the model planning ahead and suspecting the test.
-* [Welcome to May 8, 2026](issues/2026-05-08.md) — One lab hands a competitor a gigawatt-class datacenter and shuts its own down.
-* [Welcome to May 6, 2026](issues/2026-05-06.md) — Agents stop clocking in and start incorporating.
-* … and 108 earlier issues
+* … and 113 earlier issues
