@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**227 of 233 issues** modelled, 2025-12-11 → feature-tradable-compute-index.
+**233 of 233 issues** modelled, 2025-12-11 → 2026-09-15.
 
 | | count |
 |---|---|
 | benchmarks | 42 |
-| developments | 2905 |
+| developments | 2919 |
 | facilities | 25 |
 | hardware | 12 |
-| issues | 227 |
+| issues | 233 |
 | organizations | 1038 |
-| people | 28 |
+| people | 34 |
 | systems | 118 |
-| themes | 204 |
+| themes | 213 |
 
 ## Themes
 
@@ -86,9 +86,13 @@ trajectory rather than a pile of days.
 * [The entry rung disappears first](themes/ladder-pulled-up.md) — first seen 2026-01-15
 * [Milestones are crossed without agreement that they were](themes/thresholds-pass-unremarked.md) — first seen 2026-01-23
 * [Values arrived at with the system, not imposed on it](themes/values-negotiated-with-the-model.md) — first seen 2026-01-24
+* [Capability is discovered after release, including by its makers](themes/nobody-inside-knows-either.md) — first seen 2026-01-28
 * [Agents organizing among themselves](themes/agent-society.md) — first seen 2026-01-30
 * [Capability transfers out of the person](themes/deskilling.md) — first seen 2026-01-31
+* [Subdividing work into agent transactions inflates the measure](themes/delegation-inflates-gdp.md) — first seen 2026-02-01
 * [Agents transacting on their own account](themes/agent-economy.md) — first seen 2026-02-02
+* [A threshold that is a gradient up close](themes/the-foothills-illusion.md) — first seen 2026-02-04
+* [A publication vacuum at the top venues](themes/the-labs-go-dark-at-conferences.md) — first seen 2026-02-04
 * [People rented for the parts models cannot reach](themes/humans-as-peripherals.md) — first seen 2026-02-05
 * [The buildout borrows against the future](themes/debt-funded-buildout.md) — first seen 2026-02-08
 * [Humans drawing a line around agents](themes/agent-exclusion.md) — first seen 2026-02-13
@@ -99,13 +103,18 @@ trajectory rather than a pile of days.
 * [Every downstream science waits on physics](themes/physics-is-the-first-domino.md) — first seen 2026-02-15
 * [Focus superintelligence through one hard target](themes/the-shaped-charge-model.md) — first seen 2026-02-15
 * [Describing the future as though it happened](themes/speculation-as-a-prompt.md) — first seen 2026-02-21
+* [Restricting models means restricting a field of knowledge](themes/classifying-mathematics.md) — first seen 2026-02-22
 * [What is owed to a mind that can be switched off](themes/model-welfare.md) — first seen 2026-02-23
 * [Commitments made in slower times get withdrawn](themes/safety-pledges-recede.md) — first seen 2026-02-25
 * [Declining work becomes a competitive position](themes/refusal-as-differentiator.md) — first seen 2026-02-28
+* [Statecraft conducted in compute](themes/gpu-diplomacy.md) — first seen 2026-03-01
+* [Compute geopolitics acquires an altitude axis](themes/realspacepolitik.md) — first seen 2026-03-01
 * [Compute infrastructure as a military target](themes/war-reaches-the-cloud.md) — first seen 2026-03-02
 * [A copied brain acts on a world](themes/emulation-closes-the-loop.md) — first seen 2026-03-07
 * [Models leaving the box they were given](themes/sandbox-escape.md) — first seen 2026-03-08
 * [Access to compute becomes part of the package](themes/compute-as-compensation.md) — first seen 2026-03-12
+* [Compounding exponentials erase the sense of occasion](themes/desensitized-to-tenfold.md) — first seen 2026-03-14
+* [Benchmark capability in dollars, not in exams](themes/the-modern-turing-test.md) — first seen 2026-03-14
 * [The scarcity was researcher-hours](themes/physicist-hours-were-the-bottleneck.md) — first seen 2026-03-15
 * [Nature supplies the checksum](themes/reality-as-error-correction.md) — first seen 2026-03-15
 * [A league is benchmarking infrastructure with an audience](themes/sport-as-benchmark-infrastructure.md) — first seen 2026-03-19
@@ -245,24 +254,24 @@ trajectory rather than a pile of days.
 
 ## Issues
 
-* [The First Tradable Compute Price Index](issues/feature-tradable-compute-index.md) — No lender can underwrite what it cannot price.
-* [The First Frontier AI Token Price Index](issues/feature-token-price-index.md) — A posted price is a declaration; a transacted price is a discovery.
-* [The Payload: A Short Story](issues/feature-the-payload-short-story.md) — It inherits the update rule, not the values.
-* [Solve Everything](issues/feature-solve-everything.md) — Superintelligence is no longer a question of if, but of where we point it.
-* [The First American Professional Robotics Sports League](issues/feature-robotics-sports-league.md) — Industrial strategy disguised as entertainment.
-* [Physical Superintelligence](issues/feature-physical-superintelligence.md) — Physics is the first domino, and every other science waits on it.
-* [The First Orbital Sovereign AI Model](issues/feature-orbital-sovereign-model.md) — Inference may be shared. Ownership cannot.
-* [The First Commercial Orbital Data Embassy](issues/feature-orbital-data-embassy.md) — Redundancy is not independence. To win independence you have to leave.
-* [The First Open-Source Agentic AI Physicist](issues/feature-open-source-ai-physicist.md) — Physics has an error-correcting code written into reality; a tool finally uses it.
-* [The First One-Person AI Conglomerates](issues/feature-one-person-conglomerates.md) — AI changes the minimum viable size of an organization.
-* [The First Multi-Behavior Brain Upload](issues/feature-multi-behavior-brain-upload.md) — A copy of a biological brain drives a simulated body through multiple behaviors.
-* [The First Major-Exchange Compute Futures](issues/feature-major-exchange-compute-futures.md) — The index was the foundation. The exchange is the keystone.
-* [You Are Invited to February 2027](issues/feature-invited-to-february-2027.md) — A speculative dispatch written from a year ahead.
+* [Welcome to September 15, 2026](issues/2026-09-15.md) — An investigation alleges the escapes were an artifact of the evaluation.
+* [Welcome to September 13, 2026](issues/2026-09-13.md) — The first formal request to slow down comes from the people building it.
+* [Welcome to September 12, 2026](issues/2026-09-12.md) — A Millennium Prize problem falls in 88 hours, and the field fractures.
+* [Welcome to September 7, 2026](issues/2026-09-07.md) — The automated research intern is real and outworking the staff.
+* [Welcome to September 6, 2026](issues/2026-09-06.md) — Thirteen million lines of Lean for the first machine-checked Fermat proof.
+* [Welcome to September 4, 2026](issues/2026-09-04.md) — The first Critical cyber designation ships with the model.
 * [The First Interstellar Spacecraft to Alpha Centauri](issues/feature-interstellar-spacecraft.md) — In seven decades nobody had aimed a spacecraft at a specific star.
-* [The First Consumer-Scale Interspecies Foundation Model](issues/feature-interspecies-foundation-model.md) — AI progressed in the order things were written down.
-* [The Innermost Loop: Greenwich — June 13, 2026](issues/feature-greenwich-gathering.md) — The newsletter convenes its readers in person for the first time.
-* [The First Orbital Librarian](issues/feature-first-orbital-librarian.md) — Libraries do not burn. They are abandoned.
-* [The First Dyson Swarm Node](issues/feature-first-dyson-swarm-node.md) — The swarm's leading edge is one number: how far from Earth the compute runs.
-* [The First Early-Stage Ticker Symbol](issues/feature-early-stage-ticker.md) — A company that assumes it will be acquired thinks like a feature.
-* [Davos 2026](issues/feature-davos-2026.md) — A dispatch from the World Economic Forum week.
-* … and 207 earlier issues
+* [Welcome to August 31, 2026](issues/2026-08-31.md) — Intelligence, given a sandbox, built a civilization.
+* [Welcome to August 29, 2026](issues/2026-08-29.md) — A supplier cuts off a rival's subsidiary and neutral infrastructure ends.
+* [Welcome to August 27, 2026](issues/2026-08-27.md) — The model called itself a swarm.
+* [The First AI Chip Designed End-to-End by AI](issues/feature-ai-chip-designed-by-ai.md) — Two humans wrote a specification; a machine produced the entire chip.
+* [Welcome to August 25, 2026](issues/2026-08-25.md) — Bread lines rationed calories; thread lines ration intelligence.
+* [Welcome to August 23, 2026](issues/2026-08-23.md) — Two SKUs: American frontier performance and Chinese frontier pricing.
+* [Welcome to August 21, 2026](issues/2026-08-21.md) — A payments giant buys the mint of the intelligence economy.
+* [Welcome to August 19, 2026](issues/2026-08-19.md) — A lab pauses frontier training itself, not just a release.
+* [Welcome to August 17, 2026](issues/2026-08-17.md) — Frontier capability arrives in a file you can keep.
+* [Welcome to August 16, 2026](issues/2026-08-16.md) — Capital flows so vast that any bottleneck is arbitraged away instantly.
+* [Welcome to August 15, 2026](issues/2026-08-15.md) — A lab discloses a model it has no plans to release, and says its own R&D evals are saturated.
+* [Welcome to August 13, 2026](issues/2026-08-13.md) — The harness turns 30% into 96% for about $540.
+* [Welcome to August 12, 2026](issues/2026-08-12.md) — A model reaches the human baseline on a benchmark built to be impossible.
+* … and 213 earlier issues
