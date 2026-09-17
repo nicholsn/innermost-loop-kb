@@ -12,9 +12,9 @@ supersedes:
 tags:
   - "development"
   - "2025-12-20"
-generated: { by: process:iml-emit, at: 2025-12-20T00:00:00Z }
+generated: { by: process:iml-emit, at: "2025-12-20T00:00:00Z" }
 sources:
-  - { id: iml-2025-12-20, resource: https://theinnermostloop.substack.com/p/welcome-to-december-20-2025, title: "Welcome to December 20, 2025", author: human:alex-wissner-gross, last_modified: 2025-12-20 }
+  - { id: iml-2025-12-20, resource: https://theinnermostloop.substack.com/p/welcome-to-december-20-2025, title: "Welcome to December 20, 2025", author: human:alex-wissner-gross, last_modified: "2025-12-20" }
 ---
 
 Five days after 91% of AI 2027 predictions were reported accurate, the same community is caught out by a single result.

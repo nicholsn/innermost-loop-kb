@@ -14,9 +14,9 @@ evidences:
 tags:
   - "development"
   - "2025-12-11"
-generated: { by: process:iml-emit, at: 2025-12-11T00:00:00Z }
+generated: { by: process:iml-emit, at: "2025-12-11T00:00:00Z" }
 sources:
-  - { id: iml-2025-12-11, resource: https://theinnermostloop.substack.com/p/welcome-to-december-11-2025, title: "Welcome to December 11, 2025", author: human:alex-wissner-gross, last_modified: 2025-12-11 }
+  - { id: iml-2025-12-11, resource: https://theinnermostloop.substack.com/p/welcome-to-december-11-2025, title: "Welcome to December 11, 2025", author: human:alex-wissner-gross, last_modified: "2025-12-11" }
 ---
 
 Offered as evidence of the shift from GUI to chat as the default surface.

@@ -16,6 +16,8 @@ import pathlib
 import runpy
 import sys
 
+import yaml
+
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 KB = ROOT / "knowledge"
 
@@ -39,6 +41,14 @@ def iri(*parts: str) -> str:
     return BASE + "/".join(parts)
 
 
+def _round_trips_as_str(s: str) -> bool:
+    """True when YAML reads ``s`` back as the same string, not an int/date/bool."""
+    try:
+        return yaml.safe_load("v: " + s)["v"] == s
+    except Exception:
+        return False
+
+
 def _yaml_scalar(v: str, *, flow: bool = False) -> str:
     """Quote a scalar when YAML would otherwise mis-read it.
 
@@ -49,6 +59,9 @@ def _yaml_scalar(v: str, *, flow: bool = False) -> str:
     s = str(v)
     risky = s and (s[0] in "!&*[]{}#|>%@`\"'" or ": " in s or s.endswith(":"))
     if flow and s and any(c in s for c in ",{}[]"):
+        risky = True
+    if not risky and s and not _round_trips_as_str(s):
+        # YAML 1.1 reads "2:1" as sexagesimal 121 and "2034-07-18" as a date.
         risky = True
     if risky:
         return '"' + s.replace('\\', '\\\\').replace('"', '\\"') + '"'
