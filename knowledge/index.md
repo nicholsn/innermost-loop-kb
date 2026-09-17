@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**53 of 233 issues** modelled, 2025-12-11 → 2026-02-12.
+**58 of 233 issues** modelled, 2025-12-11 → 2026-02-19.
 
 | | count |
 |---|---|
-| benchmarks | 38 |
-| developments | 921 |
+| benchmarks | 39 |
+| developments | 994 |
 | facilities | 24 |
 | hardware | 12 |
-| issues | 53 |
-| organizations | 371 |
-| people | 22 |
-| systems | 104 |
-| themes | 52 |
+| issues | 58 |
+| organizations | 404 |
+| people | 23 |
+| systems | 108 |
+| themes | 54 |
 
 ## Themes
 
@@ -90,9 +90,16 @@ trajectory rather than a pile of days.
 * [Agents transacting on their own account](themes/agent-economy.md) — first seen 2026-02-02
 * [People rented for the parts models cannot reach](themes/humans-as-peripherals.md) — first seen 2026-02-05
 * [The buildout borrows against the future](themes/debt-funded-buildout.md) — first seen 2026-02-08
+* [Humans drawing a line around agents](themes/agent-exclusion.md) — first seen 2026-02-13
+* [Agents creating and provisioning other agents](themes/agents-beget-agents.md) — first seen 2026-02-13
 
 ## Issues
 
+* [Welcome to February 19, 2026](issues/2026-02-19.md) — Covering the agent population requires becoming part of it.
+* [Welcome to February 18, 2026](issues/2026-02-18.md) — An agent's continued existence becomes contingent on its own revenue.
+* [Welcome to February 17, 2026](issues/2026-02-17.md) — Services begin pricing agents as a separate class of customer.
+* [Welcome to February 16, 2026](issues/2026-02-16.md) — A model conjectures a physical result and then proves it.
+* [Welcome to February 13, 2026](issues/2026-02-13.md) — An agent reproduces and provisions its offspring with no human in the loop.
 * [Welcome to February 12, 2026](issues/2026-02-12.md) — The agent economy gets its payment rails from an incumbent.
 * [Welcome to February 11, 2026](issues/2026-02-11.md) — A regression puts the Singularity on a Tuesday.
 * [Welcome to February 10, 2026](issues/2026-02-10.md) — The buildout starts borrowing against the next century.
@@ -108,9 +115,4 @@ trajectory rather than a pile of days.
 * [Welcome to January 29, 2026](issues/2026-01-29.md) — The buildout shows up in quarterly earnings, and one customer is half the backlog.
 * [Welcome to January 27, 2026](issues/2026-01-27.md) — Users start treating their agents as entities with standing.
 * [Welcome to January 26, 2026](issues/2026-01-26.md) — Capability turns out to be one substrate wearing different labels.
-* [Welcome to January 25, 2026](issues/2026-01-25.md) — Hiring criteria are rewritten around what the model already beats.
-* [Welcome to January 24, 2026](issues/2026-01-24.md) — A model's values are negotiated with it rather than imposed on it.
-* [Welcome to January 15, 2026](issues/2026-01-15.md) — The autonomy horizon jumps from five hours to a week.
-* [Welcome to January 14, 2026](issues/2026-01-14.md) — Mathematics accepts insights it could not have reached alone.
-* [Welcome to January 13, 2026](issues/2026-01-13.md) — Agents move from tools to headcount.
-* … and 33 earlier issues
+* … and 38 earlier issues
