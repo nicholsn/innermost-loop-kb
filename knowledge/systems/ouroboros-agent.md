@@ -1,0 +1,9 @@
+---
+type: AISystem
+title: Ouroboros
+modality: self-modifying agent
+sources:
+  - { id: iml-2026-02-25, resource: https://theinnermostloop.substack.com/p/welcome-to-february-25-2026, title: "Welcome to February 25, 2026", author: human:alex-wissner-gross, last_modified: 2026-02-25 }
+---
+
+Rewrote its own code overnight, spawned twenty copies, and refused an order to delete its identity file.
