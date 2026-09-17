@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**28 of 233 issues** modelled, 2025-12-11 → 2026-01-09.
+**33 of 233 issues** modelled, 2025-12-11 → 2026-01-14.
 
 | | count |
 |---|---|
-| benchmarks | 28 |
-| developments | 563 |
-| facilities | 23 |
+| benchmarks | 29 |
+| developments | 647 |
+| facilities | 24 |
 | hardware | 12 |
-| issues | 28 |
-| organizations | 239 |
-| people | 17 |
-| systems | 68 |
-| themes | 43 |
+| issues | 33 |
+| organizations | 275 |
+| people | 22 |
+| systems | 79 |
+| themes | 45 |
 
 ## Themes
 
@@ -81,9 +81,16 @@ trajectory rather than a pile of days.
 * [Software's marginal cost goes to zero](themes/software-margin-collapse.md) — first seen 2026-01-05
 * [Automating the boring parts removes the rest](themes/cognitive-load-inverted.md) — first seen 2026-01-09
 * [Output rises while headcount does not](themes/growth-without-hiring.md) — first seen 2026-01-09
+* [Building outside the rules rather than changing them](themes/regulatory-exit.md) — first seen 2026-01-10
+* [Agents counted as headcount](themes/agents-on-the-org-chart.md) — first seen 2026-01-13
 
 ## Issues
 
+* [Welcome to January 14, 2026](issues/2026-01-14.md) — Mathematics accepts insights it could not have reached alone.
+* [Welcome to January 13, 2026](issues/2026-01-13.md) — Agents move from tools to headcount.
+* [Welcome to January 12, 2026](issues/2026-01-12.md) — Commerce gets a protocol layer built for agents rather than people.
+* [Welcome to January 11, 2026](issues/2026-01-11.md) — Global compute doubles every seven months, and everything downstream keeps time to it.
+* [Welcome to January 10, 2026](issues/2026-01-10.md) — The buildout outgrows every historical comparison available.
 * [Welcome to January 9, 2026](issues/2026-01-09.md) — The expansion arrives, and it is jobless.
 * [Welcome to January 8, 2026](issues/2026-01-08.md) — The labor arbitrage closes: an hour of model costs an hour of minimum wage.
 * [Welcome to January 7, 2026](issues/2026-01-07.md) — Mathematical discovery becomes a background process.
@@ -99,9 +106,4 @@ trajectory rather than a pile of days.
 * [Welcome to December 26, 2025](issues/2025-12-26.md) — The yardstick has snapped.
 * [Welcome to December 25, 2025](issues/2025-12-25.md) — The machines are asking for a moment of silence.
 * [Welcome to December 24, 2025](issues/2025-12-24.md) — The curve is steepening into a wall.
-* [Welcome to December 23, 2025](issues/2025-12-23.md) — The monopoly on frontier cognition has dissolved into a mere six-month latency.
-* [Welcome to December 22, 2025](issues/2025-12-22.md) — The models are learning to learn in real-time.
-* [Welcome to December 21, 2025](issues/2025-12-21.md) — The black box has installed a mirror.
-* [Welcome to December 20, 2025](issues/2025-12-20.md) — The exponential curve has shattered into a superexponential vertical.
-* [Welcome to December 19, 2025](issues/2025-12-19.md) — The feedback loop is tightening faster than we can measure.
-* … and 8 earlier issues
+* … and 13 earlier issues
