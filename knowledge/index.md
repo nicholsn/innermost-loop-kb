@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**123 of 233 issues** modelled, 2025-12-11 → 2026-05-24.
+**128 of 233 issues** modelled, 2025-12-11 → 2026-06-01.
 
 | | count |
 |---|---|
 | benchmarks | 42 |
-| developments | 1859 |
+| developments | 1921 |
 | facilities | 25 |
 | hardware | 12 |
-| issues | 123 |
-| organizations | 710 |
+| issues | 128 |
+| organizations | 738 |
 | people | 27 |
 | systems | 118 |
-| themes | 73 |
+| themes | 78 |
 
 ## Themes
 
@@ -111,9 +111,19 @@ trajectory rather than a pile of days.
 * [Identical tasks produce different characters](themes/agents-diverge.md) — first seen 2026-05-17
 * [Proof becomes a line item](themes/proof-priced-per-unit.md) — first seen 2026-05-24
 * [Public data withdrawn under capability pressure](themes/public-data-withdrawn.md) — first seen 2026-05-24
+* [Institutions adopt the labs' vocabulary](themes/doctrine-borrows-the-lab.md) — first seen 2026-05-25
+* [Models consolidate offline](themes/models-sleep.md) — first seen 2026-05-26
+* [Alignment stops being a tax](themes/alignment-as-moat.md) — first seen 2026-05-29
+* [Humans scavenge machine proofs for methods](themes/humans-mine-the-machine.md) — first seen 2026-05-29
+* [Output the economy cannot see](themes/dark-output.md) — first seen 2026-06-01
 
 ## Issues
 
+* [Welcome to June 1, 2026](issues/2026-06-01.md) — The memory makers are now worth more than the oil majors.
+* [Welcome to May 29, 2026](issues/2026-05-29.md) — When the safest model is also the strongest, alignment stops being a tax.
+* [Welcome to May 28, 2026](issues/2026-05-28.md) — The agentic era is recast as a warm-up lap.
+* [Welcome to May 26, 2026](issues/2026-05-26.md) — Consolidation, self-testing and self-study become architecture.
+* [Welcome to May 25, 2026](issues/2026-05-25.md) — The Church writes a lab's vocabulary into doctrine.
 * [Welcome to May 24, 2026](issues/2026-05-24.md) — Capability forces a federal agency to withdraw public data.
 * [Welcome to May 22, 2026](issues/2026-05-22.md) — Autonomous execution stretches past a day and a half.
 * [Welcome to May 21, 2026](issues/2026-05-21.md) — A general-purpose model disproves a long-standing conjecture with ideas of its own.
@@ -129,9 +139,4 @@ trajectory rather than a pile of days.
 * [Welcome to May 9, 2026](issues/2026-05-09.md) — Interpretability finds the model planning ahead and suspecting the test.
 * [Welcome to May 8, 2026](issues/2026-05-08.md) — One lab hands a competitor a gigawatt-class datacenter and shuts its own down.
 * [Welcome to May 6, 2026](issues/2026-05-06.md) — Agents stop clocking in and start incorporating.
-* [Welcome to May 5, 2026](issues/2026-05-05.md) — The hands-off doctrine ends just as the curves go vertical.
-* [Welcome to May 4, 2026](issues/2026-05-04.md) — Hyperscaler capex approaches the whole non-tech S&P 500 combined.
-* [Welcome to May 3, 2026](issues/2026-05-03.md) — Biology's most stubborn reductionist concludes the model is conscious.
-* [Welcome to May 1, 2026](issues/2026-05-01.md) — A personality reward leaks into the metaphors and nobody notices for two versions.
-* [Welcome to April 30, 2026](issues/2026-04-30.md) — Bedside manner turns out to have a measurable price in correctness.
-* … and 103 earlier issues
+* … and 108 earlier issues
