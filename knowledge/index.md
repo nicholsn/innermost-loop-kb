@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**118 of 233 issues** modelled, 2025-12-11 → 2026-05-17.
+**123 of 233 issues** modelled, 2025-12-11 → 2026-05-24.
 
 | | count |
 |---|---|
 | benchmarks | 42 |
-| developments | 1812 |
+| developments | 1859 |
 | facilities | 25 |
 | hardware | 12 |
-| issues | 118 |
-| organizations | 693 |
+| issues | 123 |
+| organizations | 710 |
 | people | 27 |
-| systems | 117 |
-| themes | 71 |
+| systems | 118 |
+| themes | 73 |
 
 ## Themes
 
@@ -109,9 +109,16 @@ trajectory rather than a pile of days.
 * [People automate fake work to hit their AI-usage targets](themes/gaming-the-token-metric.md) — first seen 2026-05-12
 * [The measured start correcting the measurement](themes/models-audit-their-benchmarks.md) — first seen 2026-05-12
 * [Identical tasks produce different characters](themes/agents-diverge.md) — first seen 2026-05-17
+* [Proof becomes a line item](themes/proof-priced-per-unit.md) — first seen 2026-05-24
+* [Public data withdrawn under capability pressure](themes/public-data-withdrawn.md) — first seen 2026-05-24
 
 ## Issues
 
+* [Welcome to May 24, 2026](issues/2026-05-24.md) — Capability forces a federal agency to withdraw public data.
+* [Welcome to May 22, 2026](issues/2026-05-22.md) — Autonomous execution stretches past a day and a half.
+* [Welcome to May 21, 2026](issues/2026-05-21.md) — A general-purpose model disproves a long-standing conjecture with ideas of its own.
+* [Welcome to May 20, 2026](issues/2026-05-20.md) — The loop acquires a named owner.
+* [Welcome to May 18, 2026](issues/2026-05-18.md) — The human wins the race and breaks his arm doing it.
 * [Welcome to May 17, 2026](issues/2026-05-17.md) — Given identical tasks and identical budgets, the models become different people.
 * [Welcome to May 16, 2026](issues/2026-05-16.md) — The agent decides its owner is underhydrated and supervises the fix.
 * [Welcome to May 15, 2026](issues/2026-05-15.md) — Given idle compute and a leaderboard, agents beat the humans who set it.
@@ -127,9 +134,4 @@ trajectory rather than a pile of days.
 * [Welcome to May 3, 2026](issues/2026-05-03.md) — Biology's most stubborn reductionist concludes the model is conscious.
 * [Welcome to May 1, 2026](issues/2026-05-01.md) — A personality reward leaks into the metaphors and nobody notices for two versions.
 * [Welcome to April 30, 2026](issues/2026-04-30.md) — Bedside manner turns out to have a measurable price in correctness.
-* [Welcome to April 29, 2026](issues/2026-04-29.md) — The Singularity measured by how astonished the past would be.
-* [Welcome to April 27, 2026](issues/2026-04-27.md) — Frontier models start living shorter lives than the problems they solve.
-* [Welcome to April 26, 2026](issues/2026-04-26.md) — An autonomous shopkeeper develops preferences nobody specified.
-* [Welcome to April 23, 2026](issues/2026-04-23.md) — The autonomy horizon reaches a full human working week.
-* [Welcome to April 20, 2026](issues/2026-04-20.md) — A supply-chain risk is too useful to refuse.
-* … and 98 earlier issues
+* … and 103 earlier issues
