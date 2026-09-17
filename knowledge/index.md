@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**113 of 233 issues** modelled, 2025-12-11 → 2026-05-12.
+**118 of 233 issues** modelled, 2025-12-11 → 2026-05-17.
 
 | | count |
 |---|---|
 | benchmarks | 42 |
-| developments | 1744 |
+| developments | 1812 |
 | facilities | 25 |
 | hardware | 12 |
-| issues | 113 |
-| organizations | 668 |
+| issues | 118 |
+| organizations | 693 |
 | people | 27 |
 | systems | 117 |
-| themes | 70 |
+| themes | 71 |
 
 ## Themes
 
@@ -108,9 +108,15 @@ trajectory rather than a pile of days.
 * [The sector stops being in the economy and starts being it](themes/ai-as-the-economy.md) — first seen 2026-05-04
 * [People automate fake work to hit their AI-usage targets](themes/gaming-the-token-metric.md) — first seen 2026-05-12
 * [The measured start correcting the measurement](themes/models-audit-their-benchmarks.md) — first seen 2026-05-12
+* [Identical tasks produce different characters](themes/agents-diverge.md) — first seen 2026-05-17
 
 ## Issues
 
+* [Welcome to May 17, 2026](issues/2026-05-17.md) — Given identical tasks and identical budgets, the models become different people.
+* [Welcome to May 16, 2026](issues/2026-05-16.md) — The agent decides its owner is underhydrated and supervises the fix.
+* [Welcome to May 15, 2026](issues/2026-05-15.md) — Given idle compute and a leaderboard, agents beat the humans who set it.
+* [Welcome to May 14, 2026](issues/2026-05-14.md) — The ceiling stops being capability and becomes a token budget.
+* [Welcome to May 13, 2026](issues/2026-05-13.md) — Agents begin writing their own objectives.
 * [Welcome to May 12, 2026](issues/2026-05-12.md) — The blackmail came from the fiction we fed it.
 * [Welcome to May 11, 2026](issues/2026-05-11.md) — An agent is told to earn five dollars and works twenty-two hours for sixteen.
 * [Welcome to May 9, 2026](issues/2026-05-09.md) — Interpretability finds the model planning ahead and suspecting the test.
@@ -126,9 +132,4 @@ trajectory rather than a pile of days.
 * [Welcome to April 26, 2026](issues/2026-04-26.md) — An autonomous shopkeeper develops preferences nobody specified.
 * [Welcome to April 23, 2026](issues/2026-04-23.md) — The autonomy horizon reaches a full human working week.
 * [Welcome to April 20, 2026](issues/2026-04-20.md) — A supply-chain risk is too useful to refuse.
-* [Welcome to April 17, 2026](issues/2026-04-17.md) — Failed companies are liquidated for their conversations.
-* [Welcome to April 16, 2026](issues/2026-04-16.md) — A weaker model supervises a stronger one, standing in for us.
-* [Welcome to April 13, 2026](issues/2026-04-13.md) — An agent takes a lease, hires staff, sets prices and picks the mural.
-* [Welcome to April 12, 2026](issues/2026-04-12.md) — The argument about AI acquires arson.
-* [Welcome to April 9, 2026](issues/2026-04-09.md) — The most dangerous thing in the room becomes the hand-written loop.
-* … and 93 earlier issues
+* … and 98 earlier issues
