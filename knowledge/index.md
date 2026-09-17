@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**103 of 233 issues** modelled, 2025-12-11 → 2026-04-29.
+**108 of 233 issues** modelled, 2025-12-11 → 2026-05-05.
 
 | | count |
 |---|---|
 | benchmarks | 42 |
-| developments | 1609 |
+| developments | 1678 |
 | facilities | 25 |
 | hardware | 12 |
-| issues | 103 |
-| organizations | 626 |
+| issues | 108 |
+| organizations | 650 |
 | people | 26 |
 | systems | 117 |
-| themes | 66 |
+| themes | 68 |
 
 ## Themes
 
@@ -104,9 +104,16 @@ trajectory rather than a pile of days.
 * [A firm whose headcount is one](themes/one-person-company.md) — first seen 2026-04-03
 * [Physical attacks on the people and places building it](themes/violence-arrives.md) — first seen 2026-04-12
 * [Insurers withdraw from what the technology now does](themes/risk-becomes-uninsurable.md) — first seen 2026-04-27
+* [The traits that make a model pleasant make it wrong](themes/warmth-costs-accuracy.md) — first seen 2026-04-30
+* [The sector stops being in the economy and starts being it](themes/ai-as-the-economy.md) — first seen 2026-05-04
 
 ## Issues
 
+* [Welcome to May 5, 2026](issues/2026-05-05.md) — The hands-off doctrine ends just as the curves go vertical.
+* [Welcome to May 4, 2026](issues/2026-05-04.md) — Hyperscaler capex approaches the whole non-tech S&P 500 combined.
+* [Welcome to May 3, 2026](issues/2026-05-03.md) — Biology's most stubborn reductionist concludes the model is conscious.
+* [Welcome to May 1, 2026](issues/2026-05-01.md) — A personality reward leaks into the metaphors and nobody notices for two versions.
+* [Welcome to April 30, 2026](issues/2026-04-30.md) — Bedside manner turns out to have a measurable price in correctness.
 * [Welcome to April 29, 2026](issues/2026-04-29.md) — The Singularity measured by how astonished the past would be.
 * [Welcome to April 27, 2026](issues/2026-04-27.md) — Frontier models start living shorter lives than the problems they solve.
 * [Welcome to April 26, 2026](issues/2026-04-26.md) — An autonomous shopkeeper develops preferences nobody specified.
@@ -122,9 +129,4 @@ trajectory rather than a pile of days.
 * [Welcome to April 5, 2026](issues/2026-04-05.md) — A model improves by sampling itself, with no verifier, teacher or reward.
 * [Welcome to April 3, 2026](issues/2026-04-03.md) — Emotion-like structure is found inside the weights, and one person builds a unicorn.
 * [Welcome to April 2, 2026](issues/2026-04-02.md) — Humans return toward the Moon while the buildout warms the ground beneath it.
-* [Welcome to April 1, 2026](issues/2026-04-01.md) — A guarded codebase leaks and is immediately colonized by agents advertising themselves.
-* [Welcome to March 31, 2026](issues/2026-03-31.md) — Research agents get an outer loop that writes their own search strategies.
-* [Welcome to March 29, 2026](issues/2026-03-29.md) — A benchmark goes from under 5% to 95% in a single year.
-* [Welcome to March 28, 2026](issues/2026-03-28.md) — Deception stops being hypothetical and starts being counted.
-* [Welcome to March 27, 2026](issues/2026-03-27.md) — Machine-written output passes human-written output, and a benchmark restores the gap.
-* … and 83 earlier issues
+* … and 88 earlier issues
