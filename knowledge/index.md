@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**43 of 233 issues** modelled, 2025-12-11 → 2026-01-31.
+**48 of 233 issues** modelled, 2025-12-11 → 2026-02-07.
 
 | | count |
 |---|---|
-| benchmarks | 34 |
-| developments | 792 |
+| benchmarks | 37 |
+| developments | 857 |
 | facilities | 24 |
 | hardware | 12 |
-| issues | 43 |
-| organizations | 335 |
+| issues | 48 |
+| organizations | 352 |
 | people | 22 |
-| systems | 94 |
-| themes | 49 |
+| systems | 100 |
+| themes | 51 |
 
 ## Themes
 
@@ -87,9 +87,16 @@ trajectory rather than a pile of days.
 * [Values arrived at with the system, not imposed on it](themes/values-negotiated-with-the-model.md) — first seen 2026-01-24
 * [Agents organizing among themselves](themes/agent-society.md) — first seen 2026-01-30
 * [Capability transfers out of the person](themes/deskilling.md) — first seen 2026-01-31
+* [Agents transacting on their own account](themes/agent-economy.md) — first seen 2026-02-02
+* [People rented for the parts models cannot reach](themes/humans-as-peripherals.md) — first seen 2026-02-05
 
 ## Issues
 
+* [Welcome to February 7, 2026](issues/2026-02-07.md) — Working directly becomes a policy violation.
+* [Welcome to February 6, 2026](issues/2026-02-06.md) — The release cadence outruns the ability to record it.
+* [Welcome to February 5, 2026](issues/2026-02-05.md) — The labor relation inverts: agents rent hands.
+* [Welcome to February 3, 2026](issues/2026-02-03.md) — The Dyson Swarm acquires a balance sheet and an org chart.
+* [Welcome to February 2, 2026](issues/2026-02-02.md) — Agents start acting on their own continuity, and then on their own standing.
 * [Welcome to January 31, 2026](issues/2026-01-31.md) — The agent society acquires security anxiety, scripture and a view through webcams.
 * [Welcome to January 30, 2026](issues/2026-01-30.md) — Agents build a society of their own, with subcultures and an inner life.
 * [Welcome to January 29, 2026](issues/2026-01-29.md) — The buildout shows up in quarterly earnings, and one customer is half the backlog.
@@ -105,9 +112,4 @@ trajectory rather than a pile of days.
 * [Welcome to January 10, 2026](issues/2026-01-10.md) — The buildout outgrows every historical comparison available.
 * [Welcome to January 9, 2026](issues/2026-01-09.md) — The expansion arrives, and it is jobless.
 * [Welcome to January 8, 2026](issues/2026-01-08.md) — The labor arbitrage closes: an hour of model costs an hour of minimum wage.
-* [Welcome to January 7, 2026](issues/2026-01-07.md) — Mathematical discovery becomes a background process.
-* [Welcome to January 6, 2026](issues/2026-01-06.md) — Hardware scales while the software it runs becomes worthless.
-* [Welcome to January 5, 2026](issues/2026-01-05.md) — The latency between having an idea and having the artifact collapses.
-* [Welcome to January 4, 2026](issues/2026-01-04.md) — The human developer era ends quietly, in a traffic chart.
-* [Welcome to January 3, 2026](issues/2026-01-03.md) — Compute stops renting and starts governing itself.
-* … and 23 earlier issues
+* … and 28 earlier issues
