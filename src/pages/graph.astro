@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import { LAYOUTS } from '../lib/graph-layouts.mjs';
 import { href, loadBundle, titleOf } from '../lib/lokf';
 const { concepts } = await loadBundle();
 const issues = concepts.filter(c => c.data.type === 'Issue')
@@ -60,6 +61,7 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
     </div>
     <div class="lokf-graph__stage">
       <div class="lokf-graph__toolbar">
+        <button type="button" class="lokf-graph__btn" data-action="layouts" aria-expanded="false" aria-controls="graph-layout-panel">Layout ▾</button>
         <button type="button" class="lokf-graph__btn" data-action="fit" title="Fit graph to view">
           ⤢ Fit
         </button>
@@ -71,6 +73,16 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
         >
           ⛶ Full screen
         </button>
+      </div>
+      <div id="graph-layout-panel" class="lokf-graph__layout-panel" hidden>
+        <label for="graph-layout">Graph layout</label>
+        <select id="graph-layout" aria-describedby="graph-layout-help">
+          {Object.entries(LAYOUTS).map(([value, layout]) => <option value={value}>{layout.label}</option>)}
+        </select>
+        <p id="graph-layout-help"></p>
+        <label><input type="checkbox" data-action="edge-labels" /> Show relationship labels</label>
+        <button type="button" class="lokf-graph__btn" data-action="rearrange">Rearrange</button>
+        <p class="lokf-graph__layout-status" role="status" aria-live="polite"></p>
       </div>
       <div class="lokf-graph__canvas"></div>
       <aside class="lokf-graph__detail" hidden>
@@ -89,6 +101,9 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
 
 <script>
   import cytoscape from 'cytoscape';
+  import fcose from 'cytoscape-fcose';
+  import { LAYOUTS, validLayout, prepareLayout } from '../lib/graph-layouts.mjs';
+  cytoscape.use(fcose);
 
 
   // Stable colors for the LOKF core types; extras fall back to the palette.
@@ -120,6 +135,17 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
   function init(root: HTMLElement) {
     if (root.dataset.ready) return;
     root.dataset.ready = '1';
+    const layoutSelect = root.querySelector<HTMLSelectElement>('#graph-layout')!;
+    const layoutButton = root.querySelector<HTMLButtonElement>('[data-action=layouts]')!;
+    const layoutPanel = root.querySelector<HTMLElement>('#graph-layout-panel')!;
+    layoutButton.addEventListener('click', () => {
+      layoutPanel.hidden = !layoutPanel.hidden;
+      layoutButton.setAttribute('aria-expanded', String(!layoutPanel.hidden));
+      if (!layoutPanel.hidden) layoutSelect.focus();
+    });
+    layoutPanel.addEventListener('keydown', event => {
+      if (event.key === 'Escape') { layoutPanel.hidden = true; layoutButton.setAttribute('aria-expanded', 'false'); layoutButton.focus(); }
+    });
     const article = root.querySelector<HTMLSelectElement>('.lokf-graph__article')!;
     const topic = root.querySelector<HTMLSelectElement>('.lokf-graph__topic')!;
     const status = root.querySelector<HTMLElement>('.lokf-graph__status')!;
@@ -173,6 +199,9 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
     }
     function fromURL(mode = 'none') {
       const params = new URLSearchParams(location.search);
+      let saved = '';
+      try { saved = localStorage.getItem('iml-graph-layout') || ''; } catch { /* Storage can be disabled. */ }
+      layoutSelect.value = validLayout(params.get('layout') || saved);
       const value = Number(params.get('page') || 1);
       load(params.get('focus') || root.dataset.latest!, Number.isSafeInteger(value) && value > 0 ? value : 1, mode);
     }
@@ -188,6 +217,13 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
 
   function render(root: HTMLElement, graph: Elements, focusId: string) {
     const listeners = new AbortController();
+    const layoutSelect = root.querySelector<HTMLSelectElement>('#graph-layout')!;
+    const layoutStatus = root.querySelector<HTMLElement>('.lokf-graph__layout-status')!;
+    const help = root.querySelector<HTMLElement>('#graph-layout-help')!;
+    const edgeLabels = root.querySelector<HTMLInputElement>('[data-action=edge-labels]')!;
+    let layoutFrame = 0;
+    let currentLayout: any;
+    let disposed = false;
     const mount = root.querySelector('.lokf-graph__canvas') as HTMLElement;
 
     const types = [...new Set(graph.nodes.map((n) => n.data.type))].sort();
@@ -203,24 +239,14 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
 
     const cy = cytoscape({
       container: mount,
-      elements: graph,
+      elements: { nodes: graph.nodes.map(n => ({ ...n, classes: 'concept' })), edges: graph.edges },
       minZoom: 0.2,
       maxZoom: 2.5,
       wheelSensitivity: 0.3,
-      layout: {
-        name: 'cose',
-        numIter: 400,
-        animate: false,
-        padding: 50,
-        nodeSeparation: 160,
-        idealEdgeLength: 130,
-        nodeRepulsion: 8000,
-        gravity: 0.25,
-        fit: true,
-      } as any,
+      layout: { name: 'preset' },
       style: [
         {
-          selector: 'node',
+          selector: 'node.concept',
           style: {
             'background-color': 'data(color)',
             label: 'data(label)',
@@ -237,7 +263,7 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
         {
           selector: 'edge',
           style: {
-            label: 'data(predicate)',
+            label: '',
             'font-size': '9px',
             color: line,
             'line-color': line,
@@ -253,10 +279,54 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
           selector: 'node:selected',
           style: { 'border-width': 4, 'border-color': fg },
         },
+        { selector: 'edge.show-label', style: { label: 'data(predicate)' } },
+        { selector: 'node.layout-group', style: {
+          label: 'data(label)', 'font-size': 14, 'font-weight': 'bold', color: fg,
+          'text-valign': 'top', 'text-margin-y': -8, 'text-wrap': 'wrap', 'text-max-width': '220px',
+          'background-color': line, 'background-opacity': 0.07, 'border-color': line,
+          'border-width': 1, 'border-opacity': 0.5, padding: '35px', shape: 'round-rectangle',
+        } },
         { selector: '.dim', style: { opacity: 0.15 } },
         { selector: '.hidden', style: { display: 'none' } },
       ],
     });
+
+    function runLayout(persist = false) {
+      cancelAnimationFrame(layoutFrame);
+      currentLayout?.stop();
+      const mode = validLayout(layoutSelect.value);
+      help.textContent = LAYOUTS[mode].description;
+      layoutStatus.textContent = 'Arranging visible nodes…';
+      root.dataset.layoutState = 'loading';
+      if (persist) {
+        try { localStorage.setItem('iml-graph-layout', mode); } catch { /* Optional preference. */ }
+        const url = new URL(location.href);
+        url.searchParams.set('layout', mode);
+        history.replaceState({}, '', url);
+      }
+      layoutFrame = requestAnimationFrame(() => {
+        if (disposed) return;
+        try {
+          const prepared = prepareLayout(cy, mode);
+          cy.edges().toggleClass('show-label', edgeLabels.checked);
+          if (prepared.nodes) {
+            currentLayout = prepared.elements.layout(prepared.options);
+            currentLayout.run();
+          }
+          root.dataset.layout = mode;
+          root.dataset.layoutState = 'ready';
+          layoutStatus.textContent = prepared.nodes ? `${LAYOUTS[mode].label} · ${prepared.nodes} visible nodes${prepared.groups ? ` · ${prepared.groups} groups` : ''}` : 'No visible nodes. Enable a node type to restore the graph.';
+        } catch (error) {
+          root.dataset.layoutState = 'error';
+          layoutStatus.textContent = 'This layout could not be arranged. Try Classic force or Radial.';
+          console.error('Graph layout failed', error);
+        }
+      });
+    }
+    layoutSelect.addEventListener('change', () => runLayout(true), { signal: listeners.signal });
+    root.querySelector('[data-action=rearrange]')!.addEventListener('click', () => runLayout(), { signal: listeners.signal });
+    edgeLabels.addEventListener('change', () => cy.edges().toggleClass('show-label', edgeLabels.checked), { signal: listeners.signal });
+    runLayout();
 
     // Filters: a checkbox per type and per predicate.
     const typeBox = root.querySelector('[data-filter="type"]') as HTMLElement;
@@ -286,8 +356,9 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
     function applyFilters() {
       const okTypes = checkedValues(typeBox);
       const okPreds = checkedValues(predBox);
-      cy.nodes().forEach((n) => n.toggleClass('hidden', !okTypes.has(n.data('type'))));
+      cy.nodes('.concept').forEach((n) => n.toggleClass('hidden', !okTypes.has(n.data('type'))));
       cy.edges().forEach((e) => e.toggleClass('hidden', !okPreds.has(e.data('predicate'))));
+      runLayout();
     }
 
     // Search dims non-matching nodes.
@@ -295,7 +366,7 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
     search.value = '';
     search.addEventListener('input', () => {
       const q = search.value.trim().toLowerCase();
-      cy.nodes().forEach((n) =>
+      cy.nodes('.concept').forEach((n) =>
         n.toggleClass('dim', q !== '' && !n.data('label').toLowerCase().includes(q)),
       );
     }, { signal: listeners.signal });
@@ -314,18 +385,18 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
       explore.onclick = () => root.dispatchEvent(new CustomEvent('explore-node', { detail: d.concept_id }));
       detail.hidden = false;
     };
-    cy.on('tap', 'node', (evt) => showDetail(evt.target.data()));
+    cy.on('tap', 'node.concept', (evt) => showDetail(evt.target.data()));
     (root.querySelector('.lokf-graph__close') as HTMLElement).addEventListener(
       'click',
       () => (detail.hidden = true),
       { signal: listeners.signal },
     );
 
-    const fit = () => cy.fit(undefined, 45);
+    const fit = () => { const visible = cy.elements(':visible'); if (visible.nodes().length) cy.fit(visible, 45); };
 
     // Keep the entire bounded scope visible; selecting an issue must not
     // zoom so far into its center that all its developments disappear.
-    const frame = requestAnimationFrame(() => { cy.resize(); fit(); });
+    const frame = requestAnimationFrame(() => { cy.resize(); });
     const target = cy.nodes().filter(n => n.data('concept_id') === focusId);
     target.select();
 
@@ -346,7 +417,7 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
         fit();
       });
     }, { signal: listeners.signal });
-    return () => { cancelAnimationFrame(frame); listeners.abort(); cy.destroy(); };
+    return () => { disposed = true; cancelAnimationFrame(frame); cancelAnimationFrame(layoutFrame); currentLayout?.stop(); listeners.abort(); cy.destroy(); };
   }
 
   document.querySelectorAll<HTMLElement>('.lokf-graph').forEach(init);
@@ -448,6 +519,15 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
     border-color: var(--accent);
     color: var(--accent);
   }
+  .lokf-graph__layout-panel {
+    position: absolute; top: 3rem; left: .55rem; z-index: 5; width: min(23rem, calc(100% - 1.1rem));
+    padding: 1rem; background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: .5rem; box-shadow: 0 10px 28px #0004;
+    max-height: calc(100% - 4rem); overflow: auto; font-size: .85rem;
+  }
+  .lokf-graph__layout-panel select { width: 100%; font: inherit; color: inherit; background: var(--bg); padding: .5rem; margin: .4rem 0; border: 1px solid var(--border); border-radius: .3rem; }
+  .lokf-graph__layout-panel label { display: block; margin-bottom: .5rem; }
+  .lokf-graph__layout-status { margin-bottom: 0; color: var(--muted); }
+  .lokf-graph__toolbar { flex-wrap: wrap; }
   .lokf-graph__canvas {
     width: 100%;
     height: 62vh;
