@@ -1,0 +1,19 @@
+---
+import { evidenceSources, reportingDate } from '../lib/evidence.mjs';
+const { entry } = Astro.props;
+const d = entry.data;
+const sources = evidenceSources(d);
+const date = reportingDate(entry);
+const verification = Array.isArray(d.verified) ? d.verified : [];
+---
+{(d.claim || sources.length || verification.length) && <section aria-label="Claim and evidence" class="evidence">
+  {d.claim && <><h2>Claim</h2><p class="claim">{d.claim}</p></>}
+  {d.score && <p><strong>Reported metric:</strong> {String(d.score)}</p>}
+  {date && <p><strong>Reporting date:</strong> <time datetime={date}>{date}</time> <small>(not necessarily the event date)</small></p>}
+  {sources.length > 0 && <><h2>Sources</h2><p>Attribution and reporting linked by this record; links do not imply independent verification.</p><ul>{sources.map(source => <li><a href={source.url}>{source.title}</a> <small>({source.host})</small></li>)}</ul></>}
+  {verification.length > 0 && <details><summary>Verification record</summary>
+    <p>These entries record a check, not proof that the underlying claim is true. Unless described in the article below, the scope of the check is unknown.</p>
+    <ul>{verification.map(v => <li>Recorded by {String(v.by || 'unknown')} {v.at && <>on {String(v.at)}</>}</li>)}</ul>
+  </details>}
+</section>}
+<style>.evidence{margin:1.5rem 0;padding:1.25rem;border:1px solid var(--line,#ccc);border-radius:12px}.claim{font-size:1.15rem}.evidence a{overflow-wrap:anywhere}small{font-size:.85em}</style>

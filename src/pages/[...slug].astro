@@ -1,5 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
+import Evidence from '../components/Evidence.astro';
+import { descriptionInBody, safeSourceUrl } from '../lib/evidence.mjs';
 import { getCollection, render } from 'astro:content';
 import {
   loadBundle, iriOf, hrefOf, titleOf, relationsOf, conceptJsonLd,
@@ -33,15 +35,16 @@ const back = concepts.filter(
 <Base title={titleOf(entry)} description={d.description} jsonld={conceptJsonLd(entry)}>
   <p><span class="badge">{d.type}</span></p>
   <h1>{titleOf(entry)}</h1>
-  {d.description && <p class="tagline">{d.description}</p>}
+  {d.description && !descriptionInBody(d.description, entry.body) && <p class="tagline">{d.description}</p>}
   {d.tags && (
     <div class="tags">{(d.tags as string[]).map((t) => <span>{t}</span>)}</div>
   )}
 
+  <Evidence entry={entry} />
   <article><Content /></article>
 
-  {d.resource && (
-    <p class="lede-links"><a href={d.resource}>Visit resource ↗</a></p>
+  {safeSourceUrl(d.resource) && (
+    <p class="lede-links"><a href={safeSourceUrl(d.resource)}>Visit resource ↗</a></p>
   )}
 
   {(forward.size > 0 || back.length > 0) && (
