@@ -64,6 +64,7 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
       <button type="button" data-view="list" aria-pressed="false">List</button>
       <button type="button" data-action="reset-filters">Reset filters and search</button>
     </div>
+    <p class="lokf-graph__scope-note">This is one page of a scoped graph. Communities are inferred from the current page and filters, not established categories. Radial centers show visible connection counts, not global importance.</p>
     <p class="lokf-graph__matches" role="status"></p>
     <section class="lokf-graph__list" aria-label="Concepts in this view" hidden><ul></ul></section>
     <div class="lokf-graph__stage">
@@ -110,26 +111,11 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
 <script>
   import cytoscape from 'cytoscape';
   import fcose from 'cytoscape-fcose';
+  import { typeStyle } from '../lib/graph-palette.mjs';
   import { REL_LABEL } from '../lib/relation-labels';
   import { LAYOUTS, validLayout, prepareLayout } from '../lib/graph-layouts.mjs';
   cytoscape.use(fcose);
 
-
-  // Stable colors for the LOKF core types; extras fall back to the palette.
-  const TYPE_COLORS: Record<string, string> = {
-    Person: '#c96f3b',
-    Organization: '#5b8def',
-    Role: '#2ea77d',
-    Document: '#9b6dd6',
-    Reference: '#d2a53a',
-    Dataset: '#4bacc6',
-    Table: '#3f8f96',
-    Metric: '#c1558b',
-    Service: '#7f8c4f',
-    GlossaryTerm: '#d2a53a',
-    Playbook: '#d05b5b',
-  };
-  const FALLBACK = ['#5b8def', '#2ea77d', '#c1558b', '#9b6dd6', '#d2a53a', '#4bacc6'];
 
   function themeColor(name: string, fallback: string): string {
     const v = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
@@ -252,9 +238,8 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
 
     const types = [...new Set(graph.nodes.map((n) => n.data.type))].sort();
     const colorOf: Record<string, string> = {};
-    let spare = 0;
-    types.forEach((t) => (colorOf[t] = TYPE_COLORS[t] ?? FALLBACK[spare++ % FALLBACK.length]));
-    graph.nodes.forEach((n) => (n.data.color = colorOf[n.data.type]));
+    types.forEach(t => colorOf[t] = typeStyle(t).color);
+    graph.nodes.forEach(n => { n.data.color = typeStyle(n.data.type).color; n.data.shape = typeStyle(n.data.type).shape; });
     root.querySelectorAll('.lokf-graph__fieldset label').forEach(el => el.remove());
     const predicates = [...new Set(graph.edges.map((e) => e.data.predicate))].sort();
 
@@ -273,6 +258,7 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
           selector: 'node.concept',
           style: {
             'background-color': 'data(color)',
+            shape: 'data(shape)',
             label: 'data(label)',
             color: fg,
             'font-size': '11px',
@@ -368,7 +354,8 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
         dot.style.background = swatch;
         label.append(dot);
       }
-      label.append(document.createTextNode(' ' + (swatch ? value : REL_LABEL[value] || value)));
+      label.append(document.createTextNode(' ' + (swatch ? `${value} (${typeStyle(value).shape})` : REL_LABEL[value] || value)));
+      input.setAttribute('aria-label', swatch ? value : REL_LABEL[value] || value);
       input.addEventListener('change', applyFilters, { signal: listeners.signal });
       return label;
     };
