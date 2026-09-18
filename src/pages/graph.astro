@@ -17,8 +17,7 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
   <h1>Knowledge graph</h1>
   <p class="tagline">
     Start with the latest article, choose another edition, or follow a topic across articles. Click a node to inspect it.
-    Raw data: <a href={href('/graph.json')}><code>graph.json</code></a> ·
-    <a href={href('/graph.jsonld')}><code>graph.jsonld</code></a>.
+
   </p>
 
   <div class="lokf-graph" data-graph-base={href('/graph-data/')} data-latest={latest}>
