@@ -50,3 +50,13 @@ test('full-text matching, title ranking, AND terms, prefixes, accents and type f
   assert.deepEqual(searchIndex(index,'no-such-word'),[]);
   assert.deepEqual(searchIndex(index,'','Organization'),[2]);
 });
+
+test('search filters reporting dates inclusively and can sort newest independent of relevance', () => {
+ const index = buildIndex([
+ {title:'Compute compute',tags:[],description:'',text:'',type:'Development',date:'2026-01-01',domain:'compute'},
+ {title:'Other',tags:[],description:'',text:'compute',type:'Development',date:'2026-09-17',domain:'compute'},
+ {title:'Compute',tags:[],description:'',text:'',type:'Issue',date:'',domain:''},
+ ]);
+ assert.deepEqual(searchIndex(index,'compute','Development',{sort:'newest'}),[1,0]);
+ assert.deepEqual(searchIndex(index,'','',{from:'2026-09-17',to:'2026-09-17',domain:'compute'}),[1]);
+});
