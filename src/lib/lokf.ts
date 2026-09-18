@@ -24,18 +24,7 @@ export const RELATION_SLOTS = [
   'developed_by', 'fabricated_by', 'evaluated_on', 'published_by', 'operated_by',
 ] as const;
 
-export const REL_LABEL: Record<string, string> = {
-  isPartOf: 'Part of', hasPart: 'Has part', references: 'References',
-  dependsOn: 'Depends on', derivedFrom: 'Derived from', about: 'About',
-  sameAs: 'Same as', relatedTo: 'Related to', definedBy: 'Defined by',
-  source: 'Source', measures: 'Measures', memberOf: 'Member of',
-  holder: 'Held by',
-  reported_in: 'Reported in', covers: 'Covers', actor: 'Actor',
-  evidences: 'Evidence for', supersedes: 'Supersedes',
-  developed_by: 'Developed by', fabricated_by: 'Fabricated by',
-  evaluated_on: 'Evaluated on', published_by: 'Published by',
-  operated_by: 'Operated by',
-};
+export { REL_LABEL } from './relation-labels';
 
 /** Join a site-internal path onto Astro's base (works at "/" or "/<repo>"). */
 export const href = (path: string) =>

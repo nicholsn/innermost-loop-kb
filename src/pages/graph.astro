@@ -59,6 +59,13 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
         </fieldset>
       </div>
     </div>
+    <div class="lokf-graph__view-controls" role="group" aria-label="Graph presentation">
+      <button type="button" data-view="graph" aria-pressed="true">Graph</button>
+      <button type="button" data-view="list" aria-pressed="false">List</button>
+      <button type="button" data-action="reset-filters">Reset filters and search</button>
+    </div>
+    <p class="lokf-graph__matches" role="status"></p>
+    <section class="lokf-graph__list" aria-label="Concepts in this view" hidden><ul></ul></section>
     <div class="lokf-graph__stage">
       <div class="lokf-graph__toolbar">
         <button type="button" class="lokf-graph__btn" data-action="layouts" aria-expanded="false" aria-controls="graph-layout-panel">Layout ▾</button>
@@ -92,6 +99,7 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
           <dt>Type</dt><dd class="lokf-graph__detail-type"></dd>
           <dt>IRI</dt><dd class="lokf-graph__detail-iri lokf-graph__mono"></dd>
         </dl>
+        <h4>Connections in this view</h4><ul class="lokf-graph__detail-relations"></ul>
         <a class="lokf-graph__detail-page" href="#">Open page →</a>
         <button type="button" class="lokf-graph__btn" data-action="explore">Explore connections</button>
       </aside>
@@ -102,6 +110,7 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
 <script>
   import cytoscape from 'cytoscape';
   import fcose from 'cytoscape-fcose';
+  import { REL_LABEL } from '../lib/relation-labels';
   import { LAYOUTS, validLayout, prepareLayout } from '../lib/graph-layouts.mjs';
   cytoscape.use(fcose);
 
@@ -225,6 +234,21 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
     let currentLayout: any;
     let disposed = false;
     const mount = root.querySelector('.lokf-graph__canvas') as HTMLElement;
+    const list = root.querySelector<HTMLElement>('.lokf-graph__list')!;
+    const matches = root.querySelector<HTMLElement>('.lokf-graph__matches')!;
+    let view = root.dataset.view || 'graph';
+    function setView(value: string) {
+      view = value; root.dataset.view = value;
+      root.querySelectorAll<HTMLButtonElement>('[data-view]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.view === view)));
+      mount.hidden = view === 'list';
+      root.querySelector<HTMLElement>('.lokf-graph__toolbar')!.hidden = view === 'list';
+      root.querySelector<HTMLElement>('#graph-layout-panel')!.hidden = true;
+      root.querySelector('[data-action=layouts]')!.setAttribute('aria-expanded', 'false');
+      updateList();
+      if (view === 'graph') requestAnimationFrame(() => { cy.resize(); cy.fit(); });
+    }
+    root.querySelectorAll<HTMLButtonElement>('[data-view]').forEach(button => button.addEventListener('click', () => setView(button.dataset.view!), {signal:listeners.signal}));
+
 
     const types = [...new Set(graph.nodes.map((n) => n.data.type))].sort();
     const colorOf: Record<string, string> = {};
@@ -344,7 +368,7 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
         dot.style.background = swatch;
         label.append(dot);
       }
-      label.append(document.createTextNode(' ' + value));
+      label.append(document.createTextNode(' ' + (swatch ? value : REL_LABEL[value] || value)));
       input.addEventListener('change', applyFilters, { signal: listeners.signal });
       return label;
     };
@@ -358,6 +382,7 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
       const okPreds = checkedValues(predBox);
       cy.nodes('.concept').forEach((n) => n.toggleClass('hidden', !okTypes.has(n.data('type'))));
       cy.edges().forEach((e) => e.toggleClass('hidden', !okPreds.has(e.data('predicate'))));
+      updateList();
       runLayout();
     }
 
@@ -369,6 +394,7 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
       cy.nodes('.concept').forEach((n) =>
         n.toggleClass('dim', q !== '' && !n.data('label').toLowerCase().includes(q)),
       );
+      updateList();
     }, { signal: listeners.signal });
 
     // Detail panel on node click, linking to the node's page.
@@ -376,7 +402,23 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
     const set = (sel: string, text: string) => {
       (root.querySelector(sel) as HTMLElement).textContent = text;
     };
+    let returnFocus: HTMLElement | null = null;
     const showDetail = (d: Record<string, string>) => {
+      if (detail.hidden) returnFocus = document.activeElement as HTMLElement;
+      const relationships = root.querySelector<HTMLElement>('.lokf-graph__detail-relations')!;
+      relationships.replaceChildren();
+      const visible = new Set(cy.nodes('.concept').not('.hidden').map(n => n.id()));
+      for (const edge of cy.edges().not('.hidden')) {
+        const e = edge.data();
+        if (!visible.has(e.source) || !visible.has(e.target) || (e.source !== d.id && e.target !== d.id)) continue;
+        const other = cy.getElementById(e.source === d.id ? e.target : e.source).data();
+        const li = document.createElement('li');
+        const button = document.createElement('button'); button.textContent = other.label;
+        button.addEventListener('click', () => showDetail(other));
+        li.append(`${e.target === d.id ? 'Incoming: ' : ''}${REL_LABEL[e.predicate] || e.predicate}: `, button);
+        relationships.append(li);
+      }
+      if (!relationships.childElementCount) relationships.textContent = 'No connections under the current filters.';
       set('.lokf-graph__detail-title', d.label);
       set('.lokf-graph__detail-type', d.type);
       set('.lokf-graph__detail-iri', d.id);
@@ -384,13 +426,35 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
       const explore = root.querySelector<HTMLButtonElement>('[data-action=explore]')!;
       explore.onclick = () => root.dispatchEvent(new CustomEvent('explore-node', { detail: d.concept_id }));
       detail.hidden = false;
+      root.querySelector<HTMLButtonElement>('.lokf-graph__close')!.focus();
     };
     cy.on('tap', 'node.concept', (evt) => showDetail(evt.target.data()));
     (root.querySelector('.lokf-graph__close') as HTMLElement).addEventListener(
       'click',
-      () => (detail.hidden = true),
+      () => { detail.hidden = true; if (returnFocus?.isConnected) returnFocus.focus(); },
       { signal: listeners.signal },
     );
+
+    detail.addEventListener('keydown', event => { if (event.key === 'Escape') root.querySelector<HTMLButtonElement>('.lokf-graph__close')!.click(); }, {signal:listeners.signal});
+    function updateList() {
+      const q = root.querySelector<HTMLInputElement>('.lokf-graph__search')!.value.trim().toLowerCase();
+      const nodes = cy.nodes('.concept').not('.hidden').filter(n => !q || n.data('label').toLowerCase().includes(q));
+      list.hidden = view !== 'list' && !q;
+      matches.textContent = `${nodes.length} ${q ? 'matching' : 'visible'} concepts in this page${nodes.length ? '' : '. Reset filters or search to see concepts.'}`;
+      const ul = list.querySelector('ul')!; ul.replaceChildren();
+      for (const node of nodes) {
+        const d = node.data(); const li = document.createElement('li');
+        const button = document.createElement('button'); button.textContent = d.label;
+        button.addEventListener('click', () => showDetail(d));
+        const metadata = document.createElement('small'); metadata.textContent = ` ${d.type} · ${d.date ? 'Reported ' + d.date : 'Reporting date unknown'}`;
+        li.append(button, metadata); ul.append(li);
+      }
+    }
+    root.querySelector('[data-action=reset-filters]')!.addEventListener('click', () => {
+      root.querySelectorAll<HTMLInputElement>('.lokf-graph__fieldset input').forEach(input => input.checked = true);
+      search.value = ''; cy.nodes().removeClass('dim'); applyFilters();
+    }, {signal:listeners.signal});
+    setView(view);
 
     const fit = () => { const visible = cy.elements(':visible'); if (visible.nodes().length) cy.fit(visible, 45); };
 
@@ -594,4 +658,14 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
     cursor: pointer;
     color: var(--muted);
   }
+</style>
+
+<style is:global>
+.lokf-graph [hidden]{display:none!important}
+.lokf-graph__view-controls{display:flex;gap:.75rem;flex-wrap:wrap;margin:1rem 0}
+.lokf-graph__list li{margin:.75rem 0;overflow-wrap:anywhere}
+.lokf-graph__list button,.lokf-graph__detail-relations button{text-align:left;white-space:normal;max-width:100%}
+.lokf-graph[data-view=list] .lokf-graph__stage{height:auto;min-height:0;overflow:visible}
+.lokf-graph[data-view=list] .lokf-graph__detail{position:relative;inset:auto;width:100%;max-height:none;box-sizing:border-box}
+.lokf-graph__detail-relations{padding-left:1rem}
 </style>
