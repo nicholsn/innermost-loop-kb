@@ -64,6 +64,8 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
       <button type="button" data-view="list" aria-pressed="false">List</button>
       <button type="button" data-action="reset-filters">Reset filters and search</button>
     </div>
+    <details class="lokf-graph__sharing"><summary>Share this view</summary><button type="button" data-action="share">Copy view link</button><label>View link<input type="text" readonly data-share-url /></label><p data-share-status role="status"></p><p>The link restores scope, filters, layout, and selection. Positions may vary; links follow the current knowledge base, not an immutable snapshot.</p></details>
+    <details class="lokf-graph__group-browser" hidden><summary>Inspect groups and their members</summary><section class="lokf-graph__groups" aria-label="Groups in this view"></section></details>
     <p class="lokf-graph__scope-note">This is one page of a scoped graph. Communities are inferred from the current page and filters, not established categories. Radial centers show visible connection counts, not global importance.</p>
     <p class="lokf-graph__matches" role="status"></p>
     <section class="lokf-graph__list" aria-label="Concepts in this view" hidden><ul></ul></section>
@@ -111,6 +113,7 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
 <script>
   import cytoscape from 'cytoscape';
   import fcose from 'cytoscape-fcose';
+  import { readView, writeView } from '../lib/graph-view.mjs';
   import { typeStyle } from '../lib/graph-palette.mjs';
   import { REL_LABEL } from '../lib/relation-labels';
   import { LAYOUTS, validLayout, prepareLayout } from '../lib/graph-layouts.mjs';
@@ -154,6 +157,7 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
       request?.abort();
       const controller = new AbortController();
       request = controller;
+      if (id !== active && historyMode === 'push') { const url = new URL(location.href); url.searchParams.delete('node'); history.replaceState({}, '', url); }
       active = id;
       page = wantedPage;
       previous.disabled = next.disabled = true;
@@ -222,8 +226,16 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
     const mount = root.querySelector('.lokf-graph__canvas') as HTMLElement;
     const list = root.querySelector<HTMLElement>('.lokf-graph__list')!;
     const matches = root.querySelector<HTMLElement>('.lokf-graph__matches')!;
-    let view = root.dataset.view || 'graph';
-    function setView(value: string) {
+    const initial = readView(new URLSearchParams(location.search));
+    let selected = initial.selected;
+    let view = initial.view;
+    edgeLabels.checked = initial.labels;
+    function saveView(push = false) {
+      const url = writeView(new URL(location.href), {view,query:root.querySelector<HTMLInputElement>('.lokf-graph__search')!.value,selected,hiddenTypes:[...root.querySelectorAll<HTMLInputElement>('[data-filter=type] input:not(:checked)')].map(i=>i.value),hiddenRelations:[...root.querySelectorAll<HTMLInputElement>('[data-filter=predicate] input:not(:checked)')].map(i=>i.value),labels:edgeLabels.checked});
+      if(url.href !== location.href) history[push ? 'pushState' : 'replaceState']({},'',url);
+      root.querySelector<HTMLInputElement>('[data-share-url]')!.value=url.href;
+    }
+    function setView(value: string, persist = true) {
       view = value; root.dataset.view = value;
       root.querySelectorAll<HTMLButtonElement>('[data-view]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.view === view)));
       mount.hidden = view === 'list';
@@ -231,6 +243,7 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
       root.querySelector<HTMLElement>('#graph-layout-panel')!.hidden = true;
       root.querySelector('[data-action=layouts]')!.setAttribute('aria-expanded', 'false');
       updateList();
+      if (persist) saveView(true);
       if (view === 'graph') requestAnimationFrame(() => { cy.resize(); cy.fit(); });
     }
     root.querySelectorAll<HTMLButtonElement>('[data-view]').forEach(button => button.addEventListener('click', () => setView(button.dataset.view!), {signal:listeners.signal}));
@@ -312,12 +325,14 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
         try { localStorage.setItem('iml-graph-layout', mode); } catch { /* Optional preference. */ }
         const url = new URL(location.href);
         url.searchParams.set('layout', mode);
-        history.replaceState({}, '', url);
+        history.pushState({}, '', url);
+        saveView();
       }
       layoutFrame = requestAnimationFrame(() => {
         if (disposed) return;
         try {
           const prepared = prepareLayout(cy, mode);
+          renderGroups(mode);
           cy.edges().toggleClass('show-label', edgeLabels.checked);
           if (prepared.nodes) {
             currentLayout = prepared.elements.layout(prepared.options);
@@ -335,7 +350,7 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
     }
     layoutSelect.addEventListener('change', () => runLayout(true), { signal: listeners.signal });
     root.querySelector('[data-action=rearrange]')!.addEventListener('click', () => runLayout(), { signal: listeners.signal });
-    edgeLabels.addEventListener('change', () => cy.edges().toggleClass('show-label', edgeLabels.checked), { signal: listeners.signal });
+    edgeLabels.addEventListener('change', () => { cy.edges().toggleClass('show-label', edgeLabels.checked); saveView(true); }, { signal: listeners.signal });
     runLayout();
 
     // Filters: a checkbox per type and per predicate.
@@ -345,7 +360,7 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
       const label = document.createElement('label');
       const input = document.createElement('input');
       input.type = 'checkbox';
-      input.checked = true;
+      input.checked = !(swatch ? initial.hiddenTypes : initial.hiddenRelations).includes(value);
       input.value = value;
       label.append(input);
       if (swatch) {
@@ -364,24 +379,27 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
 
     const checkedValues = (box: HTMLElement) =>
       new Set([...box.querySelectorAll<HTMLInputElement>('input:checked')].map((i) => i.value));
-    function applyFilters() {
+    function applyFilters(persist: unknown = true) {
       const okTypes = checkedValues(typeBox);
       const okPreds = checkedValues(predBox);
       cy.nodes('.concept').forEach((n) => n.toggleClass('hidden', !okTypes.has(n.data('type'))));
       cy.edges().forEach((e) => e.toggleClass('hidden', !okPreds.has(e.data('predicate'))));
       updateList();
+      if (persist) saveView(true);
+      if (!detail.hidden) { const chosen = cy.nodes('.concept').filter(n => n.data('concept_id') === selected && !n.hasClass('hidden')); if(chosen.length) showDetail(chosen[0].data(), false); else {detail.hidden=true;selected='';saveView();} }
       runLayout();
     }
 
     // Search dims non-matching nodes.
     const search = root.querySelector('.lokf-graph__search') as HTMLInputElement;
-    search.value = '';
+    search.value = initial.query;
     search.addEventListener('input', () => {
       const q = search.value.trim().toLowerCase();
       cy.nodes('.concept').forEach((n) =>
         n.toggleClass('dim', q !== '' && !n.data('label').toLowerCase().includes(q)),
       );
       updateList();
+      saveView();
     }, { signal: listeners.signal });
 
     // Detail panel on node click, linking to the node's page.
@@ -390,7 +408,9 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
       (root.querySelector(sel) as HTMLElement).textContent = text;
     };
     let returnFocus: HTMLElement | null = null;
-    const showDetail = (d: Record<string, string>) => {
+    const showDetail = (d: Record<string, string>, persist = true) => {
+      selected = d.concept_id;
+      if (persist) saveView(true);
       if (detail.hidden) returnFocus = document.activeElement as HTMLElement;
       const relationships = root.querySelector<HTMLElement>('.lokf-graph__detail-relations')!;
       relationships.replaceChildren();
@@ -418,7 +438,7 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
     cy.on('tap', 'node.concept', (evt) => showDetail(evt.target.data()));
     (root.querySelector('.lokf-graph__close') as HTMLElement).addEventListener(
       'click',
-      () => { detail.hidden = true; if (returnFocus?.isConnected) returnFocus.focus(); },
+      () => { detail.hidden = true; selected='';saveView(true); if (returnFocus?.isConnected) returnFocus.focus(); },
       { signal: listeners.signal },
     );
 
@@ -439,9 +459,36 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
     }
     root.querySelector('[data-action=reset-filters]')!.addEventListener('click', () => {
       root.querySelectorAll<HTMLInputElement>('.lokf-graph__fieldset input').forEach(input => input.checked = true);
-      search.value = ''; cy.nodes().removeClass('dim'); applyFilters();
+      search.value = initial.query; cy.nodes().removeClass('dim'); applyFilters();
     }, {signal:listeners.signal});
-    setView(view);
+    root.querySelector('[data-action=share]')!.addEventListener('click', async () => {
+      saveView();const input=root.querySelector<HTMLInputElement>('[data-share-url]')!;
+      try { await navigator.clipboard.writeText(input.value); root.querySelector('[data-share-status]')!.textContent='View link copied.'; }
+      catch {input.focus();input.select();root.querySelector('[data-share-status]')!.textContent='Copy the selected view link.';}
+    }, {signal:listeners.signal});
+    function renderGroups(mode: string) {
+      const region=root.querySelector<HTMLElement>('.lokf-graph__groups')!;region.replaceChildren();
+      region.hidden=!['communities','types'].includes(mode);
+      root.querySelector<HTMLElement>('.lokf-graph__group-browser')!.hidden=region.hidden;
+      if(region.hidden)return;
+      const heading=document.createElement('h2');heading.textContent='Groups in this view';region.append(heading);
+      for(const group of cy.nodes('.layout-group')) {
+        const members=group.children('.concept').not('.hidden');
+        const edges=cy.edges().not('.hidden').filter(e=>members.contains(e.source()) && members.contains(e.target()));
+        const details=document.createElement('details'),summary=document.createElement('summary'),list=document.createElement('ul');
+        summary.textContent=`${group.data('label')} · ${members.length} concepts · ${edges.length} visible internal relationships`;
+        for(const n of members){const li=document.createElement('li'),button=document.createElement('button');button.textContent=n.data('label');button.addEventListener('click',()=>showDetail(n.data()));li.append(button);list.append(li);}
+        const note=document.createElement('p');note.textContent=mode==='communities'?'Inferred on this page using non-membership relationships. Counts include all visible internal relationships; open a member to inspect its connections.':'Grouped by stored concept type. Open a member to inspect its connections.';
+        details.append(summary,note,list);region.append(details);
+      }
+    }
+    applyFilters(false);
+    cy.nodes('.concept').forEach(n=>n.toggleClass('dim', !!search.value && !n.data('label').toLowerCase().includes(search.value.toLowerCase())));
+    setView(view, false);
+    const restored=cy.nodes('.concept').filter(n=>n.data('concept_id')===selected && !n.hasClass('hidden'));
+    if(restored.length) showDetail(restored[0].data(), false);
+    else selected='';
+    root.querySelector<HTMLInputElement>('[data-share-url]')!.value=location.href;
 
     const fit = () => { const visible = cy.elements(':visible'); if (visible.nodes().length) cy.fit(visible, 45); };
 
@@ -656,3 +703,5 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
 .lokf-graph[data-view=list] .lokf-graph__detail{position:relative;inset:auto;width:100%;max-height:none;box-sizing:border-box}
 .lokf-graph__detail-relations{padding-left:1rem}
 </style>
+
+<style is:global>.lokf-graph__sharing input{display:block;width:100%;box-sizing:border-box}.lokf-graph__groups details{padding:.65rem;border-bottom:1px solid var(--border)}.lokf-graph__groups button{white-space:normal;text-align:left;max-width:100%}.lokf-graph__groups summary{overflow-wrap:anywhere}</style>
