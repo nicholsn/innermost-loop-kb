@@ -16,6 +16,7 @@ const topics = concepts.filter(c => c.data.type === 'Theme').sort((a, b) => titl
     <a href={href('/graph')}>Explore the latest article’s graph →</a>
 
   </div>
+  <p><a href={href('/analytics')}>Explore theme evidence over time →</a></p>
   <Search types={types} domains={[...new Set(concepts.map(c => c.data.domain).filter(Boolean))].sort()} />
   <h2>Latest articles</h2>
   <div class="grid">

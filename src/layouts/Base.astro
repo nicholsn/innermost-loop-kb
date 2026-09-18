@@ -13,6 +13,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const nav = [
   { href: href('/'), label: 'Home' },
   { href: href('/graph'), label: 'Graph' },
+  { href: href('/analytics'), label: 'Analytics' },
 ];
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 const isActive = (h: string) => (h.replace(/\/$/, '') || '/') === path;
