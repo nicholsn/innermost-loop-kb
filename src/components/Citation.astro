@@ -1,0 +1,25 @@
+---
+import { iriOf } from '../lib/lokf';
+import { citation, correctionUrl } from '../lib/citation.mjs';
+const { entry } = Astro.props;
+const permalink=iriOf(entry);
+const plain=citation(entry,permalink),markdown=citation(entry,permalink,true);
+---
+<section class="citation" aria-label="Cite or correct this record" data-plain={plain} data-markdown={markdown}>
+<h2>Cite or correct this record</h2>
+<label>Citation format<select><option value="plain">Plain text</option><option value="markdown">Markdown</option></select></label>
+<label>Citation text<textarea readonly rows="8">{plain}</textarea></label>
+<button type="button">Copy citation</button><p role="status"></p>
+<p><a href={correctionUrl(entry,permalink)}>Suggest a correction</a> — opens a GitHub draft for you to review and submit.</p>
+</section>
+<script>
+for(const root of document.querySelectorAll<HTMLElement>('.citation')) {
+ const format=root.querySelector('select')!,text=root.querySelector('textarea')!,status=root.querySelector('[role=status]')!;
+ format.addEventListener('change',()=>{text.value=root.dataset[format.value]!;status.textContent='';});
+ root.querySelector('button')!.addEventListener('click',async()=>{
+  try{await navigator.clipboard.writeText(text.value);status.textContent='Citation copied.';}
+  catch{text.focus();text.select();status.textContent='Copy the selected citation text.';}
+ });
+}
+</script>
+<style>.citation{margin:2rem 0;padding:1rem;border:1px solid var(--border);border-radius:var(--radius)}label{display:block;margin:.75rem 0}select{display:block}textarea{display:block;box-sizing:border-box;width:100%;resize:vertical;font:inherit;font-size:.85rem}a{overflow-wrap:anywhere}</style>

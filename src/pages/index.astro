@@ -14,7 +14,7 @@ const topics = concepts.filter(c => c.data.type === 'Theme').sort((a, b) => titl
   <p class="tagline">Explore {issues.length} articles and {concepts.length.toLocaleString()} connected concepts from The Innermost Loop.</p>
   <div class="lede-links">
     <a href={href('/graph')}>Explore the latest article’s graph →</a>
-    <a href={href('/graph.jsonld')}>JSON-LD</a>
+
   </div>
   <Search types={types} domains={[...new Set(concepts.map(c => c.data.domain).filter(Boolean))].sort()} />
   <h2>Latest articles</h2>
