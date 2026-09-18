@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import Timeline from '../components/Timeline.astro';
 import Evidence from '../components/Evidence.astro';
 import { descriptionInBody, safeSourceUrl } from '../lib/evidence.mjs';
 import { getCollection, render } from 'astro:content';
@@ -30,6 +31,8 @@ for (const { slot, target } of relationsOf(entry)) {
 const back = concepts.filter(
   (c) => c.id !== entry.id && relationsOf(c).some((r) => r.target === myIri),
 );
+const timeline = ['Theme','Organization','Person','AISystem','Benchmark','Facility','Hardware','Issue'].includes(d.type) ? back.filter(c => c.data.type === 'Development') : [];
+const otherBack = timeline.length ? back.filter(c => c.data.type !== 'Development') : back;
 ---
 
 <Base title={titleOf(entry)} description={d.description} jsonld={conceptJsonLd(entry)}>
@@ -46,6 +49,8 @@ const back = concepts.filter(
   {safeSourceUrl(d.resource) && (
     <p class="lede-links"><a href={safeSourceUrl(d.resource)}>Visit resource ↗</a></p>
   )}
+
+  {timeline.length > 0 && <Timeline entries={timeline} byIri={byIri} focus={entry.id} />}
 
   {(forward.size > 0 || back.length > 0) && (
     <div class="relations">
@@ -67,11 +72,11 @@ const back = concepts.filter(
           </ul>
         </div>
       ))}
-      {back.length > 0 && (
+      {otherBack.length > 0 && (
         <div>
           <span class="rel-kind">Referenced by</span>
           <ul>
-            {back.map((c) => <li><a href={hrefOf(c)}>{titleOf(c)}</a></li>)}
+            {otherBack.map((c) => <li><a href={hrefOf(c)}>{titleOf(c)}</a></li>)}
           </ul>
         </div>
       )}

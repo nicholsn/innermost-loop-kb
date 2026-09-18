@@ -1,0 +1,38 @@
+---
+import { href, hrefOf, titleOf, relationsOf } from '../lib/lokf';
+import { reportingDate, evidenceSources } from '../lib/evidence.mjs';
+const { entries, byIri, focus } = Astro.props;
+const records = entries.map(e => ({id:e.id,title:titleOf(e),href:hrefOf(e),graph:href('/graph?focus='+encodeURIComponent(e.id)),date:reportingDate(e),claim:e.data.claim || e.data.description || '',sources:evidenceSources(e.data).length,actors:relationsOf(e).filter(r=>r.slot==='actor').map(r=>byIri.get(r.target)).filter(Boolean).map(titleOf)}));
+---
+<section class="timeline" aria-label="Development timeline" data-records={JSON.stringify(records)}>
+<h2>Development timeline</h2>
+<p>Newest reporting dates first. Reporting dates may differ from event dates.</p>
+<form><label>Reported from <input type="date" name="from" /></label><label>Reported through <input type="date" name="to" /></label><button type="submit">Apply dates</button><button type="button" data-reset>Clear dates</button></form>
+<p role="status"></p><ol></ol>
+<div class="timeline-pagination"><button data-prev>Previous developments</button><button data-next>Next developments</button></div>
+<noscript><ul>{records.sort((a,b)=>b.date.localeCompare(a.date)||a.id.localeCompare(b.id)).map(e=><li>{e.date || 'Reporting date unknown'}: <a href={e.href}>{e.title}</a></li>)}</ul></noscript>
+</section>
+<script>
+import { timelinePage } from '../lib/timeline.mjs';
+for(const root of document.querySelectorAll<HTMLElement>('.timeline')) {
+ const records=JSON.parse(root.dataset.records!);
+ const form=root.querySelector('form')!;
+ const from=form.querySelector<HTMLInputElement>('[name=from]')!, to=form.querySelector<HTMLInputElement>('[name=to]')!;
+ const prev=root.querySelector<HTMLButtonElement>('[data-prev]')!,next=root.querySelector<HTMLButtonElement>('[data-next]')!;
+ let page=1;
+ function render(write=false) {
+  if(from.value && to.value && from.value>to.value){root.querySelector('[role=status]')!.textContent='The start date must be on or before the end date.';return;}
+  const result=timelinePage(records,{from:from.value,to:to.value,page});page=result.page;
+  if(write){const url=new URL(location.href);for(const [k,v] of Object.entries({from:from.value,to:to.value,timelinePage:page>1?String(page):''})){if(v)url.searchParams.set(k,v);else url.searchParams.delete(k);}history.pushState({},'',url);}
+  root.querySelector('[role=status]')!.textContent=`${result.total} developments · Page ${page} of ${result.pages}${result.total?'':'. Clear dates to broaden your search.'}`;
+  const list=root.querySelector('ol')!;list.replaceChildren();
+  for(const e of result.entries){const li=document.createElement('li'),a=document.createElement('a'),meta=document.createElement('p'),claim=document.createElement('p');a.href=e.href;a.textContent=e.title;meta.textContent=`${e.date || 'Reporting date unknown'} · ${e.sources} linked sources${e.actors.length?' · '+e.actors.join(', '):''}`;claim.textContent=e.claim;const graph=document.createElement('a');graph.href=e.graph;graph.textContent='Explore connections';graph.setAttribute('aria-label','Explore connections: '+e.title);li.append(a,meta,claim,graph);list.append(li);}
+  prev.disabled=page<=1;next.disabled=page>=result.pages;
+ }
+ function restore(){const p=new URLSearchParams(location.search);from.value=p.get('from')||'';to.value=p.get('to')||'';page=Number(p.get('timelinePage')||1);render();}
+ form.addEventListener('submit',e=>{e.preventDefault();page=1;render(true);});
+ root.querySelector('[data-reset]')!.addEventListener('click',()=>{from.value=to.value='';page=1;render(true);});
+ prev.addEventListener('click',()=>{page--;render(true);});next.addEventListener('click',()=>{page++;render(true);});window.addEventListener('popstate',restore);restore();
+}
+</script>
+<style>.timeline{margin:2rem 0}.timeline form,.timeline-pagination{display:flex;flex-wrap:wrap;gap:.75rem}.timeline label{display:grid;gap:.3rem}.timeline input{max-width:100%;box-sizing:border-box}.timeline ol{padding-left:1.2rem}.timeline :global(li){border-bottom:1px solid var(--border);padding:.8rem 0;overflow-wrap:anywhere}.timeline :global(li p){margin:.4rem 0}</style>
