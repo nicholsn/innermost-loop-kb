@@ -1,6 +1,7 @@
 ---
 import { href } from '../lib/lokf';
-const { types } = Astro.props;
+import { typeLabel } from '../lib/search.mjs';
+const { types, domains = [] } = Astro.props;
 ---
 <section class="kb-search" aria-label="Search the knowledge base" data-index={href('/search-index.json')}>
   <label for="kb-query">Search the knowledge base</label>
@@ -8,10 +9,17 @@ const { types } = Astro.props;
     <input id="kb-query" type="search" placeholder="Search articles, claims, people, systems, and topics…" autocomplete="off" aria-describedby="kb-search-help" />
     <select aria-label="Search type" id="kb-type">
       <option value="">All types</option>
-      {types.map((type: string) => <option value={type}>{type}</option>)}
+      {types.map((type: string) => <option value={type}>{typeLabel(type)}</option>)}
     </select>
   </div>
-  <p id="kb-search-help">Search full article text, claims, descriptions, titles, and tags. Use multiple words to narrow your results.</p>
+  <details><summary>Filter and sort results</summary><div class="kb-search__inputs">
+    <label>Reported from<input id="kb-from" type="date" /></label>
+    <label>Reported through<input id="kb-to" type="date" /></label>
+    <label>Domain<select id="kb-domain"><option value="">All domains</option>{domains.map((d:string)=><option value={d}>{d}</option>)}</select></label>
+    <label>Sort results<select id="kb-sort"><option value="relevance">Relevance</option><option value="newest">Newest reporting date</option></select></label>
+  </div></details>
+  <button type="button" class="kb-search__clear">Clear search and filters</button>
+  <p id="kb-search-help">Search full article text, claims, descriptions, titles, and tags. All words must match; the final word can be a prefix. Accents are normalized. Date filters use reporting dates, which may differ from event dates.</p>
   <p class="kb-search__status" role="status" aria-live="polite"></p>
   <button class="kb-search__retry" type="button" hidden>Retry search</button>
   <ol class="kb-search__results"></ol>
@@ -19,10 +27,12 @@ const { types } = Astro.props;
 </section>
 
 <script>
-  import { searchIndex, terms } from '../lib/search.mjs';
+  import { searchIndex, terms, typeLabel } from '../lib/search.mjs';
   const root = document.querySelector<HTMLElement>('.kb-search')!;
   const query = root.querySelector<HTMLInputElement>('input')!;
   const type = root.querySelector<HTMLSelectElement>('select')!;
+  const from = root.querySelector<HTMLInputElement>('#kb-from')!, to = root.querySelector<HTMLInputElement>('#kb-to')!;
+  const domain = root.querySelector<HTMLSelectElement>('#kb-domain')!, sort = root.querySelector<HTMLSelectElement>('#kb-sort')!;
   const status = root.querySelector<HTMLElement>('.kb-search__status')!;
   const results = root.querySelector<HTMLOListElement>('ol')!;
   const more = root.querySelector<HTMLButtonElement>('.kb-search__more')!;
@@ -48,35 +58,43 @@ const { types } = Astro.props;
       link.href = doc.href;
       link.textContent = doc.title;
       const meta = document.createElement('small');
-      meta.textContent = `${doc.type}${doc.date ? ' · ' + doc.date : ''}`;
+      meta.textContent = `${typeLabel(doc.type)}${doc.date ? ' · ' + doc.date : ''}`;
       const snippet = document.createElement('p');
       const text = doc.description + ' ' + doc.text;
       const term = terms(query.value).find(t => text.toLowerCase().includes(t));
       const offset = term ? Math.max(0, text.toLowerCase().indexOf(term) - 65) : 0;
       snippet.textContent = (offset ? '…' : '') + text.slice(offset, offset + 240) + (text.length > offset + 240 ? '…' : '');
+      const tokens = new Set(terms(query.value));
+      const content = snippet.textContent || ''; snippet.textContent = '';
+      for (const part of content.split(/([\p{L}\p{N}]+)/u)) {
+        if (tokens.has(terms(part)[0])) { const mark = document.createElement('mark'); mark.textContent = part; snippet.append(mark); }
+        else snippet.append(document.createTextNode(part));
+      }
       item.append(link, meta, snippet);
       results.append(item);
     }
     shown = Math.min(shown + 20, matches.length);
     more.hidden = shown >= matches.length;
-    status.textContent = matches.length ? `${matches.length.toLocaleString()} results · showing ${shown.toLocaleString()}` : 'No results. Try fewer words or another type.';
+    status.textContent = matches.length ? `${matches.length.toLocaleString()} results · showing ${shown.toLocaleString()}` : 'No results. Try fewer words or clear the search and filters.';
   }
-  async function run() {
+  async function run(write = true) {
     const current = ++generation;
     const text = query.value.trim();
     const url = new URL(location.href);
     if (text) url.searchParams.set('q', text); else url.searchParams.delete('q');
     if (type.value) url.searchParams.set('type', type.value); else url.searchParams.delete('type');
-    history.replaceState({}, '', url);
+    for (const [k,v] of Object.entries({from:from.value,to:to.value,domain:domain.value,sort:sort.value === 'newest' ? 'newest' : ''})) { if(v) url.searchParams.set(k,v); else url.searchParams.delete(k); }
+    if(write && url.href !== location.href) history.pushState({}, '', url);
     results.replaceChildren();
     more.hidden = retry.hidden = true;
-    if (!text && !type.value) { status.textContent = ''; return; }
+    if (from.value && to.value && from.value > to.value) { status.textContent = 'The start date must be on or before the end date.'; return; }
+    if (!text && !type.value && !domain.value && !from.value && !to.value) { status.textContent = ''; return; }
     if (text && terms(text).join('').length < 2) { status.textContent = 'Enter at least two letters or numbers.'; return; }
     status.textContent = 'Searching…';
     try {
       await load();
       if (current !== generation) return;
-      matches = searchIndex(index, text, type.value);
+      matches = searchIndex(index, text, type.value, {from:from.value,to:to.value,domain:domain.value,sort:sort.value});
       shown = 0;
       append();
     } catch {
@@ -88,20 +106,28 @@ const { types } = Astro.props;
   let timer: ReturnType<typeof setTimeout>;
   query.addEventListener('input', () => { generation++; clearTimeout(timer); timer = setTimeout(run, 180); });
   query.addEventListener('focus', () => { load().catch(() => {}); }, { once: true });
-  type.addEventListener('change', () => { clearTimeout(timer); run(); });
+  for (const input of [type,from,to,domain,sort]) input.addEventListener('change', () => { clearTimeout(timer); run(); });
+  root.querySelector('.kb-search__clear')!.addEventListener('click', () => { clearTimeout(timer); query.value=type.value=from.value=to.value=domain.value=''; sort.value='relevance'; run(); });
   more.addEventListener('click', append);
-  retry.addEventListener('click', run);
-  const params = new URLSearchParams(location.search);
-  query.value = params.get('q') || '';
-  type.value = params.get('type') || '';
-  if (query.value || type.value) run();
+  retry.addEventListener('click', () => run());
+  function restore() {
+    clearTimeout(timer);
+    const params = new URLSearchParams(location.search);
+    query.value=params.get('q')||''; type.value=params.get('type')||'';
+    from.value=params.get('from')||''; to.value=params.get('to')||'';
+    domain.value=params.get('domain')||''; sort.value=params.get('sort')==='newest'?'newest':'relevance';
+    if(from.value||to.value||domain.value||sort.value==='newest') root.querySelector('details')!.open=true;
+    run(false);
+  }
+  window.addEventListener('popstate',restore); restore();
 </script>
 <style>
   .kb-search { margin: 2rem 0; padding: 1.3rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
   label { font-weight: 600; display: block; margin-bottom: .7rem; }
   .kb-search__inputs { display: flex; flex-wrap: wrap; gap: .6rem; }
   input, select, button { font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: .4rem; padding: .65rem; }
-  input { flex: 1 1 20rem; min-width: 0; }
+  .kb-search__inputs > input { flex: 1 1 20rem; min-width: 0; }
+  input,select { max-width:100%;box-sizing:border-box;min-width:0; }
   input:focus-visible, select:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   button { cursor: pointer; }
   #kb-search-help, .kb-search__status { font-size: .85rem; color: var(--muted); }

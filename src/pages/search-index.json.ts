@@ -1,5 +1,6 @@
 import type { APIRoute } from 'astro';
 import { loadBundle, hrefOf, titleOf } from '../lib/lokf';
+import { reportingDate } from '../lib/evidence.mjs';
 import { buildIndex } from '../lib/search.mjs';
 
 export const GET: APIRoute = async () => {
@@ -9,7 +10,7 @@ export const GET: APIRoute = async () => {
     description: String(c.data.description || c.data.claim || c.data.thesis || ''),
     text: [c.data.claim, c.data.thesis, c.body].filter(Boolean).join('\n')
       .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').replace(/[#*_`>]/g, ''),
-    date: String(c.data.issue_date || c.id.match(/\d{4}-\d{2}-\d{2}/)?.[0] || ''),
+    date: reportingDate(c), domain: String(c.data.domain || ''),
   }));
   return new Response(JSON.stringify(buildIndex(documents)), {
     headers: { 'Content-Type': 'application/json; charset=utf-8' },

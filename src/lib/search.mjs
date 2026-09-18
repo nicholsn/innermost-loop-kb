@@ -16,7 +16,7 @@ export function buildIndex(documents) {
   return { documents, postings };
 }
 
-export function searchIndex(index, query, type = '') {
+export function searchIndex(index, query, type = '', options = {}) {
   const queryTerms = [...new Set(terms(query))].slice(0, 12);
   let scores;
   queryTerms.forEach((term, position) => {
@@ -32,6 +32,8 @@ export function searchIndex(index, query, type = '') {
     scores = scores === undefined ? matches : new Map([...scores].filter(([id]) => matches.has(id)).map(([id, score]) => [id, score + matches.get(id)]));
   });
   const ids = scores ? [...scores.keys()] : index.documents.map((_, id) => id);
-  return ids.filter(id => !type || index.documents[id].type === type)
-    .sort((a, b) => (scores?.get(b) || 0) - (scores?.get(a) || 0) || index.documents[b].date.localeCompare(index.documents[a].date) || index.documents[a].title.localeCompare(index.documents[b].title));
+  return ids.filter(id => { const doc = index.documents[id]; return (!type || doc.type === type) && (!options.domain || doc.domain === options.domain) && (!options.from || doc.date && doc.date >= options.from) && (!options.to || doc.date && doc.date <= options.to); })
+    .sort((a, b) => (options.sort === 'newest' ? 0 : (scores?.get(b) || 0) - (scores?.get(a) || 0)) || index.documents[b].date.localeCompare(index.documents[a].date) || index.documents[a].title.localeCompare(index.documents[b].title));
 }
+
+export const typeLabel = type => ({Issue:'Article',Theme:'Topic',AISystem:'AI system'}[type] || type);
