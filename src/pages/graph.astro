@@ -157,7 +157,7 @@ const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
       request?.abort();
       const controller = new AbortController();
       request = controller;
-      if (id !== active && historyMode !== 'none') { const url = new URL(location.href); url.searchParams.delete('node'); history.replaceState({}, '', url); }
+      if (id !== active && historyMode === 'push') { const url = new URL(location.href); url.searchParams.delete('node'); history.replaceState({}, '', url); }
       active = id;
       page = wantedPage;
       previous.disabled = next.disabled = true;
