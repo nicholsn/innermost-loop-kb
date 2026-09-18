@@ -112,3 +112,13 @@ by concept type and are shown in batches of 20. Query URLs preserve `q` and `typ
 
 Run `npm test` for graph-boundary and search regression checks, and `npm run build`
 to generate the scoped graph files, search index, and site. CI runs both checks.
+
+The graph’s **Layout** button offers fast spectral/force placement (fCoSE),
+Markov community clusters with labeled boundaries, concept-type groups, classic
+CoSE force placement, and radial connection hubs. Community detection uses the
+visible substantive relationships, excluding article-membership links; inferred
+groups describe the current scope, not a permanent taxonomy. Type colors remain
+consistent between layouts. Layouts recompute when filters change, can be rerun
+with **Rearrange**, and work in full screen. The selection is saved locally and
+can be shared with `&layout=communities` (or `fcose`, `types`, `cose`, `radial`).
+Relationship labels are optional to reduce clutter.
