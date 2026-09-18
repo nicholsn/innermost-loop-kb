@@ -39,6 +39,7 @@ const otherBack = timeline.length ? back.filter(c => c.data.type !== 'Developmen
 <Base title={titleOf(entry)} description={d.description} jsonld={conceptJsonLd(entry)}>
   <p><span class="badge">{d.type}</span></p>
   <h1>{titleOf(entry)}</h1>
+  {d.type === 'Theme' && <p><a href={href('/analytics?themes=' + encodeURIComponent(entry.id))}>Explore this theme’s evidence over time →</a></p>}
   {d.description && !descriptionInBody(d.description, entry.body) && <p class="tagline">{d.description}</p>}
   {d.tags && (
     <div class="tags">{(d.tags as string[]).map((t) => <span>{t}</span>)}</div>

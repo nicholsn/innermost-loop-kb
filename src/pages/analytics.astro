@@ -1,0 +1,51 @@
+---
+import Base from '../layouts/Base.astro';
+import {href} from '../lib/lokf';
+---
+<Base title="Evidence over time — Innermost Loop KB" description="Compare theme coverage and explore the records behind it." wide>
+<div class="analytics" data-endpoint={href('/analytics-data.json')}>
+  <p class="eyebrow">Knowledge base / Analytics preview</p>
+  <h1>Evidence over time</h1>
+  <p class="tagline">Follow the accumulation of recorded evidence, find periods of activity, and explore who appears in the reporting.</p>
+  <p class="method-note">These are counts of linked developments, not confidence scores or independent corroboration. Dates describe reporting, not necessarily when events occurred.</p>
+  <p id="analytics-status" role="status">Loading analytics…</p><button id="analytics-retry" hidden>Retry loading</button>
+  <form id="analytics-controls" hidden>
+    <fieldset><legend>Compare up to three themes</legend><div class="analytics-controls">
+      {[1,2,3].map(n=><label>Theme {n}<select data-theme-slot><option value="">No theme</option></select></label>)}
+    </div></fieldset>
+    <div class="analytics-controls">
+      <label>Reported from<input type="date" name="from" required /></label>
+      <label>Reported through<input type="date" name="to" required /></label>
+      <label>Measure<select name="metric"><option value="cumulative">Cumulative records in range</option><option value="count">New records per month</option><option value="share">Share of monthly coverage</option></select></label>
+      <button type="button" id="analytics-reset">Reset</button>
+    </div>
+  </form>
+  <div id="analytics-content" hidden>
+    <section class="analytics-card"><div class="chart-heading"><div><p class="eyebrow">01 / Trajectory</p><h2 id="growth-title">Theme growth</h2></div><button id="analytics-export">Download chart data (CSV)</button></div>
+      <p id="growth-description"></p><div id="growth-chart"></div><div id="growth-tooltip" role="tooltip" hidden></div><div id="growth-legend"></div>
+      <details><summary>Growth data table</summary><div class="table-scroll" id="growth-table"></div></details>
+    </section>
+    <section class="analytics-card"><p class="eyebrow">02 / Rhythm</p><h2>Coverage pulse</h2>
+      <p>Each cell shows new linked developments, or their share of all developments reported in that month. Select a cell to inspect its records. A dash means no corpus coverage; 0 means coverage exists but no records link to that theme. Edge months may be partial.</p>
+      <div class="table-scroll" id="pulse-table"></div>
+    </section>
+    <section class="analytics-card" aria-label="Evidence drilldown"><p class="eyebrow">03 / People and organizations</p><h2>Actor footprint</h2>
+      <p>Ranked by unique developments connected through the selected themes and the actor relation. Co-occurrence does not establish influence, importance, or a relationship between actors.</p>
+      <div class="analytics-controls"><label>Inspect month<select id="inspect-month"></select></label><label>Inspect theme<select id="inspect-theme"></select></label><button id="clear-actor">All actors</button></div>
+      <p id="actor-description"></p><ol id="actor-bars"></ol>
+      <h3 id="records-title" tabindex="-1">Underlying records</h3><p id="records-status" role="status"></p><ol id="analytics-records"></ol><button id="records-more">Show more records</button>
+    </section>
+    <details class="analytics-card"><summary>How these views are calculated</summary><p id="analytics-method"></p><p>Cumulative totals restart at the beginning of the selected date range. Each theme counts a development once, even when its relation is repeated. A record may support several themes, so shares can sum above 100%. The share denominator includes all dated developments within the selected range, including records without theme links. Missing months remain visible. Actor totals count each matching development once across selected themes; the top 12 actors are displayed. Open records for source attribution and verification limits.</p><p>These charts describe the current corpus arranged by reporting date, not a historical snapshot of what the database contained at that time. Backfilled records can change earlier totals.</p></details>
+  </div>
+  <noscript>Enable JavaScript to compare themes. Individual article and theme pages remain readable without JavaScript.</noscript>
+</div>
+</Base>
+<script src="../scripts/analytics.ts"></script>
+<style is:global>
+.analytics{--series-a:#276c91;--series-b:#a34c27;--series-c:#7555a0}.analytics .eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;color:var(--muted);font-weight:600}.analytics .method-note{border-left:3px solid var(--accent);padding:.7rem 1rem;background:var(--surface)}.analytics-card{margin:1.5rem 0;padding:1.3rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface)}.analytics-controls{display:flex;gap:.8rem;flex-wrap:wrap;align-items:end}.analytics-controls label{flex:1 1 12rem;display:grid;gap:.4rem;min-width:0}.analytics select,.analytics input,.analytics button{font:inherit;color:var(--text);background:var(--bg);border:1px solid var(--border);border-radius:.4rem;padding:.55rem;max-width:100%;box-sizing:border-box}.analytics select{width:100%}.analytics fieldset{min-width:0;border:1px solid var(--border);margin:1rem 0;padding:1rem}.analytics button{cursor:pointer}.analytics :focus-visible{outline:3px solid var(--accent);outline-offset:3px}.analytics .chart-heading{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}.analytics svg{width:100%;height:auto;display:block;min-width:540px}.analytics #growth-chart{overflow-x:auto}.analytics #growth-legend{display:flex;flex-wrap:wrap;gap:1rem;margin:.7rem 0}.analytics .table-scroll{overflow-x:auto;max-width:100%}.analytics table{border-collapse:collapse;width:100%;font-size:.85rem}.analytics th,.analytics td{padding:.5rem;border-bottom:1px solid var(--border);text-align:left}.analytics th[scope=row]{min-width:180px}.analytics td button{min-width:3.7rem}.analytics .actor-track{height:.5rem;background:var(--border);border-radius:.3rem;margin:.5rem 0}.analytics .actor-fill{height:100%;background:var(--accent);border-radius:.3rem}.analytics #actor-bars{padding-left:1.2rem}.analytics #actor-bars li{padding:.5rem 0}.analytics #actor-bars button{text-align:left;width:100%;white-space:normal}.analytics #analytics-records{padding-left:1.2rem}.analytics #analytics-records li{padding:.6rem 0;border-bottom:1px solid var(--border);overflow-wrap:anywhere}.analytics small{display:block;color:var(--muted)}.analytics [hidden]{display:none!important}@media(max-width:500px){.analytics-card{padding:.8rem}.analytics h1{font-size:2rem}.analytics fieldset{padding:.6rem}}
+</style>
+
+<style is:global>
+.analytics #growth-tooltip{position:fixed;z-index:1000;max-width:min(320px,calc(100vw - 24px));box-sizing:border-box;padding:.8rem 1rem;border:1px solid var(--border);border-radius:.5rem;background:var(--surface);color:var(--text);box-shadow:0 5px 22px #0003;font-size:.85rem;white-space:pre-line;pointer-events:auto}
+.analytics #growth-chart circle{cursor:pointer}
+</style>
