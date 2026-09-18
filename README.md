@@ -5,7 +5,7 @@ A [LOKF](https://github.com/nicholsn/lokf) knowledge base modelling
 Wissner-Gross's newsletter of daily developments in machine intelligence.
 
 Every markdown file under `knowledge/` is one concept with YAML frontmatter, and
-the whole directory projects losslessly to RDF. The goal is to turn 233 daily
+the whole directory projects losslessly to RDF. The goal is to turn 234 newsletter
 issues into something you can query as one trajectory.
 
 ## The model
@@ -72,7 +72,7 @@ cluster, the newsletter's namesake thread. An enriched development carries:
 |---|---|
 | `description` | one sentence of significance — the author's framing, not a restatement of the claim |
 | `score`, `occurred_on` | the headline figure verbatim with its unit; the event date when it differs from the issue date and is evidenced |
-| `about`, `relatedTo`, `references`, `relations[]` | the systems and benchmarks it concerns; lateral links; labelled edges (`contradicts`, `corroborates`, `extends`) |
+| `about`, `relatedTo`, `references`, `relations[]` | the systems and benchmarks it concerns; lateral links; labelled edges (using a valid predicate plus `relation_label` for interpretations such as `extends`) |
 | `tags` | a small controlled vocabulary for slicing (`rsi`, `speedrun`, `kernels`, `chip-design`, `forecast`, …) |
 | `sources[]` | the issue first, with a `supporting_text` excerpt of at most fifteen words that anchors the claim; then the primary sources the newsletter links |
 | `verified[]` | a machine-confirmed check of the claim against the issue text, with the model version as the actor (`claude-fable-5-1/2026-09-17`) |

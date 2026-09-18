@@ -12,6 +12,7 @@ their developments accumulate.
 """
 from __future__ import annotations
 
+import json
 import pathlib
 import runpy
 import sys
@@ -254,6 +255,8 @@ def reindex() -> None:
     issues = load("issues")
     by_date = sorted(issues, key=lambda t: str(t[1]["issue_date"]))
     themes = load("themes")
+    manifest = json.loads((ROOT / "tools/posts.json").read_text(encoding="utf-8"))
+    available_issues = len(manifest["posts"])
     counts = {d.name: len(list(d.glob("*.md")))
               for d in sorted(KB.iterdir()) if d.is_dir()}
 
@@ -272,7 +275,7 @@ def reindex() -> None:
         "",
         "## Coverage",
         "",
-        f"**{len(issues)} of 233 issues** modelled"
+        f"**{len(issues)} of {available_issues} issues** modelled"
         + (f", {by_date[0][1]['issue_date']} → {by_date[-1][1]['issue_date']}."
            if issues else "."),
         "",

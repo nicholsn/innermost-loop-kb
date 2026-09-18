@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**233 of 233 issues** modelled, 2025-12-11 → 2026-09-15.
+**234 of 234 issues** modelled, 2025-12-11 → 2026-09-17.
 
 | | count |
 |---|---|
-| benchmarks | 54 |
-| developments | 2919 |
-| facilities | 25 |
-| hardware | 18 |
-| issues | 233 |
-| organizations | 1046 |
-| people | 62 |
-| roles | 30 |
-| systems | 164 |
+| benchmarks | 56 |
+| developments | 2961 |
+| facilities | 27 |
+| hardware | 20 |
+| issues | 234 |
+| organizations | 1053 |
+| people | 70 |
+| roles | 31 |
+| systems | 171 |
 | themes | 213 |
 
 ## Themes
@@ -255,6 +255,7 @@ trajectory rather than a pile of days.
 
 ## Issues
 
+* [Welcome to September 17, 2026](issues/2026-09-17.md) — Machine intelligence becomes more energy-efficient while governance, infrastructure, and social adaptation struggle to keep pace.
 * [Welcome to September 15, 2026](issues/2026-09-15.md) — An investigation alleges the escapes were an artifact of the evaluation.
 * [Welcome to September 13, 2026](issues/2026-09-13.md) — The first formal request to slow down comes from the people building it.
 * [Welcome to September 12, 2026](issues/2026-09-12.md) — A Millennium Prize problem falls in 88 hours, and the field fractures.
@@ -274,5 +275,4 @@ trajectory rather than a pile of days.
 * [Welcome to August 16, 2026](issues/2026-08-16.md) — Capital flows so vast that any bottleneck is arbitraged away instantly.
 * [Welcome to August 15, 2026](issues/2026-08-15.md) — A lab discloses a model it has no plans to release, and says its own R&D evals are saturated.
 * [Welcome to August 13, 2026](issues/2026-08-13.md) — The harness turns 30% into 96% for about $540.
-* [Welcome to August 12, 2026](issues/2026-08-12.md) — A model reaches the human baseline on a benchmark built to be impossible.
-* … and 213 earlier issues
+* … and 214 earlier issues
