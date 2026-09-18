@@ -1,7 +1,7 @@
 {
   "source": "https://theinnermostloop.substack.com/sitemap.xml",
-  "total": 233,
-  "dailies": 201,
+  "total": 234,
+  "dailies": 202,
   "features": 32,
   "posts": [
     {
@@ -1401,6 +1401,12 @@
       "slug": "welcome-to-new-years-eve-2025",
       "url": "https://theinnermostloop.substack.com/p/welcome-to-new-years-eve-2025",
       "kind": "feature"
+    },
+    {
+      "date": "2026-09-17",
+      "slug": "welcome-to-september-17-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-september-17-2026",
+      "kind": "daily"
     }
   ]
 }
