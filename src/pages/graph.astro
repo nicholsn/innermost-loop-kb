@@ -1,31 +1,52 @@
 ---
 import Base from '../layouts/Base.astro';
-import { href } from '../lib/lokf';
-
-// Interactive LOKF knowledge-graph browser (from the lokf toolkit's explorer).
-// Reads graph.json; nodes are concepts, edges are typed relations. Search dims
-// non-matches, filters toggle types/predicates, clicking a node opens a detail
-// card linking to its page. `?focus=<concept_id>` selects and zooms a node.
+import { href, loadBundle, titleOf } from '../lib/lokf';
+const { concepts } = await loadBundle();
+const issues = concepts.filter(c => c.data.type === 'Issue')
+  .sort((a, b) => String(b.data.issue_date).localeCompare(String(a.data.issue_date)) || a.id.localeCompare(b.id));
+const topics = concepts.filter(c => c.data.type === 'Theme').sort((a, b) => titleOf(a).localeCompare(titleOf(b)));
+const latest = issues[0]?.id ?? topics[0]?.id ?? concepts[0]?.id ?? '';
 ---
 
 <Base
   title="Knowledge graph — Innermost Loop Kb"
-  description="An interactive browser over this knowledge base: every concept and typed relation as a navigable graph."
+  description="Explore one article or topic at a time, with connections to its people, systems, and ideas."
   wide
 >
   <h1>Knowledge graph</h1>
   <p class="tagline">
-    Drag, scroll to zoom, click a node to inspect and jump to its page.
+    Start with the latest article, choose another edition, or follow a topic across articles. Click a node to inspect it.
     Raw data: <a href={href('/graph.json')}><code>graph.json</code></a> ·
     <a href={href('/graph.jsonld')}><code>graph.jsonld</code></a>.
   </p>
 
-  <div class="lokf-graph" data-graph-src={href('/graph.json')}>
+  <div class="lokf-graph" data-graph-base={href('/graph-data/')} data-latest={latest}>
     <div class="lokf-graph__controls">
+      <div class="lokf-graph__selectors">
+        <label>Article
+          <select class="lokf-graph__article" aria-label="Article">
+            <option value="">Choose an article…</option>
+            {issues.map(c => <option value={c.id} selected={c.id === latest}>{titleOf(c)}</option>)}
+          </select>
+        </label>
+        <label>Topic
+          <select class="lokf-graph__topic" aria-label="Topic">
+            <option value="">Choose a topic…</option>
+            {topics.map(c => <option value={c.id}>{titleOf(c)}</option>)}
+          </select>
+        </label>
+        <button type="button" class="lokf-graph__btn" data-action="latest">Latest article</button>
+      </div>
+      <div class="lokf-graph__pagination">
+        <button type="button" class="lokf-graph__btn" data-action="previous" disabled>← Previous</button>
+        <p class="lokf-graph__status" role="status" aria-live="polite">Loading latest article…</p>
+        <button type="button" class="lokf-graph__btn" data-action="next" disabled>Next →</button>
+      </div>
       <input
         type="search"
         class="lokf-graph__search"
-        placeholder="Search nodes by label…"
+        placeholder="Highlight nodes in this view…"
+        aria-label="Highlight nodes in this view"
         autocomplete="off"
       />
       <div class="lokf-graph__filters">
@@ -60,6 +81,7 @@ import { href } from '../lib/lokf';
           <dt>IRI</dt><dd class="lokf-graph__detail-iri lokf-graph__mono"></dd>
         </dl>
         <a class="lokf-graph__detail-page" href="#">Open page →</a>
+        <button type="button" class="lokf-graph__btn" data-action="explore">Explore connections</button>
       </aside>
     </div>
   </div>
@@ -67,9 +89,7 @@ import { href } from '../lib/lokf';
 
 <script>
   import cytoscape from 'cytoscape';
-  import fcose from 'cytoscape-fcose';
 
-  cytoscape.use(fcose);
 
   // Stable colors for the LOKF core types; extras fall back to the palette.
   const TYPE_COLORS: Record<string, string> = {
@@ -100,16 +120,74 @@ import { href } from '../lib/lokf';
   function init(root: HTMLElement) {
     if (root.dataset.ready) return;
     root.dataset.ready = '1';
-    fetch(root.dataset.graphSrc!)
-      .then((r) => r.json())
-      .then((graph: Elements) => render(root, graph))
-      .catch((e) => {
-        (root.querySelector('.lokf-graph__canvas') as HTMLElement).textContent =
-          'Could not load graph: ' + e;
-      });
+    const article = root.querySelector<HTMLSelectElement>('.lokf-graph__article')!;
+    const topic = root.querySelector<HTMLSelectElement>('.lokf-graph__topic')!;
+    const status = root.querySelector<HTMLElement>('.lokf-graph__status')!;
+    const previous = root.querySelector<HTMLButtonElement>('[data-action="previous"]')!;
+    const next = root.querySelector<HTMLButtonElement>('[data-action="next"]')!;
+    let active = root.dataset.latest!;
+    let page = 1;
+    let cleanup: (() => void) | undefined;
+    let request: AbortController | undefined;
+    async function load(id: string, wantedPage = 1, historyMode = 'push') {
+      request?.abort();
+      const controller = new AbortController();
+      request = controller;
+      active = id;
+      page = wantedPage;
+      previous.disabled = next.disabled = true;
+      status.textContent = 'Loading graph…';
+      root.dataset.state = 'loading';
+      cleanup?.();
+      cleanup = undefined;
+      root.querySelector<HTMLElement>('.lokf-graph__detail')!.hidden = true;
+      article.value = id.startsWith('issues/') ? id : '';
+      topic.value = id.startsWith('themes/') ? id : '';
+      try {
+        const path = id.split('/').map(encodeURIComponent).join('/');
+        const response = await fetch(`${root.dataset.graphBase}${path}/${wantedPage}.json`, { signal: controller.signal });
+        if (!response.ok) throw new Error('This article, topic, or page is unavailable. Choose another or return to the latest article.');
+        const graph = await response.json();
+        if (controller.signal.aborted) return;
+        const scope = graph.scope;
+        cleanup = render(root, graph, id);
+        root.dataset.state = 'ready';
+        root.dataset.nodeCount = String(graph.nodes.length);
+        root.dataset.scope = scope.id;
+        status.textContent = `${scope.title} · ${scope.start}–${scope.end} of ${scope.total} ${['Issue', 'Theme'].includes(scope.type) ? 'developments' : 'connections'} · ${graph.nodes.length} nodes` +
+          (scope.pages > 1 ? ` · Page ${scope.page} of ${scope.pages}` : '') +
+          (scope.omitted ? ` · ${scope.omitted} additional context nodes omitted; open a node’s neighborhood to explore further.` : '');
+        previous.disabled = scope.page <= 1;
+        next.disabled = scope.page >= scope.pages;
+        const url = new URL(location.href);
+        url.searchParams.set('focus', id);
+        if (page > 1) url.searchParams.set('page', String(page));
+        else url.searchParams.delete('page');
+        if (historyMode !== 'none') history[historyMode === 'replace' ? 'replaceState' : 'pushState']({}, '', url);
+      } catch (error) {
+        if (controller.signal.aborted) return;
+        root.dataset.state = 'error';
+        root.querySelector<HTMLElement>('.lokf-graph__canvas')!.textContent = '';
+        status.textContent = `Could not load graph. ${error instanceof Error ? error.message : error}`;
+      }
+    }
+    function fromURL(mode = 'none') {
+      const params = new URLSearchParams(location.search);
+      const value = Number(params.get('page') || 1);
+      load(params.get('focus') || root.dataset.latest!, Number.isSafeInteger(value) && value > 0 ? value : 1, mode);
+    }
+    article.addEventListener('change', () => { if (article.value) load(article.value); });
+    topic.addEventListener('change', () => { if (topic.value) load(topic.value); });
+    previous.addEventListener('click', () => load(active, page - 1));
+    next.addEventListener('click', () => load(active, page + 1));
+    root.querySelector('[data-action="latest"]')!.addEventListener('click', () => load(root.dataset.latest!));
+    root.addEventListener('explore-node', (event) => load((event as CustomEvent).detail));
+    window.addEventListener('popstate', () => fromURL());
+    fromURL('replace');
   }
 
-  function render(root: HTMLElement, graph: Elements) {
+  function render(root: HTMLElement, graph: Elements, focusId: string) {
+    const listeners = new AbortController();
     const mount = root.querySelector('.lokf-graph__canvas') as HTMLElement;
 
     const types = [...new Set(graph.nodes.map((n) => n.data.type))].sort();
@@ -117,6 +195,7 @@ import { href } from '../lib/lokf';
     let spare = 0;
     types.forEach((t) => (colorOf[t] = TYPE_COLORS[t] ?? FALLBACK[spare++ % FALLBACK.length]));
     graph.nodes.forEach((n) => (n.data.color = colorOf[n.data.type]));
+    root.querySelectorAll('.lokf-graph__fieldset label').forEach(el => el.remove());
     const predicates = [...new Set(graph.edges.map((e) => e.data.predicate))].sort();
 
     const fg = themeColor('--text', '#333');
@@ -129,8 +208,8 @@ import { href } from '../lib/lokf';
       maxZoom: 2.5,
       wheelSensitivity: 0.3,
       layout: {
-        name: 'fcose',
-        quality: 'proof',
+        name: 'cose',
+        numIter: 400,
         animate: false,
         padding: 50,
         nodeSeparation: 160,
@@ -196,7 +275,7 @@ import { href } from '../lib/lokf';
         label.append(dot);
       }
       label.append(document.createTextNode(' ' + value));
-      input.addEventListener('change', applyFilters);
+      input.addEventListener('change', applyFilters, { signal: listeners.signal });
       return label;
     };
     types.forEach((t) => typeBox.append(checkbox(t, colorOf[t])));
@@ -213,12 +292,13 @@ import { href } from '../lib/lokf';
 
     // Search dims non-matching nodes.
     const search = root.querySelector('.lokf-graph__search') as HTMLInputElement;
+    search.value = '';
     search.addEventListener('input', () => {
       const q = search.value.trim().toLowerCase();
       cy.nodes().forEach((n) =>
         n.toggleClass('dim', q !== '' && !n.data('label').toLowerCase().includes(q)),
       );
-    });
+    }, { signal: listeners.signal });
 
     // Detail panel on node click, linking to the node's page.
     const detail = root.querySelector('.lokf-graph__detail') as HTMLElement;
@@ -230,48 +310,33 @@ import { href } from '../lib/lokf';
       set('.lokf-graph__detail-type', d.type);
       set('.lokf-graph__detail-iri', d.id);
       (root.querySelector('.lokf-graph__detail-page') as HTMLAnchorElement).href = d.href;
+      const explore = root.querySelector<HTMLButtonElement>('[data-action=explore]')!;
+      explore.onclick = () => root.dispatchEvent(new CustomEvent('explore-node', { detail: d.concept_id }));
       detail.hidden = false;
     };
     cy.on('tap', 'node', (evt) => showDetail(evt.target.data()));
     (root.querySelector('.lokf-graph__close') as HTMLElement).addEventListener(
       'click',
       () => (detail.hidden = true),
+      { signal: listeners.signal },
     );
 
     const fit = () => cy.fit(undefined, 45);
 
-    // ?focus=<concept_id> — select and zoom a node (deep links from pages).
-    // resize() first so fit/center use the container's final size; a timeout
-    // fallback re-settles once fonts/layout have stopped shifting things.
-    const focusId = new URLSearchParams(location.search).get('focus');
-    let settled = false;
-    const settle = () => {
-      cy.resize();
-      const target = focusId
-        ? cy.nodes().filter((n) => n.data('concept_id') === focusId)
-        : cy.collection();
-      if (target.length) {
-        if (!settled) {
-          target.select();
-          showDetail(target.first().data());
-        }
-        cy.animate({ center: { eles: target }, zoom: 1.5, duration: settled ? 0 : 350 });
-      } else {
-        fit();
-      }
-      settled = true;
-    };
-    cy.one('layoutstop', () => requestAnimationFrame(settle));
-    setTimeout(settle, 500);
+    // Keep the entire bounded scope visible; selecting an issue must not
+    // zoom so far into its center that all its developments disappear.
+    const frame = requestAnimationFrame(() => { cy.resize(); fit(); });
+    const target = cy.nodes().filter(n => n.data('concept_id') === focusId);
+    target.select();
 
     // Toolbar: fit + a full-screen graph browser.
     const stage = root.querySelector('.lokf-graph__stage') as HTMLElement;
-    root.querySelector('[data-action="fit"]')!.addEventListener('click', fit);
+    root.querySelector('[data-action="fit"]')!.addEventListener('click', fit, { signal: listeners.signal });
     const fsBtn = root.querySelector('[data-action="fullscreen"]') as HTMLButtonElement;
     fsBtn.addEventListener('click', () => {
       if (document.fullscreenElement) document.exitFullscreen();
       else stage.requestFullscreen?.();
-    });
+    }, { signal: listeners.signal });
     document.addEventListener('fullscreenchange', () => {
       const full = document.fullscreenElement === stage;
       stage.classList.toggle('is-fullscreen', full);
@@ -280,7 +345,8 @@ import { href } from '../lib/lokf';
         cy.resize();
         fit();
       });
-    });
+    }, { signal: listeners.signal });
+    return () => { cancelAnimationFrame(frame); listeners.abort(); cy.destroy(); };
   }
 
   document.querySelectorAll<HTMLElement>('.lokf-graph').forEach(init);
@@ -298,6 +364,11 @@ import { href } from '../lib/lokf';
     gap: 0.6rem;
     margin-bottom: 0.8rem;
   }
+  .lokf-graph__selectors, .lokf-graph__pagination { display: flex; flex-wrap: wrap; gap: .8rem; align-items: center; }
+  .lokf-graph__selectors label { flex: 1 1 17rem; min-width: 0; font-size: .85rem; }
+  .lokf-graph__selectors select { display: block; width: 100%; padding: .6rem; font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: .5rem; }
+  .lokf-graph__status { flex: 1 1 15rem; font-size: .85rem; margin: .4rem 0; }
+  .lokf-graph__btn:disabled { opacity: .45; cursor: default; }
   .lokf-graph__search {
     width: 100%;
     padding: 0.55rem 0.8rem;
