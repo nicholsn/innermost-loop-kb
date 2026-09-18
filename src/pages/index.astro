@@ -1,35 +1,36 @@
 ---
 import Base from '../layouts/Base.astro';
+import Search from '../components/Search.astro';
 import { loadBundle, hrefOf, titleOf, href } from '../lib/lokf';
 
 const { concepts } = await loadBundle();
-const types = [...new Set(concepts.map((c) => c.data.type))].sort();
-const byType = (t: string) => concepts.filter((c) => c.data.type === t);
+const types = [...new Set(concepts.map(c => c.data.type))].sort();
+const issues = concepts.filter(c => c.data.type === 'Issue')
+  .sort((a, b) => String(b.data.issue_date).localeCompare(String(a.data.issue_date)) || a.id.localeCompare(b.id));
+const topics = concepts.filter(c => c.data.type === 'Theme').sort((a, b) => titleOf(a).localeCompare(titleOf(b)));
 ---
-
-<Base title="Innermost Loop Kb" description="A LOKF knowledge base — markdown concepts that are also a queryable knowledge graph." wide>
+<Base title="Innermost Loop Kb" description="Search the Innermost Loop knowledge base and explore each article’s connections." wide>
   <h1>Innermost Loop Kb</h1>
-  <p class="tagline">
-    A <a href="https://lokf.nolan-nichols.com/">LOKF</a> knowledge base:
-    every page below is one markdown concept, and together they form a
-    queryable knowledge graph.
-  </p>
+  <p class="tagline">Explore {issues.length} articles and {concepts.length.toLocaleString()} connected concepts from The Innermost Loop.</p>
   <div class="lede-links">
-    <a href={href('/graph')}>Explore the graph →</a>
+    <a href={href('/graph')}>Explore the latest article’s graph →</a>
     <a href={href('/graph.jsonld')}>JSON-LD</a>
   </div>
-
-  {types.map((t) => (
-    <>
-      <h2>{t}</h2>
-      <div class="grid">
-        {byType(t).map((c) => (
-          <a class="card" href={hrefOf(c)}>
-            <h3>{titleOf(c)}</h3>
-            {c.data.description && <p>{c.data.description}</p>}
-          </a>
-        ))}
-      </div>
-    </>
-  ))}
+  <Search types={types} />
+  <h2>Latest articles</h2>
+  <div class="grid">
+    {issues.slice(0, 12).map(c => <a class="card" href={hrefOf(c)}>
+      <h3>{titleOf(c)}</h3><p>{String(c.data.thesis || c.data.description || '')}</p>
+    </a>)}
+  </div>
+  <p><a href={href('/?type=Issue')}>Browse all {issues.length} articles →</a></p>
+  <h2>Explore by topic</h2>
+  <p>Follow a theme across articles in the graph.</p>
+  <details>
+    <summary>Choose from {topics.length} topics</summary>
+    <div class="grid">
+      {topics.map(c => <a class="card" href={href('/graph?focus=' + encodeURIComponent(c.id))}><h3>{titleOf(c)}</h3></a>)}
+    </div>
+  </details>
+  <noscript><p>Enable JavaScript to search the full knowledge base and explore graphs. Article pages above remain available.</p></noscript>
 </Base>

@@ -1,0 +1,115 @@
+---
+import { href } from '../lib/lokf';
+const { types } = Astro.props;
+---
+<section class="kb-search" aria-label="Search the knowledge base" data-index={href('/search-index.json')}>
+  <label for="kb-query">Search the knowledge base</label>
+  <div class="kb-search__inputs">
+    <input id="kb-query" type="search" placeholder="Search articles, claims, people, systems, and topics…" autocomplete="off" aria-describedby="kb-search-help" />
+    <select aria-label="Search type" id="kb-type">
+      <option value="">All types</option>
+      {types.map((type: string) => <option value={type}>{type}</option>)}
+    </select>
+  </div>
+  <p id="kb-search-help">Search full article text, claims, descriptions, titles, and tags. Use multiple words to narrow your results.</p>
+  <p class="kb-search__status" role="status" aria-live="polite"></p>
+  <button class="kb-search__retry" type="button" hidden>Retry search</button>
+  <ol class="kb-search__results"></ol>
+  <button class="kb-search__more" type="button" hidden>Show more results</button>
+</section>
+
+<script>
+  import { searchIndex, terms } from '../lib/search.mjs';
+  const root = document.querySelector<HTMLElement>('.kb-search')!;
+  const query = root.querySelector<HTMLInputElement>('input')!;
+  const type = root.querySelector<HTMLSelectElement>('select')!;
+  const status = root.querySelector<HTMLElement>('.kb-search__status')!;
+  const results = root.querySelector<HTMLOListElement>('ol')!;
+  const more = root.querySelector<HTMLButtonElement>('.kb-search__more')!;
+  const retry = root.querySelector<HTMLButtonElement>('.kb-search__retry')!;
+  let index: any;
+  let loading: Promise<any> | undefined;
+  let matches: number[] = [];
+  let shown = 0;
+  let generation = 0;
+  async function load() {
+    if (index) return index;
+    loading ||= fetch(root.dataset.index!).then(response => {
+      if (!response.ok) throw new Error('Search unavailable');
+      return response.json();
+    }).then(value => index = value).catch(error => { loading = undefined; throw error; });
+    return loading;
+  }
+  function append() {
+    for (const id of matches.slice(shown, shown + 20)) {
+      const doc = index.documents[id];
+      const item = document.createElement('li');
+      const link = document.createElement('a');
+      link.href = doc.href;
+      link.textContent = doc.title;
+      const meta = document.createElement('small');
+      meta.textContent = `${doc.type}${doc.date ? ' · ' + doc.date : ''}`;
+      const snippet = document.createElement('p');
+      const text = doc.description + ' ' + doc.text;
+      const term = terms(query.value).find(t => text.toLowerCase().includes(t));
+      const offset = term ? Math.max(0, text.toLowerCase().indexOf(term) - 65) : 0;
+      snippet.textContent = (offset ? '…' : '') + text.slice(offset, offset + 240) + (text.length > offset + 240 ? '…' : '');
+      item.append(link, meta, snippet);
+      results.append(item);
+    }
+    shown = Math.min(shown + 20, matches.length);
+    more.hidden = shown >= matches.length;
+    status.textContent = matches.length ? `${matches.length.toLocaleString()} results · showing ${shown.toLocaleString()}` : 'No results. Try fewer words or another type.';
+  }
+  async function run() {
+    const current = ++generation;
+    const text = query.value.trim();
+    const url = new URL(location.href);
+    if (text) url.searchParams.set('q', text); else url.searchParams.delete('q');
+    if (type.value) url.searchParams.set('type', type.value); else url.searchParams.delete('type');
+    history.replaceState({}, '', url);
+    results.replaceChildren();
+    more.hidden = retry.hidden = true;
+    if (!text && !type.value) { status.textContent = ''; return; }
+    if (text && terms(text).join('').length < 2) { status.textContent = 'Enter at least two letters or numbers.'; return; }
+    status.textContent = 'Searching…';
+    try {
+      await load();
+      if (current !== generation) return;
+      matches = searchIndex(index, text, type.value);
+      shown = 0;
+      append();
+    } catch {
+      if (current !== generation) return;
+      status.textContent = 'Could not load the search index. Please retry.';
+      retry.hidden = false;
+    }
+  }
+  let timer: ReturnType<typeof setTimeout>;
+  query.addEventListener('input', () => { generation++; clearTimeout(timer); timer = setTimeout(run, 180); });
+  query.addEventListener('focus', () => { load().catch(() => {}); }, { once: true });
+  type.addEventListener('change', () => { clearTimeout(timer); run(); });
+  more.addEventListener('click', append);
+  retry.addEventListener('click', run);
+  const params = new URLSearchParams(location.search);
+  query.value = params.get('q') || '';
+  type.value = params.get('type') || '';
+  if (query.value || type.value) run();
+</script>
+<style>
+  .kb-search { margin: 2rem 0; padding: 1.3rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+  label { font-weight: 600; display: block; margin-bottom: .7rem; }
+  .kb-search__inputs { display: flex; flex-wrap: wrap; gap: .6rem; }
+  input, select, button { font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: .4rem; padding: .65rem; }
+  input { flex: 1 1 20rem; min-width: 0; }
+  input:focus-visible, select:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  button { cursor: pointer; }
+  #kb-search-help, .kb-search__status { font-size: .85rem; color: var(--muted); }
+</style>
+<style is:global>
+  .kb-search__results { padding-left: 1.3rem; }
+  .kb-search__results li { padding: .7rem .2rem; border-top: 1px solid var(--border); }
+  .kb-search__results a { font-weight: 600; }
+  .kb-search__results small { display: block; color: var(--muted); margin: .2rem 0; }
+  .kb-search__results p { font-size: .9rem; margin: .3rem 0; overflow-wrap: anywhere; }
+</style>

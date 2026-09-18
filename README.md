@@ -94,3 +94,21 @@ a reproduction of the prose.
 
 Licensed CC BY 4.0. Not affiliated with or endorsed by Dr. Alex Wissner-Gross;
 this is a reader's index of a public newsletter.
+
+### Browsing and search
+
+The graph opens on the newest issue. Article and topic selectors load individual
+static files from `graph-data/`; no full-graph download or layout is needed.
+Large topics and entity neighborhoods are paginated in groups of 60 connections,
+with at most 180 nodes in a view. A context-limit message explains omitted
+neighbors. Select a node and choose **Explore connections** to continue, or use
+`?focus=<concept-id>&page=2` to share a view. Browser Back restores earlier views.
+The complete graph remains available as a separate export.
+
+The home-page search lazily loads a generated, weighted full-text index covering
+titles, tags, descriptions, claims, theses, and markdown bodies. Multiple words
+narrow results; the final word supports prefix matching. Results can be filtered
+by concept type and are shown in batches of 20. Query URLs preserve `q` and `type`.
+
+Run `npm test` for graph-boundary and search regression checks, and `npm run build`
+to generate the scoped graph files, search index, and site. CI runs both checks.
