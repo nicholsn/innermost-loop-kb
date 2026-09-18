@@ -9,16 +9,23 @@ const issues = concepts.filter(c => c.data.type === 'Issue')
   .sort((a, b) => String(b.data.issue_date).localeCompare(String(a.data.issue_date)) || a.id.localeCompare(b.id));
 const topics = concepts.filter(c => c.data.type === 'Theme').sort((a, b) => titleOf(a).localeCompare(titleOf(b)));
 ---
-<Base title="Innermost Loop Kb" description="Search the Innermost Loop knowledge base and explore each article’s connections." wide>
+<Base title="Innermost Loop Kb" description="An independent, unofficial index of The Innermost Loop by Dr. Alex Wissner-Gross. Explore indexed summaries and links to the original reporting." wide>
   <h1>Innermost Loop Kb</h1>
-  <p class="tagline">Explore {issues.length} articles and {concepts.length.toLocaleString()} connected concepts from The Innermost Loop.</p>
+  <p class="tagline">Explore an independent index of {issues.length} articles and {concepts.length.toLocaleString()} connected concepts.</p>
+  <section class="source-attribution" aria-labelledby="source-attribution-heading">
+    <h2 id="source-attribution-heading">About this index</h2>
+    <p>The original newsletter is <a href="https://theinnermostloop.substack.com/">The Innermost Loop</a> by <strong>Dr. Alex Wissner-Gross</strong>.</p>
+    <p>This is an independent, unofficial index of that content, with summaries, extracted concepts, and links to the original reporting. It is not the original publication and is not affiliated with, endorsed by, or sponsored by The Innermost Loop or its author.</p>
+    <p>Original content remains the work of its respective authors and publishers. This index may contain errors or omit context; please read the original articles for the full content and attribution.</p>
+    <a class="source-link" href="https://theinnermostloop.substack.com/">Read the original newsletter →</a>
+  </section>
   <div class="lede-links">
     <a href={href('/graph')}>Explore the latest article’s graph →</a>
 
   </div>
   <p><a href={href('/analytics')}>Explore theme evidence over time →</a></p>
   <Search types={types} domains={[...new Set(concepts.map(c => c.data.domain).filter(Boolean))].sort()} />
-  <h2>Latest articles</h2>
+  <h2>Latest indexed articles</h2>
   <div class="grid">
     {issues.slice(0, 12).map(c => <a class="card" href={hrefOf(c)}>
       <h3>{titleOf(c)}</h3><p>{String(c.data.thesis || c.data.description || '')}</p>
@@ -42,3 +49,8 @@ const input=document.querySelector<HTMLInputElement>('#topic-search')!;
 input.addEventListener('input',()=>{let count=0;for(const card of document.querySelectorAll<HTMLElement>('#topic-results .card')){card.hidden=!card.textContent!.toLowerCase().includes(input.value.toLowerCase());if(!card.hidden)count++;}document.querySelector('#topic-count')!.textContent=`${count} matching topics`;});
 </script>
 <style is:global>#topic-results [hidden]{display:none}#topic-search{display:block;max-width:100%;box-sizing:border-box}</style>
+
+<style>
+.source-attribution{margin:1.5rem 0;padding:1.1rem 1.3rem;border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:var(--radius);background:var(--surface)}
+.source-attribution h2{font-size:1.2rem;margin-top:0}.source-attribution p{font-size:.95rem;line-height:1.6}.source-link{font-weight:600}
+</style>
