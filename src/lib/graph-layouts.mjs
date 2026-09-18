@@ -1,9 +1,9 @@
 export const LAYOUTS = {
-  fcose: { label: 'Fast force · fCoSE', description: 'Combines spectral placement with force refinement to reveal connected neighborhoods.' },
+  fcose: { label: 'Connected neighborhoods', description: 'Explore connected neighborhoods. Uses fCoSE: spectral placement followed by force refinement.' },
   communities: { label: 'Community clusters', description: 'Groups densely connected nodes using Markov clustering, then arranges the groups with fCoSE. Inferred from this view; article-membership links are excluded.' },
   types: { label: 'Group by concept type', description: 'Separates people, organizations, developments, and topics into labeled groups. These groups reflect types, not inferred communities.' },
-  cose: { label: 'Classic force · CoSE', description: 'Uses attraction along edges and repulsion between nodes to reveal the shape of the network.' },
-  radial: { label: 'Radial · connection hubs', description: 'Places highly connected nodes in the center and less-connected nodes in outer rings.' },
+  cose: { label: 'Spread connections', description: 'Spread out connections using classic CoSE attraction and repulsion.' },
+  radial: { label: 'Connection hubs', description: 'Places nodes with more visible connections in the center. Counts apply only to this page and filters, not global importance.' },
 };
 export const validLayout = value => Object.hasOwn(LAYOUTS, value) ? value : 'fcose';
 

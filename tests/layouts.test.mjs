@@ -52,3 +52,14 @@ test('hidden nodes and edge filters are excluded from clustering; singleton and 
     assert.equal(validLayout('invalid'),'fcose');
   } finally {cy.destroy();}
 });
+
+import {typeStyle} from '../src/lib/graph-palette.mjs';
+test('node colors and shapes depend only on type, never the scope or order',()=>{
+ const subset=['Development','Organization','Theme'];
+ const superset=['AISystem','Benchmark',...subset].reverse();
+ const styles=new Map(superset.map(t=>[t,typeStyle(t)]));
+ for(const t of subset)assert.deepEqual(typeStyle(t),styles.get(t));
+ assert.notEqual(typeStyle('Development').color,typeStyle('Organization').color);
+ assert.deepEqual(typeStyle('FutureType'),typeStyle('FutureType'));
+ assert.ok(subset.every(t=>typeStyle(t).shape));
+});
