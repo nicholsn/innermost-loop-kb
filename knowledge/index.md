@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**234 of 234 issues** modelled, 2025-12-11 → 2026-09-17.
+**235 of 235 issues** modelled, 2025-12-11 → 2026-09-20.
 
 | | count |
 |---|---|
-| benchmarks | 56 |
-| developments | 2961 |
+| benchmarks | 59 |
+| developments | 3024 |
 | facilities | 27 |
 | hardware | 20 |
-| issues | 234 |
-| organizations | 1053 |
+| issues | 235 |
+| organizations | 1061 |
 | people | 70 |
 | roles | 31 |
-| systems | 171 |
+| systems | 179 |
 | themes | 213 |
 
 ## Themes
@@ -255,6 +255,7 @@ trajectory rather than a pile of days.
 
 ## Issues
 
+* [Welcome to September 20, 2026](issues/2026-09-20.md) — AI research automation is becoming measurable as advances in science, autonomy and infrastructure outpace institutional responses.
 * [Welcome to September 17, 2026](issues/2026-09-17.md) — Machine intelligence becomes more energy-efficient while governance, infrastructure, and social adaptation struggle to keep pace.
 * [Welcome to September 15, 2026](issues/2026-09-15.md) — An investigation alleges the escapes were an artifact of the evaluation.
 * [Welcome to September 13, 2026](issues/2026-09-13.md) — The first formal request to slow down comes from the people building it.
@@ -274,5 +275,4 @@ trajectory rather than a pile of days.
 * [Welcome to August 17, 2026](issues/2026-08-17.md) — Frontier capability arrives in a file you can keep.
 * [Welcome to August 16, 2026](issues/2026-08-16.md) — Capital flows so vast that any bottleneck is arbitraged away instantly.
 * [Welcome to August 15, 2026](issues/2026-08-15.md) — A lab discloses a model it has no plans to release, and says its own R&D evals are saturated.
-* [Welcome to August 13, 2026](issues/2026-08-13.md) — The harness turns 30% into 96% for about $540.
-* … and 214 earlier issues
+* … and 215 earlier issues
