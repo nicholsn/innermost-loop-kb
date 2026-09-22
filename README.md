@@ -5,7 +5,7 @@ A [LOKF](https://github.com/nicholsn/lokf) knowledge base modelling
 Wissner-Gross's newsletter of daily developments in machine intelligence.
 
 Every markdown file under `knowledge/` is one concept with YAML frontmatter, and
-the whole directory projects losslessly to RDF. The goal is to turn 235 newsletter
+the whole directory projects losslessly to RDF. The goal is to turn 236 newsletter
 issues into something you can query as one trajectory.
 
 ## The model
