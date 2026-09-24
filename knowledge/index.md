@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**236 of 236 issues** modelled, 2025-12-11 → 2026-09-22.
+**237 of 237 issues** modelled, 2025-12-11 → 2026-09-24.
 
 | | count |
 |---|---|
-| benchmarks | 61 |
-| developments | 3070 |
-| facilities | 30 |
+| benchmarks | 64 |
+| developments | 3118 |
+| facilities | 31 |
 | hardware | 24 |
-| issues | 236 |
-| organizations | 1065 |
-| people | 76 |
+| issues | 237 |
+| organizations | 1074 |
+| people | 77 |
 | roles | 31 |
-| systems | 184 |
+| systems | 189 |
 | themes | 213 |
 
 ## Themes
@@ -255,6 +255,7 @@ trajectory rather than a pile of days.
 
 ## Issues
 
+* [Welcome to September 24, 2026](issues/2026-09-24.md) — New model releases lower the cost of general intelligence as scientific applications expand and institutions struggle to keep pace.
 * [Welcome to September 22, 2026](issues/2026-09-22.md) — Cheaper models and coordinated agents expand usable capacity while disputes over control, liability and physical infrastructure intensify.
 * [Welcome to September 20, 2026](issues/2026-09-20.md) — AI research automation is becoming measurable as advances in science, autonomy and infrastructure outpace institutional responses.
 * [Welcome to September 17, 2026](issues/2026-09-17.md) — Machine intelligence becomes more energy-efficient while governance, infrastructure, and social adaptation struggle to keep pace.
@@ -274,5 +275,4 @@ trajectory rather than a pile of days.
 * [Welcome to August 21, 2026](issues/2026-08-21.md) — A payments giant buys the mint of the intelligence economy.
 * [Welcome to August 19, 2026](issues/2026-08-19.md) — A lab pauses frontier training itself, not just a release.
 * [Welcome to August 17, 2026](issues/2026-08-17.md) — Frontier capability arrives in a file you can keep.
-* [Welcome to August 16, 2026](issues/2026-08-16.md) — Capital flows so vast that any bottleneck is arbitraged away instantly.
-* … and 216 earlier issues
+* … and 217 earlier issues
