@@ -1150,3 +1150,9 @@ SPEC = {'issue': {'date': '2026-09-24',
                  'sources': [{'resource': 'https://www.praxisnation.com/content/praxis-uruguay-announcement',
                               'title': 'Source linked by the September 24 issue'}],
                  'located_in': 'Uruguay'}]}
+
+# September 27 reports this model on HealthBench Professional.
+for _system in SPEC["systems"]:
+    if _system["id"] == 'gpt-6-luna':
+        _system.setdefault("evaluated_on", []).append('https://nicholsn.github.io/innermost-loop-kb/benchmarks/healthbench-professional')
+        _system.setdefault("sources", []).append({"resource": "https://theinnermostloop.substack.com/p/welcome-to-september-27-2026", "title": "Welcome to September 27, 2026", "author": "human:alex-wissner-gross", "last_modified": "2026-09-27"})
