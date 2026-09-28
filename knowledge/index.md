@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**237 of 237 issues** modelled, 2025-12-11 → 2026-09-24.
+**238 of 238 issues** modelled, 2025-12-11 → 2026-09-27.
 
 | | count |
 |---|---|
-| benchmarks | 64 |
-| developments | 3118 |
-| facilities | 31 |
+| benchmarks | 66 |
+| developments | 3163 |
+| facilities | 34 |
 | hardware | 24 |
-| issues | 237 |
-| organizations | 1074 |
-| people | 77 |
+| issues | 238 |
+| organizations | 1076 |
+| people | 81 |
 | roles | 31 |
-| systems | 189 |
+| systems | 194 |
 | themes | 213 |
 
 ## Themes
@@ -255,6 +255,7 @@ trajectory rather than a pile of days.
 
 ## Issues
 
+* [Welcome to September 27, 2026](issues/2026-09-27.md) — The author frames public AI failures and responses as part of a maturing technological transition.
 * [Welcome to September 24, 2026](issues/2026-09-24.md) — New model releases lower the cost of general intelligence as scientific applications expand and institutions struggle to keep pace.
 * [Welcome to September 22, 2026](issues/2026-09-22.md) — Cheaper models and coordinated agents expand usable capacity while disputes over control, liability and physical infrastructure intensify.
 * [Welcome to September 20, 2026](issues/2026-09-20.md) — AI research automation is becoming measurable as advances in science, autonomy and infrastructure outpace institutional responses.
@@ -274,5 +275,4 @@ trajectory rather than a pile of days.
 * [Welcome to August 23, 2026](issues/2026-08-23.md) — Two SKUs: American frontier performance and Chinese frontier pricing.
 * [Welcome to August 21, 2026](issues/2026-08-21.md) — A payments giant buys the mint of the intelligence economy.
 * [Welcome to August 19, 2026](issues/2026-08-19.md) — A lab pauses frontier training itself, not just a release.
-* [Welcome to August 17, 2026](issues/2026-08-17.md) — Frontier capability arrives in a file you can keep.
-* … and 217 earlier issues
+* … and 218 earlier issues
