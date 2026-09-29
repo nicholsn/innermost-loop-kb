@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**238 of 238 issues** modelled, 2025-12-11 → 2026-09-27.
+**239 of 239 issues** modelled, 2025-12-11 → 2026-09-29.
 
 | | count |
 |---|---|
-| benchmarks | 66 |
-| developments | 3163 |
+| benchmarks | 68 |
+| developments | 3205 |
 | facilities | 34 |
-| hardware | 24 |
-| issues | 238 |
+| hardware | 25 |
+| issues | 239 |
 | organizations | 1076 |
-| people | 81 |
+| people | 82 |
 | roles | 31 |
-| systems | 194 |
+| systems | 200 |
 | themes | 213 |
 
 ## Themes
@@ -255,6 +255,7 @@ trajectory rather than a pile of days.
 
 ## Issues
 
+* [Welcome to September 29, 2026](issues/2026-09-29.md) — The author frames orbital launch progress as another stage in accelerating intelligence and infrastructure.
 * [Welcome to September 27, 2026](issues/2026-09-27.md) — The author frames public AI failures and responses as part of a maturing technological transition.
 * [Welcome to September 24, 2026](issues/2026-09-24.md) — New model releases lower the cost of general intelligence as scientific applications expand and institutions struggle to keep pace.
 * [Welcome to September 22, 2026](issues/2026-09-22.md) — Cheaper models and coordinated agents expand usable capacity while disputes over control, liability and physical infrastructure intensify.
@@ -274,5 +275,4 @@ trajectory rather than a pile of days.
 * [Welcome to August 25, 2026](issues/2026-08-25.md) — Bread lines rationed calories; thread lines ration intelligence.
 * [Welcome to August 23, 2026](issues/2026-08-23.md) — Two SKUs: American frontier performance and Chinese frontier pricing.
 * [Welcome to August 21, 2026](issues/2026-08-21.md) — A payments giant buys the mint of the intelligence economy.
-* [Welcome to August 19, 2026](issues/2026-08-19.md) — A lab pauses frontier training itself, not just a release.
-* … and 218 earlier issues
+* … and 219 earlier issues

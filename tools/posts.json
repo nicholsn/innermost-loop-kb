@@ -1,7 +1,7 @@
 {
   "source": "https://theinnermostloop.substack.com/sitemap.xml",
-  "total": 238,
-  "dailies": 206,
+  "total": 239,
+  "dailies": 207,
   "features": 32,
   "posts": [
     {
@@ -1430,6 +1430,12 @@
       "date": "2026-09-27",
       "slug": "welcome-to-september-27-2026",
       "url": "https://theinnermostloop.substack.com/p/welcome-to-september-27-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-09-29",
+      "slug": "welcome-to-september-29-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-september-29-2026",
       "kind": "daily"
     }
   ]
