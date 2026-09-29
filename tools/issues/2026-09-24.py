@@ -1156,3 +1156,12 @@ for _system in SPEC["systems"]:
     if _system["id"] == 'gpt-6-luna':
         _system.setdefault("evaluated_on", []).append('https://nicholsn.github.io/innermost-loop-kb/benchmarks/healthbench-professional')
         _system.setdefault("sources", []).append({"resource": "https://theinnermostloop.substack.com/p/welcome-to-september-27-2026", "title": "Welcome to September 27, 2026", "author": "human:alex-wissner-gross", "last_modified": "2026-09-27"})
+
+# September 29 adds reported benchmark comparisons for Opus 5.5.
+for _system in SPEC["systems"]:
+    if _system["id"] == "claude-opus-5-5":
+        _system.setdefault("evaluated_on", []).extend([
+            "https://nicholsn.github.io/innermost-loop-kb/benchmarks/terminal-bench-4",
+            "https://nicholsn.github.io/innermost-loop-kb/benchmarks/cobench-2-1",
+        ])
+        _system.setdefault("sources", []).append({"resource": "https://theinnermostloop.substack.com/p/welcome-to-september-29-2026", "title": "Welcome to September 29, 2026", "author": "human:alex-wissner-gross", "last_modified": "2026-09-29"})
