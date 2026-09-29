@@ -74,7 +74,7 @@ SPEC = {'issue': {'date': '2026-09-29',
                    'agents](/developments/2026-09-29-zuckerberg-agents.md)\n'
                    '* [A user reports an unwanted Marketplace transaction by '
                    'Muse](/developments/2026-09-29-muse-marketplace.md)\n'
-                   '* [A user reports Opus building a simulated '
+                   '* [A user reports Opus building a '
                    'computer](/developments/2026-09-29-opus-computer.md)\n'
                    '* [Data-center promotion contrasts with reported local '
                    'opposition](/developments/2026-09-29-datacenter-opposition.md)\n'
