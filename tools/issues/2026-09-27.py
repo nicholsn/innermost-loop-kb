@@ -1055,3 +1055,11 @@ SPEC = {'issue': {'date': '2026-09-27',
                               'title': 'Source linked by the September 27 issue'}],
                  'operated_by': ['https://nicholsn.github.io/innermost-loop-kb/organizations/google'],
                  'located_in': 'orbit (planned)'}]}
+
+# September 30 reports the service answering questions with Gemini and Grok.
+for _system in SPEC["systems"]:
+    if _system["id"] == "america-gov":
+        _system["description"] = "US government question-answering interface reported on September 30 to use Gemini and Grok."
+        _system["body"] = "Initially announced ahead of its unveiling, America.gov is reported in the September 30 edition to answer citizens' questions using Gemini and Grok. This is attributed reporting, not independent verification."
+        _system["relatedTo"] = ["https://nicholsn.github.io/innermost-loop-kb/systems/gemini", "https://nicholsn.github.io/innermost-loop-kb/systems/grok"]
+        _system.setdefault("sources", []).append({"resource": "https://theinnermostloop.substack.com/p/welcome-to-september-30-2026", "title": "Welcome to September 30, 2026", "author": "human:alex-wissner-gross", "last_modified": "2026-09-30"})
