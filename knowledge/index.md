@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**240 of 240 issues** modelled, 2025-12-11 → 2026-09-30.
+**241 of 241 issues** modelled, 2025-12-11 → 2026-10-03.
 
 | | count |
 |---|---|
 | benchmarks | 68 |
-| developments | 3245 |
+| developments | 3310 |
 | facilities | 35 |
 | hardware | 25 |
-| issues | 240 |
-| organizations | 1080 |
-| people | 86 |
+| issues | 241 |
+| organizations | 1087 |
+| people | 93 |
 | roles | 31 |
-| systems | 204 |
+| systems | 210 |
 | themes | 213 |
 
 ## Themes
@@ -255,6 +255,7 @@ trajectory rather than a pile of days.
 
 ## Issues
 
+* [Welcome to October 3, 2026](issues/2026-10-03.md) — The author sees Google rejoining the leading frontier labs while capability gains intensify questions about access, provenance and safety.
 * [Welcome to September 30, 2026](issues/2026-09-30.md) — The author frames persistent, proactive agents as a shift from responding to prompts toward pursuing goals.
 * [Welcome to September 29, 2026](issues/2026-09-29.md) — The author frames orbital launch progress as another stage in accelerating intelligence and infrastructure.
 * [Welcome to September 27, 2026](issues/2026-09-27.md) — The author frames public AI failures and responses as part of a maturing technological transition.
@@ -274,5 +275,4 @@ trajectory rather than a pile of days.
 * [Welcome to August 27, 2026](issues/2026-08-27.md) — The model called itself a swarm.
 * [The First AI Chip Designed End-to-End by AI](issues/feature-ai-chip-designed-by-ai.md) — Two humans wrote a specification; a machine produced the entire chip.
 * [Welcome to August 25, 2026](issues/2026-08-25.md) — Bread lines rationed calories; thread lines ration intelligence.
-* [Welcome to August 23, 2026](issues/2026-08-23.md) — Two SKUs: American frontier performance and Chinese frontier pricing.
-* … and 220 earlier issues
+* … and 221 earlier issues

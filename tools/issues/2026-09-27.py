@@ -1063,3 +1063,13 @@ for _system in SPEC["systems"]:
         _system["body"] = "Initially announced ahead of its unveiling, America.gov is reported in the September 30 edition to answer citizens' questions using Gemini and Grok. This is attributed reporting, not independent verification."
         _system["relatedTo"] = ["https://nicholsn.github.io/innermost-loop-kb/systems/gemini", "https://nicholsn.github.io/innermost-loop-kb/systems/grok"]
         _system.setdefault("sources", []).append({"resource": "https://theinnermostloop.substack.com/p/welcome-to-september-30-2026", "title": "Welcome to September 30, 2026", "author": "human:alex-wissner-gross", "last_modified": "2026-09-30"})
+
+# October 3 reporting names the released Gemini 4 model Argon.
+for _system in SPEC.get("systems", []):
+    if _system["id"] == "gemini-4":
+        _system["title"] = "Gemini 4 Argon"
+        _system["description"] = "Google model reported launched as Gemini 4 Argon with one million output tokens and initial access for cyber defenders."
+        _system["body"] = "Initially reported as forthcoming in the September 27 edition; the October 3 edition reports its launch as Argon and its Intelligence Index and Text Arena results. These reports are not independently verified here."
+        _system["resource"] = "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+        _system["evaluated_on"] = ["https://nicholsn.github.io/innermost-loop-kb/benchmarks/artificial-analysis-index", "https://nicholsn.github.io/innermost-loop-kb/benchmarks/lmarena"]
+        _system.setdefault("sources", []).append({"resource": "https://theinnermostloop.substack.com/p/welcome-to-october-3-2026", "title": "Welcome to October 3, 2026", "author": "human:alex-wissner-gross", "last_modified": "2026-10-03"})
