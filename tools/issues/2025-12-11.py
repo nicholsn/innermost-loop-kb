@@ -499,3 +499,9 @@ this issue reports, and the [themes](/themes/compute-capital-stack.md) they feed
                  "The author discloses an indirect interest in Ornn."},
     ],
 }
+
+# Later reporting on the corporate branding of SpaceX and its acquired AI business.
+for _entity in SPEC.get("organizations", []):
+    if _entity["id"] == "spacex":
+        _entity["body"] = _entity.get("body", "") + "\n\nThe October 5 edition reports Musk renaming SpaceXAI to SpaceXSI following the federal terminology change. The historical SpaceX record is retained to preserve earlier relationships; the rebranding is an attributed report."
+        _entity.setdefault("sources", []).append({"resource": "https://theinnermostloop.substack.com/p/welcome-to-october-5-2026", "title": "Welcome to October 5, 2026", "author": "human:alex-wissner-gross", "last_modified": "2026-10-05"})
