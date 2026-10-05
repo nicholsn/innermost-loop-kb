@@ -1073,3 +1073,14 @@ for _system in SPEC.get("systems", []):
         _system["resource"] = "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
         _system["evaluated_on"] = ["https://nicholsn.github.io/innermost-loop-kb/benchmarks/artificial-analysis-index", "https://nicholsn.github.io/innermost-loop-kb/benchmarks/lmarena"]
         _system.setdefault("sources", []).append({"resource": "https://theinnermostloop.substack.com/p/welcome-to-october-3-2026", "title": "Welcome to October 3, 2026", "author": "human:alex-wissner-gross", "last_modified": "2026-10-03"})
+
+# Preserve later reporting in the spec that owns this existing entity.
+for _entity in SPEC.get('facilities', []):
+    if _entity["id"] == 'suncatcher-satellite':
+        _entity['description'] = 'Google orbital prototype reported running Gemma on four TPUs in the October 5 edition.'
+        _entity['body'] = 'The September 27 edition described a planned October 1 launch for orbital Gemini serving. The October 5 edition reports a prototype running Gemma on four TPUs in orbit and forecasts five years before it beats terrestrial prices. These are attributed reports, not independent verification.'
+        _entity['located_in'] = 'orbit'
+        _entity['capacity'] = 'four TPUs'
+        _entity['resource'] = 'https://www.npr.org/2026/10/01/nx-s1-5983697/project-suncatcher-google-ai-data-center-space'
+        _entity['relatedTo'] = ['https://nicholsn.github.io/innermost-loop-kb/systems/gemma', 'https://nicholsn.github.io/innermost-loop-kb/hardware/google-tpu']
+        _entity.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-october-5-2026', 'title': 'Welcome to October 5, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-10-05'})

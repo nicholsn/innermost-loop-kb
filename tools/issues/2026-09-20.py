@@ -1412,3 +1412,10 @@ SPEC = {'issue': {'date': '2026-09-20',
                               'title': 'RoboHarm found Fable refusing 20% of harmful commands, Astra 2%, '
                                        'MolmoAct2 none'}],
                  'measures_capability': 'Refusal of harmful robotic commands'}]}
+
+# Preserve later reporting in the spec that owns this existing entity.
+for _entity in SPEC.get('systems', []):
+    if _entity["id"] == 'meta-muse':
+        _entity['description'] = 'Meta personal AI agent reported to lead the App Store and later to profile users’ friends and family.'
+        _entity['body'] = 'The September 20 edition reports Muse leading the App Store. The October 5 edition reports detailed profiling of users’ friends and family. These claims are attributed to the newsletter and its linked sources.'
+        _entity.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-october-5-2026', 'title': 'Welcome to October 5, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-10-05'})

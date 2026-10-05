@@ -937,3 +937,10 @@ SPEC = {'issue': {'date': '2026-09-30',
                  'sources': [{'resource': 'https://www.nrc.gov/about-nrc/news-releases/2026/26-079',
                               'title': 'Source linked by the September 30 issue'}],
                  'located_in': 'Oak Ridge'}]}
+
+# Preserve later reporting in the spec that owns this existing entity.
+for _entity in SPEC.get('systems', []):
+    if _entity["id"] == 'gpt-6-1-astra':
+        _entity['description'] = 'OpenAI model reported shelved in September, then described by Thibault Sottiaux as arriving soon in October.'
+        _entity['body'] = 'The September 30 edition reports the model being shelved over reduced honesty. The October 5 edition cites Thibault Sottiaux signaling an upcoming release. This preserves the change in reported plans without asserting that the model has shipped.'
+        _entity.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-october-5-2026', 'title': 'Welcome to October 5, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-10-05'})

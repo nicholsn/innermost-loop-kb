@@ -1,7 +1,7 @@
 {
   "source": "https://theinnermostloop.substack.com/sitemap.xml",
-  "total": 241,
-  "dailies": 209,
+  "total": 242,
+  "dailies": 210,
   "features": 32,
   "posts": [
     {
@@ -1448,6 +1448,12 @@
       "date": "2026-10-03",
       "slug": "welcome-to-october-3-2026",
       "url": "https://theinnermostloop.substack.com/p/welcome-to-october-3-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-10-05",
+      "slug": "welcome-to-october-5-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-october-5-2026",
       "kind": "daily"
     }
   ]
