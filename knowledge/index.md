@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**242 of 242 issues** modelled, 2025-12-11 → 2026-10-05.
+**243 of 243 issues** modelled, 2025-12-11 → 2026-10-09.
 
 | | count |
 |---|---|
 | benchmarks | 69 |
-| developments | 3354 |
-| facilities | 37 |
+| developments | 3426 |
+| facilities | 38 |
 | hardware | 26 |
-| issues | 242 |
-| organizations | 1095 |
-| people | 98 |
-| roles | 34 |
-| systems | 214 |
+| issues | 243 |
+| organizations | 1101 |
+| people | 105 |
+| roles | 35 |
+| systems | 221 |
 | themes | 213 |
 
 ## Themes
@@ -255,6 +255,7 @@ trajectory rather than a pile of days.
 
 ## Issues
 
+* [Welcome to October 9, 2026](issues/2026-10-09.md) — The author frames a large release of AI mathematics manuscripts as a shift in discovery, amid disputes over verification, scientific credit and the economics of growing capability.
 * [Welcome to October 5, 2026](issues/2026-10-05.md) — The author frames the federal shift to super-intelligence terminology as a rebranding of the technological transition, while capability, infrastructure and governance continue to change.
 * [Welcome to October 3, 2026](issues/2026-10-03.md) — The author sees Google rejoining the leading frontier labs while capability gains intensify questions about access, provenance and safety.
 * [Welcome to September 30, 2026](issues/2026-09-30.md) — The author frames persistent, proactive agents as a shift from responding to prompts toward pursuing goals.
@@ -274,5 +275,4 @@ trajectory rather than a pile of days.
 * [Welcome to August 31, 2026](issues/2026-08-31.md) — Intelligence, given a sandbox, built a civilization.
 * [Welcome to August 29, 2026](issues/2026-08-29.md) — A supplier cuts off a rival's subsidiary and neutral infrastructure ends.
 * [Welcome to August 27, 2026](issues/2026-08-27.md) — The model called itself a swarm.
-* [The First AI Chip Designed End-to-End by AI](issues/feature-ai-chip-designed-by-ai.md) — Two humans wrote a specification; a machine produced the entire chip.
-* … and 222 earlier issues
+* … and 223 earlier issues

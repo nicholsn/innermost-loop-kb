@@ -142,3 +142,10 @@ per hour.
          "evidences": ["capital-takes-the-plant", "intimate-interface"]},
     ],
 }
+
+# Later reporting is maintained in the original entity owner.
+for _entity in SPEC.get('organizations', []):
+    if _entity["id"] == 'czi':
+        _entity["body"] = _entity.get("body", "") + '\n\nThe October 9 edition reports the Virtual Biology Initiative expanding to $1.8 billion and cell datasets scaling toward trillions, alongside related data and wet-lab commitments from AI laboratories. These are attributed reports, not independently verified.'
+        _entity['description'] = 'Chan Zuckerberg Biohub, reported to have expanded its Virtual Biology Initiative to $1.8 billion.'
+        _entity.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-october-9-2026', 'title': 'Welcome to October 9, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-10-09'})
