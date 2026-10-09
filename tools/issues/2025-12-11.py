@@ -505,3 +505,10 @@ for _entity in SPEC.get("organizations", []):
     if _entity["id"] == "spacex":
         _entity["body"] = _entity.get("body", "") + "\n\nThe October 5 edition reports Musk renaming SpaceXAI to SpaceXSI following the federal terminology change. The historical SpaceX record is retained to preserve earlier relationships; the rebranding is an attributed report."
         _entity.setdefault("sources", []).append({"resource": "https://theinnermostloop.substack.com/p/welcome-to-october-5-2026", "title": "Welcome to October 5, 2026", "author": "human:alex-wissner-gross", "last_modified": "2026-10-05"})
+
+# Later reporting is maintained in the original entity owner.
+for _entity in SPEC.get('systems', []):
+    if _entity["id"] == 'grok':
+        _entity["body"] = _entity.get("body", "") + '\n\nThe October 9 edition reports Musk planning to route Grok tasks to Claude Opus 5.5 when that model is best suited. This is an attributed plan; it does not establish deployment.'
+        _entity['relatedTo'] = ['https://nicholsn.github.io/innermost-loop-kb/systems/claude-opus-5-5']
+        _entity.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-october-9-2026', 'title': 'Welcome to October 9, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-10-09'})

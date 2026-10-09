@@ -218,3 +218,9 @@ leaderboards.
          "supersedes": [B + "developments/2026-03-17-sec-would-scrap-quarterly-earnings"]},
     ],
 }
+
+# Later reporting is maintained in the original entity owner.
+for _entity in SPEC.get('facilities', []):
+    if _entity["id"] == 'terafab':
+        _entity["body"] = _entity.get("body", "") + '\n\nThe October 5 edition reported TSMC exploring help operating these fabs. The October 9 edition reports Musk ruling out a TSMC operating role. This is a change in reported plans, not a change in independently verified operations.'
+        _entity.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-october-9-2026', 'title': 'Welcome to October 9, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-10-09'})
