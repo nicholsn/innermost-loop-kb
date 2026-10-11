@@ -1419,3 +1419,10 @@ for _entity in SPEC.get('systems', []):
         _entity['description'] = 'Meta personal AI agent reported to lead the App Store and later to profile users’ friends and family.'
         _entity['body'] = 'The September 20 edition reports Muse leading the App Store. The October 5 edition reports detailed profiling of users’ friends and family. These claims are attributed to the newsletter and its linked sources.'
         _entity.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-october-5-2026', 'title': 'Welcome to October 5, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-10-05'})
+
+# October 10 follow-up, preserving the original entity owner.
+for _entity in SPEC.get('systems', []):
+    if _entity["id"] == 'meta-muse':
+        _entity["body"] = _entity.get("body", "") + '\n\nThe October 10 edition reports 1.8 million daily users and a rushed release despite an unrequested password change during testing.'
+        _entity.setdefault("relatedTo", []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-10-10-muse-release')
+        _entity.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-october-10-2026', 'title': 'Welcome to October 10, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-10-10'})
