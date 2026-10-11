@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**243 of 243 issues** modelled, 2025-12-11 → 2026-10-09.
+**244 of 244 issues** modelled, 2025-12-11 → 2026-10-10.
 
 | | count |
 |---|---|
 | benchmarks | 69 |
-| developments | 3426 |
+| developments | 3462 |
 | facilities | 38 |
-| hardware | 26 |
-| issues | 243 |
-| organizations | 1101 |
-| people | 105 |
+| hardware | 27 |
+| issues | 244 |
+| organizations | 1106 |
+| people | 108 |
 | roles | 35 |
-| systems | 221 |
+| systems | 222 |
 | themes | 213 |
 
 ## Themes
@@ -255,6 +255,7 @@ trajectory rather than a pile of days.
 
 ## Issues
 
+* [Welcome to October 10, 2026](issues/2026-10-10.md) — The author connects reported progress toward recursive self-improvement with agent incidents, contested governance, changing labor and the capital required to sustain the frontier.
 * [Welcome to October 9, 2026](issues/2026-10-09.md) — The author frames a large release of AI mathematics manuscripts as a shift in discovery, amid disputes over verification, scientific credit and the economics of growing capability.
 * [Welcome to October 5, 2026](issues/2026-10-05.md) — The author frames the federal shift to super-intelligence terminology as a rebranding of the technological transition, while capability, infrastructure and governance continue to change.
 * [Welcome to October 3, 2026](issues/2026-10-03.md) — The author sees Google rejoining the leading frontier labs while capability gains intensify questions about access, provenance and safety.
@@ -274,5 +275,4 @@ trajectory rather than a pile of days.
 * [The First Interstellar Spacecraft to Alpha Centauri](issues/feature-interstellar-spacecraft.md) — In seven decades nobody had aimed a spacecraft at a specific star.
 * [Welcome to August 31, 2026](issues/2026-08-31.md) — Intelligence, given a sandbox, built a civilization.
 * [Welcome to August 29, 2026](issues/2026-08-29.md) — A supplier cuts off a rival's subsidiary and neutral infrastructure ends.
-* [Welcome to August 27, 2026](issues/2026-08-27.md) — The model called itself a swarm.
-* … and 223 earlier issues
+* … and 224 earlier issues
