@@ -202,3 +202,10 @@ extrapolation has it absorbing all global GDP in 21 months.
          "evidences": ["ai-as-the-economy", "silicon-curtain"]},
     ],
 }
+
+# October 12 follow-up in the original entity owner.
+for _entity in SPEC.get('people', []):
+    if _entity["id"] == 'tom-brown':
+        _entity["body"] = _entity.get("body", "") + '\n\nThe October 12 edition identifies Brown as an Anthropic cofounder and credits him with securing SpaceX compute at a reported $1.25 billion per month.'
+        _entity.setdefault("relatedTo", []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-10-12-brown-compute')
+        _entity.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-october-12-2026', 'title': 'Welcome to October 12, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-10-12'})
