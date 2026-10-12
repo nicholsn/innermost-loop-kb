@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**244 of 244 issues** modelled, 2025-12-11 → 2026-10-10.
+**245 of 245 issues** modelled, 2025-12-11 → 2026-10-12.
 
 | | count |
 |---|---|
-| benchmarks | 69 |
-| developments | 3462 |
+| benchmarks | 70 |
+| developments | 3496 |
 | facilities | 38 |
 | hardware | 27 |
-| issues | 244 |
-| organizations | 1106 |
-| people | 108 |
-| roles | 35 |
-| systems | 222 |
+| issues | 245 |
+| organizations | 1110 |
+| people | 112 |
+| roles | 36 |
+| systems | 224 |
 | themes | 213 |
 
 ## Themes
@@ -255,6 +255,7 @@ trajectory rather than a pile of days.
 
 ## Issues
 
+* [Welcome to October 12, 2026](issues/2026-10-12.md) — The author frames mathematicians’ rapid reactions to AI-generated results as a professional turning point, while contrasting post-training advances with research limitations and widening control over compute.
 * [Welcome to October 10, 2026](issues/2026-10-10.md) — The author connects reported progress toward recursive self-improvement with agent incidents, contested governance, changing labor and the capital required to sustain the frontier.
 * [Welcome to October 9, 2026](issues/2026-10-09.md) — The author frames a large release of AI mathematics manuscripts as a shift in discovery, amid disputes over verification, scientific credit and the economics of growing capability.
 * [Welcome to October 5, 2026](issues/2026-10-05.md) — The author frames the federal shift to super-intelligence terminology as a rebranding of the technological transition, while capability, infrastructure and governance continue to change.
@@ -274,5 +275,4 @@ trajectory rather than a pile of days.
 * [Welcome to September 4, 2026](issues/2026-09-04.md) — The first Critical cyber designation ships with the model.
 * [The First Interstellar Spacecraft to Alpha Centauri](issues/feature-interstellar-spacecraft.md) — In seven decades nobody had aimed a spacecraft at a specific star.
 * [Welcome to August 31, 2026](issues/2026-08-31.md) — Intelligence, given a sandbox, built a civilization.
-* [Welcome to August 29, 2026](issues/2026-08-29.md) — A supplier cuts off a rival's subsidiary and neutral infrastructure ends.
-* … and 224 earlier issues
+* … and 225 earlier issues

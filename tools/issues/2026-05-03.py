@@ -160,3 +160,10 @@ And an AI-generated proof produced downstream mathematics for the first time.
          "supersedes": [B + "developments/2026-03-02-four-day-weeks-no-longer-sufficient"]},
     ],
 }
+
+# October 12 follow-up in the original entity owner.
+for _entity in SPEC.get('organizations', []):
+    if _entity["id"] == 'reflection-ai':
+        _entity["body"] = _entity.get("body", "") + '\n\nThe October 12 edition reports Nvidia acquisition talks at a described $25 billion valuation. This is a negotiation report, not a completed purchase.'
+        _entity.setdefault("relatedTo", []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-10-12-reflection-talks')
+        _entity.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-october-12-2026', 'title': 'Welcome to October 12, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-10-12'})
