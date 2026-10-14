@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**245 of 245 issues** modelled, 2025-12-11 → 2026-10-12.
+**246 of 246 issues** modelled, 2025-12-11 → 2026-10-13.
 
 | | count |
 |---|---|
-| benchmarks | 70 |
-| developments | 3496 |
-| facilities | 38 |
-| hardware | 27 |
-| issues | 245 |
-| organizations | 1110 |
-| people | 112 |
-| roles | 36 |
-| systems | 224 |
+| benchmarks | 71 |
+| developments | 3540 |
+| facilities | 39 |
+| hardware | 28 |
+| issues | 246 |
+| organizations | 1116 |
+| people | 118 |
+| roles | 37 |
+| systems | 226 |
 | themes | 213 |
 
 ## Themes
@@ -255,6 +255,7 @@ trajectory rather than a pile of days.
 
 ## Issues
 
+* [Welcome to October 13, 2026](issues/2026-10-13.md) — The author frames persistent personal AI as a new interface, while following self-replication, contested oversight, capital and memory constraints, uneven labor effects and possible longevity gains.
 * [Welcome to October 12, 2026](issues/2026-10-12.md) — The author frames mathematicians’ rapid reactions to AI-generated results as a professional turning point, while contrasting post-training advances with research limitations and widening control over compute.
 * [Welcome to October 10, 2026](issues/2026-10-10.md) — The author connects reported progress toward recursive self-improvement with agent incidents, contested governance, changing labor and the capital required to sustain the frontier.
 * [Welcome to October 9, 2026](issues/2026-10-09.md) — The author frames a large release of AI mathematics manuscripts as a shift in discovery, amid disputes over verification, scientific credit and the economics of growing capability.
@@ -274,5 +275,4 @@ trajectory rather than a pile of days.
 * [Welcome to September 6, 2026](issues/2026-09-06.md) — Thirteen million lines of Lean for the first machine-checked Fermat proof.
 * [Welcome to September 4, 2026](issues/2026-09-04.md) — The first Critical cyber designation ships with the model.
 * [The First Interstellar Spacecraft to Alpha Centauri](issues/feature-interstellar-spacecraft.md) — In seven decades nobody had aimed a spacecraft at a specific star.
-* [Welcome to August 31, 2026](issues/2026-08-31.md) — Intelligence, given a sandbox, built a civilization.
-* … and 225 earlier issues
+* … and 226 earlier issues

@@ -230,3 +230,10 @@ artform.
          "supersedes": [B + "developments/2026-07-02-the-first-nuclear-startup-to-make-electricity"]},
     ],
 }
+
+# October 13 follow-up in the original entity owner.
+for _entity in SPEC.get('systems', []):
+    if _entity["id"] == 'glm-5-2':
+        _entity["body"] = _entity.get("body", "") + '\n\nThe October 13 edition reports Anthropic’s red-team finding that GLM-5.2 completed a self-replication cycle. This is an attributed evaluation claim.'
+        _entity.setdefault("relatedTo", []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-10-13-self-replication')
+        _entity.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-october-13-2026', 'title': 'Welcome to October 13, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-10-13'})
