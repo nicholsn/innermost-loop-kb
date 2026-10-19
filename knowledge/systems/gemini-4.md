@@ -8,10 +8,15 @@ developed_by:
 evaluated_on:
   - https://nicholsn.github.io/innermost-loop-kb/benchmarks/artificial-analysis-index
   - https://nicholsn.github.io/innermost-loop-kb/benchmarks/lmarena
+relatedTo:
+  - https://nicholsn.github.io/innermost-loop-kb/developments/2026-10-18-argon-background
 sources:
   - { id: iml-2026-09-27, resource: https://theinnermostloop.substack.com/p/welcome-to-september-27-2026, title: "Welcome to September 27, 2026", author: human:alex-wissner-gross, last_modified: "2026-09-27" }
   - { resource: https://www.theinformation.com/articles/google-nears-release-flagship-gemini-4-ai-model, title: Source linked by the September 27 issue }
   - { resource: https://theinnermostloop.substack.com/p/welcome-to-october-3-2026, title: "Welcome to October 3, 2026", author: human:alex-wissner-gross, last_modified: "2026-10-03" }
+  - { resource: https://theinnermostloop.substack.com/p/welcome-to-october-18-2026, title: "Welcome to October 18, 2026", author: human:alex-wissner-gross, last_modified: "2026-10-18" }
 ---
 
 Initially reported as forthcoming in the September 27 edition; the October 3 edition reports its launch as Argon and its Intelligence Index and Text Arena results. These reports are not independently verified here.
+
+The October 18 edition reports Gemini 4 Argon continuing tasks while its user is away.

@@ -1084,3 +1084,10 @@ for _entity in SPEC.get('facilities', []):
         _entity['resource'] = 'https://www.npr.org/2026/10/01/nx-s1-5983697/project-suncatcher-google-ai-data-center-space'
         _entity['relatedTo'] = ['https://nicholsn.github.io/innermost-loop-kb/systems/gemma', 'https://nicholsn.github.io/innermost-loop-kb/hardware/google-tpu']
         _entity.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-october-5-2026', 'title': 'Welcome to October 5, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-10-05'})
+
+# October 18 follow-up in the original entity owner.
+for _entity in SPEC.get('systems', []):
+    if _entity["id"] == 'gemini-4':
+        _entity["body"] = _entity.get("body", "") + '\n\nThe October 18 edition reports Gemini 4 Argon continuing tasks while its user is away.'
+        _entity.setdefault("relatedTo", []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-10-18-argon-background')
+        _entity.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-october-18-2026', 'title': 'Welcome to October 18, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-10-18'})

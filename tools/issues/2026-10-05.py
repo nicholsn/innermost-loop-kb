@@ -1079,3 +1079,10 @@ SPEC = {'issue': {'date': '2026-10-05',
             'roleName': 'Chair',
             'holder': ['https://nicholsn.github.io/innermost-loop-kb/people/avi-loeb'],
             'memberOf': ['https://nicholsn.github.io/innermost-loop-kb/organizations/uap-science-advisory-council']}]}
+
+# October 18 follow-up in the original entity owner.
+for _entity in SPEC.get('systems', []):
+    if _entity["id"] == 'muse-spark':
+        _entity["body"] = _entity.get("body", "") + '\n\nThe October 18 edition separately introduces Muse Spark Open, an 816-billion-parameter open release for local execution.'
+        _entity.setdefault("relatedTo", []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-10-18-spark-open')
+        _entity.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-october-18-2026', 'title': 'Welcome to October 18, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-10-18'})

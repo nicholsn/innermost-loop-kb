@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**246 of 246 issues** modelled, 2025-12-11 → 2026-10-13.
+**247 of 247 issues** modelled, 2025-12-11 → 2026-10-18.
 
 | | count |
 |---|---|
-| benchmarks | 71 |
-| developments | 3540 |
+| benchmarks | 73 |
+| developments | 3603 |
 | facilities | 39 |
 | hardware | 28 |
-| issues | 246 |
+| issues | 247 |
 | organizations | 1116 |
-| people | 118 |
-| roles | 37 |
-| systems | 226 |
+| people | 121 |
+| roles | 38 |
+| systems | 230 |
 | themes | 213 |
 
 ## Themes
@@ -255,6 +255,7 @@ trajectory rather than a pile of days.
 
 ## Issues
 
+* [Welcome to October 18, 2026](issues/2026-10-18.md) — The author uses Tesla’s airborne Roadster demonstration to frame wider leaps in recursive AI, local models, automated work, compute investment and physical technology.
 * [Welcome to October 13, 2026](issues/2026-10-13.md) — The author frames persistent personal AI as a new interface, while following self-replication, contested oversight, capital and memory constraints, uneven labor effects and possible longevity gains.
 * [Welcome to October 12, 2026](issues/2026-10-12.md) — The author frames mathematicians’ rapid reactions to AI-generated results as a professional turning point, while contrasting post-training advances with research limitations and widening control over compute.
 * [Welcome to October 10, 2026](issues/2026-10-10.md) — The author connects reported progress toward recursive self-improvement with agent incidents, contested governance, changing labor and the capital required to sustain the frontier.
@@ -274,5 +275,4 @@ trajectory rather than a pile of days.
 * [Welcome to September 7, 2026](issues/2026-09-07.md) — The automated research intern is real and outworking the staff.
 * [Welcome to September 6, 2026](issues/2026-09-06.md) — Thirteen million lines of Lean for the first machine-checked Fermat proof.
 * [Welcome to September 4, 2026](issues/2026-09-04.md) — The first Critical cyber designation ships with the model.
-* [The First Interstellar Spacecraft to Alpha Centauri](issues/feature-interstellar-spacecraft.md) — In seven decades nobody had aimed a spacecraft at a specific star.
-* … and 226 earlier issues
+* … and 227 earlier issues
