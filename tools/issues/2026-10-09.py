@@ -1490,3 +1490,10 @@ SPEC = {'issue': {'date': '2026-10-09',
             'roleName': 'NASA chief',
             'holder': ['https://nicholsn.github.io/innermost-loop-kb/people/jared-isaacman'],
             'memberOf': ['https://nicholsn.github.io/innermost-loop-kb/organizations/nasa']}]}
+
+# October 18 follow-up in the original entity owner.
+for _entity in SPEC.get('systems', []):
+    if _entity["id"] == 'beam':
+        _entity["body"] = _entity.get("body", "") + '\n\nThe October 18 edition reports Beam’s availability as a 501-billion-parameter open coding model.'
+        _entity.setdefault("relatedTo", []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-10-18-beam-open')
+        _entity.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-october-18-2026', 'title': 'Welcome to October 18, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-10-18'})
