@@ -1,0 +1,22 @@
+---
+type: Development
+title: Monkey perception study suggests rapid conscious cycles
+claim: The newsletter reports monkey brains switching fifteen times per second between visible and suppressed images, which the author interprets as suggesting a possible frame rate for consciousness.
+domain: science
+reported_in:
+  - https://nicholsn.github.io/innermost-loop-kb/issues/2026-10-21
+score: 15 times a second
+author:
+  - { type: Person, id: https://nicholsn.github.io/innermost-loop-kb/people/alex-wissner-gross, name: Dr. Alex Wissner-Gross }
+tags:
+  - "development"
+  - "2026-10-21"
+  - "science"
+  - "research-claim"
+generated: { by: process:iml-emit, at: "2026-10-21T00:00:00Z" }
+sources:
+  - { id: iml-2026-10-21, resource: https://theinnermostloop.substack.com/p/welcome-to-october-21-2026, title: "Welcome to October 21, 2026", author: human:alex-wissner-gross, last_modified: "2026-10-21" }
+  - { resource: https://www.biorxiv.org/content/10.64898/2026.10.15.759299v1, title: Source linked by the October 21 issue }
+---
+
+Original summary of Dr. Alex Wissner-Gross’s October 21, 2026 reporting. Linked-source claims have not been independently verified.
