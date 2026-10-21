@@ -217,3 +217,10 @@ mid-2027.
          "supersedes": [B + "developments/2026-08-27-juniors-recalled-because-the-agents-are-remote"]},
     ],
 }
+
+# October 21 follow-up in the original entity owner.
+for _entity in SPEC.get('systems', []):
+    if _entity["id"] == 'gpt-6-astra':
+        _entity["body"] = _entity.get("body", "") + '\n\nThe October 21 edition reports database-engine generation in twenty languages and COBOL migration results improving from 5.4% to 97.9%.'
+        _entity.setdefault("relatedTo", []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-10-21-astra-legacy-code')
+        _entity.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-october-21-2026', 'title': 'Welcome to October 21, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-10-21'})

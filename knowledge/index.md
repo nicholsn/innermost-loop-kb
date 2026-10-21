@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**247 of 247 issues** modelled, 2025-12-11 → 2026-10-18.
+**248 of 248 issues** modelled, 2025-12-11 → 2026-10-21.
 
 | | count |
 |---|---|
 | benchmarks | 73 |
-| developments | 3603 |
+| developments | 3650 |
 | facilities | 39 |
-| hardware | 28 |
-| issues | 247 |
-| organizations | 1116 |
-| people | 121 |
+| hardware | 29 |
+| issues | 248 |
+| organizations | 1119 |
+| people | 122 |
 | roles | 38 |
-| systems | 230 |
+| systems | 232 |
 | themes | 213 |
 
 ## Themes
@@ -255,6 +255,7 @@ trajectory rather than a pile of days.
 
 ## Issues
 
+* [Welcome to October 21, 2026](issues/2026-10-21.md) — The author frames accelerating machine intelligence through corporate earnings, ownership, cheaper cognition, automated discovery and the costs of infrastructure.
 * [Welcome to October 18, 2026](issues/2026-10-18.md) — The author uses Tesla’s airborne Roadster demonstration to frame wider leaps in recursive AI, local models, automated work, compute investment and physical technology.
 * [Welcome to October 13, 2026](issues/2026-10-13.md) — The author frames persistent personal AI as a new interface, while following self-replication, contested oversight, capital and memory constraints, uneven labor effects and possible longevity gains.
 * [Welcome to October 12, 2026](issues/2026-10-12.md) — The author frames mathematicians’ rapid reactions to AI-generated results as a professional turning point, while contrasting post-training advances with research limitations and widening control over compute.
@@ -274,5 +275,4 @@ trajectory rather than a pile of days.
 * [Welcome to September 12, 2026](issues/2026-09-12.md) — A Millennium Prize problem falls in 88 hours, and the field fractures.
 * [Welcome to September 7, 2026](issues/2026-09-07.md) — The automated research intern is real and outworking the staff.
 * [Welcome to September 6, 2026](issues/2026-09-06.md) — Thirteen million lines of Lean for the first machine-checked Fermat proof.
-* [Welcome to September 4, 2026](issues/2026-09-04.md) — The first Critical cyber designation ships with the model.
-* … and 227 earlier issues
+* … and 228 earlier issues

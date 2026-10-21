@@ -1,0 +1,25 @@
+---
+type: Development
+title: Reports preview intent-aware and cheaper models
+claim: The newsletter relays a report that Anthropic’s next model better infers user intent, with Google’s Gemini 4 Carbon and a cheaper OpenAI Terra also forthcoming.
+domain: models
+reported_in:
+  - https://nicholsn.github.io/innermost-loop-kb/issues/2026-10-21
+actor:
+  - https://nicholsn.github.io/innermost-loop-kb/organizations/anthropic
+  - https://nicholsn.github.io/innermost-loop-kb/organizations/google
+  - https://nicholsn.github.io/innermost-loop-kb/organizations/openai
+author:
+  - { type: Person, id: https://nicholsn.github.io/innermost-loop-kb/people/alex-wissner-gross, name: Dr. Alex Wissner-Gross }
+tags:
+  - "development"
+  - "2026-10-21"
+  - "models"
+  - "reported-plan"
+generated: { by: process:iml-emit, at: "2026-10-21T00:00:00Z" }
+sources:
+  - { id: iml-2026-10-21, resource: https://theinnermostloop.substack.com/p/welcome-to-october-21-2026, title: "Welcome to October 21, 2026", author: human:alex-wissner-gross, last_modified: "2026-10-21" }
+  - { resource: https://www.theinformation.com/newsletters/ai-agenda/anthropic-readies-model-reads-users-intentions-better, title: Source linked by the October 21 issue }
+---
+
+Original summary of Dr. Alex Wissner-Gross’s October 21, 2026 reporting. Linked-source claims have not been independently verified.
