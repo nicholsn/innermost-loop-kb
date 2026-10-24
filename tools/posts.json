@@ -1,8 +1,8 @@
 {
   "source": "https://theinnermostloop.substack.com/sitemap.xml",
-  "total": 248,
+  "total": 249,
   "dailies": 216,
-  "features": 32,
+  "features": 33,
   "posts": [
     {
       "date": "2025-12-11",
@@ -1491,6 +1491,12 @@
       "slug": "welcome-to-october-21-2026",
       "url": "https://theinnermostloop.substack.com/p/welcome-to-october-21-2026",
       "kind": "daily"
+    },
+    {
+      "date": "2026-10-24",
+      "slug": "chain-theory",
+      "url": "https://theinnermostloop.substack.com/p/chain-theory",
+      "kind": "feature"
     }
   ]
 }

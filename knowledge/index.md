@@ -22,15 +22,15 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**248 of 248 issues** modelled, 2025-12-11 → 2026-10-21.
+**249 of 249 issues** modelled, 2025-12-11 → 2026-10-24.
 
 | | count |
 |---|---|
 | benchmarks | 73 |
-| developments | 3650 |
+| developments | 3664 |
 | facilities | 39 |
 | hardware | 29 |
-| issues | 248 |
+| issues | 249 |
 | organizations | 1119 |
 | people | 122 |
 | roles | 38 |
@@ -255,6 +255,7 @@ trajectory rather than a pile of days.
 
 ## Issues
 
+* [Chain Theory](issues/feature-chain-theory.md) — Wissner-Gross proposes rebuilding fundamental physics from finite quantum information and presents a candidate fine-structure constant as an initial test.
 * [Welcome to October 21, 2026](issues/2026-10-21.md) — The author frames accelerating machine intelligence through corporate earnings, ownership, cheaper cognition, automated discovery and the costs of infrastructure.
 * [Welcome to October 18, 2026](issues/2026-10-18.md) — The author uses Tesla’s airborne Roadster demonstration to frame wider leaps in recursive AI, local models, automated work, compute investment and physical technology.
 * [Welcome to October 13, 2026](issues/2026-10-13.md) — The author frames persistent personal AI as a new interface, while following self-replication, contested oversight, capital and memory constraints, uneven labor effects and possible longevity gains.
@@ -274,5 +275,4 @@ trajectory rather than a pile of days.
 * [Welcome to September 13, 2026](issues/2026-09-13.md) — The first formal request to slow down comes from the people building it.
 * [Welcome to September 12, 2026](issues/2026-09-12.md) — A Millennium Prize problem falls in 88 hours, and the field fractures.
 * [Welcome to September 7, 2026](issues/2026-09-07.md) — The automated research intern is real and outworking the staff.
-* [Welcome to September 6, 2026](issues/2026-09-06.md) — Thirteen million lines of Lean for the first machine-checked Fermat proof.
-* … and 228 earlier issues
+* … and 229 earlier issues
