@@ -1091,3 +1091,18 @@ for _entity in SPEC.get('systems', []):
         _entity["body"] = _entity.get("body", "") + '\n\nThe October 18 edition reports Gemini 4 Argon continuing tasks while its user is away.'
         _entity.setdefault("relatedTo", []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-10-18-argon-background')
         _entity.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-october-18-2026', 'title': 'Welcome to October 18, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-10-18'})
+
+# October 31 reports a TPU-generated answer from the orbital prototype.
+for _facility in SPEC["facilities"]:
+    if _facility["id"] == "suncatcher-satellite":
+        _facility["body"] += (
+            " The October 31 edition adds a report of the first TPU-generated answer "
+            "from orbit, linked to Google’s Project Suncatcher announcement; "
+            "this remains an attributed claim."
+        )
+        _facility["sources"].append({
+            "resource": "https://theinnermostloop.substack.com/p/welcome-to-halloween-2026",
+            "title": "Welcome to Halloween 2026",
+            "author": "human:alex-wissner-gross",
+            "last_modified": "2026-10-31",
+        })

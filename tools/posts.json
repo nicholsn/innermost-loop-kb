@@ -1,7 +1,7 @@
 {
   "source": "https://theinnermostloop.substack.com/sitemap.xml",
-  "total": 249,
-  "dailies": 216,
+  "total": 250,
+  "dailies": 217,
   "features": 33,
   "posts": [
     {
@@ -1497,6 +1497,12 @@
       "slug": "chain-theory",
       "url": "https://theinnermostloop.substack.com/p/chain-theory",
       "kind": "feature"
+    },
+    {
+      "date": "2026-10-31",
+      "slug": "welcome-to-halloween-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-halloween-2026",
+      "kind": "daily"
     }
   ]
 }

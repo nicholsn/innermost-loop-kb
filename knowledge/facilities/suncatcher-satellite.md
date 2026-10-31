@@ -14,6 +14,7 @@ sources:
   - { id: iml-2026-09-27, resource: https://theinnermostloop.substack.com/p/welcome-to-september-27-2026, title: "Welcome to September 27, 2026", author: human:alex-wissner-gross, last_modified: "2026-09-27" }
   - { resource: https://www.nytimes.com/2026/09/24/technology/google-suncatcher-ai-data-center-space.html, title: Source linked by the September 27 issue }
   - { resource: https://theinnermostloop.substack.com/p/welcome-to-october-5-2026, title: "Welcome to October 5, 2026", author: human:alex-wissner-gross, last_modified: "2026-10-05" }
+  - { resource: https://theinnermostloop.substack.com/p/welcome-to-halloween-2026, title: Welcome to Halloween 2026, author: human:alex-wissner-gross, last_modified: "2026-10-31" }
 ---
 
-The September 27 edition described a planned October 1 launch for orbital Gemini serving. The October 5 edition reports a prototype running Gemma on four TPUs in orbit and forecasts five years before it beats terrestrial prices. These are attributed reports, not independent verification.
+The September 27 edition described a planned October 1 launch for orbital Gemini serving. The October 5 edition reports a prototype running Gemma on four TPUs in orbit and forecasts five years before it beats terrestrial prices. These are attributed reports, not independent verification. The October 31 edition adds a report of the first TPU-generated answer from orbit, linked to Google’s Project Suncatcher announcement; this remains an attributed claim.
