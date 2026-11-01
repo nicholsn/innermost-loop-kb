@@ -226,3 +226,21 @@ for _system in SPEC["systems"]:
     if _system["id"] == 'gpt-5-6-sol':
         _system.setdefault("evaluated_on", []).append('https://nicholsn.github.io/innermost-loop-kb/benchmarks/healthbench-professional')
         _system.setdefault("sources", []).append({"resource": "https://theinnermostloop.substack.com/p/welcome-to-september-27-2026", "title": "Welcome to September 27, 2026", "author": "human:alex-wissner-gross", "last_modified": "2026-09-27"})
+
+# November 1 reports a completed Factorio run with weak production planning.
+for _system in SPEC["systems"]:
+    if _system["id"] == "gpt-5-6-sol":
+        _system.setdefault("evaluated_on", []).append(
+            "https://nicholsn.github.io/innermost-loop-kb/benchmarks/factorio-peaceful-run"
+        )
+        _system["body"] += (
+            " The November 1 issue reports a peaceful Factorio run completed in 13.5 game hours, "
+            "but with supplies carried between production lines the model failed to connect. "
+            "This is attributed reporting, not an independently replicated result."
+        )
+        _system.setdefault("sources", []).append({
+            "resource": "https://theinnermostloop.substack.com/p/welcome-to-november-1-2026",
+            "title": "Welcome to November 1, 2026",
+            "author": "human:alex-wissner-gross",
+            "last_modified": "2026-11-01",
+        })
