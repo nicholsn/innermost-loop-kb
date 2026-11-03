@@ -224,3 +224,9 @@ for _entity in SPEC.get('systems', []):
         _entity["body"] = _entity.get("body", "") + '\n\nThe October 21 edition reports database-engine generation in twenty languages and COBOL migration results improving from 5.4% to 97.9%.'
         _entity.setdefault("relatedTo", []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-10-21-astra-legacy-code')
         _entity.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-october-21-2026', 'title': 'Welcome to October 21, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-10-21'})
+
+# November 2 reported benchmark coverage; scores remain dated developments.
+for _system in SPEC["systems"]:
+    if _system["id"] == 'gpt-6-astra':
+        _system.setdefault("evaluated_on", []).extend(['https://nicholsn.github.io/innermost-loop-kb/benchmarks/gdpx', 'https://nicholsn.github.io/innermost-loop-kb/benchmarks/lifeval'])
+        _system.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-2-2026', 'title': 'Welcome to November 2, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-02'})

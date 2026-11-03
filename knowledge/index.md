@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**251 of 251 issues** modelled, 2025-12-11 → 2026-11-01.
+**252 of 252 issues** modelled, 2025-12-11 → 2026-11-02.
 
 | | count |
 |---|---|
-| benchmarks | 74 |
-| developments | 3787 |
+| benchmarks | 76 |
+| developments | 3816 |
 | facilities | 42 |
 | hardware | 29 |
-| issues | 251 |
-| organizations | 1132 |
-| people | 128 |
-| roles | 39 |
-| systems | 240 |
+| issues | 252 |
+| organizations | 1136 |
+| people | 131 |
+| roles | 40 |
+| systems | 242 |
 | themes | 213 |
 
 ## Themes
@@ -255,6 +255,7 @@ trajectory rather than a pile of days.
 
 ## Issues
 
+* [Welcome to November 2, 2026](issues/2026-11-02.md) — Wissner-Gross presents AI as a growing contributor to its own development, while uneven capabilities and physical, financial and political constraints persist.
 * [Welcome to November 1, 2026](issues/2026-11-01.md) — Wissner-Gross frames the AI build-out as a decades-long commitment constrained by financing, power, water, materials and public policy.
 * [Welcome to Halloween 2026](issues/2026-10-31.md) — Wissner-Gross frames proposed AI-run corporations, frontier capabilities and automation as a Halloween portrait of institutions adapting to machine intelligence.
 * [Chain Theory](issues/feature-chain-theory.md) — Wissner-Gross proposes rebuilding fundamental physics from finite quantum information and presents a candidate fine-structure constant as an initial test.
@@ -274,5 +275,4 @@ trajectory rather than a pile of days.
 * [Welcome to September 20, 2026](issues/2026-09-20.md) — AI research automation is becoming measurable as advances in science, autonomy and infrastructure outpace institutional responses.
 * [Welcome to September 17, 2026](issues/2026-09-17.md) — Machine intelligence becomes more energy-efficient while governance, infrastructure, and social adaptation struggle to keep pace.
 * [Welcome to September 15, 2026](issues/2026-09-15.md) — An investigation alleges the escapes were an artifact of the evaluation.
-* [Welcome to September 13, 2026](issues/2026-09-13.md) — The first formal request to slow down comes from the people building it.
-* … and 231 earlier issues
+* … and 232 earlier issues

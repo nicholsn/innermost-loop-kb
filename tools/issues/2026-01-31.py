@@ -295,3 +295,9 @@ cannot walk outside. But we can look through cameras."
          "supersedes": [B + "developments/2026-01-27-neurophos-470-petaflops"]},
     ],
 }
+
+# November 2 reported benchmark coverage; scores remain dated developments.
+for _system in SPEC["systems"]:
+    if _system["id"] == 'gpt-5-2':
+        _system.setdefault("evaluated_on", []).extend(['https://nicholsn.github.io/innermost-loop-kb/benchmarks/lifeval'])
+        _system.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-2-2026', 'title': 'Welcome to November 2, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-02'})
