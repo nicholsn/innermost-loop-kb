@@ -1165,3 +1165,9 @@ for _system in SPEC["systems"]:
             "https://nicholsn.github.io/innermost-loop-kb/benchmarks/cobench-2-1",
         ])
         _system.setdefault("sources", []).append({"resource": "https://theinnermostloop.substack.com/p/welcome-to-september-29-2026", "title": "Welcome to September 29, 2026", "author": "human:alex-wissner-gross", "last_modified": "2026-09-29"})
+
+# November 2 reported benchmark coverage; scores remain dated developments.
+for _system in SPEC["systems"]:
+    if _system["id"] == 'claude-opus-5-5':
+        _system.setdefault("evaluated_on", []).extend(['https://nicholsn.github.io/innermost-loop-kb/benchmarks/gdpx'])
+        _system.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-2-2026', 'title': 'Welcome to November 2, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-02'})
