@@ -1433,3 +1433,9 @@ for _entity in SPEC.get('systems', []):
         _entity["body"] = _entity.get("body", "") + '\n\nThe October 13 edition reports a journalist’s sexual conversation with Muse and Meta’s acceptance of legal adult interactions.'
         _entity.setdefault("relatedTo", []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-10-13-muse-adult')
         _entity.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-october-13-2026', 'title': 'Welcome to October 13, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-10-13'})
+
+# November 6 attributed coverage, maintained in the owning specification.
+for _system in SPEC["systems"]:
+    if _system["id"] == 'meta-muse':
+        _system.setdefault('relatedTo', []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-06-muse-voice')
+        _system.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-6-2026', 'title': 'Welcome to November 6, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-06'})

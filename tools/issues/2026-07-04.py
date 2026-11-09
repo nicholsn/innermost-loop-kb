@@ -237,3 +237,9 @@ for _entity in SPEC.get('systems', []):
         _entity["body"] = _entity.get("body", "") + '\n\nThe October 13 edition reports Anthropic’s red-team finding that GLM-5.2 completed a self-replication cycle. This is an attributed evaluation claim.'
         _entity.setdefault("relatedTo", []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-10-13-self-replication')
         _entity.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-october-13-2026', 'title': 'Welcome to October 13, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-10-13'})
+
+# November 6 attributed coverage, maintained in the owning specification.
+for _system in SPEC["systems"]:
+    if _system["id"] == 'glm-5-2':
+        _system.setdefault('evaluated_on', []).append('https://nicholsn.github.io/innermost-loop-kb/benchmarks/joules-to-gdp')
+        _system.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-6-2026', 'title': 'Welcome to November 6, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-06'})

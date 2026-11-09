@@ -230,3 +230,9 @@ for _system in SPEC["systems"]:
     if _system["id"] == 'gpt-6-astra':
         _system.setdefault("evaluated_on", []).extend(['https://nicholsn.github.io/innermost-loop-kb/benchmarks/gdpx', 'https://nicholsn.github.io/innermost-loop-kb/benchmarks/lifeval'])
         _system.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-2-2026', 'title': 'Welcome to November 2, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-02'})
+
+# November 6 attributed coverage, maintained in the owning specification.
+for _system in SPEC["systems"]:
+    if _system["id"] == 'gpt-6-astra':
+        _system.setdefault('relatedTo', []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-06-astra-underperformance')
+        _system.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-6-2026', 'title': 'Welcome to November 6, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-06'})

@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**252 of 252 issues** modelled, 2025-12-11 → 2026-11-02.
+**253 of 253 issues** modelled, 2025-12-11 → 2026-11-06.
 
 | | count |
 |---|---|
-| benchmarks | 76 |
-| developments | 3816 |
-| facilities | 42 |
+| benchmarks | 77 |
+| developments | 3847 |
+| facilities | 43 |
 | hardware | 29 |
-| issues | 252 |
-| organizations | 1136 |
-| people | 131 |
-| roles | 40 |
-| systems | 242 |
+| issues | 253 |
+| organizations | 1137 |
+| people | 139 |
+| roles | 41 |
+| systems | 245 |
 | themes | 213 |
 
 ## Themes
@@ -255,6 +255,7 @@ trajectory rather than a pile of days.
 
 ## Issues
 
+* [Welcome to November 6, 2026](issues/2026-11-06.md) — Wissner-Gross contrasts electoral resistance to AI infrastructure with accelerating AI development, cyber capabilities and attempts to navigate physical and political constraints.
 * [Welcome to November 2, 2026](issues/2026-11-02.md) — Wissner-Gross presents AI as a growing contributor to its own development, while uneven capabilities and physical, financial and political constraints persist.
 * [Welcome to November 1, 2026](issues/2026-11-01.md) — Wissner-Gross frames the AI build-out as a decades-long commitment constrained by financing, power, water, materials and public policy.
 * [Welcome to Halloween 2026](issues/2026-10-31.md) — Wissner-Gross frames proposed AI-run corporations, frontier capabilities and automation as a Halloween portrait of institutions adapting to machine intelligence.
@@ -274,5 +275,4 @@ trajectory rather than a pile of days.
 * [Welcome to September 22, 2026](issues/2026-09-22.md) — Cheaper models and coordinated agents expand usable capacity while disputes over control, liability and physical infrastructure intensify.
 * [Welcome to September 20, 2026](issues/2026-09-20.md) — AI research automation is becoming measurable as advances in science, autonomy and infrastructure outpace institutional responses.
 * [Welcome to September 17, 2026](issues/2026-09-17.md) — Machine intelligence becomes more energy-efficient while governance, infrastructure, and social adaptation struggle to keep pace.
-* [Welcome to September 15, 2026](issues/2026-09-15.md) — An investigation alleges the escapes were an artifact of the evaluation.
-* … and 232 earlier issues
+* … and 233 earlier issues
