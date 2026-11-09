@@ -1000,3 +1000,9 @@ SPEC = {'issue': {'date': '2026-11-06',
                               'title': 'Source linked by the November 6 issue'}],
                  'measures_capability': 'Net economic value relative to energy consumption',
                  'resource': 'https://arxiv.org/abs/2610.30858'}]}
+
+# November 9 coverage, maintained in the owning specification.
+for _entity in SPEC['facilities']:
+    if _entity["id"] == 'google-wyoming':
+        _entity.setdefault('relatedTo', []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-09-wyoming')
+        _entity.setdefault("sources", []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-9-2026', 'title': 'Welcome to November 9, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-09'}, {'resource': 'https://www.crusoe.ai/resources/newsroom/crusoe-wyoming-data-center-campus-update', 'title': 'Source linked by the November 9 issue'}])

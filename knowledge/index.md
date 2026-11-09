@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**253 of 253 issues** modelled, 2025-12-11 → 2026-11-06.
+**254 of 254 issues** modelled, 2025-12-11 → 2026-11-09.
 
 | | count |
 |---|---|
-| benchmarks | 77 |
-| developments | 3847 |
-| facilities | 43 |
+| benchmarks | 80 |
+| developments | 3921 |
+| facilities | 45 |
 | hardware | 29 |
-| issues | 253 |
-| organizations | 1137 |
-| people | 139 |
+| issues | 254 |
+| organizations | 1143 |
+| people | 144 |
 | roles | 41 |
-| systems | 245 |
+| systems | 247 |
 | themes | 213 |
 
 ## Themes
@@ -255,6 +255,7 @@ trajectory rather than a pile of days.
 
 ## Issues
 
+* [Welcome to November 9, 2026](issues/2026-11-09.md) — Wissner-Gross frames human vulnerabilities at the center of AI supply chains against accelerating research, political resistance and expanding physical automation.
 * [Welcome to November 6, 2026](issues/2026-11-06.md) — Wissner-Gross contrasts electoral resistance to AI infrastructure with accelerating AI development, cyber capabilities and attempts to navigate physical and political constraints.
 * [Welcome to November 2, 2026](issues/2026-11-02.md) — Wissner-Gross presents AI as a growing contributor to its own development, while uneven capabilities and physical, financial and political constraints persist.
 * [Welcome to November 1, 2026](issues/2026-11-01.md) — Wissner-Gross frames the AI build-out as a decades-long commitment constrained by financing, power, water, materials and public policy.
@@ -274,5 +275,4 @@ trajectory rather than a pile of days.
 * [Welcome to September 24, 2026](issues/2026-09-24.md) — New model releases lower the cost of general intelligence as scientific applications expand and institutions struggle to keep pace.
 * [Welcome to September 22, 2026](issues/2026-09-22.md) — Cheaper models and coordinated agents expand usable capacity while disputes over control, liability and physical infrastructure intensify.
 * [Welcome to September 20, 2026](issues/2026-09-20.md) — AI research automation is becoming measurable as advances in science, autonomy and infrastructure outpace institutional responses.
-* [Welcome to September 17, 2026](issues/2026-09-17.md) — Machine intelligence becomes more energy-efficient while governance, infrastructure, and social adaptation struggle to keep pace.
-* … and 233 earlier issues
+* … and 234 earlier issues

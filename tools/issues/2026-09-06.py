@@ -236,3 +236,15 @@ for _system in SPEC["systems"]:
     if _system["id"] == 'gpt-6-astra':
         _system.setdefault('relatedTo', []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-06-astra-underperformance')
         _system.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-6-2026', 'title': 'Welcome to November 6, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-06'})
+
+# November 9 coverage, maintained in the owning specification.
+for _entity in SPEC['systems']:
+    if _entity["id"] == 'gpt-6-astra':
+        _entity.setdefault('evaluated_on', []).append('https://nicholsn.github.io/innermost-loop-kb/benchmarks/deepfinance')
+        _entity.setdefault("sources", []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-9-2026', 'title': 'Welcome to November 9, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-09'}, {'resource': 'https://www.juliusresearch.ai/deep-finance', 'title': 'Source linked by the November 9 issue'}])
+
+# November 9 coverage, maintained in the owning specification.
+for _entity in SPEC['systems']:
+    if _entity["id"] == 'gpt-6-astra':
+        _entity.setdefault('relatedTo', []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-09-wetlab')
+        _entity.setdefault("sources", []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-9-2026', 'title': 'Welcome to November 9, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-09'}, {'resource': 'https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science/', 'title': 'Source linked by the November 9 issue'}])

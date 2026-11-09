@@ -1171,3 +1171,9 @@ for _system in SPEC["systems"]:
     if _system["id"] == 'claude-opus-5-5':
         _system.setdefault("evaluated_on", []).extend(['https://nicholsn.github.io/innermost-loop-kb/benchmarks/gdpx'])
         _system.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-2-2026', 'title': 'Welcome to November 2, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-02'})
+
+# November 9 coverage, maintained in the owning specification.
+for _entity in SPEC['systems']:
+    if _entity["id"] == 'claude-opus-5-5':
+        _entity.setdefault('relatedTo', []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-09-judge')
+        _entity.setdefault("sources", []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-9-2026', 'title': 'Welcome to November 9, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-09'}, {'resource': 'https://hightouch.com/blog/llm-judges-identity-resolution', 'title': 'Source linked by the November 9 issue'}])
