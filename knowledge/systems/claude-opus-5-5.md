@@ -10,11 +10,15 @@ evaluated_on:
   - https://nicholsn.github.io/innermost-loop-kb/benchmarks/terminal-bench-4
   - https://nicholsn.github.io/innermost-loop-kb/benchmarks/cobench-2-1
   - https://nicholsn.github.io/innermost-loop-kb/benchmarks/gdpx
+relatedTo:
+  - https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-09-judge
 sources:
   - { id: iml-2026-09-24, resource: https://theinnermostloop.substack.com/p/welcome-to-september-24-2026, title: "Welcome to September 24, 2026", author: human:alex-wissner-gross, last_modified: "2026-09-24" }
   - { resource: https://www.anthropic.com/claude-opus-5-5, title: Source linked by the September 24 issue }
   - { resource: https://theinnermostloop.substack.com/p/welcome-to-september-29-2026, title: "Welcome to September 29, 2026", author: human:alex-wissner-gross, last_modified: "2026-09-29" }
   - { resource: https://theinnermostloop.substack.com/p/welcome-to-november-2-2026, title: "Welcome to November 2, 2026", author: human:alex-wissner-gross, last_modified: "2026-11-02" }
+  - { resource: https://theinnermostloop.substack.com/p/welcome-to-november-9-2026, title: "Welcome to November 9, 2026", author: human:alex-wissner-gross, last_modified: "2026-11-09" }
+  - { resource: https://hightouch.com/blog/llm-judges-identity-resolution, title: Source linked by the November 9 issue }
 ---
 
 Anthropic model released with reported improvements in cost, capability and alignment auditing.

@@ -2457,3 +2457,9 @@ SPEC = {'issue': {'date': '2026-10-31',
                            '\n'
                            '* [Linked source '
                            '1](https://www.theinformation.com/articles/can-ai-help-ray-kurzweil-cheat-death)'}]}
+
+# November 9 coverage, maintained in the owning specification.
+for _entity in SPEC['systems']:
+    if _entity["id"] == 'gemini-4-carbon':
+        _entity.setdefault('evaluated_on', []).append('https://nicholsn.github.io/innermost-loop-kb/benchmarks/vials-aa')
+        _entity.setdefault("sources", []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-9-2026', 'title': 'Welcome to November 9, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-09'}, {'resource': 'https://artificialanalysis.ai/articles/vials-aa', 'title': 'Source linked by the November 9 issue'}])
