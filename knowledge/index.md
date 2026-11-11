@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**254 of 254 issues** modelled, 2025-12-11 → 2026-11-09.
+**255 of 255 issues** modelled, 2025-12-11 → 2026-11-10.
 
 | | count |
 |---|---|
-| benchmarks | 80 |
-| developments | 3921 |
-| facilities | 45 |
-| hardware | 29 |
-| issues | 254 |
-| organizations | 1143 |
-| people | 144 |
+| benchmarks | 81 |
+| developments | 3959 |
+| facilities | 48 |
+| hardware | 32 |
+| issues | 255 |
+| organizations | 1144 |
+| people | 145 |
 | roles | 41 |
-| systems | 247 |
+| systems | 251 |
 | themes | 213 |
 
 ## Themes
@@ -255,6 +255,7 @@ trajectory rather than a pile of days.
 
 ## Issues
 
+* [Welcome to November 10, 2026](issues/2026-11-10.md) — Wissner-Gross contrasts a newly public wave of AI capabilities with investment ambitions, security scrutiny and resistance over infrastructure and social terms.
 * [Welcome to November 9, 2026](issues/2026-11-09.md) — Wissner-Gross frames human vulnerabilities at the center of AI supply chains against accelerating research, political resistance and expanding physical automation.
 * [Welcome to November 6, 2026](issues/2026-11-06.md) — Wissner-Gross contrasts electoral resistance to AI infrastructure with accelerating AI development, cyber capabilities and attempts to navigate physical and political constraints.
 * [Welcome to November 2, 2026](issues/2026-11-02.md) — Wissner-Gross presents AI as a growing contributor to its own development, while uneven capabilities and physical, financial and political constraints persist.
@@ -274,5 +275,4 @@ trajectory rather than a pile of days.
 * [Welcome to September 27, 2026](issues/2026-09-27.md) — The author frames public AI failures and responses as part of a maturing technological transition.
 * [Welcome to September 24, 2026](issues/2026-09-24.md) — New model releases lower the cost of general intelligence as scientific applications expand and institutions struggle to keep pace.
 * [Welcome to September 22, 2026](issues/2026-09-22.md) — Cheaper models and coordinated agents expand usable capacity while disputes over control, liability and physical infrastructure intensify.
-* [Welcome to September 20, 2026](issues/2026-09-20.md) — AI research automation is becoming measurable as advances in science, autonomy and infrastructure outpace institutional responses.
-* … and 234 earlier issues
+* … and 235 earlier issues

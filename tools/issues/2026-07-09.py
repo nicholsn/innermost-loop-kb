@@ -282,3 +282,9 @@ ingested the Cursor codebase, benchmark tasks included.
          "supersedes": [B + "developments/2026-07-08-cognitive-load-time-density"]},
     ],
 }
+
+# November 10 coverage, maintained in the owning specification.
+for _entity in SPEC['hardware']:
+    if _entity["id"] == 'nvidia-gb300':
+        _entity.setdefault('relatedTo', []).append('https://nicholsn.github.io/innermost-loop-kb/benchmarks/inference-performance-index')
+        _entity.setdefault("sources", []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-10-2026', 'title': 'Welcome to November 10, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-10'}, {'resource': 'https://epoch.ai/publications/inference-performance-index', 'title': 'Source linked by the November 10 issue'}])
