@@ -14,10 +14,13 @@ tags:
   - "chipmaker"
 relatedTo:
   - https://nicholsn.github.io/innermost-loop-kb/developments/2026-10-21-terafab-timeline
+  - https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-10-terafab
 sources:
   - { id: iml-2026-03-22, resource: https://theinnermostloop.substack.com/p/welcome-to-march-22-2026, title: "Welcome to March 22, 2026", author: human:alex-wissner-gross, last_modified: "2026-03-22" }
   - { resource: https://theinnermostloop.substack.com/p/welcome-to-october-9-2026, title: "Welcome to October 9, 2026", author: human:alex-wissner-gross, last_modified: "2026-10-09" }
   - { resource: https://theinnermostloop.substack.com/p/welcome-to-october-21-2026, title: "Welcome to October 21, 2026", author: human:alex-wissner-gross, last_modified: "2026-10-21" }
+  - { resource: https://theinnermostloop.substack.com/p/welcome-to-november-10-2026, title: "Welcome to November 10, 2026", author: human:alex-wissner-gross, last_modified: "2026-11-10" }
+  - { resource: https://asia.nikkei.com/business/tech/semiconductors/musk-s-terafab-chipmaking-project-lines-up-japan-suppliers, title: Source linked by the November 10 issue }
 ---
 
 TERAFAB is the chip fab [SpaceX](/organizations/spacex.md) and [Tesla](/organizations/tesla.md) announced near Tesla's Austin gigafactory to fabricate 2-nm chips in two flavors, edge silicon for robotaxis and Optimus robots and high-power chips for SpaceX and xAI, with a recursive design loop keeping masks, fabrication, testing and iteration in one building ([site](https://www.terafab.ai/)). It enters the corpus with the [terawatt-a-year announcement](/developments/2026-03-22-terafab-announced.md), 80% of whose output is intended for space, and is sized the next day at [a billion chips a year at a kilowatt each](/developments/2026-03-23-terafab-one-billion-chips-a-year.md) on thousands of acres and more than 10 GW. Intel joined the consortium in April, and by August the project, then projected to cost up to $119 billion, is the hardware set beside a DeepMind executive's remark that [recursive self-improvement is what justifies the capex](/developments/2026-08-04-recursive-self-improvement-justifies-the-capex.md).
