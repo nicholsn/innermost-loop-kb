@@ -2469,3 +2469,15 @@ for _entity in SPEC['organizations']:
     if _entity["id"] == 'megaspeed':
         _entity.setdefault('relatedTo', []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-10-megaspeed')
         _entity.setdefault("sources", []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-10-2026', 'title': 'Welcome to November 10, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-10'}, {'resource': 'https://www.cnbc.com/2026/11/09/megaspeed-nvidia-jensen-huang-alice-huang.html', 'title': 'Source linked by the November 10 issue'}])
+
+# November 12 coverage, maintained in the owning specification.
+for _entity in SPEC['systems']:
+    if _entity["id"] == 'gemini-4-carbon':
+        _entity.setdefault('relatedTo', []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-12-carbon')
+        _entity.setdefault("sources", []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-12-2026', 'title': 'Welcome to November 12, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-12'}, {'resource': 'https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/', 'title': 'Source linked by the November 12 issue'}])
+
+# November 12 coverage, maintained in the owning specification.
+for _entity in SPEC['systems']:
+    if _entity["id"] == 'gemini-4-carbon':
+        _entity.setdefault('relatedTo', []).append('https://nicholsn.github.io/innermost-loop-kb/systems/alphaproof-code')
+        _entity.setdefault("sources", []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-12-2026', 'title': 'Welcome to November 12, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-12'}, {'resource': 'https://deepmind.google/blog/introducing-alphaproof-code/', 'title': 'Source linked by the November 12 issue'}])
