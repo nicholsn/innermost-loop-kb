@@ -154,3 +154,9 @@ Tesla discontinues the Model S and X to make Optimus instead.
          "supersedes": [B + "developments/2026-01-01-three-blockbuster-ipos-planned"]},
     ],
 }
+
+# November 12 coverage, maintained in the owning specification.
+for _entity in SPEC['systems']:
+    if _entity["id"] == 'alphagenome':
+        _entity.setdefault('relatedTo', []).append('https://nicholsn.github.io/innermost-loop-kb/systems/alphagenome-2')
+        _entity.setdefault("sources", []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-12-2026', 'title': 'Welcome to November 12, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-12'}, {'resource': 'https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/', 'title': 'Source linked by the November 12 issue'}])
