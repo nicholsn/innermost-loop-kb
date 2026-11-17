@@ -512,3 +512,9 @@ for _entity in SPEC.get('systems', []):
         _entity["body"] = _entity.get("body", "") + '\n\nThe October 9 edition reports Musk planning to route Grok tasks to Claude Opus 5.5 when that model is best suited. This is an attributed plan; it does not establish deployment.'
         _entity['relatedTo'] = ['https://nicholsn.github.io/innermost-loop-kb/systems/claude-opus-5-5']
         _entity.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-october-9-2026', 'title': 'Welcome to October 9, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-10-09'})
+
+# November 17 coverage, maintained in the owning specification.
+for _entity in SPEC['systems']:
+    if _entity["id"] == 'chatgpt':
+        _entity.setdefault("relatedTo", []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-17-wallet')
+        _entity.setdefault("sources", []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-17-2026', 'title': 'Welcome to November 17, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-17'}, {'resource': 'https://openai.com/index/introducing-chatgpt-wallet/', 'title': 'Source linked by the November 17 issue'}])

@@ -237,3 +237,9 @@ its premium everywhere at once.
          "domain": "biotech", "evidences": ["biosphere-uplift"]},
     ],
 }
+
+# November 17 coverage, maintained in the owning specification.
+for _entity in SPEC['systems']:
+    if _entity["id"] == 'antigravity':
+        _entity.setdefault("relatedTo", []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-17-courtade')
+        _entity.setdefault("sources", []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-17-2026', 'title': 'Welcome to November 17, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-17'}, {'resource': 'https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature/', 'title': 'Source linked by the November 17 issue'}])

@@ -1138,3 +1138,9 @@ for _entity in SPEC['people']:
     if _entity["id"] == 'jensen-huang':
         _entity.setdefault('relatedTo', []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-12-succession')
         _entity.setdefault("sources", []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-12-2026', 'title': 'Welcome to November 12, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-12'}, {'resource': 'https://www.cnbc.com/2026/11/12/nvidia-jensen-huang-ceo-live-updates.html', 'title': 'Source linked by the November 12 issue'}])
+
+# November 17 coverage, maintained in the owning specification.
+for _entity in SPEC['people']:
+    if _entity["id"] == 'jensen-huang':
+        _entity.setdefault("relatedTo", []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-17-huang-exit')
+        _entity.setdefault("sources", []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-17-2026', 'title': 'Welcome to November 17, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-17'}, {'resource': 'https://www.bloomberg.com/news/articles/2026-11-13/inside-jensen-huang-s-final-hours-as-the-ceo-of-nvidia', 'title': 'Source linked by the November 17 issue'}])

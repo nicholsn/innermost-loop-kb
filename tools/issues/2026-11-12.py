@@ -1437,3 +1437,9 @@ SPEC = {'issue': {'date': '2026-11-12',
               'developed_by': ['https://nicholsn.github.io/innermost-loop-kb/organizations/google-deepmind'],
               'resource': 'https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/',
               'modality': 'genomics'}]}
+
+# November 17 coverage, maintained in the owning specification.
+for _entity in SPEC['people']:
+    if _entity["id"] == 'colette-kress':
+        _entity.setdefault("relatedTo", []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-17-backstop')
+        _entity.setdefault("sources", []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-17-2026', 'title': 'Welcome to November 17, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-17'}, {'resource': 'https://www.wsj.com/tech/ai/nvidias-days-as-an-open-checkbook-for-the-ai-economy-are-numbered-90c7b388', 'title': 'Source linked by the November 17 issue'}])
