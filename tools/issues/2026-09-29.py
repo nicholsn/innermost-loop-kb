@@ -972,3 +972,9 @@ SPEC = {'issue': {'date': '2026-09-29',
              'resource': 'https://casp.ac/reports/intelligence-explosion',
              'sources': [{'resource': 'https://casp.ac/reports/intelligence-explosion',
                           'title': 'Source linked by the September 29 issue'}]}]}
+
+# November 17 coverage, maintained in the owning specification.
+for _entity in SPEC['hardware']:
+    if _entity["id"] == 'starship':
+        _entity.setdefault("relatedTo", []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-17-flight15')
+        _entity.setdefault("sources", []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-17-2026', 'title': 'Welcome to November 17, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-17'}, {'resource': 'https://www.spacex.com/launches/starship-flight-15', 'title': 'Source linked by the November 17 issue'}])

@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**256 of 256 issues** modelled, 2025-12-11 → 2026-11-12.
+**257 of 257 issues** modelled, 2025-12-11 → 2026-11-17.
 
 | | count |
 |---|---|
 | benchmarks | 81 |
-| developments | 4007 |
+| developments | 4074 |
 | facilities | 48 |
 | hardware | 32 |
-| issues | 256 |
-| organizations | 1148 |
-| people | 150 |
-| roles | 42 |
-| systems | 255 |
+| issues | 257 |
+| organizations | 1151 |
+| people | 156 |
+| roles | 43 |
+| systems | 256 |
 | themes | 213 |
 
 ## Themes
@@ -255,6 +255,7 @@ trajectory rather than a pile of days.
 
 ## Issues
 
+* [Welcome to November 17, 2026](issues/2026-11-17.md) — Wissner-Gross frames Nvidia’s leadership and financing crisis alongside accelerating AI capabilities, infrastructure constraints and challenges to social institutions.
 * [Welcome to November 12, 2026](issues/2026-11-12.md) — Wissner-Gross frames Nvidia’s leadership upheaval against rapidly expanding AI capabilities, public-market financing and physical infrastructure.
 * [Welcome to November 10, 2026](issues/2026-11-10.md) — Wissner-Gross contrasts a newly public wave of AI capabilities with investment ambitions, security scrutiny and resistance over infrastructure and social terms.
 * [Welcome to November 9, 2026](issues/2026-11-09.md) — Wissner-Gross frames human vulnerabilities at the center of AI supply chains against accelerating research, political resistance and expanding physical automation.
@@ -274,5 +275,4 @@ trajectory rather than a pile of days.
 * [Welcome to September 30, 2026](issues/2026-09-30.md) — The author frames persistent, proactive agents as a shift from responding to prompts toward pursuing goals.
 * [Welcome to September 29, 2026](issues/2026-09-29.md) — The author frames orbital launch progress as another stage in accelerating intelligence and infrastructure.
 * [Welcome to September 27, 2026](issues/2026-09-27.md) — The author frames public AI failures and responses as part of a maturing technological transition.
-* [Welcome to September 24, 2026](issues/2026-09-24.md) — New model releases lower the cost of general intelligence as scientific applications expand and institutions struggle to keep pace.
-* … and 236 earlier issues
+* … and 237 earlier issues

@@ -12,10 +12,16 @@ tags:
   - "coding-agent"
 relatedTo:
   - https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-12-claude-tools
+  - https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-17-dwarf-planet
+  - https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-17-manufacturing
 sources:
   - { id: iml-2025-12-12, resource: https://theinnermostloop.substack.com/p/welcome-to-december-12-2025, title: "Welcome to December 12, 2025", author: human:alex-wissner-gross, last_modified: "2025-12-12" }
   - { resource: https://theinnermostloop.substack.com/p/welcome-to-november-12-2026, title: "Welcome to November 12, 2026", author: human:alex-wissner-gross, last_modified: "2026-11-12" }
   - { resource: https://claude.com/it/resources/articles/sheets-whiteboards-data, title: Source linked by the November 12 issue }
+  - { resource: https://theinnermostloop.substack.com/p/welcome-to-november-17-2026, title: "Welcome to November 17, 2026", author: human:alex-wissner-gross, last_modified: "2026-11-17" }
+  - { resource: https://x.com/joshuawolk/status/2122016321638375888, title: Source linked by the November 17 issue }
+  - { resource: https://theinnermostloop.substack.com/p/welcome-to-november-17-2026, title: "Welcome to November 17, 2026", author: human:alex-wissner-gross, last_modified: "2026-11-17" }
+  - { resource: https://claude.com/resources/articles/claude-for-manufacturing, title: Source linked by the November 17 issue }
 ---
 
 Claude is Anthropic's model family, served at [claude.ai](https://claude.ai/) and, for software work, through [Claude Code](/systems/claude-code.md). It enters the corpus in the [spiky-frontier comparison](/developments/2025-12-12-spiky-frontier-gaps.md) as the leader on creative writing, but its recurring role is as the model that builds models: Karpathy [handed it his nanochat optimization loop](/developments/2025-12-29-karpathy-claude-runs-nanochat.md), Anthropic's chief product officer said it writes [effectively 100% of the company's product code](/developments/2026-02-08-100pct-of-product-code.md), and by March it wrote 70–90% of the code behind future Anthropic models, the basis of the claim that [recursive self-improvement is already happening](/developments/2026-03-16-rsi-is-a-present-phenomenon.md).

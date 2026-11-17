@@ -1,7 +1,7 @@
 {
   "source": "https://theinnermostloop.substack.com/sitemap.xml",
-  "total": 256,
-  "dailies": 223,
+  "total": 257,
+  "dailies": 224,
   "features": 33,
   "posts": [
     {
@@ -1538,6 +1538,12 @@
       "date": "2026-11-12",
       "slug": "welcome-to-november-12-2026",
       "url": "https://theinnermostloop.substack.com/p/welcome-to-november-12-2026",
+      "kind": "daily"
+    },
+    {
+      "date": "2026-11-17",
+      "slug": "welcome-to-november-17-2026",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-november-17-2026",
       "kind": "daily"
     }
   ]

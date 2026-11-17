@@ -407,3 +407,15 @@ for _entity in SPEC['systems']:
     if _entity["id"] == 'claude':
         _entity.setdefault('relatedTo', []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-12-claude-tools')
         _entity.setdefault("sources", []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-12-2026', 'title': 'Welcome to November 12, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-12'}, {'resource': 'https://claude.com/it/resources/articles/sheets-whiteboards-data', 'title': 'Source linked by the November 12 issue'}])
+
+# November 17 coverage, maintained in the owning specification.
+for _entity in SPEC['systems']:
+    if _entity["id"] == 'claude':
+        _entity.setdefault("relatedTo", []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-17-dwarf-planet')
+        _entity.setdefault("sources", []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-17-2026', 'title': 'Welcome to November 17, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-17'}, {'resource': 'https://x.com/joshuawolk/status/2122016321638375888', 'title': 'Source linked by the November 17 issue'}])
+
+# November 17 coverage, maintained in the owning specification.
+for _entity in SPEC['systems']:
+    if _entity["id"] == 'claude':
+        _entity.setdefault("relatedTo", []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-17-manufacturing')
+        _entity.setdefault("sources", []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-17-2026', 'title': 'Welcome to November 17, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-17'}, {'resource': 'https://claude.com/resources/articles/claude-for-manufacturing', 'title': 'Source linked by the November 17 issue'}])

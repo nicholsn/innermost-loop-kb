@@ -2481,3 +2481,9 @@ for _entity in SPEC['systems']:
     if _entity["id"] == 'gemini-4-carbon':
         _entity.setdefault('relatedTo', []).append('https://nicholsn.github.io/innermost-loop-kb/systems/alphaproof-code')
         _entity.setdefault("sources", []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-12-2026', 'title': 'Welcome to November 12, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-12'}, {'resource': 'https://deepmind.google/blog/introducing-alphaproof-code/', 'title': 'Source linked by the November 12 issue'}])
+
+# November 17 coverage, maintained in the owning specification.
+for _entity in SPEC['systems']:
+    if _entity["id"] == 'gemini-4-carbon':
+        _entity.setdefault("relatedTo", []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-17-matharena')
+        _entity.setdefault("sources", []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-17-2026', 'title': 'Welcome to November 17, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-17'}, {'resource': 'https://x.com/j_dekoninck/status/2121263753006374997', 'title': 'Source linked by the November 17 issue'}])
