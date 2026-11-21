@@ -1086,3 +1086,9 @@ for _entity in SPEC.get('systems', []):
         _entity["body"] = _entity.get("body", "") + '\n\nThe October 18 edition separately introduces Muse Spark Open, an 816-billion-parameter open release for local execution.'
         _entity.setdefault("relatedTo", []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-10-18-spark-open')
         _entity.setdefault("sources", []).append({'resource': 'https://theinnermostloop.substack.com/p/welcome-to-october-18-2026', 'title': 'Welcome to October 18, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-10-18'})
+
+# November 20 coverage, maintained in the owning specification.
+for _entity in SPEC['hardware']:
+    if _entity["id"] == 'jalapeno':
+        _entity.setdefault("relatedTo", []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-20-jalapeno')
+        _entity.setdefault("sources", []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-20-2026', 'title': 'Welcome to November 20, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-20'}, {'resource': 'https://openai.com/index/advancing-chip-design-with-our-models/', 'title': 'Source linked by the November 20 issue'}])

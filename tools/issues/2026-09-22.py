@@ -1144,3 +1144,9 @@ for _entity in SPEC['people']:
     if _entity["id"] == 'jensen-huang':
         _entity.setdefault("relatedTo", []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-17-huang-exit')
         _entity.setdefault("sources", []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-17-2026', 'title': 'Welcome to November 17, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-17'}, {'resource': 'https://www.bloomberg.com/news/articles/2026-11-13/inside-jensen-huang-s-final-hours-as-the-ceo-of-nvidia', 'title': 'Source linked by the November 17 issue'}])
+
+# November 20 coverage, maintained in the owning specification.
+for _entity in SPEC['people']:
+    if _entity["id"] == 'jensen-huang':
+        _entity.setdefault("relatedTo", []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-20-huang-return')
+        _entity.setdefault("sources", []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-20-2026', 'title': 'Welcome to November 20, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-20'}, {'resource': 'https://x.com/jensenhuang/status/2122726005219737649', 'title': 'Source linked by the November 20 issue'}])

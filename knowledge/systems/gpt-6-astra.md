@@ -21,6 +21,7 @@ relatedTo:
   - https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-06-astra-underperformance
   - https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-09-wetlab
   - https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-17-astra-clinic
+  - https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-20-astra
 sources:
   - { id: iml-2026-09-06, resource: https://theinnermostloop.substack.com/p/welcome-to-september-6-2026, title: "Welcome to September 6, 2026", author: human:alex-wissner-gross, last_modified: "2026-09-06" }
   - { resource: https://theinnermostloop.substack.com/p/welcome-to-october-21-2026, title: "Welcome to October 21, 2026", author: human:alex-wissner-gross, last_modified: "2026-10-21" }
@@ -32,6 +33,8 @@ sources:
   - { resource: https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science/, title: Source linked by the November 9 issue }
   - { resource: https://theinnermostloop.substack.com/p/welcome-to-november-17-2026, title: "Welcome to November 17, 2026", author: human:alex-wissner-gross, last_modified: "2026-11-17" }
   - { resource: https://openai.com/index/advancing-computer-use-for-healthcare-teams/, title: Source linked by the November 17 issue }
+  - { resource: https://theinnermostloop.substack.com/p/welcome-to-november-20-2026, title: "Welcome to November 20, 2026", author: human:alex-wissner-gross, last_modified: "2026-11-20" }
+  - { resource: https://openai.com/index/introducing-gpt-6-2-astra-sol/, title: Source linked by the November 20 issue }
 ---
 
 GPT-6 Astra is the model OpenAI released in early September 2026 ([announcement](https://openai.com/index/gpt-6-astra/)), the first to carry the lab's Critical cyber designation and the one its president greeted with [welcome to the AGI era](/developments/2026-09-04-welcome-to-the-agi-era.md). In this corpus it scores 99.9% on [ARC-AGI-3](/benchmarks/arc-agi-3.md) and 97.6% on [FrontierMath](/benchmarks/frontiermath.md) Tier 4, and it is the middle link of the training lineage an insider described: trained with help from [GPT-5.6 Sol](/systems/gpt-5-6-sol.md) and now [helping train the successors due to launch as AGI](/developments/2026-09-06-a-ship-date-for-agi.md). Jensen Huang, whose hardware trained it, [declared AGI arrived](/developments/2026-09-07-agi-has-arrived.md) the next day.
