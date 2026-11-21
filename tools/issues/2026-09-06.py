@@ -254,3 +254,9 @@ for _entity in SPEC['systems']:
     if _entity["id"] == 'gpt-6-astra':
         _entity.setdefault("relatedTo", []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-17-astra-clinic')
         _entity.setdefault("sources", []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-17-2026', 'title': 'Welcome to November 17, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-17'}, {'resource': 'https://openai.com/index/advancing-computer-use-for-healthcare-teams/', 'title': 'Source linked by the November 17 issue'}])
+
+# November 20 coverage, maintained in the owning specification.
+for _entity in SPEC['systems']:
+    if _entity["id"] == 'gpt-6-astra':
+        _entity.setdefault("relatedTo", []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-20-astra')
+        _entity.setdefault("sources", []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-20-2026', 'title': 'Welcome to November 20, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-20'}, {'resource': 'https://openai.com/index/introducing-gpt-6-2-astra-sol/', 'title': 'Source linked by the November 20 issue'}])

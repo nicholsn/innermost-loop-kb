@@ -1106,3 +1106,9 @@ for _facility in SPEC["facilities"]:
             "author": "human:alex-wissner-gross",
             "last_modified": "2026-10-31",
         })
+
+# November 20 coverage, maintained in the owning specification.
+for _entity in SPEC['facilities']:
+    if _entity["id"] == 'suncatcher-satellite':
+        _entity.setdefault("relatedTo", []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-20-suncatcher')
+        _entity.setdefault("sources", []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-20-2026', 'title': 'Welcome to November 20, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-20'}, {'resource': 'https://blog.google/innovation-and-ai/models-and-research/google-research/blue-origin-project-suncatcher-partnership/', 'title': 'Source linked by the November 20 issue'}])

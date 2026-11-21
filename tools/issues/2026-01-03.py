@@ -160,3 +160,9 @@ sweeps are scale-invariant, so settings found on toys transfer to real models.
          "supersedes": [B + "developments/2025-12-19-artemis-ii-months-away"]},
     ],
 }
+
+# November 20 coverage, maintained in the owning specification.
+for _entity in SPEC['systems']:
+    if _entity["id"] == 'optimus':
+        _entity.setdefault("relatedTo", []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-20-optimus')
+        _entity.setdefault("sources", []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-20-2026', 'title': 'Welcome to November 20, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-20'}, {'resource': 'https://x.com/SawyerMerritt/status/2123203402020835817', 'title': 'Source linked by the November 20 issue'}])

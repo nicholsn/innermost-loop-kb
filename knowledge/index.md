@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**257 of 257 issues** modelled, 2025-12-11 → 2026-11-17.
+**258 of 258 issues** modelled, 2025-12-11 → 2026-11-20.
 
 | | count |
 |---|---|
-| benchmarks | 81 |
-| developments | 4074 |
+| benchmarks | 82 |
+| developments | 4156 |
 | facilities | 48 |
-| hardware | 32 |
-| issues | 257 |
-| organizations | 1151 |
-| people | 156 |
-| roles | 43 |
-| systems | 256 |
+| hardware | 35 |
+| issues | 258 |
+| organizations | 1155 |
+| people | 162 |
+| roles | 44 |
+| systems | 259 |
 | themes | 213 |
 
 ## Themes
@@ -255,6 +255,7 @@ trajectory rather than a pile of days.
 
 ## Issues
 
+* [Welcome to November 20, 2026](issues/2026-11-20.md) — Wissner-Gross frames Anthropic’s public listing as a milestone in AI’s economic ascent, alongside rapid capability gains, financing and energy constraints, and changing public institutions.
 * [Welcome to November 17, 2026](issues/2026-11-17.md) — Wissner-Gross frames Nvidia’s leadership and financing crisis alongside accelerating AI capabilities, infrastructure constraints and challenges to social institutions.
 * [Welcome to November 12, 2026](issues/2026-11-12.md) — Wissner-Gross frames Nvidia’s leadership upheaval against rapidly expanding AI capabilities, public-market financing and physical infrastructure.
 * [Welcome to November 10, 2026](issues/2026-11-10.md) — Wissner-Gross contrasts a newly public wave of AI capabilities with investment ambitions, security scrutiny and resistance over infrastructure and social terms.
@@ -274,5 +275,4 @@ trajectory rather than a pile of days.
 * [Welcome to October 3, 2026](issues/2026-10-03.md) — The author sees Google rejoining the leading frontier labs while capability gains intensify questions about access, provenance and safety.
 * [Welcome to September 30, 2026](issues/2026-09-30.md) — The author frames persistent, proactive agents as a shift from responding to prompts toward pursuing goals.
 * [Welcome to September 29, 2026](issues/2026-09-29.md) — The author frames orbital launch progress as another stage in accelerating intelligence and infrastructure.
-* [Welcome to September 27, 2026](issues/2026-09-27.md) — The author frames public AI failures and responses as part of a maturing technological transition.
-* … and 237 earlier issues
+* … and 238 earlier issues
