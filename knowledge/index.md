@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**258 of 258 issues** modelled, 2025-12-11 → 2026-11-20.
+**259 of 259 issues** modelled, 2025-12-11 → 2026-11-23.
 
 | | count |
 |---|---|
-| benchmarks | 82 |
-| developments | 4156 |
+| benchmarks | 84 |
+| developments | 4223 |
 | facilities | 48 |
 | hardware | 35 |
-| issues | 258 |
-| organizations | 1155 |
-| people | 162 |
+| issues | 259 |
+| organizations | 1157 |
+| people | 167 |
 | roles | 44 |
-| systems | 259 |
+| systems | 264 |
 | themes | 213 |
 
 ## Themes
@@ -255,6 +255,7 @@ trajectory rather than a pile of days.
 
 ## Issues
 
+* [Welcome to November 23, 2026](issues/2026-11-23.md) — Wissner-Gross frames published capability curves and claimed mathematical breakthroughs as signs of accelerating AI progress, alongside infrastructure constraints, governance disputes and uneven social change.
 * [Welcome to November 20, 2026](issues/2026-11-20.md) — Wissner-Gross frames Anthropic’s public listing as a milestone in AI’s economic ascent, alongside rapid capability gains, financing and energy constraints, and changing public institutions.
 * [Welcome to November 17, 2026](issues/2026-11-17.md) — Wissner-Gross frames Nvidia’s leadership and financing crisis alongside accelerating AI capabilities, infrastructure constraints and challenges to social institutions.
 * [Welcome to November 12, 2026](issues/2026-11-12.md) — Wissner-Gross frames Nvidia’s leadership upheaval against rapidly expanding AI capabilities, public-market financing and physical infrastructure.
@@ -274,5 +275,4 @@ trajectory rather than a pile of days.
 * [Welcome to October 5, 2026](issues/2026-10-05.md) — The author frames the federal shift to super-intelligence terminology as a rebranding of the technological transition, while capability, infrastructure and governance continue to change.
 * [Welcome to October 3, 2026](issues/2026-10-03.md) — The author sees Google rejoining the leading frontier labs while capability gains intensify questions about access, provenance and safety.
 * [Welcome to September 30, 2026](issues/2026-09-30.md) — The author frames persistent, proactive agents as a shift from responding to prompts toward pursuing goals.
-* [Welcome to September 29, 2026](issues/2026-09-29.md) — The author frames orbital launch progress as another stage in accelerating intelligence and infrastructure.
-* … and 238 earlier issues
+* … and 239 earlier issues

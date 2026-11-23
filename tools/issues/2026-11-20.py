@@ -2047,3 +2047,10 @@ SPEC = {'issue': {'date': '2026-11-20',
                             'title': 'Source linked by the November 20 issue'}],
                'developed_by': ['https://nicholsn.github.io/innermost-loop-kb/organizations/tesla'],
                'resource': 'https://x.com/Tesla_Megapack/status/2122721563493744771'}]}
+
+# November 23 coverage maintained in the owning specification.
+for _entity in SPEC['systems']:
+    if _entity["id"] == 'gpt-6-2-astra':
+        _entity.setdefault('relatedTo', []).extend(['https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-23-medchem'])
+        _entity.setdefault('sources', []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-23-2026', 'title': 'Welcome to November 23, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-23'}, {'resource': 'https://openai.com/index/introducing-medchembench/', 'title': 'Source linked by the November 23 newsletter'}])
+        _entity.setdefault('evaluated_on', []).extend(['https://nicholsn.github.io/innermost-loop-kb/benchmarks/medchembench'])

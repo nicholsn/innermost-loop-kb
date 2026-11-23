@@ -14,11 +14,14 @@ evaluated_on:
 relatedTo:
   - https://nicholsn.github.io/innermost-loop-kb/systems/claude-mythos-5-2
   - https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-17-fable
+  - https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-23-daisy
 sources:
   - { id: iml-2026-11-10, resource: https://theinnermostloop.substack.com/p/welcome-to-november-10-2026, title: "Welcome to November 10, 2026", author: human:alex-wissner-gross, last_modified: "2026-11-10" }
   - { resource: https://www.anthropic.com/claude-fable-and-mythos-5-2, title: Source linked by the November 10 issue }
   - { resource: https://theinnermostloop.substack.com/p/welcome-to-november-17-2026, title: "Welcome to November 17, 2026", author: human:alex-wissner-gross, last_modified: "2026-11-17" }
   - { resource: https://x.com/andrewcurran_/status/2121715103427096652, title: Source linked by the November 17 issue }
+  - { resource: https://theinnermostloop.substack.com/p/welcome-to-november-23-2026, title: "Welcome to November 23, 2026", author: human:alex-wissner-gross, last_modified: "2026-11-23" }
+  - { resource: "https://x.com/chetaslua/status/2124226316753162597/video/1?s=46", title: Source linked by the November 23 newsletter }
 ---
 
 Public-facing Anthropic model with safeguards and reported benchmark-leading results. As described in the November 10 newsletter.
