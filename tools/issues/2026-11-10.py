@@ -1194,3 +1194,9 @@ for _entity in SPEC['systems']:
     if _entity["id"] == 'claude-fable-5-2':
         _entity.setdefault("relatedTo", []).append('https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-17-fable')
         _entity.setdefault("sources", []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-17-2026', 'title': 'Welcome to November 17, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-17'}, {'resource': 'https://x.com/andrewcurran_/status/2121715103427096652', 'title': 'Source linked by the November 17 issue'}])
+
+# November 23 coverage maintained in the owning specification.
+for _entity in SPEC['systems']:
+    if _entity["id"] == 'claude-fable-5-2':
+        _entity.setdefault('relatedTo', []).extend(['https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-23-daisy'])
+        _entity.setdefault('sources', []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-23-2026', 'title': 'Welcome to November 23, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-23'}, {'resource': 'https://x.com/chetaslua/status/2124226316753162597/video/1?s=46', 'title': 'Source linked by the November 23 newsletter'}])
