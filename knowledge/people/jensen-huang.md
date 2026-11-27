@@ -8,6 +8,7 @@ relatedTo:
   - https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-17-huang-exit
   - https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-20-huang-return
   - https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-23-huang
+  - https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-27-huang-return
 sources:
   - { id: iml-2026-09-22, resource: https://theinnermostloop.substack.com/p/welcome-to-september-22-2026, title: "Welcome to September 22, 2026", author: human:alex-wissner-gross, last_modified: "2026-09-22" }
   - { resource: https://www.businessinsider.com/nvidia-jensen-huang-ai-regulation-anthropic-amodei-openai-altman-trump-2026-9, title: Source linked by the September 22 issue }
@@ -19,6 +20,8 @@ sources:
   - { resource: https://x.com/jensenhuang/status/2122726005219737649, title: Source linked by the November 20 issue }
   - { resource: https://theinnermostloop.substack.com/p/welcome-to-november-23-2026, title: "Welcome to November 23, 2026", author: human:alex-wissner-gross, last_modified: "2026-11-23" }
   - { resource: https://www.wired.com/story/jensen-huangs-lying-alarmed-nvidia-board-ahead-of-his-resignation/, title: Source linked by the November 23 newsletter }
+  - { resource: https://theinnermostloop.substack.com/p/welcome-to-november-27-2026, title: "Welcome to November 27, 2026", author: human:alex-wissner-gross, last_modified: "2026-11-27" }
+  - { resource: https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director, title: Source linked by the November 27 newsletter }
 ---
 
 Nvidia leader quoted on regulation and infrastructure capacity.

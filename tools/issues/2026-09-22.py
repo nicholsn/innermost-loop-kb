@@ -1156,3 +1156,9 @@ for _entity in SPEC['people']:
     if _entity["id"] == 'jensen-huang':
         _entity.setdefault('relatedTo', []).extend(['https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-23-huang'])
         _entity.setdefault('sources', []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-23-2026', 'title': 'Welcome to November 23, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-23'}, {'resource': 'https://www.wired.com/story/jensen-huangs-lying-alarmed-nvidia-board-ahead-of-his-resignation/', 'title': 'Source linked by the November 23 newsletter'}])
+
+# November 27 coverage maintained in the owning specification.
+for _entity in SPEC['people']:
+    if _entity["id"] == 'jensen-huang':
+        _entity.setdefault('relatedTo', []).extend(['https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-27-huang-return'])
+        _entity.setdefault('sources', []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-27-2026', 'title': 'Welcome to November 27, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-27'}, {'resource': 'https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director', 'title': 'Source linked by the November 27 newsletter'}])
