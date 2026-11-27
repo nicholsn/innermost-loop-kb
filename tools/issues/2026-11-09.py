@@ -2047,3 +2047,9 @@ SPEC = {'issue': {'date': '2026-11-09',
                      'November 9 newsletter.',
              'sources': [{'resource': 'https://x.com/pushmeet/status/2119373171321196892',
                           'title': 'Source linked by the November 9 issue'}]}]}
+
+# November 27 coverage maintained in the owning specification.
+for _entity in SPEC['facilities']:
+    if _entity["id"] == 'starmind':
+        _entity.setdefault('relatedTo', []).extend(['https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-27-starmind'])
+        _entity.setdefault('sources', []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-27-2026', 'title': 'Welcome to November 27, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-27'}, {'resource': 'https://x.com/sawyermerritt/status/2125633308595716293', 'title': 'Source linked by the November 27 newsletter'}])

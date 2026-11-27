@@ -22,19 +22,19 @@ trajectory rather than a pile of days.
 
 ## Coverage
 
-**259 of 259 issues** modelled, 2025-12-11 → 2026-11-23.
+**260 of 260 issues** modelled, 2025-12-11 → 2026-11-27.
 
 | | count |
 |---|---|
-| benchmarks | 84 |
-| developments | 4223 |
+| benchmarks | 86 |
+| developments | 4303 |
 | facilities | 48 |
 | hardware | 35 |
-| issues | 259 |
-| organizations | 1157 |
+| issues | 260 |
+| organizations | 1161 |
 | people | 167 |
 | roles | 44 |
-| systems | 264 |
+| systems | 272 |
 | themes | 213 |
 
 ## Themes
@@ -255,6 +255,7 @@ trajectory rather than a pile of days.
 
 ## Issues
 
+* [Welcome to November 27, 2026](issues/2026-11-27.md) — Wissner-Gross frames reported complexity-theory advances and broader model capabilities alongside contested AI governance, Nvidia leadership intervention, orbital compute and expanding automation.
 * [Welcome to November 23, 2026](issues/2026-11-23.md) — Wissner-Gross frames published capability curves and claimed mathematical breakthroughs as signs of accelerating AI progress, alongside infrastructure constraints, governance disputes and uneven social change.
 * [Welcome to November 20, 2026](issues/2026-11-20.md) — Wissner-Gross frames Anthropic’s public listing as a milestone in AI’s economic ascent, alongside rapid capability gains, financing and energy constraints, and changing public institutions.
 * [Welcome to November 17, 2026](issues/2026-11-17.md) — Wissner-Gross frames Nvidia’s leadership and financing crisis alongside accelerating AI capabilities, infrastructure constraints and challenges to social institutions.
@@ -274,5 +275,4 @@ trajectory rather than a pile of days.
 * [Welcome to October 9, 2026](issues/2026-10-09.md) — The author frames a large release of AI mathematics manuscripts as a shift in discovery, amid disputes over verification, scientific credit and the economics of growing capability.
 * [Welcome to October 5, 2026](issues/2026-10-05.md) — The author frames the federal shift to super-intelligence terminology as a rebranding of the technological transition, while capability, infrastructure and governance continue to change.
 * [Welcome to October 3, 2026](issues/2026-10-03.md) — The author sees Google rejoining the leading frontier labs while capability gains intensify questions about access, provenance and safety.
-* [Welcome to September 30, 2026](issues/2026-09-30.md) — The author frames persistent, proactive agents as a shift from responding to prompts toward pursuing goals.
-* … and 239 earlier issues
+* … and 240 earlier issues

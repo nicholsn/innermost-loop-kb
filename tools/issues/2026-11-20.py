@@ -2054,3 +2054,10 @@ for _entity in SPEC['systems']:
         _entity.setdefault('relatedTo', []).extend(['https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-23-medchem'])
         _entity.setdefault('sources', []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-23-2026', 'title': 'Welcome to November 23, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-23'}, {'resource': 'https://openai.com/index/introducing-medchembench/', 'title': 'Source linked by the November 23 newsletter'}])
         _entity.setdefault('evaluated_on', []).extend(['https://nicholsn.github.io/innermost-loop-kb/benchmarks/medchembench'])
+
+# November 27 coverage maintained in the owning specification.
+for _entity in SPEC['systems']:
+    if _entity["id"] == 'gpt-6-2-astra':
+        _entity.setdefault('relatedTo', []).extend(['https://nicholsn.github.io/innermost-loop-kb/developments/2026-11-27-astra-robotics'])
+        _entity.setdefault('sources', []).extend([{'resource': 'https://theinnermostloop.substack.com/p/welcome-to-november-27-2026', 'title': 'Welcome to November 27, 2026', 'author': 'human:alex-wissner-gross', 'last_modified': '2026-11-27'}, {'resource': 'https://artificialanalysis.ai/articles/aa-robotics-sim', 'title': 'Source linked by the November 27 newsletter'}, {'resource': 'https://bjin.github.io/go-codegolf-benchmark/#leaderboard', 'title': 'Source linked by the November 27 newsletter'}])
+        _entity.setdefault('evaluated_on', []).extend(['https://nicholsn.github.io/innermost-loop-kb/benchmarks/go-codegolf', 'https://nicholsn.github.io/innermost-loop-kb/benchmarks/aa-robotics-sim'])
